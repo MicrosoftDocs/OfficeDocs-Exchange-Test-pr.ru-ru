@@ -1,0 +1,141 @@
+- name: Наборы работоспособности пакетов управления Exchange 2013
+  href: exchange-2013-management-pack-health-sets.md
+  items:
+  - name: Устранение неполадок набора работоспособности ActiveSync
+    href: troubleshooting-activesync-health-set.md
+  - name: Устранение неполадок в наборе для контроля работоспособности ActiveSync.Protocol
+    href: troubleshooting-activesync-protocol-health-set.md
+  - name: Устранение неполадок в наборе для контроля работоспособности ActiveSync.Proxy
+    href: troubleshooting-activesync-proxy-health-set.md
+  - name: Troubleshooting AD Health Set
+    href: troubleshooting-ad-health-set.md
+  - name: Troubleshooting Antimalware Health Set
+    href: troubleshooting-antimalware-health-set.md
+  - name: Troubleshooting AntiSpam Health Set
+    href: troubleshooting-antispam-health-set.md
+  - name: Устранение неполадок с настройками работоспособности автообнаружения
+    href: troubleshooting-autodiscover-health-set.md
+  - name: Устранение неполадок, связанных с настройками работоспособности Autodiscover.Protocol
+    href: troubleshooting-autodiscover-protocol-health-set.md
+  - name: Устранение неполадок, связанных с наборами средств для проверки работоспособности Autodiscover.Proxy
+    href: troubleshooting-autodiscover-proxy-health-set.md
+  - name: Troubleshooting Classification Health Set
+    href: troubleshooting-classification-health-set.md
+  - name: Troubleshooting ClientAccess.Proxy Health Set
+    href: troubleshooting-clientaccess-proxy-health-set.md
+  - name: Troubleshooting Compliance Health Set
+    href: troubleshooting-compliance-health-set.md
+  - name: Устранение неполадок в наборе для контроля работоспособности DataProtection
+    href: troubleshooting-dataprotection-health-set.md
+  - name: Troubleshooting DiskSpace Health Set
+    href: troubleshooting-diskspace-health-set.md
+  - name: Устранение неполадок с настройками работоспособности ECP
+    href: troubleshooting-ecp-health-set.md
+  - name: Устранение неполадок с набором для контроля работоспособности ECP.Proxy
+    href: troubleshooting-ecp-proxy-health-set.md
+  - name: Troubleshooting EDS Health Set
+    href: troubleshooting-eds-health-set.md
+  - name: Troubleshooting EventAssistants Health Set
+    href: troubleshooting-eventassistants-health-set.md
+  - name: Устранение неполадок, связанных с настройками работоспособности веб-служб Exchange
+    href: troubleshooting-ews-health-set.md
+  - name: Устранение неполадок в наборе для контроля работоспособности EWS.Protocol
+    href: troubleshooting-ews-protocol-health-set.md
+  - name: Устранение неполадок, связанных с настройками работоспособности EWS.Proxy
+    href: troubleshooting-ews-proxy-health-set.md
+  - name: Troubleshooting FfoQuarantine Health Set
+    href: troubleshooting-ffoquarantine-health-set.md
+  - name: Troubleshooting FfoTransport Health Set
+    href: troubleshooting-ffotransport-health-set.md
+  - name: Troubleshooting FfoUmc Health Set
+    href: troubleshooting-ffoumc-health-set.md
+  - name: Troubleshooting FfoWebService Health Set
+    href: troubleshooting-ffowebservice-health-set.md
+  - name: Устранение неполадок с набором для контроля работоспособности FIPS
+    href: troubleshooting-fips-health-set.md
+  - name: Troubleshooting FreeBusy Health Set
+    href: troubleshooting-freebusy-health-set.md
+  - name: Troubleshooting FrontendTransport Health Set
+    href: troubleshooting-frontendtransport-health-set.md
+  - name: Устранение неполадок в наборе для контроля работоспособности HubTransport
+    href: troubleshooting-hubtransport-health-set.md
+  - name: Устранение неполадок в наборе для контроля работоспособности IMAP
+    href: troubleshooting-imap-health-set.md
+  - name: Устранение неполадок в работе комплекта средств для проверки работоспособности IMAP.Protocol
+    href: troubleshooting-imap-protocol-health-set.md
+  - name: Устранение неполадок с настройками работоспособности IMAP.Proxy
+    href: troubleshooting-imap-proxy-health-set.md
+  - name: Troubleshooting MailboxMigration Health Set
+    href: troubleshooting-mailboxmigration-health-set.md
+  - name: Troubleshooting MailboxSpace Health Set
+    href: troubleshooting-mailboxspace-health-set.md
+  - name: Устранение неполадок группы работоспособности MailboxTransport
+    href: troubleshooting-mailboxtransport-health-set.md
+  - name: Troubleshooting Mailflow Health Set
+    href: troubleshooting-mailflow-health-set.md
+  - name: Troubleshooting Memory Health Set
+    href: troubleshooting-memory-health-set.md
+  - name: Troubleshooting MessageTracing Health Set
+    href: troubleshooting-messagetracing-health-set.md
+  - name: Troubleshooting Monitoring Health Set
+    href: troubleshooting-monitoring-health-set.md
+  - name: Устранение неполадок в наборе для контроля работоспособности MRS
+    href: troubleshooting-mrs-health-set.md
+  - name: Troubleshooting MSExchangeCertificateDeployment Health Set
+    href: troubleshooting-msexchangecertificatedeployment-health-set.md
+  - name: Troubleshooting Network Health Set
+    href: troubleshooting-network-health-set.md
+  - name: Troubleshooting OAB Health Set
+    href: troubleshooting-oab-health-set.md
+  - name: Устранение неполадок с настройками работоспособности OAB.Proxy
+    href: troubleshooting-oab-proxy-health-set.md
+  - name: Troubleshooting Outlook Health Set
+    href: troubleshooting-outlook-health-set.md
+  - name: Troubleshooting Outlook.Protocol Health Set
+    href: troubleshooting-outlook-protocol-health-set.md
+  - name: Устранение неполадок в наборе средств проверки работоспособности службы Outlook.Proxy
+    href: troubleshooting-outlook-proxy-health-set.md
+  - name: Устранение неполадок, связанных с настройками работоспособности OWA
+    href: troubleshooting-owa-health-set.md
+  - name: Устранение неполадок в наборе для контроля работоспособности OWA.Protocol
+    href: troubleshooting-owa-protocol-health-set.md
+  - name: Устранение неполадок в наборе для контроля работоспособности OWA.Protocol.Dep
+    href: troubleshooting-owa-protocol-dep-health-set.md
+  - name: Устранение неполадок в наборе для контроля работоспособности OWA.Proxy
+    href: troubleshooting-owa-proxy-health-set.md
+  - name: Устранение неполадок в наборе для контроля работоспособности POP
+    href: troubleshooting-pop-health-set.md
+  - name: Устранение неполадок, связанных с настройками работоспособности POP.Protocol
+    href: troubleshooting-pop-protocol-health-set.md
+  - name: Устранение неполадок, связанных с настройками работоспособности POP.Proxy
+    href: troubleshooting-pop-proxy-health-set.md
+  - name: Troubleshooting PowershellDataProvider Health Set
+    href: troubleshooting-powershelldataprovider-health-set.md
+  - name: Troubleshooting PublicFolders Health Set
+    href: troubleshooting-publicfolders-health-set.md
+  - name: Troubleshooting PushNotifications.Protocol Health Set
+    href: troubleshooting-pushnotifications-protocol-health-set.md
+  - name: Troubleshooting RemoteMonitoring Health Set
+    href: troubleshooting-remotemonitoring-health-set.md
+  - name: Troubleshooting RPS Health Set
+    href: troubleshooting-rps-health-set.md
+  - name: Устранение неполадок в наборе средств проверки работоспособности службы RPS.Proxy
+    href: troubleshooting-rps-proxy-health-set.md
+  - name: Troubleshooting Search Health Set
+    href: troubleshooting-search-health-set.md
+  - name: Устранение неполадок, связанных с настройками работоспособности SiteMailbox
+    href: troubleshooting-sitemailbox-health-set.md
+  - name: Troubleshooting SMTP Health Set
+    href: troubleshooting-smtp-health-set.md
+  - name: Troubleshooting Store Health Set
+    href: troubleshooting-store-health-set.md
+  - name: Troubleshooting Transport Health Set
+    href: troubleshooting-transport-health-set.md
+  - name: Устранение неполадок в наборе для контроля работоспособности единой системы обмена сообщениями
+    href: troubleshooting-um-health-set.md
+  - name: Устранение неполадок набора для контроля работоспособности UM.CallRouter
+    href: troubleshooting-um-callrouter-health-set.md
+  - name: Устранение неполадок набора работоспособности UM.Protocol
+    href: troubleshooting-um-protocol-health-set.md
+  - name: Troubleshooting UserThrottling Health Set
+    href: troubleshooting-userthrottling-health-set.md
