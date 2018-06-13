@@ -1,47 +1,66 @@
 {
-  "build": {
-    "content": [
-      {
-        "files": [
-          "**/*.md",
-          "**/*.yml"
-        ],
-        "exclude": [
-          "**/obj/**",
-          "**/includes/**",
-          "_themes/**",
-          "_themes.pdf/**",
-          "README.md",
-          "LICENSE",
-          "LICENSE-CODE",
-          "ThirdPartyNotices"
-        ]
-      }
-    ],
-    "resource": [
-      {
-        "files": [
-          "**/*.png",
-          "**/*.jpg"
-        ],
-        "exclude": [
-          "**/obj/**",
-          "**/includes/**",
-          "_themes/**",
-          "_themes.pdf/**"
-        ]
-      }
-    ],
-    "overwrite": [],
-    "externalReference": [],
-    "globalMetadata": {
-      "breadcrumb_path": "/office/exchange-2013-deployments/breadcrumb/toc.json",
-      "extendBreadcrumb": true,
-      "feedback_system": "None"
-    },
-    "fileMetadata": {},
-    "template": [],
-    "dest": "Exchange-Deployments-2013",
-    "markdownEngineName": "markdig"
-  }
+    "build":  {
+                  "content":  [
+                                  {
+                                      "files":  [
+                                                    "**/*.md",
+                                                    "**/*.yml",
+                                                    "toc.yml"
+                                                ],
+                                      "exclude":  [
+                                                      "**/obj/**",
+                                                      "**/includes/**",
+                                                      "_themes/**",
+                                                      "_themes.pdf/**",
+                                                      "README.md",
+                                                      "LICENSE",
+                                                      "LICENSE-CODE",
+                                                      "ThirdPartyNotices",
+                                                      "**/toc.md"
+                                                  ]
+                                  }
+                              ],
+                  "resource":  [
+                                   {
+                                       "files":  [
+                                                     "**/*.png",
+                                                     "**/*.jpg",
+                                                     "**/*.gif",
+                                                     "**/*.bmp",
+                                                     "**/*.jpeg"
+                                                 ],
+                                       "exclude":  [
+                                                       "**/obj/**",
+                                                       "**/includes/**",
+                                                       "_themes/**",
+                                                       "_themes.pdf/**"
+                                                   ]
+                                   }
+                               ],
+                  "overwrite":  [
+
+                                ],
+                  "externalReference":  [
+
+                                        ],
+                  "globalMetadata":  {
+                                         "breadcrumb_path":  "/office/exchange-2013-deployments/breadcrumb/toc.json",
+                                         "extendBreadcrumb":  true,
+                                         "feedback_system":  "None",
+                                         "ROBOTS":  "INDEX,FOLLOW",
+                                         "uhfHeaderId":  "MSDocsHeader-Office",
+                                         "ms.topic":  "conceptual",
+                                         "author":  "",
+                                         "ms.author":  "",
+                                         "ms.prod":  "exchange-2013"
+                                     },
+                  "fileMetadata":  {
+
+                                   },
+                  "template":  [
+
+                               ],
+                  "dest":  "Exchange-Deployments-2013",
+                  "markdownEngineName":  "markdig"
+              }
 }
