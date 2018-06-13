@@ -1,0 +1,93 @@
+- name: Гибридные развертывания Exchange Server 2013
+  href: exchange-server-hybrid-deployments-exchange-2013-help.md
+  items:
+  - name: Мастер гибридной конфигурации
+    href: hybrid-configuration-wizard-exchange-2013-help.md
+  - name: 'Мастер настройки гибридной конфигурации: вопросы и ответы'
+    href: hybrid-configuration-wizard-faqs-exchange-2013-help.md
+  - name: Предварительные условия для гибридного развертывания
+    href: hybrid-deployment-prerequisites-exchange-2013-help.md
+  - name: Требования к сертификатам для гибридных развертываний
+    href: certificate-requirements-for-hybrid-deployments-exchange-2013-help.md
+  - name: Параметры транспорта при гибридных развертываниях Exchange
+    href: transport-options-in-exchange-hybrid-deployments-exchange-2013-help.md
+  - name: Маршрутизация транспорта при гибридных развертываниях Exchange
+    href: transport-routing-in-exchange-hybrid-deployments-exchange-2013-help.md
+  - name: Управление в гибридных средах Exchange
+    href: hybrid-management-in-exchange-hybrid-deployments-exchange-2013-help.md
+  - name: Общий доступ к сведениям о занятости в гибридных средах Exchange
+    href: shared-free-busy-in-exchange-hybrid-deployments-exchange-2013-help.md
+  - name: Роли серверов при гибридных развертываниях Exchange
+    href: server-roles-in-exchange-hybrid-deployments-exchange-2013-help.md
+  - name: Управление правами доступа к данным при гибридных развертываниях Exchange
+    href: irm-in-exchange-hybrid-deployments-exchange-2013-help.md
+  - name: Разрешения при гибридных развертываниях Exchange
+    href: permissions-in-exchange-hybrid-deployments-exchange-2013-help.md
+  - name: Пограничные транспортные серверы в гибридных развертываниях
+    href: edge-transport-servers-with-hybrid-deployments-exchange-2013-help.md
+  - name: Единый вход в гибридных развертываниях
+    href: single-sign-on-with-hybrid-deployments-exchange-2013-help.md
+  - name: Параметры устройств Exchange ActiveSync при гибридных развертываниях Exchange
+    href: exchange-activesync-device-settings-with-exchange-hybrid-deployments-exchange-2013-help.md
+  - name: Факторы производительности гибридной миграции и рекомендации по ее выполнению
+    href: performance-factors-and-best-practices-for-hybrid-migrations-exchange-2013-help.md
+  - name: Как и когда списывать локальные серверы Exchange Server в гибридном развертывании
+    href: how-and-when-to-decommission-your-on-premises-exchange-servers-in-a-hybrid-deployment-exchange-2013-help.md
+  - name: Процедуры гибридного развертывания
+    href: hybrid-deployment-procedures-exchange-2013-help.md
+    items:
+    - name: Создание гибридного развертывания с помощью мастера гибридной конфигурации
+      href: create-a-hybrid-deployment-with-the-hybrid-configuration-wizard-exchange-2013-help.md
+    - name: Перемещение почтовых ящиков между локальными организациями и организациями Exchange Online в случаях гибридного развертывания
+      href: move-mailboxes-between-on-premises-and-exchange-online-organizations-in-hybrid-deployments-exchange-2013-help.md
+    - name: Настройка локальных общедоступных папок прежних версий для гибридного развертывания
+      href: configure-legacy-on-premises-public-folders-for-a-hybrid-deployment-exchange-2013-help.md
+    - name: Настройка общедоступных папок Exchange 2013 для гибридного развертывания
+      href: configure-exchange-2013-public-folders-for-a-hybrid-deployment-exchange-2013-help.md
+    - name: Настройка общедоступных папок Exchange Online для гибридного развертывания
+      href: configure-exchange-online-public-folders-for-a-hybrid-deployment-exchange-2013-help.md
+    - name: Настройка Exchange для поддержки делегированных разрешений почтовых ящиков в гибридном развертывании
+      href: configure-exchange-to-support-delegated-mailbox-permissions-in-a-hybrid-deployment-exchange-2013-help.md
+    - name: Настройка современных вложений в OneDrive для бизнеса и локальной организации Exchange 2016
+      href: configure-document-collaboration-with-onedrive-for-business-and-exchange-2016-on-premises-exchange-2013-help.md
+    - name: Настройка функции "Группы Office 365" для локальных пользователей в гибридной среде Exchange
+      href: configure-office-365-groups-with-on-premises-exchange-hybrid-exchange-2013-help.md
+    - name: Создание облачного архива для локального основного почтового ящика в гибридном развертывании
+      href: create-a-cloud-based-archive-for-an-on-premises-primary-mailbox-in-an-exchange-hybrid-deployment-exchange-online-help.md
+    - name: Упрощение URL-адреса Outlook Web App для гибридной среды Office 365
+      href: simplify-the-outlook-web-app-url-for-office-365-hybrid-exchange-2013-help.md
+    - name: Устранение неполадок в гибридном развертывании
+      href: troubleshoot-a-hybrid-deployment-exchange-2013-help.md
+  - name: Гибридные развертывания с Exchange 2013 и Exchange 2007
+    href: hybrid-deployments-with-exchange-2013-and-exchange-2007-exchange-2013-help.md
+    items:
+    - name: Роли сервера в гибридных развертываниях Exchange 2013 и Exchange 2007
+      href: server-roles-in-exchange-2013-exchange-2007-hybrid-deployments-exchange-2013-help.md
+    - name: Управление в гибридных развертываниях Exchange 2013 и Exchange 2007
+      href: hybrid-management-in-exchange-2013-exchange-2007-hybrid-deployments-exchange-2013-help.md
+    - name: Пограничные транспортные серверы в гибридных развертываниях Exchange 2013 и Exchange 2007
+      href: edge-transport-servers-in-exchange-2013-exchange-2007-hybrid-deployments-exchange-2013-help.md
+    - name: Параметры транспорта в гибридных развертываниях Exchange 2013 и Exchange 2007
+      href: transport-options-in-exchange-2013-exchange-2007-hybrid-deployments-exchange-2013-help.md
+    - name: Маршрутизация транспорта в гибридных развертываниях Exchange 2013 и Exchange 2007
+      href: transport-routing-in-exchange-2013-exchange-2007-hybrid-deployments-exchange-2013-help.md
+  - name: Гибридные развертывания с Exchange 2013 и Exchange 2010
+    href: hybrid-deployments-with-exchange-2013-and-exchange-2010-exchange-2013-help.md
+    items:
+    - name: Роли сервера в гибридных развертываниях Exchange 2013 и Exchange 2010
+      href: server-roles-in-exchange-2013-exchange-2010-hybrid-deployments-exchange-2013-help.md
+    - name: Управление в гибридных развертываниях Exchange 2013 и Exchange 2010
+      href: hybrid-management-in-exchange-2013-exchange-2010-hybrid-deployments-exchange-2013-help.md
+    - name: Пограничные транспортные серверы в гибридных развертываниях Exchange 2013 и Exchange 2010
+      href: edge-transport-servers-in-exchange-2013-exchange-2010-hybrid-deployments-exchange-2013-help.md
+    - name: Параметры транспорта в гибридных развертываниях Exchange 2013 и Exchange 2010
+      href: transport-options-in-exchange-2013-exchange-2010-hybrid-deployments-exchange-2013-help.md
+    - name: Маршрутизация транспорта в гибридных развертываниях Exchange 2013 и Exchange 2010
+      href: transport-routing-in-exchange-2013-exchange-2010-hybrid-deployments-exchange-2013-help.md
+  - name: Сведения о документации по Exchange
+    href: about-exchange-documentation-exchange-2013-help.md
+    items:
+    - name: Специальные возможности для инвалидов
+      href: accessibility-for-people-with-disabilities-exchange-2013-help.md
+    - name: Уведомления об авторских правах сторонних разработчиков
+      href: third-party-copyright-notices-exchange-2013-help.md
