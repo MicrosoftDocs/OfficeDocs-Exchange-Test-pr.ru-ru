@@ -37,7 +37,14 @@
     "globalMetadata": {
       "breadcrumb_path": "/office/exchange-server-2013/breadcrumb/toc.json",
       "extendBreadcrumb": true,
-      "feedback_system": "None"
+      "feedback_system": "None",
+      "ROBOTS":  "INDEX,FOLLOW",
+      "uhfHeaderId":  "MSDocsHeader-Office",
+      "ms.topic":  "conceptual",
+      "author":  "",
+      "ms.author":  "dstrome",
+      "ms.prod":  "exchange-2013",
+      "ms.technology":  "Exchange-2013"
     },
     "fileMetadata": {},
     "template": [],
