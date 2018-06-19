@@ -47,9 +47,8 @@
                                          "breadcrumb_path":  "/office/exchange-2013-guide-management-pack/breadcrumb/toc.json",
                                          "extendBreadcrumb":  true,
                                          "ROBOTS":  "INDEX,FOLLOW",
-                                         "ms.prod":  "Exchange",
                                          "ms.topic":  "conceptual",
-                                         "author":  "",
+                                         "author":  "dstrome",
                                          "ms.author":  "dstrome",
                                          "ms.prod":  "exchange-2013",
                                          "ms.technology":  "Exchange-2013"
