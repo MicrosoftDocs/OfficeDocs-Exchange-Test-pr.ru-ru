@@ -13,9 +13,9 @@ ms.translationtype: HT
 
  
 
-_**Применимо к:**Exchange Online, Exchange Server 2013, Exchange Server 2016_
+_<strong>Применимо к:</strong>Exchange Online, Exchange Server 2013, Exchange Server 2016_
 
-_**Последнее изменение раздела:**2016-12-09_
+_<strong>Последнее изменение раздела:</strong>2016-12-09_
 
 **Сводка**. Принципы IRM в гибридной среде Exchange и настройка управления правами на доступ к данным для работы с Exchange Online и локальными серверами Exchange Server.
 
@@ -190,18 +190,8 @@ Exchange использует серверы AD RMS в лесу Active Director
 
 После настройки локальной сети и экспорта данных, необходимо настроить Exchange Online организацию с помощью импорта TPD данных и включения IRM доверенного домена.
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Dn986544.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Всякий раз, когда вы изменяете локальную конфигурацию AD RMS, необходимо вручную применить новую конфигурацию в организации Exchange Online. Для этого экспортируйте данные TPD с локального сервера AD RMS и импортируйте их в организацию Exchange Online.</td>
-</tr>
-</tbody>
-</table>
+> [!NOTE]
+> Всякий раз, когда вы изменяете локальную конфигурацию AD RMS, необходимо вручную применить новую конфигурацию в организации Exchange Online. Для этого экспортируйте данные TPD с локального сервера AD RMS и импортируйте их в организацию Exchange Online.
 
 
 ## Как настроить IRM при гибридном развертывании Exchange
@@ -260,18 +250,8 @@ Exchange использует серверы AD RMS в лесу Active Director
     
         Set-RMSTemplate <template name> -Type Distributed
     
-    <table>
-    <thead>
-    <tr class="header">
-    <th><img src="images/Dn986544.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr class="odd">
-    <td>Невозможно изменить шаблон &quot;Не пересылать&quot; службы AD RMS.</td>
-    </tr>
-    </tbody>
-    </table>
+    > [!NOTE]
+    > Невозможно изменить шаблон &quot;Не пересылать&quot; службы AD RMS.
 
 
 3.  Повторите шаг 2 для каждого шаблона AD RMS, который необходимо распространить.
