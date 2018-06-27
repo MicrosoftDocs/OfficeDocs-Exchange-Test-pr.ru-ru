@@ -1,0 +1,2589 @@
+- name: Exchange Server 2013
+  href: exchange-server-2013-exchange-2013-help.md
+  items:
+  - name: Новые возможности в Exchange 2013
+    href: what-s-new-in-exchange-2013-exchange-2013-help.md
+    items:
+    - name: Отключенные возможности в Exchange 2013
+      href: what-s-discontinued-in-exchange-2013-exchange-2013-help.md
+    - name: Новые возможности Outlook Web App в Exchange 2013
+      href: what-s-new-for-outlook-web-app-in-exchange-2013-exchange-2013-help.md
+    - name: Новые возможности единой системы обмена сообщениями в Exchange 2013
+      href: what-s-new-for-unified-messaging-in-exchange-2013-exchange-2013-help.md
+    - name: Новые возможности правил транспорта
+      href: what-s-new-for-transport-rules-exchange-2013-help.md
+    - name: Заметки о выпуске Exchange 2013
+      href: release-notes-for-exchange-2013-exchange-2013-help.md
+    - name: Обновления для Exchange 2013
+      href: updates-for-exchange-2013-exchange-2013-help.md
+  - name: Планирование и развертывание
+    href: planning-and-deployment-for-exchange-2013-installation-instructions.md
+    items:
+    - name: Помощник по развертыванию Exchange Server
+      href: exchange-server-deployment-assistant-exchange-2013-help.md
+    - name: Active Directory
+      href: active-directory-exchange-2013-help.md
+      items:
+      - name: Доступ к Active Directory
+        href: access-to-active-directory-exchange-2013-help.md
+      - name: Изменения схемы Active Directory в Exchange 2013
+        href: exchange-2013-active-directory-schema-changes-exchange-2013-help.md
+      - name: Сценарии несвязанных пространств имен
+        href: disjoint-namespace-scenarios-exchange-2013-help.md
+        items:
+        - name: Настройка списка поиска DNS-суффиксов для несвязанного пространства имен
+          href: configure-the-dns-suffix-search-list-for-a-disjoint-namespace-exchange-2013-help.md
+    - name: Требования к системе для установки Exchange 2013
+      href: exchange-2013-system-requirements-exchange-2013-help.md
+    - name: Предварительные требования для Exchange 2013
+      href: exchange-2013-prerequisites-exchange-2013-help.md
+    - name: Подготовка Active Directory и доменов
+      href: prepare-active-directory-and-domains-exchange-2013-help.md
+    - name: Развертывание новой установки Exchange 2013
+      href: deploy-a-new-installation-of-exchange-2013-exchange-2013-help.md
+      items:
+      - name: 'Контрольный список: Выполнение новой установки Exchange 2013'
+        href: checklist-perform-a-new-installation-of-exchange-2013-exchange-2013-help.md
+      - name: Установка Exchange 2013 с помощью мастера установки
+        href: install-exchange-2013-using-the-setup-wizard-exchange-2013-help.md
+      - name: Установка Exchange 2013 в автоматическом режиме
+        href: install-exchange-2013-using-unattended-mode-exchange-2013-help.md
+      - name: Установка роли пограничного транспортного сервера Exchange 2013 с помощью мастера установки
+        href: install-the-exchange-2013-edge-transport-role-using-the-setup-wizard-exchange-2013-help.md
+      - name: Делегирование установки сервера Exchange 2013
+        href: delegate-the-installation-of-an-exchange-2013-server-exchange-2013-help.md
+    - name: Обновление Exchange 2013 с помощью последнего накопительного или обычного пакета обновления
+      href: upgrade-exchange-2013-to-the-latest-cumulative-update-or-service-pack-exchange-2013-help.md
+    - name: Обновление с Exchange 2010 до Exchange 2013
+      href: upgrade-from-exchange-2010-to-exchange-2013-exchange-2013-help.md
+      items:
+      - name: 'Контрольный список: Обновление с Exchange 2010'
+        href: checklist-upgrade-from-exchange-2010-exchange-2013-help.md
+    - name: Обновление с Exchange 2007 до Exchange 2013
+      href: upgrade-from-exchange-2007-to-exchange-2013-exchange-2013-help.md
+      items:
+      - name: 'Контрольный список: Обновление с Exchange 2007'
+        href: checklist-upgrade-from-exchange-2007-exchange-2013-help.md
+    - name: Развертывание топологий с несколькими лесами для Exchange 2013
+      href: deploy-multiple-forest-topologies-for-exchange-2013-exchange-2013-help.md
+      items:
+      - name: Развертывание Exchange 2013 в топологии с несколькими лесами
+        href: deploy-exchange-2013-in-a-cross-forest-topology-exchange-2013-help.md
+      - name: Развертывание Exchange 2013 в топологии леса ресурсов Exchange
+        href: deploy-exchange-2013-in-an-exchange-resource-forest-topology-exchange-2013-help.md
+    - name: Задачи после установки Exchange 2013
+      href: exchange-2013-post-installation-tasks-exchange-2013-help.md
+      items:
+      - name: Ввод ключа продукта Exchange 2013
+        href: enter-your-exchange-2013-product-key-exchange-2013-help.md
+      - name: Настройка потока обработки почты и клиентского доступа
+        href: configure-mail-flow-and-client-access-exchange-2013-help.md
+      - name: Проверка установки Exchange 2013
+        href: verify-an-exchange-2013-installation-exchange-2013-help.md
+      - name: Установка средств управления Exchange 2013
+        href: install-the-exchange-2013-management-tools-exchange-2013-help.md
+    - name: Виртуализация Exchange 2013
+      href: exchange-2013-virtualization-exchange-2013-help.md
+    - name: Интеграция с SharePoint и Lync
+      href: integration-with-sharepoint-and-lync-exchange-2013-help.md
+      items:
+      - name: Настройка проверки подлинности OAuth в SharePoint 2013 и Lync 2013
+        href: configure-oauth-authentication-with-sharepoint-2013-and-lync-2013-exchange-2013-help.md
+    - name: Справочник по развертыванию
+      href: deployment-reference-exchange-2013-help.md
+      items:
+      - name: Какие изменения происходят в Active Directory при установке Exchange 2013?
+        href: what-changes-in-active-directory-when-exchange-2013-is-installed-exchange-2013-help.md
+      - name: 'Exchange 2013: выпуски и версии'
+        href: exchange-2013-editions-and-versions-exchange-2013-help.md
+      - name: Таблица поддержки Exchange Server
+        href: exchange-server-supportability-matrix-exchange-2013-help.md
+      - name: Справочник по разрешениям развертывания Exchange 2013
+        href: exchange-2013-deployment-permissions-reference-exchange-2013-help.md
+      - name: Контрольный список по безопасности развертывания
+        href: deployment-security-checklist-exchange-2013-help.md
+      - name: Изменение размера Exchange 2013 и планирование загрузки
+        href: exchange-2013-sizing-and-capacity-planning-exchange-2013-help.md
+      - name: Параметры конфигурации хранилища Exchange 2013
+        href: exchange-2013-storage-configuration-options-exchange-2013-help.md
+      - name: Поддержка протокола IPv6 в Exchange 2013
+        href: ipv6-support-in-exchange-2013-exchange-2013-help.md
+      - name: Языковая поддержка Exchange 2013
+        href: exchange-2013-language-support-exchange-2013-help.md
+      - name: Проверки готовности Exchange 2013
+        href: exchange-2013-readiness-checks-exchange-2013-help.md
+        items:
+        - name: Существует каталог AD LDS в местоположении по умолчанию
+          href: ad-lds-directory-exists-in-default-location-exchange-2013-help.md
+        - name: В Active Directory существует дубликат контейнера системных объектов Microsoft Exchange
+          href: duplicate-microsoft-exchange-system-objects-container-exists-in-active-directory-exchange-2013-help.md
+        - name: Компонент Windows "Командный интерфейс отказоустойчивого кластера" не установлен
+          href: failover-cluster-command-interface-windows-feature-not-installed-exchange-2013-help.md
+        - name: Роль сервера клиентского доступа уже установлена
+          href: client-access-server-role-is-already-installed-exchange-2013-help.md
+        - name: Службы каталогов Active Directory не существует или с ней невозможно связаться
+          href: active-directory-does-not-exist-or-cannot-be-contacted-exchange-2013-help.md
+        - name: Локальный компьютер не присоединен к домену Active Directory
+          href: the-local-computer-isn-t-joined-to-an-active-directory-domain-exchange-2013-help.md
+        - name: Установку первого сервера Exchange в организации нельзя делегировать
+          href: installation-of-the-first-exchange-server-in-the-organization-can-t-be-delegated-exchange-2013-help.md
+        - name: Установку первого сервера Exchange в организации нельзя делегировать
+          href: installation-of-the-first-exchange-server-in-the-organization-can-t-be-delegated-exchange-2013-help_1.md
+        - name: Не удается делегировать установку первого сервера Exchange в организации
+          href: installation-of-the-first-exchange-server-in-the-organization-can-t-be-delegated-exchange-2013-help_2.md
+        - name: Установку первого сервера Exchange в организации нельзя делегировать
+          href: installation-of-the-first-exchange-server-in-the-organization-can-t-be-delegated-exchange-2013-help_3.md
+        - name: Установку первого сервера Exchange Server в организации невозможно делегировать
+          href: installation-of-the-first-exchange-server-in-the-organization-can-t-be-delegated-exchange-2013-help_4.md
+        - name: Active Directory работает не в режиме Windows Server 2003 или более поздней версии
+          href: active-directory-functional-level-isn-t-windows-server-2003-or-later-exchange-2013-help.md
+        - name: Не удается выполнить запись в контейнер организации Exchange
+          href: cannot-write-to-the-exchange-organization-container-exchange-2013-help.md
+        - name: Требуются глобальные обновления
+          href: global-updates-required-exchange-2013-help.md
+        - name: Невозможно найти запись узла для локального компьютера в базе данных DNS
+          href: the-host-record-for-the-local-computer-cannot-be-found-in-the-dns-database-exchange-2013-help.md
+        - name: Установка на контроллерах домена не поддерживается с разделением разрешений Active Directory
+          href: installation-on-domain-controllers-is-not-supported-with-active-directory-split-permissions-exchange-2013-help.md
+        - name: С текущей учетной записи не выполнен вход в домен Active Directory
+          href: the-current-account-isn-t-logged-into-an-active-directory-domain-exchange-2013-help.md
+        - name: Для продолжения установки необходимо перегрузить компьютер
+          href: the-computer-needs-to-be-restarted-before-setup-can-continue-exchange-2013-help.md
+        - name: Вошедший в систему пользователь не является членом группы администраторов схемы
+          href: the-logged-on-user-is-not-a-member-of-the-schema-admins-group-exchange-2013-help.md
+        - name: UCMA версии 4.0, ядро времени выполнения не установлено
+          href: ucma-4-0-core-runtime-not-installed-exchange-2013-help.md
+        - name: Невозможно удалить базу данных почтовых ящиков
+          href: cannot-remove-mailbox-database-exchange-2013-help.md
+        - name: Не рекомендуется устанавливать Exchange на контроллере домена
+          href: installing-exchange-on-a-domain-controller-is-not-recommended-exchange-2013-help.md
+        - name: Не установлено обновление KB2619234
+          href: kb2619234-update-not-installed-exchange-2013-help.md
+        - name: Установку первого сервера Exchange в организации нельзя делегировать
+          href: installation-of-the-first-exchange-server-in-the-organization-can-t-be-delegated-exchange-2013-help_5.md
+        - name: Серверы Exchange 2010 или Exchange 2007 не обнаружены
+          href: no-exchange-2010-or-exchange-2007-servers-detected-exchange-2013-help.md
+        - name: Для продолжения установки необходимо перегрузить компьютер
+          href: the-computer-needs-to-be-restarted-before-setup-can-continue-exchange-2013-help_1.md
+        - name: Серверы Exchange 2007 необходимо обновить до пакета обновления 3 со сведением 10
+          href: exchange-2007-servers-must-be-upgraded-to-service-pack-3-update-rollup-10-exchange-2013-help.md
+        - name: На серверах Exchange 2010 необходимо установить пакет обновления 3
+          href: exchange-2010-servers-must-be-upgraded-to-service-pack-3-exchange-2013-help.md
+        - name: Пакет фильтров Office 2010 не установлен
+          href: office-2010-filter-pack-not-installed-exchange-2013-help.md
+        - name: Пакет фильтров Office 2010 SP1 не установлен
+          href: office-2010-filter-pack-sp1-not-installed-exchange-2013-help.md
+        - name: Невозможно установить Exchange 2013 в лесу, в котором находятся серверы Exchange 2000 или Exchange 2003. параметр
+          href: can-t-install-exchange-2013-in-a-forest-containing-exchange-2000-or-exchange-2003-servers-exchange-2013-help.md
+        - name: Найдена несовместимая операционная система
+          href: an-incompatible-operating-system-was-found-exchange-2013-help.md
+        - name: Серверы Exchange 2010 необходимо обновить до пакета обновления 3
+          href: exchange-2010-servers-must-be-upgraded-to-service-pack-3-exchange-2013-help_1.md
+        - name: Объект групповой политики ExecutionPolicy определен
+          href: executionpolicy-gpo-is-defined-exchange-2013-help.md
+        - name: Основной суффикс DNS отсутствует
+          href: primary-dns-suffix-is-missing-exchange-2013-help.md
+        - name: The Simple Mail Transport Protocol is currently installed_SMTPSvcInstalled
+          href: the-simple-mail-transport-protocol-is-currently-installed-smtpsvcinstalled-exchange-2013-help.md
+        - name: Формат адресации SMTP не поддерживается_SMTPAddressLiteral
+          href: smtp-addressing-format-not-supported-smtpaddressliteral-exchange-2013-help.md
+        - name: The World Wide Web Publishing Service is disabled or missing_ShouldReRunSetupForW3SVC
+          href: the-world-wide-web-publishing-service-is-disabled-or-missing-shouldrerunsetupforw3svc-exchange-2013-help.md
+        - name: Этот сервер — источник соединителя отправки_ServerIsSourceForSendConnector
+          href: this-server-is-the-source-for-a-send-connector-serverissourceforsendconnector-exchange-2013-help.md
+        - name: Локальный компьютер несет ответственность за развертывание membership_ServerIsGroupExpansionServer группы
+          href: the-local-computer-is-responsible-for-expanding-group-membership-serverisgroupexpansionserver-exchange-2013-help.md
+        - name: The local computer is responsible for expanding group membership_ServerIsDynamicGroupExpansionServer
+          href: the-local-computer-is-responsible-for-expanding-group-membership-serverisdynamicgroupexpansionserver-exchange-2013-help.md
+        - name: Соответствие полного доменного имени компьютера политике_ServerFQDNMatchesSMTPPolicy получателя
+          href: the-fully-qualified-domain-name-of-the-computer-matches-a-recipient-policy-serverfqdnmatchessmtppolicy-exchange-2013-help.md
+        - name: Older database files present_SecondSGFilesExist
+          href: older-database-files-present-secondsgfilesexist-exchange-2013-help.md
+        - name: Хозяин схемы не под управлением Windows Server 2003 с пакетом обновления 1 или later_SchemaFSMONotWin2003SPn
+          href: the-schema-master-is-not-running-windows-server-2003-service-pack-1-or-later-schemafsmonotwin2003spn-exchange-2013-help.md
+        - name: Не удается найти службу обновления получателей_RUSMissing
+          href: cannot-find-a-recipient-update-service-rusmissing-exchange-2013-help.md
+        - name: Active Directory domain is mixed mode_RootDomainModeMixed
+          href: active-directory-domain-is-mixed-mode-rootdomainmodemixed-exchange-2013-help.md
+        - name: Не удалось связаться с основным сервером DNS_PrimaryDNSTestFailed
+          href: the-primary-dns-server-cannot-be-contacted-primarydnstestfailed-exchange-2013-help.md
+        - name: Недостаточно прав для выполнения команды /PrepareDomain_PrepareDomainNotAdmin
+          href: insufficient-permissions-to-run-preparedomain-preparedomainnotadmin-exchange-2013-help.md
+        - name: Active Directory domain is mixed mode_PrepareDomainModeMixed
+          href: active-directory-domain-is-mixed-mode-preparedomainmodemixed-exchange-2013-help.md
+        - name: Операционная система работает в режиме отладки_OSCheckedBuild
+          href: the-operating-system-is-in-debug-mode-oscheckedbuild-exchange-2013-help.md
+        - name: The logged-on user is not a member of the local Administrators group_NotLocalAdmin
+          href: the-logged-on-user-is-not-a-member-of-the-local-administrators-group-notlocaladmin-exchange-2013-help.md
+        - name: Отсутствует в сайте/домене хозяина схемы_NotInSchemaMasterSite
+          href: not-in-schema-master-site-domain-notinschemamastersite-exchange-2013-help.md
+        - name: Не в главной сайта в схеме domain_NotInSchemaMasterDomain
+          href: not-in-schema-master-site-domain-notinschemamasterdomain-exchange-2013-help.md
+        - name: Не удалось установить роли Exchange 2007 после подготовки Active Directory для Exchange 2010_NoE12ServerWarning
+          href: cannot-install-exchange-2007-roles-after-you-prepare-active-directory-for-exchange-2010-noe12serverwarning-exchange-2013-help.md
+        - name: The Distributed Transaction Coordinator Service must be started before setup can continue_MSDTCStopped
+          href: the-distributed-transaction-coordinator-service-must-be-started-before-setup-can-continue-msdtcstopped-exchange-2013-help.md
+        - name: В одной или нескольких очередях присутствуют уведомления_MessagesInQueue
+          href: messages-currently-exist-in-one-or-more-queues-messagesinqueue-exchange-2013-help.md
+        - name: Отсутствует спецификация диска группы хранения_MailboxLogDriveDoesNotExist
+          href: storage-group-drive-specification-is-missing-mailboxlogdrivedoesnotexist-exchange-2013-help.md
+        - name: Отсутствует спецификация диска базы данных почтового ящика_MailboxEDBDriveDoesNotExist
+          href: mailbox-database-drive-specification-is-missing-mailboxedbdrivedoesnotexist-exchange-2013-help.md
+        - name: Требуется компонент "Служба активации Windows — Модель процесса"_LonghornWASProcessModelInstalled
+          href: the-windows-process-activation-service-process-model-component-is-required-longhornwasprocessmodelinstalled-exchange-2013-help.md
+        - name: Компонент IIS 7 не установлен_LonghornIIS7WindowsAuthNotInstalled
+          href: iis-7-component-not-installed-longhorniis7windowsauthnotinstalled-exchange-2013-help.md
+        - name: Требуется компонент расширяемости .NET для IIS 7_LonghornIIS7NetExt
+          href: iis-7-net-extensibility-component-is-required-longhorniis7netext-exchange-2013-help.md
+        - name: Удаление языковых пакетов единой системы обмена сообщениями_AdditionalUMLangPackExists
+          href: uninstall-unified-messaging-language-packs-additionalumlangpackexists-exchange-2013-help.md
+        - name: Недостаточно прав для подготовки Active Directory_ADUpdateRequired
+          href: insufficient-permissions-to-prepare-active-directory-adupdaterequired-exchange-2013-help.md
+        - name: Hub Transport role not detected in local site_BridgeheadRoleNotPresentInSite
+          href: hub-transport-role-not-detected-in-local-site-bridgeheadrolenotpresentinsite-exchange-2013-help.md
+        - name: Недостаточно разрешений для удаления всех ролей сервера_CannotUninstallDelegatedServer
+          href: insufficient-permissions-to-remove-all-server-roles-cannotuninstalldelegatedserver-exchange-2013-help.md
+        - name: Client Access role not detected in local site_ClientAccessRoleNotPresentInSite
+          href: client-access-role-not-detected-in-local-site-clientaccessrolenotpresentinsite-exchange-2013-help.md
+        - name: На кластерном сервере может быть установлена только роль сервера почтовых ящиков_ClusSvcInstalledRoleBlock
+          href: only-the-mailbox-role-can-be-installed-on-a-cluster-server-clussvcinstalledroleblock-exchange-2013-help.md
+        - name: Программа установки не может установить Exchange в controller_ComputerRODC домена только для чтения
+          href: setup-cannot-install-exchange-to-a-read-only-domain-controller-computerrodc-exchange-2013-help.md
+        - name: Контроллер домена переопределен в реестре_ConfigDCHostNameMismatch
+          href: domain-controller-override-is-set-in-the-registry-configdchostnamemismatch-exchange-2013-help.md
+        - name: Недостаточно прав для подготовки Active Directory_DomainPrepWithoutADUpdate
+          href: insufficient-permissions-to-prepare-active-directory-domainprepwithoutadupdate-exchange-2013-help.md
+        - name: На локальном компьютере уже запущен сервер Exchange Server_ExchangeAlreadyInstalled
+          href: the-local-computer-is-already-running-exchange-server-exchangealreadyinstalled-exchange-2013-help.md
+        - name: Older database files present_FirstSGFilesExist
+          href: older-database-files-present-firstsgfilesexist-exchange-2013-help.md
+        - name: Обнаружен один или несколько серверов соединителей Active Directory_ADCFound
+          href: one-or-more-active-directory-connector-servers-were-found-adcfound-exchange-2013-help.md
+        - name: Хозяин схемы не под управлением Windows Server 2003 с пакетом обновления 1 или later_DomainControllerIsOutOfSite
+          href: the-schema-master-is-not-running-windows-server-2003-service-pack-1-or-later-domaincontrollerisoutofsite-exchange-2013-help.md
+        - name: Необходимая подготовка домена_DomainPrepRequired
+          href: domain-preparation-required-domainpreprequired-exchange-2013-help.md
+        - name: Перед продолжением установки необходимо запустить службу "Система событий COM+"_EventSystemStopped
+          href: the-com-event-system-service-must-be-started-before-setup-can-continue-eventsystemstopped-exchange-2013-help.md
+        - name: IIS находится в mode_IIS32BitMode совместимость 32-разрядная версия
+          href: iis-is-in-32-bit-compatibility-mode-iis32bitmode-exchange-2013-help.md
+        - name: Наследование списка управления доступом (ACL) заблокировано_InhBlockPublicFolderTree
+          href: access-control-list-acl-inheritance-is-blocked-inhblockpublicfoldertree-exchange-2013-help.md
+        - name: Не удалось установить роль сервера_InstallWatermark
+          href: setup-failure-occurred-while-installing-a-server-role-installwatermark-exchange-2013-help.md
+        - name: Сбой программы установки при удалении роли сервера_InterruptedUninstallNotContinued
+          href: setup-failure-occurred-while-uninstalling-a-server-role-interrupteduninstallnotcontinued-exchange-2013-help.md
+        - name: Не удается определить имя сайта Active Directory_InvalidADSite
+          href: cannot-determine-the-name-of-the-active-directory-site-invalidadsite-exchange-2013-help.md
+        - name: Локальный компьютер является контроллером домена domain_LocalComputerIsDCInChildDomain дочерних
+          href: the-local-computer-is-a-domain-controller-of-a-child-domain-localcomputerisdcinchilddomain-exchange-2013-help.md
+        - name: Active Directory domain is mixed mode_LocalDomainModeMixed
+          href: active-directory-domain-is-mixed-mode-localdomainmodemixed-exchange-2013-help.md
+        - name: Необходимо обновить локальный домен_LocalDomainPrep
+          href: the-local-domain-needs-to-be-updated-localdomainprep-exchange-2013-help.md
+        - name: IIS 6 Compatibility components not installed_LonghornIIS6MetabaseNotInstalled
+          href: iis-6-compatibility-components-not-installed-longhorniis6metabasenotinstalled-exchange-2013-help.md
+        - name: IIS 6 Compatibility components not installed_LonghornIIS6MgmtConsoleNotInstalled
+          href: iis-6-compatibility-components-not-installed-longhorniis6mgmtconsolenotinstalled-exchange-2013-help.md
+        - name: Компонент IIS 7 не установлен_LonghornIIS7BasicAuthNotInstalled
+          href: iis-7-component-not-installed-longhorniis7basicauthnotinstalled-exchange-2013-help.md
+        - name: Компонент IIS 7 не установлен_LonghornIIS7DigestAuthNotInstalled
+          href: iis-7-component-not-installed-longhorniis7digestauthnotinstalled-exchange-2013-help.md
+        - name: Компонент IIS 7 не установлен_LonghornIIS7HttpCompressionStaticNotInstalled
+          href: iis-7-component-not-installed-longhorniis7httpcompressiondynamicnotinstalled-exchange-2013-help.md
+        - name: Компонент IIS 7 не installed_LonghornIIS7HttpCompressionStaticNotInstalled
+          href: iis-7-component-not-installed-longhorniis7httpcompressionstaticnotinstalled-exchange-2013-help.md
+        - name: Служба публикации в Интернете отключена или отсутствует_W3SVCDisabledOrNotInstalled
+          href: the-world-wide-web-publishing-service-is-disabled-or-missing-w3svcdisabledornotinstalled-exchange-2013-help.md
+        - name: Сервер автономной адресной книги удален_OffLineABServerDeleted
+          href: oab-server-has-been-deleted-offlineabserverdeleted-exchange-2013-help.md
+      - name: Сетевые порты для клиентов и потока обработки почты в Exchange 2013
+        href: network-ports-for-clients-and-mail-flow-in-exchange-2013-exchange-2013-help.md
+      - name: Обзор служб Exchange 2013
+        href: overview-of-exchange-2013-services-exchange-2013-help.md
+      - name: Основные понятия в командной консоли Exchange
+        href: basic-concepts-in-exchange-management-shell-exchange-2013-help.md
+        items:
+        - name: Командлеты
+          href: cmdlets-exchange-2013-help.md
+        - name: Идентификатор
+          href: identity-exchange-2013-help.md
+        - name: Импорт и экспорт файлов в командной консоли Exchange
+          href: import-and-export-files-in-the-exchange-management-shell-exchange-2013-help.md
+        - name: Изменение многозначных свойств
+          href: modifying-multivalued-properties-exchange-2013-help.md
+        - name: Параметры WhatIf, Confirm и ValidateOnly
+          href: whatif-confirm-and-validateonly-switches-exchange-2013-help.md
+        - name: Работа с выходными данными команды
+          href: working-with-command-output-exchange-2013-help.md
+      - name: Агенты расширения командлета
+        href: cmdlet-extension-agents-exchange-2013-help.md
+        items:
+        - name: Управление агентами расширения командлетов
+          href: manage-cmdlet-extension-agents-exchange-2013-help.md
+      - name: Краткий справочник по командной консоли Exchange для Exchange 2013
+        href: exchange-management-shell-quick-reference-for-exchange-2013-exchange-2013-help.md
+      - name: Фильтруемые свойства для параметра -ContentFilter
+        href: filterable-properties-for-the-contentfilter-parameter.md
+    - name: Мультитенантность в Exchange 2013
+      href: multi-tenancy-in-exchange-2013-exchange-2013-help.md
+    - name: Обновление организации Exchange из-за перехода на летнее время или изменения часового пояса
+      href: update-your-exchange-organization-when-daylight-saving-time-or-the-time-zone-changes-exchange-2013-help.md
+  - name: Разрешения
+    href: permissions-exchange-2013-help.md
+    items:
+    - name: Общие сведения об управлении доступом на основе ролей
+      href: understanding-role-based-access-control-exchange-2013-help.md
+      items:
+      - name: Общие сведения о группах ролей управления
+        href: understanding-management-role-groups-exchange-2013-help.md
+      - name: Общие сведения о политиках назначения ролей управления
+        href: understanding-management-role-assignment-policies-exchange-2013-help.md
+      - name: Общие сведения о ролях управления
+        href: understanding-management-roles-exchange-2013-help.md
+      - name: Общие сведения об областях ролей управления
+        href: understanding-management-role-scopes-exchange-2013-help.md
+        items:
+        - name: Общие сведения о фильтрах области ролей управления
+          href: understanding-management-role-scope-filters-exchange-2013-help.md
+        - name: Общие сведения об исключительных областях
+          href: understanding-exclusive-scopes-exchange-2013-help.md
+      - name: Общие сведения о назначениях ролей управления
+        href: understanding-management-role-assignments-exchange-2013-help.md
+      - name: Встроенные группы ролей
+        href: built-in-role-groups-exchange-2013-help.md
+        items:
+        - name: Управление организацией
+          href: organization-management-exchange-2013-help.md
+        - name: Управление организацией только с правом на просмотр
+          href: view-only-organization-management-exchange-2013-help.md
+        - name: Управление получателями
+          href: recipient-management-exchange-2013-help.md
+        - name: Управление единой системой обмена сообщениями
+          href: um-management-exchange-2013-help.md
+        - name: Служба поддержки
+          href: help-desk-exchange-2013-help.md
+        - name: Управление санацией
+          href: hygiene-management-exchange-2013-help.md
+        - name: Управление соответствием требованиям
+          href: compliance-management-exchange-2013-help.md
+        - name: Управление записями
+          href: records-management-exchange-2013-help.md
+        - name: Управление обнаружением
+          href: discovery-management-exchange-2013-help.md
+        - name: Управление общими папками
+          href: public-folder-management-exchange-2013-help.md
+        - name: Управление сервером
+          href: server-management-exchange-2013-help.md
+        - name: Делегированная установка
+          href: delegated-setup-exchange-2013-help.md
+      - name: Встроенные роли управления
+        href: built-in-management-roles-exchange-2013-help.md
+        items:
+        - name: Роль разрешений Active Directory
+          href: active-directory-permissions-role-exchange-2013-help.md
+        - name: Роль списков адресов
+          href: address-lists-role-exchange-2013-help.md
+        - name: Роль ApplicationImpersonation
+          href: applicationimpersonation-role-exchange-2013-help.md
+        - name: Роль ArchiveApplication
+          href: archiveapplication-role-exchange-2013-help.md
+        - name: Роль журналов аудита
+          href: audit-logs-role-exchange-2013-help.md
+        - name: Роль агентов расширения командлетов
+          href: cmdlet-extension-agents-role-exchange-2013-help.md
+        - name: Роль предотвращения потери данных
+          href: data-loss-prevention-role-exchange-2013-help.md
+        - name: Роль групп обеспечения доступности баз данных
+          href: database-availability-groups-role-exchange-2013-help.md
+        - name: Роль копий баз данных
+          href: database-copies-role-exchange-2013-help.md
+        - name: Роль баз данных
+          href: databases-role-exchange-2013-help.md
+        - name: Роль аварийного восстановления
+          href: disaster-recovery-role-exchange-2013-help.md
+        - name: Роль групп рассылки
+          href: distribution-groups-role-exchange-2013-help.md
+        - name: Роль пограничных подписок
+          href: edge-subscriptions-role-exchange-2013-help.md
+        - name: Роль политик адресов электронной почты
+          href: e-mail-address-policies-role-exchange-2013-help.md
+        - name: Роль соединителей Exchange
+          href: exchange-connectors-role-exchange-2013-help.md
+        - name: Роль сертификатов сервера Exchange Server
+          href: exchange-server-certificates-role-exchange-2013-help.md
+        - name: Роль серверов Exchange
+          href: exchange-servers-role-exchange-2013-help.md
+        - name: Роль виртуальных каталогов Exchange
+          href: exchange-virtual-directories-role-exchange-2013-help.md
+        - name: Роль федеративного общего доступа
+          href: federated-sharing-role-exchange-2013-help.md
+        - name: Роль управления правами на доступ к данным
+          href: information-rights-management-role-exchange-2013-help.md
+        - name: Роль ведения журнала
+          href: journaling-role-exchange-2013-help.md
+        - name: Роль хранения для судебного разбирательства
+          href: legal-hold-role-exchange-2013-help.md
+        - name: Роль LegalHoldApplication
+          href: legalholdapplication-role-exchange-2013-help.md
+        - name: Роль общедоступных папок с включенной поддержкой почты
+          href: mail-enabled-public-folders-role-exchange-2013-help.md
+        - name: Роль создания получателя электронной почты
+          href: mail-recipient-creation-role-exchange-2013-help.md
+        - name: Роль получателей почты
+          href: mail-recipients-role-exchange-2013-help.md
+        - name: Роль советов по использованию электронной почты
+          href: mail-tips-role-exchange-2013-help.md
+        - name: Роль импорта и экспорта почтового ящика
+          href: mailbox-import-export-role-exchange-2013-help.md
+        - name: Роль поиска в почтовом ящике
+          href: mailbox-search-role-exchange-2013-help.md
+        - name: Роль MailboxSearchApplication
+          href: mailboxsearchapplication-role-exchange-2013-help.md
+        - name: Роль отслеживания сообщений
+          href: message-tracking-role-exchange-2013-help.md
+        - name: Роль переноса
+          href: migration-role-exchange-2013-help.md
+        - name: Роль мониторинга
+          href: monitoring-role-exchange-2013-help.md
+        - name: Роль перемещения почтовых ящиков
+          href: move-mailboxes-role-exchange-2013-help.md
+        - name: Роль "Мои настраиваемые приложения"
+          href: my-custom-apps-role-exchange-2013-help.md
+        - name: Роль My Marketplace Apps
+          href: my-marketplace-apps-role-exchange-2013-help.md
+        - name: Роль MyAddressInformation
+          href: myaddressinformation-role-exchange-2013-help.md
+        - name: Роль MyBaseOptions
+          href: mybaseoptions-role-exchange-2013-help.md
+        - name: Роль MyContactInformation
+          href: mycontactinformation-role-exchange-2013-help.md
+        - name: Роль MyDiagnostics
+          href: mydiagnostics-role-exchange-2013-help.md
+        - name: Роль MyDisplayName
+          href: mydisplayname-role-exchange-2013-help.md
+        - name: Роль MyDistributionGroupMembership
+          href: mydistributiongroupmembership-role-exchange-2013-help.md
+        - name: Роль MyDistributionGroups
+          href: mydistributiongroups-role-exchange-2013-help.md
+        - name: Роль MyMobileInformation
+          href: mymobileinformation-role-exchange-2013-help.md
+        - name: Роль MyName
+          href: myname-role-exchange-2013-help.md
+        - name: MyPersonalInformation роли
+          href: mypersonalinformation-role-exchange-2013-help.md
+        - name: Роль MyProfileInformation
+          href: myprofileinformation-role-exchange-2013-help.md
+        - name: Роль в моих приложениях с правами ReadWriteMailbox
+          href: my-readwritemailbox-apps-role-exchange-2013-help.md
+        - name: Роль MyRetentionPolicies
+          href: myretentionpolicies-role-exchange-2013-help.md
+        - name: Роль MyTeamMailboxes
+          href: myteammailboxes-role-exchange-2013-help.md
+        - name: Роль MyTextMessaging
+          href: mytextmessaging-role-exchange-2013-help.md
+        - name: Роль MyVoiceMail
+          href: myvoicemail-role-exchange-2013-help.md
+        - name: Роль OfficeExtensionApplication
+          href: officeextensionapplication-role-exchange-2013-help.md
+        - name: Роль "Настраиваемые приложения Org"
+          href: org-custom-apps-role-exchange-2013-help.md
+        - name: Роль "Приложения Org Marketplace"
+          href: org-marketplace-apps-role-exchange-2013-help.md
+        - name: Роль клиентского доступа организации
+          href: organization-client-access-role-exchange-2013-help.md
+        - name: Роль конфигурации организации
+          href: organization-configuration-role-exchange-2013-help.md
+        - name: Роль параметров транспорта организации
+          href: organization-transport-settings-role-exchange-2013-help.md
+        - name: Роль протоколов POP3 и IMAP4
+          href: pop3-and-imap4-protocols-role-exchange-2013-help.md
+        - name: Роль общедоступных папок
+          href: public-folders-role-exchange-2013-help.md
+        - name: Роль соединителей получения
+          href: receive-connectors-role-exchange-2013-help.md
+        - name: Роль политик получателя
+          href: recipient-policies-role-exchange-2013-help.md
+        - name: Роль удаленных и обслуживаемых доменов
+          href: remote-and-accepted-domains-role-exchange-2013-help.md
+        - name: Роль сброса пароля
+          href: reset-password-role-exchange-2013-help.md
+        - name: Роль управления хранением
+          href: retention-management-role-exchange-2013-help.md
+        - name: Роль управления ролями
+          href: role-management-role-exchange-2013-help.md
+        - name: Роль создания и членства в группе безопасности
+          href: security-group-creation-and-membership-role-exchange-2013-help.md
+        - name: Роль соединителей отправки
+          href: send-connectors-role-exchange-2013-help.md
+        - name: Роль поддержки диагностики
+          href: support-diagnostics-role-exchange-2013-help.md
+        - name: Роль почтовых ящиков рабочей группы
+          href: team-mailboxes-role-exchange-2013-help.md
+        - name: Роль TeamMailboxLifecycleApplication
+          href: teammailboxlifecycleapplication-role-exchange-2013-help.md
+        - name: Роль агентов транспорта
+          href: transport-agents-role-exchange-2013-help.md
+        - name: Роль санации транспорта
+          href: transport-hygiene-role-exchange-2013-help.md
+        - name: Роль очередей транспорта
+          href: transport-queues-role-exchange-2013-help.md
+        - name: Роль правил транспорта
+          href: transport-rules-role-exchange-2013-help.md
+        - name: Роль почтовых ящиков единой системы обмена сообщениями
+          href: um-mailboxes-role-exchange-2013-help.md
+        - name: Роль запросов единой системы обмена сообщениями
+          href: um-prompts-role-exchange-2013-help.md
+        - name: Роль единой системы обмена сообщениями
+          href: unified-messaging-role-exchange-2013-help.md
+        - name: Роль управления с незаданной областью
+          href: unscoped-role-management-role-exchange-2013-help.md
+        - name: Роль параметров пользователя
+          href: user-options-role-exchange-2013-help.md
+        - name: Роль UserApplication
+          href: userapplication-role-exchange-2013-help.md
+        - name: Роль только для просмотра журналов аудита
+          href: view-only-audit-logs-role-exchange-2013-help.md
+        - name: Роль конфигурации с правами только на просмотр
+          href: view-only-configuration-role-exchange-2013-help.md
+        - name: Роль получателей с правами только на просмотр
+          href: view-only-recipients-role-exchange-2013-help.md
+        - name: Роль WorkloadManagement
+          href: workloadmanagement-role-exchange-2013-help.md
+    - name: Общие сведения о разрешениях для нескольких лесов
+      href: understanding-multiple-forest-permissions-exchange-2013-help.md
+    - name: Общие сведения о разделенных разрешениях
+      href: understanding-split-permissions-exchange-2013-help.md
+    - name: Сведения о сосуществовании разрешений в Exchange 2007 и Exchange 2010
+      href: understanding-permissions-coexistence-with-exchange-2007-and-exchange-2010-exchange-2013-help.md
+    - name: Управление группами ролей
+      href: manage-role-groups-exchange-2013-help.md
+    - name: Управление участниками группы ролей
+      href: manage-role-group-members-exchange-2013-help.md
+    - name: Управление группами связанных ролей
+      href: manage-linked-role-groups-exchange-2013-help.md
+    - name: Управление политиками назначения ролей
+      href: manage-role-assignment-policies-exchange-2013-help.md
+    - name: Изменение политики назначения для почтового ящика
+      href: change-the-assignment-policy-on-a-mailbox-exchange-2013-help.md
+    - name: Создание группы связанных ролей, которые зеркально встроенные группы ролей
+      href: create-linked-role-groups-that-mirror-built-in-role-groups-exchange-2013-help.md
+    - name: Просмотр действующих разрешений
+      href: view-effective-permissions-exchange-2013-help.md
+    - name: Разрешения на функции
+      href: feature-permissions-exchange-2013-help.md
+      items:
+      - name: Разрешения управления ролями
+        href: role-management-permissions-exchange-2013-help.md
+      - name: Политика обмена сообщениями и разрешения для соответствия требованиям
+        href: messaging-policy-and-compliance-permissions-exchange-2013-help.md
+      - name: Разрешения для защиты от нежелательной почты и вредоносных программ
+        href: anti-spam-and-anti-malware-permissions-exchange-2013-help.md
+      - name: Разрешения потока обработки почты
+        href: mail-flow-permissions-exchange-2013-help.md
+      - name: Разрешения получателей
+        href: recipients-permissions-exchange-2013-help.md
+      - name: Разрешения для электронных адресов и адресных книг
+        href: email-address-and-address-book-permissions-exchange-2013-help.md
+      - name: Разрешения на общий доступ и совместную работу
+        href: sharing-and-collaboration-permissions-exchange-2013-help.md
+      - name: Разрешения клиентов и мобильных устройств
+        href: clients-and-mobile-devices-permissions-exchange-2013-help.md
+      - name: Разрешения единой системы обмена сообщениями
+        href: unified-messaging-permissions-exchange-2013-help.md
+      - name: Разрешения высокого уровня доступности и устойчивости сайта
+        href: high-availability-and-site-resilience-permissions-exchange-2013-help.md
+      - name: Разрешения инфраструктуры Exchange и командной консоли
+        href: exchange-and-shell-infrastructure-permissions-exchange-2013-help.md
+      - name: Разрешения работоспособности и производительности сервера
+        href: server-health-and-performance-permissions-exchange-2013-help.md
+    - name: Дополнительные разрешения
+      href: advanced-permissions-exchange-2013-help.md
+      items:
+      - name: Записи роли и роли управления
+        href: management-roles-and-role-entries-exchange-2013-help.md
+        items:
+        - name: Создание роли
+          href: create-a-role-exchange-2013-help.md
+        - name: Просмотр роли
+          href: view-a-role-exchange-2013-help.md
+        - name: Удаление роли
+          href: remove-a-role-exchange-2013-help.md
+        - name: Добавьте запись роли в роли
+          href: add-a-role-entry-to-a-role-exchange-2013-help.md
+        - name: Изменение записи роли
+          href: change-a-role-entry-exchange-2013-help.md
+        - name: Просмотр записей роли
+          href: view-role-entries-exchange-2013-help.md
+        - name: Удаление записи роли из роли
+          href: remove-a-role-entry-from-a-role-exchange-2013-help.md
+        - name: Создание роли с незаданной областью
+          href: create-an-unscoped-role-exchange-2013-help.md
+        - name: Изменение записи роли в роли верхнего уровня с незаданной областью
+          href: change-a-role-entry-on-an-unscoped-top-level-role-exchange-2013-help.md
+        - name: Добавление записи роли в роль верхнего уровня с незаданной областью
+          href: add-a-role-entry-to-an-unscoped-top-level-role-exchange-2013-help.md
+      - name: Области роли управления
+        href: management-role-scopes-exchange-2013-help.md
+        items:
+        - name: Создание регулярной или монопольной области
+          href: create-a-regular-or-exclusive-scope-exchange-2013-help.md
+        - name: Изменение области роли
+          href: change-a-role-scope-exchange-2013-help.md
+        - name: Просмотр областей применения ролей
+          href: view-role-scopes-exchange-2013-help.md
+        - name: Удаление области роли
+          href: remove-a-role-scope-exchange-2013-help.md
+        - name: Управление автоматическим распределением почтовых ящиков с помощью областей базы данных
+          href: control-automatic-mailbox-distribution-using-database-scopes-exchange-2013-help.md
+      - name: Назначения ролей управления
+        href: management-role-assignments-exchange-2013-help.md
+        items:
+        - name: Добавление роли для пользователя или универсальной группы безопасности
+          href: add-a-role-to-a-user-or-usg-exchange-2013-help.md
+        - name: Изменение назначения роли
+          href: change-a-role-assignment-exchange-2013-help.md
+        - name: Просмотр назначения ролей
+          href: view-role-assignments-exchange-2013-help.md
+        - name: Удалить роль из пользователя или универсальной группы безопасности
+          href: remove-a-role-from-a-user-or-usg-exchange-2013-help.md
+        - name: Назначения роли делегата
+          href: delegate-role-assignments-exchange-2013-help.md
+      - name: Управление разделенными разрешениями
+        href: managing-split-permissions-exchange-2013-help.md
+        items:
+        - name: Настройка разделенных разрешений в Exchange 2013
+          href: configure-exchange-2013-for-split-permissions-exchange-2013-help.md
+        - name: Настройка общих разрешений в Exchange 2013
+          href: configure-exchange-2013-for-shared-permissions-exchange-2013-help.md
+  - name: Политика обмена сообщениями и соответствие требованиям
+    href: messaging-policy-and-compliance-exchange-2013-help.md
+    items:
+    - name: Архивация на месте в Exchange 2013
+      href: in-place-archiving-in-exchange-2013-exchange-2013-help.md
+      items:
+      - name: Управление архивами на месте в Exchange 2013
+        href: manage-in-place-archives-in-exchange-2013-exchange-2013-help.md
+      - name: Изменение политик архивации
+        href: modify-archive-policies-exchange-2013-help.md
+      - name: Настройка квот архивации на месте (локально)
+        href: configure-archive-quotas-for-an-in-place-archive-in-exchange-2013-exchange-2013-help.md
+      - name: Архивация бесед Lync и содержимого собраний в Exchange
+        href: archive-lync-conversations-and-meeting-content-to-exchange-exchange-2013-help.md
+      - name: Использование проверки подлинности OAuth для поддержки архивации в гибридном развертывании Exchange
+        href: using-oauth-authentication-to-support-archiving-in-an-exchange-hybrid-deployment-exchange-2013-help.md
+    - name: Хранение на месте и хранение для судебного разбирательства
+      href: in-place-hold-and-litigation-hold-exchange-2013-help.md
+      items:
+      - name: Создание или удаление инцидента хранения на месте
+        href: create-or-remove-an-in-place-hold-exchange-2013-help.md
+      - name: Перевод почтового ящика в режим хранения для судебного разбирательства
+        href: place-a-mailbox-on-litigation-hold-exchange-2013-help.md
+      - name: Применение функции хранения ко всем почтовым ящикам
+        href: place-all-mailboxes-on-hold-exchange-2013-help.md
+      - name: Сохранение скрытых копий и получателей расширенной группы рассылки для обнаружения электронных данных
+        href: preserve-bcc-and-expanded-distribution-group-recipients-for-ediscovery-exchange-2013-help.md
+    - name: Обнаружение электронных данных на месте
+      href: in-place-ediscovery-exchange-2013-help.md
+      items:
+      - name: Назначение разрешений обнаружения электронных данных в Exchange
+        href: assign-ediscovery-permissions-in-exchange-exchange-2013-help.md
+      - name: Создание поискового запроса на локальное обнаружение электронных данных
+        href: create-an-in-place-ediscovery-search-exchange-2013-help.md
+      - name: Копирование результатов поиска с обнаружением электронных данных в почтовый ящик обнаружения
+        href: copy-ediscovery-search-results-to-a-discovery-mailbox-exchange-2013-help.md
+      - name: Экспорт результатов поиска при обнаружении электронных данных в PST-файл
+        href: export-ediscovery-search-results-to-a-pst-file-exchange-2013-help.md
+      - name: Свойства сообщений и поисковые операторы для обнаружения электронных данных на месте
+        href: message-properties-and-search-operators-for-in-place-ediscovery-exchange-2013-help.md
+      - name: Создание почтового ящика обнаружения
+        href: create-a-discovery-mailbox-exchange-2013-help.md
+      - name: Запуск и остановка поиска с обнаружением электронных данных на месте
+        href: start-or-stop-an-in-place-ediscovery-search-exchange-2013-help.md
+      - name: Изменение обнаружения электронных данных на месте
+        href: modify-an-in-place-ediscovery-search-exchange-2013-help.md
+      - name: Создание настраиваемой области управления для обнаружения электронных данных на месте
+        href: create-a-custom-management-scope-for-in-place-ediscovery-searches-exchange-2013-help.md
+      - name: Удаление поиска с обнаружением электронных данных на месте
+        href: remove-an-in-place-ediscovery-search-exchange-2013-help.md
+      - name: Поиск и удаление сообщений (справка администратора)
+        href: search-for-and-delete-messages-admin-help-exchange-2013-help.md
+      - name: Уменьшение размера почтового ящика обнаружения в Exchange
+        href: reduce-the-size-of-a-discovery-mailbox-in-exchange-exchange-2013-help.md
+      - name: Удаление и воссоздание почтового ящика найденных сообщений по умолчанию в Exchange
+        href: delete-and-re-create-the-default-discovery-mailbox-in-exchange-exchange-2013-help.md
+      - name: Re-create the Discovery system mailbox
+        href: re-create-the-discovery-system-mailbox-exchange-2013-help.md
+      - name: Использование проверки подлинности OAuth для поддержки обнаружения электронных данных в гибридном развертывании Exchange
+        href: using-oauth-authentication-to-support-ediscovery-in-an-exchange-hybrid-deployment-exchange-2013-help.md
+      - name: Настройка Exchange для центра обнаружения электронных данных SharePoint
+        href: configure-exchange-for-sharepoint-ediscovery-center-exchange-2013-help.md
+      - name: Элементы, которые не включены в поиск при обнаружении электронных данных Exchange
+        href: unsearchable-items-in-exchange-ediscovery-exchange-2013-help.md
+    - name: Управление записями сообщений
+      href: messaging-records-management-exchange-2013-help.md
+      items:
+      - name: Записями сообщений в терминология управления в Exchange 2013
+        href: messaging-records-management-terminology-in-exchange-2013-exchange-2013-help.md
+      - name: Теги хранения и политики хранения
+        href: retention-tags-and-retention-policies-exchange-2013-help.md
+        items:
+        - name: Политика хранения по умолчанию
+          href: default-retention-policy-in-exchange-online-and-exchange-server-exchange-2013-help.md
+        - name: Папки по умолчанию, которые поддерживают теги политики хранения
+          href: default-folders-that-support-retention-policy-tags-exchange-2013-help.md
+        - name: Порядок вычисления срока хранения
+          href: how-retention-age-is-calculated-exchange-2013-help.md
+        - name: 'Контрольный список: Развертывание политик хранения'
+          href: checklist-deploying-retention-policies-exchange-2013-help.md
+        - name: Процедуры управления записями сообщений
+          href: messaging-records-management-procedures-exchange-2013-help.md
+          items:
+          - name: Создание политики хранения
+            href: create-a-retention-policy-exchange-2013-help.md
+          - name: Добавление и удаление тегов хранения для политики хранения
+            href: add-retention-tags-to-or-remove-retention-tags-from-a-retention-policy-exchange-2013-help.md
+          - name: Применение политики хранения к почтовым ящикам
+            href: apply-a-retention-policy-to-mailboxes-exchange-2013-help.md
+          - name: Настройка помощника для управляемых папок
+            href: configure-the-managed-folder-assistant-exchange-2013-help.md
+          - name: Включение временного сохранения для почтового ящика
+            href: place-a-mailbox-on-retention-hold-exchange-2013-help.md
+          - name: Экспорт и импорт тегов хранения
+            href: export-and-import-retention-tags-exchange-2013-help.md
+          - name: Настройка блокирования клиентов Outlook
+            href: configure-outlook-client-blocking-exchange-2013-help.md
+          - name: Перенос из управляемых папок
+            href: migrate-from-managed-folders-exchange-2013-help.md
+          - name: Отключение или приостановка функции управления записями сообщений
+            href: turn-off-or-suspend-messaging-records-management-exchange-2013-help.md
+      - name: Мониторинг системы обмена сообщениями управления записями
+        href: monitoring-messaging-records-management-exchange-2013-help.md
+        items:
+        - name: Счетчики производительности представления для системы управления записями обмена сообщениями
+          href: view-performance-counters-for-messaging-records-management-exchange-2013-help.md
+        - name: Счетчики производительности для управления записями сообщений
+          href: performance-counters-for-messaging-records-management-exchange-2013-help.md
+        - name: Ошибки и события управления записями сообщений
+          href: messaging-records-management-errors-and-events-exchange-2013-help.md
+    - name: Ведение журнала
+      href: journaling-exchange-2013-help.md
+      items:
+      - name: Ведение журнала
+        href: manage-journaling-exchange-2013-help.md
+      - name: Включение или отключение ведения журнала голосовой почты и уведомлений о пропущенных звонках
+        href: disable-or-enable-journaling-of-voice-mail-and-missed-call-notifications-exchange-2013-help.md
+    - name: Правила потока обработки почты (правила транспорта)
+      href: mail-flow-rules-transport-rules-in-exchange-2013-exchange-2013-help.md
+      items:
+      - name: Условия и исключения (предикаты) правил потока обработки почты
+        href: mail-flow-rule-conditions-and-exceptions-predicates-in-exchange-2013-exchange-2013-help.md
+      - name: Действия правил обработки почтового потока
+        href: mail-flow-rule-actions-in-exchange-2013-exchange-2013-help.md
+      - name: Рекомендации по настройке правил обработки почтового потока
+        href: best-practices-for-configuring-mail-flow-rules-exchange-2013-help.md
+      - name: Использование правил транспорта для проверки вложений сообщений
+        href: use-transport-rules-to-inspect-message-attachments-exchange-2013-help.md
+      - name: Распространенные сценарии блокирования вложений
+        href: common-attachment-blocking-scenarios-for-mail-flow-rules-exchange-2013-help.md
+      - name: Заявления об отказе, подписи, верхние или нижние колонтитулы на уровне организации
+        href: organization-wide-disclaimers-signatures-footers-or-headers-exchange-online-help.md
+      - name: Процедуры правил обработки почтового потока и транспорта
+        href: mail-flow-or-transport-rule-procedures-exchange-2013-help.md
+        items:
+        - name: Управление правилами потока обработки почты
+          href: manage-mail-flow-rules-exchange-2013-help.md
+        - name: Тестирование правила обработки почтового потока
+          href: test-a-mail-flow-rule-exchange-2013-help.md
+        - name: Использование правил обработки почтового потока для обхода папки "Несрочные"
+          href: use-mail-flow-rules-so-messages-can-bypass-clutter-exchange-2013-help.md
+        - name: Использование правил обработки почтового потока для маршрутизации электронной почты с учетом списка слов, фраз или шаблонов
+          href: use-mail-flow-rules-to-route-email-based-on-a-list-of-words-phrases-or-patterns-exchange-2013-help.md
+        - name: Регистрация фильтров IFilter из пакета фильтров с помощью Exchange 2013
+          href: register-filter-pack-ifilters-with-exchange-2013-exchange-2013-help.md
+      - name: Управление утверждением сообщений
+        href: manage-message-approval-exchange-2013-help.md
+        items:
+        - name: Распространенные сценарии утверждения сообщений
+          href: common-message-approval-scenarios-exchange-2013-help.md
+        - name: Управление утверждением сообщений и устранение неполадок
+          href: manage-and-troubleshoot-message-approval-exchange-2013-help.md
+    - name: Защита от потери данных
+      href: technical-overview-of-dlp-data-loss-prevention-in-exchange.md
+      items:
+      - name: Применение правил защиты от потери данных для оценки сообщений
+        href: how-dlp-rules-are-applied-to-evaluate-messages-exchange-2013-help.md
+      - name: Интеграция правил конфиденциальной информации с правилами транспорта
+        href: integrating-sensitive-information-rules-with-transport-rules-exchange-2013-help.md
+      - name: Что позволяют искать типы конфиденциальной информации
+        href: what-the-sensitive-information-types-in-exchange-look-for-exchange-online-help.md
+      - name: Шаблоны политики DLP
+        href: dlp-policy-templates-exchange-2013-help.md
+        items:
+        - name: Шаблоны политики защиты от потери данных в Exchange
+          href: dlp-policy-templates-supplied-in-exchange-exchange-2013-help.md
+        - name: Шаблоны политики от партнеров Майкрософт
+          href: policy-templates-from-microsoft-partners-exchange-2013-help.md
+      - name: Процедуры защиты от потери данных
+        href: dlp-procedures-exchange-2013-help.md
+        items:
+        - name: Управление политиками защиты от потери данных
+          href: manage-dlp-policies-exchange-2013-help.md
+        - name: Создание политики защиты от потери данных на основе шаблона
+          href: how-to-new-dlp-data-loss-prevention-policy-template.md
+        - name: Создание настраиваемой политики DLP
+          href: create-a-custom-dlp-policy-exchange-2013-help.md
+        - name: Импорт настраиваемого шаблона политики защиты от потери данных из файла
+          href: import-a-custom-dlp-policy-template-from-a-file-exchange-2013-help.md
+        - name: Просмотр отчетов об обнаружении политик защиты от потери данных
+          href: view-dlp-policy-detection-reports-exchange-2013-help.md
+        - name: Создание отчетов об инцидентах для обнаружений политики DLP
+          href: create-incident-reports-for-dlp-policy-detections-exchange-2013-help.md
+        - name: Определение собственных шаблонов DLP и типов сведений
+          href: define-your-own-dlp-templates-and-information-types-exchange-2013-help.md
+          items:
+          - name: Разработка файлов шаблонов политики DLP
+            href: xml-rule-schema-and-rule-structure-guide-for-dlp-policy-files.md
+          - name: Разработка пакетов правил конфиденциальной информации
+            href: technical-description-of-xml-schema-for-dlp-rule-packages.md
+          - name: Соответствующие методы и приемы для пакетов правил
+            href: technical-description-of-xsd-rule-matching-for-dlp-rule-packages.md
+          - name: Настройка встроенных типов конфиденциальных сведений DLP
+            href: customize-the-built-in-dlp-sensitive-information-types-exchange-2013-help.md
+          - name: Экспорт типов конфиденциальных сведений DLP из Exchange
+            href: export-dlp-sensitive-information-types-from-exchange-2013-exchange-2013-help.md
+      - name: Советы политик
+        href: technical-overview-of-policy-tips-in-exchange-online-and-exchange-2013.md
+        items:
+        - name: Управление подсказками политик
+          href: how-to-configure-and-manage-policy-tips-a-dlp-feature-exchange.md
+      - name: Отпечатки документов
+        href: overview-of-document-fingerprinting-in-exchange.md
+        items:
+        - name: Защита данных форм с помощью отпечатков документов
+          href: protect-form-data-with-document-fingerprinting-exchange-2013-help.md
+    - name: Управление правами на доступ к данным
+      href: information-rights-management-exchange-2013-help.md
+      items:
+      - name: правила защиты транспорта;
+        href: transport-protection-rules-exchange-2013-help.md
+      - name: правила защиты Outlook.
+        href: outlook-protection-rules-exchange-2013-help.md
+      - name: Расшифровка транспорта
+        href: transport-decryption-exchange-2013-help.md
+      - name: Расшифровка отчета журнала
+        href: journal-report-decryption-exchange-2013-help.md
+      - name: Управление правами на доступ к данным в Outlook Web App
+        href: information-rights-management-in-outlook-web-app-exchange-2013-help.md
+      - name: Управление правами на доступ к данным в Exchange ActiveSync
+        href: information-rights-management-in-exchange-activesync-exchange-2013-help.md
+      - name: Ведение журнала управления правами на доступ к данным
+        href: information-rights-management-logging-exchange-2013-help.md
+      - name: Сведения о процедуры управления правами
+        href: information-rights-management-procedures-exchange-2013-help.md
+        items:
+        - name: Включение или отключение управления правами на доступ к данным для внутренних сообщений
+          href: enable-or-disable-irm-for-internal-messages-exchange-2013-help.md
+        - name: Создание правила защиты транспорта
+          href: create-a-transport-protection-rule-exchange-2013-help.md
+        - name: Создание правила защиты Outlook
+          href: create-an-outlook-protection-rule-exchange-2013-help.md
+        - name: Удаление правила защиты Outlook
+          href: remove-an-outlook-protection-rule-exchange-2013-help.md
+        - name: Добавление федеративного почтового ящика в группу суперпользователей службы управления правами Active Directory
+          href: add-the-federation-mailbox-to-the-ad-rms-super-users-group-exchange-2013-help.md
+        - name: Включение и отключение расшифровки транспорта
+          href: enable-or-disable-transport-decryption-exchange-2013-help.md
+        - name: Настройка управления правами на доступ к данным для поиска Exchange и обнаружения электронных данных на месте
+          href: configure-irm-for-exchange-search-and-in-place-ediscovery-exchange-2013-help.md
+        - name: Включение и отключение расшифровки отчета журнала
+          href: enable-or-disable-journal-report-decryption-exchange-2013-help.md
+        - name: Включение и отключение управления правами на доступ к данным на серверах клиентского доступа
+          href: enable-or-disable-information-rights-management-on-client-access-servers-exchange-2013-help.md
+        - name: Включение и отключение ведения журнала управления правами на доступ к данным
+          href: enable-or-disable-information-rights-management-logging-exchange-2013-help.md
+    - name: S/MIME для подписи и шифрования сообщений
+      href: s-mime-for-message-signing-and-encryption-exchange-2013-help.md
+      items:
+      - name: Настройка параметров S/MIME для Outlook Web App
+        href: configure-s-mime-settings-for-outlook-web-app-exchange-2013-help.md
+      - name: Настройка коллекции виртуальных сертификатов для проверки S/MIME
+        href: set-up-virtual-certificate-collection-to-validate-s-mime-exchange-2013-help.md
+      - name: Отправка и получение электронной почты, подписанной и зашифрованной с помощью S/MIME
+        href: send-and-receive-s-mime-signed-and-encrypted-email-exchange-2013-help.md
+    - name: Ведение журнала аудита почтового ящика
+      href: mailbox-audit-logging-exchange-2013-help.md
+      items:
+      - name: Процедуры ведения журнала аудита почтовых ящиков
+        href: mailbox-audit-logging-procedures-exchange-2013-help.md
+        items:
+        - name: Включение и отключение ведения журнала аудита для почтового ящика
+          href: enable-or-disable-mailbox-audit-logging-for-a-mailbox-exchange-2013-help.md
+        - name: Обход сервера-посредника пользователя для учетной записи аудита почтовых ящиков ведения журнала
+          href: bypass-a-user-account-from-mailbox-audit-logging-exchange-2013-help.md
+        - name: Поиск почтового ящика в журнале аудита почтовых ящиков
+          href: search-the-mailbox-audit-log-for-a-mailbox-exchange-2013-help.md
+        - name: Поиск в журнале аудита почтовых ящиков
+          href: create-a-mailbox-audit-log-search-exchange-2013-help.md
+    - name: Ведение журнала аудита администратора
+      href: administrator-audit-logging-exchange-2013-help.md
+      items:
+      - name: Структура журнала аудита администратора
+        href: administrator-audit-log-structure-exchange-2013-help.md
+      - name: Управление ведением журнала аудита администраторов
+        href: manage-administrator-audit-logging-exchange-2013-help.md
+    - name: Отчеты аудита Exchange
+      href: exchange-auditing-reports-exchange-2013-help.md
+      items:
+      - name: Экспорт журналов аудита почтовых ящиков
+        href: export-mailbox-audit-logs-exchange-2013-help.md
+      - name: Запуск отчета об обращениях к почтовым ящикам от пользователей, не являющихся их владельцами
+        href: run-a-non-owner-mailbox-access-report-exchange-online-help.md
+      - name: Запуск отчета судебного удержания отдельного почтового ящика
+        href: run-a-per-mailbox-litigation-hold-report-exchange-2013-help.md
+      - name: Поиск изменений группы ролей или журналов аудита администраторов
+        href: search-the-role-group-changes-or-administrator-audit-logs-exchange-2013-help.md
+      - name: Просмотр журнала аудита администратора
+        href: view-the-administrator-audit-log-exchange-2013-help.md
+  - name: Защита от нежелательной почты и вредоносных программ
+    href: anti-spam-and-anti-malware-protection-exchange-2013-help.md
+    items:
+    - name: Защита от нежелательной почты
+      href: anti-spam-protection-exchange-2013-help.md
+      items:
+      - name: Преимущества возможностей защиты от нежелательной почты в службе Exchange Online Protection в сравнении с Exchange Server 2013
+        href: benefits-of-anti-spam-features-in-exchange-online-protection-over-exchange-server-2013-exchange-2013-help.md
+      - name: Включение функции защиты от нежелательной почты на сервере почтовых ящиков
+        href: enable-anti-spam-functionality-on-mailbox-servers-exchange-2013-help.md
+      - name: Фильтрация отправителей
+        href: sender-filtering-exchange-2013-help.md
+        items:
+        - name: Управление фильтрацией отправителей
+          href: manage-sender-filtering-exchange-2013-help.md
+      - name: Код отправителя
+        href: sender-id-exchange-2013-help.md
+        items:
+        - name: Управление кодом отправителя
+          href: manage-sender-id-exchange-2013-help.md
+      - name: Фильтрация содержимого
+        href: content-filtering-exchange-2013-help.md
+        items:
+        - name: Управление фильтрацией содержимого
+          href: manage-content-filtering-exchange-2013-help.md
+        - name: Объединение списков надежных отправителей
+          href: safelist-aggregation-exchange-2013-help.md
+          items:
+          - name: Управление объединением списков надежных отправителей
+            href: manage-safelist-aggregation-exchange-2013-help.md
+          - name: Настройка использования сведений о надежных доменах при фильтрации содержимого
+            href: configure-content-filtering-to-use-safe-domain-data-exchange-2013-help.md
+        - name: Пороговое значение вероятности нежелательной почты
+          href: spam-confidence-level-threshold-exchange-2013-help.md
+        - name: Настройка параметров защиты от нежелательной почты в почтовых ящиках
+          href: configure-anti-spam-settings-on-mailboxes-exchange-2013-help.md
+      - name: Репутация отправителя и агент анализа протокола
+        href: sender-reputation-and-the-protocol-analysis-agent-exchange-2013-help.md
+        items:
+        - name: Управление репутацией отправителя
+          href: manage-sender-reputation-exchange-2013-help.md
+      - name: Фильтрация подключений на пограничных транспортных серверах
+        href: connection-filtering-on-edge-transport-servers-exchange-2013-help.md
+        items:
+        - name: Управление фильтрацией подключений на пограничных транспортных серверах
+          href: manage-connection-filtering-on-edge-transport-servers-exchange-2013-help.md
+      - name: Фильтрация получателей на пограничных транспортных серверах
+        href: recipient-filtering-on-edge-transport-servers-exchange-2013-help.md
+        items:
+        - name: Управление фильтрацией получателей на пограничных транспортных серверах
+          href: manage-recipient-filtering-on-edge-transport-servers-exchange-2013-help.md
+      - name: Фильтрация вложений на пограничных транспортных серверах
+        href: attachment-filtering-on-edge-transport-servers-exchange-2013-help.md
+        items:
+        - name: Управление фильтрацией вложений на пограничных транспортных серверах
+          href: manage-attachment-filtering-on-edge-transport-servers-exchange-2013-help.md
+      - name: Карантин нежелательной почты
+        href: spam-quarantine-exchange-2013-help.md
+        items:
+        - name: Настройка почтового ящика карантина нежелательной почты
+          href: configure-a-spam-quarantine-mailbox-exchange-2013-help.md
+        - name: Настройка Outlook для отображения исходного отправителя в почтовом ящике карантина
+          href: configure-outlook-to-show-the-original-sender-in-the-quarantine-mailbox-exchange-2013-help.md
+        - name: Освобождение сообщений из почтового ящика карантина нежелательной почты
+          href: release-quarantined-messages-from-the-spam-quarantine-mailbox-exchange-2013-help.md
+      - name: Метки защиты от спама
+        href: anti-spam-stamps-exchange-2013-help.md
+        items:
+        - name: Просмотр пометок нежелательной почты в Outlook
+          href: view-anti-spam-stamps-in-outlook-exchange-2013-help.md
+    - name: Защита от вредоносных программ
+      href: anti-malware-protection-exchange-2013-help.md
+      items:
+      - name: 'Защита от вредоносных программ: вопросы и ответы'
+        href: anti-malware-faq-exchange-2013-help.md
+      - name: Загрузка обновлений подсистемы и определений
+        href: download-engine-and-definition-updates-exchange-2013-help.md
+      - name: Настройка политик защиты от вредоносных программ
+        href: configure-anti-malware-policies-exchange-2013-help.md
+      - name: Повторное сканирование сообщений, которые размещенная служба фильтрации уже проверила на наличие вредоносных программ
+        href: rescan-messages-already-malware-scanned-by-the-hosted-filtering-service-exchange-2013-help.md
+      - name: Отключение или обход сканирования на наличие вредоносных программ
+        href: disable-or-bypass-anti-malware-scanning-exchange-2013-help.md
+    - name: Антивирусная программа в операционной системе на серверах Exchange
+      href: anti-virus-software-in-the-operating-system-on-exchange-servers-exchange-2013-help.md
+  - name: Поток обработки почты
+    href: mail-flow-exchange-2013-help.md
+    items:
+    - name: Маршрутизация почты
+      href: mail-routing-exchange-2013-help.md
+      items:
+      - name: Планирование использования сайтов Active Directory для маршрутизации почты
+        href: planning-to-use-active-directory-sites-for-routing-mail-exchange-2013-help.md
+      - name: Настройка параметров маршрутизации почты Exchange в Active Directory
+        href: configure-exchange-mail-routing-settings-in-active-directory-exchange-2013-help.md
+      - name: Маршрутизация почты между сайтами Active Directory
+        href: route-mail-between-active-directory-sites-exchange-2013-help.md
+      - name: Разрешение получателей
+        href: recipient-resolution-exchange-2013-help.md
+      - name: Чувствительность к сбою запросов DNS
+        href: dns-query-failure-sensitivity-exchange-2013-help.md
+      - name: Тестирование связи по протоколу SMTP с помощью Telnet
+        href: use-telnet-to-test-smtp-communication-exchange-2013-help.md
+      - name: Настройка внешнего адреса администратора почты
+        href: configure-the-external-postmaster-address-exchange-2013-help.md
+    - name: Соединители
+      href: connectors-exchange-2013-help.md
+      items:
+      - name: Соединители отправки
+        href: send-connectors-exchange-2013-help.md
+        items:
+        - name: Создание соединителя отправки для электронной почты, отправляемой в Интернет
+          href: create-a-send-connector-for-email-sent-to-the-internet-exchange-2013-help.md
+        - name: Создайте соединитель отправки для маршрутизации исходящей почты через промежуточный узел
+          href: create-a-send-connector-to-route-outbound-email-through-a-smart-host-exchange-2013-help.md
+        - name: Создание соединителя отправки для отправки электронной почты партнеру с применением TLS
+          href: create-a-send-connector-to-send-email-to-a-partner-with-transport-layer-security-tls-applied-exchange-2013-help.md
+        - name: Настройка соединителя отправки между лесами
+          href: configure-a-cross-forest-send-connector-exchange-2013-help.md
+      - name: Соединители получения
+        href: receive-connectors-exchange-2013-help.md
+        items:
+        - name: Разрешения соединителя получения
+          href: receive-connector-permissions-exchange-2013-help.md
+        - name: Механизмы проверки подлинности соединителя получения
+          href: receive-connector-authentication-mechanisms-exchange-2013-help.md
+        - name: Процедуры для соединителя получения
+          href: receive-connector-procedures-exchange-2013-help.md
+          items:
+          - name: Создание соединителя получения электронной почты из Интернета
+            href: create-a-receive-connector-to-receive-email-from-the-internet-exchange-2013-help.md
+          - name: Создание безопасного соединителя получения для получения электронной почты от партнера
+            href: create-a-secure-receive-connector-to-receive-email-from-a-partner-exchange-2013-help.md
+          - name: Создание соединителя получения для приема электронной почты из систем, отличных от Exchange
+            href: create-a-receive-connector-to-receive-email-from-a-system-not-running-exchange-exchange-2013-help.md
+          - name: Создание соединителя получения сообщений от внутреннего сервера Exchange Server
+            href: create-a-receive-connector-to-receive-messages-from-an-internal-exchange-server-exchange-2013-help.md
+          - name: Изменение заголовка SMTP в соединителе получения
+            href: modify-the-smtp-banner-on-a-receive-connector-exchange-2013-help.md
+      - name: Внешние соединители
+        href: foreign-connectors-exchange-2013-help.md
+        items:
+        - name: Создание внешнего соединителя для доставки сообщений факс отличного от SMTP-шлюза
+          href: create-a-foreign-connector-to-deliver-messages-to-a-non-smtp-fax-gateway-exchange-2013-help.md
+      - name: Агенты доставки и соединители агентов доставки
+        href: delivery-agents-and-delivery-agent-connectors-exchange-2013-help.md
+      - name: Брандмауэр заголовков
+        href: header-firewall-exchange-2013-help.md
+    - name: Домены
+      href: domains-exchange-2013-help.md
+      items:
+      - name: Обслуживаемые домены
+        href: accepted-domains-exchange-2013-help.md
+        items:
+        - name: Настройка обслуживаемого домена в организации Exchange как заслуживающего доверия
+          href: configure-an-accepted-domain-within-your-exchange-organization-as-authoritative-exchange-2013-help.md
+        - name: Настройка обслуживаемого домена для независимого подразделения
+          href: configure-an-accepted-domain-for-an-independent-business-unit-exchange-2013-help.md
+        - name: Настройка обслуживаемого домена для подразделения с почтовыми ящиками вне вашей организации Exchange
+          href: configure-an-accepted-domain-for-a-business-unit-with-mailboxes-outside-your-exchange-organization-exchange-2013-help.md
+        - name: Настройка Exchange для приема почты для нескольких уполномоченных доменов
+          href: configure-exchange-to-accept-mail-for-multiple-authoritative-domains-exchange-2013-help.md
+      - name: Удаленные домены
+        href: remote-domains-exchange-2013-help.md
+        items:
+        - name: Управление удаленными доменами
+          href: manage-remote-domains-exchange-2013-help.md
+        - name: Настройка отправки ответных сообщений об отсутствии на рабочем месте через удаленный домен
+          href: configure-remote-domain-out-of-office-replies-exchange-2013-help.md
+        - name: Настройка отправки автоматических ответов через удаленные домены
+          href: configure-remote-domain-automatic-replies-exchange-2013-help.md
+        - name: Настройка отправки отчетов о сообщениях с удаленного домена
+          href: configure-remote-domain-message-reporting-exchange-2013-help.md
+        - name: Поддерживаемые наборы знаков для удаленных доменов
+          href: supported-character-sets-for-remote-domains-exchange-2013-help.md
+    - name: Агенты транспорта
+      href: transport-agents-exchange-2013-help.md
+      items:
+      - name: Включение поддержки устаревших агентов транспорта
+        href: enable-support-for-legacy-transport-agents-exchange-2013-help.md
+      - name: Управление агентами транспорта
+        href: manage-transport-agents-exchange-2013-help.md
+      - name: Просмотр агентов транспорта в транспортном конвейере
+        href: view-transport-agents-in-the-transport-pipeline-exchange-2013-help.md
+    - name: Высокий уровень доступности транспорта
+      href: transport-high-availability-exchange-2013-help.md
+      items:
+      - name: Теневая избыточность
+        href: shadow-redundancy-exchange-2013-help.md
+      - name: Система безопасности
+        href: safety-net-exchange-2013-help.md
+    - name: Журналы транспорта
+      href: transport-logs-exchange-2013-help.md
+      items:
+      - name: Ведение журнала агента защиты от спама
+        href: anti-spam-agent-logging-exchange-2013-help.md
+        items:
+        - name: Настройка ведения журнала агента защиты от нежелательной почты
+          href: configure-anti-spam-agent-logging-exchange-2013-help.md
+      - name: Ведение журнала подключений
+        href: connectivity-logging-exchange-2013-help.md
+        items:
+        - name: Настройка ведения журнала подключений
+          href: configure-connectivity-logging-exchange-2013-help.md
+      - name: Трассировка конвейера
+        href: pipeline-tracing-exchange-2013-help.md
+        items:
+        - name: Настройка конвейерной трассировки
+          href: configure-pipeline-tracing-exchange-2013-help.md
+      - name: Ведение журнала протокола
+        href: protocol-logging-exchange-2013-help.md
+        items:
+        - name: Настройка ведения журнала протокола
+          href: configure-protocol-logging-exchange-2013-help.md
+      - name: Настройка ведения журнала по таблице маршрутизации
+        href: configure-routing-table-logging-exchange-2013-help.md
+    - name: Отслеживание сообщений
+      href: message-tracking-exchange-2013-help.md
+      items:
+      - name: Настройка отслеживания сообщений
+        href: configure-message-tracking-exchange-2013-help.md
+      - name: Поиск в журналах отслеживания сообщений
+        href: search-message-tracking-logs-exchange-2013-help.md
+    - name: Отчеты о доставке для администраторов
+      href: delivery-reports-for-administrators-exchange-2013-help.md
+      items:
+      - name: Отслеживание сообщений при помощи отчетов о доставке
+        href: track-messages-with-delivery-reports-exchange-2013-help.md
+    - name: Преобразование содержимого
+      href: content-conversion-exchange-2013-help.md
+      items:
+      - name: Настройка кодирования при передаче содержимого
+        href: configure-content-transfer-encoding-exchange-2013-help.md
+      - name: Параметры кодирования сообщений
+        href: message-encoding-options-exchange-2013-help.md
+      - name: Параметры преобразования TNEF
+        href: tnef-conversion-options-exchange-2013-help.md
+      - name: Трассировка преобразования контента
+        href: content-conversion-tracing-exchange-2013-help.md
+    - name: Уведомления о доставке и отчеты о недоставке в Exchange 2013
+      href: dsns-and-ndrs-in-exchange-2013-exchange-2013-help.md
+      items:
+      - name: Управление сообщениями DSN
+        href: manage-dsn-messages-exchange-2013-help.md
+      - name: Идентификация сообщений DSN
+        href: dsn-message-identity-exchange-2013-help.md
+      - name: Текст сообщения DSN
+        href: dsn-message-text-exchange-2013-help.md
+      - name: Поддерживаемые языки для системных сообщений
+        href: supported-languages-for-system-messages-exchange-2013-help.md
+    - name: Ограничения на размер сообщений
+      href: message-size-limits-exchange-2013-help.md
+      items:
+      - name: Регулирование количества сообщений
+        href: message-throttling-exchange-2013-help.md
+      - name: Замедленная обратная реакция
+        href: back-pressure-exchange-2013-help.md
+    - name: Очереди
+      href: queues-exchange-2013-help.md
+      items:
+      - name: Управление очередями
+        href: manage-queues-exchange-2013-help.md
+      - name: Использование командной консоли Exchange для управления очередями
+        href: use-the-exchange-management-shell-to-manage-queues-exchange-2013-help.md
+        items:
+        - name: Настройка Get-QueueDigest
+          href: configure-get-queuedigest-exchange-2013-help.md
+      - name: Фильтры очередей
+        href: queue-filters-exchange-2013-help.md
+      - name: Управление сообщениями в очередях
+        href: manage-messages-in-queues-exchange-2013-help.md
+      - name: Средство просмотра очереди
+        href: queue-viewer-exchange-2013-help.md
+        items:
+        - name: Подключение к серверу в средстве просмотра очереди
+          href: connect-to-a-server-in-queue-viewer-exchange-2013-help.md
+        - name: Настройка параметров средства просмотра очереди
+          href: set-queue-viewer-options-exchange-2013-help.md
+        - name: Просмотр свойств сообщения в очереди в средстве просмотра очереди
+          href: view-queued-message-properties-in-queue-viewer-exchange-2013-help.md
+        - name: Экспорт списков из средства просмотра очереди
+          href: export-lists-from-queue-viewer-exchange-2013-help.md
+      - name: Фильтры сообщений
+        href: message-filters-exchange-2013-help.md
+      - name: Экспорт сообщений из очередей
+        href: export-messages-from-queues-exchange-2013-help.md
+      - name: Интервалы повторной отправки, повторной передачи и истечения срока действия сообщений
+        href: message-retry-resubmit-and-expiration-intervals-exchange-2013-help.md
+        items:
+        - name: Настройка интервалов повторной отправки, повторной передачи и истечения срока действия сообщений
+          href: configure-message-retry-resubmit-and-expiration-intervals-exchange-2013-help.md
+      - name: Организация очередей с учетом приоритетов
+        href: priority-queuing-exchange-2013-help.md
+        items:
+        - name: Включение и настройка приоритет очереди
+          href: enable-and-configure-priority-queuing-exchange-2013-help.md
+      - name: Изменение расположения базы данных очереди
+        href: change-the-location-of-the-queue-database-exchange-2013-help.md
+    - name: Каталог раскладки и каталог преобразования
+      href: pickup-directory-and-replay-directory-exchange-2013-help.md
+      items:
+      - name: Настройка каталогов раскладки и преобразования
+        href: configure-the-pickup-directory-and-the-replay-directory-exchange-2013-help.md
+    - name: Функции протокола TLS и связанные термины
+      href: tls-functionality-and-related-terminology-exchange-2013-help.md
+      items:
+      - name: Сценарий. Настройка Exchange для поддержки контроллеров оптимизации глобальной сети
+        href: scenario-configure-exchange-to-support-wan-optimization-controllers-exchange-2013-help.md
+      - name: Отключение протокола TLS между сайтами Active Directory
+        href: disable-tls-between-active-directory-sites-exchange-2013-help.md
+  - name: Получатели
+    href: recipients-exchange-2013-help.md
+    items:
+    - name: Создание почтовых ящиков пользователя
+      href: create-user-mailboxes-exchange-2013-help.md
+    - name: Управление почтовыми ящиками пользователей
+      href: manage-user-mailboxes-exchange-2013-help.md
+      items:
+      - name: Добавление и удаление адресов электронной почты для почтового ящика
+        href: add-or-remove-email-addresses-for-a-mailbox-exchange-2013-help.md
+      - name: Настройка переадресации электронной почты для почтового ящика
+        href: configure-email-forwarding-for-a-mailbox-exchange-2013-help.md
+      - name: Настройка ограничений доставки сообщений для почтового ящика
+        href: configure-message-delivery-restrictions-for-a-mailbox-exchange-2013-help.md
+      - name: Настройка ограничений на размер сообщения для почтового ящика
+        href: configure-message-size-limits-for-a-mailbox-exchange-2013-help.md
+      - name: Настройка квот хранилища для почтового ящика
+        href: configure-storage-quotas-for-a-mailbox-exchange-2013-help.md
+      - name: Преобразование почтового ящика
+        href: convert-a-mailbox-exchange-2013-help.md
+      - name: Включение или отключение Exchange ActiveSync для почтового ящика
+        href: enable-or-disable-exchange-activesync-for-a-mailbox-exchange-2013-help.md
+      - name: Включение и отключение MAPI для почтового ящика
+        href: enable-or-disable-mapi-for-a-mailbox-exchange-online-help.md
+      - name: Включение или отключение Outlook Web App для почтового ящика
+        href: enable-or-disable-outlook-web-app-for-a-mailbox-exchange-2013-help.md
+      - name: Включение или отключение восстановления одного элемента в почтовом ящике
+        href: enable-or-disable-single-item-recovery-for-a-mailbox-exchange-2013-help.md
+    - name: Управление связанными почтовыми ящиками
+      href: manage-linked-mailboxes-exchange-2013-help.md
+    - name: Создание групп рассылки и управление ими
+      href: create-and-manage-distribution-groups-exchange-2013-help.md
+      items:
+      - name: Создание политики именования групп рассылки
+        href: create-a-distribution-group-naming-policy-exchange-2013-help.md
+      - name: Переопределение политики именования групп рассылки
+        href: override-the-distribution-group-naming-policy-exchange-2013-help.md
+    - name: Управление группами безопасности с поддержкой электронной почты
+      href: manage-mail-enabled-security-groups-exchange-2013-help.md
+    - name: Управление динамическими группами рассылки
+      href: manage-dynamic-distribution-groups-exchange-2013-help.md
+      items:
+      - name: Просмотр участников динамической группы рассылки
+        href: view-members-of-a-dynamic-distribution-group-exchange-online-help.md
+    - name: Управление почтовыми контактами
+      href: manage-mail-contacts-exchange-2013-help.md
+      items:
+      - name: Включение или отключение электронной почты для почтового контакта
+        href: enable-or-disable-email-for-a-mail-contact-exchange-2013-help.md
+    - name: Управление пользователями почты
+      href: manage-mail-users-exchange-2013-help.md
+      items:
+      - name: Включение или отключение электронной почты для пользователя почты
+        href: enable-or-disable-email-for-a-mail-user-exchange-2013-help.md
+    - name: Создание почтовых ящиков помещений и управление ими
+      href: create-and-manage-room-mailboxes-exchange-2013-help.md
+    - name: Управление почтовыми ящиками оборудования
+      href: manage-equipment-mailboxes-exchange-2013-help.md
+    - name: Отключенные почтовые ящики
+      href: disconnected-mailboxes-exchange-2013-help.md
+      items:
+      - name: Отключение или удаление почтового ящика
+        href: disable-or-delete-a-mailbox-exchange-2013-help.md
+      - name: Подключение отключенного почтового ящика
+        href: connect-a-disabled-mailbox-exchange-2013-help.md
+      - name: Подключение или восстановление удаленного почтового ящика
+        href: connect-or-restore-a-deleted-mailbox-exchange-2013-help.md
+      - name: Восстановление обратимо удаленного почтового ящика
+        href: restore-a-soft-deleted-mailbox-exchange-2013-help.md
+      - name: Управление запросами на восстановление почтового ящика
+        href: manage-mailbox-restore-requests-exchange-2013-help.md
+      - name: Окончательное удаление почтового ящика
+        href: permanently-delete-a-mailbox-exchange-2013-help.md
+    - name: Настраиваемые атрибуты
+      href: custom-attributes-exchange-2013-help.md
+    - name: Управление разрешениями для получателей
+      href: manage-permissions-for-recipients-exchange-online-help.md
+    - name: Неподдерживаемые символы в именах объектов Exchange 2013
+      href: unsupported-characters-for-exchange-2013-object-names-exchange-2013-help.md
+    - name: Автоматическое распределение почтовых ящиков
+      href: automatic-mailbox-distribution-exchange-2013-help.md
+  - name: Совместная работа
+    href: collaboration-exchange-2013-help.md
+    items:
+    - name: Почтовые ящики сайта
+      href: site-mailboxes-exchange-2013-help.md
+      items:
+      - name: Управление политиками создания почтовых ящиков сайта
+        href: manage-site-mailbox-provisioning-policies-exchange-2013-help.md
+    - name: Общедоступные папки
+      href: public-folders-exchange-2013-help.md
+      items:
+      - name: 'Вопросы и ответы: общедоступные папки'
+        href: faq-public-folders-exchange-2013-help.md
+      - name: Ограничения общедоступных папок
+        href: limits-for-public-folders-exchange-2013-help.md
+      - name: Рекомендации по развертыванию общедоступных папок
+        href: considerations-when-deploying-public-folders-exchange-2013-help.md
+      - name: Доступ к общедоступным папкам с помощью Outlook 2016 для Mac
+        href: accessing-public-folders-with-outlook-2016-for-mac-exchange-2013-help.md
+      - name: Перенос общедоступных папок в группы Office 365
+        href: migrate-your-public-folders-to-office-365-groups-exchange-2013-help.md
+      - name: Процедуры с общедоступными папками
+        href: public-folder-procedures-exchange-2013-help.md
+        items:
+        - name: Настройка общедоступных папок в новой организации
+          href: set-up-public-folders-in-a-new-organization-exchange-2013-help.md
+        - name: Настройка локальных общедоступных папок прежних версий для гибридного развертывания
+          href: configure-legacy-on-premises-public-folders-for-a-hybrid-deployment-exchange-2013-help.md
+        - name: Настройка общедоступных папок Exchange 2013 для гибридного развертывания
+          href: configure-exchange-2013-public-folders-for-a-hybrid-deployment-exchange-2013-help.md
+        - name: Настройка общедоступных папок Exchange Online для гибридного развертывания
+          href: configure-exchange-online-public-folders-for-a-hybrid-deployment-exchange-2013-help.md
+        - name: Настройка устаревших общедоступных папок, почтовые ящики которых размещены на серверах Exchange 2013
+          href: configure-legacy-public-folders-where-user-mailboxes-are-on-exchange-2013-servers-exchange-2013-help.md
+        - name: Использование пакетной миграции для переноса общедоступных папок в Exchange 2013 из предыдущих версий
+          href: use-batch-migration-to-migrate-public-folders-to-exchange-2013-from-previous-versions-exchange-2013-help.md
+        - name: Использование пакетной миграции для переноса устаревших общедоступных папок в Office 365 и Exchange Online
+          href: use-batch-migration-to-migrate-legacy-public-folders-to-office-365-and-exchange-online-exchange-online-help.md
+        - name: Использование пакетной миграции для переноса общедоступных папок Exchange 2013 в Exchange Online
+          href: use-batch-migration-to-migrate-exchange-2013-public-folders-to-exchange-online-exchange-online-help.md
+          items:
+          - name: Откат миграции общедоступных папок с Exchange 2013 до Exchange Online
+            href: roll-back-a-public-folder-migration-from-exchange-2013-to-exchange-online-exchange-2013-help.md
+        - name: Использование пакетной миграции для переноса общедоступных папок Exchange 2010 в группы Office 365
+          href: use-batch-migration-to-migrate-exchange-2010-public-folders-to-office-365-groups-exchange-2013-help.md
+        - name: Использование пакетной миграции для переноса общедоступных папок Exchange 2013 в группы Office 365
+          href: use-batch-migration-to-migrate-exchange-2013-public-folders-to-office-365-groups-exchange-2013-help.md
+        - name: Создание почтового ящика общедоступных папок
+          href: create-a-public-folder-mailbox-exchange-2013-help.md
+        - name: Создание общедоступной папки
+          href: create-a-public-folder-exchange-2013-help.md
+        - name: Включение и отключение поддержки почты для общедоступной папки
+          href: mail-enable-or-mail-disable-a-public-folder-exchange-2013-help.md
+        - name: обновлять иерархию общих папок;
+          href: update-the-public-folder-hierarchy-exchange-2013-help.md
+        - name: Удаление общедоступной папки
+          href: remove-a-public-folder-exchange-2013-help.md
+        - name: Использование избранных общих папок в Outlook в Интернете
+          href: use-favorite-public-folders-in-outlook-on-the-web-exchange-2013-help.md
+        - name: Перемещение почтового ящика общедоступных папок в другую базу данных почтовых ящиков
+          href: move-a-public-folder-mailbox-to-a-different-mailbox-database-exchange-2013-help.md
+        - name: Перемещение общедоступной папки в другой почтовый ящик общедоступной папки
+          href: move-a-public-folder-to-a-different-public-folder-mailbox-exchange-2013-help.md
+        - name: Восстановление общедоступных папок и их почтовых ящиков после неудачных перемещений
+          href: restore-public-folders-and-public-folder-mailboxes-from-failed-moves-exchange-2013-help.md
+        - name: Просмотр статистики для общедоступных папок и их элементов
+          href: view-statistics-for-public-folders-and-public-folder-items-exchange-2013-help.md
+    - name: Общие почтовые ящики
+      href: shared-mailboxes-exchange-2013-help.md
+      items:
+      - name: Создание общего почтового ящика
+        href: create-a-shared-mailbox-exchange-2013-help.md
+  - name: Адреса электронной почты и адресные книги
+    href: email-addresses-and-address-books-exchange-2013-help.md
+    items:
+    - name: Политики адресных книг
+      href: address-book-policies-exchange-2013-help.md
+      items:
+      - name: Сценарий. Развертывание политик адресных книг
+        href: scenario-deploying-address-book-policies-exchange-2013-help.md
+      - name: Процедуры политики адресной книги
+        href: address-book-policy-procedures-exchange-2013-help.md
+        items:
+        - name: Установка и настройка агента маршрутизации политики адресной книги
+          href: install-and-configure-the-address-book-policy-routing-agent-exchange-2013-help.md
+        - name: Создание политики адресных книг
+          href: create-an-address-book-policy-exchange-2013-help.md
+        - name: Назначение политики адресной книги пользователям почты
+          href: assign-an-address-book-policy-to-mail-users-exchange-2013-help.md
+        - name: Изменение параметров политики адресной книги
+          href: change-the-settings-of-an-address-book-policy-exchange-2013-help.md
+        - name: Удаление политики адресной книги
+          href: remove-an-address-book-policy-exchange-2013-help.md
+    - name: Шаблоны сведений
+      href: details-templates-exchange-2013-help.md
+      items:
+      - name: Настройка шаблонов сведений
+        href: customize-details-templates-exchange-2013-help.md
+      - name: Возврат шаблонов сведений к конфигурации по умолчанию
+        href: restore-a-details-template-to-the-default-configuration-exchange-2013-help.md
+    - name: Политики адресов электронной почты
+      href: email-address-policies-exchange-2013-help.md
+      items:
+      - name: Процедуры политики адресов электронной почты
+        href: email-address-policy-procedures-exchange-2013-help.md
+        items:
+        - name: Создание политики адресов электронной почты
+          href: create-an-email-address-policy-exchange-2013-help.md
+        - name: Создание политики адресов электронной почты с помощью фильтров получателей
+          href: create-an-email-address-policy-by-using-recipient-filters-exchange-2013-help.md
+        - name: Изменение политики адресов электронной почты
+          href: edit-an-email-address-policy-exchange-2013-help.md
+        - name: Удаление политики адресов электронной почты
+          href: remove-an-email-address-policy-exchange-2013-help.md
+    - name: автономные адресные книги,
+      href: offline-address-books-exchange-2013-help.md
+      items:
+      - name: Процедуры автономной адресной книги
+        href: offline-address-book-procedures-exchange-2013-help.md
+        items:
+        - name: Создание автономной адресной книги
+          href: create-an-offline-address-book-exchange-2013-help.md
+        - name: Добавление списка адресов и его удаление из автономной адресной книги
+          href: add-an-address-list-to-or-remove-an-address-list-from-an-offline-address-book-exchange-2013-help.md
+        - name: Изменение автономной адресной книги по умолчанию
+          href: change-the-default-offline-address-book-exchange-2013-help.md
+        - name: Подготовка получателей для загрузки автономных адресных книг
+          href: provision-recipients-for-offline-address-book-downloads-exchange-2013-help.md
+        - name: Удаление автономной адресной книги
+          href: remove-an-offline-address-book-exchange-2013-help.md
+        - name: Обновление автономной адресной книги
+          href: update-an-offline-address-book-exchange-2013-help.md
+        - name: Создание виртуального каталога автономной адресной книги
+          href: create-an-offline-address-book-virtual-directory-exchange-2013-help.md
+        - name: Изменение расписания создания автономной адресной книги
+          href: change-the-offline-address-book-generation-schedule-exchange-2013-help.md
+        - name: Настройка свойств распространения автономной адресной книги
+          href: configure-offline-address-book-distribution-properties-exchange-2013-help.md
+    - name: Списки адресов
+      href: address-lists-exchange-2013-help.md
+      items:
+      - name: Процедуры списка адресов
+        href: address-list-procedures-exchange-2013-help.md
+        items:
+        - name: Создание списка адресов
+          href: create-an-address-list-exchange-2013-help.md
+        - name: Обновление списка адресов
+          href: update-an-address-list-exchange-2013-help.md
+        - name: Создание списка адресов с помощью фильтров получателей
+          href: create-an-address-list-by-using-recipient-filters-exchange-2013-help.md
+        - name: Перемещение списка адресов
+          href: move-an-address-list-exchange-2013-help.md
+        - name: Удаление списка адресов
+          href: remove-an-address-list-exchange-2013-help.md
+        - name: Создание глобального списка адресов
+          href: create-a-global-address-list-exchange-2013-help.md
+        - name: Настройка свойств глобального списка адресов
+          href: configure-global-address-list-properties-exchange-2013-help.md
+        - name: Удаление глобального списка адресов
+          href: remove-a-global-address-list-exchange-2013-help.md
+        - name: Обновление глобального списка адресов
+          href: update-a-global-address-list-exchange-2013-help.md
+    - name: Иерархические адресные книги
+      href: hierarchical-address-books-exchange-2013-help.md
+      items:
+      - name: Включение и отключение иерархических адресных книг
+        href: enable-or-disable-hierarchical-address-books-exchange-2013-help.md
+  - name: Общий доступ
+    href: sharing-exchange-2013-help.md
+    items:
+    - name: Федерация
+      href: federation-exchange-2013-help.md
+      items:
+      - name: Доверенные корневые центры сертификации для доверия федерации
+        href: trusted-root-certification-authorities-for-federation-trusts-exchange-2013-help.md
+      - name: Процедуры федерации
+        href: federation-procedures-exchange-2013-help.md
+        items:
+        - name: Настройка общего федеративного доступа
+          href: configure-federated-sharing-exchange-2013-help.md
+        - name: Настройка доверия федерации
+          href: configure-a-federation-trust-exchange-2013-help.md
+        - name: Управление доверием федерации
+          href: manage-a-federation-trust-exchange-2013-help.md
+        - name: Удаление доверия федерации
+          href: remove-a-federation-trust-exchange-2013-help.md
+        - name: Обновление сертификатов федерации
+          href: renew-the-federation-certificate-exchange-2013-help.md
+        - name: Отключение или повторное включение федеративного общего доступа для организации Exchange
+          href: disable-or-re-enable-federated-sharing-for-your-exchange-organization-exchange-2013-help.md
+        - name: Настройка федеративного общего доступа между организациями Exchange
+          href: configuring-federated-sharing-between-exchange-organizations-exchange-2013-help.md
+        - name: Настройка проверки подлинности OAuth между организациями Exchange и Exchange Online
+          href: configure-oauth-authentication-between-exchange-and-exchange-online-organizations-exchange-2013-help.md
+    - name: Связи организации
+      href: organization-relationships-exchange-2013-help.md
+      items:
+      - name: Создание связи организации
+        href: create-an-organization-relationship-exchange-2013-help.md
+      - name: Изменение связи организации
+        href: modify-an-organization-relationship-exchange-2013-help.md
+      - name: Удаление связи организации
+        href: remove-an-organization-relationship-exchange-2013-help.md
+    - name: Политики общего доступа
+      href: sharing-policies-exchange-2013-help.md
+      items:
+      - name: Создание политики общего доступа
+        href: create-a-sharing-policy-exchange-2013-help.md
+      - name: Применение политики общего доступа к почтовым ящикам
+        href: apply-a-sharing-policy-to-mailboxes-exchange-2013-help.md
+      - name: Изменение, отключение или удаление политики общего доступа
+        href: modify-disable-or-remove-a-sharing-policy-exchange-2013-help.md
+      - name: Включение публикации календарей в Интернете
+        href: enable-internet-calendar-publishing-exchange-2013-help.md
+      - name: Отключение публикации календаря в Интернете
+        href: disable-internet-calendar-publishing-exchange-2013-help.md
+  - name: Клиенты и мобильные устройства
+    href: clients-and-mobile-exchange-2013-help.md
+    items:
+    - name: Мобильный Outlook
+      href: outlook-anywhere-exchange-2013-help.md
+      items:
+      - name: Проверка возможности подключения к мобильному Outlook
+        href: test-outlook-anywhere-connectivity-exchange-2013-help.md
+    - name: Протокол MAPI over HTTP
+      href: mapi-over-http-exchange-2013-help.md
+    - name: Служба Exchange ActiveSync
+      href: exchange-activesync-exchange-2013-help.md
+      items:
+      - name: Direct Push.
+        href: direct-push-exchange-2013-help.md
+      - name: Политики почтовых ящиков мобильных устройств
+        href: mobile-device-mailbox-policies-exchange-2013-help.md
+        items:
+        - name: Добавление или удаление пользователей из политики мобильных почтовых ящиков
+          href: add-or-remove-users-from-a-mobile-mailbox-policy-exchange-2013-help.md
+        - name: Создание или изменение политики почтовых ящиков мобильных устройств
+          href: create-or-modify-a-mobile-device-mailbox-policy-exchange-2013-help.md
+        - name: Поддерживаемые политики почтовых ящиков мобильных устройств для Windows Phone и прочих устройств
+          href: supported-mobile-device-mailbox-policies-for-windows-phones-and-devices-exchange-2013-help.md
+      - name: Мобильные устройства
+        href: mobile-devices-exchange-2013-help.md
+        items:
+        - name: Удаленная очистка устройства
+          href: remote-device-wipe-exchange-2013-help.md
+        - name: Просмотр сведений о мобильном устройстве для пользователей
+          href: view-mobile-device-information-for-users-exchange-2013-help.md
+        - name: Функции мобильных телефонов и планшетов
+          href: mobile-phone-and-tablet-features-exchange-2013-help.md
+        - name: Выполнение удаленной очистки на мобильном телефоне
+          href: perform-a-remote-wipe-on-a-mobile-phone-exchange-2013-help.md
+        - name: Настройка мобильных телефонов для доступа к электронным сообщениям
+          href: configure-mobile-phones-to-access-email-exchange-2013-help.md
+    - name: Протоколы POP3 и IMAP4
+      href: pop3-and-imap4-in-exchange-server-2013-exchange-2013-help.md
+      items:
+      - name: Запуск и остановка служб POP3
+        href: start-and-stop-the-pop3-services-exchange-2013-help.md
+      - name: Запуск и остановка служб IMAP4
+        href: start-and-stop-the-imap4-services-exchange-2013-help.md
+      - name: Включение протокола POP3
+        href: enable-pop3-in-exchange-2013-exchange-2013-help.md
+      - name: Включение протокола IMAP4 в Exchange 2016
+        href: enable-imap4-in-exchange-2013-exchange-2013-help.md
+      - name: Включение или отключение доступа по протоколу POP3 для пользователя
+        href: enable-or-disable-pop3-access-for-a-user-exchange-2013-help.md
+      - name: Включение и отключение доступа IMAP4 для пользователя
+        href: enable-or-disable-imap4-access-for-a-user-exchange-2013-help.md
+      - name: Установка предельного числа подключений для протокола POP3
+        href: set-connection-limits-for-pop3-exchange-2013-help.md
+      - name: Установка предельного числа подключений для протокола IMAP4
+        href: set-connection-limits-for-imap4-exchange-2013-help.md
+      - name: Задайте ограничения времени ожидания подключения для протокола POP3
+        href: set-connection-time-out-limits-for-pop3-exchange-2013-help.md
+      - name: Установка для протокола IMAP4 пределов времени ожидания подключения
+        href: set-connection-time-out-limits-for-imap4-exchange-2013-help.md
+      - name: Настройка параметров календаря для службы POP3
+        href: configure-calendar-options-for-pop3-exchange-2013-help.md
+      - name: Настройка параметров календаря для IMAP4
+        href: configure-calendar-options-for-imap4-exchange-2013-help.md
+      - name: Настройка параметров формата получения сообщений для протоколов POP3 и IMAP4
+        href: configure-pop3-and-imap4-message-retrieval-format-options-exchange-2013-help.md
+      - name: Настройка IP-адресов и портов для доступа по протоколам POP3 и IMAP4
+        href: configure-ip-addresses-and-ports-for-pop3-and-imap4-access-exchange-2013-help.md
+      - name: Предоставление пользователям возможности просматривать параметры сервера POP3, IMAP4 и SMTP в Outlook Web App
+        href: allow-pop3-imap4-and-smtp-server-settings-to-be-viewed-by-end-users-in-outlook-web-app-exchange-2013-help.md
+      - name: Ведение журнала для протоколов POP3 и IMAP4
+        href: protocol-logging-for-pop3-and-imap4-exchange-2013-help.md
+        items:
+        - name: Настройка ведения журнала для протоколов POP3 и IMAP4
+          href: configure-protocol-logging-for-pop3-and-imap4-exchange-2013-help.md
+    - name: Outlook for iOS and Android
+      href: outlook-for-ios-and-android-exchange-2013-help.md
+      items:
+      - name: Using hybrid Modern Authentication with Outlook for iOS and Android
+        href: using-hybrid-modern-authentication-with-outlook-for-ios-and-android-exchange-2013-help.md
+      - name: Outlook for iOS and Android
+        href: using-basic-authentication-with-outlook-for-ios-and-android-exchange-2013-help.md
+        items:
+        - name: Account setup in Outlook for iOS and Android using basic authentication
+          href: account-setup-in-outlook-for-ios-and-android-using-basic-authentication-exchange-2013-help.md
+        - name: Passwords and Security in Outlook for iOS and Android for Exchange Server
+          href: passwords-and-security-in-outlook-for-ios-and-android-for-exchange-server-exchange-2013-help.md
+        - name: Управление устройствами с Outlook для iOS и Android для Exchange Server
+          href: managing-devices-for-outlook-for-ios-and-android-for-exchange-server-exchange-2013-help.md
+    - name: Управление протоколом клиента
+      href: client-protocol-management-exchange-2013-help.md
+      items:
+      - name: Управление виртуальным каталогом
+        href: virtual-directory-management-exchange-2013-help.md
+        items:
+        - name: Задачи управления виртуального каталога Exchange ActiveSync
+          href: exchange-activesync-virtual-directory-management-tasks-exchange-2013-help.md
+        - name: Параметры по умолчанию для виртуальных каталогов Exchange
+          href: default-settings-for-exchange-virtual-directories-exchange-2013-help.md
+    - name: Outlook Web App
+      href: outlook-web-app-exchange-2013-help.md
+      items:
+      - name: Политики почтовых ящиков Outlook Web App
+        href: outlook-web-app-mailbox-policies-exchange-2013-help.md
+        items:
+        - name: Процедуры политики почтовых ящиков Outlook Web App
+          href: outlook-web-app-mailbox-policy-procedures-exchange-2013-help.md
+          items:
+          - name: Создание политики почтовых ящиков Outlook Web App
+            href: create-an-outlook-web-app-mailbox-policy-exchange-2013-help.md
+          - name: Применение или удаление политики почтовых ящиков Outlook Web App в почтовом ящике
+            href: apply-or-remove-an-outlook-web-app-mailbox-policy-on-a-mailbox-exchange-2013-help.md
+          - name: Удаление политики почтовых ящиков Outlook Web App с сервера Exchange
+            href: remove-an-outlook-web-app-mailbox-policy-from-exchange-exchange-2013-help.md
+          - name: Просмотр и настройка свойств политики почтовых ящиков Outlook Web App
+            href: view-or-configure-outlook-web-app-mailbox-policy-properties-exchange-2013-help.md
+      - name: Интеграция Outlook Web App с Lync Server
+        href: integrate-outlook-web-app-with-lync-server-exchange-2013-help.md
+      - name: Просмотр и настройка виртуальных каталогов Outlook Web App
+        href: view-or-configure-outlook-web-app-virtual-directories-exchange-2013-help.md
+      - name: Упрощение URL-адреса Outlook Web App
+        href: simplify-the-outlook-web-app-url-exchange-2013-help.md
+      - name: Создание темы для приложения Outlook Web App
+        href: create-a-theme-for-outlook-web-app-exchange-2013-help.md
+      - name: Настройка страниц ошибок, входа и выбора языка в Outlook Web App
+        href: customize-the-outlook-web-app-sign-in-language-selection-and-error-pages-exchange-2013-help.md
+      - name: Настройка передачи push-уведомлений в службе "Веб-приложение OWA для устройств"
+        href: configuring-push-notifications-proxying-for-owa-for-devices-exchange-2013-help.md
+      - name: Использование проверки подлинности, основанной на утверждениях AD FS с Outlook Web App и EAC
+        href: using-ad-fs-claims-based-authentication-with-outlook-web-app-and-eac-exchange-2013-help.md
+      - name: Использование веб-частей Outlook Web App
+        href: using-outlook-web-app-web-parts-exchange-2013-help.md
+    - name: MailTips
+      href: mailtips-exchange-2013-help.md
+      items:
+      - name: Включение или отключение подсказок
+        href: enable-or-disable-mailtips-exchange-2013-help.md
+      - name: Настройка большой аудитории для организации
+        href: configure-the-large-audience-size-for-your-organization-exchange-2013-help.md
+      - name: Настройка пользовательских подсказок для получателей
+        href: configure-custom-mailtips-for-recipients-exchange-2013-help.md
+      - name: Подсказки в рамках связей организации
+        href: mailtips-over-organization-relationships-exchange-2013-help.md
+        items:
+        - name: Управление подсказками для связей организации
+          href: manage-mailtips-for-organization-relationships-exchange-2013-help.md
+      - name: Показатели группы и подсказки
+        href: group-metrics-and-mailtips-exchange-2013-help.md
+        items:
+        - name: Настройка показателей группы
+          href: configure-group-metrics-exchange-2013-help.md
+    - name: Приложения для Outlook
+      href: add-ins-for-outlook-exchange-2013-help.md
+      items:
+      - name: Установка и удаление приложений для Outlook в организации
+        href: install-or-remove-add-ins-for-outlook-for-your-organization-exchange-2013-help.md
+      - name: Управление доступом пользователей к приложениям для Outlook
+        href: manage-user-access-to-add-ins-for-outlook-exchange-online-help.md
+      - name: Выбор администраторов и пользователей, которые могут устанавливать надстройки для Outlook и управлять ими
+        href: specify-the-administrators-and-users-who-can-install-and-manage-add-ins-for-outlook-exchange-2013-help.md
+    - name: Настройка разгрузки SSL в Exchange 2013
+      href: configuring-ssl-offloading-in-exchange-2013-exchange-2013-help.md
+  - name: Единая система обмена сообщениями
+    href: unified-messaging-exchange-2013-help.md
+    items:
+    - name: Новые функции голосовой почты
+      href: new-voice-mail-features-exchange-2013-help.md
+      items:
+      - name: Изменения архитектуры голоса
+        href: voice-architecture-changes-exchange-2013-help.md
+      - name: Поддержка протокола IPv6 в единой системе обмена сообщениями
+        href: ipv6-support-in-unified-messaging-exchange-2013-help.md
+      - name: Предварительная версия расширение возможностей голосовой почты
+        href: voice-mail-preview-enhancements-exchange-2013-help.md
+      - name: Обновления командлетов единой системы обмена сообщениями
+        href: unified-messaging-cmdlet-updates-exchange-2013-help.md
+    - name: Планирование единой системы обмена сообщениями
+      href: planning-for-unified-messaging-exchange-2013-help.md
+    - name: Развертывание голосовой почты и единой системы обмена сообщениями
+      href: deploying-voice-mail-and-um-exchange-2013-help.md
+      items:
+      - name: Развертывание единой системы обмена сообщениями Exchange 2013
+        href: deploy-exchange-2013-um-exchange-2013-help.md
+      - name: 'Контрольный список: Развертывание единой системы обмена сообщениями Exchange 2013'
+        href: checklist-deploy-exchange-2013-um-exchange-2013-help.md
+      - name: Обновление единой системы обмена сообщениями Exchange 2010 до Exchange 2013
+        href: upgrade-exchange-2010-um-to-exchange-2013-um-exchange-2013-help.md
+      - name: 'Контрольный список: Обновление единой системы обмена сообщениями Exchange 2010 до Exchange 2013'
+        href: checklist-upgrade-exchange-2010-um-to-exchange-2013-um-exchange-2013-help.md
+      - name: Обновление единой системы обмена СООБЩЕНИЯМИ Exchange 2007 до Exchange 2013
+        href: upgrade-exchange-2007-um-to-exchange-2013-um-exchange-2013-help.md
+      - name: 'Контрольный список: Обновление единой системы обмена сообщениями Exchange 2007 до Exchange 2013'
+        href: checklist-upgrade-exchange-2007-um-to-exchange-2013-um-exchange-2013-help.md
+      - name: Развертывание единой системы обмена сообщениями в Exchange 2013 и обзор Lync Server
+        href: deploying-exchange-2013-um-and-lync-server-overview-exchange-2013-help.md
+        items:
+        - name: Настройка единой системы обмена сообщениями для работы с Lync Server
+          href: configure-um-to-work-with-lync-server-exchange-2013-help.md
+        - name: 'Контрольный список: Интеграция единой системы обмена сообщениями Exchange 2013 с сервером Lync'
+          href: checklist-integrate-exchange-2013-um-with-lync-server-exchange-2013-help.md
+        - name: Сосуществование с Office Communications Server 2007 R2 и Lync Server
+          href: coexistence-with-office-communications-server-2007-r2-and-lync-server-exchange-2013-help.md
+      - name: Развертывание сертификатов для единой системы обмена СООБЩЕНИЯМИ
+        href: deploying-certificates-for-um-exchange-2013-help.md
+        items:
+        - name: Развертывание сертификатов для единой системы обмена СООБЩЕНИЯМИ процедур
+          href: deploying-certificates-for-um-procedures-exchange-2013-help.md
+          items:
+          - name: Создание сертификатов для единой системы обмена сообщениями
+            href: create-certificates-for-um-exchange-2013-help.md
+          - name: Импорт или экспорт сертификатов для единой системы обмена СООБЩЕНИЯМИ
+            href: import-or-export-certificates-for-um-exchange-2013-help.md
+          - name: Назначение сертификата службе единой системы обмена сообщениями и службе маршрутизатора вызовов этой системы
+            href: assign-a-certificate-to-the-um-and-um-call-router-services-exchange-2013-help.md
+    - name: Языки, приглашения и приветствия единой системы обмена сообщениями
+      href: um-languages-prompts-and-greetings-exchange-2013-help.md
+      items:
+      - name: Приветствия, информационные сообщения, меню и приглашения голосовой почты
+        href: voice-mail-greetings-announcements-menus-and-prompts-exchange-2013-help.md
+      - name: Языки, приглашения и приветствий процедуры единой системы обмена СООБЩЕНИЯМИ
+        href: um-languages-prompts-and-greetings-procedures-exchange-2013-help.md
+        items:
+        - name: Установка языкового пакета единой системы обмена сообщениями
+          href: install-a-um-language-pack-exchange-2013-help.md
+        - name: Выбрать язык по умолчанию для абонентской группы
+          href: set-the-default-language-on-a-dial-plan-exchange-2013-help.md
+        - name: Выберите язык для автосекретарю.
+          href: select-the-language-for-an-auto-attendant-exchange-2013-help.md
+        - name: Удаление языкового пакета единой системы обмена сообщениями
+          href: remove-a-um-language-pack-exchange-2013-help.md
+        - name: Импорт и экспорт настраиваемых приветствий, объявлений, меню и приглашений
+          href: import-and-export-custom-greetings-announcements-menus-and-prompts-exchange-2013-help.md
+        - name: Импорт настраиваемых приглашений из Exchange 2007 в Exchange 2013
+          href: import-custom-prompts-from-exchange-2007-to-exchange-2013-exchange-2013-help.md
+        - name: Включение записи настраиваемых приглашений с помощью телефонного интерфейса пользователя
+          href: enable-custom-prompt-recording-using-the-telephone-user-interface-exchange-2013-help.md
+    - name: Интеграция телефонной системы с единой системой обмена сообщениями
+      href: telephone-system-integration-with-um-exchange-2013-help.md
+      items:
+      - name: Основные понятия и компоненты телефонии
+        href: telephony-concepts-and-components-exchange-2013-help.md
+      - name: Конфигурации УАТС и IP-УАТС
+        href: pbx-and-ip-pbx-configurations-exchange-2013-help.md
+      - name: Подключение к телефонной системе единой системы обмена СООБЩЕНИЯМИ
+        href: connect-um-to-your-telephone-system-exchange-2013-help.md
+        items:
+        - name: Рекомендации по телефонии в Exchange 2013
+          href: telephony-advisor-for-exchange-2013-exchange-2013-help.md
+        - name: Заметки по конфигурации для поддерживаемых шлюзов VoIP, IP-УАТС и УАТС
+          href: configuration-notes-for-supported-voip-gateways-ip-pbxs-and-pbxs-exchange-2013-help.md
+        - name: Подключение VoIP шлюз, IP-УАТС или сеанс пограничного контроллера единой системы обмена сообщениями
+          href: connect-a-voip-gateway-ip-pbx-or-session-border-controller-to-um-exchange-2013-help.md
+        - name: Подключение к поддерживаемые шлюз VoIP единой системы обмена СООБЩЕНИЯМИ
+          href: connect-um-to-a-supported-voip-gateway-exchange-2013-help.md
+        - name: Подключение шлюза VoIP для связи с УАТС
+          href: connect-a-voip-gateway-to-communicate-with-a-pbx-exchange-2013-help.md
+        - name: Сведения о конфигурации для поддерживаемых пограничных контроллеров сеансов
+          href: configuration-notes-for-supported-session-border-controllers-exchange-2013-help.md
+    - name: Подключиться к телефонной сети вашей системы голосовой почты
+      href: connect-your-voice-mail-system-to-your-telephone-network-exchange-2013-help.md
+      items:
+      - name: Абонентские группы единой системы обмена сообщениями
+        href: um-dial-plans-exchange-2013-help.md
+        items:
+        - name: Аудиокодеки
+          href: audio-codecs-exchange-2013-help.md
+        - name: Дополнительные абонентские группы
+          href: secondary-dial-plans-exchange-2013-help.md
+        - name: Процедуры плана телефонным единой системы обмена СООБЩЕНИЯМИ
+          href: um-dial-plan-procedures-exchange-2013-help.md
+          items:
+          - name: Создание абонентской группы единой системы обмена сообщениями
+            href: create-a-um-dial-plan-exchange-2013-help.md
+          - name: Управление абонентской группой единой системы обмена сообщениями
+            href: manage-a-um-dial-plan-exchange-2013-help.md
+          - name: Добавьте серверы клиентского доступа и почтовых ящиков для абонентской группы SIP URI
+            href: add-mailbox-and-client-access-servers-to-a-sip-uri-dial-plan-exchange-2013-help.md
+          - name: Удаление серверов клиентского доступа и почтовых ящиков из абонентской группы SIP URI
+            href: remove-mailbox-and-client-access-servers-from-a-sip-uri-dial-plan-exchange-2013-help.md
+          - name: Изменение аудиокодека
+            href: change-the-audio-codec-exchange-2013-help.md
+          - name: Настройка максимальной длительности звонка
+            href: configure-the-maximum-call-duration-exchange-2013-help.md
+          - name: Настройка Максимальная продолжительность записи
+            href: configure-the-maximum-recording-duration-exchange-2013-help.md
+          - name: Настройте значение времени ожидания простоя записи
+            href: configure-the-recording-idle-time-out-value-exchange-2013-help.md
+          - name: Настройка параметра безопасности VoIP
+            href: configure-the-voip-security-setting-exchange-2013-help.md
+          - name: Настройка абонентской группы для пользователей с похожими именами
+            href: configure-a-dial-plan-for-users-who-have-similar-names-exchange-2013-help.md
+          - name: Удаление абонентской группы единой системы обмена СООБЩЕНИЯМИ
+            href: delete-a-um-dial-plan-exchange-2013-help.md
+      - name: IP-шлюзы единой системы обмена сообщениями
+        href: um-ip-gateways-exchange-2013-help.md
+        items:
+        - name: Процедуры шлюза IP единой системы обмена СООБЩЕНИЯМИ
+          href: um-ip-gateway-procedures-exchange-2013-help.md
+          items:
+          - name: Создание шлюза IP единой системы обмена сообщениями
+            href: create-a-um-ip-gateway-exchange-2013-help.md
+          - name: Управление шлюзом IP единой системы обмена сообщениями
+            href: manage-a-um-ip-gateway-exchange-2013-help.md
+          - name: Включение шлюза IP единой системы обмена СООБЩЕНИЯМИ
+            href: enable-a-um-ip-gateway-exchange-2013-help.md
+          - name: Отключение IP-шлюза единой системы обмена сообщениями
+            href: disable-a-um-ip-gateway-exchange-2013-help.md
+          - name: Настройка полного доменного имени
+            href: configure-a-fully-qualified-domain-name-exchange-2013-help.md
+          - name: Настройка IP-адреса
+            href: configure-the-ip-address-exchange-2013-help.md
+          - name: Настройте прослушивающий порт
+            href: configure-the-listening-port-exchange-2013-help.md
+          - name: Удалить шлюз IP единой системы обмена СООБЩЕНИЯМИ
+            href: delete-a-um-ip-gateway-exchange-2013-help.md
+      - name: Сервисные группы единой системы обмена сообщениями
+        href: um-hunt-groups-exchange-2013-help.md
+        items:
+        - name: Процедуры группы слежения единой системы обмена СООБЩЕНИЯМИ
+          href: um-hunt-group-procedures-exchange-2013-help.md
+          items:
+          - name: Создание сервисной группы единой системы обмена сообщениями
+            href: create-a-um-hunt-group-exchange-2013-help.md
+          - name: Просмотр группы слежения единой системы обмена СООБЩЕНИЯМИ
+            href: view-a-um-hunt-group-exchange-2013-help.md
+          - name: Удаление сервисной группы единой системы обмена сообщениями.
+            href: delete-a-um-hunt-group-exchange-2013-help.md
+      - name: Службы единой системы обмена сообщениями
+        href: um-services-exchange-2013-help.md
+        items:
+        - name: Протоколы, порты и службы единой системы обмена сообщениями
+          href: um-protocols-ports-and-services-exchange-2013-help.md
+        - name: Процедуры служб единой системы обмена СООБЩЕНИЯМИ
+          href: um-services-procedures-exchange-2013-help.md
+          items:
+          - name: Управление параметрами единой системы обмена СООБЩЕНИЯМИ на сервере почтовых ящиков
+            href: manage-um-settings-on-a-mailbox-server-exchange-2013-help.md
+          - name: Управление параметрами единой системы обмена сообщениями на сервере клиентского доступа
+            href: manage-um-settings-on-a-client-access-server-exchange-2013-help.md
+          - name: Возможность включать и отключать автоответчик на сервере почтовых ящиков
+            href: allow-or-prevent-call-answering-on-a-mailbox-server-exchange-2013-help.md
+          - name: Возможность включать и отключать автоответчик на сервере клиентского доступа
+            href: allow-or-prevent-call-answering-on-a-client-access-server-exchange-2013-help.md
+          - name: Настройка режима запуска на сервере почтовых ящиков
+            href: configure-the-startup-mode-on-a-mailbox-server-exchange-2013-help.md
+          - name: Настройка режима запуска на сервере клиентского доступа
+            href: configure-the-startup-mode-on-a-client-access-server-exchange-2013-help.md
+          - name: Настройте количество входящих вызовов на сервере почтовых ящиков
+            href: configure-the-number-of-incoming-calls-on-a-mailbox-server-exchange-2013-help.md
+          - name: Запуск службы единой системы обмена сообщениями Microsoft Exchange
+            href: start-the-microsoft-exchange-unified-messaging-service-exchange-2013-help.md
+          - name: Остановка службы единой системы обмена сообщениями Microsoft Exchange
+            href: stop-the-microsoft-exchange-unified-messaging-service-exchange-2013-help.md
+          - name: Запуск службы единой системы обмена сообщениями маршрутизатора вызовов Microsoft Exchange
+            href: start-the-microsoft-exchange-unified-messaging-call-router-service-exchange-2013-help.md
+          - name: Остановка службы единой системы обмена сообщениями маршрутизатора вызовов Microsoft Exchange
+            href: stop-the-microsoft-exchange-unified-messaging-call-router-service-exchange-2013-help.md
+          - name: Настройка TCP-порт прослушивания на сервере клиентского доступа
+            href: set-the-tcp-listening-port-on-a-client-access-server-exchange-2013-help.md
+          - name: Задать порт прослушивания TLS на сервере клиентского доступа
+            href: set-the-tls-listening-port-on-a-client-access-server-exchange-2013-help.md
+    - name: Автоматический ответ и маршрутизация входящих вызовов
+      href: automatically-answer-and-route-incoming-calls-exchange-2013-help.md
+      items:
+      - name: Интерфейс DTMF
+        href: dtmf-interface-exchange-2013-help.md
+      - name: Процедуры автосекретаря единой системы обмена сообщениями
+        href: um-auto-attendant-procedures-exchange-2013-help.md
+        items:
+        - name: Настройка автосекретаря единой системы обмена сообщениями
+          href: set-up-a-um-auto-attendant-exchange-2013-help.md
+          items:
+          - name: Создание автосекретаря единой системы обмена сообщениями
+            href: create-a-um-auto-attendant-exchange-2013-help.md
+          - name: Добавление auto attendant добавочный номер
+            href: add-an-auto-attendant-extension-number-exchange-2013-help.md
+          - name: Настройка рабочих часов
+            href: configure-business-hours-exchange-2013-help.md
+          - name: Создание расписания праздников
+            href: create-a-holiday-schedule-exchange-2013-help.md
+          - name: Указание названия организации
+            href: enter-a-business-name-exchange-2013-help.md
+          - name: Задайте расположение бизнеса
+            href: set-a-business-location-exchange-2013-help.md
+          - name: Настройка часового пояса
+            href: configure-the-time-zone-exchange-2013-help.md
+          - name: Включение настраиваемого приветствие для рабочих часов
+            href: enable-a-customized-business-hours-greeting-exchange-2013-help.md
+          - name: Включение в строке меню настраиваемых рабочих часов
+            href: enable-a-customized-business-hours-menu-prompt-exchange-2013-help.md
+          - name: Включение настраиваемого не - приветствие для рабочих часов
+            href: enable-a-customized-non-business-hours-greeting-exchange-2013-help.md
+          - name: Включение настраиваемого приглашения меню в нерабочие часы
+            href: enable-a-customized-non-business-hours-menu-prompt-exchange-2013-help.md
+          - name: Включение информационного сообщения
+            href: enable-an-informational-announcement-exchange-2013-help.md
+          - name: Создание навигации по меню
+            href: create-menu-navigation-exchange-2013-help.md
+          - name: Создание рабочих часов меню переходов
+            href: create-business-hours-navigation-menus-exchange-2013-help.md
+          - name: Создание меню переходов в нерабочее время
+            href: create-non-business-hours-navigation-menus-exchange-2013-help.md
+        - name: Управление автосекретаря единой системы обмена СООБЩЕНИЯМИ
+          href: manage-a-um-auto-attendant-exchange-2013-help.md
+        - name: Настройка резервный автосекретарь DTMF
+          href: configure-a-dtmf-fallback-auto-attendant-exchange-2013-help.md
+        - name: Включение автосекретаря единой системы обмена сообщениями
+          href: enable-a-um-auto-attendant-exchange-2013-help.md
+        - name: Отключение автосекретаря единой системы обмена СООБЩЕНИЯМИ
+          href: disable-a-um-auto-attendant-exchange-2013-help.md
+        - name: Удаление автосекретаря единой системы обмена СООБЩЕНИЯМИ
+          href: delete-a-um-auto-attendant-exchange-2013-help.md
+        - name: Включение и отключение автоматического распознавания речи
+          href: enable-or-disable-automatic-speech-recognition-exchange-2013-help.md
+        - name: Разрешение или запрещение передача вызовов из автосекретаря
+          href: enable-or-prevent-transferring-calls-from-an-auto-attendant-exchange-2013-help.md
+        - name: Включение и отключение отправки голосовых сообщений пользователям
+          href: enable-or-disable-sending-voice-messages-to-users-exchange-2013-help.md
+        - name: Включить или отключить поиск в каталоге
+          href: enable-or-disable-directory-lookups-exchange-2013-help.md
+        - name: Настройка группы пользователей, которыми можно связаться
+          href: configure-the-group-of-users-that-can-be-contacted-exchange-2013-help.md
+        - name: Настройка автосекретаря для пользователей со схожими именами
+          href: configure-an-auto-attendant-for-users-who-have-similar-names-exchange-2013-help.md
+    - name: Настройка голосовой почты для пользователей
+      href: set-up-voice-mail-for-users-exchange-2013-help.md
+      items:
+      - name: Политики почтовых ящиков единой системы обмена сообщениями
+        href: um-mailbox-policies-exchange-2013-help.md
+        items:
+        - name: Процедуры политики почтовых ящиков единой системы обмена СООБЩЕНИЯМИ
+          href: um-mailbox-policy-procedures-exchange-2013-help.md
+          items:
+          - name: Создание политики почтовых ящиков единой системы обмена сообщениями
+            href: create-a-um-mailbox-policy-exchange-2013-help.md
+          - name: Управление политикой почтовых ящиков единой системы обмена СООБЩЕНИЯМИ
+            href: manage-a-um-mailbox-policy-exchange-2013-help.md
+          - name: Удаление политики почтовых ящиков единой системы обмена СООБЩЕНИЯМИ
+            href: delete-a-um-mailbox-policy-exchange-2013-help.md
+      - name: Голосовая почта для пользователей
+        href: voice-mail-for-users-exchange-2013-help.md
+        items:
+        - name: Процедуры пользователя голосовой почты
+          href: voice-mail-enabled-user-procedures-exchange-2013-help.md
+          items:
+          - name: Включение для пользователя поддержки голосовой почты
+            href: enable-a-user-for-voice-mail-exchange-2013-help.md
+          - name: Включение текста с сообщением электронной почты, отправленный при для пользователя включена для голосовой почты
+            href: include-text-with-the-email-message-sent-when-a-user-is-enabled-for-voice-mail-exchange-2013-help.md
+          - name: Управление параметрами голосовой почты для пользователя
+            href: manage-voice-mail-settings-for-a-user-exchange-2013-help.md
+          - name: Назначение политики почтовых ящиков единой системы обмена СООБЩЕНИЯМИ
+            href: assign-a-um-mailbox-policy-exchange-2013-help.md
+          - name: Изменение абонентской единой системы обмена СООБЩЕНИЯМИ
+            href: change-the-um-dial-plan-exchange-2013-help.md
+          - name: Включить вызовы от пользователей, которые не включены единой системы обмена СООБЩЕНИЯМИ
+            href: enable-calls-from-users-who-aren-t-um-enabled-exchange-2013-help.md
+          - name: Отключить вызовы от пользователей, которые не включены единой системы обмена СООБЩЕНИЯМИ
+            href: disable-calls-from-users-who-aren-t-um-enabled-exchange-2013-help.md
+          - name: Звонящий без идентификатора оставить голосовое сообщение
+            href: allow-callers-without-a-caller-id-to-leave-a-voice-message-exchange-2013-help.md
+          - name: Включение текста с сообщением электронной почты при получении сообщения голосовой связи
+            href: include-text-with-the-email-message-sent-when-a-voice-message-is-received-exchange-2013-help.md
+          - name: Запретить абонентов без идентификатора за пределами голосовое сообщение
+            href: prevent-callers-without-a-caller-id-from-leaving-a-voice-message-exchange-2013-help.md
+          - name: Отключение голосовой почты для пользователя
+            href: disable-voice-mail-for-a-user-exchange-2013-help.md
+          - name: Изменение SIP-адреса
+            href: change-a-sip-address-exchange-2013-help.md
+          - name: Изменение добавочного номера
+            href: change-an-extension-number-exchange-2013-help.md
+          - name: Добавление SIP-адрес
+            href: add-a-sip-address-exchange-2013-help.md
+          - name: Удалите адрес SIP
+            href: remove-a-sip-address-exchange-2013-help.md
+          - name: Добавление добавочный номер
+            href: add-an-extension-number-exchange-2013-help.md
+          - name: Удалить добавочный номер
+            href: remove-an-extension-number-exchange-2013-help.md
+          - name: Измените номер формата E.164
+            href: change-an-e-164-number-exchange-2013-help.md
+          - name: Добавление номера E.164
+            href: add-an-e-164-number-exchange-2013-help.md
+          - name: Удаление номером E.164
+            href: remove-an-e-164-number-exchange-2013-help.md
+    - name: Настройка функций голосовой почты клиентов
+      href: set-up-client-voice-mail-features-exchange-2013-help.md
+      items:
+      - name: Настройка голосового доступа к Outlook
+        href: setting-up-outlook-voice-access-exchange-2013-help.md
+        items:
+        - name: Голосовые команды для доступа к Outlook
+          href: outlook-voice-access-commands-exchange-2013-help.md
+        - name: Перемещение меню с помощью голосового доступа к Outlook
+          href: navigating-menus-with-outlook-voice-access-exchange-2013-help.md
+        - name: Воспроизведение на телефоне
+          href: play-on-phone-exchange-2013-help.md
+        - name: Процедуры голосового доступа к Outlook
+          href: outlook-voice-access-procedures-exchange-2013-help.md
+          items:
+          - name: Включение или отключение голосового доступа к Outlook для пользователей
+            href: enable-or-disable-outlook-voice-access-for-users-exchange-2013-help.md
+          - name: Настройка на номер голосового доступа к Outlook
+            href: configure-an-outlook-voice-access-number-exchange-2013-help.md
+          - name: Отключение выбранных компонентов для пользователей голосового доступа к Outlook
+            href: disable-selected-features-for-outlook-voice-access-users-exchange-2013-help.md
+          - name: Задание функций почтовых ящиков для пользователей голосового доступа к Outlook
+            href: set-mailbox-features-for-outlook-voice-access-users-exchange-2013-help.md
+          - name: Настройка функции почтового ящика для пользователя с голосовой доступ к Outlook
+            href: set-mailbox-features-for-an-outlook-voice-access-user-exchange-2013-help.md
+          - name: Включение или отключение автоматического распознавания речи для пользователя голосового доступа к Outlook
+            href: enable-or-disable-automatic-speech-recognition-for-an-outlook-voice-access-user-exchange-2013-help.md
+          - name: Включение информационного сообщения для пользователей голосового доступа к Outlook
+            href: enable-an-informational-announcement-for-outlook-voice-access-users-exchange-2013-help.md
+          - name: Включение настраиваемого приветствия для пользователей голосового доступа к Outlook
+            href: enable-a-customized-greeting-for-outlook-voice-access-users-exchange-2013-help.md
+          - name: Включение или отключение воспроизвести на телефоне для пользователей голосового доступа к Outlook
+            href: enable-or-disable-play-on-phone-for-outlook-voice-access-users-exchange-2013-help.md
+          - name: Разрешение или запрет отправки сообщений голосовой почты из голосового доступа к Outlook
+            href: enable-or-disable-sending-voice-messages-from-outlook-voice-access-exchange-2013-help.md
+          - name: Разрешение или запрещение передача вызовов из голосового доступа к Outlook
+            href: enable-or-prevent-transferring-calls-from-outlook-voice-access-exchange-2013-help.md
+          - name: Настройка группы пользователей, которые смогут связаться пользователи Outlook Voice Access
+            href: configure-the-group-of-users-that-outlook-voice-access-users-can-contact-exchange-2013-help.md
+          - name: Настройка основной способ для пользователей голосового доступа к Outlook для поиска
+            href: configure-the-primary-way-for-outlook-voice-access-users-to-search-exchange-2013-help.md
+          - name: Настройка дополнительного способа поиска пользователями голосового доступа к Outlook
+            href: configure-the-secondary-way-for-outlook-voice-access-users-to-search-exchange-2013-help.md
+          - name: Настройка количества ошибок входа в систему перед отключением пользователей голосового доступа к Outlook
+            href: configure-the-number-of-sign-in-failures-before-outlook-voice-access-users-are-disconnected-exchange-2013-help.md
+          - name: Настройте количество ошибок ввода перед пользователи Outlook Voice Access не соединены по сети
+            href: configure-the-number-of-input-failures-before-outlook-voice-access-users-are-disconnected-exchange-2013-help.md
+          - name: Настройка ограничений на персональное приветствие для пользователей голосового доступа к Outlook
+            href: configure-the-limit-on-personal-greetings-for-outlook-voice-access-users-exchange-2013-help.md
+      - name: Включение переадресации вызовов для пользователей голосовой почты
+        href: allow-voice-mail-users-to-forward-calls-exchange-2013-help.md
+        items:
+        - name: Переадресация звонков процедур
+          href: forwarding-calls-procedures-exchange-2013-help.md
+          items:
+          - name: Возможность разрешить или запретить пользователю создавать правила автоответчика
+            href: allow-or-prevent-a-user-from-creating-call-answering-rules-exchange-2013-help.md
+          - name: Разрешить или запретить пользователям в одной политики почтовых ящиков единой системы обмена СООБЩЕНИЯМИ создавать правила ответа на звонок
+            href: allow-or-prevent-users-in-the-same-um-mailbox-policy-from-creating-call-answering-rules-exchange-2013-help.md
+          - name: Создание правила ответа на вызовы
+            href: create-a-call-answering-rule-exchange-2013-help.md
+          - name: Просмотр правила ответа на вызовы и управление им
+            href: view-and-manage-a-call-answering-rule-exchange-2013-help.md
+          - name: Включение и отключение правила автоответчика для пользователя
+            href: enable-or-disable-a-call-answering-rule-for-a-user-exchange-2013-help.md
+          - name: Удаление правила автоответчика для пользователя
+            href: remove-a-call-answering-rule-for-a-user-exchange-2013-help.md
+      - name: Разрешить пользователям совершать звонки
+        href: allow-users-to-make-calls-exchange-2013-help.md
+        items:
+        - name: Телефонные коды, префиксы номеров и форматы номеров
+          href: dial-codes-number-prefixes-and-number-formats-exchange-2013-help.md
+        - name: Которое позволяет пользователям выполнять вызовы процедур
+          href: allowing-users-to-make-calls-procedures-exchange-2013-help.md
+          items:
+          - name: Включение исходящих вызовов
+            href: enable-outgoing-calls-on-um-ip-gateways-exchange-2013-help.md
+          - name: Отключение исходящих звонков на шлюзы IP единой системы обмена СООБЩЕНИЯМИ
+            href: disable-outgoing-calls-on-um-ip-gateways-exchange-2013-help.md
+          - name: Настройка телефонные коды
+            href: configure-dial-codes-exchange-2013-help.md
+          - name: Создание правил набора номера для пользователей
+            href: create-dialing-rules-for-users-exchange-2013-help.md
+          - name: Авторизация вызовов с помощью правил набора номера
+            href: authorize-calls-using-dialing-rules-exchange-2013-help.md
+            items:
+            - name: Авторизации вызовов для автосекретаря
+              href: authorize-calls-for-auto-attendant-callers-exchange-2013-help.md
+            - name: Авторизации вызовов для пользователей в абонентской группы
+              href: authorize-calls-for-users-in-a-dial-plan-exchange-2013-help.md
+            - name: Авторизовать звонки для группы пользователей
+              href: authorize-calls-for-a-group-of-users-exchange-2013-help.md
+      - name: Включение функции просмотра записей разговоров голосовой почты для пользователей
+        href: allow-users-to-see-a-voice-mail-transcript-exchange-2013-help.md
+        items:
+        - name: Помощник просмотра голосовой почты
+          href: voice-mail-preview-advisor-exchange-2013-help.md
+        - name: Голосовой почты Preview процедур
+          href: voice-mail-preview-procedures-exchange-2013-help.md
+          items:
+          - name: Настройка служб партнера Предварительный просмотр голосовой почты для пользователей
+            href: configure-voice-mail-preview-partner-services-for-users-exchange-2013-help.md
+            items:
+            - name: Установка адреса партнера Предварительный просмотр голосовой почты
+              href: set-the-voice-mail-preview-partner-address-exchange-2013-help.md
+            - name: Задать идентификатор партнера Предварительный просмотр голосовой почты
+              href: set-the-voice-mail-preview-partner-id-exchange-2013-help.md
+            - name: Значение максимального срока партнер Предварительный просмотр голосовой почты
+              href: set-the-maximum-message-duration-for-a-voice-mail-preview-partner-exchange-2013-help.md
+            - name: Установка задержки максимальное доставки для партнера Предварительный просмотр голосовой почты
+              href: set-the-maximum-delivery-delay-for-a-voice-mail-preview-partner-exchange-2013-help.md
+          - name: Включить предварительный просмотр голосовой почты для пользователей
+            href: enable-voice-mail-preview-for-users-exchange-2013-help.md
+          - name: Отключить Предварительный просмотр голосовой почты для пользователей
+            href: disable-voice-mail-preview-for-users-exchange-2013-help.md
+      - name: Обеспечение возможности получать факсы для пользователей голосовой почты
+        href: enable-voice-mail-users-to-receive-faxes-exchange-2013-help.md
+        items:
+        - name: Факс advisor для обмена СООБЩЕНИЯМИ Exchange
+          href: fax-advisor-for-exchange-um-exchange-2013-help.md
+        - name: Настройка приема факсимильных сообщений
+          href: setting-up-incoming-faxing-exchange-2013-help.md
+          items:
+          - name: Отправка и прием факсов процедур
+            href: faxing-procedures-exchange-2013-help.md
+            items:
+            - name: Установка сервера факсов URI, чтобы разрешить отправка и прием факсов партнера
+              href: set-the-partner-fax-server-uri-to-allow-faxing-exchange-2013-help.md
+            - name: Включение текста с сообщением электронной почты при получении сообщения факсов
+              href: include-text-with-the-email-message-sent-when-a-fax-message-is-received-exchange-2013-help.md
+            - name: Разрешить пользователям в той же абонентской прием факсов
+              href: allow-users-in-the-same-dial-plan-to-receive-faxes-exchange-2013-help.md
+            - name: Запретить пользователям в той же абонентской прием факсов
+              href: prevent-users-in-the-same-dial-plan-from-receiving-faxes-exchange-2013-help.md
+            - name: Включите поддержку факсимильной связи для группы пользователей
+              href: enable-faxing-for-a-group-of-users-exchange-2013-help.md
+            - name: Отключение, отправка и прием факсов для группы пользователей
+              href: disable-faxing-for-a-group-of-users-exchange-2013-help.md
+            - name: Разрешить пользователям принимать факсы
+              href: enable-a-user-to-receive-faxes-exchange-2013-help.md
+            - name: Запретить пользователям принимать факсы
+              href: prevent-a-user-from-receiving-faxes-exchange-2013-help.md
+      - name: Защита голосовой почты
+        href: protect-voice-mail-exchange-2013-help.md
+        items:
+        - name: Защищенные процедуры голосовой почты
+          href: protected-voice-mail-procedures-exchange-2013-help.md
+          items:
+          - name: Настройте защищенную голосовую почту от прошедших проверку подлинности вызывающих объектов
+            href: configure-protected-voice-mail-from-authenticated-callers-exchange-2013-help.md
+          - name: Настройка голосовой почты, защищенной от непроверенных абонентов
+            href: configure-protected-voice-mail-from-unauthenticated-callers-exchange-2013-help.md
+          - name: Включить или отключить воспроизведение мультимедиа защищенный голосовых сообщений
+            href: enable-or-disable-multimedia-playback-of-protected-voice-messages-exchange-2013-help.md
+          - name: Задать текст, отображаемый для клиентов электронной почты, не поддерживающие службу управления правами Windows
+            href: specify-the-text-to-display-for-email-clients-that-don-t-support-windows-rights-management-exchange-2013-help.md
+      - name: Индикатор разрешения ожидающих сообщений
+        href: allow-message-waiting-indicator-exchange-2013-help.md
+        items:
+        - name: Разрешить процедуры индикатор ожидающих сообщений
+          href: allow-message-waiting-indicator-procedures-exchange-2013-help.md
+          items:
+          - name: Разрешить сообщение ожидание индикатор (ожидающего сообщения) на шлюз IP единой системы обмена СООБЩЕНИЯМИ
+            href: allow-message-waiting-indicator-mwi-on-a-um-ip-gateway-exchange-2013-help.md
+          - name: Запретить сообщение ожидание индикатор (ожидающего сообщения) на шлюз IP единой системы обмена СООБЩЕНИЯМИ
+            href: prevent-message-waiting-indicator-mwi-on-a-um-ip-gateway-exchange-2013-help.md
+          - name: Предоставление пользователям сообщение ожидание индикатор (ожидающего сообщения)
+            href: enable-message-waiting-indicator-mwi-for-users-exchange-2013-help.md
+          - name: Отключить сообщение ожидание индикатор (ожидающего сообщения) для пользователей
+            href: disable-message-waiting-indicator-mwi-for-users-exchange-2013-help.md
+          - name: Включение уведомлений пользователей о пропущенных вызовах
+            href: enable-missed-call-notifications-for-a-user-exchange-2013-help.md
+          - name: Отключение уведомлений о пропущенных звонках для пользователя
+            href: disable-missed-call-notifications-for-a-user-exchange-2013-help.md
+    - name: Настройка безопасности с помощью ПИН-кода для голосового доступа к Outlook
+      href: set-outlook-voice-access-pin-security-exchange-2013-help.md
+      items:
+      - name: Процедуры безопасности ПИН-кода
+        href: pin-security-procedures-exchange-2013-help.md
+        items:
+        - name: Настраивать политики ПИН голосового доступа к Outlook
+          href: set-outlook-voice-access-pin-policies-exchange-2013-help.md
+        - name: Сброс ПИН голосовой почты
+          href: reset-a-voice-mail-pin-exchange-2013-help.md
+        - name: Получение сведений о ПИН-коде голосовой почты
+          href: retrieve-voice-mail-pin-information-exchange-2013-help.md
+        - name: Включение текста с сообщением электронной почты, отправленных после сброса ПИН-код — это
+          href: include-text-with-the-email-message-sent-when-a-pin-is-reset-exchange-2013-help.md
+        - name: Задать минимальную длину ПИН-код голосовой почты
+          href: set-the-minimum-pin-length-for-voice-mail-exchange-2013-help.md
+        - name: Задать время жизни ПИН-код голосовой почты
+          href: set-the-pin-lifetime-for-voice-mail-exchange-2013-help.md
+        - name: Задайте число предыдущих голосовой почты ПИН-коды перезапуска
+          href: set-the-number-of-previous-voice-mail-pins-to-recycle-exchange-2013-help.md
+        - name: Отключить общие шаблоны ПИН-код голосовой почты
+          href: disable-common-pin-patterns-for-voice-mail-exchange-2013-help.md
+        - name: Включить Общие шаблоны ПИН-код голосовой почты
+          href: enable-common-pin-patterns-for-voice-mail-exchange-2013-help.md
+        - name: Задать число ошибок входа до сбросить ПИН-код голосовой почты
+          href: set-the-number-of-sign-in-failures-before-a-voice-mail-pin-is-reset-exchange-2013-help.md
+        - name: Настройка количества неудачных попыток входа в систему перед блокировкой пользователя голосовой почты
+          href: set-the-number-of-sign-in-failures-before-a-voice-mail-user-is-locked-out-exchange-2013-help.md
+        - name: Обеспечение входа в голосовую почту без необходимости вводить ПИН-код
+          href: enable-pin-less-sign-ins-for-voice-mail-exchange-2013-help.md
+    - name: Запуск отчетов для вызовов голосовой почты
+      href: run-reports-for-voice-mail-calls-exchange-2013-help.md
+      items:
+      - name: Процедуры отчеты единой системы обмена СООБЩЕНИЯМИ
+        href: um-reports-procedures-exchange-2013-help.md
+        items:
+        - name: Просмотрите вызовов голосовой почты в вашей организации
+          href: review-the-voice-mail-calls-in-your-organization-exchange-2013-help.md
+        - name: Просмотрите вызовов голосовой почты для пользователя
+          href: review-the-voice-mail-calls-for-a-user-exchange-2013-help.md
+        - name: Исследовать качество звука голосовых вызовов в организации
+          href: investigate-the-audio-quality-of-voice-calls-in-your-organization-exchange-2013-help.md
+        - name: Оценка качества звука в голосовых вызовах для пользователя
+          href: investigate-the-audio-quality-of-voice-calls-for-a-user-exchange-2013-help.md
+        - name: Интерпретация записи голосовой почты звонков
+          href: interpret-voice-mail-call-records-exchange-2013-help.md
+    - name: Тестирование и устранение неполадок голосовой почты
+      href: test-and-troubleshoot-voice-mail-exchange-2013-help.md
+      items:
+      - name: Тестирование и решение проблем с помощью средства устранения неполадок единой системы обмена сообщениями
+        href: testing-and-troubleshooting-with-the-um-troubleshooting-tool-exchange-2013-help.md
+        items:
+        - name: Сведения о средстве устранения неполадок единой системы обмена сообщениями Exchange
+          href: learn-about-the-exchange-um-troubleshooting-tool-exchange-2013-help.md
+        - name: Запуск средства устранения неполадок единой системы обмена сообщениями Exchange в операционной системе Windows 7 или Windows 8
+          href: run-the-exchange-um-troubleshooting-tool-on-windows-7-or-windows-8-exchange-2013-help.md
+        - name: Указание учетных данных для средства устранения неполадок единой системы обмена сообщениями Exchange
+          href: set-the-credentials-to-use-with-the-exchange-um-troubleshooting-tool-exchange-2013-help.md
+        - name: Установка средства устранения неполадок единой системы обмена сообщениями Exchange
+          href: install-the-exchange-um-troubleshooting-tool-exchange-2013-help.md
+      - name: Тестирование и устранение неполадок с помощью командлета Test-UMConnectivity
+        href: testing-and-troubleshooting-with-the-test-umconnectivity-cmdlet-exchange-2013-help.md
+        items:
+        - name: Проверка работы единой системы обмена сообщениями
+          href: test-um-operation-exchange-2013-help.md
+        - name: Проверка подключения единой системы обмена сообщениями к шлюзам VoIP и АТС
+          href: test-um-connectivity-to-voip-gateways-and-pbxs-exchange-2013-help.md
+    - name: Терминология единой системы обмена сообщениями и голосовой почты
+      href: um-and-voice-mail-terminology-exchange-2013-help.md
+  - name: Серверы почтовых ящиков и клиентского доступа
+    href: mailbox-and-client-access-servers-exchange-2013-help.md
+    items:
+    - name: Сервер почтовых ящиков
+      href: mailbox-server-exchange-2013-help.md
+      items:
+      - name: Управляемое хранилище
+        href: managed-store-exchange-2013-help.md
+        items:
+        - name: Ограничения управляемого хранилища
+          href: managed-store-limits-exchange-2013-help.md
+      - name: Управление базами данных почтовых ящиков в Exchange 2013
+        href: manage-mailbox-databases-in-exchange-2013-exchange-2013-help.md
+        items:
+        - name: Настройка циклического ведения журнала для базы данных почтовых ящиков
+          href: configure-circular-logging-for-a-mailbox-database-exchange-2013-help.md
+        - name: Общие сведения об обнулении страниц в системе Exchange 2013
+          href: understanding-exchange-2013-page-zeroing-exchange-2013-help.md
+      - name: подсистема поиска Exchange
+        href: exchange-search-exchange-2013-help.md
+        items:
+        - name: Форматы файлов, индексируемые службой поиска Exchange
+          href: file-formats-indexed-by-exchange-search-exchange-2013-help.md
+        - name: Свойства сообщений, индексированные службой поиска Exchange
+          href: message-properties-indexed-by-exchange-search-exchange-2013-help.md
+        - name: Процедуры поиска в службе Exchange
+          href: exchange-search-procedures-exchange-2013-help.md
+          items:
+          - name: Отключение и включение поиска Exchange
+            href: disable-or-enable-exchange-search-exchange-2013-help.md
+          - name: Диагностика неполадок службы поиска Exchange
+            href: diagnose-exchange-search-issues-exchange-2013-help.md
+          - name: Повторное заполнение каталога поиска
+            href: reseed-the-search-catalog-exchange-2013-help.md
+      - name: Перемещение почтовых ящиков в Exchange 2013
+        href: mailbox-moves-in-exchange-2013-exchange-2013-help.md
+        items:
+        - name: Управление локальными перемещениями
+          href: manage-on-premises-moves-exchange-2013-help.md
+        - name: Перемещение системного почтового ящика Exchange 2010 в Exchange 2013
+          href: move-the-exchange-2010-system-mailbox-to-exchange-2013-exchange-2013-help.md
+        - name: Подготовка почтовых ящиков для запросов на перемещение между лесами
+          href: prepare-mailboxes-for-cross-forest-move-requests-exchange-2013-help.md
+          items:
+          - name: Подготовка почтовых ящиков к перемещению между лесами с использованием в консоли сценария Prepare-MoveRequest.ps1
+            href: prepare-mailboxes-for-cross-forest-moves-using-the-prepare-moverequest-ps1-script-in-the-shell-exchange-2013-help.md
+          - name: Подготовка почтовых ящиков для перемещения между лесами с помощью примера кода
+            href: prepare-mailboxes-for-cross-forest-moves-using-sample-code-exchange-2013-help.md
+        - name: Включение конечной точки прокси-сервера MRS для удаленных перемещений
+          href: enable-the-mrs-proxy-endpoint-for-remote-moves-exchange-2013-help.md
+        - name: CSV-файлы для переноса почтовых ящиков
+          href: csv-files-for-mailbox-migration-exchange-2013-help.md
+      - name: Запросы на импорт и экспорт почтовых ящиков
+        href: mailbox-import-and-export-requests-exchange-2013-help.md
+      - name: Recreating arbitration mailboxes
+        href: recreating-arbitration-mailboxes-exchange-2013-help.md
+      - name: Папка "Элементы для восстановления"
+        href: recoverable-items-folder-exchange-2013-help.md
+        items:
+        - name: Очистка папки "Элементы с возможностью восстановления"
+          href: clean-up-the-recoverable-items-folder-exchange-2013-help.md
+        - name: Настройка хранения удаленных элементов и квот элементов для восстановления
+          href: configure-deleted-item-retention-and-recoverable-items-quotas-exchange-2013-help.md
+        - name: Восстановление удаленных сообщений в почтовом ящике пользователя
+          href: recover-deleted-messages-in-a-user-s-mailbox-exchange-2013-help.md
+        - name: Получение статистических сведений по папке "Элементы с возможностью восстановления"
+          href: get-recoverable-items-folder-statistics-exchange-2013-help.md
+    - name: Сервер клиентского доступа
+      href: client-access-server-exchange-2013-help.md
+      items:
+      - name: Анализатор удаленного подключения Exchange
+        href: exchange-remote-connectivity-analyzer-exchange-2013-help.md
+        items:
+        - name: Определение проблем с отправкой и получением сообщений электронной почты на мобильном устройстве (автоматические проверки)
+          href: help-identify-my-issue-with-sending-receiving-email-on-a-mobile-device-automatic-checks-exchange-2013-help.md
+        - name: Помощь в определении неполадок с отправкой и получением сообщений электронной почты в Office Outlook (автоматические проверки)
+          href: help-identify-my-issue-with-sending-receiving-email-in-office-outlook-automatic-checks-exchange-2013-help.md
+        - name: 'Azure: помощь с определением неполадок путем автоматических проверок — записи DNS'
+          href: azure-help-identify-my-issue-with-automatic-checks-dns-records-exchange-2013-help.md
+        - name: Определение проблем с помощью автоматических проверок — сторонние средства
+          href: help-identify-my-issues-with-automatic-checks-3rd-party-tools-exchange-2013-help.md
+        - name: Помощь в определении проблемы с помощью автоматических проверок — Active Directory
+          href: help-identify-my-issue-with-automatic-checks-active-directory-exchange-2013-help.md
+        - name: Помощь в определении проблемы с помощью автоматических проверок — добавление доменов
+          href: help-idenfity-my-issue-with-automatic-checks-adding-domains-exchange-2013-help.md
+        - name: Помощь в определении проблемы с помощью автоматических проверок — единый вход
+          href: help-identify-my-issue-with-automatic-checks-sso-exchange-2013-help.md
+        - name: Помощь в определении проблемы с помощью автоматических проверок — квота
+          href: help-identify-my-issue-with-automatic-checks-quota-exchange-2013-help.md
+        - name: Определение проблемы с помощью автоматических проверок — развертывание Office
+          href: help-identify-my-issue-with-automatic-checks-deploying-office-exchange-2013-help.md
+        - name: Помощь в определении проблемы с помощью автоматических проверок — миграция
+          href: help-identify-my-issue-with-automatic-checks-migration-exchange-2013-help.md
+        - name: Помощь в определении проблемы с помощью автоматических проверок — синхронизация службы каталогов
+          href: help-identify-my-issue-with-automatic-checks-directory-synchronization-exchange-2013-help.md
+      - name: Конфигурация сервера клиентского доступа Exchange 2013
+        href: exchange-2013-client-access-server-configuration-exchange-2013-help.md
+      - name: Служба автообнаружения
+        href: autodiscover-service-for-exchange-2013.md
+      - name: Балансировка нагрузки
+        href: load-balancing-exchange-2013-help.md
+      - name: Настройка проверки подлинности Kerberos для серверов клиентского доступа с балансировкой нагрузки
+        href: configuring-kerberos-authentication-for-load-balanced-client-access-servers-exchange-2013-help.md
+      - name: Использование сценария RollAlternateserviceAccountCredential.ps1 в консоли
+        href: using-the-rollalternateserviceaccountcredential-ps1-script-in-the-shell-exchange-2013-help.md
+        items:
+        - name: Устранение неполадок сценария RollAlternateServiceAccountCredential.ps1
+          href: troubleshooting-the-rollalternateserviceaccountcredential-ps1-script-exchange-2013-help.md
+      - name: Цифровые сертификаты и протокол SSL
+        href: digital-certificates-and-ssl-exchange-2013-help.md
+        items:
+        - name: Создание запроса на цифровой сертификат
+          href: create-a-digital-certificate-request-exchange-2013-help.md
+        - name: Пользовательский интерфейс управления сертификатами Exchange 2013
+          href: exchange-2013-certificate-management-ui-exchange-2013-help.md
+      - name: Настройка ограничений размера сообщений для определенного клиента
+        href: configure-client-specific-message-size-limits-exchange-2013-help.md
+      - name: Служба доступности в Exchange 2013
+        href: availability-service-in-exchange-2013-exchange-2013-help.md
+        items:
+        - name: Настройка службы доступности для межлесных топологий
+          href: configure-the-availability-service-for-cross-forest-topologies-exchange-2013-help.md
+  - name: Пограничные транспортные серверы
+    href: edge-transport-servers-exchange-2013-help.md
+    items:
+    - name: Пограничные подписки
+      href: edge-subscriptions-exchange-2013-help.md
+      items:
+      - name: Данные репликации EdgeSync
+        href: edgesync-replication-data-exchange-2013-help.md
+      - name: Учетные данные пограничной подписки
+        href: edge-subscription-credentials-exchange-2013-help.md
+      - name: Управление пограничными подписками
+        href: manage-edge-subscriptions-exchange-2013-help.md
+      - name: Изменение конфигурации служб Active Directory облегченного доступа к каталогам
+        href: modify-ad-lds-configuration-exchange-2013-help.md
+      - name: Ручная настройка потока обработки почты на пограничном транспортном сервере
+        href: manually-configure-edge-transport-server-mail-flow-exchange-2013-help.md
+      - name: Настройка потока обработки почты Интернета через пограничный транспортный сервер с подпиской
+        href: configure-internet-mail-flow-through-a-subscribed-edge-transport-server-exchange-2013-help.md
+      - name: Настройка потока обработки почты через пограничный транспортный сервер без использования EdgeSync
+        href: configure-internet-mail-flow-through-an-edge-transport-server-without-using-edgesync-exchange-2013-help.md
+      - name: Планирование пограничных транспортных серверов
+        href: edge-transport-server-planning-exchange-2013-help.md
+    - name: Клонированная конфигурация пограничного транспортного сервера
+      href: edge-transport-server-cloned-configuration-exchange-2013-help.md
+      items:
+      - name: Настройка пограничного транспортного сервера с помощью клонированной конфигурации
+        href: configure-edge-transport-server-using-cloned-configuration-exchange-2013-help.md
+    - name: Использование пограничного транспортного сервера Exchange 2010 или 2007 в Exchange 2013
+      href: use-an-exchange-2010-or-2007-edge-transport-server-in-exchange-2013-exchange-2013-help.md
+    - name: Переопределение адресов на пограничных транспортных серверах
+      href: address-rewriting-on-edge-transport-servers-exchange-2013-help.md
+      items:
+      - name: Управление переопределением адресов на пограничных транспортных серверах
+        href: manage-address-rewriting-on-edge-transport-servers-exchange-2013-help.md
+      - name: Импорт записей переопределения адресов на пограничных транспортных серверах
+        href: import-address-rewrite-entries-on-edge-transport-servers-exchange-2013-help.md
+  - name: Высокая доступность и устойчивость сайтов
+    href: high-availability-and-site-resilience-exchange-2013-help.md
+    items:
+    - name: Изменение высокой доступности и устойчивости сайтов по сравнению с предыдущими версиями
+      href: changes-to-high-availability-and-site-resilience-over-previous-versions-exchange-2013-help.md
+    - name: Группы обеспечения доступности баз данных
+      href: database-availability-groups-dags-exchange-2013-help.md
+      items:
+      - name: Активный диспетчер
+        href: active-manager-exchange-2013-help.md
+      - name: Режим координации активации центра данных
+        href: datacenter-activation-coordination-mode-exchange-2013-help.md
+      - name: Копии базы данных почтовых ящиков
+        href: mailbox-database-copies-exchange-2013-help.md
+      - name: AutoReseed
+        href: autoreseed-exchange-2013-help.md
+    - name: Планирование высокой доступности и устойчивости сайтов
+      href: planning-for-high-availability-and-site-resilience-exchange-2013-help.md
+    - name: Развертывание с высоким уровнем доступности и устойчивости сайта
+      href: deploying-high-availability-and-site-resilience-exchange-2013-help.md
+    - name: Управление высокой доступностью и устойчивостью сайтов
+      href: managing-high-availability-and-site-resilience-exchange-2013-help.md
+      items:
+      - name: Управление группами доступности базы данных
+        href: managing-database-availability-groups-exchange-2013-help.md
+        items:
+        - name: Создание группы обеспечения доступности баз данных
+          href: create-a-database-availability-group-exchange-2013-help.md
+        - name: Регистрация объекта имени кластера для группы обеспечения доступности баз данных
+          href: pre-stage-the-cluster-name-object-for-a-database-availability-group-exchange-2013-help.md
+        - name: Настройка свойств группы обеспечения доступности баз данных
+          href: configure-database-availability-group-properties-exchange-2013-help.md
+        - name: Управление членством в группе обеспечения доступности баз данных
+          href: manage-database-availability-group-membership-exchange-2013-help.md
+        - name: Создание сети группы доступности базы данных
+          href: create-a-database-availability-group-network-exchange-2013-help.md
+        - name: Настройка свойств сети для группы обеспечения доступности баз данных
+          href: configure-database-availability-group-network-properties-exchange-2013-help.md
+        - name: Настройка автоматического заполнения для группы обеспечения доступности баз данных
+          href: configure-autoreseed-for-a-database-availability-group-exchange-2013-help.md
+        - name: Удаление группы обеспечения доступности баз данных
+          href: remove-a-database-availability-group-exchange-2013-help.md
+        - name: Использование виртуальной машины Microsoft Azure в качестве следящего сервера DAG
+          href: using-a-microsoft-azure-vm-as-a-dag-witness-server-exchange-2013-help.md
+      - name: Управление копиями баз данных почтовых ящиков
+        href: managing-mailbox-database-copies-exchange-2013-help.md
+        items:
+        - name: Добавление копии базы данных почтовых ящиков
+          href: add-a-mailbox-database-copy-exchange-2013-help.md
+        - name: Настройка свойств копии базы данных почтовых ящиков
+          href: configure-mailbox-database-copy-properties-exchange-2013-help.md
+        - name: Перемещение пути базы данных почтовых ящиков для копии базы данных почтовых ящиков
+          href: move-the-mailbox-database-path-for-a-mailbox-database-copy-exchange-2013-help.md
+        - name: Настройка политики активации для копии базы данных почтовых ящиков
+          href: configure-activation-policy-for-a-mailbox-database-copy-exchange-2013-help.md
+        - name: Обновление копии базы данных почтовых ящиков
+          href: update-a-mailbox-database-copy-exchange-2013-help.md
+        - name: Приостановка или возобновление работы копии базы данных почтовых ящиков
+          href: suspend-or-resume-a-mailbox-database-copy-exchange-2013-help.md
+        - name: Активация копии базы данных почтовых ящиков
+          href: activate-a-mailbox-database-copy-exchange-2013-help.md
+        - name: Активация отстающей копии базы данных почтовых ящиков
+          href: activate-a-lagged-mailbox-database-copy-exchange-2013-help.md
+        - name: Удаление копии базы данных почтовых ящиков
+          href: remove-a-mailbox-database-copy-exchange-2013-help.md
+      - name: Наблюдение за группами обеспечения доступности баз данных
+        href: monitoring-database-availability-groups-exchange-2013-help.md
+      - name: Переключения и отработки отказа
+        href: switchovers-and-failovers-exchange-2013-help.md
+        items:
+        - name: Переключения центра обработки данных
+          href: datacenter-switchovers-exchange-2013-help.md
+        - name: Выполнение переключения сервера
+          href: perform-a-server-switchover-exchange-2013-help.md
+    - name: Резервное копирование, восстановление и аварийное восстановление
+      href: backup-restore-and-disaster-recovery-exchange-2013-help.md
+      items:
+      - name: Резервное копирование и восстановление данных Exchange с помощью системы архивации данных Windows Server
+        href: using-windows-server-backup-to-back-up-and-restore-exchange-data-exchange-2013-help.md
+        items:
+        - name: Использование системы архивации данных Windows Server для резервного копирования в Exchange
+          href: use-windows-server-backup-to-back-up-exchange-exchange-2013-help.md
+        - name: Восстановление резервной копии данных Exchange с помощью системы архивации данных Windows Server
+          href: use-windows-server-backup-to-restore-a-backup-of-exchange-exchange-2013-help.md
+      - name: Восстановление сервера Exchange
+        href: recover-an-exchange-server-exchange-2013-help.md
+      - name: Восстановление рядового сервера группы обеспечения доступности баз данных
+        href: recover-a-database-availability-group-member-server-exchange-2013-help.md
+      - name: Базы данных восстановления
+        href: recovery-databases-exchange-2013-help.md
+        items:
+        - name: Создание базы данных восстановления
+          href: create-a-recovery-database-exchange-2013-help.md
+        - name: Восстановление данных с помощью базы данных восстановления
+          href: restore-data-using-a-recovery-database-exchange-2013-help.md
+      - name: Переносимость баз данных
+        href: database-portability-exchange-2013-help.md
+        items:
+        - name: Перемещение базы данных почтовых ящиков с помощью переносимости базы данных
+          href: move-a-mailbox-database-using-database-portability-exchange-2013-help.md
+      - name: Переносимость аварийного восстановления
+        href: dial-tone-portability-exchange-2013-help.md
+        items:
+        - name: Выполнение аварийного восстановления
+          href: perform-a-dial-tone-recovery-exchange-2013-help.md
+    - name: Управляемая доступность
+      href: managed-availability-exchange-2013-help.md
+      items:
+      - name: Управление настройками работоспособности и работоспособностью сервера
+        href: manage-health-sets-and-server-health-exchange-2013-help.md
+      - name: Настройка переопределений управляемой доступности
+        href: configure-managed-availability-overrides-exchange-2013-help.md
+  - name: Центр администрирования Exchange в Exchange 2013
+    href: exchange-admin-center-in-exchange-2013-exchange-2013-help.md
+    items:
+    - name: 'Вопросы и ответы: Центр администрирования Exchange (локальный)'
+      href: faq-exchange-admin-center-exchange-2013-help.md
+    - name: Выключение доступа к Центру администрирования Exchange
+      href: turn-off-access-to-the-exchange-admin-center-exchange-2013-help.md
+    - name: Поиск внутренних и внешних URL-адресов для Центра администрирования Exchange
+      href: find-the-internal-and-external-urls-for-the-exchange-admin-center-exchange-2013-help.md
+    - name: Сочетания клавиш в Центре администрирования Exchange
+      href: keyboard-shortcuts-in-the-exchange-admin-center-exchange-online-protection-help.md
+  - name: Работоспособность и производительность сервера
+    href: server-health-and-performance-exchange-2013-help.md
+    items:
+    - name: Рекомендации по производительности Exchange Server 2013
+      href: exchange-server-2013-performance-recommendations-exchange-2013-help.md
+      items:
+      - name: Рекомендации по выбору размера развертывания Exchange 2013 и его настройке
+        href: exchange-2013-sizing-and-configuration-recommendations-exchange-2013-help.md
+      - name: Счетчики производительности Exchange 2013
+        href: exchange-2013-performance-counters-exchange-2013-help.md
+      - name: Журналы IIS и отчеты средства синтаксического анализа журнала Log Parser Studio
+        href: iis-logs-and-log-parser-studio-reports-exchange-2013-help.md
+    - name: Управление рабочей нагрузкой Exchange
+      href: exchange-workload-management-exchange-2013-help.md
+      items:
+      - name: Изменение параметров регулировки для отдельных пользователей
+        href: change-user-throttling-settings-for-specific-users-exchange-2013-help.md
+      - name: Изменение параметров регулирования для всех пользователей в организации
+        href: change-user-throttling-settings-for-all-users-in-your-organization-exchange-2013-help.md
+  - name: Сведения о документации по Exchange
+    href: about-exchange-documentation-exchange-2013-help.md
+    items:
+    - name: Специальные возможности для инвалидов
+      href: accessibility-for-people-with-disabilities-exchange-2013-help.md
+    - name: Уведомления об авторских правах сторонних разработчиков
+      href: third-party-copyright-notices-exchange-2013-help.md
