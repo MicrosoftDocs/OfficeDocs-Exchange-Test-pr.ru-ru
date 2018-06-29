@@ -1,0 +1,259 @@
+﻿---
+title: 'Заявления об отказе, подписи, верхние или нижние колонтитулы на уровне организации: Exchange 2013 Help'
+TOCTitle: Заявления об отказе, подписи, верхние или нижние колонтитулы на уровне организации
+ms:assetid: e45e33c9-e53b-427c-ada5-70901bc399b8
+ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Dn600437(v=EXCHG.150)
+ms:contentKeyID: 61060512
+ms.date: 04/30/2018
+mtps_version: v=EXCHG.150
+ms.translationtype: HT
+---
+
+# Заявления об отказе, подписи, верхние или нижние колонтитулы на уровне организации
+
+ 
+
+_**Применимо к:**Exchange Server 2013_
+
+_**Последнее изменение раздела:**2015-03-09_
+
+В верхнюю или нижнюю часть сообщений электронной почты, поступающих в организацию или исходящих из нее, можно добавить заявление об отказе, юридическое заявление об отказе, заявление о нарушении конфиденциальности, подпись или другие сведения. Это может быть связано с юридическими, корпоративными или нормативными требованиями для определения потенциально небезопасных сообщений или с другими причинами, характерными для вашей организации.
+
+Чтобы настроить заявление об отказе, создайте правило транспорта с условиями и текстом, который следует добавлять. Например, можно добавить условие, что отправитель относится к определенной группе или в сообщении есть определенные текстовые шаблоны. С помощью нескольких правил транспорта к одному сообщению можно добавить несколько заявлений об отказе.
+
+<table>
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th><img src="images/Dd876857.important(EXCHG.150).gif" title="Важно" alt="Важно" />Важно!</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><ul>
+<li><p>Чтобы сведения добавлялись только к исходящим сообщениям, необходимо добавить условие, что получатели находятся вне организации. По умолчанию правила транспорта применяются к входящим и исходящим сообщениям.</p></li>
+</ul></td>
+</tr>
+</tbody>
+</table>
+
+
+**Содержание**
+
+Примеры
+
+Область применения заявления об отказе
+
+Форматирование заявления об отказе
+
+Резервные варианты, если не удается добавить заявление об отказе
+
+Дополнительные сведения
+
+Ищете процедуры? См. раздел [Заявления об отказе, подписи или колонтитулы в сообщениях организации в Office 365](https://technet.microsoft.com/ru-ru/library/dn600323\(v=exchg.150\)).
+
+## Примеры
+
+Вот несколько идей использования заявлений об отказе.
+
+
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Тип</th>
+<th>Пример добавляемого текста</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><p>Юридическое — исходящие сообщения</p></td>
+<td><p>Это сообщение и любые передаваемые в нем файлы конфиденциальны и предназначены исключительно для использования адресатом. Если вы получили его по ошибке, уведомите системного администратора.</p></td>
+</tr>
+<tr class="even">
+<td><p>Юридическое — входящие сообщения</p></td>
+<td><p>Сотрудники обязуются не делать клеветнических заявлений и не нарушать авторские или другие права, а также не допускать такого нарушения в сообщениях электронной почты. В случае получения подобных сообщений необходимо немедленно уведомить своего руководителя.</p></td>
+</tr>
+<tr class="odd">
+<td><p>Уведомление об отправке сообщения псевдониму</p></td>
+<td><p>Это сообщение отправлено группе обсуждений по продажам.</p></td>
+</tr>
+<tr class="even">
+<td><p>Подпись с данными каждого сотрудника</p></td>
+<td><p>Катерина Ковалева<br />
+Отдел продаж<br />
+Contoso<br />
+www.contoso.com<br />
+katerina@contoso.com<br />
+мобильный телефон: 111-222-1234</p></td>
+</tr>
+<tr class="odd">
+<td><p>Реклама</p></td>
+<td><p>Специальные предложения за март см. здесь</p></td>
+</tr>
+</tbody>
+</table>
+
+
+Прежде чем использовать примеры из этой статьи, измените их.
+
+## Область применения заявления об отказе
+
+Работая с заявлениями об отказе, следует учитывать, к каким сообщениям они будут применяться. Например, можно указать разные заявления об отказе для внутренних и внешних сообщений или для сообщений, отправляемых пользователями в конкретных отделах. Чтобы заявление об отказе применялось только к первому сообщению в беседе, добавьте исключение, которое ищет уникальный текст в заявлении об отказе.
+
+Ниже приведены примеры возможных условий и исключений.
+
+
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Описание</th>
+<th>Условия и исключения в Центре администрирования Exchange (EAC)</th>
+<th>Условия и исключения в командной консоли</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><p>Исходящее за пределы организации, если в исходном сообщении нет текста заявления об отказе, например &quot;ЮРИДИЧЕСКИЕ СВЕДЕНИЯ CONTOSO&quot;</p></td>
+<td><p>Условие: <strong>Расположение получателя</strong> &gt; <strong>Вне организации</strong></p>
+<p>Исключение: <strong>Тема или текст</strong> &gt; <strong>Тема или текст сообщения соответствует этим шаблонам текста</strong> &gt; <strong>CONTOSO LEGAL NOTICE</strong></p></td>
+<td><pre><code>-FromScope NotInOrganization -ExceptIf -SubjectOrBodyMatches &quot;CONTOSO LEGAL NOTICE&quot;</code></pre></td>
+</tr>
+<tr class="even">
+<td><p>Входящие сообщения с исполняемыми файлами во вложениях</p></td>
+<td><p>Условие 1: <strong>Расположение отправителя</strong> &gt; <strong>Вне организации</strong></p>
+<p>Условие 2: <strong>Любое вложение</strong> &gt; <strong>с исполняемым содержимым</strong></p></td>
+<td><pre><code>-FromScope NotInOrganization -AttachmentHasExecutableContent</code></pre></td>
+</tr>
+<tr class="odd">
+<td><p>Отправитель находится в отделе маркетинга</p></td>
+<td><p>Условие: <strong>Отправитель</strong> &gt; <strong>является членом этой группы</strong> &gt; <strong>group name</strong></p></td>
+<td><pre><code>-FromMemberOf &quot;Marketing Team&quot;</code></pre></td>
+</tr>
+<tr class="even">
+<td><p>Сообщения от внешнего отправителя группе обсуждений по продажам</p></td>
+<td><p>Условие 1: <strong>Расположение отправителя</strong> &gt; <strong>Вне организации</strong></p>
+<p>Условие 2: <strong>Сообщение</strong> &gt; <strong>содержит этого пользователя в поле &quot;Кому&quot; или &quot;Копия&quot;</strong> &gt; <strong>group name</strong></p></td>
+<td><pre><code>-FromScope NotInOrganization -SentTo &quot;Sales Discussion Group&quot; -PrependSubject &quot;Sent to Sales Discussion Group: &quot;</code></pre></td>
+</tr>
+<tr class="odd">
+<td><p>Добавление рекламы в исходящие сообщения на один месяц</p></td>
+<td><p>Условие 1: <strong>Расположение получателя</strong> &gt; <strong>Вне организации</strong></p>
+<p>Укажите даты в нижней части диалогового окна <strong>Новое правило</strong>.</p></td>
+<td><p>-ApplyHtmlDisclaimerLocation 'Prepend' -SentToScope 'NotInOrganization' –ActivationDate ‘03/1/2014’ –ExpiryDate ‘03/31/2014’</p></td>
+</tr>
+</tbody>
+</table>
+
+
+Полный список условий правил транспорта, которые можно использовать для определения цели заявления об отказе, см. в таких разделах:
+
+  - [Почтовые поток правила условий и исключений (предикаты) в Exchange Online](https://technet.microsoft.com/ru-ru/library/jj919235\(v=exchg.150\)) (Exchange Online)
+
+  - [Условия правил транспорта (предикаты)](mail-flow-rule-conditions-and-exceptions-predicates-in-exchange-2013-exchange-2013-help.md) (Exchange 2013)
+
+  - [Почтовые поток правила условий и исключений (предикаты) в Exchange Online](https://technet.microsoft.com/ru-ru/library/jj919235\(v=exchg.150\)) (Exchange Online Protection)
+
+## Форматирование заявления об отказе
+
+При необходимости заявление об отказе можно отформатировать. Вот что можно включать в текст такого заявления.
+
+
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Тип сведений</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><p>Текст</p></td>
+<td><p>Максимальная длина: 5000 символов, в том числе HTML-теги и встроенные каскадные таблицы стилей (CSS).</p></td>
+</tr>
+<tr class="even">
+<td><p>HTML и встроенные CSS</p></td>
+<td><p>Для форматирования текста можно использовать стили HTML и встроенные CSS. Например, с помощью тега <code>&lt;HR&gt;</code> можно добавить линию перед заявлением об отказе.</p>
+<p>HTML-теги в заявлениях пропускаются в случае их добавления к обычному текстовому сообщению.</p></td>
+</tr>
+<tr class="odd">
+<td><p>Добавление изображений</p></td>
+<td><p>С помощью тега <code>&lt;IMG&gt;</code> можно указать на изображение в Интернете. Например, <code>&lt;IMG src=&quot;http://contoso.com/images/companylogo.gif&quot; alt=&quot;Contoso logo&quot;&gt;</code></p>
+<p>Обратите внимание, что по умолчанию Outlook Web App и Outlook блокируют внешнее веб-содержимое, в том числе изображения. Если пользователи захотят просмотреть заблокированное внешнее содержимое, им потребуется выполнить дополнительные действия. Это означает, что изображения, добавленные с помощью тега <code>IMG</code>, могут не отображаться по умолчанию. Чтобы проверить правильность отображения, рекомендуем проверить заявление об отказе с тегом <code>IMG</code> на клиентах электронной почты получателей.</p></td>
+</tr>
+<tr class="even">
+<td><p>Добавление сведений для персонализированных подписей</p></td>
+<td><p>Чтобы унифицировать формат и содержимое подписей, можно добавить уникальные сведения для каждого сотрудника, например <code>DisplayName</code>, <code>FirstName</code>, <code>LastName</code>, <code>PhoneNumber</code>, <code>Email</code>, <code>FaxNumber</code> и <code>Department</code>. С каждой стороны таких сведений должно стоять два знака процента (%%). Например, чтобы использовать <code>DisplayName</code>, необходимо указать <strong>%%DisplayName%%</strong> в заявлении об отказе.</p>
+<p>После активации правила заявления об отказе вставляются соответствующие значения. Данные поступают из учетной записи Active Directory (для локальных серверов Exchange Server) или Office 365 для Exchange Online отправителя.</p>
+<p>Полный список атрибутов, которые можно использовать в заявлениях об отказе и персонализированных подписях, см. в описании свойства <code>ADAttribute</code> в разделах <a href="mail-flow-rule-conditions-and-exceptions-predicates-in-exchange-2013-exchange-2013-help.md">Условия правил транспорта (предикаты)</a> (Exchange Server), <a href="https://technet.microsoft.com/ru-ru/library/jj919235(v=exchg.150)">Почтовые поток правила условий и исключений (предикаты) в Exchange Online</a> (Exchange Online) или <a href="https://technet.microsoft.com/ru-ru/library/jj919234(v=exchg.150)">Почтовые поток правила условий и исключений (предикаты) в Exchange Online Protection</a> (Exchange Online Protection).</p></td>
+</tr>
+</tbody>
+</table>
+
+
+Например, в этом заявлении об отказе в формате HTML используется подпись, тег `IMG` и встроенные CSS.
+
+    <div style="font-size:9pt;  font-family: 'Calibri',sans-serif;">
+    %%displayname%%</br>
+    %%title%%</br>
+    %%company%%</br>
+    %%street%%</br>
+    %%city%%, %%state%% %%zipcode%%</div>
+    &nbsp;</br>
+    <div style="background-color:#D5EAFF; border:1px dotted #003333; padding:.8em; ">
+    <div><img alt="Fabrikam"  src="http://fabrikam.com/images/fabrikamlogo.png"></div>
+    <span style="font-size:12pt;  font-family: 'Cambria','times new roman','garamond',serif; color:#ff0000;">HTML Disclaimer Title</span></br>
+    <p style="font-size:8pt; line-height:10pt; font-family: 'Cambria','times roman',serif;">This message contains confidential information and is intended only for the individual(s) addressed in the message. If you are not the named addressee, you should not disseminate, distribute, or copy this e-mail. If you are not the intended recipient, you are notified that disclosing, distributing, or copying this e-mail is strictly prohibited.  </p>
+    <span style="padding-top:10px; font-weight:bold; color:#CC0000; font-size:10pt; font-family: 'Calibri',Arial,sans-serif; "><a href="http://www.fabrikam.com">Fabrikam, Inc. </a></span></br></br>
+    </div>
+
+## Резервные варианты, если не удается добавить заявление об отказе
+
+Некоторые сообщения, например зашифрованные, запрещают Exchange изменять содержимое исходного сообщения. Вы можете управлять способом обработки таких сообщений. Вы можете указать либо "завернуть" сообщение, которое невозможно изменить, в конверт нового сообщения с текстом заявления об отказе, либо отклонить это сообщение, если в него не удается добавить заявление об отказе, или же не прикреплять к нему заявление об отказе.
+
+В следующем списке приведено описание каждого действия.
+
+  - **Wrap**   Если не удается добавить заявление об отказе в исходное сообщение, Exchange помещает, или "заворачивает", исходное сообщение в конверт нового сообщения. Затем заявление об отказе вставляется в новое сообщение. Исходное сообщение, которое не удается поместить в конверт нового сообщения, не доставляется. Отправитель сообщения получает отчет о недоставке в котором объясняется, почему сообщение не было доставлено.
+    
+    <table>
+    <thead>
+    <tr class="header">
+    <th><img src="images/Dd876857.important(EXCHG.150).gif" title="Важно" alt="Важно" />Важно!</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr class="odd">
+    <td>Если исходное сообщение помещено в конверт нового сообщения, тогда последующие правила транспорта будут применяться именно к конверту нового сообщения, а не к исходному сообщению. Поэтому правила транспорта, относящиеся к заявлениям об отказе, которые размещаются в конверте нового сообщения, необходимо настраивать после того, как будут настроены другие правила транспорта.</td>
+    </tr>
+    </tbody>
+    </table>
+
+
+  - **Reject**   Если в исходное сообщение не удается вставить заявление об отказе, Exchange не доставляет сообщение. Отправитель сообщения получает отчет о недоставке, в котором объясняется, почему сообщение не было доставлено.
+
+  - **Ignore**   Если в исходное сообщение не удается вставить заявление об отказе, Exchange доставляет исходное сообщение без изменений. Заявление об отказе не добавляется.
+
+## Дополнительные сведения
+
+[Заявления об отказе, подписи или колонтитулы в сообщениях организации в Office 365](https://technet.microsoft.com/ru-ru/library/dn600323\(v=exchg.150\))
+
+[Правила обработки почтового потока и транспорта](mail-flow-rules-transport-rules-in-exchange-2013-exchange-2013-help.md) (Exchange Server 2013)
+
+[Правила потока обработки почты (правила транспорта) в Exchange Online](https://technet.microsoft.com/ru-ru/library/jj919238\(v=exchg.150\)) (Exchange Online)
+
+[Правила потока обработки почты (правила транспорта) в Exchange Online Protection](https://technet.microsoft.com/ru-ru/library/dn271424\(v=exchg.150\)) (Exchange Online Protection)
+
