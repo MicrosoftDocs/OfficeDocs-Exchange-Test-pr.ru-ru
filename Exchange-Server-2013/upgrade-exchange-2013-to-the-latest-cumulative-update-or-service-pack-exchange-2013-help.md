@@ -13,9 +13,9 @@ ms.translationtype: HT
 
  
 
-_**Применимо к:**Exchange Online, Exchange Server, Exchange Server 2013_
+_**Применимо к:** Exchange Online, Exchange Server, Exchange Server 2013_
 
-_**Последнее изменение раздела:**2015-09-04_
+_**Последнее изменение раздела:** 2015-09-04_
 
 Если у вас установлен Microsoft Exchange Server 2013, вы можете обновить его с помощью последних накопительного или обычного пакета обновления Exchange 2013. Для обновления текущей версии Exchange 2013 можно использовать мастер установки Exchange 2013. Дополнительные сведения о последнем накопительном или обычном пакете обновления Exchange 2013 см. в статье [Обновления для Exchange 2013](updates-for-exchange-2013-exchange-2013-help.md). Дополнительные сведения об Exchange 2013 см. в статье [Новые возможности в Exchange 2013](what-s-new-in-exchange-2013-exchange-2013-help.md).
 

@@ -13,9 +13,9 @@ ms.translationtype: HT
 
  
 
-_**Применимо к:**Exchange Online, Exchange Server, Exchange Server 2010, Exchange Server 2013_
+_**Применимо к:** Exchange Online, Exchange Server, Exchange Server 2010, Exchange Server 2013_
 
-_**Последнее изменение раздела:**2016-12-09_
+_**Последнее изменение раздела:** 2016-12-09_
 
 Если страна или регион, в которых расположена организация или часть ее сотрудников, изменяет политику распознавания летнего времени или смещение локального времени относительно времени в формате UTC, то для учета этих изменений может потребоваться обновить Microsoft Windows, Microsoft Exchange, Microsoft Outlook и другие программы.
 

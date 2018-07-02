@@ -13,9 +13,9 @@ ms.translationtype: HT
 
  
 
-_**Применимо к:**Exchange Online, Exchange Server 2013_
+_**Применимо к:** Exchange Online, Exchange Server 2013_
 
-_**Последнее изменение раздела:**2012-11-13_
+_**Последнее изменение раздела:** 2012-11-13_
 
 Можно использовать EAC или командную консоль для включения и отключения Microsoft Exchange ActiveSync для почтового ящика пользователя. Exchange ActiveSync является клиентским протоколом, который позволяет пользователям синхронизировать мобильные устройства с почтовым ящиком Exchange. Exchange ActiveSync включается по умолчанию при создании почтового ящика пользователя. Дополнительные сведения см. в разделе [Служба Exchange ActiveSync](exchange-activesync-exchange-2013-help.md).
 

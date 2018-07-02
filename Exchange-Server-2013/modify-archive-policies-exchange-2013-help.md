@@ -13,9 +13,9 @@ ms.translationtype: HT
 
  
 
-_**Применимо к:**Exchange Online, Exchange Server 2013_
+_**Применимо к:** Exchange Online, Exchange Server 2013_
 
-_**Последнее изменение раздела:**2016-02-01_
+_**Последнее изменение раздела:** 2016-02-01_
 
 В Exchange Server 2013 и Exchange Online политики архивации можно использовать для автоматического перемещения элементов почтовых ящиков в личные (локальные) или облачные архивы. Политики архивации — это теги хранения, которые используют действие **Переместить в архив**.
 
@@ -25,9 +25,9 @@ _**Последнее изменение раздела:**2016-02-01_
 
 Дополнительные задачи управления, связанные с архивами, приведены в следующих статьях:
 
-  - **Exchange Server 2013:** [Управление архивами на месте в Exchange 2013](manage-in-place-archives-in-exchange-2013-exchange-2013-help.md)
+  - **Exchange Server 2013:**  [Управление архивами на месте в Exchange 2013](manage-in-place-archives-in-exchange-2013-exchange-2013-help.md)
 
-  - **Exchange Online:** [Включение и отключение архивного почтового ящика в Exchange Online](https://technet.microsoft.com/ru-ru/library/jj984357\(v=exchg.150\))
+  - **Exchange Online:**  [Включение и отключение архивного почтового ящика в Exchange Online](https://technet.microsoft.com/ru-ru/library/jj984357\(v=exchg.150\))
 
 <table>
 <thead>

@@ -13,9 +13,9 @@ ms.translationtype: HT
 
  
 
-_**Применимо к:**Exchange Online, Exchange Server 2013, Exchange Server 2016_
+_**Применимо к:** Exchange Online, Exchange Server 2013, Exchange Server 2016_
 
-_**Последнее изменение раздела:**2013-01-30_
+_**Последнее изменение раздела:** 2013-01-30_
 
 [Настройка автосекретаря единой системы обмена сообщениями](set-up-a-um-auto-attendant-exchange-2013-help.md)
 

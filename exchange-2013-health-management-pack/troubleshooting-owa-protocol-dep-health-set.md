@@ -13,9 +13,9 @@ ms.translationtype: HT
 
  
 
-_**Применимо к:**Exchange Server 2013, Project Server 2013_
+_**Применимо к:** Exchange Server 2013, Project Server 2013_
 
-_**Последнее изменение раздела:**2015-11-10_
+_**Последнее изменение раздела:** 2015-11-10_
 
 Набор для контроля работоспособности **OWA.Protocol.DEP** отслеживает общую работоспособность служб обмена мгновенными сообщениями в Outlook Web App, интегрированных в Lync 2013 и Exchange 2013. Дополнительные сведения о включении обмена мгновенными сообщениями в Outlook Web App см. в статье [Интеграция Microsoft Lync Server 2013 и Microsoft Outlook Web App 2013](http://go.microsoft.com/fwlink/p/?linkid=280418).
 

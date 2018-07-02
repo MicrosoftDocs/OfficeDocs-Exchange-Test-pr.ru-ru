@@ -13,9 +13,9 @@ ms.translationtype: HT
 
  
 
-_**Применимо к:**Exchange Online, Exchange Server 2013, Office 365 Enterprise_
+_**Применимо к:** Exchange Online, Exchange Server 2013, Office 365 Enterprise_
 
-_**Последнее изменение раздела:**2016-12-09_
+_**Последнее изменение раздела:** 2016-12-09_
 
 **Предполагаемое время выполнения: 5 минут**
 

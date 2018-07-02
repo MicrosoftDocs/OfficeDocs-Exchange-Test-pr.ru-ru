@@ -13,9 +13,9 @@ ms.translationtype: HT
 
  
 
-_**Применимо к:**Exchange Online, Exchange Server 2010, Exchange Server 2013, Exchange Server 2016_
+_**Применимо к:** Exchange Online, Exchange Server 2010, Exchange Server 2013, Exchange Server 2016_
 
-_**Последнее изменение раздела:**2018-05-22_
+_**Последнее изменение раздела:** 2018-05-22_
 
 **Сводка**. Следуйте инструкциям в этой статье, чтобы синхронизировать общедоступные папки между Office 365 и локальным развертыванием Exchange 2007 или Exchange 2010.
 

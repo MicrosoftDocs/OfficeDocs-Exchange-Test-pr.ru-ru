@@ -13,9 +13,9 @@ ms.translationtype: MT
 
  
 
-_**Применимо к:**Exchange Online, Exchange Server 2013, Exchange Server 2016_
+_**Применимо к:** Exchange Online, Exchange Server 2013, Exchange Server 2016_
 
-_**Последнее изменение раздела:**2013-01-30_
+_**Последнее изменение раздела:** 2013-01-30_
 
 [Настройка служб партнера Предварительный просмотр голосовой почты для пользователей](configure-voice-mail-preview-partner-services-for-users-exchange-2013-help.md)
 

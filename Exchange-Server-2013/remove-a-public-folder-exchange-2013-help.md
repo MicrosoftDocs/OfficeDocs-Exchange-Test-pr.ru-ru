@@ -13,9 +13,9 @@ ms.translationtype: HT
 
  
 
-_**Применимо к:**Exchange Online, Exchange Server 2013, Exchange Server 2016_
+_**Применимо к:** Exchange Online, Exchange Server 2013, Exchange Server 2016_
 
-_**Последнее изменение раздела:**2016-11-16_
+_**Последнее изменение раздела:** 2016-11-16_
 
 Вы можете удалять общедоступные папки, которые больше не используются в вашей организации. Чтобы определить, какие общие папки должны быть удалены, см. раздел [Просмотр статистики для общедоступных папок и их элементов](view-statistics-for-public-folders-and-public-folder-items-exchange-2013-help.md).
 

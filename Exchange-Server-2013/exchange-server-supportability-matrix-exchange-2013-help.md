@@ -13,9 +13,9 @@ ms.translationtype: MT
 
  
 
-_**Применимо к:**Exchange Server 2007, Exchange Server 2010, Exchange Server 2013, Exchange Server 2016_
+_**Применимо к:** Exchange Server 2007, Exchange Server 2010, Exchange Server 2013, Exchange Server 2016_
 
-_**Последнее изменение раздела:**2018-03-20_
+_**Последнее изменение раздела:** 2018-03-20_
 
 Таблица поддержки Exchange Server — это централизованный источник сведений для администраторов Microsoft Exchange об уровнях поддержки любых конфигураций или требуемых компонентов для поддерживаемых версий Microsoft Exchange.
 

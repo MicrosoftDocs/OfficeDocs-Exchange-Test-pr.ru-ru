@@ -13,9 +13,9 @@ ms.translationtype: HT
 
  
 
-_**Применимо к:**Exchange Online, Exchange Server 2013, Exchange Server 2016_
+_**Применимо к:** Exchange Online, Exchange Server 2013, Exchange Server 2016_
 
-_**Последнее изменение раздела:**2017-03-13_
+_**Последнее изменение раздела:** 2017-03-13_
 
 **Сводка.** Обзор надстроек Outlook, работающих на компьютерах с Windows и Mac OS, на мобильных устройствах, а также в Outlook Web App и Outlook в Интернете.
 

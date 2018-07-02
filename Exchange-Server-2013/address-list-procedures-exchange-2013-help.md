@@ -13,9 +13,9 @@ ms.translationtype: HT
 
  
 
-_**Применимо к:**Exchange Server 2013_
+_**Применимо к:** Exchange Server 2013_
 
-_**Последнее изменение раздела:**2012-10-12_
+_**Последнее изменение раздела:** 2012-10-12_
 
 [Создание списка адресов](create-an-address-list-exchange-2013-help.md)
 

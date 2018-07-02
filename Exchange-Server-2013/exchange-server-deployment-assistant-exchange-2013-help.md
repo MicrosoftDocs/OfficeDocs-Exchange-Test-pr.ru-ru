@@ -13,9 +13,9 @@ ms.translationtype: HT
 
  
 
-_**Применимо к:**Exchange Online, Exchange Server, Exchange Server 2013_
+_**Применимо к:** Exchange Online, Exchange Server, Exchange Server 2013_
 
-_**Последнее изменение раздела:**2016-12-09_
+_**Последнее изменение раздела:** 2016-12-09_
 
 Помощник по развертыванию Exchange Server — это веб-средство, которое поможет вам развернуть Microsoft Exchange Server 2016 и Exchange Server 2013. Помощник по развертыванию задаст вам несколько вопросов о вашей текущей среде и покажет вам рекомендации, которые помогут упростить развертывание. [Помощник по развертыванию Exchange Server](https://go.microsoft.com/fwlink/p/?linkid=277105).
 

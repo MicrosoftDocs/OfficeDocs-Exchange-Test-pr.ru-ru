@@ -13,9 +13,9 @@ ms.translationtype: MT
 
  
 
-_**Применимо к:**Exchange Server 2013_
+_**Применимо к:** Exchange Server 2013_
 
-_**Последнее изменение раздела:**2017-02-28_
+_**Последнее изменение раздела:** 2017-02-28_
 
 [Настройка общего федеративного доступа](configure-federated-sharing-exchange-2013-help.md)
 

@@ -13,9 +13,9 @@ ms.translationtype: MT
 
  
 
-_**Применимо к:**Exchange Online, Exchange Server, Exchange Server 2013_
+_**Применимо к:** Exchange Online, Exchange Server, Exchange Server 2013_
 
-_**Последнее изменение раздела:**2018-03-26_
+_**Последнее изменение раздела:** 2018-03-26_
 
 **Сводка**. Используйте эти процедуры, чтобы переместить общедоступные папки Exchange 2007 и Exchange 2010 в Office 365.
 

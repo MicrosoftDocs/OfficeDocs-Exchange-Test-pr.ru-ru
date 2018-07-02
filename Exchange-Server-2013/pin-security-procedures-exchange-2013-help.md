@@ -13,9 +13,9 @@ ms.translationtype: MT
 
  
 
-_**Применимо к:**Exchange Online, Exchange Server 2013, Exchange Server 2016_
+_**Применимо к:** Exchange Online, Exchange Server 2013, Exchange Server 2016_
 
-_**Последнее изменение раздела:**2013-04-16_
+_**Последнее изменение раздела:** 2013-04-16_
 
 [Настраивать политики ПИН голосового доступа к Outlook](set-outlook-voice-access-pin-policies-exchange-2013-help.md)
 

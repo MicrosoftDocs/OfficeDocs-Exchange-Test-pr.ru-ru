@@ -13,9 +13,9 @@ ms.translationtype: MT
 
  
 
-_**Применимо к:**Exchange Online, Exchange Server 2013, Exchange Server 2016, Office 365_
+_**Применимо к:** Exchange Online, Exchange Server 2013, Exchange Server 2016, Office 365_
 
-_**Последнее изменение раздела:**2017-05-19_
+_**Последнее изменение раздела:** 2017-05-19_
 
 **Сводка.** Самые последние поддерживаемые топологии Exchange, предоставляющие пользователям Outlook 2016 для Mac доступ к общедоступным папкам.
 
