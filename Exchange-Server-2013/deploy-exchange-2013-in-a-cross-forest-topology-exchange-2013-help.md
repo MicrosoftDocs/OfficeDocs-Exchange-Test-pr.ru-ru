@@ -37,7 +37,7 @@ _**Последнее изменение раздела:** 2016-12-09_
 
   - Убедитесь, что удаленное управление Windows не установлено с помощью Центра обновления Windows.
 
-  - Установите Windows PowerShell и удаленное управление Windows. Дополнительные сведения см. в статье 968930 базы знаний Майкрософт [Основной пакет Windows Management Framework (Windows PowerShell 2.0 и WinRM 2.0)](http://go.microsoft.com/fwlink/p/?linkid=3052%26kbid=968930).
+  - Установите Windows PowerShell и удаленное управление Windows. Дополнительные сведения см. в статье 968930 базы знаний Майкрософт [Основной пакет Windows Management Framework (Windows PowerShell 2.0 и WinRM 2.0)](http://go.microsoft.com/fwlink/p/?linkid=3052&kbid=968930).
 
   - Загрузите Forefront Identity Manager 2010 R2 с пакетом обновления 1 (SP1). См. раздел [Скачать Microsoft Forefront Identity Manager 2010 R2 с пакетом обновления 1 (SP1)](https://go.microsoft.com/fwlink/p/?linkid=279868).
 

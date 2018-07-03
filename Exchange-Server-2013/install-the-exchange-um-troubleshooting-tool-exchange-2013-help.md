@@ -31,7 +31,7 @@ _**Последнее изменение раздела:** 2016-12-09_
     
       - Если средство запускается на компьютере Windows Vista или Windows Server 2008, посетите страницу [обновление для семейства Microsoft .NET Framework 3.5 для x64, Windows Vista и Windows Server 2008 x64](https://go.microsoft.com/fwlink/p/?linkid=178998).
     
-      - Служба удаленного управления Windows (WinRM) 2.0 и Windows PowerShell V2 (Windows6.0-KB968930.msu). См. статью 968930 базы знаний Майкрософт [Основной пакет Windows Management Framework (Windows PowerShell 2.0 и WinRM 2.0)](http://go.microsoft.com/fwlink/?linkid=3052%26kbid=968930).
+      - Служба удаленного управления Windows (WinRM) 2.0 и Windows PowerShell V2 (Windows6.0-KB968930.msu). См. статью 968930 базы знаний Майкрософт [Основной пакет Windows Management Framework (Windows PowerShell 2.0 и WinRM 2.0)](http://go.microsoft.com/fwlink/?linkid=3052&kbid=968930).
     
       - Microsoft Unified Communications Managed API 2.0 среда выполнения (UcmaRuntimeWebDownloadX64.msi). В разделе [API 2.0, среда выполнения (64-разрядная версия) под управлением объединенных коммуникаций](https://go.microsoft.com/fwlink/p/?linkid=198175).
 

@@ -37,7 +37,7 @@ _**Последнее изменение раздела:** 2016-12-15_
 </table>
 
 
-Статья базы знаний Майкрософт KB2619234: [Включение куки-файла связи или GUID, используемого в RPC через HTTP, для уровня RPC в Windows 7 и Windows Server 2008 R2)](https://go.microsoft.com/fwlink/?linkid=3052%26kbid=2619234)
+Статья базы знаний Майкрософт KB2619234: [Включение куки-файла связи или GUID, используемого в RPC через HTTP, для уровня RPC в Windows 7 и Windows Server 2008 R2)](https://go.microsoft.com/fwlink/?linkid=3052&kbid=2619234)
 
 Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: [Exchange Server](https://go.microsoft.com/fwlink/p/?linkid=60612), [Exchange Online](https://go.microsoft.com/fwlink/p/?linkid=267542) или [Exchange Online Protection](https://go.microsoft.com/fwlink/p/?linkid=285351).
 

@@ -29,7 +29,7 @@ _**Последнее изменение раздела:** 2016-12-15_
 
 Чтобы продолжить работу программы установки, необходимо временно удалить все определения политики **MachinePolicy** или **UserPolicy** в объекте групповой политики (GPO) **ExecutionPolicy**.
 
-Сведения об удалении определений политики **MachinePolicy** или **UserPolicy** в объекте групповой политики (GPO) **ExecutionPolicy** см. в [статье KB981474 базы знаний](https://go.microsoft.com/fwlink/?linkid=3052%26kbid=981474).
+Сведения об удалении определений политики **MachinePolicy** или **UserPolicy** в объекте групповой политики (GPO) **ExecutionPolicy** см. в [статье KB981474 базы знаний](https://go.microsoft.com/fwlink/?linkid=3052&kbid=981474).
 
 <table>
 <thead>

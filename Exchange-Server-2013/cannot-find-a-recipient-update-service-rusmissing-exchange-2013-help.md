@@ -54,11 +54,11 @@ _**Последнее изменение раздела:** 2016-12-15_
 
 Дополнительные сведения о службе обновления получателей см. в следующих статьях базы знаний Майкрософт:
 
-  - «Как службы обновления получателей применяется политиками получателей» ([https://go.microsoft.com/fwlink/?linkid=3052\&kbid=328738](https://go.microsoft.com/fwlink/?linkid=3052%26kbid=328738)).
+  - «Как службы обновления получателей применяется политиками получателей» ([https://go.microsoft.com/fwlink/?linkid=3052\&kbid=328738](https://go.microsoft.com/fwlink/?linkid=3052&kbid=328738)).
 
-  - «Как службе обновления получателей заполняет списки адресов» ([https://go.microsoft.com/fwlink/?linkid=3052\&kbid=253828](https://go.microsoft.com/fwlink/?linkid=3052%26kbid=253828)).
+  - «Как службе обновления получателей заполняет списки адресов» ([https://go.microsoft.com/fwlink/?linkid=3052\&kbid=253828](https://go.microsoft.com/fwlink/?linkid=3052&kbid=253828)).
 
-  - «Как контролировать ход службы обновления получателей Exchange» ([https://go.microsoft.com/fwlink/?linkid=3052\&kbid=246127](https://go.microsoft.com/fwlink/?linkid=3052%26kbid=246127)).
+  - «Как контролировать ход службы обновления получателей Exchange» ([https://go.microsoft.com/fwlink/?linkid=3052\&kbid=246127](https://go.microsoft.com/fwlink/?linkid=3052&kbid=246127)).
 
-  - «Задачи, выполняемые службой обновления получателей Exchange» ([https://go.microsoft.com/fwlink/?linkid=3052\&kbid=253770](https://go.microsoft.com/fwlink/?linkid=3052%26kbid=253770)).
+  - «Задачи, выполняемые службой обновления получателей Exchange» ([https://go.microsoft.com/fwlink/?linkid=3052\&kbid=253770](https://go.microsoft.com/fwlink/?linkid=3052&kbid=253770)).
 

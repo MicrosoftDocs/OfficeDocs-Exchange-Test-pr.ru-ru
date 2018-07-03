@@ -237,7 +237,7 @@ _**Последнее изменение раздела:** 2016-12-09_
     </table>
 
 
-  - Служба удаленного управления Windows (WinRM) 2.0 и Windows PowerShell V2 (Windows6.0-KB968930.msu)   См. статью 968930 базы знаний Майкрософт [Основной пакет Windows Management Framework (Windows PowerShell 2.0 и WinRM 2.0)](http://go.microsoft.com/fwlink/p/?linkid=3052%26kbid=968930).
+  - Служба удаленного управления Windows (WinRM) 2.0 и Windows PowerShell V2 (Windows6.0-KB968930.msu)   См. статью 968930 базы знаний Майкрософт [Основной пакет Windows Management Framework (Windows PowerShell 2.0 и WinRM 2.0)](http://go.microsoft.com/fwlink/p/?linkid=3052&kbid=968930).
 
   - Microsoft Unified Communications Managed API 2.0 Core Runtime (UcmaRuntimeWebDownloadX64.msi).   См. статью [Unified Communications Managed API 2.0, Core Runtime (64-разрядный)](https://go.microsoft.com/fwlink/p/?linkid=198175).
 

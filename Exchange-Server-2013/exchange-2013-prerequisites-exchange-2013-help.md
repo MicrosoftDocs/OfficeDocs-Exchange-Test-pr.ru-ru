@@ -233,11 +233,11 @@ _**Последнее изменение раздела:** 2017-03-20_
 
 3.  [Microsoft Unified Communications Managed API 4.0, ядро среды выполнения, 64-разрядная версия](https://go.microsoft.com/fwlink/p/?linkid=258269)
 
-4.  [Статья базы знаний KB974405 (Windows Identity Foundation)](http://go.microsoft.com/fwlink/?linkid=3052%26kbid=974405)
+4.  [Статья базы знаний KB974405 (Windows Identity Foundation)](http://go.microsoft.com/fwlink/?linkid=3052&kbid=974405)
 
-5.  [Статья базы знаний KB2619234 (включение куки-файла связи или GUID, используемого в RPC через HTTP, для уровня RPC в Windows 7 и Windows Server 2008 R2)](http://go.microsoft.com/fwlink/?linkid=3052%26kbid=2619234)
+5.  [Статья базы знаний KB2619234 (включение куки-файла связи или GUID, используемого в RPC через HTTP, для уровня RPC в Windows 7 и Windows Server 2008 R2)](http://go.microsoft.com/fwlink/?linkid=3052&kbid=2619234)
 
-6.  [Статья базы знаний KB2533623 (Уязвимость при загрузке библиотек может позволить злоумышленнику выполнить удаленный код)](http://go.microsoft.com/fwlink/?linkid=3052%26kbid=2533623)
+6.  [Статья базы знаний KB2533623 (Уязвимость при загрузке библиотек может позволить злоумышленнику выполнить удаленный код)](http://go.microsoft.com/fwlink/?linkid=3052&kbid=2533623)
     
     <table>
     <thead>
@@ -309,7 +309,7 @@ _**Последнее изменение раздела:** 2017-03-20_
 
 2.  [Windows Management Framework 4.0](https://go.microsoft.com/fwlink/p/?linkid=390234)
 
-3.  [Статья базы знаний KB974405 (Windows Identity Foundation)](http://go.microsoft.com/fwlink/?linkid=3052%26kbid=974405)
+3.  [Статья базы знаний KB974405 (Windows Identity Foundation)](http://go.microsoft.com/fwlink/?linkid=3052&kbid=974405)
 
 ## Необходимые условия для установки Windows 8 и Windows 8.1 (только для средств администрирования)
 

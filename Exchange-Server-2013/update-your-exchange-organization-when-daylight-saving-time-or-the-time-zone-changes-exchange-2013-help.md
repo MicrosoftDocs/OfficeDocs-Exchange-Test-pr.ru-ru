@@ -31,7 +31,7 @@ _**Последнее изменение раздела:** 2016-12-09_
 
 При изменении летнего времени или часовых поясов обновляется система проверки подлинности Office 365, поэтому необходимо обновить все клиентские компьютеры Office 365. В противном случае могут возникать проблемы с их подключением.
 
-  - Убедитесь, что на всех клиентских и настольных компьютерах установлено обновление Windows для перехода на летнее время. Дополнительные сведения см. в статье [Настройка перехода на летнее время в операционных системах Microsoft Windows](http://go.microsoft.com/fwlink/p/?linkid=3052%26kbid=914387).
+  - Убедитесь, что на всех клиентских и настольных компьютерах установлено обновление Windows для перехода на летнее время. Дополнительные сведения см. в статье [Настройка перехода на летнее время в операционных системах Microsoft Windows](http://go.microsoft.com/fwlink/p/?linkid=3052&kbid=914387).
 
 ## Действие 2. Установка обновления летнего времени Windows на всех серверах
 
@@ -47,7 +47,7 @@ _**Последнее изменение раздела:** 2016-12-09_
 
 2.  Отправьте сообщение пользователям, которым необходимо обновить свои компьютеры, и предоставьте им ссылку на соответствующее средство.
 
-В приведенной ниже таблице показано, в каких случаях пользователям следует запускать [средство обновления календаря Exchange](http://go.microsoft.com/fwlink/p/?linkid=3052%26kbid=930879) или [средство обновления данных о часовых поясах для приложения Microsoft Office Outlook](http://go.microsoft.com/fwlink/p/?linkid=3052%26kbid=931667). Узнайте, какая версия используется на серверах вашей организации, а затем определите, какие клиентские программы применяют ваши пользователи.
+В приведенной ниже таблице показано, в каких случаях пользователям следует запускать [средство обновления календаря Exchange](http://go.microsoft.com/fwlink/p/?linkid=3052&kbid=930879) или [средство обновления данных о часовых поясах для приложения Microsoft Office Outlook](http://go.microsoft.com/fwlink/p/?linkid=3052&kbid=931667). Узнайте, какая версия используется на серверах вашей организации, а затем определите, какие клиентские программы применяют ваши пользователи.
 
 
 <table>
@@ -69,45 +69,45 @@ _**Последнее изменение раздела:** 2016-12-09_
 </tr>
 <tr class="odd">
 <td><p><strong>Локальная организация Exchange 2003</strong></p></td>
-<td><p><a href="http://go.microsoft.com/fwlink/p/?linkid=3052%26kbid=930879">Средство обновления календарей Exchange</a> или</p>
-<p><a href="http://go.microsoft.com/fwlink/p/?linkid=3052%26kbid=931667">Средство обновления данных о часовых поясах для Microsoft Office Outlook</a></p></td>
+<td><p><a href="http://go.microsoft.com/fwlink/p/?linkid=3052&kbid=930879">Средство обновления календарей Exchange</a> или</p>
+<p><a href="http://go.microsoft.com/fwlink/p/?linkid=3052&kbid=931667">Средство обновления данных о часовых поясах для Microsoft Office Outlook</a></p></td>
 <td><p>Действие не требуется</p></td>
 </tr>
 <tr class="even">
 <td><p><strong>Локальная организация Exchange 2007</strong></p></td>
-<td><p><a href="http://go.microsoft.com/fwlink/p/?linkid=3052%26kbid=930879">Средство обновления календарей Exchange</a> или</p>
-<p><a href="http://go.microsoft.com/fwlink/p/?linkid=3052%26kbid=931667">Средство обновления данных о часовых поясах для Microsoft Office Outlook</a></p></td>
+<td><p><a href="http://go.microsoft.com/fwlink/p/?linkid=3052&kbid=930879">Средство обновления календарей Exchange</a> или</p>
+<p><a href="http://go.microsoft.com/fwlink/p/?linkid=3052&kbid=931667">Средство обновления данных о часовых поясах для Microsoft Office Outlook</a></p></td>
 <td><p>Действие не требуется</p></td>
 </tr>
 <tr class="odd">
 <td><p><strong>Локальная организация Exchange 2010</strong></p></td>
-<td><p><a href="http://go.microsoft.com/fwlink/p/?linkid=3052%26kbid=930879">Средство обновления календарей Exchange</a> или</p>
-<p><a href="http://go.microsoft.com/fwlink/p/?linkid=3052%26kbid=931667">Средство обновления данных о часовых поясах для Microsoft Office Outlook</a></p></td>
+<td><p><a href="http://go.microsoft.com/fwlink/p/?linkid=3052&kbid=930879">Средство обновления календарей Exchange</a> или</p>
+<p><a href="http://go.microsoft.com/fwlink/p/?linkid=3052&kbid=931667">Средство обновления данных о часовых поясах для Microsoft Office Outlook</a></p></td>
 <td><p>Действие не требуется</p></td>
 </tr>
 <tr class="even">
 <td><p><strong>Локальная организация Exchange 2013</strong></p></td>
-<td><p><a href="http://go.microsoft.com/fwlink/p/?linkid=3052%26kbid=931667">Средство обновления данных о часовых поясах для Microsoft Office Outlook</a></p></td>
+<td><p><a href="http://go.microsoft.com/fwlink/p/?linkid=3052&kbid=931667">Средство обновления данных о часовых поясах для Microsoft Office Outlook</a></p></td>
 <td><p>Действие не требуется</p></td>
 </tr>
 <tr class="odd">
 <td><p><strong>BPOS-S (Exchange 2007)</strong></p></td>
-<td><p><a href="http://go.microsoft.com/fwlink/p/?linkid=3052%26kbid=931667">Средство обновления данных о часовых поясах для Microsoft Office Outlook</a></p></td>
+<td><p><a href="http://go.microsoft.com/fwlink/p/?linkid=3052&kbid=931667">Средство обновления данных о часовых поясах для Microsoft Office Outlook</a></p></td>
 <td><p>Действие не требуется</p></td>
 </tr>
 <tr class="even">
 <td><p><strong>BPOS-D (Exchange 2010)</strong></p></td>
-<td><p><a href="http://go.microsoft.com/fwlink/p/?linkid=3052%26kbid=931667">Средство обновления данных о часовых поясах для Microsoft Office Outlook</a></p></td>
+<td><p><a href="http://go.microsoft.com/fwlink/p/?linkid=3052&kbid=931667">Средство обновления данных о часовых поясах для Microsoft Office Outlook</a></p></td>
 <td><p>Действие не требуется</p></td>
 </tr>
 <tr class="odd">
 <td><p><strong>Office 365 (Exchange 2010)</strong></p></td>
-<td><p><a href="http://go.microsoft.com/fwlink/p/?linkid=3052%26kbid=931667">Средство обновления данных о часовых поясах для Microsoft Office Outlook</a> (не поддерживает Outlook 2003)</p></td>
+<td><p><a href="http://go.microsoft.com/fwlink/p/?linkid=3052&kbid=931667">Средство обновления данных о часовых поясах для Microsoft Office Outlook</a> (не поддерживает Outlook 2003)</p></td>
 <td><p>Никаких действий не требуется</p></td>
 </tr>
 <tr class="even">
 <td><p><strong>Office 365 (Exchange 2013)</strong></p></td>
-<td><p><a href="http://go.microsoft.com/fwlink/p/?linkid=3052%26kbid=931667">Средство обновления данных о часовых поясах для Microsoft Office Outlook</a> (не поддерживает Outlook 2003)</p></td>
+<td><p><a href="http://go.microsoft.com/fwlink/p/?linkid=3052&kbid=931667">Средство обновления данных о часовых поясах для Microsoft Office Outlook</a> (не поддерживает Outlook 2003)</p></td>
 <td><p>Никаких действий не требуется</p></td>
 </tr>
 <tr class="odd">
