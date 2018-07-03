@@ -13,9 +13,9 @@ ms.translationtype: HT
 
  
 
-_**Применимо к:**Exchange Server 2013_
+_**Применимо к:** Exchange Server 2013_
 
-_**Последнее изменение раздела:**2014-06-19_
+_**Последнее изменение раздела:** 2014-06-19_
 
 Автоматическая установка Microsoft Exchange Server 2013 выполняется из командной строки. Дополнительные сведения о планировании и развертывании Exchange 2013 см. в разделе [Планирование и развертывание](planning-and-deployment-for-exchange-2013-installation-instructions.md).
 

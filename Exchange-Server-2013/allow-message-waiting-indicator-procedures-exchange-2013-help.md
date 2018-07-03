@@ -13,9 +13,9 @@ ms.translationtype: MT
 
  
 
-_**Применимо к:**Exchange Server 2013, Exchange Server 2016_
+_**Применимо к:** Exchange Server 2013, Exchange Server 2016_
 
-_**Последнее изменение раздела:**2013-05-03_
+_**Последнее изменение раздела:** 2013-05-03_
 
 [Разрешить сообщение ожидание индикатор (ожидающего сообщения) на шлюз IP единой системы обмена СООБЩЕНИЯМИ](allow-message-waiting-indicator-mwi-on-a-um-ip-gateway-exchange-2013-help.md)
 

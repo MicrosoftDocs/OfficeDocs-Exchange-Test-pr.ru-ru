@@ -13,9 +13,9 @@ ms.translationtype: MT
 
  
 
-_**Применимо к:**Exchange Server 2010, Exchange Server 2013_
+_**Применимо к:** Exchange Server 2010, Exchange Server 2013_
 
-_**Последнее изменение раздела:**2018-04-01_
+_**Последнее изменение раздела:** 2018-04-01_
 
 **Сводка.** В этой статье описано, как работают пароли и защита в Outlook для iOS и Android с Exchange Server.
 

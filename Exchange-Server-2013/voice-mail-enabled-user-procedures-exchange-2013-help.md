@@ -13,9 +13,9 @@ ms.translationtype: MT
 
  
 
-_**Применимо к:**Exchange Online, Exchange Server 2013, Exchange Server 2016_
+_**Применимо к:** Exchange Online, Exchange Server 2013, Exchange Server 2016_
 
-_**Последнее изменение раздела:**2013-05-03_
+_**Последнее изменение раздела:** 2013-05-03_
 
 [Включение для пользователя поддержки голосовой почты](enable-a-user-for-voice-mail-exchange-2013-help.md)
 

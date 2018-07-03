@@ -13,9 +13,9 @@ ms.translationtype: HT
 
  
 
-_**Применимо к:**Exchange Online, Exchange Server 2013, Exchange Server 2016_
+_**Применимо к:** Exchange Online, Exchange Server 2013, Exchange Server 2016_
 
-_**Последнее изменение раздела:**2016-12-09_
+_**Последнее изменение раздела:** 2016-12-09_
 
 Средство устранения неполадок единой системы обмена сообщениями Microsoft Exchange 2010 — это командлет командной консоли Exchange под названием **Test-ExchangeUMCallFlow**. Указанное средство можно использовать для проведения серии диагностических тестов единой системы обмена сообщениями в организации. Если при выполнении какого-либо теста происходит сбой, средство сообщает причину сбоя и возможные варианты решения возникшей проблемы. Использовать средство устранения неполадок единой системы обмена сообщениями можно только на серверах Exchange 2010 или более поздней версии.
 
@@ -237,7 +237,7 @@ _**Последнее изменение раздела:**2016-12-09_
     </table>
 
 
-  - Служба удаленного управления Windows (WinRM) 2.0 и Windows PowerShell V2 (Windows6.0-KB968930.msu)   См. статью 968930 базы знаний Майкрософт [Основной пакет Windows Management Framework (Windows PowerShell 2.0 и WinRM 2.0)](http://go.microsoft.com/fwlink/p/?linkid=3052%26kbid=968930).
+  - Служба удаленного управления Windows (WinRM) 2.0 и Windows PowerShell V2 (Windows6.0-KB968930.msu)   См. статью 968930 базы знаний Майкрософт [Основной пакет Windows Management Framework (Windows PowerShell 2.0 и WinRM 2.0)](http://go.microsoft.com/fwlink/p/?linkid=3052&kbid=968930).
 
   - Microsoft Unified Communications Managed API 2.0 Core Runtime (UcmaRuntimeWebDownloadX64.msi).   См. статью [Unified Communications Managed API 2.0, Core Runtime (64-разрядный)](https://go.microsoft.com/fwlink/p/?linkid=198175).
 

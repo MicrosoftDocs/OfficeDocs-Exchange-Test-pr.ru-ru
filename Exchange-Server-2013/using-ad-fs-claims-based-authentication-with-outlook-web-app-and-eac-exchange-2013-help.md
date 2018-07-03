@@ -13,9 +13,9 @@ ms.translationtype: MT
 
  
 
-_**Применимо к:**Exchange Server 2013 SP1_
+_**Применимо к:** Exchange Server 2013 SP1_
 
-_**Последнее изменение раздела:**2017-04-14_
+_**Последнее изменение раздела:** 2017-04-14_
 
 **Сводка**.
 
@@ -444,17 +444,17 @@ EAC использует виртуальный каталог ECP. Вы мож�
 
 3.  Выполните следующие два командлета, чтобы создать отношения доверия с проверяющей стороной. В этом примере также выполняется настройка правил утверждения.
 
-**Файл IssuanceAuthorizationRules.txt содержит:**
+**Файл IssuanceAuthorizationRules.txt содержит:** 
 
     @RuleTemplate = "AllowAllAuthzRule" => issue(Type = "http://schemas.microsoft.com/authorization/claims/permit", Value = "true");
 
-**Файл IssuanceTransformRules.txt содержит:**
+**Файл IssuanceTransformRules.txt содержит:** 
 
     @RuleName = "ActiveDirectoryUserSID" c:[Type == "http://schemas.microsoft.com/ws/2008/06/identity/claims/windowsaccountname", Issuer == "AD AUTHORITY"] => issue(store = "Active Directory", types = ("http://schemas.microsoft.com/ws/2008/06/identity/claims/primarysid"), query = ";objectSID;{0}", param = c.Value); 
     
     @RuleName = "ActiveDirectoryUPN" c:[Type == "http://schemas.microsoft.com/ws/2008/06/identity/claims/windowsaccountname", Issuer == "AD AUTHORITY"] => issue(store = "Active Directory", types = ("http://schemas.xmlsoap.org/ws/2005/05/identity/claims/upn"), query = ";userPrincipalName;{0}", param = c.Value);
 
-**Выполните следующие команды:**
+**Выполните следующие команды:** 
 
     [string]$IssuanceAuthorizationRules=Get-Content -Path C:\IssuanceAuthorizationRules.txt
     

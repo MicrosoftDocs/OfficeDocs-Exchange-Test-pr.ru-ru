@@ -13,9 +13,9 @@ ms.translationtype: MT
 
  
 
-_**Применимо к:**Exchange Online, Exchange Server 2013, Exchange Server 2016_
+_**Применимо к:** Exchange Online, Exchange Server 2013, Exchange Server 2016_
 
-_**Последнее изменение раздела:**2013-01-30_
+_**Последнее изменение раздела:** 2013-01-30_
 
 [Настройте защищенную голосовую почту от прошедших проверку подлинности вызывающих объектов](configure-protected-voice-mail-from-authenticated-callers-exchange-2013-help.md)
 

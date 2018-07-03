@@ -13,9 +13,9 @@ ms.translationtype: HT
 
  
 
-_**Применимо к:**Exchange Online, Exchange Server, Exchange Server 2013_
+_**Применимо к:** Exchange Online, Exchange Server, Exchange Server 2013_
 
-_**Последнее изменение раздела:**2018-03-20_
+_**Последнее изменение раздела:** 2018-03-20_
 
 Узнайте, как изменилась процедура обновления для Microsoft Exchange Server 2013. В этой статье также представлены сведения о функциях и улучшениях, содержащихся в текущем и предыдущих выпусках Exchange 2013.
 

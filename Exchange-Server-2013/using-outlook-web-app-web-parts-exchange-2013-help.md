@@ -13,9 +13,9 @@ ms.translationtype: HT
 
  
 
-_**Применимо к:**Exchange Server 2013_
+_**Применимо к:** Exchange Server 2013_
 
-_**Последнее изменение раздела:**2015-07-31_
+_**Последнее изменение раздела:** 2015-07-31_
 
 Веб-части МайкрософтOfficeOutlook Web App позволяют определить, какой почтовый ящик (или папку в нем) нужно открыть, а также какое представление содержимого необходимо использовать.
 
@@ -185,13 +185,13 @@ _**Последнее изменение раздела:**2015-07-31_
 
 Приведенные ниже примеры показывают, как получать непосредственный доступ к распространенным представлениям Outlook Web App:
 
-  - **Папка "Входящие":** https://*\<server name\>*/owa/?cmd=contents\&module=inbox
+  - **Папка "Входящие":**  https://*\<server name\>*/owa/?cmd=contents\&module=inbox
 
-  - **Календарь (данные за текущую дату):**https://*\<server name\>*/owa/?cmd=contents\&module=calendar\&exsvurl=1
+  - **Календарь (данные за текущую дату):** https://*\<server name\>*/owa/?cmd=contents\&module=calendar\&exsvurl=1
 
-  - **Календарь (данные за неделю):** https://*\<server name\>*/owa/?cmd=contents\&module=calendar\&view=weekly\&exsvurl=1
+  - **Календарь (данные за неделю):**  https://*\<server name\>*/owa/?cmd=contents\&module=calendar\&view=weekly\&exsvurl=1
 
-  - **Календарь (данные за месяц):** https://*\<server name\>*/owa/?cmd=contents\&module=calendar\&view=monthly\&exsvurl=1
+  - **Календарь (данные за месяц):**  https://*\<server name\>*/owa/?cmd=contents\&module=calendar\&view=monthly\&exsvurl=1
 
 ## Дополнительные сведения
 

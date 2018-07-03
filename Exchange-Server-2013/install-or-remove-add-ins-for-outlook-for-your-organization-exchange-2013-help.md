@@ -13,9 +13,9 @@ ms.translationtype: HT
 
  
 
-_**Применимо к:**Exchange Online, Exchange Server 2013, Exchange Server 2016_
+_**Применимо к:** Exchange Online, Exchange Server 2013, Exchange Server 2016_
 
-_**Последнее изменение раздела:**2017-02-03_
+_**Последнее изменение раздела:** 2017-02-03_
 
 Можно устанавливать или удалять надстройки Outlook для организации с помощью Центра администрирования Exchange или командной консоли.
 

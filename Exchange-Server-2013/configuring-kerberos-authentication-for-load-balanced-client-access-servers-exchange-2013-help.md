@@ -13,9 +13,9 @@ ms.translationtype: MT
 
  
 
-_**Применимо к:**Exchange Server 2013_
+_**Применимо к:** Exchange Server 2013_
 
-_**Последнее изменение раздела:**2016-12-09_
+_**Последнее изменение раздела:** 2016-12-09_
 
 **Сводка.** В этой статье описывается, как использовать проверку подлинности с серверами клиентского доступа с балансировкой нагрузки в Exchange 2013.
 
@@ -75,7 +75,7 @@ _**Последнее изменение раздела:**2016-12-09_
     
         New-ADComputer [-Name] <string> [-AccountPassword <SecureString>] [-AllowReversiblePasswordEncryption <System.Nullable[boolean]>] [-Description <string>] [-Enabled <System.Nullable[bool]>]
     
-    **Пример:**
+    **Пример:** 
     
         New-ADComputer -Name EXCH2013ASA -AccountPassword (Read-Host 'Enter password' -AsSecureString) -Description 'Alternate Service Account credentials for Exchange' -Enabled:$True -SamAccountName EXCH2013ASA
     
@@ -85,7 +85,7 @@ _**Последнее изменение раздела:**2016-12-09_
     
         Set-ADComputer [-Name] <string> [-add @{<attributename>="<value>"]
     
-    **Пример:**
+    **Пример:** 
     
         Set-ADComputer EXCH2013ASA -add @{"msDS-SupportedEncryptionTypes"="28"}
     

@@ -13,9 +13,9 @@ ms.translationtype: MT
 
  
 
-_**Применимо к:**Exchange Server_
+_**Применимо к:** Exchange Server_
 
-_**Последнее изменение раздела:**2016-12-15_
+_**Последнее изменение раздела:** 2016-12-15_
 
 Содержимое этой статьи не обновлялось для Microsoft Exchange Server 2013. Несмотря на отсутствие обновления, оно может быть применимо для Exchange 2013. Если вам все еще нужна помощь, ознакомьтесь с указанными ниже ресурсами сообщества.
 
@@ -68,9 +68,9 @@ _**Последнее изменение раздела:**2016-12-15_
 
 Дополнительные сведения о соединителях Active Directory см. в следующих статьях базы знаний Майкрософт:
 
-  - 325300, «веб-трансляция: введение в Active Directory Connector» ([https://go.microsoft.com/fwlink/?linkid=3052\&kbid=325300](https://go.microsoft.com/fwlink/?linkid=3052%26kbid=325300)).
+  - 325300, «веб-трансляция: введение в Active Directory Connector» ([https://go.microsoft.com/fwlink/?linkid=3052\&kbid=325300](https://go.microsoft.com/fwlink/?linkid=3052&kbid=325300)).
 
-  - 325221, «веб-трансляция: Microsoft расширенного соединителя Active Directory» ([https://go.microsoft.com/fwlink/?linkid=3052\&kbid=325221](https://go.microsoft.com/fwlink/?linkid=3052%26kbid=325221)).
+  - 325221, «веб-трансляция: Microsoft расширенного соединителя Active Directory» ([https://go.microsoft.com/fwlink/?linkid=3052\&kbid=325221](https://go.microsoft.com/fwlink/?linkid=3052&kbid=325221)).
 
-  - 312632, «Как установить и настроить соединитель Active Directory в Exchange 2000 Server» ([https://go.microsoft.com/fwlink/?linkid=3052\&kbid=312632](https://go.microsoft.com/fwlink/?linkid=3052%26kbid=312632)).
+  - 312632, «Как установить и настроить соединитель Active Directory в Exchange 2000 Server» ([https://go.microsoft.com/fwlink/?linkid=3052\&kbid=312632](https://go.microsoft.com/fwlink/?linkid=3052&kbid=312632)).
 

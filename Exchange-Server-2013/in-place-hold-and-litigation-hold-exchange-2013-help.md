@@ -13,9 +13,9 @@ ms.translationtype: MT
 
  
 
-_**Применимо к:**Exchange Online, Exchange Server 2013_
+_**Применимо к:** Exchange Online, Exchange Server 2013_
 
-_**Последнее изменение раздела:**2017-11-15_
+_**Последнее изменение раздела:** 2017-11-15_
 
 <table>
 <thead>

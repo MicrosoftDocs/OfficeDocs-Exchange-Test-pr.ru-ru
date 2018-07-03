@@ -13,9 +13,9 @@ ms.translationtype: MT
 
  
 
-_**Применимо к:**Exchange Server 2010 Service Pack 2 (SP2), Exchange Server 2013_
+_**Применимо к:** Exchange Server 2010 Service Pack 2 (SP2), Exchange Server 2013_
 
-_**Последнее изменение раздела:**2015-04-07_
+_**Последнее изменение раздела:** 2015-04-07_
 
 При установке Microsoft Exchange Server 2013 в существующую организацию Microsoft Exchange Server 2010 или Microsoft Exchange Server 2007 важно понимать, как разрешения будут работать в новой организации. Прочитайте один из нижеследующих разделов, относящихся к вашей организации.
 

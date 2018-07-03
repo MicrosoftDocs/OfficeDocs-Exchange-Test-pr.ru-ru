@@ -13,9 +13,9 @@ ms.translationtype: HT
 
  
 
-_**Применимо к:**Exchange Online, Exchange Server 2013, Exchange Server 2016_
+_**Применимо к:** Exchange Online, Exchange Server 2013, Exchange Server 2016_
 
-_**Последнее изменение раздела:**2018-04-17_
+_**Последнее изменение раздела:** 2018-04-17_
 
 Вы можете использовать Центр администрирования Exchange (EAC) и Exchange PowerShell для управления доступом пользователей к надстройкам для Outlook.
 

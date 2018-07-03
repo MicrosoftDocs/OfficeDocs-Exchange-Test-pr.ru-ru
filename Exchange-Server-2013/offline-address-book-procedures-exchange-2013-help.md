@@ -13,9 +13,9 @@ ms.translationtype: HT
 
  
 
-_**Применимо к:**Exchange Online, Exchange Server 2013_
+_**Применимо к:** Exchange Online, Exchange Server 2013_
 
-_**Последнее изменение раздела:**2012-10-04_
+_**Последнее изменение раздела:** 2012-10-04_
 
 [Создание автономной адресной книги](create-an-offline-address-book-exchange-2013-help.md)
 

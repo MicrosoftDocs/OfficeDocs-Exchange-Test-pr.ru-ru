@@ -13,9 +13,9 @@ ms.translationtype: MT
 
  
 
-_**Применимо к:**Exchange Online, Exchange Server 2013, Exchange Server 2016_
+_**Применимо к:** Exchange Online, Exchange Server 2013, Exchange Server 2016_
 
-_**Последнее изменение раздела:**2016-12-09_
+_**Последнее изменение раздела:** 2016-12-09_
 
 Средство устранения неполадок единой системы обмена сообщениями Microsoft Exchange 2010 — командлет командной консоли Exchange, **Test-ExchangeUMCallFlow**. С помощью этого командлета вы можете диагностировать ошибки конфигурации, связанные со сценариями ответа на вызовы, и проверки правильности работы голосовой почты при локальном и гибридном развертывании единой системы обмена сообщениями в Microsoft Exchange Server 2010 с пакетом обновления 1 (SP1) или более поздней версии. Вы также можете использовать этот командлет при развертывании Microsoft Lync Server 2010 или более поздней версии для Microsoft Office, а также при развертывании единой системы обмена сообщениями с использованием VoIP-шлюзов, IP-УАТС или пограничных контроллеров сеансов (SBC).
 
@@ -55,7 +55,7 @@ _**Последнее изменение раздела:**2016-12-09_
 
   - Microsoft .NET Framework 3.5 семейства Windows Vista x64 и Windows Server 2008 x64 обновление средства выполняется на компьютере Windows Vista или Windows Server 2008. Чтобы загрузить обновления, обратитесь к разделу [обновление для семейства Microsoft .NET Framework 3.5 для x64, Windows Vista и Windows Server 2008 x64](https://go.microsoft.com/fwlink/p/?linkid=178998).
 
-  - Windows Remote Management (WinRM) 2.0 и Windows PowerShell V2 (Windows6.0-KB968930.msu). Дополнительные сведения см. в статье базы знаний Майкрософт 968930 [Пакет Windows Management Framework Core (Windows PowerShell 2.0 и WinRM 2.0)](http://go.microsoft.com/fwlink/?linkid=3052%26kbid=968930).
+  - Windows Remote Management (WinRM) 2.0 и Windows PowerShell V2 (Windows6.0-KB968930.msu). Дополнительные сведения см. в статье базы знаний Майкрософт 968930 [Пакет Windows Management Framework Core (Windows PowerShell 2.0 и WinRM 2.0)](http://go.microsoft.com/fwlink/?linkid=3052&kbid=968930).
 
   - Под управлением объединенных коммуникаций AP1 2.0, среда выполнения (64-разрядная версия). Чтобы загрузить файл UcmaRuntimeWebDownloadX64.msi, обратитесь к разделу [объединенных коммуникаций управляемых API 2.0 (en), среда выполнения (64-разрядная версия)](https://go.microsoft.com/fwlink/p/?linkid=198175).
 

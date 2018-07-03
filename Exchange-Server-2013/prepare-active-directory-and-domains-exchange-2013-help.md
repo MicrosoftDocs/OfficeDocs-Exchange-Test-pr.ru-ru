@@ -13,9 +13,9 @@ ms.translationtype: HT
 
  
 
-_**Применимо к:**Exchange Server 2013_
+_**Применимо к:** Exchange Server 2013_
 
-_**Последнее изменение раздела:**2016-12-09_
+_**Последнее изменение раздела:** 2016-12-09_
 
 Перед установкой Microsoft Exchange Server 2013 следует подготовить лес Active Directory и его домены. Exchange необходимо подготовить Active Directory для хранения сведений о почтовых ящиках пользователей и конфигурации серверов Exchange Server в организации. Если вы не знакомы с лесами и доменами Active Directory, изучите статью [Обзор доменных служб Active Directory](https://go.microsoft.com/fwlink/p/?linkid=399226).
 
