@@ -72,11 +72,9 @@ _**Последнее изменение раздела:**2015-03-27_
 
 Имена условий Командная консоль Exchange, перечисленные здесь — это параметры для командлета `TransportRule`.
 
-  -  
-    Дополнительные сведения о командлете см. в статье [New-TransportRule](https://technet.microsoft.com/ru-ru/library/bb125138\(v=exchg.150\)).
+  -  Дополнительные сведения о командлете см. в статье [New-TransportRule](https://technet.microsoft.com/ru-ru/library/bb125138\(v=exchg.150\)).
 
-  -  
-    Дополнительные сведения о типах свойств этих условий см. в статье [Conditions and exceptions for mail flow rules on Mailbox servers](mail-flow-rule-conditions-and-exceptions-predicates-in-exchange-2013-exchange-2013-help.md).
+  -  Дополнительные сведения о типах свойств этих условий см. в статье [Conditions and exceptions for mail flow rules on Mailbox servers](mail-flow-rule-conditions-and-exceptions-predicates-in-exchange-2013-exchange-2013-help.md).
 
 Правила транспорта могут проверять только содержимое поддерживаемых типов файлов. Если агент правил транспорта обнаруживает вложение, тип которого отсутствует в списке поддерживаемых типов файлов, вызывается условие `AttachmentIsUnsupported`. Поддерживаемые типы файлов перечислены в следующем разделе. Каждый файл, отсутствующий в списке, вызывает условие `AttachmentIsUnsupported`.
 
@@ -213,11 +211,9 @@ _**Последнее изменение раздела:**2015-03-27_
 
 Имена Командная консоль Exchange перечисленных здесь условий входят в число параметров, для которых требуется командлет `TransportRule`.
 
-  -  
-    Дополнительные сведения о командлете см. в статье [New-TransportRule](https://technet.microsoft.com/ru-ru/library/bb125138\(v=exchg.150\)).
+  -  Дополнительные сведения о командлете см. в статье [New-TransportRule](https://technet.microsoft.com/ru-ru/library/bb125138\(v=exchg.150\)).
 
-  -  
-    Дополнительные сведения о типах свойств этих условий см. в статье [Conditions and exceptions for mail flow rules on Mailbox servers](mail-flow-rule-conditions-and-exceptions-predicates-in-exchange-2013-exchange-2013-help.md).
+  -  Дополнительные сведения о типах свойств этих условий см. в статье [Conditions and exceptions for mail flow rules on Mailbox servers](mail-flow-rule-conditions-and-exceptions-predicates-in-exchange-2013-exchange-2013-help.md).
 
 ## Поддерживаемые типы исполняемых файлов для проверки правил транспорта
 

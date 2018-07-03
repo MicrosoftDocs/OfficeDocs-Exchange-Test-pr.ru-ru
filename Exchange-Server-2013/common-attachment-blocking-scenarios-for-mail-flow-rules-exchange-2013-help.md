@@ -19,17 +19,13 @@ _**Последнее изменение раздела:**2017-02-23_
 
 В вашей организации может требоваться блокировка или отклонение некоторых типов сообщений в соответствии с юридическими или нормативными требованиями, а также для удовлетворения определенных бизнес-потребностей. Вот несколько примеров распространенных сценариев блокировки всех вложений, которые можно настроить с помощью правил транспорта в Exchange:
 
-  -  
-    Example 1: Block messages with attachments, and notify the sender
+  -  Example 1: Block messages with attachments, and notify the sender
 
-  -  
-    Example 2: Notify intended recipients when an inbound message is blocked
+  -  Example 2: Notify intended recipients when an inbound message is blocked
 
-  -  
-    Example 3: Modify the subject line for notifications
+  -  Example 3: Modify the subject line for notifications
 
-  -  
-    Example 4: Apply a rule with a time limit
+  -  Example 4: Apply a rule with a time limit
 
 Дополнительные примеры, в которых показано, как заблокировать определенные вложения, см. в таких статьях:
 
