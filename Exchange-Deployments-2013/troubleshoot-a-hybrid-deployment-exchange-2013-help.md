@@ -127,12 +127,11 @@ _<strong>Последнее изменение раздела:</strong>2016-04-2
 
   - **Сообщение "Не удалось найти соединитель получения по умолчанию на сервере \<имя сервера\>"**. Это сообщение появляется, если соединитель получения на каком-либо сервере Exchange Server, указанном в приведенном далее атрибуте, не слушает TCP-порт 25 для протоколов IPv4 и IPv6: `(Get-HybridConfiguration).ReceivingTransportServers.`
     
-      -  
-        Чтобы проверить, есть ли правильные привязки для соединителей получения на серверах Exchange, указанных при запуске `(Get-HybridConfiguration).ReceivingTransportServers.`, в Командная консоль Exchange выполните указанную ниже команду.
+      -    Чтобы проверить, есть ли правильные привязки для соединителей получения на серверах Exchange, указанных при запуске `(Get-HybridConfiguration).ReceivingTransportServers.`, в Командная консоль Exchange выполните указанную ниже команду.
         
-            Get-ReceiveConnector -Server <Server Name> | FT Identity, Bindings
+      Get-ReceiveConnector -Server <Server Name> | FT Identity, Bindings
         
-        Для серверов Exchange Server должна появиться следующая запись: `{[::]:25, 0.0.0.0:25}`
+      Для серверов Exchange Server должна появиться следующая запись: `{[::]:25, 0.0.0.0:25}`
         
-        Если эта привязка не указана, необходимо добавить ее в принимающий соединитель, используя командлет **Set-ReceiveConnector** с параметром *Bindings*. Дополнительные сведения см. в разделе [Set-ReceiveConnector](https://technet.microsoft.com/ru-ru/library/bb125140\(v=exchg.150\)).
+      Если эта привязка не указана, необходимо добавить ее в принимающий соединитель, используя командлет **Set-ReceiveConnector** с параметром *Bindings*. Дополнительные сведения см. в разделе [Set-ReceiveConnector](https://technet.microsoft.com/ru-ru/library/bb125140\(v=exchg.150\)).
 
