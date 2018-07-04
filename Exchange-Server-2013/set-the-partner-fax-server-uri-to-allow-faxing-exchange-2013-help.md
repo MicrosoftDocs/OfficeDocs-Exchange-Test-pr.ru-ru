@@ -35,18 +35,8 @@ _**Последнее изменение раздела:** 2016-12-09_
 
   - Сочетания клавиш для процедур, описанных в этой статье, приведены в статье [Сочетания клавиш в Центре администрирования Exchange](keyboard-shortcuts-in-the-exchange-admin-center-exchange-online-protection-help.md).
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Bb124558.tip(EXCHG.150).gif" title="Совет" alt="Совет" />Совет.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>..</td>
-</tr>
-</tbody>
-</table>
+> [!TIP]  
+> Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>..
 
 
 ## Что необходимо сделать?
@@ -59,18 +49,8 @@ _**Последнее изменение раздела:** 2016-12-09_
 
 3.  На странице **Политика почтовых ящиков единой системы обмена сообщениями** \> **Общие** в поле **URI факс-сервера партнера** введите универсальный код ресурса (URI) TCP или TLS. Например: *sip:faxserver1.contoso.com:5060;transport=tcp* или *sip:faxserver2.contoso.com:5061;transport=tls*
     
-    <table>
-    <thead>
-    <tr class="header">
-    <th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr class="odd">
-    <td>Хотя в поле может быть несколько URI факс-серверов, используется только один. Если ввести два URI, будет использован только первый из них.</td>
-    </tr>
-    </tbody>
-    </table>
+    > [!NOTE]  
+    > Хотя в поле может быть несколько URI факс-серверов, используется только один. Если ввести два URI, будет использован только первый из них.
 
 
 4.  Нажмите кнопку **Сохранить**, чтобы сохранить изменения.

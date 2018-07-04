@@ -19,18 +19,8 @@ _**Последнее изменение раздела:** 2014-07-14_
 
 Остановить или перезапустить поиск при обнаружении электронных данных на месте можно в любое время. Чтобы изменить свойства поиска, например ключевые слова или почтовые ящики для поиска, необходимо остановить поиск. После выполнения необходимых изменений можно повторно запустить службу поиска.
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Dd876857.Caution(EXCHG.150).gif" title="Внимание!" alt="Внимание!" />Внимание!</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Если перезапустить поиск, результаты поиска, уже скопированные в почтовый ящик обнаружения, выбранный для поиска, удаляются.</td>
-</tr>
-</tbody>
-</table>
+> [!CAUTION]  
+> Если перезапустить поиск, результаты поиска, уже скопированные в почтовый ящик обнаружения, выбранный для поиска, удаляются.
 
 
 ## Что нужно знать перед началом работы
@@ -41,18 +31,8 @@ _**Последнее изменение раздела:** 2014-07-14_
 
   - Сочетания клавиш для процедур, описанных в этой статье, приведены в статье [Сочетания клавиш в Центре администрирования Exchange](keyboard-shortcuts-in-the-exchange-admin-center-exchange-online-protection-help.md).
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Bb124558.tip(EXCHG.150).gif" title="Совет" alt="Совет" />Совет.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.</td>
-</tr>
-</tbody>
-</table>
+> [!TIP]  
+> Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.
 
 
 ## Что необходимо сделать?

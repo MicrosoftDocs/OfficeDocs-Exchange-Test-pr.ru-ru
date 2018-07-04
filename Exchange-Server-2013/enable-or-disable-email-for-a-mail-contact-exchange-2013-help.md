@@ -31,18 +31,8 @@ _**Последнее изменение раздела:** 2012-12-05_
 
   - Сочетания клавиш для процедур, описанных в этой статье, приведены в статье [Сочетания клавиш в Центре администрирования Exchange](keyboard-shortcuts-in-the-exchange-admin-center-exchange-online-protection-help.md).
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Bb124558.tip(EXCHG.150).gif" title="Совет" alt="Совет" />Совет.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>..</td>
-</tr>
-</tbody>
-</table>
+> [!TIP]  
+> Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>..
 
 
 ## Что необходимо сделать?
@@ -141,18 +131,8 @@ _**Последнее изменение раздела:** 2012-12-05_
 
   - В центре администрирования Exchange выберите **Получатели** \> **Контакты**. Новые почтовые контакты отображаются в списке контактов. Под **тип контакта**, тип является **почтового контакта**.
     
-    <table>
-    <thead>
-    <tr class="header">
-    <th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr class="odd">
-    <td>Может потребоваться щелкнуть кнопку <strong>Обновить</strong><img src="images/Dd353189.85f271ca-32a4-426c-842a-d2172567099d(EXCHG.150).gif" title="Значок обновления" alt="Значок обновления" />, чтобы отобразить новые почтовые контакты.</td>
-    </tr>
-    </tbody>
-    </table>
+    > [!NOTE]  
+    > Может потребоваться щелкнуть кнопку <strong>Обновить</strong><img src="images/Dd353189.85f271ca-32a4-426c-842a-d2172567099d(EXCHG.150).gif" title="Значок обновления" alt="Значок обновления" />, чтобы отобразить новые почтовые контакты.
 
 
   - В командной консоли Exchange выполните следующую команду для вывода информации о новых почтовых контактах.

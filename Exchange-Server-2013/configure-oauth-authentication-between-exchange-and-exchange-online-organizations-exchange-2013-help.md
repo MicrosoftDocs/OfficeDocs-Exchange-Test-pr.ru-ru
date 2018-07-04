@@ -29,19 +29,9 @@ _**Последнее изменение раздела:** 2016-12-09_
 
 После настройки гибридного развертывания с помощью мастера гибридной конфигурации рекомендуется настроить во всех смешанных организациях Exchange, реализующих гибридное развертывание с Exchange 2013 и Exchange Online, проверку подлинности OAuth Exchange.
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Dd876857.important(EXCHG.150).gif" title="Важно" alt="Важно" />Важно!</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Если в вашей локальной организации используются только серверы Exchange 2013 с накопительным пакетом обновления 5 или более поздней версией, запустите мастер гибридного развертывания вместо выполнения действий, описанных в этом разделе.<br />
-Эта возможность Exchange Server 2013 не совместима полностью со службой Office 365, предоставляемой компанией 21Vianet в Китае. Кроме того, возможны некоторые ограничения. <a href="https://go.microsoft.com/fwlink/?linkid=313640">Дополнительные сведения о службе Office 365, предоставляемой компанией 21Vianet</a>.</td>
-</tr>
-</tbody>
-</table>
+> [!IMPORTANT]  
+> Если в вашей локальной организации используются только серверы Exchange 2013 с накопительным пакетом обновления 5 или более поздней версией, запустите мастер гибридного развертывания вместо выполнения действий, описанных в этом разделе.<br />
+Эта возможность Exchange Server 2013 не совместима полностью со службой Office 365, предоставляемой компанией 21Vianet в Китае. Кроме того, возможны некоторые ограничения. <a href="https://go.microsoft.com/fwlink/?linkid=313640">Дополнительные сведения о службе Office 365, предоставляемой компанией 21Vianet</a>.
 
 
 ## Что нужно знать перед началом работы
@@ -54,18 +44,8 @@ _**Последнее изменение раздела:** 2016-12-09_
 
   - Сочетания клавиш для процедур, описанных в этой статье, приведены в статье [Сочетания клавиш в Центре администрирования Exchange](keyboard-shortcuts-in-the-exchange-admin-center-exchange-online-protection-help.md).
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Bb124558.tip(EXCHG.150).gif" title="Совет" alt="Совет" />Совет.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.</td>
-</tr>
-</tbody>
-</table>
+> [!TIP]  
+> Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.
 
 
 ## Настройка проверки подлинности OAuth между локальной организацией Exchange и Exchange Online
@@ -148,18 +128,8 @@ _**Последнее изменение раздела:** 2016-12-09_
 
     Get-WebServicesVirtualDirectory | FL ExternalUrl
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Для успешного выполнения следующего сценария необходимо подключить Windows PowerShell для Azure Active Directory к своему клиенту Microsoft Online Azure AD, как описано в действии 4 предыдущего раздела.</td>
-</tr>
-</tbody>
-</table>
+> [!NOTE]  
+> Для успешного выполнения следующего сценария необходимо подключить Windows PowerShell для Azure Active Directory к своему клиенту Microsoft Online Azure AD, как описано в действии 4 предыдущего раздела.
 
 
 1.  Сохраните следующий текст в файл сценария PowerShell с именем **RegisterEndpoints.ps1**. В этом примере используется подстановочный знак для регистрации всех конечных точек для домена contoso.com. Замените **contoso.com** службой имен узлов своей локальной организации Exchange.
@@ -197,18 +167,8 @@ _**Последнее изменение раздела:** 2016-12-09_
 
   - https://\<ваш основной домен SMTP\>/autodiscover/autodiscover.svc
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Командлет <a href="https://technet.microsoft.com/ru-ru/library/dn551183(v=exchg.150)">Get-IntraOrganizationConfiguration</a> можно использовать для локальных клиентов и клиентов Office 365 для определения значений конечных точек, необходимых для командлета <a href="https://technet.microsoft.com/ru-ru/library/dn551178(v=exchg.150)">New-IntraOrganizationConnector</a>.</td>
-</tr>
-</tbody>
-</table>
+> [!NOTE]  
+> Командлет <a href="https://technet.microsoft.com/ru-ru/library/dn551183(v=exchg.150)">Get-IntraOrganizationConfiguration</a> можно использовать для локальных клиентов и клиентов Office 365 для определения значений конечных точек, необходимых для командлета <a href="https://technet.microsoft.com/ru-ru/library/dn551178(v=exchg.150)">New-IntraOrganizationConnector</a>.
 
 
 С помощью Windows PowerShell выполните следующий командлет:
@@ -237,36 +197,16 @@ _**Последнее изменение раздела:** 2016-12-09_
 
   - На всех существующих серверах почтовых ящиков и клиентского доступа Exchange 2010 и 2007 установлены последние накопительные пакеты обновлений (CU) или пакеты обновлений (SP).
     
-    <table>
-    <thead>
-    <tr class="header">
-    <th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr class="odd">
-    <td>Существующие серверы почтовых ящиков Exchange 2010 или 2007 могут продолжать использовать серверы клиентского доступа Exchange 2010 и 2007 для интерфейсных серверов с негибридными подключениями. Только запросам компонентов гибридного развертывания от клиента Office 365 необходимо подключаться к серверам Exchange 2013.</td>
-    </tr>
-    </tbody>
-    </table>
+    > [!NOTE]  
+    > Существующие серверы почтовых ящиков Exchange 2010 или 2007 могут продолжать использовать серверы клиентского доступа Exchange 2010 и 2007 для интерфейсных серверов с негибридными подключениями. Только запросам компонентов гибридного развертывания от клиента Office 365 необходимо подключаться к серверам Exchange 2013.
 
 
 Необходимо настроить *AvailabilityAddressSpace* на серверах клиентского доступа с версией Exchange, предшествующей Exchange 2013, таким образом, чтобы он указывал на конечную точку веб-служб Exchange на локальных серверах клиентского доступа Exchange 2013 с пакетом обновления 1 (SP1). Используется конечная точка, описанная выше на шаге 5, либо ее можно определить, выполнив указанный ниже командлет на локальном сервере клиентского доступа Exchange 2013 с пакетом обновления 1 (SP1).
 
     Get-WebServicesVirtualDirectory | FL AdminDisplayVersion,ExternalUrl
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Если сведения о виртуальных каталогах возвращается от нескольких серверов, используйте конечную точку, полученную для сервера клиентского доступа Exchange 2013 SP1. Для нее значение параметра <em>AdminDisplayVersion</em> будет равно &quot;15.0 (Build 847.32)&quot;.</td>
-</tr>
-</tbody>
-</table>
+> [!NOTE]  
+> Если сведения о виртуальных каталогах возвращается от нескольких серверов, используйте конечную точку, полученную для сервера клиентского доступа Exchange 2013 SP1. Для нее значение параметра <em>AdminDisplayVersion</em> будет равно &quot;15.0 (Build 847.32)&quot;.
 
 
 Чтобы настроить *AvailabilityAddressSpace*, с помощью Exchange PowerShell выполните приведенный ниже командлет в своей локальной организации.
@@ -277,18 +217,8 @@ _**Последнее изменение раздела:** 2016-12-09_
 
 Проверить правильность конфигурации OAuth можно с помощью командлета [Test-OAuthConnectivity](https://technet.microsoft.com/ru-ru/library/jj218623\(v=exchg.150\)). Этот командлет проверяет, могут ли конечные точки локальной организации Exchange и Exchange Online обмениваться запросами на проверку подлинности.
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Dd876857.important(EXCHG.150).gif" title="Важно" alt="Важно" />Важно!</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>При подключении к своей организации Exchange Online с помощью сеанса удаленной среды Remote PowerShell можно использовать параметр <em>AllowClobber</em> с командлетом <strong>Import-PSSession</strong> для импорта последних команд в локальный сеанс PowerShell.</td>
-</tr>
-</tbody>
-</table>
+> [!IMPORTANT]  
+> При подключении к своей организации Exchange Online с помощью сеанса удаленной среды Remote PowerShell можно использовать параметр <em>AllowClobber</em> с командлетом <strong>Import-PSSession</strong> для импорта последних команд в локальный сеанс PowerShell.
 
 
 Чтобы убедиться, что локальная организация Exchange может успешно подключиться к Exchange Online, выполните следующую команду в Exchange PowerShell в своей локальной организации:
@@ -301,34 +231,14 @@ _**Последнее изменение раздела:** 2016-12-09_
 
 Например, Test-OAuthConnectivity -Service EWS -TargetUri https://lync.contoso.com/metadata/json/1 -Mailbox ExchangeOnlineBox1 -Verbose | fl
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Dd876857.important(EXCHG.150).gif" title="Важно" alt="Важно" />Важно!</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Ошибку &quot;С SMTP-адресом не сопоставлен почтовый ящик&quot; можно игнорировать. Важно, чтобы параметр <em>ResultTask</em> возвращал значение <strong>Успех</strong>. Например, последний раздел тестовых выходных данных должен выглядеть так:<br />
+> [!IMPORTANT]  
+> Ошибку &quot;С SMTP-адресом не сопоставлен почтовый ящик&quot; можно игнорировать. Важно, чтобы параметр <em>ResultTask</em> возвращал значение <strong>Успех</strong>. Например, последний раздел тестовых выходных данных должен выглядеть так:<br />
 <code>ResultType: Success</code><br />
 <code>Identity: Microsoft.Exchange.Security.OAuth.ValidationResultNodeId</code><br />
 <code>IsValid: True</code><br />
-<code>ObjectState: New</code></td>
-</tr>
-</tbody>
-</table>
+<code>ObjectState: New</code>
 
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Bb124558.tip(EXCHG.150).gif" title="Совет" alt="Совет" />Совет.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.</td>
-</tr>
-</tbody>
-</table>
+> [!TIP]  
+> Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.
 

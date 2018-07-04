@@ -23,18 +23,8 @@ _**Последнее изменение раздела:** 2016-12-09_
 
 В таблице ниже перечислены ограничения для общих папок на локальном сервере Exchange Server 2013. Если ограничения специально не указаны в качестве рекомендуемых, представленные ниже значения являются поддерживаемыми ограничениями для общих папок.
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Dd876857.important(EXCHG.150).gif" title="Важно" alt="Важно" />Важно!</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Сведения об ограничениях Exchange Online для Office 365 см. в статье <a href="https://go.microsoft.com/fwlink/?linkid=391188">Ограничения Exchange Online</a>.</td>
-</tr>
-</tbody>
-</table>
+> [!IMPORTANT]  
+> Сведения об ограничениях Exchange Online для Office 365 см. в статье <a href="https://go.microsoft.com/fwlink/?linkid=391188">Ограничения Exchange Online</a>.
 
 
 

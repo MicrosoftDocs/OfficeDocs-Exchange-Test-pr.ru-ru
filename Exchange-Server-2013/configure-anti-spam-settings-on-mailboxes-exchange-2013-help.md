@@ -19,18 +19,8 @@ _**Последнее изменение раздела:** 2016-11-17_
 
 Можно настроить для отдельных почтовых ящиков параметры защиты от нежелательной почты, отличные от параметров, которые применяются к остальным почтовым ящикам в организации Exchange. При настройке параметры защиты от нежелательной почты для почтового ящика замещается соответствующий параметр фильтрации контента или защиты от нежелательной почты всей организации.
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>1 ноября 2016 г. корпорация Майкрософт перестала выпускать обновления определений спама для фильтров SmartScreen в Exchange и Outlook. Существующие определения спама для SmartScreen останутся, но их эффективность будет снижаться с течением времени. Дополнительные сведения см. в статье <a href="https://go.microsoft.com/fwlink/p/?linkid=835894">Прекращение поддержки SmartScreen в Outlook и Exchange</a>.</td>
-</tr>
-</tbody>
-</table>
+> [!NOTE]  
+> 1 ноября 2016 г. корпорация Майкрософт перестала выпускать обновления определений спама для фильтров SmartScreen в Exchange и Outlook. Существующие определения спама для SmartScreen останутся, но их эффективность будет снижаться с течением времени. Дополнительные сведения см. в статье <a href="https://go.microsoft.com/fwlink/p/?linkid=835894">Прекращение поддержки SmartScreen в Outlook и Exchange</a>.
 
 
 ## Что нужно знать перед началом работы?
@@ -47,18 +37,8 @@ _**Последнее изменение раздела:** 2016-11-17_
 
   - Сочетания клавиш для процедур, описанных в этой статье, приведены в статье [Сочетания клавиш в Центре администрирования Exchange](keyboard-shortcuts-in-the-exchange-admin-center-exchange-online-protection-help.md).
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Bb124558.tip(EXCHG.150).gif" title="Совет" alt="Совет" />Совет.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.</td>
-</tr>
-</tbody>
-</table>
+> [!TIP]  
+> Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.
 
 
 ## Что необходимо сделать?

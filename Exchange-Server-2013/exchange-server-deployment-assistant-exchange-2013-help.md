@@ -59,18 +59,8 @@ _**Последнее изменение раздела:** 2016-12-09_
     
     Дополнительные сведения об этом сценарии см. в разделе [Гибридные развертывания Exchange Server](https://technet.microsoft.com/ru-ru/library/jj200581\(v=exchg.150\)).
     
-    <table>
-    <thead>
-    <tr class="header">
-    <th><img src="images/Dd876857.important(EXCHG.150).gif" title="Важно" alt="Важно" />Важно!</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr class="odd">
-    <td>Если у вас есть локальная организация Exchange 2003, и вы хотите настроить новое гибридное развертывание с использованием Office 365, вам нужно добавить в свою локальную организацию один или несколько серверов Exchange Server 2010 с пакетом обновления 3 (а не серверов Exchange Server 2013). Для этого выберите в <a href="https://technet.microsoft.com/ru-ru/exdeploy2010">помощнике по развертыванию Exchange Server</a> гибридное развертывание на основе Exchange 2010.</td>
-    </tr>
-    </tbody>
-    </table>
+    > [!IMPORTANT]  
+    > Если у вас есть локальная организация Exchange 2003, и вы хотите настроить новое гибридное развертывание с использованием Office 365, вам нужно добавить в свою локальную организацию один или несколько серверов Exchange Server 2010 с пакетом обновления 3 (а не серверов Exchange Server 2013). Для этого выберите в <a href="https://technet.microsoft.com/ru-ru/exdeploy2010">помощнике по развертыванию Exchange Server</a> гибридное развертывание на основе Exchange 2010.
 
 
   - **Только облако**

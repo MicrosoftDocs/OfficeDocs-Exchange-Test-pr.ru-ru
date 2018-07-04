@@ -35,18 +35,8 @@ _**Последнее изменение раздела:** 2012-10-14_
 
   - Сочетания клавиш для процедур, описанных в этой статье, приведены в статье [Сочетания клавиш в Центре администрирования Exchange](keyboard-shortcuts-in-the-exchange-admin-center-exchange-online-protection-help.md).
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Bb124558.tip(EXCHG.150).gif" title="Совет" alt="Совет" />Совет.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.</td>
-</tr>
-</tbody>
-</table>
+> [!TIP]  
+> Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.
 
 
 ## Что необходимо сделать?
@@ -77,18 +67,8 @@ _**Последнее изменение раздела:** 2012-10-14_
 
 Эта команда извлекает все почтовые ящики в организации Exchange, фильтрует ящики с удержанием элементов и указывает их вместе с политикой хранения, примененной к каждому из них.
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Dd876857.important(EXCHG.150).gif" title="Важно" alt="Важно" />Важно!</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Так как <em>RetentionHoldEnabled</em> не является фильтруемым свойством в Exchange 2013, нельзя использовать параметр <em>Filter</em> с командлетом <strong>Get-Mailbox</strong> для фильтрации почтовых ящиков с включенным удержанием на стороне сервера. Эта команда получает список всех почтовых ящиков и фильтрует его по клиенту, запустившему сеанс командной консоли. В крупных средах с тысячами почтовых ящиков на выполнение этой команды может уйти много времени.</td>
-</tr>
-</tbody>
-</table>
+> [!IMPORTANT]  
+> Так как <em>RetentionHoldEnabled</em> не является фильтруемым свойством в Exchange 2013, нельзя использовать параметр <em>Filter</em> с командлетом <strong>Get-Mailbox</strong> для фильтрации почтовых ящиков с включенным удержанием на стороне сервера. Эта команда получает список всех почтовых ящиков и фильтрует его по клиенту, запустившему сеанс командной консоли. В крупных средах с тысячами почтовых ящиков на выполнение этой команды может уйти много времени.
 
 
     Get-Mailbox -ResultSize unlimited | Where-Object {$_.RetentionHoldEnabled -eq $true} | Format-Table Name,RetentionPolicy,RetentionHoldEnabled -Auto

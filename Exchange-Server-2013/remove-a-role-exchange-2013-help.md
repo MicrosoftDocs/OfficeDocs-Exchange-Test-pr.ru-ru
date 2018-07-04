@@ -33,18 +33,8 @@ _**Последнее изменение раздела:** 2012-10-03_
 
   - Сочетания клавиш для процедур, описанных в этой статье, приведены в статье [Сочетания клавиш в Центре администрирования Exchange](keyboard-shortcuts-in-the-exchange-admin-center-exchange-online-protection-help.md).
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Bb124558.tip(EXCHG.150).gif" title="Совет" alt="Совет" />Совет.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.</td>
-</tr>
-</tbody>
-</table>
+> [!TIP]  
+> Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.
 
 
 ## Что необходимо сделать?
@@ -65,18 +55,8 @@ _**Последнее изменение раздела:** 2012-10-03_
 
 Если роль, которую необходимо удалить, имеет дочерние роли, необходимо также удалить эти роли. При попытке удалить роль, имеющую дочерние роли, отображается сообщение об ошибке, если не используется параметр *Recurse*. Если при удалении роли задан параметр *Recurse*, указанная роль будет удалена со всеми ее дочерними ролями.
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Dd876857.Caution(EXCHG.150).gif" title="Внимание!" alt="Внимание!" />Внимание!</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Если задан параметр <em>Recurse</em>, удаляются также все дочерние роли указанной роли, которую необходимо удалить. Проверьте, какие именно роли будут удалены, прежде чем запускать эту команду.</td>
-</tr>
-</tbody>
-</table>
+> [!CAUTION]  
+> Если задан параметр <em>Recurse</em>, удаляются также все дочерние роли указанной роли, которую необходимо удалить. Проверьте, какие именно роли будут удалены, прежде чем запускать эту команду.
 
 
 Чтобы убедиться, что будут удалены только те роли, которые необходимо удалить, используйте с командой параметр *WhatIf*, позволяющий проверить ее правильность. Используйте следующий синтаксис.

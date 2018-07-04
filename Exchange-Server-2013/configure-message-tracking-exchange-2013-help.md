@@ -31,18 +31,8 @@ _**Последнее изменение раздела:** 2013-02-18_
 
   - Сочетания клавиш для процедур, описанных в этой статье, приведены в статье [Сочетания клавиш в Центре администрирования Exchange](keyboard-shortcuts-in-the-exchange-admin-center-exchange-online-protection-help.md).
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Bb124558.tip(EXCHG.150).gif" title="Совет" alt="Совет" />Совет.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.</td>
-</tr>
-</tbody>
-</table>
+> [!TIP]  
+> Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.
 
 
 ## Настройка отслеживания сообщений на серверах почтовых ящиков с помощью Центра администрирования Exchange
@@ -85,25 +75,12 @@ _**Последнее изменение раздела:** 2013-02-18_
 
     Set-TransportService Mailbox01 -MessageTrackingLogPath "D:\Hub Message Tracking Log" -MessageTrackingLogMaxFileSize 20MB -MessageTrackingLogMaxDirectorySize 1.5GB -MessageTrackingLogMaxAge 45.00:00:00
 
-<table>
-<colgroup>
-<col style="width: 100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><ul>
+> [!NOTE]  
+> <ul>
 <li><p>Если для параметра <em>MessageTrackingLogPath</em> задать значение <code>$null</code>, отслеживание сообщений будет выключено. Однако если параметру <em>MessageTrackingLogEnabled</em> задано значение <code>$true</code>, возникают ошибки журнала событий.</p></li>
 <li><p>Если для параметра <em>MessageTrackingLogMaxAge</em> задать значение <code>00:00:00</code>, то автоматическое удаление файлов журнала отслеживания сообщений по истечении срока их хранения не будет выполняться.</p></li>
 <li><p>Для серверов почтовых ящиков Exchange 2013 максимальный размер каталога журнала отслеживания сообщений в три раза больше значения параметра <em>MessageTrackingLogMaxDirectorySize</em>. Несмотря на то что файлы журнала отслеживания сообщений, создаваемые четырьмя различными службами, имеют четыре различных префикса имен, количество и частота данных, записываемых в файлы журнала <strong>MSGTRKMA</strong>, являются незначительными по сравнению с тремя другими префиксами. Дополнительные сведения см. в статье &quot;Структура файлов журнала отслеживания сообщений&quot; в разделе <a href="message-tracking-exchange-2013-help.md">Отслеживание сообщений</a>.</p></li>
-</ul></td>
-</tr>
-</tbody>
-</table>
+</ul>
 
 
 В этом примере показано, как выключить ведение журнала темы сообщений в журнале отслеживания сообщений на сервере почтовых ящиков с именем Mailbox01.

@@ -41,18 +41,8 @@ _**Последнее изменение раздела:** 2016-12-09_
 
   - Сочетания клавиш для процедур, описанных в этой статье, приведены в статье [Сочетания клавиш в Центре администрирования Exchange](keyboard-shortcuts-in-the-exchange-admin-center-exchange-online-protection-help.md).
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Bb124558.tip(EXCHG.150).gif" title="Совет" alt="Совет" />Совет.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>..</td>
-</tr>
-</tbody>
-</table>
+> [!TIP]  
+> Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>..
 
 
 ## Восстановление сервера с помощью команды Setup /m:RecoverServer
@@ -69,18 +59,8 @@ _**Последнее изменение раздела:** 2016-12-09_
     
         Remove-DatabaseAvailabilityGroupServer -Identity DAG1 -MailboxServer MBX1
     
-    <table>
-    <thead>
-    <tr class="header">
-    <th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr class="odd">
-    <td>Если удаляемый член DAG отключен и не может быть включен, к команде выше следует добавить параметр <em>ConfigurationOnly</em>. Если вы используете параметр <em>ConfigurationOnly</em>, необходимо также вручную исключить узел из кластера.</td>
-    </tr>
-    </tbody>
-    </table>
+    > [!NOTE]  
+    > Если удаляемый член DAG отключен и не может быть включен, к команде выше следует добавить параметр <em>ConfigurationOnly</em>. Если вы используете параметр <em>ConfigurationOnly</em>, необходимо также вручную исключить узел из кластера.
 
 
 4.  Сбросьте учетную запись компьютера сервера в Active Directory. Подробное описание процедуры см. в статье [Сброс учетной записи компьютера](http://go.microsoft.com/fwlink/p/?linkid=167188).

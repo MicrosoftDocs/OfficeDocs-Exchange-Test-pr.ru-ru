@@ -63,18 +63,9 @@ _**Последнее изменение раздела:** 2017-10-20_
 <td><p>Обновление средства защиты от нежелательной почты Microsoft Exchange</p></td>
 <td><p>MSExchangeAntispamUpdate</p></td>
 <td><p>Предоставляет обновления определений спама для Exchange SmartScreen.</p>
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>1 ноября 2016 г. корпорация Майкрософт перестала выпускать обновления определений спама для фильтров SmartScreen в Exchange и Outlook. Существующие определения спама для SmartScreen останутся, но их эффективность будет снижаться с течением времени. Дополнительные сведения см. в статье <a href="https://go.microsoft.com/fwlink/p/?linkid=835894">Прекращение поддержки SmartScreen в Outlook и Exchange</a>.</td>
-</tr>
-</tbody>
-</table>
+
+> [!NOTE]  
+> 1 ноября 2016 г. корпорация Майкрософт перестала выпускать обновления определений спама для фильтров SmartScreen в Exchange и Outlook. Существующие определения спама для SmartScreen останутся, но их эффективность будет снижаться с течением времени. Дополнительные сведения см. в статье <a href="https://go.microsoft.com/fwlink/p/?linkid=835894">Прекращение поддержки SmartScreen в Outlook и Exchange</a>.
 
 </td>
 <td><p>Автоматически</p></td>
@@ -443,18 +434,9 @@ _**Последнее изменение раздела:** 2017-10-20_
 <td><p>Обновление средства защиты от нежелательной почты Microsoft Exchange</p></td>
 <td><p>MSExchangeAntispamUpdate</p></td>
 <td><p>Предоставляет обновления определений спама для Exchange SmartScreen.</p>
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>1 ноября 2016 г. корпорация Майкрософт перестала выпускать обновления определений спама для фильтров SmartScreen в Exchange и Outlook. Существующие определения спама для SmartScreen останутся, но их эффективность будет снижаться с течением времени. Дополнительные сведения см. в статье <a href="https://go.microsoft.com/fwlink/p/?linkid=835894">Прекращение поддержки SmartScreen в Outlook и Exchange</a>.</td>
-</tr>
-</tbody>
-</table>
+
+> [!NOTE]  
+> 1 ноября 2016 г. корпорация Майкрософт перестала выпускать обновления определений спама для фильтров SmartScreen в Exchange и Outlook. Существующие определения спама для SmartScreen останутся, но их эффективность будет снижаться с течением времени. Дополнительные сведения см. в статье <a href="https://go.microsoft.com/fwlink/p/?linkid=835894">Прекращение поддержки SmartScreen в Outlook и Exchange</a>.
 
 </td>
 <td><p>Автоматически</p></td>

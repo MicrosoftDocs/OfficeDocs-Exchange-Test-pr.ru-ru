@@ -49,18 +49,8 @@ _**Последнее изменение раздела:** 2015-03-09_
 
   - Сочетания клавиш для процедур, описанных в этой статье, приведены в статье [Сочетания клавиш в Центре администрирования Exchange](keyboard-shortcuts-in-the-exchange-admin-center-exchange-online-protection-help.md).
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Bb124558.tip(EXCHG.150).gif" title="Совет" alt="Совет" />Совет.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>..</td>
-</tr>
-</tbody>
-</table>
+> [!TIP]  
+> Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>..
 
 
 ## Что необходимо сделать?
@@ -471,18 +461,8 @@ _**Последнее изменение раздела:** 2015-03-09_
 
 Командлет **Remove-MailboxRestoreRequest** используется для удаления запросов на восстановление. Если удалить запрос на восстановление после начала копирования данных почтового ящика в целевой почтовый ящик, уже скопированные данные останутся в целевом почтовом ящике.
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Как было сказано выше, выполненные запросы на восстановление хранятся в течение 30 дней до автоматического удаления.</td>
-</tr>
-</tbody>
-</table>
+> [!NOTE]  
+> Как было сказано выше, выполненные запросы на восстановление хранятся в течение 30 дней до автоматического удаления.
 
 
 В этом примере удаляется запрос на восстановление Pilar Pinilla\\MailboxRestore1.

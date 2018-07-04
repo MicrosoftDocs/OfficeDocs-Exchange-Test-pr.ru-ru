@@ -27,18 +27,8 @@ _**Последнее изменение раздела:** 2012-11-12_
 
 Если вы хотите установить Exchange 2013 на контроллере домена, необходимо настроить в организации Exchange разделение разрешений с помощью управления доступом на основе ролей или общие разрешения.
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Dd876857.important(EXCHG.150).gif" title="Важно" alt="Важно" />Важно!</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Мы не рекомендуем устанавливать Exchange 2013 на контроллерах домена Active Directory. Дополнительные сведения см. в разделе <a href="installing-exchange-on-a-domain-controller-is-not-recommended-exchange-2013-help.md">Не рекомендуется устанавливать Exchange на контроллере домена</a>.</td>
-</tr>
-</tbody>
-</table>
+> [!IMPORTANT]  
+> Мы не рекомендуем устанавливать Exchange 2013 на контроллерах домена Active Directory. Дополнительные сведения см. в разделе <a href="installing-exchange-on-a-domain-controller-is-not-recommended-exchange-2013-help.md">Не рекомендуется устанавливать Exchange на контроллере домена</a>.
 
 
 Если вы хотите по-прежнему использовать разделение разрешений Active Directory, вам следует установить Exchange 2013 на сервере-участнике.

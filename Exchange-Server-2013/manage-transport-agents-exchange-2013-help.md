@@ -31,18 +31,8 @@ _**Последнее изменение раздела:** 2015-04-08_
 
   - Сочетания клавиш для процедур, описанных в этой статье, приведены в статье [Сочетания клавиш в Центре администрирования Exchange](keyboard-shortcuts-in-the-exchange-admin-center-exchange-online-protection-help.md).
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Bb124558.tip(EXCHG.150).gif" title="Совет" alt="Совет" />Совет.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.</td>
-</tr>
-</tbody>
-</table>
+> [!TIP]  
+> Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.
 
 
 ## Что нужно сделать
@@ -51,18 +41,8 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 Для управления агентом транспорта в службе транспорта переднего плана на серверах клиентского доступа нельзя использовать командную консоль Exchange. Вместо этого на сервере клиентского доступа нужно открыть Windows PowerShell, а затем импортировать командлеты Exchange в сеанс Windows PowerShell.
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Dd876857.Caution(EXCHG.150).gif" title="Внимание!" alt="Внимание!" />Внимание!</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Запуск командлетов Exchange в Windows PowerShell для задач кроме управления агентами транспорта в службе транспорта переднего плана не поддерживается. Пропуск командной консоли Exchange и управления доступом на основе ролей (RBAC) при запуске командлетов Exchange в Windows PowerShell может вызвать серьезные последствия. Следует всегда запускать командлеты Exchange в командной консоли Exchange. Дополнительные сведения см. в разделе <a href="release-notes-for-exchange-2013-exchange-2013-help.md">Заметки о выпуске Exchange 2013</a>.</td>
-</tr>
-</tbody>
-</table>
+> [!CAUTION]  
+> Запуск командлетов Exchange в Windows PowerShell для задач кроме управления агентами транспорта в службе транспорта переднего плана не поддерживается. Пропуск командной консоли Exchange и управления доступом на основе ролей (RBAC) при запуске командлетов Exchange в Windows PowerShell может вызвать серьезные последствия. Следует всегда запускать командлеты Exchange в командной консоли Exchange. Дополнительные сведения см. в разделе <a href="release-notes-for-exchange-2013-exchange-2013-help.md">Заметки о выпуске Exchange 2013</a>.
 
 
 Для выполнения любой процедуры агента транспорта, описанной в этом разделе в службе транспорта переднего плана, нужно выполнить следующие дополнительные действия.

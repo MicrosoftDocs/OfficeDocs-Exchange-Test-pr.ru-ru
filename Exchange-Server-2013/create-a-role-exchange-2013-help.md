@@ -21,18 +21,8 @@ _**Последнее изменение раздела:** 2012-10-17_
 
 Дополнительные сведения о ролях управления в Microsoft Exchange Server 2013 см. в разделе [Общие сведения о ролях управления](understanding-management-roles-exchange-2013-help.md).
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>В этом разделе не рассматривается создание роли управления с незаданной областью. Сведения о создании роли управления с незаданной областью см. в разделе <a href="create-an-unscoped-role-exchange-2013-help.md">Создание роли с незаданной областью</a>.</td>
-</tr>
-</tbody>
-</table>
+> [!NOTE]  
+> В этом разделе не рассматривается создание роли управления с незаданной областью. Сведения о создании роли управления с незаданной областью см. в разделе <a href="create-an-unscoped-role-exchange-2013-help.md">Создание роли с незаданной областью</a>.
 
 
 Необходимы сведения о других задачах управления, связанных с ролями? См. раздел [Дополнительные разрешения](advanced-permissions-exchange-2013-help.md).
@@ -47,18 +37,8 @@ _**Последнее изменение раздела:** 2012-10-17_
 
   - Сочетания клавиш для процедур, описанных в этой статье, приведены в статье [Сочетания клавиш в Центре администрирования Exchange](keyboard-shortcuts-in-the-exchange-admin-center-exchange-online-protection-help.md).
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Bb124558.tip(EXCHG.150).gif" title="Совет" alt="Совет" />Совет.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.</td>
-</tr>
-</tbody>
-</table>
+> [!TIP]  
+> Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.
 
 
 ## Как это сделать?
@@ -115,18 +95,8 @@ _**Последнее изменение раздела:** 2012-10-17_
 
   - Создание назначения роли с настраиваемой или исключительной областью, созданной в шаге 3.
     
-    <table>
-    <thead>
-    <tr class="header">
-    <th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr class="odd">
-    <td>Нельзя задать область, создавая назначение роли для политики назначения ролей управления.</td>
-    </tr>
-    </tbody>
-    </table>
+    > [!NOTE]  
+    > Нельзя задать область, создавая назначение роли для политики назначения ролей управления.
 
 
 Можно назначить новую роль группе ролей, политике назначения ролей, пользователю или универсальной группе безопасности. Дополнительные сведения приведены в следующих разделах:

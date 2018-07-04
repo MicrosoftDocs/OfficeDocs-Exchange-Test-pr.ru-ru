@@ -27,18 +27,8 @@ Microsoft Exchange Server 2010 и Exchange Server 2007 имеют несколь
 
 Существующую организацию Exchange 2003 нельзя обновить непосредственно до Exchange 2013. Сначала необходимо обновить организацию Exchange 2003 до Exchange 2007 или Exchange 2010, а затем можно обновить организацию Exchange 2007 или Exchange 2010 до Exchange 2013. Мы рекомендуем обновлять организацию от Exchange 2003 до Exchange 2010, а затем — от Exchange 2010 до Exchange 2013.
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/JJ983803.warning(EXCHG.150).gif" title="Предупреждение" alt="Предупреждение" />Предупреждение.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Необходимо удалить все экземпляры Exchange 2003 из вашей организации, прежде чем обновлять ее до Exchange 2013.</td>
-</tr>
-</tbody>
-</table>
+> [!WARNING]  
+> Необходимо удалить все экземпляры Exchange 2003 из вашей организации, прежде чем обновлять ее до Exchange 2013.
 
 
 Можно перенести все ваши почтовые ящики Exchange 2003 в Exchange Online. Больше об этом подходе можно узнать в статье [Способы переноса нескольких записей электронной почты в Office 365](https://go.microsoft.com/fwlink/p/?linkid=524030).

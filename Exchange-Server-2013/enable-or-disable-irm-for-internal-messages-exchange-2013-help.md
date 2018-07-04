@@ -19,18 +19,8 @@ _**Последнее изменение раздела:** 2012-10-12_
 
 В Microsoft Exchange Server 2013 система управления правами на доступ к данным (IRM) по умолчанию включена для внутренних сообщений. Это позволяет создавать правила защиты транспорта и правила защиты Microsoft Outlook для сообщений с защитой IRM на клиентах транспорта, клиентах Microsoft Outlook 2010 и более поздних версий. Активация управления правами на доступ к данным для внутренних сообщений является предварительным условием для работы всех прочих функций в Exchange Server 2013, например расшифровки транспорта, расшифровки правила журнала, управления правами на доступ к данным в Microsoft Office Outlook Web App и управления правами на доступ к данным в Microsoft Exchange ActiveSync.
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Dd876857.Caution(EXCHG.150).gif" title="Внимание!" alt="Внимание!" />Внимание!</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Отключение управления правами на доступ к данным для внутренних сообщений приведет к отключению всех функций управления правами на доступ к данным в организации Exchange. Клиентские функции IRM в Outlook (например, возможность чтения, ответа, пересылки и создания сообщений с защитой IRM с помощью сервера служб управления правами Active Directory (AD RMS)) не затрагиваются</td>
-</tr>
-</tbody>
-</table>
+> [!CAUTION]  
+> Отключение управления правами на доступ к данным для внутренних сообщений приведет к отключению всех функций управления правами на доступ к данным в организации Exchange. Клиентские функции IRM в Outlook (например, возможность чтения, ответа, пересылки и создания сообщений с защитой IRM с помощью сервера служб управления правами Active Directory (AD RMS)) не затрагиваются
 
 
 Дополнительные сведения об управленческих задачах, связанных с IRM, см. в разделе [Сведения о процедуры управления правами](information-rights-management-procedures-exchange-2013-help.md).
@@ -45,18 +35,8 @@ _**Последнее изменение раздела:** 2012-10-12_
 
   - Сочетания клавиш для процедур, описанных в этой статье, приведены в статье [Сочетания клавиш в Центре администрирования Exchange](keyboard-shortcuts-in-the-exchange-admin-center-exchange-online-protection-help.md).
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Bb124558.tip(EXCHG.150).gif" title="Совет" alt="Совет" />Совет.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.</td>
-</tr>
-</tbody>
-</table>
+> [!TIP]  
+> Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.
 
 
 ## Использование командной строки для включения управления правами на доступ к данным для внутренних сообщений

@@ -35,18 +35,8 @@ _**Последнее изменение раздела:** 2013-02-21_
 
   - Сочетания клавиш для процедур, описанных в этой статье, приведены в статье [Сочетания клавиш в Центре администрирования Exchange](keyboard-shortcuts-in-the-exchange-admin-center-exchange-online-protection-help.md).
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Bb124558.tip(EXCHG.150).gif" title="Совет" alt="Совет" />Совет.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>..</td>
-</tr>
-</tbody>
-</table>
+> [!TIP]  
+> Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>..
 
 
 ## Что необходимо сделать?
@@ -91,18 +81,8 @@ _**Последнее изменение раздела:** 2013-02-21_
 
     Set-UMIPGateway -Identity MyUMIPGateway -Simulator $true
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Dd876857.important(EXCHG.150).gif" title="Важно" alt="Важно" />Важно!</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Репликация всех изменений конфигурации шлюза IP единой системы обмена сообщениями на все серверы Exchange Server, связанные с той же абонентской группой единой системы обмена сообщениями, что и шлюз IP, выполняется с небольшой задержкой.</td>
-</tr>
-</tbody>
-</table>
+> [!IMPORTANT]  
+> Репликация всех изменений конфигурации шлюза IP единой системы обмена сообщениями на все серверы Exchange Server, связанные с той же абонентской группой единой системы обмена сообщениями, что и шлюз IP, выполняется с небольшой задержкой.
 
 
 В этом примере шлюзу IP единой системы обмена сообщениями с именем `MyUMIPGateway` запрещается принимать входящие и отправлять исходящие вызовы, назначается IPv6-адрес, а также разрешается использовать IPv4- и IPV6-адреса.

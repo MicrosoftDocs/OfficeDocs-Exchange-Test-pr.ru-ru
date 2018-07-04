@@ -29,18 +29,8 @@ _**Последнее изменение раздела:** 2012-11-27_
 
   - Сочетания клавиш для процедур, описанных в этой статье, приведены в статье [Сочетания клавиш в Центре администрирования Exchange](keyboard-shortcuts-in-the-exchange-admin-center-exchange-online-protection-help.md).
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Bb124558.tip(EXCHG.150).gif" title="Совет" alt="Совет" />Совет.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>..</td>
-</tr>
-</tbody>
-</table>
+> [!TIP]  
+> Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>..
 
 
 ## Что необходимо сделать?
@@ -52,18 +42,8 @@ _**Последнее изменение раздела:** 2012-11-27_
     Set-ImapSettings -Server "CAS01" -ProtocolLogEnabled $true
     Set-PopSettings -Server "CAS01" -ProtocolLogEnabled $true
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>После изменения параметров ведения журнала протокола для POP3 или IMAP4 необходимо перезапустить используемые службы: POP3 или IMAP4. Дополнительные сведения о перезапуске служб POP3 и IMAP4 см. в разделах <a href="start-and-stop-the-pop3-services-exchange-2013-help.md">Запуск и остановка служб POP3</a> и <a href="start-and-stop-the-imap4-services-exchange-2013-help.md">Запуск и остановка служб IMAP4</a>.</td>
-</tr>
-</tbody>
-</table>
+> [!NOTE]  
+> После изменения параметров ведения журнала протокола для POP3 или IMAP4 необходимо перезапустить используемые службы: POP3 или IMAP4. Дополнительные сведения о перезапуске служб POP3 и IMAP4 см. в разделах <a href="start-and-stop-the-pop3-services-exchange-2013-help.md">Запуск и остановка служб POP3</a> и <a href="start-and-stop-the-imap4-services-exchange-2013-help.md">Запуск и остановка служб IMAP4</a>.
 
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделах [Set-IMAPSettings](https://technet.microsoft.com/ru-ru/library/aa998252\(v=exchg.150\)) и [Set-POPSettings](https://technet.microsoft.com/ru-ru/library/aa997154\(v=exchg.150\)).
@@ -75,18 +55,8 @@ _**Последнее изменение раздела:** 2012-11-27_
     Set-ImapSettings -Server "CAS01" -protocolLogEnabled $false
     Set-PopSettings -Server "CAS01" -protocolLogEnabled $false
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>После изменения параметров ведения журнала протокола для POP3 или IMAP4 необходимо перезапустить используемые службы: POP3 или IMAP4. Дополнительные сведения о перезапуске служб POP3 и IMAP4 см. в разделах <a href="start-and-stop-the-pop3-services-exchange-2013-help.md">Запуск и остановка служб POP3</a> и <a href="start-and-stop-the-imap4-services-exchange-2013-help.md">Запуск и остановка служб IMAP4</a>.</td>
-</tr>
-</tbody>
-</table>
+> [!NOTE]  
+> После изменения параметров ведения журнала протокола для POP3 или IMAP4 необходимо перезапустить используемые службы: POP3 или IMAP4. Дополнительные сведения о перезапуске служб POP3 и IMAP4 см. в разделах <a href="start-and-stop-the-pop3-services-exchange-2013-help.md">Запуск и остановка служб POP3</a> и <a href="start-and-stop-the-imap4-services-exchange-2013-help.md">Запуск и остановка служб IMAP4</a>.
 
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделах [Set-IMAPSettings](https://technet.microsoft.com/ru-ru/library/aa998252\(v=exchg.150\)) и [Set-POPSettings](https://technet.microsoft.com/ru-ru/library/aa997154\(v=exchg.150\)).
@@ -123,18 +93,8 @@ _**Последнее изменение раздела:** 2012-11-27_
     
         Set-PopSettings -Server "CAS01" -LogPerFileSizeQuota unlimited
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>После изменения параметров ведения журнала протокола для POP3 или IMAP4 необходимо перезапустить используемые службы: POP3 или IMAP4. Дополнительные сведения о перезапуске служб POP3 и IMAP4 см. в разделах <a href="start-and-stop-the-pop3-services-exchange-2013-help.md">Запуск и остановка служб POP3</a> и <a href="start-and-stop-the-imap4-services-exchange-2013-help.md">Запуск и остановка служб IMAP4</a>.</td>
-</tr>
-</tbody>
-</table>
+> [!NOTE]  
+> После изменения параметров ведения журнала протокола для POP3 или IMAP4 необходимо перезапустить используемые службы: POP3 или IMAP4. Дополнительные сведения о перезапуске служб POP3 и IMAP4 см. в разделах <a href="start-and-stop-the-pop3-services-exchange-2013-help.md">Запуск и остановка служб POP3</a> и <a href="start-and-stop-the-imap4-services-exchange-2013-help.md">Запуск и остановка служб IMAP4</a>.
 
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделах [Set-IMAPSettings](https://technet.microsoft.com/ru-ru/library/aa998252\(v=exchg.150\)) и [Set-POPSettings](https://technet.microsoft.com/ru-ru/library/aa997154\(v=exchg.150\)).

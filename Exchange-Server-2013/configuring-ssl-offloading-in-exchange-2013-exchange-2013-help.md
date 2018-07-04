@@ -21,18 +21,8 @@ _**Последнее изменение раздела:** 2016-08-22_
 
 Одно из главных преимуществ разгрузки SSL — возможность более простого управления используемыми сертификатами. Вместо отдельных SSL-сертификатов для каждого сервера клиентского доступа с пакетом обновления 1 (SP1) используется один SSL-сертификат, который импортируется на все серверы клиентского доступа. Это может быть существующий или специально созданный SSL-сертификат.
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Dd876857.Caution(EXCHG.150).gif" title="Внимание!" alt="Внимание!" />Внимание!</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>При использовании диспетчера служб IIS, командной консоли Exchange или интерфейса командной строки для настройки разгрузки SSL следует помнить, что существует <strong>веб-сайт по умолчанию</strong> и <strong>фоновый сайт Exchange</strong>. Для разгрузки SSL настраивается только <strong>веб-сайт по умолчанию</strong>, а <strong>фоновый сайт Exchange</strong> не изменяется.</td>
-</tr>
-</tbody>
-</table>
+> [!CAUTION]  
+> При использовании диспетчера служб IIS, командной консоли Exchange или интерфейса командной строки для настройки разгрузки SSL следует помнить, что существует <strong>веб-сайт по умолчанию</strong> и <strong>фоновый сайт Exchange</strong>. Для разгрузки SSL настраивается только <strong>веб-сайт по умолчанию</strong>, а <strong>фоновый сайт Exchange</strong> не изменяется.
 
 
 **Содержание**
@@ -79,18 +69,8 @@ _**Последнее изменение раздела:** 2016-08-22_
 
   - Сочетания клавиш для процедур, описанных в этой статье, приведены в статье [Сочетания клавиш в Центре администрирования Exchange](keyboard-shortcuts-in-the-exchange-admin-center-exchange-online-protection-help.md).
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Bb124558.tip(EXCHG.150).gif" title="Совет" alt="Совет" />Совет.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.</td>
-</tr>
-</tbody>
-</table>
+> [!TIP]  
+> Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.
 
 
 ## Настройка разгрузки SSL для Outlook Web App
@@ -196,18 +176,8 @@ _**Последнее изменение раздела:** 2016-08-22_
     
       - Использование диспетчера служб IIS. В диспетчере служб IIS в области **действий** щелкните **Перезапустить**.
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Dd876857.important(EXCHG.150).gif" title="Важно" alt="Важно" />Важно!</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Необходимо дождаться того, что процесс узла службы применит все изменения из Active Directory в службах IIS (что происходит каждые 15 минут), даже если вы перезапустите службы IIS на сервере клиентского доступа.</td>
-</tr>
-</tbody>
-</table>
+> [!IMPORTANT]  
+> Необходимо дождаться того, что процесс узла службы применит все изменения из Active Directory в службах IIS (что происходит каждые 15 минут), даже если вы перезапустите службы IIS на сервере клиентского доступа.
 
 
 В начало
@@ -376,18 +346,8 @@ _**Последнее изменение раздела:** 2016-08-22_
 
 Если вы работаете с крупной организацией со множеством серверов клиентского доступа Exchange 2013, возможно, вы захотите ускорить описанные ранее действия. Вы можете скопировать и вставить команды из следующих скриптов в Блокнот, внести изменения, сохранить файл с расширением .ps1 и выполнить их в командной консоли Exchange. В зависимости от ваших потребностей оба эти скрипта можно использовать для настройки разгрузки SSL для всех протоколов и служб на одном или нескольких серверах клиентского доступа.
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Там, где используется командлет <strong>Set-OutlookAnywhere</strong>, замените &quot;MyServer&quot; на имена ваших серверов клиентского доступа.</td>
-</tr>
-</tbody>
-</table>
+> [!NOTE]  
+> Там, где используется командлет <strong>Set-OutlookAnywhere</strong>, замените &quot;MyServer&quot; на имена ваших серверов клиентского доступа.
 
 
 **Использование Set-WebConfigurationProperty**
@@ -405,18 +365,8 @@ _**Последнее изменение раздела:** 2016-08-22_
 
 **Использование appcmd**
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Там, где используется командлет <strong>Set-OutlookAnywhere</strong>, замените &quot;MyServer&quot; на имена ваших серверов клиентского доступа.</td>
-</tr>
-</tbody>
-</table>
+> [!NOTE]  
+> Там, где используется командлет <strong>Set-OutlookAnywhere</strong>, замените &quot;MyServer&quot; на имена ваших серверов клиентского доступа.
 
 
     Set-OutlookAnywhere -Identity MyServer\Rpc* -Externalhostname MyServer.mail.contoso.com -ExternalClientsRequireSsl $True -ExternalClientAuthenticationMethod Basic

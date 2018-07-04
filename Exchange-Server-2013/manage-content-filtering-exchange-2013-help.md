@@ -31,18 +31,8 @@ _**Последнее изменение раздела:** 2015-04-08_
 
   - Сочетания клавиш для процедур, описанных в этой статье, приведены в статье [Сочетания клавиш в Центре администрирования Exchange](keyboard-shortcuts-in-the-exchange-admin-center-exchange-online-protection-help.md).
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Bb124558.tip(EXCHG.150).gif" title="Совет" alt="Совет" />Совет.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.</td>
-</tr>
-</tbody>
-</table>
+> [!TIP]  
+> Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.
 
 
 ## Что необходимо сделать?
@@ -57,18 +47,8 @@ _**Последнее изменение раздела:** 2015-04-08_
 
     Set-ContentFilterConfig -Enabled $true
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>При отключении фильтрации контента, соответствующий агент фильтрации все еще включен. Чтобы выключить агент фильтрации контента, выполните следующую команду: <code>Disable-TransportAgent &quot;Content Filter Agent&quot;</code>.</td>
-</tr>
-</tbody>
-</table>
+> [!NOTE]  
+> При отключении фильтрации контента, соответствующий агент фильтрации все еще включен. Чтобы выключить агент фильтрации контента, выполните следующую команду: <code>Disable-TransportAgent &quot;Content Filter Agent&quot;</code>.
 
 
 ## Как проверить, что все получилось?
@@ -209,18 +189,8 @@ _**Последнее изменение раздела:** 2015-04-08_
 
     Set-ContentFilterConfig -SCLDeleteEnabled <$true | $false> -SCLDeleteThreshold <Value> -SCLRejectEnabled <$true | $false> -SCLRejectThreshold <Value> -SCLQuarantineEnabled <$true | $false> -SCLQuarantineThreshold <Value>
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Действие &quot;Удалить&quot; имеет более высокий приоритет по сравнению с действием &quot;Отклонить&quot;, а действие &quot;Отклонить&quot; — более высокий приоритет по сравнению с действием &quot;Поместить на карантин&quot;. Таким образом, пороговое значение вероятности нежелательной почты для действия &quot;Удалить&quot; должно превышать пороговое значение вероятности нежелательной почты действия &quot;Отклонить&quot;, которое, в свою очередь, должно превышать пороговое значение вероятности нежелательной почты действия &quot;Поместить на карантин&quot;. Только действие &quot;Отклонить&quot; включено по умолчанию, его пороговое значение SCL по умолчанию равно 7.</td>
-</tr>
-</tbody>
-</table>
+> [!NOTE]  
+> Действие &quot;Удалить&quot; имеет более высокий приоритет по сравнению с действием &quot;Отклонить&quot;, а действие &quot;Отклонить&quot; — более высокий приоритет по сравнению с действием &quot;Поместить на карантин&quot;. Таким образом, пороговое значение вероятности нежелательной почты для действия &quot;Удалить&quot; должно превышать пороговое значение вероятности нежелательной почты действия &quot;Отклонить&quot;, которое, в свою очередь, должно превышать пороговое значение вероятности нежелательной почты действия &quot;Поместить на карантин&quot;. Только действие &quot;Отклонить&quot; включено по умолчанию, его пороговое значение SCL по умолчанию равно 7.
 
 
 В этом примере настраиваются следующие пороговые значения вероятности нежелательной почты:

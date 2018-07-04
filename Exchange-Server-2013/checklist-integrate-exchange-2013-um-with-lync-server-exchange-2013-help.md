@@ -19,18 +19,8 @@ _**Последнее изменение раздела:** 2016-12-09_
 
 Используйте этот контрольный список для установки и развертывания единой системы обмена сообщениями и Майкрософт Lync Server 2013. В этом разделе "Lync Server" также относится к Lync Server 2010. Однако Microsoft Office Communications Server 2007 R2 может быть также развернут вместе с единой системой обмена сообщениями.
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td></td>
-</tr>
-</tbody>
-</table>
+> [!NOTE]  
+> 
 
 
 Перед началом работы со списком убедитесь, что вы ознакомились с общими концепциями, изложенными в разделах:
@@ -72,18 +62,9 @@ _**Последнее изменение раздела:** 2016-12-09_
 <td><p></p></td>
 <td><p>Просмотрите предварительные условия для интеграции серверов Microsoft Lync Server 2013 и Microsoft Exchange Server 2013.</p></td>
 <td><p><a href="https://go.microsoft.com/fwlink/p/?linkid=282082">Предварительные условия для интеграции Microsoft Lync Server 2013 и Microsoft Exchange Server 2013</a></p>
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Bb124558.tip(EXCHG.150).gif" title="Совет" alt="Совет" />Совет.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Для Exchange 2013 и Lync Server 2010 и 2013 требуется установка пакета Unified Communications Managed API (UCMA) 4.0 Runtime (он устанавливается в процессе основной установки). Чтобы скачать и просмотреть сведения о UCMA 4.0, см. статью <a href="https://go.microsoft.com/fwlink/p/?linkid=258269">Unified Communications Managed API 4.0 Runtime</a></td>
-</tr>
-</tbody>
-</table>
+
+> [!TIP]  
+> Для Exchange 2013 и Lync Server 2010 и 2013 требуется установка пакета Unified Communications Managed API (UCMA) 4.0 Runtime (он устанавливается в процессе основной установки). Чтобы скачать и просмотреть сведения о UCMA 4.0, см. статью <a href="https://go.microsoft.com/fwlink/p/?linkid=258269">Unified Communications Managed API 4.0 Runtime</a>
 
 </td>
 </tr>

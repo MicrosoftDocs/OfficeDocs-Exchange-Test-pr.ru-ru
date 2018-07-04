@@ -39,18 +39,8 @@ _**Последнее изменение раздела:** 2017-07-25_
     
         Get-OutlookAnywhere | Set-OutlookAnywhere -InternalHostname "internalServer.contoso.com" -InternalClientAuthenticationMethod Ntlm -InternalClientsRequireSsl $true -ExternalHostname "externalServer.company.com" -ExternalClientAuthenticationMethod Basic -ExternalClientsRequireSsl $true -IISAuthenticationMethods Negotiate,NTLM,Basic
     
-    <table>
-    <thead>
-    <tr class="header">
-    <th><img src="images/Bb124558.tip(EXCHG.150).gif" title="Совет" alt="Совет" />Совет.</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr class="odd">
-    <td>Хотя Exchange 2013 поддерживает Negotiate для проверки подлинности HTTP мобильного Outlook, это должно использоваться только если на всех серверах в среде запущен Exchange 2013.</td>
-    </tr>
-    </tbody>
-    </table>
+    > [!TIP]  
+    > Хотя Exchange 2013 поддерживает Negotiate для проверки подлинности HTTP мобильного Outlook, это должно использоваться только если на всех серверах в среде запущен Exchange 2013.
 
 
   - Чтобы настроить Exchange ActiveSync, выполните следующую команду.

@@ -19,18 +19,8 @@ _**Последнее изменение раздела:** 2013-02-14_
 
 В этом разделе описывается, как извлекать статистические данные об общедоступной папке, например отображаемое имя, время создания, последнего изменения пользователем и последнего доступа пользователей, а также размер элемента. Эти сведения можно использовать для принятия решений об удалении или сохранении общедоступных папок.
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>В Центре администрирования Exchange (EAC) можно просмотреть некоторые сведения о квотах и использовании для общедоступных папок, перейдя к разделу <strong>Общедоступные папки</strong> &gt; <strong>Правка</strong><img src="images/Bb124582.6f53ccb2-1f13-4c02-bea0-30690e6ea71d(EXCHG.150).gif" title="Значок редактирования" alt="Значок редактирования" /> &gt; <strong>Использование почтового ящика</strong>. Однако данные сведения являются неполными, поэтому для просмотра статистики общедоступных папок рекомендуется использовать командную консоль.</td>
-</tr>
-</tbody>
-</table>
+> [!NOTE]  
+> В Центре администрирования Exchange (EAC) можно просмотреть некоторые сведения о квотах и использовании для общедоступных папок, перейдя к разделу <strong>Общедоступные папки</strong> &gt; <strong>Правка</strong><img src="images/Bb124582.6f53ccb2-1f13-4c02-bea0-30690e6ea71d(EXCHG.150).gif" title="Значок редактирования" alt="Значок редактирования" /> &gt; <strong>Использование почтового ящика</strong>. Однако данные сведения являются неполными, поэтому для просмотра статистики общедоступных папок рекомендуется использовать командную консоль.
 
 
 Дополнительные сведения о задачах, связанных с управлением общедоступными папками, см. в разделе [Процедуры с общедоступными папками](public-folder-procedures-exchange-2013-help.md).
@@ -47,18 +37,8 @@ _**Последнее изменение раздела:** 2013-02-14_
 
   - Сочетания клавиш для процедур, описанных в этой статье, приведены в статье [Сочетания клавиш в Центре администрирования Exchange](keyboard-shortcuts-in-the-exchange-admin-center-exchange-online-protection-help.md).
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Bb124558.tip(EXCHG.150).gif" title="Совет" alt="Совет" />Совет.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.</td>
-</tr>
-</tbody>
-</table>
+> [!TIP]  
+> Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.
 
 
 ## Что необходимо сделать?
@@ -69,18 +49,8 @@ _**Последнее изменение раздела:** 2013-02-14_
 
     Get-PublicFolderStatistics -Identity \Marketing | Format-List
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>В значении параметра <em>Identity</em> необходимо указать путь к общедоступной папке. Например, если общая папка &quot;Маркетинг&quot; расположена в родительской папке &quot;Бизнес&quot;, необходимо использовать следующее значение: <code>\Business\Marketing</code></td>
-</tr>
-</tbody>
-</table>
+> [!NOTE]  
+> В значении параметра <em>Identity</em> необходимо указать путь к общедоступной папке. Например, если общая папка &quot;Маркетинг&quot; расположена в родительской папке &quot;Бизнес&quot;, необходимо использовать следующее значение: <code>\Business\Marketing</code>
 
 
 Подробные сведения о синтаксисе и параметрах см. в разделе [Get-PublicFolderStatistics](https://technet.microsoft.com/ru-ru/library/aa998663\(v=exchg.150\)).

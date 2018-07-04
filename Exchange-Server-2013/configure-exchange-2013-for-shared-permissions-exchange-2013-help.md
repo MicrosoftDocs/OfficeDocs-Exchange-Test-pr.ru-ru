@@ -61,18 +61,8 @@ _**Последнее изменение раздела:** 2015-04-07_
 
   - Сочетания клавиш для процедур, описанных в этой статье, приведены в статье [Сочетания клавиш в Центре администрирования Exchange](keyboard-shortcuts-in-the-exchange-admin-center-exchange-online-protection-help.md).
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Bb124558.tip(EXCHG.150).gif" title="Совет" alt="Совет" />Совет.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.</td>
-</tr>
-</tbody>
-</table>
+> [!TIP]  
+> Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.
 
 
 ## Что необходимо сделать?
@@ -92,18 +82,8 @@ _**Последнее изменение раздела:** 2015-04-07_
         New-ManagementRoleAssignment -Role "Mail Recipient Creation" -SecurityGroup "Organization Management" -Delegating
         New-ManagementRoleAssignment -Role "Security Group Creation and Membership" -SecurityGroup "Organization Management" -Delegating
     
-    <table>
-    <thead>
-    <tr class="header">
-    <th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr class="odd">
-    <td>Группе ролей (в этой процедуре — группа ролей &quot;Администраторы Active Directory&quot;), имеющей назначения роли делегирования для ролей &quot;Создание получателей почты&quot; и &quot;Создание и членство в группе безопасности&quot;, необходимо назначить роль &quot;Управление ролями&quot; для запуска командлета <strong>New-ManagementRoleAssignment</strong>. Уполномоченный роли, имеющий разрешение на делегирование роли &quot;Управление ролями&quot;, должен назначить эту роль группе ролей &quot;Администраторы Active Directory&quot;.</td>
-    </tr>
-    </tbody>
-    </table>
+    > [!NOTE]  
+    > Группе ролей (в этой процедуре — группа ролей &quot;Администраторы Active Directory&quot;), имеющей назначения роли делегирования для ролей &quot;Создание получателей почты&quot; и &quot;Создание и членство в группе безопасности&quot;, необходимо назначить роль &quot;Управление ролями&quot; для запуска командлета <strong>New-ManagementRoleAssignment</strong>. Уполномоченный роли, имеющий разрешение на делегирование роли &quot;Управление ролями&quot;, должен назначить эту роль группе ролей &quot;Администраторы Active Directory&quot;.
 
 
 2.  Добавьте в группы ролей Управление организацией и Управление получателями назначения обычной роли для роли "Создание получателей почты" с помощью следующих команд:
@@ -121,18 +101,8 @@ _**Последнее изменение раздела:** 2015-04-07_
 
 Также можно удалить разрешения, предоставленные администраторам Active Directory, чтобы запретить им создавать или управлять объектами Active Directory с помощью средств управления Exchange. Чтобы удалить разрешения, предоставленные администраторам Active Directory, выполните эту процедуру.
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Можно удалить разрешения, предоставленные администраторам Active Directory, на управление объектами Active Directory с помощью средств управления Exchange, но администраторы Active Directory могут продолжать управлять объектами Active Directory с помощью средств управления Active Directory, если им это позволяют разрешения Active Directory. Тем не менее, они не смогут управлять определенными атрибутами Exchange объектов Active Directory. Дополнительные сведения см. в разделе <a href="understanding-split-permissions-exchange-2013-help.md">Общие сведения о разделенных разрешениях</a>.</td>
-</tr>
-</tbody>
-</table>
+> [!NOTE]  
+> Можно удалить разрешения, предоставленные администраторам Active Directory, на управление объектами Active Directory с помощью средств управления Exchange, но администраторы Active Directory могут продолжать управлять объектами Active Directory с помощью средств управления Active Directory, если им это позволяют разрешения Active Directory. Тем не менее, они не смогут управлять определенными атрибутами Exchange объектов Active Directory. Дополнительные сведения см. в разделе <a href="understanding-split-permissions-exchange-2013-help.md">Общие сведения о разделенных разрешениях</a>.
 
 
 Чтобы удалить разделение разрешений, связанное с Exchange, для администраторов Active Directory, выполните следующие действия.
@@ -155,18 +125,8 @@ _**Последнее изменение раздела:** 2015-04-07_
 
 Чтобы переключиться из режима разделения разрешений Active Directory в режим разрешений общего доступа Exchange 2013, необходимо повторно запустить программу установки Exchange, чтобы отключить режим разделения разрешений Active Directory в организации Exchange, а затем создать назначения ролей между группой ролей и ролями "Создание получателей почты" и "Создание и членство в группе безопасности". В конфигурации разрешений общего доступа по умолчанию группа ролей Управление организацией содержит все эти роли. Поэтому группа ролей Управление организацией включена в эту процедуру.
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Dd876857.important(EXCHG.150).gif" title="Важно" alt="Важно" />Важно!</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Команда setup.com в этой процедуре вносит изменения в службу каталогов Active Directory. Необходимо использовать учетную запись с разрешениями, требуемыми для выполнения таких изменений. Такая учетная запись может отличаться от учетной записи с разрешениями на создание назначений ролей с помощью командлета <strong>New-ManagementRoleAssignment</strong>. Используйте такую учетную запись (или записи) с разрешениями, необходимыми для успешного выполнения каждого шага этой процедуры.</td>
-</tr>
-</tbody>
-</table>
+> [!IMPORTANT]  
+> Команда setup.com в этой процедуре вносит изменения в службу каталогов Active Directory. Необходимо использовать учетную запись с разрешениями, требуемыми для выполнения таких изменений. Такая учетная запись может отличаться от учетной записи с разрешениями на создание назначений ролей с помощью командлета <strong>New-ManagementRoleAssignment</strong>. Используйте такую учетную запись (или записи) с разрешениями, необходимыми для успешного выполнения каждого шага этой процедуры.
 
 
 Чтобы переключиться из режима разделения разрешений Active Directory в режим разрешений общего доступа, выполните следующие действия.
@@ -183,18 +143,8 @@ _**Последнее изменение раздела:** 2015-04-07_
 
 3.  Перезагрузите серверы Exchange 2013 в организации.
     
-    <table>
-    <thead>
-    <tr class="header">
-    <th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr class="odd">
-    <td>Если в организации есть серверы Exchange 2010, их также нужно перезагрузить.</td>
-    </tr>
-    </tbody>
-    </table>
+    > [!NOTE]  
+    > Если в организации есть серверы Exchange 2010, их также нужно перезагрузить.
 
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [New-ManagementRoleAssignment](https://technet.microsoft.com/ru-ru/library/dd335193\(v=exchg.150\)).

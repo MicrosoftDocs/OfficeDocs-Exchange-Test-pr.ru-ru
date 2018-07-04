@@ -19,18 +19,8 @@ _**Последнее изменение раздела:** 2013-02-04_
 
 Так как Центр администрирования Exchange в Exchange Server 2013 — это веб-консоль управления, для доступа к нему нужно ввести в веб-браузере URL-адрес виртуального каталога ECP. В этом разделе описывается, как найти этот URL-адрес.
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Панель управления Exchange (ECP) — это веб-интерфейс пользователя, разработанный для Exchange Server 2010. В именах командлетов Центра администрирования Exchange, предназначенных для работы с виртуальными каталогами, по-прежнему используется слово &quot;ECP&quot;. С их помощью можно управлять виртуальными каталогами ECP Exchange 2010 и Exchange 2013.</td>
-</tr>
-</tbody>
-</table>
+> [!NOTE]  
+> Панель управления Exchange (ECP) — это веб-интерфейс пользователя, разработанный для Exchange Server 2010. В именах командлетов Центра администрирования Exchange, предназначенных для работы с виртуальными каталогами, по-прежнему используется слово &quot;ECP&quot;. С их помощью можно управлять виртуальными каталогами ECP Exchange 2010 и Exchange 2013.
 
 
 Дополнительные сведения о Центре администрирования Exchange см. в разделе [Центр администрирования Exchange в Exchange 2013](exchange-admin-center-in-exchange-2013-exchange-2013-help.md).
@@ -45,18 +35,8 @@ _**Последнее изменение раздела:** 2013-02-04_
 
   - Сочетания клавиш для процедур, описанных в этой статье, приведены в статье [Сочетания клавиш в Центре администрирования Exchange](keyboard-shortcuts-in-the-exchange-admin-center-exchange-online-protection-help.md).
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Bb124558.tip(EXCHG.150).gif" title="Совет" alt="Совет" />Совет.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.</td>
-</tr>
-</tbody>
-</table>
+> [!TIP]  
+> Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.
 
 
 ## Определение внутреннего и внешнего URL-адресов для виртуального каталога ECP с помощью командной консоли

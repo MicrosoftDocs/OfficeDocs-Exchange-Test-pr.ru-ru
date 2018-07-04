@@ -19,18 +19,8 @@ _**Последнее изменение раздела:** 2013-02-06_
 
 Пользователи каждый день носят в своих карманах конфиденциальные корпоративные данные. Если один из них потеряет свой мобильный телефон, ваши данные могут попасть в чужие руки. Если один из пользователей потеряет свой мобильный телефон, можно использовать Центр администрирования Exchange (EAC) или командную консоль Exchange, чтобы удалить с телефона все корпоративные данные и данные пользователя.
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>В этом разделе также приведены инструкции по выполнению удаленной очистки телефона с помощью МайкрософтOutlook Web App. Для выполнения удаленной очистки пользователю необходимо выполнить вход в Outlook Web App.</td>
-</tr>
-</tbody>
-</table>
+> [!NOTE]  
+> В этом разделе также приведены инструкции по выполнению удаленной очистки телефона с помощью МайкрософтOutlook Web App. Для выполнения удаленной очистки пользователю необходимо выполнить вход в Outlook Web App.
 
 
 ## Что нужно знать перед началом работы
@@ -43,18 +33,8 @@ _**Последнее изменение раздела:** 2013-02-06_
 
   - Сочетания клавиш для процедур, описанных в этой статье, приведены в статье [Сочетания клавиш в Центре администрирования Exchange](keyboard-shortcuts-in-the-exchange-admin-center-exchange-online-protection-help.md).
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Bb124558.tip(EXCHG.150).gif" title="Совет" alt="Совет" />Совет.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>..</td>
-</tr>
-</tbody>
-</table>
+> [!TIP]  
+> Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>..
 
 
 ## Что необходимо сделать?

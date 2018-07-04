@@ -45,18 +45,8 @@ _**Последнее изменение раздела:** 2016-07-21_
 
   - Сочетания клавиш для процедур, описанных в этой статье, приведены в статье [Сочетания клавиш в Центре администрирования Exchange](keyboard-shortcuts-in-the-exchange-admin-center-exchange-online-protection-help.md).
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Bb124558.tip(EXCHG.150).gif" title="Совет" alt="Совет" />Совет.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>..</td>
-</tr>
-</tbody>
-</table>
+> [!TIP]  
+> Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>..
 
 
 ## Что необходимо сделать?
@@ -87,18 +77,8 @@ _**Последнее изменение раздела:** 2016-07-21_
 
 В данном примере удаляется добавочный номер 12345 из почтового ящика пользователя единой системы обмена сообщениями Tony Smith.
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Прежде чем удалить добавочный номер с помощью командной консоли, необходимо определить положение прокси-адреса, который требуется изменить. Чтобы определить позицию, используйте команду <strong>$mbx.EmailAddresses</strong>. Первый в списке прокси-адрес имеет значение 0.</td>
-</tr>
-</tbody>
-</table>
+> [!NOTE]  
+> Прежде чем удалить добавочный номер с помощью командной консоли, необходимо определить положение прокси-адреса, который требуется изменить. Чтобы определить позицию, используйте команду <strong>$mbx.EmailAddresses</strong>. Первый в списке прокси-адрес имеет значение 0.
 
 
     $mbx = Get-Mailbox tony.smith

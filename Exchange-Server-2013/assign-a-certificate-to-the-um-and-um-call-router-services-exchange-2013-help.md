@@ -21,18 +21,8 @@ _**Последнее изменение раздела:** 2013-04-29_
 
 Различные службы имеют различные требования к сертификатам. Например, для некоторых служб в полях сертификата **Имя субъекта** или **Дополнительное имя субъекта** необходимо только имя сервера, в то время как для других служб может потребоваться полное доменное имя. Убедитесь, что имя сертификата может поддерживать требования всех служб, для которых включено использование этого сертификата.
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Dd876857.Caution(EXCHG.150).gif" title="Внимание!" alt="Внимание!" />Внимание!</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Самозаверяющие сертификаты нельзя использовать при интеграции единой системы обмена сообщениями с Microsoft Lync Server.</td>
-</tr>
-</tbody>
-</table>
+> [!CAUTION]  
+> Самозаверяющие сертификаты нельзя использовать при интеграции единой системы обмена сообщениями с Microsoft Lync Server.
 
 
 Дополнительные сведения о задачах, связанных с управлением сертификатами для единой системы обмена сообщениями, см. в разделе [Развертывание сертификатов для единой системы обмена СООБЩЕНИЯМИ процедур](deploying-certificates-for-um-procedures-exchange-2013-help.md).
@@ -45,18 +35,8 @@ _**Последнее изменение раздела:** 2013-04-29_
 
   - Сочетания клавиш для процедур, описанных в этой статье, приведены в статье [Сочетания клавиш в Центре администрирования Exchange](keyboard-shortcuts-in-the-exchange-admin-center-exchange-online-protection-help.md).
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Bb124558.tip(EXCHG.150).gif" title="Совет" alt="Совет" />Совет.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>..</td>
-</tr>
-</tbody>
-</table>
+> [!TIP]  
+> Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>..
 
 
 ## Что необходимо сделать?

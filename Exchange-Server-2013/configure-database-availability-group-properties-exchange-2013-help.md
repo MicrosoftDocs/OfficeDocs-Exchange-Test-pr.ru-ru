@@ -37,18 +37,8 @@ _**Последнее изменение раздела:** 2014-06-24_
 
   - Сочетания клавиш для процедур, описанных в этой статье, приведены в статье [Сочетания клавиш в Центре администрирования Exchange](keyboard-shortcuts-in-the-exchange-admin-center-exchange-online-protection-help.md).
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Bb124558.tip(EXCHG.150).gif" title="Совет" alt="Совет" />Совет.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>..</td>
-</tr>
-</tbody>
-</table>
+> [!TIP]  
+> Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>..
 
 
 ## Что необходимо сделать?
@@ -115,18 +105,8 @@ _**Последнее изменение раздела:** 2014-06-24_
 
     Set-DatabaseAvailabilityGroup -Identity DAG1 -ReplicationPort 63132
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>После изменения порта репликации по умолчанию для группы доступности базы данных необходимо вручную изменить исключения брандмауэра Windows для каждого участника группы DAG, чтобы разрешить подключение через указанный порт.</td>
-</tr>
-</tbody>
-</table>
+> [!NOTE]  
+> После изменения порта репликации по умолчанию для группы доступности базы данных необходимо вручную изменить исключения брандмауэра Windows для каждого участника группы DAG, чтобы разрешить подключение через указанный порт.
 
 
 ## Как проверить, что все получилось?

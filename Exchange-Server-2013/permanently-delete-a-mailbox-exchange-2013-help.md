@@ -31,18 +31,8 @@ _**Последнее изменение раздела:** 2012-11-16_
 
   - [Подключение или восстановление удаленного почтового ящика](connect-or-restore-a-deleted-mailbox-exchange-2013-help.md)
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Нельзя использовать EAC для окончательного удаления активного почтового ящика или отключенного почтового ящика.</td>
-</tr>
-</tbody>
-</table>
+> [!NOTE]  
+> Нельзя использовать EAC для окончательного удаления активного почтового ящика или отключенного почтового ящика.
 
 
 ## Что нужно знать перед началом работы?
@@ -53,18 +43,8 @@ _**Последнее изменение раздела:** 2012-11-16_
 
   - Сочетания клавиш для процедур, описанных в этой статье, приведены в статье [Сочетания клавиш в Центре администрирования Exchange](keyboard-shortcuts-in-the-exchange-admin-center-exchange-online-protection-help.md).
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Bb124558.tip(EXCHG.150).gif" title="Совет" alt="Совет" />Совет.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>..</td>
-</tr>
-</tbody>
-</table>
+> [!TIP]  
+> Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>..
 
 
 ## Что необходимо сделать?
@@ -77,18 +57,8 @@ _**Последнее изменение раздела:** 2012-11-16_
 
     Remove-Mailbox -Identity <identity> -Permanent $true
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Если не включить параметр <em>Permanent</em>, удаленный почтовый ящик остается в базе данных почтовых ящиков на 30 дней по умолчанию, прежде чем будет окончательно удален.</td>
-</tr>
-</tbody>
-</table>
+> [!NOTE]  
+> Если не включить параметр <em>Permanent</em>, удаленный почтовый ящик остается в базе данных почтовых ящиков на 30 дней по умолчанию, прежде чем будет окончательно удален.
 
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Remove-Mailbox](https://technet.microsoft.com/ru-ru/library/aa995948\(v=exchg.150\)).
@@ -123,18 +93,8 @@ _**Последнее изменение раздела:** 2012-11-16_
 
     Get-MailboxDatabase | Get-MailboxStatistics | Where { $_.DisconnectReason -ne $null } | fl DisplayName,MailboxGuid,Database,DisconnectReason
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/JJ983803.warning(EXCHG.150).gif" title="Предупреждение" alt="Предупреждение" />Предупреждение.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>При использовании командлета <strong>Remove-StoreMailbox</strong> для очистки отключенного почтового ящика и всего его содержимого из базы данных почтовых ящиков происходит окончательная потеря данных.</td>
-</tr>
-</tbody>
-</table>
+> [!WARNING]  
+> При использовании командлета <strong>Remove-StoreMailbox</strong> для очистки отключенного почтового ящика и всего его содержимого из базы данных почтовых ящиков происходит окончательная потеря данных.
 
 
 В этом примере окончательно удаляется отключенный почтовый ящик с идентификатором GUID 2ab32ce3-fae1-4402-9489-c67e3ae173d3 из базы данных почтовых ящиков MBD01.

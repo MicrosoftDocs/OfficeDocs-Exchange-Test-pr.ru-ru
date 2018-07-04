@@ -85,18 +85,8 @@ _**Последнее изменение раздела:** 2014-02-21_
 
     New-SendConnector -Name "EdgeSync - Site-A to Internet" -Usage Custom -AddressSpaces SMTP:*;100 -DNSRoutingEnabled $false -SmartHosts 192.168.10.1 -SmartHostAuthMechanism None -SourceTransportServers EdgeSubscriptionName
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Dd876857.important(EXCHG.150).gif" title="Важно" alt="Важно" />Важно!</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>В этом примере не задан способ проверки подлинности промежуточного узла. При создании соединителя промежуточного узла в организации Exchange проверьте правильность настройки способа проверки подлинности и наличие всех необходимых учетных данных.</td>
-</tr>
-</tbody>
-</table>
+> [!IMPORTANT]  
+> В этом примере не задан способ проверки подлинности промежуточного узла. При создании соединителя промежуточного узла в организации Exchange проверьте правильность настройки способа проверки подлинности и наличие всех необходимых учетных данных.
 
 
 ## Настройка соединителей отправки для доменов внешней ретрансляции

@@ -23,27 +23,14 @@ _**Последнее изменение раздела:** 2016-12-09_
 
 Если вы не введете ключ продукта, сервер будет автоматически лицензирован как пробный выпуск. Он будет работать так же, как сервер Exchange Standard Edition, и позволяет изучить Exchange перед покупкой или выполнить тесты в лабораторной среде. Единственное отличие состоит в том, что сервер Exchange, лицензированный как пробный выпуск, можно использовать не больше 180 дней. Если вы хотите использовать сервер после истечения этого срока, необходимо ввести ключ продукта, иначе в Центре администрирования Exchange (EAC) будут появляться напоминания о том, что необходимо ввести ключ продукта для лицензирования сервера.
 
-<table>
-<colgroup>
-<col style="width: 100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><img src="images/Bb124558.tip(EXCHG.150).gif" title="Совет" alt="Совет" />Совет.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Мы заметили, что некоторые посетители этой страницы ищут информацию об установке или активации Office. Если вы в их числе, изучите следующие страницы:
+> [!TIP]  
+> Мы заметили, что некоторые посетители этой страницы ищут информацию об установке или активации Office. Если вы в их числе, изучите следующие страницы:
 <ul>
 <li><p><a href="http://go.microsoft.com/fwlink/p/?linkid=403360">Установка Office</a></p></li>
 <li><p><a href="http://go.microsoft.com/fwlink/p/?linkid=403361">Нужна помощь с ключом продукта Office?</a></p></li>
 </ul>
 Если вы хотите ввести ключ продукта на сервере Exchange 2010, см. статью <a href="http://go.microsoft.com/fwlink/p/?linkid=403370">Ввод ключа продукта Exchange 2010</a>.<br />
-Если вы хотите ввести ключ продукта на сервере Exchange 2013, вы попали в нужное место, читайте дальше.</td>
-</tr>
-</tbody>
-</table>
+Если вы хотите ввести ключ продукта на сервере Exchange 2013, вы попали в нужное место, читайте дальше.
 
 
 ## Что нужно знать перед началом работы
@@ -60,18 +47,8 @@ _**Последнее изменение раздела:** 2016-12-09_
 
   - Сочетания клавиш для процедур, описанных в этой статье, приведены в статье [Сочетания клавиш в Центре администрирования Exchange](keyboard-shortcuts-in-the-exchange-admin-center-exchange-online-protection-help.md).
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Bb124558.tip(EXCHG.150).gif" title="Совет" alt="Совет" />Совет.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.</td>
-</tr>
-</tbody>
-</table>
+> [!TIP]  
+> Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.
 
 
 ## Что необходимо сделать?
@@ -100,18 +77,8 @@ _**Последнее изменение раздела:** 2016-12-09_
 
 В этом примере для ввода ключа продукта используется командлет **set-ExchangeServer**.
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Можно снова выполнить эту команду на том же сервере, чтобы обновить его лицензию Standard Edition до лицензии Enterprise Edition.</td>
-</tr>
-</tbody>
-</table>
+> [!NOTE]  
+> Можно снова выполнить эту команду на том же сервере, чтобы обновить его лицензию Standard Edition до лицензии Enterprise Edition.
 
 
     Set-ExchangeServer ExServer01 -ProductKey aaaaa-aaaaa-aaaaa-aaaaa-aaaaa

@@ -46,18 +46,9 @@ _**Последнее изменение раздела:** 2016-12-15_
 <li><p>Установите для параметра <strong>Тип запуска</strong> значение <strong>Отключено</strong>. При следующем запуске компьютера служба соединителей Active Directory не запустится.</p></li>
 <li><p>Нажмите кнопку <strong>Применить</strong>, а затем — кнопку <strong>ОК</strong>.</p></li>
 <li><p>Чтобы удалить службу соединителей Active Directorty, используйте мастер установки Active Directory на компакт-диске с Microsoft Exchange 2000 Server или Microsoft Exchange Server 2003. Откройте папку \ADC\I386 и дважды щелкните значок программы Setup.exe. Следуйте инструкциям, чтобы <strong>Удалить все</strong> компоненты службы соединителей Active Directory.</p>
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Dd876857.important(EXCHG.150).gif" title="Важно" alt="Важно" />Важно!</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Чтобы устранить проблему, необходимо выполнить шаг 6 и <strong>Удалить все</strong> компоненты соединителей Active Directory. Недостаточно просто отключить службу соединителей Active Directory.</td>
-</tr>
-</tbody>
-</table>
+
+> [!IMPORTANT]  
+> Чтобы устранить проблему, необходимо выполнить шаг 6 и <strong>Удалить все</strong> компоненты соединителей Active Directory. Недостаточно просто отключить службу соединителей Active Directory.
 
 </li>
 </ol></td>

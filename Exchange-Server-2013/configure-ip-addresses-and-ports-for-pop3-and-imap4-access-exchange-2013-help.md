@@ -19,18 +19,8 @@ _**Последнее изменение раздела:** 2012-11-28_
 
 Можно использовать командную консоль и EAC для настройки служб POP3 и IMAP4 Microsoft Exchange для использования IP-адресов и портов, отличных от параметров по умолчанию.
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Введите IP-адреса и диапазоны IP-адресов в формате IPv4, IPv6 или и в том, и в другом формате. Если система Windows Server 2008 установлена в конфигурации по умолчанию, поддержка протоколов IP версии 4 и IP версии 6 включена.</td>
-</tr>
-</tbody>
-</table>
+> [!NOTE]  
+> Введите IP-адреса и диапазоны IP-адресов в формате IPv4, IPv6 или и в том, и в другом формате. Если система Windows Server 2008 установлена в конфигурации по умолчанию, поддержка протоколов IP версии 4 и IP версии 6 включена.
 
 
 Дополнительные сведения относительно POP3 и IMAP4 см. в разделе [POP3 и IMAP4 в Exchange Server 2013](pop3-and-imap4-in-exchange-server-2013-exchange-2013-help.md).
@@ -43,18 +33,8 @@ _**Последнее изменение раздела:** 2012-11-28_
 
   - Сочетания клавиш для процедур, описанных в этой статье, приведены в статье [Сочетания клавиш в Центре администрирования Exchange](keyboard-shortcuts-in-the-exchange-admin-center-exchange-online-protection-help.md).
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Bb124558.tip(EXCHG.150).gif" title="Совет" alt="Совет" />Совет.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>..</td>
-</tr>
-</tbody>
-</table>
+> [!TIP]  
+> Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>..
 
 
 ## Что необходимо сделать?

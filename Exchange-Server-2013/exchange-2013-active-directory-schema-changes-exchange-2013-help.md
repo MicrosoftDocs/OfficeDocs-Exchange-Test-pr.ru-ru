@@ -55,19 +55,9 @@ _**Последнее изменение раздела:** 2016-05-18_
 </table>
 
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Изменения схемы Active Directory, указанные в этой статье, могут не относиться ко всем выпускам версии Exchange Server.<br />
-Чтобы проверить, что служба каталогов Active Directory успешно подготовлена к работе, см. раздел &quot;Как проверить, что все получилось?&quot; в статье <a href="prepare-active-directory-and-domains-exchange-2013-help.md">Подготовка Active Directory и доменов</a>.</td>
-</tr>
-</tbody>
-</table>
+> [!NOTE]  
+> Изменения схемы Active Directory, указанные в этой статье, могут не относиться ко всем выпускам версии Exchange Server.<br />
+Чтобы проверить, что служба каталогов Active Directory успешно подготовлена к работе, см. раздел &quot;Как проверить, что все получилось?&quot; в статье <a href="prepare-active-directory-and-domains-exchange-2013-help.md">Подготовка Active Directory и доменов</a>.
 
 
 Данный документ включает разделы, указанные ниже.

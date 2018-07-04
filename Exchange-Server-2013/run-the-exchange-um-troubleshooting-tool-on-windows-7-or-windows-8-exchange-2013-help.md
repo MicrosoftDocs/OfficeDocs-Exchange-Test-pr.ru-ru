@@ -51,34 +51,14 @@ _**Последнее изменение раздела:** 2016-12-09_
     
       - Установите это средство. Дополнительные сведения см. в разделе [Установка средства устранения неполадок единой системы обмена сообщениями Exchange](install-the-exchange-um-troubleshooting-tool-exchange-2013-help.md).
         
-        <table>
-        <thead>
-        <tr class="header">
-        <th><img src="images/Dd876857.important(EXCHG.150).gif" title="Важно" alt="Важно" />Важно!</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr class="odd">
-        <td>Если будет использоваться единой системы обмена СООБЩЕНИЯМИ средство устранения неполадок в режиме <code>SIPClient</code> , существует несколько других Office Communications Server 2007 R2 или Lync Server Майкрософт требования и предварительные условия, которые должны быть выполнены. Дополнительные сведения можно <a href="https://go.microsoft.com/fwlink/p/?linkid=311961">Контрольный список: развертывание Office Communications Server 2007 R2 и единой системы обмена сообщениями Exchange 2010</a>.</td>
-        </tr>
-        </tbody>
-        </table>
+        > [!IMPORTANT]  
+        > Если будет использоваться единой системы обмена СООБЩЕНИЯМИ средство устранения неполадок в режиме <code>SIPClient</code> , существует несколько других Office Communications Server 2007 R2 или Lync Server Майкрософт требования и предварительные условия, которые должны быть выполнены. Дополнительные сведения можно <a href="https://go.microsoft.com/fwlink/p/?linkid=311961">Контрольный список: развертывание Office Communications Server 2007 R2 и единой системы обмена сообщениями Exchange 2010</a>.
 
 
   - Сочетания клавиш для процедур, описанных в этой статье, приведены в статье [Сочетания клавиш в Центре администрирования Exchange](keyboard-shortcuts-in-the-exchange-admin-center-exchange-online-protection-help.md).
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Bb124558.tip(EXCHG.150).gif" title="Совет" alt="Совет" />Совет.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>..</td>
-</tr>
-</tbody>
-</table>
+> [!TIP]  
+> Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>..
 
 
 ## Запуск средства устранения неполадок единой системы обмена сообщениями в Windows Vista, Windows 7 или Windows 8

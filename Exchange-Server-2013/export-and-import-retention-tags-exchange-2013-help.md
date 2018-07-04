@@ -27,19 +27,9 @@ _**Последнее изменение раздела:** 2017-11-15_
 
 В этих сценариях помощник для управляемых папок может правильно обработать элемент с применяемым тегом хранения после того, как элемент или почтовый ящик будет перенесен в другую организацию.
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Dd876857.Caution(EXCHG.150).gif" title="Внимание!" alt="Внимание!" />Внимание!</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Чтобы синхронизировать теги и политики хранения между двумя организациями, при каждом изменении тега или политики хранения в исходной организации необходимо выполнить эту процедуру для экспорта тегов и политик хранения из исходной организации и их импорта в целевую организацию.<br />
-Для экспорта невозможно выбрать конкретные теги или политики хранения. Сценарий Export-RetentionTags.ps1 экспортирует все теги и политики хранения из организации.</td>
-</tr>
-</tbody>
-</table>
+> [!CAUTION]  
+> Чтобы синхронизировать теги и политики хранения между двумя организациями, при каждом изменении тега или политики хранения в исходной организации необходимо выполнить эту процедуру для экспорта тегов и политик хранения из исходной организации и их импорта в целевую организацию.<br />
+Для экспорта невозможно выбрать конкретные теги или политики хранения. Сценарий Export-RetentionTags.ps1 экспортирует все теги и политики хранения из организации.
 
 
 Дополнительные задачи управления, связанные с управлением записями сообщений (MRM), см. в разделе [Процедуры управления записями сообщений](messaging-records-management-procedures-exchange-2013-help.md).
@@ -62,18 +52,8 @@ _**Последнее изменение раздела:** 2017-11-15_
 
   - Сочетания клавиш для процедур, описанных в этой статье, приведены в статье [Сочетания клавиш в Центре администрирования Exchange](keyboard-shortcuts-in-the-exchange-admin-center-exchange-online-protection-help.md).
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Bb124558.tip(EXCHG.150).gif" title="Совет" alt="Совет" />Совет.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.</td>
-</tr>
-</tbody>
-</table>
+> [!TIP]  
+> Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.
 
 
 ## Шаг 1. Экспорт тегов хранения из локальной организации Exchange
@@ -84,18 +64,8 @@ _**Последнее изменение раздела:** 2017-11-15_
 
 2.  Для экспорта тегов хранения в XML-файл выполните сценарий Export-RetentionTags.ps1.
     
-    <table>
-    <thead>
-    <tr class="header">
-    <th><img src="images/Dd876857.important(EXCHG.150).gif" title="Важно" alt="Важно" />Важно!</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr class="odd">
-    <td>При импорте или экспорте тегов и политик сохранения в Exchange Online необходимо подключить свой сеанс Windows PowerShell к Exchange Online. Подробнее: <a href="https://technet.microsoft.com/ru-ru/library/jj984289(v=exchg.150)">Подключение к Exchange Online с помощью удаленной оболочки PowerShell</a>.</td>
-    </tr>
-    </tbody>
-    </table>
+    > [!IMPORTANT]  
+    > При импорте или экспорте тегов и политик сохранения в Exchange Online необходимо подключить свой сеанс Windows PowerShell к Exchange Online. Подробнее: <a href="https://technet.microsoft.com/ru-ru/library/jj984289(v=exchg.150)">Подключение к Exchange Online с помощью удаленной оболочки PowerShell</a>.
     
         .\Export-RetentionTags.ps1 "c:\docs\ExportedRetentionTags.xml"
 
@@ -115,31 +85,11 @@ _**Последнее изменение раздела:** 2017-11-15_
 
 2.  Для импорта тегов хранения из ранее экспортированного XML-файла выполните сценарий Import-RetentionTags.ps1.
     
-    <table>
-    <thead>
-    <tr class="header">
-    <th><img src="images/Dd876857.important(EXCHG.150).gif" title="Важно" alt="Важно" />Важно!</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr class="odd">
-    <td>При импорте или экспорте тегов и политик сохранения в Exchange Online необходимо подключить свой сеанс Windows PowerShell к Exchange Online. Подробнее: <a href="https://technet.microsoft.com/ru-ru/library/jj984289(v=exchg.150)">Подключение к Exchange Online с помощью удаленной оболочки PowerShell</a>.</td>
-    </tr>
-    </tbody>
-    </table>
+    > [!IMPORTANT]  
+    > При импорте или экспорте тегов и политик сохранения в Exchange Online необходимо подключить свой сеанс Windows PowerShell к Exchange Online. Подробнее: <a href="https://technet.microsoft.com/ru-ru/library/jj984289(v=exchg.150)">Подключение к Exchange Online с помощью удаленной оболочки PowerShell</a>.
     
-    <table>
-    <thead>
-    <tr class="header">
-    <th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr class="odd">
-    <td>При выполнении этого сценария для службы Exchange Online может потребоваться подтвердить запуск программного обеспечения, предоставленного ненадежным издателем. Убедитесь, что имя издателя отображается как <code>CN=Microsoft Corporation, OU=MOPR, O=Microsoft Corporation, L=Redmond, S=Washington, C=US</code>, а затем выберите <strong>R</strong>, чтобы выполнить сценарий один раз, или <strong>A</strong>, чтобы выполнять его всегда.</td>
-    </tr>
-    </tbody>
-    </table>
+    > [!NOTE]  
+    > При выполнении этого сценария для службы Exchange Online может потребоваться подтвердить запуск программного обеспечения, предоставленного ненадежным издателем. Убедитесь, что имя издателя отображается как <code>CN=Microsoft Corporation, OU=MOPR, O=Microsoft Corporation, L=Redmond, S=Washington, C=US</code>, а затем выберите <strong>R</strong>, чтобы выполнить сценарий один раз, или <strong>A</strong>, чтобы выполнять его всегда.
     
         .\Import-RetentionTags.ps1 "c:\docs\ExportedRetentionTags.xml"
 

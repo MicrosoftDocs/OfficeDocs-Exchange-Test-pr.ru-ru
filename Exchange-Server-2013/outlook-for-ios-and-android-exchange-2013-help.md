@@ -33,16 +33,6 @@ Outlook для iOS и Android поддерживает два типа пров�
 
 Для клиентов, у которых Exchange Server 2013 или Exchange Server 2016 выполняется в гибридной связи с Office 365, можно настроить использование гибридной современной проверки подлинности Outlook для iOS и Android. Дополнительные сведения см. в статье [Using hybrid Modern Authentication with Outlook for iOS and Android](using-hybrid-modern-authentication-with-outlook-for-ios-and-android-exchange-2013-help.md).
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Справку по использованию приложения на отдельных устройствах и информацию об устранении неполадок можно найти в <a href="https://support.office.com/ru-ru/article/outlook-for-ios-and-android-help-center-cd84214e-a5ac-4e95-9ea3-e07f78d0cde6">Центре справки по Outlook для iOS и Android</a>.</td>
-</tr>
-</tbody>
-</table>
+> [!NOTE]  
+> Справку по использованию приложения на отдельных устройствах и информацию об устранении неполадок можно найти в <a href="https://support.office.com/ru-ru/article/outlook-for-ios-and-android-help-center-cd84214e-a5ac-4e95-9ea3-e07f78d0cde6">Центре справки по Outlook для iOS и Android</a>.
 

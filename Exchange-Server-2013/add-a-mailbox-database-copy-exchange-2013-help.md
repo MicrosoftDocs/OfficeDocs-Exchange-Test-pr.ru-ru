@@ -39,32 +39,20 @@ _**Последнее изменение раздела:** 2012-10-30_
 
   - Сочетания клавиш для процедур, описанных в этой статье, приведены в статье [Сочетания клавиш в Центре администрирования Exchange](keyboard-shortcuts-in-the-exchange-admin-center-exchange-online-protection-help.md).
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Bb124558.tip(EXCHG.150).gif" title="Совет" alt="Совет" />Совет.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>..</td>
-</tr>
-</tbody>
-</table>
+> [!TIP]  
+> Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.. 
 
 
 ## Что необходимо сделать?
 
 ## Использование EAC для добавления копии базы данных почтовых ящиков
 
-1.  
-    
+1.      
     В Центре администрирования Exchange последовательно выберите пункты **Серверы** \> **Базы данных**.
 
 2.  Выберите базу данных, которую требуется скопировать, а затем нажмите кнопку ![Добавление копии базы данных](images/Dd298080.435c15ff-abf2-4de8-b280-f053db1afa13(EXCHG.150).gif "Добавление копии базы данных").
 
-3.  
-    
+3.      
     На странице **Добавление копии базы данных почтовых ящиков** щелкните **Обзор**, выберите сервер почтовых ящиков, на котором будет размещена копия базы данных, а затем щелкните **ОК**.
 
 4.  При необходимости настройте **Приоритет активации** для копии базы данных.
@@ -97,7 +85,7 @@ _**Последнее изменение раздела:** 2012-10-30_
 
   - В командной консоли выполните приведенную ниже команду, чтобы убедиться, что копия базы данных почтовых ящиков создана и работоспособна.
     
-        Get-MailboxDatabaseCopyStatus <DatabaseCopyName>
+    Get-MailboxDatabaseCopyStatus <DatabaseCopyName>
     
     Состояние самой копии и индекса содержимого должно быть указано как работоспособное.
 

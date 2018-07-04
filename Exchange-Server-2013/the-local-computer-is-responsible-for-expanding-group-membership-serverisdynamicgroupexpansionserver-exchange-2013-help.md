@@ -47,18 +47,8 @@ To resolve this issue, move distribution group expansion to another server and r
     
     4.  At the value box, click the **Browse** button to select the Bridgehead server that currently acting as the expansion server.
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>The following step is optional.</td>
-</tr>
-</tbody>
-</table>
+> [!NOTE]  
+> The following step is optional.
 
 
 1.  Click **Add Expression** to specify additional filter criteria. Only messages that meet all filter criteria will be displayed.

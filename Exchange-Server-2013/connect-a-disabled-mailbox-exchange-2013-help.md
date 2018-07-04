@@ -49,18 +49,8 @@ _**Последнее изменение раздела:** 2012-11-13_
 
   - Сочетания клавиш для процедур, описанных в этой статье, приведены в статье [Сочетания клавиш в Центре администрирования Exchange](keyboard-shortcuts-in-the-exchange-admin-center-exchange-online-protection-help.md).
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Bb124558.tip(EXCHG.150).gif" title="Совет" alt="Совет" />Совет.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>..</td>
-</tr>
-</tbody>
-</table>
+> [!TIP]  
+> Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>..
 
 
 ## Что необходимо сделать?
@@ -75,18 +65,8 @@ _**Последнее изменение раздела:** 2012-11-13_
     
     Появится список почтовых ящиков, которые были отключены на выбранном сервере Exchange Server в вашей организации Exchange.
     
-    <table>
-    <thead>
-    <tr class="header">
-    <th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr class="odd">
-    <td>Это список отключенных почтовых ящиков содержит выключенные почтовые ящики, удаленные почтовые ящики (в том числе с возможностью восстановления).</td>
-    </tr>
-    </tbody>
-    </table>
+    > [!NOTE]  
+    > Это список отключенных почтовых ящиков содержит выключенные почтовые ящики, удаленные почтовые ящики (в том числе с возможностью восстановления).
 
 
 3.  Щелкните выключенный почтовый ящик, который необходимо повторно подключить, а затем щелкните **Подключить**.
@@ -111,18 +91,8 @@ _**Последнее изменение раздела:** 2012-11-13_
 
     Connect-Mailbox -Identity "Corporate Shared Mailbox" -Database "Mailbox Database 03" -User "Corporate Shared Mailbox" -Alias corpshared -Shared
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Если не включать параметр <em>Alias</em> при запуске командлета <strong>Connect-Mailbox</strong>, то значение в параметре <em>User</em> или <em>LinkedMasterAccount</em> используется для создания псевдонима адреса электронной почты для заново подключаемого почтового ящика.</td>
-</tr>
-</tbody>
-</table>
+> [!NOTE]  
+> Если не включать параметр <em>Alias</em> при запуске командлета <strong>Connect-Mailbox</strong>, то значение в параметре <em>User</em> или <em>LinkedMasterAccount</em> используется для создания псевдонима адреса электронной почты для заново подключаемого почтового ящика.
 
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Connect-Mailbox](https://technet.microsoft.com/ru-ru/library/aa997878\(v=exchg.150\)).

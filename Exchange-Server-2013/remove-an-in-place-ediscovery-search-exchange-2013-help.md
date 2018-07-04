@@ -19,18 +19,8 @@ _**Последнее изменение раздела:** 2014-07-14_
 
 В Microsoft Exchange Server 2013 можно использовать для поиска содержимого почтовых ящиков обнаружение электронных данных на месте. Вы можете в любой момент удалить поиск с обнаружением электронных данных на месте. В этом случае результаты поиска удаляются из почтового ящика обнаружения.
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Dd876857.Caution(EXCHG.150).gif" title="Внимание!" alt="Внимание!" />Внимание!</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Удаление поиска на месте приводит к удалению любых результатов поиска, скопированных в почтовый ящик обнаружения.</td>
-</tr>
-</tbody>
-</table>
+> [!CAUTION]  
+> Удаление поиска на месте приводит к удалению любых результатов поиска, скопированных в почтовый ящик обнаружения.
 
 
 ## Что нужно знать перед началом работы
@@ -63,16 +53,6 @@ _**Последнее изменение раздела:** 2014-07-14_
 
   - Используйте командлет **Get-MailboxSearch**, чтобы получить поиски с обнаружением электронных данных на месте. Пример удаления получения поисков с обнаружением электронных данных на месте см. в подразделе "Примеры" в разделе [Get-MailboxSearch](https://technet.microsoft.com/ru-ru/library/dd351021\(v=exchg.150\)).
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Bb124558.tip(EXCHG.150).gif" title="Совет" alt="Совет" />Совет.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.</td>
-</tr>
-</tbody>
-</table>
+> [!TIP]  
+> Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.
 

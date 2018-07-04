@@ -31,34 +31,14 @@ _**Последнее изменение раздела:** 2013-03-15_
 
   - 
     
-    <table>
-    <thead>
-    <tr class="header">
-    <th><img src="images/Dd876857.Caution(EXCHG.150).gif" title="Внимание!" alt="Внимание!" />Внимание!</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr class="odd">
-    <td>Не выполняйте эту процедуру на пограничном транспортном сервере, который подписан на организацию Exchange с помощью EdgeSync. Вместо этого внесите изменения в транспортной службе на сервере почтовых ящиков. Эти изменения будут реплицированы на пограничный транспортный сервер при следующей синхронизации EdgeSync.</td>
-    </tr>
-    </tbody>
-    </table>
+    > [!CAUTION]  
+    > Не выполняйте эту процедуру на пограничном транспортном сервере, который подписан на организацию Exchange с помощью EdgeSync. Вместо этого внесите изменения в транспортной службе на сервере почтовых ящиков. Эти изменения будут реплицированы на пограничный транспортный сервер при следующей синхронизации EdgeSync.
 
 
   - Сочетания клавиш для процедур, описанных в этой статье, приведены в статье [Сочетания клавиш в Центре администрирования Exchange](keyboard-shortcuts-in-the-exchange-admin-center-exchange-online-protection-help.md).
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Bb124558.tip(EXCHG.150).gif" title="Совет" alt="Совет" />Совет.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.</td>
-</tr>
-</tbody>
-</table>
+> [!TIP]  
+> Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.
 
 
 ## Что необходимо сделать?
@@ -187,25 +167,12 @@ _**Последнее изменение раздела:** 2013-03-15_
 
     Set-TransportService Mailbox01 -ReceiveProtocolLogPath "D:\Hub Receive SMTP Log" -SendProtocolLogPath "D:\Hub Send SMTP Log" -ReceiveProtocolLogMaxFileSize 20MB -SendProtocolLogMaxFileSize 20MB -ReceiveProtocolLogMaxDirectorySize 400MB -SendProtocolLogMaxDirectorySize 400MB -ReceiveProtocolLogMaxAge 45.00:00:00 -SendProtocolLogMaxAge 45.00:00:00
 
-<table>
-<colgroup>
-<col style="width: 100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><ul>
+> [!NOTE]  
+> <ul>
 <li><p>Чтобы настроить параметры журнала протокола в транспортной службе почтовых ящиков на сервере почтовых ящиков, используйте командлет <strong>Set-MailboxTransportService</strong>. Чтобы настроить параметры журнала протокола в транспортной службе переднего плана на сервере клиентского доступа, используйте командлет <strong>Set-FrontEndTransportService</strong>.</p></li>
 <li><p>Если для параметра <em>SendProtocolLogPath</em> или <em>ReceiveProtocolLogPath</em> задано значение <code>$null</code>, то ведение журнала протокола будет отключено для всех соединителей отправки и получения на сервере. Однако установка значения <code>$null</code> для любого из этих параметров при включенном ведении журнала протокола для любых соединителей сервера, в том числе внутриорганизационного соединителя отправки или соединителя отправки доставки в почтовые ящики, приводит к выдаче ошибок журнала событий.</p></li>
 <li><p>Установка для параметров <em>ReceiveProtocolLogMaxAge</em> или <em>SendProtocolLogMaxAge</em> значения <code>00:00:00</code> предотвращает автоматическое удаление файлов журналов протокола по истечении срока хранения.</p></li>
-</ul></td>
-</tr>
-</tbody>
-</table>
+</ul>
 
 
 ## Как проверить, что все получилось?

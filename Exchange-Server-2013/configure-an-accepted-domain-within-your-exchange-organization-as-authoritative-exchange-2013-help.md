@@ -33,18 +33,8 @@ _**Последнее изменение раздела:** 2014-02-17_
 
   - Сочетания клавиш для процедур, описанных в этой статье, приведены в статье [Сочетания клавиш в Центре администрирования Exchange](keyboard-shortcuts-in-the-exchange-admin-center-exchange-online-protection-help.md).
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Bb124558.tip(EXCHG.150).gif" title="Совет" alt="Совет" />Совет.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.</td>
-</tr>
-</tbody>
-</table>
+> [!TIP]  
+> Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.
 
 
 ## Используйте центр администрирования Exchange для настройки обслуживаемого домена в качестве доверенного
@@ -61,18 +51,8 @@ _**Последнее изменение раздела:** 2014-02-17_
 
 5.  Нажмите кнопку **Сохранить**.
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Bb124558.tip(EXCHG.150).gif" title="Совет" alt="Совет" />Совет.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Чтобы настроить обслуживаемый домен, который уже был создан, выберите домен в списке обслуживаемых доменов и нажмите кнопку <strong>Изменить</strong><img src="images/Bb124582.6f53ccb2-1f13-4c02-bea0-30690e6ea71d(EXCHG.150).gif" title="Значок редактирования" alt="Значок редактирования" />. Можно настроить более одного домена в качестве доверенного.</td>
-</tr>
-</tbody>
-</table>
+> [!TIP]  
+> Чтобы настроить обслуживаемый домен, который уже был создан, выберите домен в списке обслуживаемых доменов и нажмите кнопку <strong>Изменить</strong><img src="images/Bb124582.6f53ccb2-1f13-4c02-bea0-30690e6ea71d(EXCHG.150).gif" title="Значок редактирования" alt="Значок редактирования" />. Можно настроить более одного домена в качестве доверенного.
 
 
 ## Как проверить, что все получилось?

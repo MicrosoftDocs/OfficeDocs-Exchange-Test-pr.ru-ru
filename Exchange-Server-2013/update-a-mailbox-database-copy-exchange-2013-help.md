@@ -49,18 +49,8 @@ _**Последнее изменение раздела:** 2012-11-02_
 
 Несколько копий базы данных могут быть заполнены одновременно. Но при одновременном заполнении нескольких копий необходимо заполнять только файл базы данных, пропуская каталог индекса содержимого. Для этого можно воспользоваться параметром *DatabaseOnly* командлета [Update-MailboxDatabaseCopy](https://technet.microsoft.com/ru-ru/library/dd335201\(v=exchg.150\)).
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Если при заполнении нескольких копий из одного источника параметр <em>DatabaseOnly</em> не используется, задача завершится неудачно с ошибкой SeedInProgressException FE1C6491.</td>
-</tr>
-</tbody>
-</table>
+> [!NOTE]  
+> Если при заполнении нескольких копий из одного источника параметр <em>DatabaseOnly</em> не используется, задача завершится неудачно с ошибкой SeedInProgressException FE1C6491.
 
 
 Сведения о других задачах управления, относящихся к копиям базы данных почтовых ящиков, см. в разделе [Управление копиями баз данных почтовых ящиков](managing-mailbox-database-copies-exchange-2013-help.md).
@@ -77,18 +67,8 @@ _**Последнее изменение раздела:** 2012-11-02_
 
   - Сочетания клавиш для процедур, описанных в этой статье, приведены в статье [Сочетания клавиш в Центре администрирования Exchange](keyboard-shortcuts-in-the-exchange-admin-center-exchange-online-protection-help.md).
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Bb124558.tip(EXCHG.150).gif" title="Совет" alt="Совет" />Совет.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>..</td>
-</tr>
-</tbody>
-</table>
+> [!TIP]  
+> Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>..
 
 
 ## Что необходимо сделать?

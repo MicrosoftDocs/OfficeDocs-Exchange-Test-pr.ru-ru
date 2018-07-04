@@ -21,18 +21,8 @@ _**Последнее изменение раздела:** 2016-12-09_
 
 После установки соответствующего языкового пакета единой системы обмена сообщениями можно посмотреть, какие подобные пакеты уже установлены, в раскрывающемся списке на странице **Параметры** абонентской группы единой системы обмена сообщениями или в раскрывающемся списке **Язык для автоматического голосового интерфейса** на странице **Общие** автосекретаря единой системы обмена сообщениями. Также для автосекретарей и абонентских групп единой системы обмена сообщениями можно настроить язык по умолчанию, отличный от английского (en-US).
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Dd876857.Caution(EXCHG.150).gif" title="Внимание!" alt="Внимание!" />Внимание!</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Языковые пакеты единой системы обмена сообщениями для Exchange Server 2007 или Exchange 2007 с пакетом обновления 1 (SP1), 2 (SP2), 3 (SP3) или Exchange 2010 с пакетом обновления 1 (SP1), 2 (SP2) или 3 (SP3) не могут использоваться на сервере почтовых ящиков Exchange 2013.</td>
-</tr>
-</tbody>
-</table>
+> [!CAUTION]  
+> Языковые пакеты единой системы обмена сообщениями для Exchange Server 2007 или Exchange 2007 с пакетом обновления 1 (SP1), 2 (SP2), 3 (SP3) или Exchange 2010 с пакетом обновления 1 (SP1), 2 (SP2) или 3 (SP3) не могут использоваться на сервере почтовых ящиков Exchange 2013.
 
 
 Дополнительные сведения о языках единой системы обмена сообщениями см. в статье [Языки, приглашения и приветствий процедуры единой системы обмена СООБЩЕНИЯМИ](um-languages-prompts-and-greetings-procedures-exchange-2013-help.md).
@@ -47,18 +37,8 @@ _**Последнее изменение раздела:** 2016-12-09_
 
   - Сочетания клавиш для процедур, описанных в этой статье, приведены в статье [Сочетания клавиш в Центре администрирования Exchange](keyboard-shortcuts-in-the-exchange-admin-center-exchange-online-protection-help.md).
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Bb124558.tip(EXCHG.150).gif" title="Совет" alt="Совет" />Совет.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>..</td>
-</tr>
-</tbody>
-</table>
+> [!TIP]  
+> Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>..
 
 
 ## Что необходимо сделать?
@@ -89,18 +69,8 @@ _**Последнее изменение раздела:** 2016-12-09_
 
     setup.exe /AddUmLanguagePack:es-MX,de-DE /s:d:\Exchange\UMLanguagePacks /IAcceptExchangeServerLicenseTerms
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/JJ983803.warning(EXCHG.150).gif" title="Предупреждение" alt="Предупреждение" />Предупреждение.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Если вы не используете параметр /IAcceptExchangeServerLicenseTerms, вы увидите следующую ошибку: Автоматическая установка Microsoft Exchange Server 2013. Чтобы установить Microsoft Exchange Server 2013, необходимо согласиться с условиями предоставления лицензии. Лицензионное соглашение доступно на странице http://go.microsoft.com/fwlink/p/?LinkId=150127. Чтобы согласиться с условиями предоставления лицензии, добавьте параметр /IAcceptExchangeServerLicenseTerms в запускаемую команду. Для получения дополнительных сведений выполните команду setup /?.</td>
-</tr>
-</tbody>
-</table>
+> [!WARNING]  
+> Если вы не используете параметр /IAcceptExchangeServerLicenseTerms, вы увидите следующую ошибку: Автоматическая установка Microsoft Exchange Server 2013. Чтобы установить Microsoft Exchange Server 2013, необходимо согласиться с условиями предоставления лицензии. Лицензионное соглашение доступно на странице http://go.microsoft.com/fwlink/p/?LinkId=150127. Чтобы согласиться с условиями предоставления лицензии, добавьте параметр /IAcceptExchangeServerLicenseTerms в запускаемую команду. Для получения дополнительных сведений выполните команду setup /?.
 
 
 Дополнительные сведения о доступных языках и идентификаторах языков единой системы обмена сообщениями см. в статье [Языки, приглашения и приветствия единой системы обмена сообщениями](um-languages-prompts-and-greetings-exchange-2013-help.md).

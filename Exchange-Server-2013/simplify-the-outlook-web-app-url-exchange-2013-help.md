@@ -33,18 +33,8 @@ _**Последнее изменение раздела:** 2015-07-16_
 
   - Сочетания клавиш для процедур, описанных в этой статье, приведены в статье [Сочетания клавиш в Центре администрирования Exchange](keyboard-shortcuts-in-the-exchange-admin-center-exchange-online-protection-help.md).
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Bb124558.tip(EXCHG.150).gif" title="Совет" alt="Совет" />Совет.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>..</td>
-</tr>
-</tbody>
-</table>
+> [!TIP]  
+> Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>..
 
 
 ## Этап 1. Использование диспетчера IIS для упрощения URL-адреса Outlook Web App и принудительного перенаправления на протокол SSL
@@ -73,18 +63,8 @@ _**Последнее изменение раздела:** 2015-07-16_
 
 12. В разделе **Параметры SSL** снимите флажок **Требовать SSL**.
     
-    <table>
-    <thead>
-    <tr class="header">
-    <th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr class="odd">
-    <td>Если флажок <strong>Требовать SSL</strong> не снят, пользователи не будут перенаправляться при вводе незащищенного URL-адреса. Вместо этого они будут получать ошибку отказа в доступе.</td>
-    </tr>
-    </tbody>
-    </table>
+    > [!NOTE]  
+    > Если флажок <strong>Требовать SSL</strong> не снят, пользователи не будут перенаправляться при вводе незащищенного URL-адреса. Вместо этого они будут получать ошибку отказа в доступе.
 
 
 ## Этап 2. Удаление перенаправления из виртуальных каталогов

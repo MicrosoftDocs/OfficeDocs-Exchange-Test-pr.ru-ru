@@ -21,18 +21,8 @@ _**Последнее изменение раздела:** 2015-11-30_
 
 Существует два типа переопределений: локальные и глобальные. Как следует из их названия, локальные переопределения доступны только на сервере, на котором они созданы, а глобальные переопределения используются на нескольких серверах. Оба типа переопределения можно создать либо на определенный период времени, либо для заданной версии Exchange.
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>При создании переопределения оно вступит в силу не сразу. Служба управления работоспособностью Microsoft Exchange проверяет наличие изменений конфигурации каждые 10 минут и загружает все обнаруженные изменения. Если вы не хотите ждать, вы можете перезапустить службу.</td>
-</tr>
-</tbody>
-</table>
+> [!NOTE]  
+> При создании переопределения оно вступит в силу не сразу. Служба управления работоспособностью Microsoft Exchange проверяет наличие изменений конфигурации каждые 10 минут и загружает все обнаруженные изменения. Если вы не хотите ждать, вы можете перезапустить службу.
 
 
 Сведения о дополнительных задачах управления, связанных с управляемой доступностью, см. в разделе [Управление настройками работоспособности и работоспособностью сервера](manage-health-sets-and-server-health-exchange-2013-help.md).
@@ -45,18 +35,8 @@ _**Последнее изменение раздела:** 2015-11-30_
 
   - Сочетания клавиш для процедур, описанных в этой статье, приведены в статье [Сочетания клавиш в Центре администрирования Exchange](keyboard-shortcuts-in-the-exchange-admin-center-exchange-online-protection-help.md).
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Bb124558.tip(EXCHG.150).gif" title="Совет" alt="Совет" />Совет.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.</td>
-</tr>
-</tbody>
-</table>
+> [!TIP]  
+> Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.
 
 
 ## Что необходимо сделать?
@@ -71,18 +51,8 @@ _**Последнее изменение раздела:** 2015-11-30_
 
     Add-ServerMonitoringOverride -Server <ServerName> -Identity <HealthSetName>\<MonitoringItemName>[\<TargetResource>] -ItemType <Probe | Monitor | Responder | Maintenance> -PropertyName <PropertyName> -PropertyValue <Value> -Version <15.01.xxxx.xxx>
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>При создании переопределения значения в параметре <em>Identity</em> вводятся с учетом регистра.</td>
-</tr>
-</tbody>
-</table>
+> [!NOTE]  
+> При создании переопределения значения в параметре <em>Identity</em> вводятся с учетом регистра.
 
 
 В этом примере добавляется локальное переопределение, которое отключает ответчик `ActiveDirectoryConnectivityConfigDCServerReboot` на сервере EXCH03 на 20 дней.
@@ -125,18 +95,8 @@ _**Последнее изменение раздела:** 2015-11-30_
 
     Add-GlobalMonitoringOverride -Identity <HealthSetName>\<MonitoringItemName>[\<TargetResource>] -ItemType <Probe | Monitor | Responder | Maintenance> -PropertyName <PropertytoOverride> -PropertyValue <NewPropertyValue> -ApplyVersion <15.01.xxxx.xxx>
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>При создании переопределения значения в параметре <em>Identity</em> вводятся с учетом регистра.</td>
-</tr>
-</tbody>
-</table>
+> [!NOTE]  
+> При создании переопределения значения в параметре <em>Identity</em> вводятся с учетом регистра.
 
 
 В этом примере добавляется глобальное переопределение, которое отключает пробу `OnPremisesInboundProxy` на 30 дней.

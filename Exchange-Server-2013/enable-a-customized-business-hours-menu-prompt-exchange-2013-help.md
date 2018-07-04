@@ -21,18 +21,8 @@ _**Последнее изменение раздела:** 2013-04-19_
 
 Если в системном приглашении по умолчанию следует включить только название организации, можно ввести название в поле **Название организации** автосекретаря единой системы обмена сообщениями. Дополнительные сведения см. в разделе [Указание названия организации](enter-a-business-name-exchange-2013-help.md).
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Dd876857.important(EXCHG.150).gif" title="Важно" alt="Важно" />Важно!</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Необходимо настроить рабочие часы для автосекретаря. Дополнительные сведения см. в разделе <a href="configure-business-hours-exchange-2013-help.md">Настройка рабочих часов</a>.</td>
-</tr>
-</tbody>
-</table>
+> [!IMPORTANT]  
+> Необходимо настроить рабочие часы для автосекретаря. Дополнительные сведения см. в разделе <a href="configure-business-hours-exchange-2013-help.md">Настройка рабочих часов</a>.
 
 
 Дополнительные задачи управления, связанные с автосекретарями единой системы обмена сообщениями, см. в разделе [Процедуры автосекретаря единой системы обмена сообщениями](um-auto-attendant-procedures-exchange-2013-help.md).
@@ -51,18 +41,8 @@ _**Последнее изменение раздела:** 2013-04-19_
 
   - Сочетания клавиш для процедур, описанных в этой статье, приведены в статье [Сочетания клавиш в Центре администрирования Exchange](keyboard-shortcuts-in-the-exchange-admin-center-exchange-online-protection-help.md).
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Bb124558.tip(EXCHG.150).gif" title="Совет" alt="Совет" />Совет.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>..</td>
-</tr>
-</tbody>
-</table>
+> [!TIP]  
+> Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>..
 
 
 ## Что необходимо сделать?
@@ -75,18 +55,8 @@ _**Последнее изменение раздела:** 2013-04-19_
 
 3.  На странице **Автосекретарь единой системы обмена сообщениями** \> **Навигация по меню** выберите раздел **Навигация по меню в рабочие часы**, нажмите кнопку **Правка** и нажмите кнопку **Обзор**, чтобы указать файл приглашения, настроенный для использования в рабочие часы.
     
-    <table>
-    <thead>
-    <tr class="header">
-    <th><img src="images/Dd876857.important(EXCHG.150).gif" title="Важно" alt="Важно" />Важно!</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr class="odd">
-    <td>Файл, используемый для приглашения в меню, должен иметь формат WMA или WAV.</td>
-    </tr>
-    </tbody>
-    </table>
+    > [!IMPORTANT]  
+    > Файл, используемый для приглашения в меню, должен иметь формат WMA или WAV.
 
 
 4.  Указав расположение файла, нажмите кнопку **Открыть**, а затем — **Сохранить**.

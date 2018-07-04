@@ -29,18 +29,8 @@ _**Последнее изменение раздела:** 2014-12-16_
 
   - Сочетания клавиш для процедур, описанных в этой статье, приведены в статье [Сочетания клавиш в Центре администрирования Exchange](keyboard-shortcuts-in-the-exchange-admin-center-exchange-online-protection-help.md).
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Bb124558.tip(EXCHG.150).gif" title="Совет" alt="Совет" />Совет.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.</td>
-</tr>
-</tbody>
-</table>
+> [!TIP]  
+> Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.
 
 
 ## Что необходимо сделать?
@@ -107,18 +97,8 @@ _**Последнее изменение раздела:** 2014-12-16_
 
     Set-TransportService Mailbox01 -TransientFailureRetryCount 8 -TransientFailureRetryInterval 00:01:00 -OutboundConnectionFailureRetryInterval 00:45:00
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Параметры <em>TransientFailureRetryCount</em> и <em>TransientFailureRetryInterval</em> также доступны в командлете <strong>Set-FrontEndTransportService</strong> для внешней службы транспорта на серверах клиентского доступа.</td>
-</tr>
-</tbody>
-</table>
+> [!NOTE]  
+> Параметры <em>TransientFailureRetryCount</em> и <em>TransientFailureRetryInterval</em> также доступны в командлете <strong>Set-FrontEndTransportService</strong> для внешней службы транспорта на серверах клиентского доступа.
 
 
 ## Настроить количество повторных попыток при временной ошибке, интервал повторной попытки при временной ошибке и интервал повторной попытки при ошибке исходящего подключения
@@ -149,18 +129,8 @@ _**Последнее изменение раздела:** 2014-12-16_
 
     Set-TransportService Mailbox01 -TransientFailureRetryCount 8 -TransientFailureRetryInterval 00:01:00 -OutboundConnectionFailureRetryInterval 00:45:00
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Параметры <em>TransientFailureRetryCount</em> и <em>TransientFailureRetryInterval</em> также доступны в командлете <strong>Set-FrontEndTransportService</strong> для внешней службы транспорта на серверах клиентского доступа.</td>
-</tr>
-</tbody>
-</table>
+> [!NOTE]  
+> Параметры <em>TransientFailureRetryCount</em> и <em>TransientFailureRetryInterval</em> также доступны в командлете <strong>Set-FrontEndTransportService</strong> для внешней службы транспорта на серверах клиентского доступа.
 
 
 ## Использовать командную консоль для настройки интервала повторной отправки сообщения
@@ -179,18 +149,8 @@ _**Последнее изменение раздела:** 2014-12-16_
 
 Для настройки времени ожидания для уведомления о состоянии задержанной доставки можно использовать Центр администрирования Exchange или командную консоль. Эта настройка применима только к локальному транспортному серверу. Для включения и отключения отправки уведомлений о состоянии задержанной доставки для внутренних или внешних отправителей можно использовать только командную консоль. Эти настройки применяются ко всем транспортным серверам в организации.
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>На транспортных серверах-концентраторах Exchange 2007 все параметры <em>ExternalDSN*</em> и <em>InternalDSN*</em> доступны в командлете <strong>Set-TransportServer</strong>, а не в командлете <strong>Set-TransportConfig</strong>. Если в вашей организации есть транспортные серверы-концентраторы Exchange 2007, необходимо изменить эти значения с помощью командлета <strong>Set-TransportServer</strong> на каждом транспортном сервере-концентраторе Exchange 2007.</td>
-</tr>
-</tbody>
-</table>
+> [!NOTE]  
+> На транспортных серверах-концентраторах Exchange 2007 все параметры <em>ExternalDSN*</em> и <em>InternalDSN*</em> доступны в командлете <strong>Set-TransportServer</strong>, а не в командлете <strong>Set-TransportConfig</strong>. Если в вашей организации есть транспортные серверы-концентраторы Exchange 2007, необходимо изменить эти значения с помощью командлета <strong>Set-TransportServer</strong> на каждом транспортном сервере-концентраторе Exchange 2007.
 
 
 ## Настроить интервал ожидания уведомления о состоянии задержанной доставки с помощью Центра администрирования Exchange

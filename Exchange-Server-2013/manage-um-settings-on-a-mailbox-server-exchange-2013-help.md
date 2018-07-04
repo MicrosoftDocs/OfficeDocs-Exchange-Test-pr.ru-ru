@@ -21,18 +21,8 @@ _**Последнее изменение раздела:** 2013-02-11_
 
 После установки сервера почтовых ящиков, который работает под управлением службы единой системы обмена сообщениями Microsoft Exchange, можно настроить несколько параметров, включая количество одновременных вызовов, прослушивающие TCP- и TLS-порты, состояние и режим запуска данной системы.
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Dd876857.important(EXCHG.150).gif" title="Важно" alt="Важно" />Важно!</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Чтобы абонентская группа единой системы обмена сообщениями могла обрабатывать вызовы для данной системы, в эту группу не нужно предварительно добавлять сервера почтовых ящиков. Исключение составляют случаи интеграции единой системы обмена сообщениями и Microsoft Office Communications Server 2007 R2 или Microsoft Lync Server. По умолчанию все серверы почтовых ящиков в организации способны отвечать на входящие вызовы.</td>
-</tr>
-</tbody>
-</table>
+> [!IMPORTANT]  
+> Чтобы абонентская группа единой системы обмена сообщениями могла обрабатывать вызовы для данной системы, в эту группу не нужно предварительно добавлять сервера почтовых ящиков. Исключение составляют случаи интеграции единой системы обмена сообщениями и Microsoft Office Communications Server 2007 R2 или Microsoft Lync Server. По умолчанию все серверы почтовых ящиков в организации способны отвечать на входящие вызовы.
 
 
 Сведения о дополнительных задачах управления, связанных с единой системой обмена сообщениями и серверами почтовых ящиков, см. в разделе [Процедуры служб единой системы обмена СООБЩЕНИЯМИ](um-services-procedures-exchange-2013-help.md).
@@ -47,18 +37,8 @@ _**Последнее изменение раздела:** 2013-02-11_
 
   - Сочетания клавиш для процедур, описанных в этой статье, приведены в статье [Сочетания клавиш в Центре администрирования Exchange](keyboard-shortcuts-in-the-exchange-admin-center-exchange-online-protection-help.md).
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Bb124558.tip(EXCHG.150).gif" title="Совет" alt="Совет" />Совет.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>..</td>
-</tr>
-</tbody>
-</table>
+> [!TIP]  
+> Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>..
 
 
 ## Что необходимо сделать?

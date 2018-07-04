@@ -35,18 +35,8 @@ _**Последнее изменение раздела:** 2012-12-10_
 
   - Сочетания клавиш для процедур, описанных в этой статье, приведены в статье [Сочетания клавиш в Центре администрирования Exchange](keyboard-shortcuts-in-the-exchange-admin-center-exchange-online-protection-help.md).
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/JJ983803.warning(EXCHG.150).gif" title="Предупреждение" alt="Предупреждение" />Предупреждение.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.</td>
-</tr>
-</tbody>
-</table>
+> [!WARNING]  
+> Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.
 
 
 ## Что необходимо сделать?
@@ -75,18 +65,8 @@ _**Последнее изменение раздела:** 2012-12-10_
 
     Set-EmailAddressPolicy -Identity "South East Offices" -ConditionalStateorProvince "Georgia","Alabama","Louisiana","Texas"
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Несмотря на то что политика уже применена к получателям в Джорджии, Алабаме и Луизиане, ее необходимо включить в параметр, так как он перезаписывает значения. Присоединение новых значений к существующим не происходит.</td>
-</tr>
-</tbody>
-</table>
+> [!NOTE]  
+> Несмотря на то что политика уже применена к получателям в Джорджии, Алабаме и Луизиане, ее необходимо включить в параметр, так как он перезаписывает значения. Присоединение новых значений к существующим не происходит.
 
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Set-EmailAddressPolicy](https://technet.microsoft.com/ru-ru/library/bb124517\(v=exchg.150\)).

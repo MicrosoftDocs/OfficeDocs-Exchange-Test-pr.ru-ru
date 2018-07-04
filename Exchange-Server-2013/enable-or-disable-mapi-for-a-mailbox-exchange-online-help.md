@@ -19,18 +19,8 @@ _**Последнее изменение раздела:** 2017-12-31_
 
 Центр администрирования Exchange или Командная консоль Exchange можно использовать для включения или отключения MAPI для почтового ящика пользователя. При включении MAPI почтового ящика пользователя доступен посредством Outlook или другими почтовыми клиентами MAPI. При отключении MAPI, она становится недоступной для Outlook или других клиентов MAPI. Тем не менее почтовый ящик будет получать сообщения электронной почты, и, если предполагается, что почтовый ящик включена для поддержки доступа тех клиентов, пользователь может доступ к почтовому ящику отправлять и получать электронную почту с помощью Outlook Web App, клиент электронной почты POP или клиента IMAP.
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Поддержка Outlook Web App и MAPI, POP3 и IMAP4 включается по умолчанию при создании почтового ящика пользователя.</td>
-</tr>
-</tbody>
-</table>
+> [!NOTE]  
+> Поддержка Outlook Web App и MAPI, POP3 и IMAP4 включается по умолчанию при создании почтового ящика пользователя.
 
 
 Дополнительные задачи управления, связанные с управлением доступом почтовых клиентов к почтовому ящику, приведены в следующих разделах:
@@ -49,18 +39,8 @@ _**Последнее изменение раздела:** 2017-12-31_
 
   - Сочетания клавиш для процедур, описанных в этой статье, приведены в статье [Сочетания клавиш в Центре администрирования Exchange](keyboard-shortcuts-in-the-exchange-admin-center-exchange-online-protection-help.md).
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Bb124558.tip(EXCHG.150).gif" title="Совет" alt="Совет" />Совет.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.</td>
-</tr>
-</tbody>
-</table>
+> [!TIP]  
+> Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.
 
 
 ## Что необходимо сделать?

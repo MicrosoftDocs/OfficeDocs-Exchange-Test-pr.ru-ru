@@ -31,18 +31,8 @@ _**Последнее изменение раздела:** 2013-02-14_
 
   - Сочетания клавиш для процедур, описанных в этой статье, приведены в статье [Сочетания клавиш в Центре администрирования Exchange](keyboard-shortcuts-in-the-exchange-admin-center-exchange-online-protection-help.md).
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Bb124558.tip(EXCHG.150).gif" title="Совет" alt="Совет" />Совет.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>..</td>
-</tr>
-</tbody>
-</table>
+> [!TIP]  
+> Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>..
 
 
 ## Удаление языкового пакета единой системы обмена сообщениями с помощью Setup.exe
@@ -53,16 +43,6 @@ _**Последнее изменение раздела:** 2013-02-14_
 
 Параметр *\<UmLanguagePackName\>* — это имя удаляемого языкового пакета единой системы обмена сообщениями, например fr-FR.
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Dd876857.Caution(EXCHG.150).gif" title="Внимание!" alt="Внимание!" />Внимание!</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>После установки любых обновлений невозможно удалить языковой пакет единой системы обмена сообщениями с помощью файла Setup.exe, который находится в папке \Bin. Необходимо использовать файл Setup.exe с DVD-диска Exchange 2013 или из загруженных исходных файлов. В противном случае будет обнаружена следующая ошибка: &quot;Несоответствие версий запущенного и установленного приложения&quot;.</td>
-</tr>
-</tbody>
-</table>
+> [!CAUTION]  
+> После установки любых обновлений невозможно удалить языковой пакет единой системы обмена сообщениями с помощью файла Setup.exe, который находится в папке \Bin. Необходимо использовать файл Setup.exe с DVD-диска Exchange 2013 или из загруженных исходных файлов. В противном случае будет обнаружена следующая ошибка: &quot;Несоответствие версий запущенного и установленного приложения&quot;.
 

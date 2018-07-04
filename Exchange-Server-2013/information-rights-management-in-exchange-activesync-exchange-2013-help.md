@@ -94,18 +94,9 @@ _**Последнее изменение раздела:** 2016-12-09_
 <td><p>Включить шифрование на мобильном устройстве.</p></td>
 <td><p>Последовательно установите флажки <strong>Требовать пароль</strong> и <strong>Требовать шифрование на устройстве</strong>.</p></td>
 <td><p>Задайте для параметра <em>RequireDeviceEncryption</em> значение <code>$true</code>.</p>
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Dd876857.important(EXCHG.150).gif" title="Важно" alt="Важно" />Важно!</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>При настройке параметра <em>RequireDeviceEncryption</em> со значением <code>$true</code> подключение мобильных устройств, не поддерживающих шифрование данных, будет невозможно.</td>
-</tr>
-</tbody>
-</table>
+
+> [!IMPORTANT]  
+> При настройке параметра <em>RequireDeviceEncryption</em> со значением <code>$true</code> подключение мобильных устройств, не поддерживающих шифрование данных, будет невозможно.
 
 </td>
 </tr>

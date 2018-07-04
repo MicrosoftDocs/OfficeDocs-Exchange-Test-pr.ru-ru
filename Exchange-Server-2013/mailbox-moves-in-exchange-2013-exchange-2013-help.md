@@ -57,32 +57,12 @@ _**Последнее изменение раздела:** 2015-04-07_
 
 В Exchange 2013 для перемещения почтовых ящиков между Exchange 2007, Exchange 2010 и Exchange 2013 необходимо использовать Центр администрирования Exchange 2013 и командную консоль Exchange.
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Перемещение почтовых ящиков в Exchange 2013 можно вести аналогично Exchange Server 2010 с помощью Центра администрирования Exchange, запроса на перемещение или командлетов пакетной миграции.</td>
-</tr>
-</tbody>
-</table>
+> [!NOTE]  
+> Перемещение почтовых ящиков в Exchange 2013 можно вести аналогично Exchange Server 2010 с помощью Центра администрирования Exchange, запроса на перемещение или командлетов пакетной миграции.
 
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Нельзя переместить локальные почтовые ящики из Exchange Server 2003 в Exchange 2013.</td>
-</tr>
-</tbody>
-</table>
+> [!NOTE]  
+> Нельзя переместить локальные почтовые ящики из Exchange Server 2003 в Exchange 2013.
 
 
 Дополнительные сведения об управлении новыми и существующими перемещениями см. в разделе [Управление локальными перемещениями](manage-on-premises-moves-exchange-2013-help.md).

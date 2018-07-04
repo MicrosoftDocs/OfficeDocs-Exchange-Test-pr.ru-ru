@@ -23,18 +23,8 @@ _**Последнее изменение раздела:** 2014-11-05_
 
 Для устранения этой неполадки следует предоставить вошедшему в систему пользователю соответствующие разрешения или войти в систему с использованием учетной записи, имеющей такие разрешения, и повторно запустить программу установки Exchange 2013.
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Dd876857.important(EXCHG.150).gif" title="Важно" alt="Важно" />Важно!</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Межлесная установка Exchange 2013 не поддерживается. Для установки Exchange 2013 используйте учетную запись, которая является членом леса Active Directory.</td>
-</tr>
-</tbody>
-</table>
+> [!IMPORTANT]  
+> Межлесная установка Exchange 2013 не поддерживается. Для установки Exchange 2013 используйте учетную запись, которая является членом леса Active Directory.
 
 
 Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: [Exchange Server](https://go.microsoft.com/fwlink/p/?linkid=60612), [Exchange Online](https://go.microsoft.com/fwlink/p/?linkid=267542) или [Exchange Online Protection](https://go.microsoft.com/fwlink/p/?linkid=285351).

@@ -35,18 +35,8 @@ _**Последнее изменение раздела:** 2013-02-18_
 
 7.  Подтвердите удаление, нажав кнопку **Да** в диалоговом окне Active Directory.
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Если необходимо реплицировать изменения немедленно, следует начать репликацию между контроллерами домена вручную.</td>
-</tr>
-</tbody>
-</table>
+> [!NOTE]  
+> Если необходимо реплицировать изменения немедленно, следует начать репликацию между контроллерами домена вручную.
 
 
 Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: [Exchange Server](https://go.microsoft.com/fwlink/p/?linkid=60612), [Exchange Online](https://go.microsoft.com/fwlink/p/?linkid=267542) или [Exchange Online Protection](https://go.microsoft.com/fwlink/p/?linkid=285351).

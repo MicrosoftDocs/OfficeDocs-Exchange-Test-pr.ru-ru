@@ -91,36 +91,18 @@ _**Последнее изменение раздела:** 2015-03-09_
 <tr class="even">
 <td><p>Disable-UMService</p></td>
 <td><p><code>-Identity &lt;UMServerIdParameter&gt; [-Confirm [&lt;SwitchParameter&gt;]] [-DomainController &lt;Fqdn&gt;] [-Immediate &lt;$true | $false&gt;] [-WhatIf [&lt;SwitchParameter&gt;]]</code></p>
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Этот командлет работает только с серверами единой системы обмена сообщениями Exchange 2007 и 2010.</td>
-</tr>
-</tbody>
-</table>
+
+> [!NOTE]  
+> Этот командлет работает только с серверами единой системы обмена сообщениями Exchange 2007 и 2010.
 
 </td>
 </tr>
 <tr class="odd">
 <td><p>Enable-UMService</p></td>
 <td><p><code>-Identity &lt;UMServerIdParameter&gt; [-Confirm [&lt;SwitchParameter&gt;]] [-DomainController &lt;Fqdn&gt;] [-WhatIf [&lt;SwitchParameter&gt;]]</code></p>
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Этот командлет работает только с серверами единой системы обмена сообщениями Exchange 2007 и 2010.</td>
-</tr>
-</tbody>
-</table>
+
+> [!NOTE]  
+> Этот командлет работает только с серверами единой системы обмена сообщениями Exchange 2007 и 2010.
 
 </td>
 </tr>

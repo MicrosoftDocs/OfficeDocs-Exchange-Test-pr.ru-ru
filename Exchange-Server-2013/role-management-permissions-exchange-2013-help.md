@@ -27,18 +27,8 @@ _**Последнее изменение раздела:** 2015-03-09_
 
 3.  Запустите командлет **Get-ManagementRoleAssignment**, чтобы просмотреть назначенные группы ролей или роли управления и проверить наличие необходимых разрешений для управления функцией.
     
-    <table>
-    <thead>
-    <tr class="header">
-    <th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr class="odd">
-    <td>Для запуска командлета <strong>Get-ManagementRoleAssignment</strong> вам должна быть назначена роль управления &quot;Управление ролями&quot;. Если для запуска командлета <strong>Get-ManagementRoleAssignment</strong> отсутствуют необходимые разрешения, попросите администратора Exchange назначить группы ролей или роли управления.</td>
-    </tr>
-    </tbody>
-    </table>
+    > [!NOTE]  
+    > Для запуска командлета <strong>Get-ManagementRoleAssignment</strong> вам должна быть назначена роль управления &quot;Управление ролями&quot;. Если для запуска командлета <strong>Get-ManagementRoleAssignment</strong> отсутствуют необходимые разрешения, попросите администратора Exchange назначить группы ролей или роли управления.
 
 
 Дополнительные сведения о делегировании возможности управления другим пользователям см. в разделе [Назначения роли делегата](delegate-role-assignments-exchange-2013-help.md).
@@ -95,18 +85,9 @@ _**Последнее изменение раздела:** 2015-03-09_
 <tr class="odd">
 <td><p>Разделенные разрешения Active Directory</p></td>
 <td><p><a href="organization-management-exchange-2013-help.md">Управление организацией</a></p>
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Dd876857.important(EXCHG.150).gif" title="Важно" alt="Важно" />Важно!</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Чтобы выполнить команду <code>setup.exe</code> с параметрами <em>PrepareAD</em> и <em>ActiveDirectorySplitPermissions</em>, используемая учетная запись должна входить в группы безопасности «Администраторы схемы» и «Администраторы предприятия».</td>
-</tr>
-</tbody>
-</table>
+
+> [!IMPORTANT]  
+> Чтобы выполнить команду <code>setup.exe</code> с параметрами <em>PrepareAD</em> и <em>ActiveDirectorySplitPermissions</em>, используемая учетная запись должна входить в группы безопасности «Администраторы схемы» и «Администраторы предприятия».
 
 </td>
 </tr>

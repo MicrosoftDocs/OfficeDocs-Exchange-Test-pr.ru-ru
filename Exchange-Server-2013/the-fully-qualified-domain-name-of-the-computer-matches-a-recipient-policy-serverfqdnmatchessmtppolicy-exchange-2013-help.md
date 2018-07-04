@@ -39,18 +39,8 @@ _**Последнее изменение раздела:** 2016-12-09_
 
 4.  Нажмите кнопку **ОК**, чтобы закрыть диалоговое окно **Свойства системы**. Вам будет предложено перезагрузить компьютер, чтобы применить изменения.
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Dd876857.important(EXCHG.150).gif" title="Важно" alt="Важно" />Важно!</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Сведения о переименовании контроллера домена см. в статье &quot;Переименование контроллера домена&quot; (<a href="https://go.microsoft.com/fwlink/?linkid=66828">https://go.microsoft.com/fwlink/?LinkId=66828</a>).</td>
-</tr>
-</tbody>
-</table>
+> [!IMPORTANT]  
+> Сведения о переименовании контроллера домена см. в статье &quot;Переименование контроллера домена&quot; (<a href="https://go.microsoft.com/fwlink/?linkid=66828">https://go.microsoft.com/fwlink/?LinkId=66828</a>).
 
 
 **Как изменить SMTP-адрес политики получателей**
