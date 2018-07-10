@@ -17,18 +17,8 @@ _**Дата изменения раздела:** 2015-03-09_
 
 The Exchange Server 2013 Management Pack relies on the Managed Availability feature in Exchange 2013. In Managed Availability, each component in Exchange 2013 monitors itself using *probes*, *monitors* and *responders*. Each Exchange 2013 component that implements Managed Availability is referred to as a *health set*. The following tables list all the health sets available in Exchange 2013.
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Dn195906.note(EXCHG.150).gif" title="Заметка" alt="Заметка" />Примечание.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Only the health sets that apply to your Exchange deployment are seen in the SCOM console. Therefore, depending on your configuration, some of these health sets may not be present in your deployment.</td>
-</tr>
-</tbody>
-</table>
+> [!NOTE]
+> Only the health sets that apply to your Exchange deployment are seen in the SCOM console. Therefore, depending on your configuration, some of these health sets may not be present in your deployment.
 
 
 ## Customer Touch Points Health Sets
