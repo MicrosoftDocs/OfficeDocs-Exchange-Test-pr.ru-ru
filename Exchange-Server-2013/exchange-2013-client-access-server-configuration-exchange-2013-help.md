@@ -71,10 +71,12 @@ _**Последнее изменение раздела:** 2017-07-25_
     
     После настройки виртуального каталога Outlook Web App в командной строке выполните следующие команды.
     
+```
         Net stop IISAdmin /y
-    
+```
+```    
         Net start W3SVC
-
+```
 2.  Чтобы настроить внешний доступ к Центру администрирования Exchange, выполните следующую команду в командной консоли Exchange.
     
         Set-EcpVirtualDirectory "<CAS2013>\ECP (Default Web Site)" -ExternalUrl https://mail.contoso.com/ECP -InternalURL https://mail.contoso.com/ECP 

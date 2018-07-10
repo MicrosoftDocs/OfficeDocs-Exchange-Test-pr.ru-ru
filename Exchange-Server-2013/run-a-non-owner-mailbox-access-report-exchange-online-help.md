@@ -47,9 +47,12 @@ _**Последнее изменение раздела:** 2016-12-09_
 
 Чтобы включить аудит для всех почтовых ящиков пользователей в организации, выполните следующие команды:
 
+```
     $UserMailboxes = Get-mailbox -Filter {(RecipientTypeDetails -eq 'UserMailbox')}
-
+```
+```
     $UserMailboxes | ForEach {Set-Mailbox $_.Identity -AuditEnabled $true}
+```
 
 ## Как проверить, что все получилось?
 

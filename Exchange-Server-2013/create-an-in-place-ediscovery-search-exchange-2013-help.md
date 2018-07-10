@@ -153,11 +153,15 @@ _**Последнее изменение раздела:** 2017-01-17_
 
 Например, чтобы создать новый поиск eDiscovery, а затем отобразить оценку результатов поиска, выполните следующие команды:
 
+```
     New-MailboxSearch "FY13 Q2 Financial Results" -StartDate "04/01/2013" -EndDate "06/30/2013" -SourceMailboxes "DG-Finance" -SearchQuery '"Financial" AND "Fabrikam"' -EstimateOnly -IncludeKeywordStatistics
-
+```
+```
     Start-MailboxSearch "FY13 Q2 Financial Results"
-
+```
+```
     Get-MailboxSearch "FY13 Q2 Financial Results"
+```
 
 Чтобы отобразить определенную информацию об оценке результатов поиска с предыдущего примера, выполните следующую команду:
 

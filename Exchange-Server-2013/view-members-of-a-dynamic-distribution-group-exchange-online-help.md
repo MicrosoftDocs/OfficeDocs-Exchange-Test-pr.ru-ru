@@ -37,9 +37,12 @@ _**Последнее изменение раздела:** 2018-03-02_
 
 В этом примере возвращается список элементов для динамической группы рассылки с именем полной занятости сотрудников. Первая команда сохраняет динамических группа рассылки в переменной `$FTE`. Вторая команда командлета **Get-Recipient** список получателей, которые соответствуют условиям, определенных для динамической группы рассылки.
 
+```
     $FTE = Get-DynamicDistributionGroup "Full Time Employees"
-
+```
+```
     Get-Recipient -RecipientPreviewFilter $FTE.RecipientFilter -OrganizationalUnit $FTE.RecipientContainer
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделах [Get-DynamicDistributionGroup](https://technet.microsoft.com/ru-ru/library/bb124762\(v=exchg.150\)) и [Get-Recipient](https://technet.microsoft.com/ru-ru/library/aa996921\(v=exchg.150\)).
 

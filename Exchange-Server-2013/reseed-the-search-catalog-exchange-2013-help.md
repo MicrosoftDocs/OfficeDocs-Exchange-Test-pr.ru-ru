@@ -88,9 +88,12 @@ _**Последнее изменение раздела:** 2015-03-09_
 
 1.  Чтобы остановить службу поиска Microsoft Exchange и службу контроллера узлов поиска Microsoft Exchange, выполните приведенные ниже команды.
     
+```
         Stop-Service MSExchangeFastSearch
-    
+```
+```    
         Stop-Service HostControllerService
+```
 
 2.  Удалите, переместите или переименуйте папку, которая содержит каталог индексов контента Exchange. Она называется `%ExchangeInstallPath\Mailbox\<name of mailbox database>_Catalog\<GUID>12.1.Single`. Например, можно переименовать папку `C:\Program Files\Microsoft\Exchange Server\V15\Mailbox\Mailbox Database 0657134726_Catalog\F0627A72-9F1D-494A-839A-D7C915C279DB12.1.Single_OLD`.
     
@@ -100,9 +103,12 @@ _**Последнее изменение раздела:** 2015-03-09_
 
 3.  Чтобы перезапустить службу поиска Microsoft Exchange и службу контроллера узлов поиска Microsoft Exchange, выполните приведенные ниже команды.
     
+```
         Start-Service MSExchangeFastSearch
-    
+```
+```    
         Start-Service HostControllerService
+```
     
     После их перезапуска служба поиска Exchange перестроит каталог индексов контента.
 

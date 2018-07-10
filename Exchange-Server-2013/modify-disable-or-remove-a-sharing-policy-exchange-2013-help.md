@@ -99,9 +99,12 @@ _**Последнее изменение раздела:** 2014-02-15_
 
   - В первом примере удаляется политика общего доступа Contoso. Во втором примере удаляется политика общего доступа Contoso, а подтверждение удаления политики не выводится.
     
+```
         Remove-SharingPolicy -Identity Contoso
-    
+```
+```    
         Remove-SharingPolicy -Identity Contoso -Confirm
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделах [Set-SharingPolicy](https://technet.microsoft.com/ru-ru/library/dd297931\(v=exchg.150\)) и [Remove-SharingPolicy](https://technet.microsoft.com/ru-ru/library/dd351071\(v=exchg.150\)).
 

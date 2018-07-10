@@ -256,9 +256,12 @@ AD FS в Windows Server 2012 R2 обеспечивают упрощенную, �
 
 Следующие команды PowerShell Windows сделать то же самое предыдущие действия.
 
+```
     Import-Module ADFS
-
+```
+```
     Install-AdfsFarm -CertificateThumbprint 0E0C205D252002D535F6D32026B6AB074FB840E7 -FederationServiceDisplayName "Contoso Corporation" -FederationServiceName adfs.contoso.com -GroupServiceAccountIdentifier "contoso\FSgmsa`$"
+```
 
 Дополнительные сведения и синтаксис см. в статье [Install-AdfsFarm](https://go.microsoft.com/fwlink/?linkid=392704).
 

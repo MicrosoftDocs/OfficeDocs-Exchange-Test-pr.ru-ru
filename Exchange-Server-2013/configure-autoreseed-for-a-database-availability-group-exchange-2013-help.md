@@ -83,8 +83,12 @@ _**Последнее изменение раздела:** 2013-04-15_
 
 Далее создайте каталоги, которые соответствуют корневым каталогам, настроенным в действии 1. В этом примере показано, как создать каталоги по умолчанию с помощью командной строки.
 
+```
     md C:\ExchangeDatabases
+```
+```
     md C:\ExchangeVolumes
+```
 
 ## Как проверить, что шаг выполнен?
 
@@ -118,13 +122,18 @@ _**Последнее изменение раздела:** 2013-04-15_
 
 Далее создайте каталоги баз данных в корневом пути C:\\ExchangeDatabases. В этом примере показано, как создать каталоги для конфигурации хранилища с 4-мя базами данных в каждом томе.
 
+```
     md c:\ExchangeDatabases\db001
-
+```
+```
     md c:\ExchangeDatabases\db002
-
+```
+```
     md c:\ExchangeDatabases\db003
-
+```
+```
     md c:\ExchangeDatabases\db004
+```
 
 ## Как проверить, что шаг выполнен?
 
@@ -158,21 +167,30 @@ C:\\\< *DatabaseFolderName*\>\\*DatabaseName*\\\<*DatabaseName*\>.log
 
 В этом примере показано, как создать каталоги для 4 баз данных, которые будут храниться в томе 1.
 
+```
     md c:\ExchangeDatabases\db001\db001.db
-
+```
+```
     md c:\ExchangeDatabases\db001\db001.log
-
+```
+```
     md c:\ExchangeDatabases\db002\db002.db
-
+```
+```
     md c:\ExchangeDatabases\db002\db002.log
-
+```
+```
     md c:\ExchangeDatabases\db003\db003.db
-
+```
+```
     md c:\ExchangeDatabases\db003\db003.log
-
+```
+```
     md c:\ExchangeDatabases\db004\db004.db
-
+```
+```
     md c:\ExchangeDatabases\db004\db004.log
+```
 
 Повторите указанные выше команды для баз данных в каждом томе.
 
@@ -208,7 +226,9 @@ C:\\\< *DatabaseFolderName*\>\\*DatabaseName*\\\<*DatabaseName*\>.log
 
 2.  Чтобы проверить, правильно ли настроена структура каталогов, выполните следующую команду (ниже указаны пути по умолчанию; при необходимости замените их на другие).
     
+```
         Dir c:\ExchangeDatabases /s
-    
+```
+```
         Dir c:\ExchangeVolumes /s
-
+```

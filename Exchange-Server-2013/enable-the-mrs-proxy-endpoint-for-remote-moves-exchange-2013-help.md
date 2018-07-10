@@ -95,9 +95,11 @@ _**Последнее изменение раздела:** 2013-07-02_
 
 Следующий пример проверяет подключение к серверу в лесу corp.contoso.com.
 
+```
     $Credentials = Get-Credential
-
+```
+```
     Test-MigrationServerAvailability -ExchangeRemoteMove -Autodiscover -EmailAddress administrator@corp.contoso.com -Credentials $Credentials
-
+```
 Для успешного выполнения этой команды должна быть включена конечная точка прокси-сервера MRS.
 

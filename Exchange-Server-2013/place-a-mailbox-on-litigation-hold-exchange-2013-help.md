@@ -145,17 +145,22 @@ _**Последнее изменение раздела:** 2016-10-18_
     
     Вот несколько примеров использования командлетов **Get-Mailbox** и **Get-Recipient** для возврата подмножества почтовых ящиков на основе общих свойств пользователей или почтовых ящиков. В этих примерах предполагается, что уже заполнены соответствующие свойства почтовых ящиков (такие как *CustomAttributeN* или *Department*).
     
+```
         Get-Mailbox -RecipientTypeDetails UserMailbox -ResultSize unlimited -Filter 'CustomAttribute15 -eq "OneYearLitigationHold"'
-    
+```
+```    
         Get-Recipient -RecipientTypeDetails UserMailbox -ResultSize unlimited -Filter 'Department -eq "HR"'
-    
-        Get-Recipient -RecipientTypeDetails UserMailbox -ResultSize unlimited -Filter 'PostalCode -eq "98052"'
-    
+```    
+```
+     Get-Recipient -RecipientTypeDetails UserMailbox -ResultSize unlimited -Filter 'PostalCode -eq "98052"'
+```
+```    
         Get-Recipient -RecipientTypeDetails UserMailbox -ResultSize unlimited -Filter 'StateOrProvince -eq "WA"'
-    
+```
+```    
         Get-Mailbox -ResultSize Unlimited -Filter {RecipientTypeDetails -ne "DiscoveryMailbox"}
-    
-    Вы можете использовать в фильтре другие свойства почтовых ящиков пользователей, чтобы включить или исключить почтовые ящики. Дополнительные сведения см. в статье [Фильтруемые свойства для параметра -Filter](https://technet.microsoft.com/ru-ru/library/bb738155\(v=exchg.150\)).
+```    
+ Вы можете использовать в фильтре другие свойства почтовых ящиков пользователей, чтобы включить или исключить почтовые ящики. Дополнительные сведения см. в статье [Фильтруемые свойства для параметра -Filter](https://technet.microsoft.com/ru-ru/library/bb738155\(v=exchg.150\)).
 
 В начало
 

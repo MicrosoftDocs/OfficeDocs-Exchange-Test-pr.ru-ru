@@ -159,11 +159,13 @@ _**Последнее изменение раздела:** 2013-02-25_
 
 В этом примере настраивается конечная точка миграции, а затем создается межлесное перемещение — из исходного в целевой лес — с помощью CSV-файла.
 
+```
     New-MigrationEndpoint -Name Fabrikam -ExchangeRemote -Autodiscover -EmailAddress tonysmith@fabrikam.com -Credentials (Get-Credential fabrikam\tonysmith) 
-    
+```
+```    
     $csvData=[System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\batch.csv")
     New-MigrationBatch -CSVData $csvData -Timezone "Pacific Standard Time" -Name FabrikamMerger -SourceEndpoint Fabrikam -TargetDeliveryDomain "mail.contoso.com"
-
+```
 Дополнительные сведения о подготовке леса к межлесному перемещению см. в следующих разделах.
 
   - [Подготовка почтовых ящиков для запросов на перемещение между лесами](prepare-mailboxes-for-cross-forest-move-requests-exchange-2013-help.md)
