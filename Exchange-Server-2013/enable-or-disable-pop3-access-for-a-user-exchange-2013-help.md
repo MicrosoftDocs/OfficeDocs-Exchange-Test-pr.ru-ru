@@ -13,24 +13,14 @@ ms.translationtype: HT
 
  
 
-_**Применимо к:**Exchange Server 2013_
+_**Применимо к:** Exchange Server 2013_
 
-_**Последнее изменение раздела:**2014-01-06_
+_**Последнее изменение раздела:** 2014-01-06_
 
 Можно включить или отключить протокол POP3 для пользователя.
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>После включения или отключения POP3 для пользователя необходимо перезапустить службу POP3 Microsoft Exchange и фоновую службу POP3 Microsoft Exchange. Дополнительные сведения о перезапуске службы POP3 см. в разделе <a href="start-and-stop-the-pop3-services-exchange-2013-help.md">Запуск и остановка служб POP3</a>.</td>
-</tr>
-</tbody>
-</table>
+> [!NOTE]  
+> После включения или отключения POP3 для пользователя необходимо перезапустить службу POP3 Microsoft Exchange и фоновую службу POP3 Microsoft Exchange. Дополнительные сведения о перезапуске службы POP3 см. в разделе <a href="start-and-stop-the-pop3-services-exchange-2013-help.md">Запуск и остановка служб POP3</a>.
 
 
 Дополнительные сведения об управлении почтовыми ящиками пользователей см. в разделе [Управление почтовыми ящиками пользователей](manage-user-mailboxes-exchange-2013-help.md).
@@ -45,18 +35,8 @@ _**Последнее изменение раздела:**2014-01-06_
 
   - Сочетания клавиш для процедур, описанных в этой статье, приведены в статье [Сочетания клавиш в Центре администрирования Exchange](keyboard-shortcuts-in-the-exchange-admin-center-exchange-online-protection-help.md).
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Bb124558.tip(EXCHG.150).gif" title="Совет" alt="Совет" />Совет.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>..</td>
-</tr>
-</tbody>
-</table>
+> [!TIP]  
+> Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>..
 
 
 ## Что необходимо сделать?

@@ -13,9 +13,9 @@ ms.translationtype: MT
 
  
 
-_**Применимо к:**Exchange Server 2013_
+_**Применимо к:** Exchange Server 2013_
 
-_**Последнее изменение раздела:**2010-07-16_
+_**Последнее изменение раздела:** 2010-07-16_
 
 [Включение и отключение ведения журнала аудита для почтового ящика](enable-or-disable-mailbox-audit-logging-for-a-mailbox-exchange-2013-help.md)
 

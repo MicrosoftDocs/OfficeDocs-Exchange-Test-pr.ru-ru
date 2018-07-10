@@ -13,9 +13,9 @@ ms.translationtype: MT
 
  
 
-_**Применимо к:**Exchange Server 2013_
+_**Применимо к:** Exchange Server 2013_
 
-_**Последнее изменение раздела:**2015-04-08_
+_**Последнее изменение раздела:** 2015-04-08_
 
 Фильтрация подключений — это функция защиты от нежелательной почты, предоставляемая агентом фильтрации подключений. Она доступна только на пограничных транспортных серверах в Microsoft Exchange 2013. Фильтрация подключений предоставляет следующие возможности:
 
@@ -39,18 +39,8 @@ _**Последнее изменение раздела:**2015-04-08_
 
   - Сочетания клавиш для процедур, описанных в этой статье, приведены в статье [Сочетания клавиш в Центре администрирования Exchange](keyboard-shortcuts-in-the-exchange-admin-center-exchange-online-protection-help.md).
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Bb124558.tip(EXCHG.150).gif" title="Совет" alt="Совет" />Совет.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.</td>
-</tr>
-</tbody>
-</table>
+> [!TIP]  
+> Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.
 
 
 ## Что необходимо сделать?
@@ -145,18 +135,8 @@ _**Последнее изменение раздела:**2015-04-08_
 
     Get-IPBlockListEntry -IPAddress 192.168.1.13
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>При использовании параметра <em>IPAddress</em> полученная запись черного списка IP-адресов может содержать отдельный IP-адрес, диапазон IP-адресов или IP-адрес CIDR. Для использования параметра <em>Identity</em> необходимо указать целое значение, назначенное записи черного списка IP-адресов.</td>
-</tr>
-</tbody>
-</table>
+> [!NOTE]  
+> При использовании параметра <em>IPAddress</em> полученная запись черного списка IP-адресов может содержать отдельный IP-адрес, диапазон IP-адресов или IP-адрес CIDR. Для использования параметра <em>Identity</em> необходимо указать целое значение, назначенное записи черного списка IP-адресов.
 
 
 ## Добавление записей черного списка IP-адресов с помощью командной консоли
@@ -277,18 +257,8 @@ _**Последнее изменение раздела:**2015-04-08_
 
     Add-IPBlockListProvider -Name "Contoso IP Block List Provider" -LookupDomain rbl.contoso.com -BitmaskMatch 127.0.0.1
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>При добавлении нового поставщика черного списка IP-адресов он по умолчанию включен (значение <em>Enabled</em> равно <code>$true</code>), а значение приоритета увеличивается на 1 (значение <em>Priority</em> для первой записи равно 1).</td>
-</tr>
-</tbody>
-</table>
+> [!NOTE]  
+> При добавлении нового поставщика черного списка IP-адресов он по умолчанию включен (значение <em>Enabled</em> равно <code>$true</code>), а значение приоритета увеличивается на 1 (значение <em>Priority</em> для первой записи равно 1).
 
 
 Дополнительные сведения см. в разделе [Add-IPBlockListProvider](https://technet.microsoft.com/ru-ru/library/bb124358\(v=exchg.150\)).
@@ -425,18 +395,8 @@ _**Последнее изменение раздела:**2015-04-08_
 
     Get-IPAllowListEntry -IPAddress 192.168.1.13
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>При использовании параметра <em>IPAddress</em> полученная запись белого списка IP-адресов может содержать отдельный IP-адрес, диапазон IP-адресов или IP-адрес CIDR. Для использования параметра <em>Identity</em> необходимо указать целое значение, назначенное записи белого списка IP-адресов.</td>
-</tr>
-</tbody>
-</table>
+> [!NOTE]  
+> При использовании параметра <em>IPAddress</em> полученная запись белого списка IP-адресов может содержать отдельный IP-адрес, диапазон IP-адресов или IP-адрес CIDR. Для использования параметра <em>Identity</em> необходимо указать целое значение, назначенное записи белого списка IP-адресов.
 
 
 ## Добавление записей белого списка IP-адресов с помощью командной консоли
@@ -551,18 +511,8 @@ _**Последнее изменение раздела:**2015-04-08_
 
     Add-IPAllowListProvider -Name "Contoso IP Allow List Provider" -LookupDomain allow.contoso.com -BitmaskMatch 127.0.0.1
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>При добавлении нового поставщика белого списка IP-адресов он по умолчанию включен (значение <em>Enabled</em> равно <code>$true</code>), а значение приоритета увеличивается на 1 (значение <em>Priority</em> для первой записи равно 1).</td>
-</tr>
-</tbody>
-</table>
+> [!NOTE]  
+> При добавлении нового поставщика белого списка IP-адресов он по умолчанию включен (значение <em>Enabled</em> равно <code>$true</code>), а значение приоритета увеличивается на 1 (значение <em>Priority</em> для первой записи равно 1).
 
 
 Дополнительные сведения см. в разделе [Add-IPBlockListProvider](https://technet.microsoft.com/ru-ru/library/bb124358\(v=exchg.150\)).

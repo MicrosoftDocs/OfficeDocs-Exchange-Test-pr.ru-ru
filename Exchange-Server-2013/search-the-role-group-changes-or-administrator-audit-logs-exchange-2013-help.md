@@ -13,26 +13,16 @@ ms.translationtype: HT
 
  
 
-_**Применимо к:**Exchange Online, Exchange Server 2013_
+_**Применимо к:** Exchange Online, Exchange Server 2013_
 
-_**Последнее изменение раздела:**2013-12-02_
+_**Последнее изменение раздела:** 2013-12-02_
 
 Поиск по журналу административного аудита позволяет определить автора изменений организации, сервера и сведений получателя. Это может помочь при определении причины неожиданного поведения, для выявления недобросовестного администратора или для проверки соблюдения всех требований. Дополнительные сведения о ведении журнала аудита администратора см. в разделе [Ведение журнала аудита администратора](administrator-audit-logging-exchange-2013-help.md).
 
 Чтобы выполнить поиск по почтовому ящику журнала аудита, обратитесь к разделу [Ведение журнала аудита почтового ящика](mailbox-audit-logging-exchange-2013-help.md).
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Bb124558.tip(EXCHG.150).gif" title="Совет" alt="Совет" />Совет.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>В Exchange Online для просмотра записей в журнале аудита действий администратора можно использовать Центр администрирования Exchange. Дополнительные сведения см. в разделе <a href="view-the-administrator-audit-log-exchange-2013-help.md">Просмотр журнала аудита администратора</a>.</td>
-</tr>
-</tbody>
-</table>
+> [!TIP]  
+> В Exchange Online для просмотра записей в журнале аудита действий администратора можно использовать Центр администрирования Exchange. Дополнительные сведения см. в разделе <a href="view-the-administrator-audit-log-exchange-2013-help.md">Просмотр журнала аудита администратора</a>.
 
 
 ## Что нужно знать перед началом работы
@@ -49,35 +39,15 @@ _**Последнее изменение раздела:**2013-12-02_
     
         Set-AdminAuditLogConfig -AdminAuditLogEnabled $true
     
-    <table>
-    <thead>
-    <tr class="header">
-    <th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr class="odd">
-    <td>Командлет <strong>Set-AdminAuditLogConfig</strong> недоступен в Exchange Online.</td>
-    </tr>
-    </tbody>
-    </table>
+    > [!NOTE]  
+    > Командлет <strong>Set-AdminAuditLogConfig</strong> недоступен в Exchange Online.
     
     Дополнительные сведения см. в разделе [Управление ведением журнала аудита администраторов](manage-administrator-audit-logging-exchange-2013-help.md).
 
   - Сочетания клавиш для процедур, описанных в этой статье, приведены в статье [Сочетания клавиш в Центре администрирования Exchange](keyboard-shortcuts-in-the-exchange-admin-center-exchange-online-protection-help.md).
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Bb124558.tip(EXCHG.150).gif" title="Совет" alt="Совет" />Совет.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.</td>
-</tr>
-</tbody>
-</table>
+> [!TIP]  
+> Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.
 
 
 ## Что необходимо сделать?
@@ -100,18 +70,8 @@ _**Последнее изменение раздела:**2013-12-02_
 
 Чтобы создать XML-файл, который содержит изменения, внесенные в организацию, можно воспользоваться отчетом экспорта журнала аудита администраторов EAC. Этот отчет позволяет указать диапазон дат для поиска записей журнала аудита, которые содержат изменения, выполненные указанными пользователями. После этого XML-файл отправляется получателю в виде вложения в сообщение электронной почты. Максимальный размер XML-файла составляет 10 мегабайт (МБ).
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Outlook Web App не позволяет открывать вложения XML по умолчанию. В системе Exchange можно разрешить просмотр вложений XML с помощью приложения Outlook Web App или же использовать другой почтовый клиент, например Microsoft Outlook. Сведения о том, как включить в Outlook Web App просмотр вложений XML, см. в разделе <a href="view-or-configure-outlook-web-app-virtual-directories-exchange-2013-help.md">Просмотр и настройка виртуальных каталогов Outlook Web App</a>.</td>
-</tr>
-</tbody>
-</table>
+> [!NOTE]  
+> Outlook Web App не позволяет открывать вложения XML по умолчанию. В системе Exchange можно разрешить просмотр вложений XML с помощью приложения Outlook Web App или же использовать другой почтовый клиент, например Microsoft Outlook. Сведения о том, как включить в Outlook Web App просмотр вложений XML, см. в разделе <a href="view-or-configure-outlook-web-app-virtual-directories-exchange-2013-help.md">Просмотр и настройка виртуальных каталогов Outlook Web App</a>.
 
 
 1.  В EAC выберите пункты **Управление соответствием требованиям** \> **Аудит**, а затем выберите команду **Экспортировать журнал аудита администраторов**.
@@ -134,18 +94,8 @@ _**Последнее изменение раздела:**2013-12-02_
 
     Search-AdminAuditLog - Cmdlets <cmdlet 1, cmdlet 2, ...> -Parameters <parameter 1, parameter 2, ...> -StartDate <start date> -EndDate <end date> -UserIds <user IDs> -ObjectIds <object IDs> -IsSuccess <$True | $False >
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Командлет <strong>Search-AdminAuditLog</strong> по умолчанию возвращает максимум 1000 записей журнала. Используйте параметр <em>ResultSize</em>, чтобы указать до 250 000 записей журнала. Также можно использовать значение <code>Unlimited</code> для возврата всех записей.</td>
-</tr>
-</tbody>
-</table>
+> [!NOTE]  
+> Командлет <strong>Search-AdminAuditLog</strong> по умолчанию возвращает максимум 1000 записей журнала. Используйте параметр <em>ResultSize</em>, чтобы указать до 250 000 записей журнала. Также можно использовать значение <code>Unlimited</code> для возврата всех записей.
 
 
 В этом примере выполняется поиск всех записей журнала аудита со следующими критериями:
@@ -213,18 +163,8 @@ _**Последнее изменение раздела:**2013-12-02_
 
 Чтобы выполнить поиск записей журнала аудита по указанным критериям и отправить результаты определенному отправителю в виде XML-файла, используйте командную строку. Результаты отправляются получателю в течение 15 минут. Список критериев поиска см. в разделе [Ведение журнала аудита администратора](administrator-audit-logging-exchange-2013-help.md).
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Outlook Web App не позволяет открывать вложения XML по умолчанию. В системе Exchange можно разрешить просмотр вложений XML с помощью приложения Outlook Web App или же использовать другой почтовый клиент, например Microsoft Outlook. Сведения о том, как включить в Outlook Web App просмотр вложений XML, см. в разделе <a href="view-or-configure-outlook-web-app-virtual-directories-exchange-2013-help.md">Просмотр и настройка виртуальных каталогов Outlook Web App</a>.</td>
-</tr>
-</tbody>
-</table>
+> [!NOTE]  
+> Outlook Web App не позволяет открывать вложения XML по умолчанию. В системе Exchange можно разрешить просмотр вложений XML с помощью приложения Outlook Web App или же использовать другой почтовый клиент, например Microsoft Outlook. Сведения о том, как включить в Outlook Web App просмотр вложений XML, см. в разделе <a href="view-or-configure-outlook-web-app-virtual-directories-exchange-2013-help.md">Просмотр и настройка виртуальных каталогов Outlook Web App</a>.
 
 
 Чтобы выполнить поиск по указанному критерию журнала аудита, используйте следующий синтаксис.
@@ -247,18 +187,8 @@ _**Последнее изменение раздела:**2013-12-02_
 
     New-AdminAuditLogSearch -Cmdlets Set-Mailbox -Parameters ProhibitSendQuota, ProhibitSendReceiveQuota, IssueWarningQuota, MaxSendSize, MaxReceiveSize -StartDate 08/04/2012 -EndDate 10/03/2012 -UserIds davids, chrisd, kima -StatusMailRecipients davids@contoso.com -Name "Mailbox limit changes"
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Отчет, создаваемый командлетом <strong>New-AdminAuditLogSearch</strong>, имеет максимальный размер в 10 МБ. Если выполняемый поиск возвращает отчет больше 10 МБ, следует изменить критерии поиска. Например, можно сократить размер диапазона данных и выполнить несколько отчетов, каждый из которых будет содержать часть исходного диапазона данных.</td>
-</tr>
-</tbody>
-</table>
+> [!NOTE]  
+> Отчет, создаваемый командлетом <strong>New-AdminAuditLogSearch</strong>, имеет максимальный размер в 10 МБ. Если выполняемый поиск возвращает отчет больше 10 МБ, следует изменить критерии поиска. Например, можно сократить размер диапазона данных и выполнить несколько отчетов, каждый из которых будет содержать часть исходного диапазона данных.
 
 
 Дополнительные сведения о формате XML-файла см. в разделе [Структура журнала аудита администратора](administrator-audit-log-structure-exchange-2013-help.md).

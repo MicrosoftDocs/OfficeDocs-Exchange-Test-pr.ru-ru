@@ -13,26 +13,16 @@ ms.translationtype: HT
 
  
 
-_**Применимо к:**Exchange Online, Exchange Server 2013, Exchange Server 2016_
+_**Применимо к:** Exchange Online, Exchange Server 2013, Exchange Server 2016_
 
-_**Последнее изменение раздела:**2016-12-09_
+_**Последнее изменение раздела:** 2016-12-09_
 
 Средство устранения неполадок единой системы обмена сообщениями Microsoft Exchange 2010 — это командлет командной консоли Exchange под названием **Test-ExchangeUMCallFlow**. Указанное средство можно использовать для проведения серии диагностических тестов единой системы обмена сообщениями в организации. Если при выполнении какого-либо теста происходит сбой, средство сообщает причину сбоя и возможные варианты решения возникшей проблемы. Использовать средство устранения неполадок единой системы обмена сообщениями можно только на серверах Exchange 2010 или более поздней версии.
 
 Средство устранения неполадок единой системы обмена сообщениями позволяет проверить правильность работы голосовой почты в локальных и нелокальных развертываниях. Его можно использовать в развертываниях единой системы обмена сообщениями с установленными серверами Microsoft Office Communications Server 2007 R2 или Microsoft Lync Server 2010, а также в развертываниях этой системы, содержащих шлюзы VoIP, IP-УАТС или пограничные контроллеры сеансов (SBC).
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Средство устранения неполадок единой системы обмена сообщениями используется для тестирования системы и устранения неполадок. С другой стороны, командлет <strong>Test-UMConnectivity</strong> следует использовать в целях наблюдения. Командлет <strong>Test-UMConnectivity</strong> применяется вместе с пакетами управления System Center Operations Manager (SCOM), предназначенными для наблюдения за серверами единой системы обмена сообщениями Exchange 2010 или серверами почтовых ящиков и клиентского доступа Exchange 2013 и компонентами телефонии. Командлет <strong>Test-UMConnectivity</strong> выполняет локальные проверки подключений SIP и процедур входа в систему для почтовых ящиков. Кроме того, он может запускаться в качестве задачи SCOM.</td>
-</tr>
-</tbody>
-</table>
+> [!NOTE]  
+> Средство устранения неполадок единой системы обмена сообщениями используется для тестирования системы и устранения неполадок. С другой стороны, командлет <strong>Test-UMConnectivity</strong> следует использовать в целях наблюдения. Командлет <strong>Test-UMConnectivity</strong> применяется вместе с пакетами управления System Center Operations Manager (SCOM), предназначенными для наблюдения за серверами единой системы обмена сообщениями Exchange 2010 или серверами почтовых ящиков и клиентского доступа Exchange 2013 и компонентами телефонии. Командлет <strong>Test-UMConnectivity</strong> выполняет локальные проверки подключений SIP и процедур входа в систему для почтовых ящиков. Кроме того, он может запускаться в качестве задачи SCOM.
 
 
 Чтобы загрузить средство устранения неполадок единой системы обмена сообщениями, см. статью [Средство устранения неполадок единой системы обмена сообщениями](https://go.microsoft.com/fwlink/p/?linkid=182625).
@@ -223,21 +213,11 @@ _**Последнее изменение раздела:**2016-12-09_
 
   - Microsoft .NET Framework 3.5 с пакетом обновления 1 (SP1).   См. статью [Microsoft .NET Framework 3.5 с пакетом обновления 1](https://go.microsoft.com/fwlink/p/?linkid=152380).
     
-    <table>
-    <thead>
-    <tr class="header">
-    <th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr class="odd">
-    <td>Если средство будет работать на компьютере под управлением Windows Vista или Windows Server 2008, см. статью <a href="https://go.microsoft.com/fwlink/p/?linkid=178998">Обновление семейства Microsoft .NET Framework 3.5 для Windows Vista x64 и Windows Server 2008 x64</a>.</td>
-    </tr>
-    </tbody>
-    </table>
+    > [!NOTE]  
+    > Если средство будет работать на компьютере под управлением Windows Vista или Windows Server 2008, см. статью <a href="https://go.microsoft.com/fwlink/p/?linkid=178998">Обновление семейства Microsoft .NET Framework 3.5 для Windows Vista x64 и Windows Server 2008 x64</a>.
 
 
-  - Служба удаленного управления Windows (WinRM) 2.0 и Windows PowerShell V2 (Windows6.0-KB968930.msu)   См. статью 968930 базы знаний Майкрософт [Основной пакет Windows Management Framework (Windows PowerShell 2.0 и WinRM 2.0)](http://go.microsoft.com/fwlink/p/?linkid=3052%26kbid=968930).
+  - Служба удаленного управления Windows (WinRM) 2.0 и Windows PowerShell V2 (Windows6.0-KB968930.msu)   См. статью 968930 базы знаний Майкрософт [Основной пакет Windows Management Framework (Windows PowerShell 2.0 и WinRM 2.0)](http://go.microsoft.com/fwlink/p/?linkid=3052&kbid=968930).
 
   - Microsoft Unified Communications Managed API 2.0 Core Runtime (UcmaRuntimeWebDownloadX64.msi).   См. статью [Unified Communications Managed API 2.0, Core Runtime (64-разрядный)](https://go.microsoft.com/fwlink/p/?linkid=198175).
 

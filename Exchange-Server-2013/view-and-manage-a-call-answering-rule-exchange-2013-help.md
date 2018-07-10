@@ -13,26 +13,16 @@ ms.translationtype: MT
 
  
 
-_**Применимо к:**Exchange Server 2013, Exchange Server 2016_
+_**Применимо к:** Exchange Server 2013, Exchange Server 2016_
 
-_**Последнее изменение раздела:**2015-04-08_
+_**Последнее изменение раздела:** 2015-04-08_
 
 С помощью командной консоли можно просматривать и настраивать одно или несколько правил ответа на вызовы для пользователя. Кроме того, можно использовать командлет **Get-UMCallAnsweringRule** или **Set-UMCallAnsweringRule** в командной консоли Exchange, чтобы просматривать и управлять правилами ответа на вызовы для нескольких пользователей.
 
 Способ, которым правила автоответчика применяются ко входящим вызовам, аналогичен способу, которым правила для папки "Входящие" применяются к входящим сообщениям электронной почты. По умолчанию при включения для пользователя единой системы обмена сообщениями ни одно правило автоответчика не настроено. Но даже в этом случае почтовая система отвечает на входящие вызовы, и абоненты получают приглашение оставить голосовое сообщение.
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Dd876857.important(EXCHG.150).gif" title="Важно" alt="Важно" />Важно!</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Пользователи, включенные в единую систему обмена сообщениями, могут войти в Outlook Web App, чтобы создавать и удалять правила ответа на вызовы, а также управлять ими.</td>
-</tr>
-</tbody>
-</table>
+> [!IMPORTANT]  
+> Пользователи, включенные в единую систему обмена сообщениями, могут войти в Outlook Web App, чтобы создавать и удалять правила ответа на вызовы, а также управлять ими.
 
 
 Сведения о дополнительных задачах управления, связанных с правилами ответа на вызовы, см. в статье [Переадресация звонков процедур](forwarding-calls-procedures-exchange-2013-help.md).
@@ -53,18 +43,8 @@ _**Последнее изменение раздела:**2015-04-08_
 
   - Сочетания клавиш для процедур, описанных в этой статье, приведены в статье [Сочетания клавиш в Центре администрирования Exchange](keyboard-shortcuts-in-the-exchange-admin-center-exchange-online-protection-help.md).
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Bb124558.tip(EXCHG.150).gif" title="Совет" alt="Совет" />Совет.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>..</td>
-</tr>
-</tbody>
-</table>
+> [!TIP]  
+> Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>..
 
 
 ## Что нужно сделать

@@ -13,9 +13,9 @@ ms.translationtype: MT
 
  
 
-_**Применимо к:**Exchange Server 2013_
+_**Применимо к:** Exchange Server 2013_
 
-_**Последнее изменение раздела:**2015-01-14_
+_**Последнее изменение раздела:** 2015-01-14_
 
 В этом разделе содержатся решения и сведения об общих ошибках, которые могут произойти при использовании сценария RollAlternateServiceAccountPassword.ps1.
 
@@ -59,18 +59,8 @@ _**Последнее изменение раздела:**2015-01-14_
 
 После удаления службы клиентского доступа RPC сервер не будет возвращен в качестве члена массива командлетом [Get-ClientAccessArray](https://technet.microsoft.com/ru-ru/library/dd297976\(v=exchg.150\)), поэтому сценарий не будет использовать его как целевой. Когда сервер заработает, можно повторно добавить службу клиентского доступа RPC с помощью командлета **New-RpcClientAccess**. После повторного добавления службы клиентского доступа RPC обязательно перезапустите службу адресной книги Microsoft Exchange на задействованном сервере.
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Dd876857.Caution(EXCHG.150).gif" title="Внимание!" alt="Внимание!" />Внимание!</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Перед удалением службы клиентского доступа RPC с сервера прочитайте раздел <a href="https://technet.microsoft.com/ru-ru/library/dd298151(v=exchg.150)">Remove-RPCClientAccess</a>.</td>
-</tr>
-</tbody>
-</table>
+> [!CAUTION]  
+> Перед удалением службы клиентского доступа RPC с сервера прочитайте раздел <a href="https://technet.microsoft.com/ru-ru/library/dd298151(v=exchg.150)">Remove-RPCClientAccess</a>.
 
 
 ## Дополнительные сведения

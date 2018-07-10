@@ -13,9 +13,9 @@ ms.translationtype: MT
 
  
 
-_**Применимо к:**Exchange Server 2010 Service Pack 2 (SP2), Exchange Server 2013, Exchange Server 2016_
+_**Применимо к:** Exchange Server 2010 Service Pack 2 (SP2), Exchange Server 2013, Exchange Server 2016_
 
-_**Последнее изменение раздела:**2013-06-25_
+_**Последнее изменение раздела:** 2013-06-25_
 
 В этом разделе объясняется, как с помощью командной консоли проверить работу системы голосовой почты. При выполнении следующей процедуры сервер почтовых ящиков, на котором работает единая система обмена сообщениями Microsoft Exchange, инициирует диагностическую проверку с помощью вызова по протоколу SIP, в результате которого возвращается переменная состояния сервера служб единой системы обмена сообщениями.
 
@@ -37,18 +37,8 @@ _**Последнее изменение раздела:**2013-06-25_
 
   - Сочетания клавиш для процедур, описанных в этой статье, приведены в статье [Сочетания клавиш в Центре администрирования Exchange](keyboard-shortcuts-in-the-exchange-admin-center-exchange-online-protection-help.md).
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Bb124558.tip(EXCHG.150).gif" title="Совет" alt="Совет" />Совет.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>..</td>
-</tr>
-</tbody>
-</table>
+> [!TIP]  
+> Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>..
 
 
 ## Использование командной консоли для тестирования работы служб единой системы обмена сообщениями
@@ -65,30 +55,10 @@ _**Последнее изменение раздела:**2013-06-25_
 
     Test-UMConnectivity -ListenPort 5061
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Используйте режим 1, если не указан параметр <code>-UMIPGateway</code>.</td>
-</tr>
-</tbody>
-</table>
+> [!NOTE]  
+> Используйте режим 1, если не указан параметр <code>-UMIPGateway</code>.
 
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Для параметра <code>-Timeout</code> можно установить значение менее 5 секунд. Однако рекомендуется всегда устанавливать для данного параметра значение не менее 5 секунд.</td>
-</tr>
-</tbody>
-</table>
+> [!NOTE]  
+> Для параметра <code>-Timeout</code> можно установить значение менее 5 секунд. Однако рекомендуется всегда устанавливать для данного параметра значение не менее 5 секунд.
 

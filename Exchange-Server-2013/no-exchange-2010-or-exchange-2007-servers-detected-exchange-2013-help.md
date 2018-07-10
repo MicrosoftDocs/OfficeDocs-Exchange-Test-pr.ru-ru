@@ -13,24 +13,14 @@ ms.translationtype: HT
 
  
 
-_**Применимо к:**Exchange Server_
+_**Применимо к:** Exchange Server_
 
-_**Последнее изменение раздела:**2012-11-08_
+_**Последнее изменение раздела:** 2012-11-08_
 
 Установка Microsoft Exchange Server 2013 вывела данное предупреждение, потому что в организации нет ролей сервера Exchange Server 2010 и Exchange Server 2007.
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Dd876857.Caution(EXCHG.150).gif" title="Внимание!" alt="Внимание!" />Внимание!</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Если продолжить установку Exchange Server 2013, вы не сможете добавить серверы Exchange 2010 или Exchange 2007 в организации в будущем.</td>
-</tr>
-</tbody>
-</table>
+> [!CAUTION]  
+> Если продолжить установку Exchange Server 2013, вы не сможете добавить серверы Exchange 2010 или Exchange 2007 в организации в будущем.
 
 
 Перед развертыванием Exchange 2013 нужно учесть следующие факторы, которые могут привести к необходимости развертывания серверов Exchange 2010 или Exchange 2007 перед Exchange 2013:

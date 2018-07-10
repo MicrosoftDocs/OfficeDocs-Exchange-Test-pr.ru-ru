@@ -13,9 +13,9 @@ ms.translationtype: HT
 
  
 
-_**Применимо к:**Exchange Server 2013_
+_**Применимо к:** Exchange Server 2013_
 
-_**Последнее изменение раздела:**2016-05-26_
+_**Последнее изменение раздела:** 2016-05-26_
 
 Ниже приведены преимущества использования защиты от нежелательной почты Exchange в облаке (Microsoft Exchange Online или Microsoft Exchange Online Protection) по сравнению с Microsoft Exchange Server 2013, где используется большинство тех же встроенных функций защиты от нежелательных сообщений, что и в Microsoft Exchange Server 2010:
 

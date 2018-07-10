@@ -13,9 +13,9 @@ ms.translationtype: MT
 
  
 
-_**Применимо к:**Exchange Server 2013_
+_**Применимо к:** Exchange Server 2013_
 
-_**Последнее изменение раздела:**2015-03-09_
+_**Последнее изменение раздела:** 2015-03-09_
 
 В журналах аудита администратора содержатся записи всех командлетов и параметров, которые запускались в командной консоли Exchange и центра администрирования Exchange (EAC). Они создаются по требованию, когда выполняется отчет аудита администраторов в центре администрирования Exchange или запускается командлет **New-AdminAuditLogSearch** в командной консоли. Дополнительные сведения о журналах аудита см. в разделе [Ведение журнала аудита администратора](administrator-audit-logging-exchange-2013-help.md).
 
@@ -119,18 +119,9 @@ _**Последнее изменение раздела:**2015-03-09_
 <td><p><code>N/A</code></p></td>
 <td><p>В этом теге содержатся все свойства, которые были изменены в результате выполнения командлета. Тег <code>Property</code> является дочерним для этого тега.</p>
 <p>Имеется один тег <code>ModifiedProperties</code> на каждый тег <code>Event</code>.</p>
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Dd876857.important(EXCHG.150).gif" title="Важно" alt="Важно" />Важно!</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Этот тег заполняется, только если параметр <em>LogLevel</em> командлета <strong>Set-AdminAuditLogConfig</strong> равен <code>Verbose</code>.</td>
-</tr>
-</tbody>
-</table>
+
+> [!IMPORTANT]  
+> Этот тег заполняется, только если параметр <em>LogLevel</em> командлета <strong>Set-AdminAuditLogConfig</strong> равен <code>Verbose</code>.
 
 </td>
 </tr>
@@ -173,18 +164,8 @@ _**Последнее изменение раздела:**2015-03-09_
 
   - Были изменены два следующих свойства объекта `david`:
     
-    <table>
-    <thead>
-    <tr class="header">
-    <th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr class="odd">
-    <td>Измененные свойства сохраняются в журнале аудита, поскольку параметр <em>LogLevel</em> командлета <code>Set-AdminAuditLogConfig</code> задан как <code>Verbose</code> в этом примере.</td>
-    </tr>
-    </tbody>
-    </table>
+    > [!NOTE]  
+    > Измененные свойства сохраняются в журнале аудита, поскольку параметр <em>LogLevel</em> командлета <code>Set-AdminAuditLogConfig</code> задан как <code>Verbose</code> в этом примере.
     
       - *ProhibitSendReceiveQuota* с новым значением `10GB`, которым было заменено старое значение `35GB`
 

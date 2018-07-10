@@ -13,9 +13,9 @@ ms.translationtype: MT
 
  
 
-_**Применимо к:**Exchange Server 2013, Exchange Server 2016_
+_**Применимо к:** Exchange Server 2013, Exchange Server 2016_
 
-_**Последнее изменение раздела:**2015-04-08_
+_**Последнее изменение раздела:** 2015-04-08_
 
 Можно импортировать звуковые файлы, содержащие настраиваемые приветствия, объявления, меню и приглашения, из единой системы обмена сообщениями Exchange 2007 в единую систему обмена сообщениями Exchange 2013. С помощью сценария командной консоли можно импортировать приглашения в системный почтовый ящик Exchange с именем {e0dc1c29-89c3-4034-b678-e6c29d823ed9}, который создается при установке Microsoft Exchange 2013. Этот системный почтовый ящик используется единой системой обмена сообщениями для хранения настраиваемых приветствий, объявлений, меню и приглашений абонентской группы и автосекретаря, а также отчетов этой системы.
 
@@ -29,18 +29,8 @@ _**Последнее изменение раздела:**2015-04-08_
 
 По умолчанию сценарий MigrateUMCustomPrompts.ps1 находится в папке \<Program Files\>\\Microsoft\\Exchange Server\\V15\\Scripts на сервере Exchange 2013.
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Сценарий MigrateUMCustomPrompts.ps1 включен в Exchange 2013. Необходимо запустить его на сервере почтовых ящиков Exchange 2013 в той же организации, в которой находятся серверы единой системы обмена сообщениями Exchange 2007.</td>
-</tr>
-</tbody>
-</table>
+> [!NOTE]  
+> Сценарий MigrateUMCustomPrompts.ps1 включен в Exchange 2013. Необходимо запустить его на сервере почтовых ящиков Exchange 2013 в той же организации, в которой находятся серверы единой системы обмена сообщениями Exchange 2007.
 
 
 Дополнительные задачи управления, связанные с абонентскими группами единой системы обмена сообщениями, см. в разделе [Процедуры плана телефонным единой системы обмена СООБЩЕНИЯМИ](um-dial-plan-procedures-exchange-2013-help.md).
@@ -61,18 +51,8 @@ _**Последнее изменение раздела:**2015-04-08_
 
   - Сочетания клавиш для процедур, описанных в этой статье, приведены в статье [Сочетания клавиш в Центре администрирования Exchange](keyboard-shortcuts-in-the-exchange-admin-center-exchange-online-protection-help.md).
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Bb124558.tip(EXCHG.150).gif" title="Совет" alt="Совет" />Совет.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>..</td>
-</tr>
-</tbody>
-</table>
+> [!TIP]  
+> Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>..
 
 
 ## Миграция копии всех настраиваемых приглашений для абонентских групп и автосекретарей единой системы обмена сообщениями с помощью сценария MigrateUMCustomPrompts.ps1

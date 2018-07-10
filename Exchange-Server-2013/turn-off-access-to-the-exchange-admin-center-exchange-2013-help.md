@@ -13,39 +13,19 @@ ms.translationtype: MT
 
  
 
-_**Применимо к:**Exchange Server 2013_
+_**Применимо к:** Exchange Server 2013_
 
-_**Последнее изменение раздела:**2013-05-20_
+_**Последнее изменение раздела:** 2013-05-20_
 
 В целях обеспечения безопасности некоторым организациям может потребоваться ограничить доступ к Центру администрирования Exchange для пользователей из Интернета. В этой процедуре описывается, как отключить доступ к Центру администрирования Exchange. Эта процедура не запрещает пользователям доступ к параметрам в Outlook Web App.
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>С помощью этой процедуры можно полностью отключить доступ администратора Центра администрирования Exchange на сервере клиентского доступа. Если необходимо дать внутренним пользователям права администратора Центра администрирования Exchange, необходимо установить отдельный сервер клиентского доступа и настроить его так, чтобы он обрабатывал только внутренние запросы. Для этого выполните следующую команду.<br />
-<code>Set-ECPVirtualDirectory -Identity &quot;InternalCAS\ecp (default web site)&quot; -AdminEnabled $True</code></td>
-</tr>
-</tbody>
-</table>
+> [!NOTE]  
+> С помощью этой процедуры можно полностью отключить доступ администратора Центра администрирования Exchange на сервере клиентского доступа. Если необходимо дать внутренним пользователям права администратора Центра администрирования Exchange, необходимо установить отдельный сервер клиентского доступа и настроить его так, чтобы он обрабатывал только внутренние запросы. Для этого выполните следующую команду.<br />
+<code>Set-ECPVirtualDirectory -Identity &quot;InternalCAS\ecp (default web site)&quot; -AdminEnabled $True</code>
 
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Dd876857.Caution(EXCHG.150).gif" title="Внимание!" alt="Внимание!" />Внимание!</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Эта процедура применима только к локальным развертываниям Exchange Server 2013.</td>
-</tr>
-</tbody>
-</table>
+> [!CAUTION]  
+> Эта процедура применима только к локальным развертываниям Exchange Server 2013.
 
 
 ## Что нужно знать перед началом работы
@@ -58,18 +38,8 @@ _**Последнее изменение раздела:**2013-05-20_
 
   - Сочетания клавиш для процедур, описанных в этой статье, приведены в статье [Сочетания клавиш в Центре администрирования Exchange](keyboard-shortcuts-in-the-exchange-admin-center-exchange-online-protection-help.md).
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Bb124558.tip(EXCHG.150).gif" title="Совет" alt="Совет" />Совет.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.</td>
-</tr>
-</tbody>
-</table>
+> [!TIP]  
+> Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.
 
 
 ## Выключение доступа к Центру администрирования Exchange из Интернета с помощью командной консоли

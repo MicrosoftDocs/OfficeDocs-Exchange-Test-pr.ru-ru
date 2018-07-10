@@ -13,24 +13,14 @@ ms.translationtype: HT
 
  
 
-_**Применимо к:**Exchange Server 2013_
+_**Применимо к:** Exchange Server 2013_
 
-_**Последнее изменение раздела:**2015-04-08_
+_**Последнее изменение раздела:** 2015-04-08_
 
 С помощью сценария **ConfigureAdam.ps1** (расположенного в папке $env:ExchangeInstallPath\\Scripts) вы можете изменить стандартную конфигурацию служб Active Directory облегченного доступа к каталогам (AD LDS) на пограничных транспортных серверах, прежде чем подпишете пограничный транспортный сервер на свою организацию Exchange.
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Dd876857.important(EXCHG.150).gif" title="Важно" alt="Важно" />Важно!</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Сценарий <strong>ConfigureAdam.ps1</strong> вызывает команду <strong>dsdbutil</strong>, которая изменяет в системном реестре параметры служб AD LDS. Команда <strong>dsdbutil</strong> — это средство управления службами AD LDS, которое могут использовать только опытные администраторы; изменять конфигурацию служб AD LDS рекомендуется с помощью сценария <strong>ConfigureAdam.ps1</strong>.</td>
-</tr>
-</tbody>
-</table>
+> [!IMPORTANT]  
+> Сценарий <strong>ConfigureAdam.ps1</strong> вызывает команду <strong>dsdbutil</strong>, которая изменяет в системном реестре параметры служб AD LDS. Команда <strong>dsdbutil</strong> — это средство управления службами AD LDS, которое могут использовать только опытные администраторы; изменять конфигурацию служб AD LDS рекомендуется с помощью сценария <strong>ConfigureAdam.ps1</strong>.
 
 
 В таблице ниже приведены параметры, доступные для сценария **ConfigureAdam.ps1**. Для изменения конфигурации служб AD LDS можно использовать один, все или комбинацию из любых этих параметров.
@@ -83,18 +73,8 @@ _**Последнее изменение раздела:**2015-04-08_
 
   - Для выполнения этой процедуры можно использовать только командную консоль.
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Bb124558.tip(EXCHG.150).gif" title="Совет" alt="Совет" />Совет.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.</td>
-</tr>
-</tbody>
-</table>
+> [!TIP]  
+> Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.
 
 
 ## Изменение конфигурации служб AD LDS на пограничном транспортном сервере

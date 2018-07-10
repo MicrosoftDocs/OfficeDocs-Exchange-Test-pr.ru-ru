@@ -13,9 +13,9 @@ ms.translationtype: MT
 
  
 
-_**Применимо к:**Exchange Online, Exchange Server 2013_
+_**Применимо к:** Exchange Online, Exchange Server 2013_
 
-_**Последнее изменение раздела:**2012-09-22_
+_**Последнее изменение раздела:** 2012-09-22_
 
 [Создание политики почтовых ящиков Outlook Web App](create-an-outlook-web-app-mailbox-policy-exchange-2013-help.md)
 

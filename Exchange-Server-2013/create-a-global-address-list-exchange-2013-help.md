@@ -13,9 +13,9 @@ ms.translationtype: MT
 
  
 
-_**Применимо к:**Exchange Online, Exchange Server 2013_
+_**Применимо к:** Exchange Online, Exchange Server 2013_
 
-_**Последнее изменение раздела:**2014-12-16_
+_**Последнее изменение раздела:** 2014-12-16_
 
 Глобальный список адресов — это каталог, содержащий записи для всех групп, пользователей и контактов в организации Майкрософт Exchange. Если в организации используются политики адресных книг, может потребоваться создать дополнительные глобальные списки адресов. Дополнительные сведения см. в разделе [Политики адресных книг](address-book-policies-exchange-2013-help.md).
 
@@ -33,18 +33,8 @@ _**Последнее изменение раздела:**2014-12-16_
 
   - Сочетания клавиш для процедур, описанных в этой статье, приведены в статье [Сочетания клавиш в Центре администрирования Exchange](keyboard-shortcuts-in-the-exchange-admin-center-exchange-online-protection-help.md).
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Bb124558.tip(EXCHG.150).gif" title="Совет" alt="Совет" />Совет.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.</td>
-</tr>
-</tbody>
-</table>
+> [!TIP]  
+> Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.
 
 
 ## Что необходимо сделать?
@@ -55,18 +45,8 @@ _**Последнее изменение раздела:**2014-12-16_
 
     New-GlobalAddressList -Name "GAL_Contoso" -IncludedRecipients MailboxUsers -ConditionalCompany Contoso
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Если используются свойства заранее подготовленного условного фильтра, значение параметра <em>IncludedRecipients</em> не может быть пустым.</td>
-</tr>
-</tbody>
-</table>
+> [!NOTE]  
+> Если используются свойства заранее подготовленного условного фильтра, значение параметра <em>IncludedRecipients</em> не может быть пустым.
 
 
 Подробные сведения о синтаксисе и параметрах см. в разделе [New-GlobalAddressList](https://technet.microsoft.com/ru-ru/library/bb123785\(v=exchg.150\)).

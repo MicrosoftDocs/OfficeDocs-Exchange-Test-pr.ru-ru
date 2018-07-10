@@ -13,9 +13,9 @@ ms.translationtype: HT
 
  
 
-_**Применимо к:**Exchange Online, Exchange Server 2013_
+_**Применимо к:** Exchange Online, Exchange Server 2013_
 
-_**Последнее изменение раздела:**2015-03-02_
+_**Последнее изменение раздела:** 2015-03-02_
 
 Можно добавить теги хранения в политику хранения при создании политики или после ее создания. Дополнительные сведения о создании политики хранения с одновременным добавлением тегов хранения см. разделе [Создание политики хранения](create-a-retention-policy-exchange-2013-help.md).
 
@@ -43,18 +43,8 @@ _**Последнее изменение раздела:**2015-03-02_
 
   - Сочетания клавиш для процедур, описанных в этой статье, приведены в статье [Сочетания клавиш в Центре администрирования Exchange](keyboard-shortcuts-in-the-exchange-admin-center-exchange-online-protection-help.md).
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Bb124558.tip(EXCHG.150).gif" title="Совет" alt="Совет" />Совет.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.</td>
-</tr>
-</tbody>
-</table>
+> [!TIP]  
+> Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.
 
 
 ## Что необходимо сделать?
@@ -75,18 +65,8 @@ _**Последнее изменение раздела:**2015-03-02_
 
 В этом примере показано добавление тегов VPs-Default, VPs-Inbox и VPs-DeletedItems в политику хранения RetPolicy-VPs, которая еще не имеет тегов хранения, связанных с ней.
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Dd876857.Caution(EXCHG.150).gif" title="Внимание!" alt="Внимание!" />Внимание!</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Если политика уже имеет теги хранения, связанные с ней, выполнение этой команды заменит существующие теги.</td>
-</tr>
-</tbody>
-</table>
+> [!CAUTION]  
+> Если политика уже имеет теги хранения, связанные с ней, выполнение этой команды заменит существующие теги.
 
 
     Set-RetentionPolicy -Identity "RetPolicy-VPs" -RetentionPolicyTagLinks "VPs-Default","VPs-Inbox","VPs-DeletedItems"

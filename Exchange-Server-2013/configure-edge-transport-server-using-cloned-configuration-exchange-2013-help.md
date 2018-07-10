@@ -13,9 +13,9 @@ ms.translationtype: HT
 
  
 
-_**Применимо к:**Exchange Server 2013_
+_**Применимо к:** Exchange Server 2013_
 
-_**Последнее изменение раздела:**2015-04-13_
+_**Последнее изменение раздела:** 2015-04-13_
 
 Вы можете использовать имеющиеся в командной консоли Exchange сценарии (расположенные в папке %ExchangeInstallPath%Scripts), чтобы дублировать конфигурацию пограничного транспортного сервера. Этот процесс называется *клонированием конфигурации*. *Клонирование конфигурации* — это способ развертывания новых пограничных транспортных серверов на основе данных конфигурации ранее настроенного исходного сервера. Данные конфигурации ранее настроенного исходного сервера копируются и экспортируются в файл XML, который затем импортируется на целевой сервер. Обзор данного процесса см. в разделе [Клонированная конфигурация пограничного транспортного сервера](edge-transport-server-cloned-configuration-exchange-2013-help.md).
 
@@ -43,18 +43,8 @@ _**Последнее изменение раздела:**2015-04-13_
 
   - Сочетания клавиш для процедур, описанных в этой статье, приведены в статье [Сочетания клавиш в Центре администрирования Exchange](keyboard-shortcuts-in-the-exchange-admin-center-exchange-online-protection-help.md).
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Bb124558.tip(EXCHG.150).gif" title="Совет" alt="Совет" />Совет.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.</td>
-</tr>
-</tbody>
-</table>
+> [!TIP]  
+> Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.
 
 
 ## Как это сделать?

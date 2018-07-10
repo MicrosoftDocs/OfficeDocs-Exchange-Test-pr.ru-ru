@@ -15,33 +15,20 @@ ms.translationtype: MT
 
  
 
-_**Применимо к:**Exchange Online, Exchange Server 2013_
+_**Применимо к:** Exchange Online, Exchange Server 2013_
 
-_**Последнее изменение раздела:**2014-02-24_
+_**Последнее изменение раздела:** 2014-02-24_
 
 Общие папки предназначены для осуществления общего доступа к файлам. Это простой и эффективный способ сбора, организации и использования информации внутри рабочей группы или в масштабах всей организации.
 
 По умолчанию общая папка наследует параметры родительской папки, включая параметры разрешений.
 
-<table>
-<colgroup>
-<col style="width: 100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Дополнительные сведения о квотах хранилища и ограничениях для общедоступных папок см. в следующих разделах:
+> [!NOTE]  
+> Дополнительные сведения о квотах хранилища и ограничениях для общедоступных папок см. в следующих разделах:
 <ul>
 <li><p>Сведения об общедоступных папках в Office 365 см. в статье <a href="https://go.microsoft.com/fwlink/?linkid=391188">Ограничения Exchange Online</a>.</p></li>
 <li><p>Сведения об общедоступных папках на локальном сервере Exchange Server 2013 см. в разделе <a href="limits-for-public-folders-exchange-2013-help.md">Ограничения общедоступных папок</a>.</p></li>
-</ul></td>
-</tr>
-</tbody>
-</table>
+</ul>
 
 
 Дополнительные сведения о задачах, связанных с управлением общедоступными папками, см. в разделе [Процедуры с общедоступными папками](public-folder-procedures-exchange-2013-help.md).
@@ -72,18 +59,8 @@ _**Последнее изменение раздела:**2014-02-24_
 
 4.  В разделе **Общедоступная папка** введите имя общедоступной папки.
     
-    <table>
-    <thead>
-    <tr class="header">
-    <th><img src="images/Dd876857.important(EXCHG.150).gif" title="Важно" alt="Важно" />Важно!</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr class="odd">
-    <td>При создании общедоступной папки не используйте в ее имени обратную косую черту (\).</td>
-    </tr>
-    </tbody>
-    </table>
+    > [!IMPORTANT]  
+    > При создании общедоступной папки не используйте в ее имени обратную косую черту (\).
 
 
 5.  В поле **Путь** проверьте путь к общедоступной папке. Если нет требуемого пути, нажмите кнопку **Отмена** и выполните действие 2 данной процедуры.
@@ -96,18 +73,8 @@ _**Последнее изменение раздела:**2014-02-24_
 
     New-PublicFolder -Name Reports -Path \Marketing\2013
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Dd876857.important(EXCHG.150).gif" title="Важно" alt="Важно" />Важно!</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>При создании общедоступной папки не используйте в ее имени обратную косую черту (\).</td>
-</tr>
-</tbody>
-</table>
+> [!IMPORTANT]  
+> При создании общедоступной папки не используйте в ее имени обратную косую черту (\).
 
 
 Подробные сведения о синтаксисе и параметрах см. в разделе [New-PublicFolder](https://technet.microsoft.com/ru-ru/library/aa996405\(v=exchg.150\)).
@@ -126,16 +93,6 @@ _**Последнее изменение раздела:**2014-02-24_
     
         Get-PublicFolder -Recurse
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Bb124558.tip(EXCHG.150).gif" title="Совет" alt="Совет" />Совет.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.</td>
-</tr>
-</tbody>
-</table>
+> [!TIP]  
+> Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.
 

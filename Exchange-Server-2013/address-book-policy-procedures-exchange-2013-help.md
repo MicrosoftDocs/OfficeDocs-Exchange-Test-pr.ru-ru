@@ -13,9 +13,9 @@ ms.translationtype: HT
 
  
 
-_**Применимо к:**Exchange Server 2013_
+_**Применимо к:** Exchange Server 2013_
 
-_**Последнее изменение раздела:**2012-10-11_
+_**Последнее изменение раздела:** 2012-10-11_
 
 [Создание политики адресных книг](create-an-address-book-policy-exchange-2013-help.md)
 

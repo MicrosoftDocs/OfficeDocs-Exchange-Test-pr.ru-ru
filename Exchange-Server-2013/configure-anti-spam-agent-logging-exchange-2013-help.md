@@ -13,9 +13,9 @@ ms.translationtype: HT
 
  
 
-_**Применимо к:**Exchange Server 2013_
+_**Применимо к:** Exchange Server 2013_
 
-_**Последнее изменение раздела:**2015-04-08_
+_**Последнее изменение раздела:** 2015-04-08_
 
 Ведение журнала агентов записывает действия, выполненные определенными агентами защиты от нежелательной почты Exchange. Данные, записываемые в журнал агентов, зависят от агента, события SMTP и действия, выполненного над сообщением.
 
@@ -31,18 +31,8 @@ _**Последнее изменение раздела:**2015-04-08_
 
   - Сочетания клавиш для процедур, описанных в этой статье, приведены в статье [Сочетания клавиш в Центре администрирования Exchange](keyboard-shortcuts-in-the-exchange-admin-center-exchange-online-protection-help.md).
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Bb124558.tip(EXCHG.150).gif" title="Совет" alt="Совет" />Совет.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.</td>
-</tr>
-</tbody>
-</table>
+> [!TIP]  
+> Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.
 
 
 ## Использование командной консоли для настройки ведения журнала агентов защиты от нежелательной почты
@@ -53,40 +43,23 @@ _**Последнее изменение раздела:**2015-04-08_
 
 В этом примере показана установка следующих параметров журнала агентов на сервере почтовых ящиков с именем Mailbox01.
 
-  -  
-    Указывает следующее расположение файлов журнала агентов: D:\\Anti-Spam Agent Log. Обратите внимание, что если папка не существует, она будет создана.
+  -  Указывает следующее расположение файлов журнала агентов: D:\\Anti-Spam Agent Log. Обратите внимание, что если папка не существует, она будет создана.
 
-  -  
-    Устанавливает максимальный размер файла журнала агентов в 20 МБ.
+  -  Устанавливает максимальный размер файла журнала агентов в 20 МБ.
 
-  -  
-    Устанавливает максимальный размер каталог журнала агентов в 400 МБ.
+  -  Устанавливает максимальный размер каталог журнала агентов в 400 МБ.
 
-  -  
-    Устанавливает максимальный срок хранения файла журнала агентов в 14 дней.
+  -  Устанавливает максимальный срок хранения файла журнала агентов в 14 дней.
 
 <!-- end list -->
 
     Set-TransportService Mailbox01 -AgentLogPath "D:\Anti-Spam Agent Log" -AgentLogMaxFileSize 20MB -AgentLogMaxDirectorySize 400MB -AgentLogMaxAge 14.00:00:00
 
-<table>
-<colgroup>
-<col style="width: 100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><ul>
+> [!NOTE]  
+> <ul>
 <li><p>Если для параметра <em>AgentLogPath</em> установлено значение <code>$null</code>, ведение журнала агентов эффективно отключено. Однако, если установить для параметра <em>AgentLogPath</em> значение <code>$null</code>, когда для параметра <em>AgentLogEnabled</em> установлено значение <code>$true</code>, будут создаваться ошибки журнала событий. Предпочитаемый метод отключения ведения журнала агентов — установить для параметра <em>AgentLogEnabled</em> значение <code>$false</code>.</p></li>
 <li><p>Если для параметра <em>AgentLogMaxAge</em> задано значение <code>00:00:00</code>, то автоматическое удаление файлов журнала агента по истечении срока их хранения не выполняется.</p></li>
-</ul></td>
-</tr>
-</tbody>
-</table>
+</ul>
 
 
 Дополнительные сведения о синтаксисе и параметрах см. в параметрах *AgentLog* в разделе [Set-TransportService](https://technet.microsoft.com/ru-ru/library/jj215682\(v=exchg.150\)).

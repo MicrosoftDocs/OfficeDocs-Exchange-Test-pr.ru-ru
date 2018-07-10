@@ -13,9 +13,9 @@ ms.translationtype: MT
 
  
 
-_**Применимо к:**Exchange Server 2013_
+_**Применимо к:** Exchange Server 2013_
 
-_**Последнее изменение раздела:**2017-02-28_
+_**Последнее изменение раздела:** 2017-02-28_
 
 [Настройка общего федеративного доступа](configure-federated-sharing-exchange-2013-help.md)
 
@@ -33,16 +33,6 @@ _**Последнее изменение раздела:**2017-02-28_
 
 [Настройка проверки подлинности OAuth между организациями Exchange и Exchange Online](configure-oauth-authentication-between-exchange-and-exchange-online-organizations-exchange-2013-help.md)
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Dd876857.important(EXCHG.150).gif" title="Важно" alt="Важно" />Важно!</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Эта возможность Exchange Server 2013 не совместима полностью со службой Office 365, предоставляемой компанией 21Vianet в Китае. Кроме того, возможны некоторые ограничения. <a href="https://go.microsoft.com/fwlink/?linkid=313640">Дополнительные сведения о службе Office 365, предоставляемой компанией 21Vianet</a>.</td>
-</tr>
-</tbody>
-</table>
+> [!IMPORTANT]  
+> Эта возможность Exchange Server 2013 не совместима полностью со службой Office 365, предоставляемой компанией 21Vianet в Китае. Кроме того, возможны некоторые ограничения. <a href="https://go.microsoft.com/fwlink/?linkid=313640">Дополнительные сведения о службе Office 365, предоставляемой компанией 21Vianet</a>.
 

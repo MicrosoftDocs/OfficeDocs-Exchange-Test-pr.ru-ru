@@ -13,9 +13,9 @@ ms.translationtype: MT
 
  
 
-_**Применимо к:**Exchange Online, Exchange Server 2013, Exchange Server 2016_
+_**Применимо к:** Exchange Online, Exchange Server 2013, Exchange Server 2016_
 
-_**Последнее изменение раздела:**2013-02-22_
+_**Последнее изменение раздела:** 2013-02-22_
 
 Единая система обмена сообщениями может использовать один из четырех кодеков для создания голосовых сообщений: MP3, Windows Media Audio (WMA), Group System Mobile (GSM) 06.10 и G.711 и PCM Linear (линейная импульсно-кодовая модуляция). По умолчанию создаваемая абонентская группа единой системы обмена сообщениями для записи голосовых сообщений использует аудиокодек MP3. MP3 — это популярный аудиоформат, используемый в разных операционных системах, почтовых клиентах и MP3-плеерах. После создания абонентской группы вы можете настроить ее для использования другого аудиоформата, например WMA, GSM 06.10 и G.711 PCM Linear. Для прослушивания голосовых сообщений на мобильном телефоне или компьютере должно быть установлено совместимое приложение для воспроизведения звука.
 
@@ -31,18 +31,8 @@ _**Последнее изменение раздела:**2013-02-22_
 
   - Сочетания клавиш для процедур, описанных в этой статье, приведены в статье [Сочетания клавиш в Центре администрирования Exchange](keyboard-shortcuts-in-the-exchange-admin-center-exchange-online-protection-help.md).
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Bb124558.tip(EXCHG.150).gif" title="Совет" alt="Совет" />Совет.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>..</td>
-</tr>
-</tbody>
-</table>
+> [!TIP]  
+> Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>..
 
 
 ## Что необходимо сделать?

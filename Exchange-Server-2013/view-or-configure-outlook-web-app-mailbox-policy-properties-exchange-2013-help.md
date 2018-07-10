@@ -13,9 +13,9 @@ ms.translationtype: HT
 
  
 
-_**Применимо к:**Exchange Online, Exchange Server 2013_
+_**Применимо к:** Exchange Online, Exchange Server 2013_
 
-_**Последнее изменение раздела:**2016-04-13_
+_**Последнее изменение раздела:** 2016-04-13_
 
 Создав политику почтовых ящиков Outlook Web App, можно настроить множество параметров, чтобы управлять возможностями, доступными пользователям в Outlook Web App. Например, можно включить или отключить правила для папки входящих сообщений, либо создать список типов файлов, допустимых во вложениях.
 
@@ -27,18 +27,8 @@ _**Последнее изменение раздела:**2016-04-13_
 
   - Сочетания клавиш для процедур, описанных в этой статье, приведены в статье [Сочетания клавиш в Центре администрирования Exchange](keyboard-shortcuts-in-the-exchange-admin-center-exchange-online-protection-help.md).
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Bb124558.tip(EXCHG.150).gif" title="Совет" alt="Совет" />Совет.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>..</td>
-</tr>
-</tbody>
-</table>
+> [!TIP]  
+> Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>..
 
 
 ## Что необходимо сделать?
@@ -59,18 +49,8 @@ _**Последнее изменение раздела:**2016-04-13_
     
     На вкладке **Функции** включайте или отключайте функции с помощью флажков. По умолчанию отображаются наиболее часто используемые компоненты. Чтобы открыть весь список компонентов, которые можно включить или выключить, выберите команду **Дополнительные параметры**.
     
-    <table>
-    <thead>
-    <tr class="header">
-    <th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr class="odd">
-    <td>Параметры компонентов для политик почтовых ящиков Outlook Web App имеют приоритет над параметрами виртуальных каталогов Outlook Web App. Параметры сегментации для отдельных пользователей можно изменить, используя командлет <strong>Set-CASMailbox</strong> в консоли.</td>
-    </tr>
-    </tbody>
-    </table>
+    > [!NOTE]  
+    > Параметры компонентов для политик почтовых ящиков Outlook Web App имеют приоритет над параметрами виртуальных каталогов Outlook Web App. Параметры сегментации для отдельных пользователей можно изменить, используя командлет <strong>Set-CASMailbox</strong> в консоли.
 
 
 6.  

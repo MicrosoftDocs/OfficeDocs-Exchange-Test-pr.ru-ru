@@ -13,9 +13,9 @@ ms.translationtype: HT
 
  
 
-_**Применимо к:**Exchange Server 2013_
+_**Применимо к:** Exchange Server 2013_
 
-_**Последнее изменение раздела:**2016-12-09_
+_**Последнее изменение раздела:** 2016-12-09_
 
 Можно протестировать возможность сквозного подключения клиента к мобильному Outlook с помощью командной консоли или анализатора удаленного подключения Exchange (ExRCA). Этот сценарий включает в себя проверку возможности подключения через службу автообнаружения, создание профиля пользователя и вход в почтовый ящик пользователя. Все необходимые значения загружаются из службы автообнаружения.
 
@@ -29,18 +29,8 @@ _**Последнее изменение раздела:**2016-12-09_
 
   - Сочетания клавиш для процедур, описанных в этой статье, приведены в статье [Сочетания клавиш в Центре администрирования Exchange](keyboard-shortcuts-in-the-exchange-admin-center-exchange-online-protection-help.md).
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Bb124558.tip(EXCHG.150).gif" title="Совет" alt="Совет" />Совет.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>..</td>
-</tr>
-</tbody>
-</table>
+> [!TIP]  
+> Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>..
 
 
 ## Что необходимо сделать?
@@ -53,18 +43,8 @@ _**Последнее изменение раздела:**2016-12-09_
 
     Test-OutlookConnectivity -ProbeIdentity 'OutlookMailboxDeepTestProbe' -MailboxId tony@contoso.com -Hostname contoso.com
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Значение параметра <em>OutlookMailboxDeepTestProbe</em> позволяет проверить возможность подключения с сервера почтовых ящиков. Чтобы проверить возможность подключения с сервера клиентского доступа, используйте значение <em>OutlookMailboxCTPProbe</em> для параметра <em>ProbeIdentity</em>.</td>
-</tr>
-</tbody>
-</table>
+> [!NOTE]  
+> Значение параметра <em>OutlookMailboxDeepTestProbe</em> позволяет проверить возможность подключения с сервера почтовых ящиков. Чтобы проверить возможность подключения с сервера клиентского доступа, используйте значение <em>OutlookMailboxCTPProbe</em> для параметра <em>ProbeIdentity</em>.
 
 
 ## Использование анализатора удаленного подключения Exchange для проверки возможности подключения к мобильному Outlook

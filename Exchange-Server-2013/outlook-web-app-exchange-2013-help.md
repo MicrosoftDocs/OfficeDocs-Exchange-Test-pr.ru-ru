@@ -13,9 +13,9 @@ ms.translationtype: HT
 
  
 
-_**Применимо к:**Exchange Server 2013_
+_**Применимо к:** Exchange Server 2013_
 
-_**Последнее изменение раздела:**2016-12-09_
+_**Последнее изменение раздела:** 2016-12-09_
 
 Ознакомьтесь с веб-приложением Web App, которое в версиях Microsoft Exchange, предшествующих Exchange 2010, называлось Outlook Web Access. В этой статье представлены краткий обзор и ссылки на полезные сведения.
 
@@ -23,18 +23,8 @@ _**Последнее изменение раздела:**2016-12-09_
 
 Роль сервера клиентского доступа предоставляет службы прокси-сервера и перенаправления для Outlook Web App.
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>В версиях Microsoft Exchange до Exchange 2010Outlook Web App называлось Outlook Web Access.</td>
-</tr>
-</tbody>
-</table>
+> [!NOTE]  
+> В версиях Microsoft Exchange до Exchange 2010Outlook Web App называлось Outlook Web Access.
 
 
 Сведения о новых возможностях см. в разделе [Новые возможности в Exchange 2013](what-s-new-in-exchange-2013-exchange-2013-help.md). Дополнительные сведения о роли сервера клиентского доступа Exchange 2013 см. в разделе [Сервер клиентского доступа](client-access-server-exchange-2013-help.md).

@@ -13,9 +13,9 @@ ms.translationtype: HT
 
  
 
-_**Применимо к:**Exchange Online, Exchange Server 2013, Exchange Server 2016_
+_**Применимо к:** Exchange Online, Exchange Server 2013, Exchange Server 2016_
 
-_**Последнее изменение раздела:**2012-11-13_
+_**Последнее изменение раздела:** 2012-11-13_
 
 Если исходящие вызовы для шлюзов IP единой системы обмена сообщениями были отключены, их можно включить. Если в свойствах шлюза IP единой системы обмена сообщениями выбран параметр **Разрешить исходящие вызовы через шлюз IP единой системы обмена сообщениями**, шлюз IP единой системы обмена сообщениями настроен на принятие и отправку исходящих звонков на шлюз Voice over IP (VoIP), УАТС (PBX), включенный для протокола SIP, IP PBX или пограничный контроллер сеансов (SBC). Хотя параметр **Разрешить исходящие вызовы через шлюз IP единой системы обмена сообщениями** управляет возможностью выполнения исходящих звонков для пользователей шлюзом IP единой системы обмена сообщениями, он не влияет на передачу звонков и прием входящих звонков от шлюза VoIP, PBX, включенного для протокола SIP, IP PBX или SBC.
 
@@ -43,18 +43,8 @@ _**Последнее изменение раздела:**2012-11-13_
 
   - Сочетания клавиш для процедур, описанных в этой статье, приведены в статье [Сочетания клавиш в Центре администрирования Exchange](keyboard-shortcuts-in-the-exchange-admin-center-exchange-online-protection-help.md).
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Bb124558.tip(EXCHG.150).gif" title="Совет" alt="Совет" />Совет.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>..</td>
-</tr>
-</tbody>
-</table>
+> [!TIP]  
+> Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>..
 
 
 ## Что необходимо сделать?

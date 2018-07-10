@@ -13,9 +13,9 @@ ms.translationtype: MT
 
  
 
-_**Применимо к:**Exchange Online, Exchange Server 2013, Exchange Server 2016_
+_**Применимо к:** Exchange Online, Exchange Server 2013, Exchange Server 2016_
 
-_**Последнее изменение раздела:**2013-02-22_
+_**Последнее изменение раздела:** 2013-02-22_
 
 Можно просматривать или устанавливать параметры единой системы обмена сообщениями и голосовой почты для пользователя, у которого включена поддержка единой системы обмена сообщениями и голосовой почты. Например, можно выполнять следующие операции.
 
@@ -31,18 +31,8 @@ _**Последнее изменение раздела:**2013-02-22_
 
   - Включить или отключить доступ к электронной почте и календарю.
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Некоторые параметры и компоненты можно настроить только с помощью командной консоли.</td>
-</tr>
-</tbody>
-</table>
+> [!NOTE]  
+> Некоторые параметры и компоненты можно настроить только с помощью командной консоли.
 
 
 Дополнительные задачи управления, связанные с пользователями, у которых включена голосовая почта, см. в разделе [Процедуры пользователя голосовой почты](voice-mail-enabled-user-procedures-exchange-2013-help.md).
@@ -61,18 +51,8 @@ _**Последнее изменение раздела:**2013-02-22_
 
   - Сочетания клавиш для процедур, описанных в этой статье, приведены в статье [Сочетания клавиш в Центре администрирования Exchange](keyboard-shortcuts-in-the-exchange-admin-center-exchange-online-protection-help.md).
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Bb124558.tip(EXCHG.150).gif" title="Совет" alt="Совет" />Совет.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>..</td>
-</tr>
-</tbody>
-</table>
+> [!TIP]  
+> Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>..
 
 
 ## Что необходимо сделать?
@@ -107,18 +87,8 @@ _**Последнее изменение раздела:**2013-02-22_
 
 В этом примере показано отключение функции воспроизведения на телефоне и уведомлений о пропущенных звонках, а также включение уведомлений о текстовых сообщениях.
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Для локальных и гибридных развертываний при интеграции единой системы обмена сообщениями и сервера Lync Server уведомления о пропущенных вызовах не будут доступны пользователям, чьи почтовые ящики расположены на сервере почтовых ящиков Exchange 2007 или Exchange 2010. Уведомления о пропущенных вызовах создаются, если пользователь завершает вызов до его отправки на сервер почтовых ящиков.</td>
-</tr>
-</tbody>
-</table>
+> [!NOTE]  
+> Для локальных и гибридных развертываний при интеграции единой системы обмена сообщениями и сервера Lync Server уведомления о пропущенных вызовах не будут доступны пользователям, чьи почтовые ящики расположены на сервере почтовых ящиков Exchange 2007 или Exchange 2010. Уведомления о пропущенных вызовах создаются, если пользователь завершает вызов до его отправки на сервер почтовых ящиков.
 
 
     Set-UMMailbox -Identity tony@contoso.com -UMEnabled $true -UMMailboxPolicy AdminPolicy -MissedCallNotificationEnabled $false -PlayonPhoneEnabled $false -SMSMessageWaitingNotificationEnabled $true
@@ -145,16 +115,6 @@ _**Последнее изменение раздела:**2013-02-22_
 
     Get-UMMailbox -Identity tonysmith@contoso.com
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Dd876857.important(EXCHG.150).gif" title="Важно" alt="Важно" />Важно!</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Если вы используете Exchange 2007 и Exchange 2013, но почтовый ящик пользователя расположен на сервере почтовых ящиков Exchange 2007, командлет <strong>Get-UMMailbox</strong> будет работать неправильно. Чтобы устранить эту проблему, запустите командлет <strong>Get-UMMailbox</strong> на сервере Exchange 2007 или компьютере со средствами администрирования Exchange 2007.</td>
-</tr>
-</tbody>
-</table>
+> [!IMPORTANT]  
+> Если вы используете Exchange 2007 и Exchange 2013, но почтовый ящик пользователя расположен на сервере почтовых ящиков Exchange 2007, командлет <strong>Get-UMMailbox</strong> будет работать неправильно. Чтобы устранить эту проблему, запустите командлет <strong>Get-UMMailbox</strong> на сервере Exchange 2007 или компьютере со средствами администрирования Exchange 2007.
 

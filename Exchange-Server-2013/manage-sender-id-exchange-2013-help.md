@@ -13,9 +13,9 @@ ms.translationtype: MT
 
  
 
-_**Применимо к:**Exchange Server 2013_
+_**Применимо к:** Exchange Server 2013_
 
-_**Последнее изменение раздела:**2015-04-08_
+_**Последнее изменение раздела:** 2015-04-08_
 
 Функция идентификации отправителей обеспечивается агентом идентификации отправителей. Код отправителя позволяет проверить происхождение сообщения электронной почты благодаря сверке IP-адреса отправителя с предполагаемым владельцем домена отправителя. Фильтрация кодов отправителя выполняется для входящих сообщений, которые поступают из Интернета, но не проходят проверку подлинности. Такие сообщения обрабатываются как внешние сообщения.
 
@@ -31,18 +31,8 @@ _**Последнее изменение раздела:**2015-04-08_
 
   - Сочетания клавиш для процедур, описанных в этой статье, приведены в статье [Сочетания клавиш в Центре администрирования Exchange](keyboard-shortcuts-in-the-exchange-admin-center-exchange-online-protection-help.md).
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Bb124558.tip(EXCHG.150).gif" title="Совет" alt="Совет" />Совет.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.</td>
-</tr>
-</tbody>
-</table>
+> [!TIP]  
+> Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.
 
 
 ## Что необходимо сделать?
@@ -57,18 +47,8 @@ _**Последнее изменение раздела:**2015-04-08_
 
     Set-SenderIDConfig -Enabled $true
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>При отключении идентификации отправителей, соответствующий агент идентификации все еще включен. Чтобы отключить агент идентификации отправителей, выполните следующий командлет: <code>Disable-TransportAgent &quot;Sender ID Agent&quot;</code>.</td>
-</tr>
-</tbody>
-</table>
+> [!NOTE]  
+> При отключении идентификации отправителей, соответствующий агент идентификации все еще включен. Чтобы отключить агент идентификации отправителей, выполните следующий командлет: <code>Disable-TransportAgent &quot;Sender ID Agent&quot;</code>.
 
 
 ## Как проверить, что все получилось?

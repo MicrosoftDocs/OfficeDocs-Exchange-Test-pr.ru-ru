@@ -13,9 +13,9 @@ ms.translationtype: HT
 
  
 
-_**Применимо к:**Exchange Online, Exchange Server 2013_
+_**Применимо к:** Exchange Online, Exchange Server 2013_
 
-_**Последнее изменение раздела:**2015-03-12_
+_**Последнее изменение раздела:** 2015-03-12_
 
 Можно настроить мобильный телефон, такой как Windows Phone, для использования Майкрософт Exchange ActiveSync. Эту процедуру необходимо выполнить для каждого мобильного телефона в организации.
 
@@ -25,18 +25,8 @@ _**Последнее изменение раздела:**2015-03-12_
 
   - В организации включена поддержка Exchange ActiveSync.
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Сведения по настройке электронной почты на базе Microsoft Exchange на телефонах или планшетах см. в разделе <a href="https://support.office.com/ru-ru/article/set-up-a-mobile-device-using-office-365-for-business-7dabb6cb-0046-40b6-81fe-767e0b1f014f">Настройка мобильного устройства с помощью Office 365 для бизнеса</a>.</td>
-</tr>
-</tbody>
-</table>
+> [!NOTE]  
+> Сведения по настройке электронной почты на базе Microsoft Exchange на телефонах или планшетах см. в разделе <a href="https://support.office.com/ru-ru/article/set-up-a-mobile-device-using-office-365-for-business-7dabb6cb-0046-40b6-81fe-767e0b1f014f">Настройка мобильного устройства с помощью Office 365 для бизнеса</a>.
 
 
 ## Настройка мобильного телефона на использование Exchange ActiveSync

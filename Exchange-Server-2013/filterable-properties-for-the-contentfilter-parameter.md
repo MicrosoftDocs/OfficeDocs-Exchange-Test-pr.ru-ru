@@ -13,9 +13,9 @@ ms.translationtype: MT
 
  
 
-_**Применимо к:**Exchange Server 2013_
+_**Применимо к:** Exchange Server 2013_
 
-_**Последнее изменение раздела:**2015-09-10_
+_**Последнее изменение раздела:** 2015-09-10_
 
 В данном разделе приведен список фильтруемых свойств для параметра *ContentFilter*. Параметр *ContentFilter* используется для экспорта сообщений в файл PST, который соответствует фильтру. Параметр *ContentFilter* используется в командлете [New-MailboxExportRequest](https://technet.microsoft.com/ru-ru/library/ff607299\(v=exchg.150\)).
 

@@ -13,9 +13,9 @@ ms.translationtype: MT
 
  
 
-_**Применимо к:**Exchange Online, Exchange Server 2013, Exchange Server 2016_
+_**Применимо к:** Exchange Online, Exchange Server 2013, Exchange Server 2016_
 
-_**Последнее изменение раздела:**2013-04-19_
+_**Последнее изменение раздела:** 2013-04-19_
 
 Для автосекретаря единой системы обмена сообщениями можно включить информационное сообщение. Если извещение включено, оно воспроизводится непосредственно после приветствия для рабочих или нерабочих часов. По умолчанию извещения не настроены. Чтобы включить информационное сообщение, создайте WAV- или WMA-файл с этим сообщением и настройте автосекретарь для воспроизведения данного звукового файла.
 
@@ -35,18 +35,8 @@ _**Последнее изменение раздела:**2013-04-19_
 
   - Сочетания клавиш для процедур, описанных в этой статье, приведены в статье [Сочетания клавиш в Центре администрирования Exchange](keyboard-shortcuts-in-the-exchange-admin-center-exchange-online-protection-help.md).
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Bb124558.tip(EXCHG.150).gif" title="Совет" alt="Совет" />Совет.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>..</td>
-</tr>
-</tbody>
-</table>
+> [!TIP]  
+> Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>..
 
 
 ## Что необходимо сделать?
@@ -59,18 +49,8 @@ _**Последнее изменение раздела:**2013-04-19_
 
 3.  На странице **Автосекретарь единой системы обмена сообщениями** \> **Приветствия** в разделе **Информационное сообщение** щелкните **Изменить**, а потом нажмите кнопку **Обзор**, чтобы найти файл информационного сообщения, созданный перед началом этой процедуры.
     
-    <table>
-    <thead>
-    <tr class="header">
-    <th><img src="images/Dd876857.important(EXCHG.150).gif" title="Важно" alt="Важно" />Важно!</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr class="odd">
-    <td>Файл, используемый для приветствия, должен иметь формат WMA или WAV.</td>
-    </tr>
-    </tbody>
-    </table>
+    > [!IMPORTANT]  
+    > Файл, используемый для приветствия, должен иметь формат WMA или WAV.
 
 
 4.  Указав расположение файла, нажмите кнопку **Открыть**, а затем — **Сохранить**.

@@ -13,9 +13,9 @@ ms.translationtype: HT
 
  
 
-_**Применимо к:**Exchange Server 2013_
+_**Применимо к:** Exchange Server 2013_
 
-_**Последнее изменение раздела:**2012-10-14_
+_**Последнее изменение раздела:** 2012-10-14_
 
 [Создание политики хранения](create-a-retention-policy-exchange-2013-help.md)
 

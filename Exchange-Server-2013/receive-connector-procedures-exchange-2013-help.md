@@ -13,9 +13,9 @@ ms.translationtype: HT
 
  
 
-_**Применимо к:**Exchange Server 2013_
+_**Применимо к:** Exchange Server 2013_
 
-_**Последнее изменение раздела:**2012-09-23_
+_**Последнее изменение раздела:** 2012-09-23_
 
 [Создание соединителя получения электронной почты из Интернета](create-a-receive-connector-to-receive-email-from-the-internet-exchange-2013-help.md)
 

@@ -13,9 +13,9 @@ ms.translationtype: HT
 
  
 
-_**Применимо к:**Exchange Server 2013_
+_**Применимо к:** Exchange Server 2013_
 
-_**Последнее изменение раздела:**2016-12-09_
+_**Последнее изменение раздела:** 2016-12-09_
 
 В этом разделе рассказывается, как выполнить развертывание Exchange 2013 в топологии перекрестного леса с помощью Microsoft Forefront Identity Manager 2010 R2 с пакетом обновления 1 (SP1). Чтобы развернуть систему Exchange 2013 в топологии перекрестного леса, необходимо предварительно установить систему Exchange 2013 в каждом лесу, а затем соединить леса, чтобы пользователи могли видеть адреса и данные о доступности в лесах.
 
@@ -37,24 +37,14 @@ _**Последнее изменение раздела:**2016-12-09_
 
   - Убедитесь, что удаленное управление Windows не установлено с помощью Центра обновления Windows.
 
-  - Установите Windows PowerShell и удаленное управление Windows. Дополнительные сведения см. в статье 968930 базы знаний Майкрософт [Основной пакет Windows Management Framework (Windows PowerShell 2.0 и WinRM 2.0)](http://go.microsoft.com/fwlink/p/?linkid=3052%26kbid=968930).
+  - Установите Windows PowerShell и удаленное управление Windows. Дополнительные сведения см. в статье 968930 базы знаний Майкрософт [Основной пакет Windows Management Framework (Windows PowerShell 2.0 и WinRM 2.0)](http://go.microsoft.com/fwlink/p/?linkid=3052&kbid=968930).
 
   - Загрузите Forefront Identity Manager 2010 R2 с пакетом обновления 1 (SP1). См. раздел [Скачать Microsoft Forefront Identity Manager 2010 R2 с пакетом обновления 1 (SP1)](https://go.microsoft.com/fwlink/p/?linkid=279868).
 
   - Сочетания клавиш для процедур, описанных в этой статье, приведены в статье [Сочетания клавиш в Центре администрирования Exchange](keyboard-shortcuts-in-the-exchange-admin-center-exchange-online-protection-help.md).
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Bb124558.tip(EXCHG.150).gif" title="Совет" alt="Совет" />Совет.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.</td>
-</tr>
-</tbody>
-</table>
+> [!TIP]  
+> Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.
 
 
 ## Развертывание Exchange 2013 в топологии перекрестного леса с помощью Forefront Identity Manager 2010 R2 с пакетом обновления 1 (SP1)
@@ -65,18 +55,8 @@ _**Последнее изменение раздела:**2016-12-09_
     
       - [Установка Exchange 2013 с помощью мастера установки](install-exchange-2013-using-the-setup-wizard-exchange-2013-help.md)
         
-        <table>
-        <thead>
-        <tr class="header">
-        <th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr class="odd">
-        <td>В этом разделе предполагается, что топология Exchange 2007 или Exchange 2010 отсутствует. Если существует топология Exchange и ее требуется обновить, то сведения о том, как это сделать, см. в разделе <a href="upgrade-from-exchange-2010-to-exchange-2013-exchange-2013-help.md">Обновление с Exchange 2010 до Exchange 2013</a> или в разделе <a href="upgrade-from-exchange-2007-to-exchange-2013-exchange-2013-help.md">Обновление с Exchange 2007 до Exchange 2013</a>.</td>
-        </tr>
-        </tbody>
-        </table>
+        > [!NOTE]  
+        > В этом разделе предполагается, что топология Exchange 2007 или Exchange 2010 отсутствует. Если существует топология Exchange и ее требуется обновить, то сведения о том, как это сделать, см. в разделе <a href="upgrade-from-exchange-2010-to-exchange-2013-exchange-2013-help.md">Обновление с Exchange 2010 до Exchange 2013</a> или в разделе <a href="upgrade-from-exchange-2007-to-exchange-2013-exchange-2013-help.md">Обновление с Exchange 2007 до Exchange 2013</a>.
 
 
 2.  В каждом лесу с помощью средства "Пользователи и компьютеры Active Directory" создайте контейнер, в котором Forefront Identity Manager 2010 R2 с пакетом обновления 1 (SP1) создаст контакты для каждого почтового ящика из другого леса. Рекомендуется назвать этот контейнер **FromFIM**. Чтобы создать контейнер, выберите домен, в котором будет создан контейнер, щелкните правой кнопкой мыши домен, выберите команду **Создать** \> **Подразделение**. В окне **Создание объекта — Подразделение** введите **FromFIM** и нажмите кнопку **OK**.
@@ -89,34 +69,14 @@ _**Последнее изменение раздела:**2016-12-09_
     
       - [Стратегия документации Forefront Identity Manager 2010 R2](https://go.microsoft.com/fwlink/p/?linkid=279871)
     
-    <table>
-    <thead>
-    <tr class="header">
-    <th><img src="images/Dd876857.important(EXCHG.150).gif" title="Важно" alt="Важно" />Важно!</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr class="odd">
-    <td>Хотя в этих статьях рассказывается об Exchange 2010, Forefront Identity Manager 2010 R2 с пакетом обновления 1 (SP1) также поддерживает Exchange 2013. Убедитесь, что параметр <strong>Расширения</strong> в Forefront Identity Manager 2010 R2 с пакетом обновления 1 (SP1) настроен для Exchange 2013.</td>
-    </tr>
-    </tbody>
-    </table>
+    > [!IMPORTANT]  
+    > Хотя в этих статьях рассказывается об Exchange 2010, Forefront Identity Manager 2010 R2 с пакетом обновления 1 (SP1) также поддерживает Exchange 2013. Убедитесь, что параметр <strong>Расширения</strong> в Forefront Identity Manager 2010 R2 с пакетом обновления 1 (SP1) настроен для Exchange 2013.
     
     1.  На странице **Настройка расширений** в разделе **Настройка отображаемых имен разделов** рядом с пунктом **Подготовить для** выберите **Exchange 2013**. Отобразится поле **Exchange 2013 RPS URI**. Введите универсальный код ресурса (URI) сервера клиентского доступа Exchange 2013, чтобы убедиться, что подключение к удаленной оболочке PowerShell работает. Значение поля **Универсальный код ресурса (URI) Exchange 2013 RPS** должно иметь следующий формат: http://Имя\_FQDN\_сервера\_клиентского\_доступа/Powershell. Нажмите кнопку **ОК**.
         
-        <table>
-        <thead>
-        <tr class="header">
-        <th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr class="odd">
-        <td>Убедитесь, что учетные данные администратора, используемые для подключения к лесу Exchange 2013, позволяют также устанавливать подключения Remote PowerShell к этому лесу.<br />
-        На следующем рисунке показано, как выбрать способ подготовки для системы Exchange 2013.</td>
-        </tr>
-        </tbody>
-        </table>
+        > [!NOTE]  
+        > Убедитесь, что учетные данные администратора, используемые для подключения к лесу Exchange 2013, позволяют также устанавливать подключения Remote PowerShell к этому лесу.<br />
+        На следующем рисунке показано, как выбрать способ подготовки для системы Exchange 2013.
         
         **Подготовка агента управления GalSync для системы Exchange 2013**
         

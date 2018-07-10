@@ -13,24 +13,14 @@ ms.translationtype: HT
 
  
 
-_**Применимо к:**Exchange Server 2013_
+_**Применимо к:** Exchange Server 2013_
 
-_**Последнее изменение раздела:**2015-07-16_
+_**Последнее изменение раздела:** 2015-07-16_
 
 Политика почтовых ящиков мобильных устройств позволяет применить общие настройки безопасности и мобильного устройства для группы пользователей. Можно создать более одной политики почтовых ящиков мобильного устройства.
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Dd876857.Caution(EXCHG.150).gif" title="Внимание!" alt="Внимание!" />Внимание!</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Если Microsoft Exchange Server 2013 по умолчанию создается политика почтового ящика, связанных с использованием мобильных устройств и всех пользователей, которым назначена эта политика, будут автоматически.</td>
-</tr>
-</tbody>
-</table>
+> [!CAUTION]  
+> Если Microsoft Exchange Server 2013 по умолчанию создается политика почтового ящика, связанных с использованием мобильных устройств и всех пользователей, которым назначена эта политика, будут автоматически.
 
 
 Дополнительные задачи управления, связанные с политиками почтовых ящиков для мобильных устройств, отображается [Политики почтовых ящиков мобильных устройств](mobile-device-mailbox-policies-exchange-2013-help.md).
@@ -45,18 +35,8 @@ _**Последнее изменение раздела:**2015-07-16_
 
   - Сочетания клавиш для процедур, описанных в этой статье, приведены в статье [Сочетания клавиш в Центре администрирования Exchange](keyboard-shortcuts-in-the-exchange-admin-center-exchange-online-protection-help.md).
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Bb124558.tip(EXCHG.150).gif" title="Совет" alt="Совет" />Совет.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>..</td>
-</tr>
-</tbody>
-</table>
+> [!TIP]  
+> Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>..
 
 
 ## Что необходимо сделать?
@@ -122,18 +102,8 @@ _**Последнее изменение раздела:**2015-07-16_
         Get-Mailbox | where { $_.CustomAttribute1 -match "Manager"
          } | Set-CASMailbox -activesyncmailboxpolicy(Get-ActiveSyncMailboxPolicy "Contoso").Identity
     
-    <table>
-    <thead>
-    <tr class="header">
-    <th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr class="odd">
-    <td>Атрибутом <code>CustomAttribute1</code> можно заменить любое из свойств объекта <strong>Get-Mailbox</strong>. Чтобы просмотреть полный список, введите: <code>Get-Mailbox username |fl</code>.</td>
-    </tr>
-    </tbody>
-    </table>
+    > [!NOTE]  
+    > Атрибутом <code>CustomAttribute1</code> можно заменить любое из свойств объекта <strong>Get-Mailbox</strong>. Чтобы просмотреть полный список, введите: <code>Get-Mailbox username |fl</code>.
 
 
 ## Как проверить, что все получилось?

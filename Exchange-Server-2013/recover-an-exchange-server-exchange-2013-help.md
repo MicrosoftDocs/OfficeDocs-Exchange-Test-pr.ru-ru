@@ -13,9 +13,9 @@ ms.translationtype: HT
 
  
 
-_**Применимо к:**Exchange Server 2013_
+_**Применимо к:** Exchange Server 2013_
 
-_**Последнее изменение раздела:**2016-12-09_
+_**Последнее изменение раздела:** 2016-12-09_
 
 Восстановить утерянный сервер можно с помощью параметра **Setup /m:RecoverServer** в Microsoft Exchange Server 2013. Большинство параметров компьютера под управлением Exchange 2013 хранятся в Active Directory. Если указан параметр */m:RecoverServer*, то перестраивается сервер Exchange с сохранением того же имени с помощью параметров и другой информации, хранящихся в Active Directory.
 
@@ -23,28 +23,15 @@ _**Последнее изменение раздела:**2016-12-09_
 
 В этом разделе описано, как восстановить утерянный сервер Exchange 2013, не являющийся участником группы доступности базы данных (DAG). Подробные инструкции по восстановлению сервера, который являлся участником группы доступности базы данных, см. в разделе [Восстановление рядового сервера группы обеспечения доступности баз данных](recover-a-database-availability-group-member-server-exchange-2013-help.md).
 
-<table>
-<colgroup>
-<col style="width: 100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Если Exchange установлен в расположении, отличном от папки по умолчанию, необходимо использовать параметр <em>/TargetDir</em>, чтобы указать расположение двоичных файлов Exchange. Если вы не воспользуетесь параметром <em>/TargetDir</em>, файлы Exchange будут установлены в папку по умолчанию (%programfiles%\Microsoft\Exchange Server\V15).<br />
+> [!NOTE]  
+> Если Exchange установлен в расположении, отличном от папки по умолчанию, необходимо использовать параметр <em>/TargetDir</em>, чтобы указать расположение двоичных файлов Exchange. Если вы не воспользуетесь параметром <em>/TargetDir</em>, файлы Exchange будут установлены в папку по умолчанию (%programfiles%\Microsoft\Exchange Server\V15).<br />
 Чтобы определить расположение для установки, выполните указанные ниже действия.
 <ol>
 <li><p>Откройте файл ADSIEDIT.MSC или LDP.EXE.</p></li>
 <li><p>Перейдите в следующее расположение: <strong>CN=ExServerName,CN=Servers,CN=First Administrative Group,CN=Administrative Groups,CN=ExOrg Name,CN=Microsoft Exchange,CN=Services,CN=Configuration,DC=DomainName,CN=Com</strong></p></li>
 <li><p>Щелкните объект сервера Exchange правой кнопкой мыши и выберите пункт <strong>Свойства</strong>.</p></li>
 <li><p>Найдите атрибут <strong>msExchInstallPath</strong>. Этот атрибут содержит текущий путь установки.</p></li>
-</ol></td>
-</tr>
-</tbody>
-</table>
+</ol>
 
 
 Необходимы сведения о других задачах управления, связанных с резервным копированием и восстановлением данных? См. статью [Резервное копирование, восстановление и аварийное восстановление](backup-restore-and-disaster-recovery-exchange-2013-help.md).
@@ -63,18 +50,8 @@ _**Последнее изменение раздела:**2016-12-09_
 
   - Сочетания клавиш для процедур, описанных в этой статье, приведены в статье [Сочетания клавиш в Центре администрирования Exchange](keyboard-shortcuts-in-the-exchange-admin-center-exchange-online-protection-help.md).
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Bb124558.tip(EXCHG.150).gif" title="Совет" alt="Совет" />Совет.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>..</td>
-</tr>
-</tbody>
-</table>
+> [!TIP]  
+> Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>..
 
 
 ## Восстановление утерянного сервера Exchange

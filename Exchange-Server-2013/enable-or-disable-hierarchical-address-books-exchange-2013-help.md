@@ -13,9 +13,9 @@ ms.translationtype: HT
 
  
 
-_**Применимо к:**Exchange Online, Exchange Server 2013_
+_**Применимо к:** Exchange Online, Exchange Server 2013_
 
-_**Последнее изменение раздела:**2016-12-09_
+_**Последнее изменение раздела:** 2016-12-09_
 
 Вы можете настроить иерархическую адресную книгу, которая доступна для пользователей в Microsoft Outlook 2010 и более поздних версий. С помощью иерархической адресной книги пользователи могут искать получателей в своей организации Exchange, используя организационную иерархию на основе структуры старшинства или управления. Для получения дополнительных сведений о иерархических адресных книгах см. раздел [Иерархические адресные книги](hierarchical-address-books-exchange-2013-help.md).
 
@@ -72,36 +72,16 @@ _**Последнее изменение раздела:**2016-12-09_
 
   - Сочетания клавиш для процедур, описанных в этой статье, приведены в статье [Сочетания клавиш в Центре администрирования Exchange](keyboard-shortcuts-in-the-exchange-admin-center-exchange-online-protection-help.md).
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Bb124558.tip(EXCHG.150).gif" title="Совет" alt="Совет" />Совет.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.</td>
-</tr>
-</tbody>
-</table>
+> [!TIP]  
+> Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.
 
 
 ## Что необходимо сделать?
 
 ## Использование командной консоли для включения иерархической адресной книги
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Центр администрирования Exchange нельзя использовать для включения иерархической адресной книги, но после того, как книга включена, с помощью Центра администрирования Exchange можно управлять членством в группах организационной иерархии.</td>
-</tr>
-</tbody>
-</table>
+> [!NOTE]  
+> Центр администрирования Exchange нельзя использовать для включения иерархической адресной книги, но после того, как книга включена, с помощью Центра администрирования Exchange можно управлять членством в группах организационной иерархии.
 
 
 Для этого примера в иерархической книге будет создано подразделение HAB. Домен организации называется Contoso-dom, а организация верхнего уровня иерархии будет называться Contoso,Ltd (*корневая организация*). Подчиненные группы с названиями Corporate Office, Product Support Organization и Sales & Marketing Organization будут созданы в узле Contoso,Ltd в качестве подчиненных организаций. Кроме того, в разделе Corporate Office будут созданы группы Human Resources, Accounting Group и Administration Group.
@@ -110,49 +90,19 @@ _**Последнее изменение раздела:**2016-12-09_
 
 1.  Создайте подразделение HAB в организации Contoso. Для этого можно использовать окно Active Directory "Пользователи и компьютеры" или ввести следующую команду в командной строке.
     
-    <table>
-    <thead>
-    <tr class="header">
-    <th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr class="odd">
-    <td>Кроме того, можно использовать существующее подразделение в лесу Exchange.</td>
-    </tr>
-    </tbody>
-    </table>
+    > [!NOTE]  
+    > Кроме того, можно использовать существующее подразделение в лесу Exchange.
     
         dsadd ou "OU=HAB,DC=Contoso-dom,DC=Contoso,DC=com"
     
-    <table>
-    <thead>
-    <tr class="header">
-    <th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr class="odd">
-    <td>Дополнительные сведения см. в разделе <a href="https://go.microsoft.com/fwlink/p/?linkid=198986">Создание нового подразделения</a>.</td>
-    </tr>
-    </tbody>
-    </table>
+    > [!NOTE]  
+    > Дополнительные сведения см. в разделе <a href="https://go.microsoft.com/fwlink/p/?linkid=198986">Создание нового подразделения</a>.
 
 
 2.  Создайте корневую группу рассылки Contoso,Ltd для иерархической адресной книги.
     
-    <table>
-    <thead>
-    <tr class="header">
-    <th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr class="odd">
-    <td>В этом примере описывается использование командной строки. Для создания группы рассылки можно также использовать Центр администрирования Exchange. Дополнительные сведения см. в разделе <a href="create-and-manage-distribution-groups-exchange-2013-help.md">Создание групп рассылки и управление ими</a>.</td>
-    </tr>
-    </tbody>
-    </table>
+    > [!NOTE]  
+    > В этом примере описывается использование командной строки. Для создания группы рассылки можно также использовать Центр администрирования Exchange. Дополнительные сведения см. в разделе <a href="create-and-manage-distribution-groups-exchange-2013-help.md">Создание групп рассылки и управление ими</a>.
     
         New-DistributionGroup -Name "Contoso,Ltd" -DisplayName "Contoso,Ltd" -Alias "ContosoRoot" -OrganizationalUnit "Contoso-dom.Contoso.com/HAB" -SamAccountName "ContosoRoot" -Type "Distribution"
 
@@ -162,18 +112,8 @@ _**Последнее изменение раздела:**2016-12-09_
 
 4.  Создайте группы рассылки для других уровней в HAB. Для этого примера необходимо создать следующие группы: Corporate Office, Product Support Organization, Sales & Marketing Organization, Human Resources, Accounting Group и Administration Group. В этом примере создается группа рассылки Corporate Office.
     
-    <table>
-    <thead>
-    <tr class="header">
-    <th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr class="odd">
-    <td>В этом примере описывается использование командной строки. Для создания групп рассылки можно также использовать Центр администрирования Exchange. Дополнительные сведения см. в разделе <a href="create-and-manage-distribution-groups-exchange-2013-help.md">Создание групп рассылки и управление ими</a>.</td>
-    </tr>
-    </tbody>
-    </table>
+    > [!NOTE]  
+    > В этом примере описывается использование командной строки. Для создания групп рассылки можно также использовать Центр администрирования Exchange. Дополнительные сведения см. в разделе <a href="create-and-manage-distribution-groups-exchange-2013-help.md">Создание групп рассылки и управление ими</a>.
     
         New-DistributionGroup -Name "Corporate Office" -DisplayName "Corporate Office" -Alias "CorporateOffice" -OrganizationalUnit "Contoso-dom.Contoso.com/HAB" -SamAccountName "CorporateOffice" -Type "Distribution"
 
@@ -183,35 +123,15 @@ _**Последнее изменение раздела:**2016-12-09_
 
 6.  Добавьте подчиненные группы в качестве членов корневой организации. Например, группы рассылки Corporate Office, Product Support Organization и Sales & Marketing Organization добавляются в качестве членов корневой организации Contoso,Ltd в иерархической адресной книге. В следующем примере группа рассылки Corporate Office добавляется в качестве члена корневой группы рассылки Contoso,Ltd.
     
-    <table>
-    <thead>
-    <tr class="header">
-    <th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr class="odd">
-    <td>В этом примере используется псевдоним групп рассылки.</td>
-    </tr>
-    </tbody>
-    </table>
+    > [!NOTE]  
+    > В этом примере используется псевдоним групп рассылки.
     
         Add-DistributionGroupMember -Identity "ContosoRoot" -Member "CorporateOffice"
 
 7.  Добавьте все подчиненные группы рассылки группы Corporate Office в качестве участников. Например, группы рассылки Human Resources, Accounting Group и Administration Group добавляются в качестве участников группы рассылки Corporate Office. В следующем примере группа рассылки Human Resources добавляется в качестве члена группы рассылки Corporate Office.
     
-    <table>
-    <thead>
-    <tr class="header">
-    <th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr class="odd">
-    <td>В следующем примере используется псевдоним групп рассылки, а также предполагается, что псевдоним группы рассылки Human Resources имеет значение HumanResources.</td>
-    </tr>
-    </tbody>
-    </table>
+    > [!NOTE]  
+    > В следующем примере используется псевдоним групп рассылки, а также предполагается, что псевдоним группы рассылки Human Resources имеет значение HumanResources.
     
         Add-DistributionGroupMember -Identity "CorporateOffice" -Member "HumanResources"
 
@@ -223,18 +143,8 @@ _**Последнее изменение раздела:**2016-12-09_
     
         Set-Group -Identity "Human Resources" -SeniorityIndex 100
     
-    <table>
-    <thead>
-    <tr class="header">
-    <th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr class="odd">
-    <td>Параметр <em>SeniorityIndex</em> является числовым значением и используется для сортировки групп или пользователей иерархической адресной книги в порядке убывания. Если параметр <em>SeniorityIndex</em> не установлен или равен у двух и более пользователей, то при сортировке в иерархической адресной книге используется значение параметра <em>PhoneticDisplayName</em>. В этом случае пользователи перечисляются в прямом алфавитном порядке. Если значение <em>PhoneticDisplayName</em> не установлено, то порядок сортировки иерархической адресной книги устанавливается на значение параметра <em>DisplayName</em> по умолчанию, а пользователи перечисляются в прямом алфавитном порядке.</td>
-    </tr>
-    </tbody>
-    </table>
+    > [!NOTE]  
+    > Параметр <em>SeniorityIndex</em> является числовым значением и используется для сортировки групп или пользователей иерархической адресной книги в порядке убывания. Если параметр <em>SeniorityIndex</em> не установлен или равен у двух и более пользователей, то при сортировке в иерархической адресной книге используется значение параметра <em>PhoneticDisplayName</em>. В этом случае пользователи перечисляются в прямом алфавитном порядке. Если значение <em>PhoneticDisplayName</em> не установлено, то порядок сортировки иерархической адресной книги устанавливается на значение параметра <em>DisplayName</em> по умолчанию, а пользователи перечисляются в прямом алфавитном порядке.
 
 
 10. Устанавливает параметр *SeniorityIndex* для пользователей в группах иерархической адресной книги. В этом примере группа Corporate Office содержит трех пользователей: Amy Alberts, David Hamilton, and Rajesh M. Patel. Вместо перечисления групп в обратном алфавитном порядке (по умолчанию) будет выбрана сортировка David Hamilton (*SeniorityIndex* = 100), Rajesh M. Patel (*SeniorityIndex* = 50) и Amy Alberts (*SeniorityIndex* = 25). В этом примере параметр *SeniorityIndex* для пользователя David Hamilton будет установлен равным 100.
@@ -267,18 +177,8 @@ _**Последнее изменение раздела:**2016-12-09_
 
     Set-OrganizationConfig -HierarchicalAddressBookRoot $null
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Эта команда не удаляет корневую организацию и подчиненные группы, используемые в структуре иерархической адресной книги, и не сбрасывает значения <em>SeniorityIndex</em> для групп или пользователей. Она только запрещает отображение иерархической адресной книги в Outlook. Чтобы включить иерархическую адресную книгу с теми же параметрами конфигурации, следует просто включить корневую организацию.</td>
-</tr>
-</tbody>
-</table>
+> [!NOTE]  
+> Эта команда не удаляет корневую организацию и подчиненные группы, используемые в структуре иерархической адресной книги, и не сбрасывает значения <em>SeniorityIndex</em> для групп или пользователей. Она только запрещает отображение иерархической адресной книги в Outlook. Чтобы включить иерархическую адресную книгу с теми же параметрами конфигурации, следует просто включить корневую организацию.
 
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Set-OrganizationConfig](https://technet.microsoft.com/ru-ru/library/aa997443\(v=exchg.150\)).

@@ -13,26 +13,16 @@ ms.translationtype: HT
 
  
 
-_**Применимо к:**Exchange Server 2013_
+_**Применимо к:** Exchange Server 2013_
 
-_**Последнее изменение раздела:**2014-02-15_
+_**Последнее изменение раздела:** 2014-02-15_
 
 Отключение публикации интернет-календарей зависит от того, как вы ее включили. Если создана политика общего доступа, предназначенная для публикации календаря в Интернете, можно также отключить политику или удалить ее вовсе. Если вы настроили публикацию календаря в Интернете в качестве общего правила в политике общего доступа по умолчанию, вы можете просто удалить правило в домене **Анонимный**.
 
 При отключении политики общего доступа, согласно которой выполняется публикация календаря в Интернете, пользователи, которым разрешено использовать эту политику, не смогут открывать общий доступ к данным календаря на **анонимном** интернет-домене, указанном в политике. Однако вы не сможете удалить или отключить политику общего доступа, предназначенную для публикации календаря в Интернете, до тех пор, пока все пользователи, подготовленные с использованием этой политики, не удалят параметр этой политики из своих почтовых ящиков. Дополнительные сведений об изменении параметров политики для пользователей см. в разделе [Управление почтовыми ящиками пользователей](manage-user-mailboxes-exchange-2013-help.md).
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Если отключить или удалить политику общего доступа, ее пользователи смогут продолжить обмениваться данными, пока работает помощник по политикам общего доступа. Частота запуска помощника политики общего доступа задается командлетом <a href="https://technet.microsoft.com/ru-ru/library/aa998651(v=exchg.150)">Set-MailboxServer</a> с параметром <em>SharingPolicySchedule</em>.</td>
-</tr>
-</tbody>
-</table>
+> [!NOTE]  
+> Если отключить или удалить политику общего доступа, ее пользователи смогут продолжить обмениваться данными, пока работает помощник по политикам общего доступа. Частота запуска помощника политики общего доступа задается командлетом <a href="https://technet.microsoft.com/ru-ru/library/aa998651(v=exchg.150)">Set-MailboxServer</a> с параметром <em>SharingPolicySchedule</em>.
 
 
 Чтобы полностью отключить публикацию календаря в Интернете, необходимо также отключить виртуальный каталог Outlook Web App, используемый для этой цели. Это поможет предотвратить доступ к ссылкам на опубликованные календари, к которым пользователи организации Exchange и внешние пользователи Интернета ранее имели общий доступ. Этот этап описан ниже.
@@ -47,18 +37,8 @@ _**Последнее изменение раздела:**2014-02-15_
 
   - Сочетания клавиш для процедур, описанных в этой статье, приведены в статье [Сочетания клавиш в Центре администрирования Exchange](keyboard-shortcuts-in-the-exchange-admin-center-exchange-online-protection-help.md).
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Bb124558.tip(EXCHG.150).gif" title="Совет" alt="Совет" />Совет.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.</td>
-</tr>
-</tbody>
-</table>
+> [!TIP]  
+> Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.
 
 
 ## Как это сделать?
@@ -105,34 +85,14 @@ _**Последнее изменение раздела:**2014-02-15_
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Get-SharingPolicy](https://technet.microsoft.com/ru-ru/library/dd335081\(v=exchg.150\)).
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Bb124558.tip(EXCHG.150).gif" title="Совет" alt="Совет" />Совет.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.</td>
-</tr>
-</tbody>
-</table>
+> [!TIP]  
+> Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.
 
 
 ## Действие 2. Использование командной консоли для отключения анонимных функций виртуального каталога Outlook Web App
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Нельзя использовать EAC для отключения анонимных функций виртуального каталога Outlook Web App.</td>
-</tr>
-</tbody>
-</table>
+> [!NOTE]  
+> Нельзя использовать EAC для отключения анонимных функций виртуального каталога Outlook Web App.
 
 
 В этом примере показано, как отключить анонимные функции для виртуального каталога Outlook Web App на сервере клиентского доступа CAS01.
@@ -149,16 +109,6 @@ _**Последнее изменение раздела:**2014-02-15_
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Get-OwaVirtualDirectory](https://technet.microsoft.com/ru-ru/library/aa998588\(v=exchg.150\)).
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Bb124558.tip(EXCHG.150).gif" title="Совет" alt="Совет" />Совет.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.</td>
-</tr>
-</tbody>
-</table>
+> [!TIP]  
+> Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.
 

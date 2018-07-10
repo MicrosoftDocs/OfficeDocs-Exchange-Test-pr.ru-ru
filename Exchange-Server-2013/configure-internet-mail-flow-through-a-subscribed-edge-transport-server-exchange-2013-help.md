@@ -13,9 +13,9 @@ ms.translationtype: HT
 
  
 
-_**Применимо к:**Exchange Server 2013_
+_**Применимо к:** Exchange Server 2013_
 
-_**Последнее изменение раздела:**2015-04-08_
+_**Последнее изменение раздела:** 2015-04-08_
 
 Чтобы обеспечить поток почты Интернета через пограничный транспортный сервер, необходимо подписать пограничный транспортный сервер на сайт Active Directory. При этом автоматически создаются два необходимые для потока почты Интернета соединители отправки:
 
@@ -37,18 +37,8 @@ _**Последнее изменение раздела:**2015-04-08_
 
   - Сочетания клавиш для процедур, описанных в этой статье, приведены в статье [Сочетания клавиш в Центре администрирования Exchange](keyboard-shortcuts-in-the-exchange-admin-center-exchange-online-protection-help.md).
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Bb124558.tip(EXCHG.150).gif" title="Совет" alt="Совет" />Совет.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.</td>
-</tr>
-</tbody>
-</table>
+> [!TIP]  
+> Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.
 
 
 ## Настройка потока почты Интернета через подписанный пограничный транспортный сервер
@@ -71,18 +61,8 @@ _**Последнее изменение раздела:**2015-04-08_
     
         New-EdgeSubscription -FileData ([byte[]]$(Get-Content -Path "D:\Data\EdgeSubscriptionInfo.xml" -Encoding Byte -ReadCount 0)) -Site "Default-First-Site-Name"
     
-    <table>
-    <thead>
-    <tr class="header">
-    <th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr class="odd">
-    <td>Чтобы предотвратить автоматическое создание одного или обоих соединителей отправки, используйте параметры <em>CreateInternetSendConnector</em> или <em>CreateInboundSendConnector</em>. Дополнительные сведения см. в разделе <a href="edge-subscriptions-exchange-2013-help.md">Пограничные подписки</a>.</td>
-    </tr>
-    </tbody>
-    </table>
+    > [!NOTE]  
+    > Чтобы предотвратить автоматическое создание одного или обоих соединителей отправки, используйте параметры <em>CreateInternetSendConnector</em> или <em>CreateInboundSendConnector</em>. Дополнительные сведения см. в разделе <a href="edge-subscriptions-exchange-2013-help.md">Пограничные подписки</a>.
 
 
 4.  На сервере почтовых ящиков запустите следующую команду, чтобы начать первую синхронизацию EdgeSync.
