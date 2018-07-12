@@ -53,42 +53,42 @@ _**Последнее изменение раздела:** 2015-03-09_
 </tr>
 <tr class="odd">
 <td><p><code>Event</code></p></td>
-<td><p><code> </code></p></td>
+<td><p></p></td>
 <td><p>В этом теге содержится запись журнала аудита для отдельного командлета. В этом теге содержатся атрибуты <code>Caller</code>, <code>Cmdlet</code>, <code>ObjectModified</code>, <code>RunDate</code>, <code>Succeeded</code>, <code>Error</code> и <code>OriginatingServer</code>. Теги <code>CmdletParameters</code> и <code>ModifiedProperties</code> являются дочерними по отношению к этому тегу.</p>
 <p>В каждой записи журнала аудита имеется один тег <code>Event</code>.</p></td>
 </tr>
 <tr class="even">
-<td><p><code> </code></p></td>
+<td><p></p></td>
 <td><p><code>Caller</code></p></td>
 <td><p>В этом атрибуте содержится учетная запись пользователя, запустившего командлет, указанный в атрибуте <code>Cmdlet</code>.</p></td>
 </tr>
 <tr class="odd">
-<td><p><code> </code></p></td>
+<td><p></p></td>
 <td><p><code>Cmdlet</code></p></td>
 <td><p>В этом атрибуте содержится имя командлета, запущенного пользователем, указанным в атрибуте <code>Caller</code>.</p></td>
 </tr>
 <tr class="even">
-<td><p><code> </code></p></td>
+<td><p></p></td>
 <td><p><code>ObjectModified</code></p></td>
 <td><p>В этом атрибуте содержится объект, измененный с помощью командлета, указанного в атрибуте <code>Cmdlet</code>. Тег <code>ModifiedProperties</code> показывает, какие свойства данного объекта были изменены.</p></td>
 </tr>
 <tr class="odd">
-<td><p><code> </code></p></td>
+<td><p></p></td>
 <td><p><code>RunDate</code></p></td>
 <td><p>В этом атрибуте содержатся дата и время выполнения командлета, указанного в атрибуте <code>Cmdlet</code>.</p></td>
 </tr>
 <tr class="even">
-<td><p><code> </code></p></td>
+<td><p></p></td>
 <td><p><code>Succeeded</code></p></td>
 <td><p>Этот атрибут указывает, был ли успешно выполнен командлет, указанный в атрибуте <code>Cmdlet</code>. Значение может быть равно <code>True</code> или <code>False</code>.</p></td>
 </tr>
 <tr class="odd">
-<td><p><code> </code></p></td>
+<td><p></p></td>
 <td><p><code>Error</code></p></td>
 <td><p>В этом атрибуте содержится сообщение об ошибке, которое создается при сбое выполнения командлета, указанного в атрибуте <code>Cmdlet</code>. Если ошибка не обнаружена, то значение равно <code>None</code>.</p></td>
 </tr>
 <tr class="even">
-<td><p><code> </code></p></td>
+<td><p></p></td>
 <td><p><code>OriginatingServer</code></p></td>
 <td><p>Этот атрибут содержит сервер, на котором запускается командлет, указанный в атрибуте <code>Cmdlet</code>.</p></td>
 </tr>
@@ -100,17 +100,17 @@ _**Последнее изменение раздела:** 2015-03-09_
 </tr>
 <tr class="even">
 <td><p><code>Parameter</code></p></td>
-<td><p><code> </code></p></td>
+<td><p></p></td>
 <td><p>В этом теге содержится отдельный параметр, заданный при запуске командлета. В этом теге содержатся атрибуты <code>Name</code> и <code>Value</code>.</p>
 <p>Может существовать несколько тегов <code>Parameter</code> на каждый тег <code>CmdletParameters</code>.</p></td>
 </tr>
 <tr class="odd">
-<td><p><code> </code></p></td>
+<td><p></p></td>
 <td><p><code>Name</code></p></td>
 <td><p>В этом атрибуте содержится имя параметра, заданного в командлете при его запуске.</p></td>
 </tr>
 <tr class="even">
-<td><p><code> </code></p></td>
+<td><p></p></td>
 <td><p><code>Value</code></p></td>
 <td><p>В этом атрибуте содержится значение, заданное для параметра, который указан в атрибуте <code>Name</code>.</p></td>
 </tr>
@@ -127,22 +127,22 @@ _**Последнее изменение раздела:** 2015-03-09_
 </tr>
 <tr class="even">
 <td><p><code>Property</code></p></td>
-<td><p><code> </code></p></td>
+<td><p></p></td>
 <td><p>В этом теге содержится отдельное свойство, заданное при запуске командлета. В этом теге содержатся атрибуты <code>Name</code>, <code>OldValue</code> и <code>NewValue</code>.</p>
 <p>Может существовать несколько тегов <code>Property</code> на каждый тег <code>ModifiedProperties</code>.</p></td>
 </tr>
 <tr class="odd">
-<td><p><code> </code></p></td>
+<td><p></p></td>
 <td><p><code>Name</code></p></td>
 <td><p>В этом атрибуте содержится имя свойства, измененного в результате выполнения командлета.</p></td>
 </tr>
 <tr class="even">
-<td><p><code> </code></p></td>
+<td><p></p></td>
 <td><p><code>OldValue</code></p></td>
 <td><p>В этом атрибуте содержится значение, которое содержалось в свойстве, указанном в атрибуте <code>Name</code>, до изменения этого свойства.</p></td>
 </tr>
 <tr class="odd">
-<td><p><code> </code></p></td>
+<td><p></p></td>
 <td><p><code>NewValue</code></p></td>
 <td><p>В этом атрибуте содержится значение, на которое было изменено свойство, указанное в атрибуте <code>Name</code>.</p></td>
 </tr>
