@@ -63,9 +63,12 @@ _**Последнее изменение раздела:** 2015-04-07_
 
 Чтобы включить ведение журнала аудита для всех почтовых ящиков пользователей в организации, выполните следующие команды:
 
+```
     $UserMailboxes = Get-mailbox -Filter {(RecipientTypeDetails -eq 'UserMailbox')}
-
+```
+```
     $UserMailboxes | ForEach {Set-Mailbox $_.Identity -AuditEnabled $true}
+```
 
 ## Действие 2. Включение XML-вложений в Outlook Web App
 

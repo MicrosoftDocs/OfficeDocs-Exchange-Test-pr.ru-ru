@@ -84,13 +84,18 @@ _**Последнее изменение раздела:** 2014-05-07_
 
 Выполните следующие команды, чтобы остановить и отключить службу поиска Microsoft Exchange.
 
+```
     Stop-Service MSExchangeFastSearch
-
+```
+```
     Set-Service MSExchangeFastSearch -StartupType Disabled
+````
 
 Выполните следующие команды для настройки автоматического запуска службы поиска Exchange и последующего запуска службы.
 
+```
     Set-Service MSExchangeFastSearch -StartupType Automatic
-
+```
+```
     Start-Service MSExchangeFastSearch
-
+```

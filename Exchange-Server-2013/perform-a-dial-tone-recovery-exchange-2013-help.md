@@ -82,14 +82,21 @@ _**Последнее изменение раздела:** 2014-06-27_
 
 13. Используйте командлеты [Get-Mailbox](https://technet.microsoft.com/ru-ru/library/bb123685\(v=exchg.150\)) и [New-MailboxRestoreRequest](https://technet.microsoft.com/ru-ru/library/ff829875\(v=exchg.150\)) для экспорта данных из базы данных восстановления и их импорта в восстановленную базу, как показано в следующем примере. Все сообщения, отправленные и полученные с помощью аварийной базы данных, будут импортированы в рабочую базу данных.
     
+```
         $mailboxes = Get-Mailbox -Database DTDB1
-    
+```
+```    
         $mailboxes | %{ New-MailboxRestoreRequest -SourceStoreMailbox $_.ExchangeGuid -SourceDatabase RDB1 -TargetMailbox $_ }
+```
 
 14. После завершения операции восстановления можно отключить и удалить базу данных восстановления, как показано в следующем примере.
     
+```
         Dismount-Database -Identity RDB1
+```
+```        
         Remove-MailboxDatabase -Identity RDB1
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в следующих разделах:
 

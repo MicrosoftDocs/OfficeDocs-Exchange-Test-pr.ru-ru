@@ -103,10 +103,12 @@ _**Последнее изменение раздела:** 2018-04-17_
 
 В этом примере доступ к надстройке LinkedIn предоставляется участникам группы рассылки с именем Marketing при помощи гипотетического значения `ac83a9d5-5af2-446f-956a-c583adc94d5e` для параметра **AppId**.
 
+```
     $a = Get-DistributionGroupMember Marketing
-
+```
+```
     Set-App -Identity ac83a9d5-5af2-446f-956a-c583adc94d5e -OrganizationApp -ProvidedTo SpecificUsers -UserList $a.Identity -DefaultStateForUser Enabled
-
+```
 Подробный синтаксис и параметры представлены в статье [Set-App](https://technet.microsoft.com/ru-ru/library/jj218630\(v=exchg.150\)).
 
 ## Как убедиться, что все получилось?

@@ -125,15 +125,20 @@ _**Последнее изменение раздела:** 2017-01-18_
     
     Вот несколько примеров использования командлетов **Get-Mailbox** и **Get-Recipient** для получения подмножества пользователей на основе общих свойств пользователей или почтовых ящиков. В этих примерах предполагается, что соответствующие свойства почтовых ящиков (например, *CustomAttributeN* или *Department*) заполнены.
     
+```
         Get-Mailbox -RecipientTypeDetails UserMailbox -ResultSize unlimited -Filter 'CustomAttribute15 -eq "OneYearLitigationHold"'
-    
+```
+```    
         Get-Recipient -RecipientTypeDetails UserMailbox -ResultSize unlimited -Filter 'Department -eq "HR"'
-    
+```
+```    
         Get-Recipient -RecipientTypeDetails UserMailbox -ResultSize unlimited -Filter 'PostalCode -eq "98052"'
-    
+```
+```    
         Get-Recipient -RecipientTypeDetails UserMailbox -ResultSize unlimited -Filter 'StateOrProvince -eq "WA"'
-    
+```
+```    
         Get-Mailbox -ResultSize Unlimited -Filter {RecipientTypeDetails -ne "DiscoveryMailbox"}
-    
-    Вы можете использовать в фильтре другие свойства, чтобы включать и исключать почтовые ящики. Подробные сведения см. в статье [Фильтруемые свойства для параметра -Filter](https://technet.microsoft.com/ru-ru/library/bb738155\(v=exchg.150\)).
+```    
+Вы можете использовать в фильтре другие свойства, чтобы включать и исключать почтовые ящики. Подробные сведения см. в статье [Фильтруемые свойства для параметра -Filter](https://technet.microsoft.com/ru-ru/library/bb738155\(v=exchg.150\)).
 

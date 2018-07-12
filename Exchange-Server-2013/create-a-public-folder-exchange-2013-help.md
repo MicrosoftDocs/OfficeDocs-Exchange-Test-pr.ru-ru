@@ -87,11 +87,15 @@ _**Последнее изменение раздела:** 2014-02-24_
 
   - В командной консоли выполните любую из следующих команд:
     
+```
         Get-PublicFolder -Identity \Marketing\2013\Reports | Format-List
-    
+```
+```    
         Get-PublicFolder -Identity \Marketing\2013 -GetChildren
-    
+```
+````    
         Get-PublicFolder -Recurse
+`````
 
 > [!TIP]  
 > Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.

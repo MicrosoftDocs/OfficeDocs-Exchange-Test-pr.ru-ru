@@ -49,9 +49,12 @@ _**Последнее изменение раздела:** 2014-08-05_
 
 Командлет **Set-ThrottlingPolicyAssociation** не нужно использовать для связывания пользователя с политикой. Другим способом связать пользователя tonysmith с политикой регулирования ITStaffPolicy являются следующие команды.
 
+```
     $b = Get-ThrottlingPolicy ITStaffPolicy
-
+```
+```
     Set-Mailbox -Identity tonysmith -ThrottlingPolicy $b
+```   
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделах [New-ThrottlingPolicy](https://technet.microsoft.com/ru-ru/library/dd351045\(v=exchg.150\)) и [Set-ThrottlingPolicyAssociation](https://technet.microsoft.com/ru-ru/library/ff459231\(v=exchg.150\)).
 

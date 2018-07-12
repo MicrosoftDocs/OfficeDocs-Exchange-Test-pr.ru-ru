@@ -83,9 +83,12 @@ _**Последнее изменение раздела:** 2014-02-24_
 
 Чтобы скопировать результаты поиска в почтовый ящик найденных сообщений, вам пришлось бы выполнить такие команды:
 
+```
     Set-MailboxSearch "FY13 Q2 Financial Results" -EstimateOnly $false -TargetMailbox "Discovery Search Mailbox"
-
+```
+```
     Start-MailboxSearch "FY13 Q2 Financial Results"
+```
 
 ## Дополнительные сведения о копировании результатов поиска
 

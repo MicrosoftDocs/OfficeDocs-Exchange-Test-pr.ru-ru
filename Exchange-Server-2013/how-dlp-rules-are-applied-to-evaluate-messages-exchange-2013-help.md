@@ -147,9 +147,12 @@ _**Последнее изменение раздела:** 2015-03-09_
 
 Правила, работа которых была показана на примере банковских карт в этой статье, можно использовать и для выявления другой конфиденциальной информации. Полный список правил, предоставленных корпорацией Майкрософт в Exchange, можно получать с помощью командлета [Get-ClassificationRuleCollection](https://technet.microsoft.com/ru-ru/library/jj218696\(v=exchg.150\)) в командной консоли Exchange следующим образом:
 
+```
     $rule_collection = Get-ClassificationRuleCollection
-
+```
+```
     $rule_collection[0].SerializedClassificationRuleCollection | Set-Content oob_classifications.xml -Encoding byte
+```
 
 ## Для получения дополнительной информации
 
