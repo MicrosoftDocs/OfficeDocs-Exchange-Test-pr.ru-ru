@@ -1,4 +1,4 @@
-﻿---
+---
 title: 'Настройка передачи push-уведомлений в службе "Веб-приложение OWA для устройств": Exchange 2013 Help'
 TOCTitle: Настройка передачи push-уведомлений в службе "Веб-приложение OWA для устройств"
 ms:assetid: c0f4912d-8bd3-4a54-9097-03619c645c6a
@@ -63,95 +63,14 @@ Office 365 — это облачная служба, которая предн�
 
   -  **Действие 1. Назначение сертификата встроенному издателю токенов локального сервера Exchange Server.** Во-первых, локальный администратор Exchange должен создать сертификат, если он не был создан ранее, и назначить его встроенному издателю токенов локального сервера Exchange Server с помощью сценария командной консоли Exchange. Это действие выполняется только один раз; созданный сертификат не заменяется и повторно используется для других сценариев проверки подлинности. Обязательно обновите значение *$tenantDomain* в соответствии с именем своего домена. Для этого скопируйте и вставьте указанный ниже код.
     
-<<<<<<< HEAD
-    > [!WARNING]  
-    > Копирование кода в текстовый редактор, например Блокнот, и сохранение его с расширением PS1 упрощает запуск сценариев командной консоли.
-=======
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/JJ983803.warning(EXCHG.150).gif" title="Предупреждение" alt="Предупреждение" />Предупреждение.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Копирование кода в текстовый редактор, например Блокнот, и сохранение его с расширением PS1 упрощает запуск сценариев командной консоли.</td>
-</tr>
-</tbody>
-</table>
->>>>>>> ae5f630b4ec13cb90d388a253e72c64222ebd2de
+
+> [!WARNING]  
+> Копирование кода в текстовый редактор, например Блокнот, и сохранение его с расширением PS1 упрощает запуск сценариев командной консоли.
+
     
+```
 # Make sure to update the following $tenantDomain with your Office 365 tenant domain.
         
-<<<<<<< HEAD
-        # Check whether the cert returned from Get-AuthConfig is valid and keysize must be >= 2048
-        
-        $c = Get-ExchangeCertificate | ?{$_.CertificateDomains -eq $env:USERDNSDOMAIN -and $_.Services -ge "SMTP" -and $_.PublicKeySize -ge 2048 -and $_.FriendlyName -match "OAuth"}
-        If ($c.Count -eq 0)
-        {
-            Write-Host "Creating certificate for oAuth..."
-            $ski = [System.Guid]::NewGuid().ToString("N")
-            $friendlyName = "Exchange S2S OAuth"
-            New-ExchangeCertificate -FriendlyName $friendlyName -DomainName $env:USERDNSDOMAIN -Services Federation -KeySize 2048 -PrivateKeyExportable $true -SubjectKeyIdentifier $ski
-            $c = Get-ExchangeCertificate | ?{$_.friendlyname -eq $friendlyName}
-        }
-        ElseIf ($c.Count -gt 1)
-        {
-            $c = $c[0]
-        }
-        
-        $a = $c | ?{$_.Thumbprint -eq (get-authconfig).CurrentCertificateThumbprint}
-        If ($a.Count -eq 0)
-        {
-            Set-AuthConfig -CertificateThumbprint $c.Thumbprint
-        }
-        Write-Host "Configured Certificate Thumbprint is:"(get-authconfig).CurrentCertificateThumbprint
-        
-        # Export the certificate
-        
-        Write-Host "Exporting certificate..."
-        if((test-path $env:SYSTEMDRIVE\OAuthConfig) -eq $false)
-        {
-            md $env:SYSTEMDRIVE\OAuthConfig
-        }
-        cd $env:SYSTEMDRIVE\OAuthConfig
-        
-        $oAuthCert = (dir Cert:\LocalMachine\My) | where {$_.FriendlyName -match "OAuth"}
-        $certType = [System.Security.Cryptography.X509Certificates.X509ContentType]::Cert
-        $certBytes = $oAuthCert.Export($certType)
-        $CertFile = "$env:SYSTEMDRIVE\OAuthConfig\OAuthCert.cer"
-        [System.IO.File]::WriteAllBytes($CertFile, $certBytes)
-        
-        # Set AuthServer
-        $authServer = Get-AuthServer MicrosoftSts;
-        if ($authServer.Length -eq 0)
-        {
-            Write-Host "Creating AuthServer Config..."
-            New-AuthServer MicrosoftSts -AuthMetadataUrl https://accounts.accesscontrol.windows.net/metadata/json/1/?realm=$tenantDomain
-        }
-        elseif ($authServer.AuthMetadataUrl -ne "https://accounts.accesscontrol.windows.net/metadata/json/1/?realm=$tenantDomain")
-        {
-            Write-Warning "AuthServer config already exists but the AuthMetdataUrl doesn't match the appropriate value. Updating..."
-            Set-AuthServer MicrosoftSts -AuthMetadataUrl https://accounts.accesscontrol.windows.net/metadata/json/1/?realm=$tenantDomain
-        }
-        else
-        {
-            Write-Host "AuthServer Config already exists."
-        }
-        Write-Host "Complete."
-    
-    Пример ожидаемого результата приведен ниже.
-    
-        Configured Certificate Thumbprint is: 7595DBDEA83DACB5757441D44899BCDB9911253C
-        Exporting certificate...
-        Complete.
-    
-    > [!WARNING]  
-    > Для продолжения необходимы командлеты Модуль Azure Active Directory для Windows PowerShell. Если командлеты Модуль Azure Active Directory для Windows PowerShell (предыдущее название — модуль Microsoft Online Services для Windows PowerShell) не установлены, это можно сделать, следуя указаниям из статьи <a href="http://aka.ms/aadposh">Управление службой Azure AD с помощью Windows PowerShell</a>.
-
-
-  - **Действие 2. Настройка взаимодействия Office 365 с локальным сервером Exchange 2013.** Настройте службу Office 365, с которой будет обмениваться данными сервер Exchange Server 2013, как партнерское приложение. Например, если локальный сервер Exchange Server 2013 должен взаимодействовать с Office 365, необходимо настроить его как партнерское приложение. Партнерское приложение — это любое приложение, непосредственно с которым Exchange 2013 может обмениваться токенами безопасности, не используя при этом сторонний сервер токенов безопасности. Администратор локального сервера Exchange 2013 должен использовать указанный ниже сценарий командной консоли Exchange, чтобы настроить клиент Office 365 для взаимодействия с Exchange 2013 как партнерское приложение. Во время выполнения сценария будет предложено ввести имя пользователя и пароль администратора домена клиента Office 365, например administrator@fabrikam.com. Обязательно обновите значение *$CertFile* в соответствии с расположением сертификата, если он не был создан с помощью предыдущего сценария. Для этого скопируйте и вставьте указанный ниже код.
-=======
 $tenantDomain = "Fabrikam.com"
 
 # Check whether the cert returned from Get-AuthConfig is valid and keysize must be >= 2048
@@ -209,66 +128,60 @@ else
     Write-Host "AuthServer Config already exists."
 }
 Write-Host "Complete."
+```
 
 Пример ожидаемого результата приведен ниже.
 
+```
 Configured Certificate Thumbprint is: 7595DBDEA83DACB5757441D44899BCDB9911253C
 Exporting certificate...
 Complete.
+```
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/JJ983803.warning(EXCHG.150).gif" title="Предупреждение" alt="Предупреждение" />Предупреждение.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Для продолжения необходимы командлеты Модуль Azure Active Directory для Windows PowerShell. Если командлеты Модуль Azure Active Directory для Windows PowerShell (предыдущее название — модуль Microsoft Online Services для Windows PowerShell) не установлены, это можно сделать, следуя указаниям из статьи <a href="http://aka.ms/aadposh">Управление службой Azure AD с помощью Windows PowerShell</a>.</td>
-</tr>
-</tbody>
-</table>
+> [!WARNING]  
+> Для продолжения необходимы командлеты Модуль Azure Active Directory для Windows PowerShell. Если командлеты Модуль Azure Active Directory для Windows PowerShell (предыдущее название — модуль Microsoft Online Services для Windows PowerShell) не установлены, это можно сделать, следуя указаниям из статьи <a href="http://aka.ms/aadposh">Управление службой Azure AD с помощью Windows PowerShell</a>.
 
 
   -  **Действие 2. Настройка взаимодействия Office 365 с локальным сервером Exchange 2013.** Настройте службу Office 365, с которой будет обмениваться данными сервер Exchange Server 2013, как партнерское приложение. Например, если локальный сервер Exchange Server 2013 должен взаимодействовать с Office 365, необходимо настроить его как партнерское приложение. Партнерское приложение — это любое приложение, непосредственно с которым Exchange 2013 может обмениваться токенами безопасности, не используя при этом сторонний сервер токенов безопасности. Администратор локального сервера Exchange 2013 должен использовать указанный ниже сценарий командной консоли Exchange, чтобы настроить клиент Office 365 для взаимодействия с Exchange 2013 как партнерское приложение. Во время выполнения сценария будет предложено ввести имя пользователя и пароль администратора домена клиента Office 365, например administrator@fabrikam.com. Обязательно обновите значение *$CertFile* в соответствии с расположением сертификата, если он не был создан с помощью предыдущего сценария. Для этого скопируйте и вставьте указанный ниже код.
->>>>>>> ae5f630b4ec13cb90d388a253e72c64222ebd2de
     
-        # Make sure to update the following $CertFile with the path to the cert if not using the previous script.
-        
-        $CertFile = "$env:SYSTEMDRIVE\OAuthConfig\OAuthCert.cer"
-        
-        If (Test-Path $CertFile)
-        {
-            $ServiceName = "00000002-0000-0ff1-ce00-000000000000";
-        
-            $objFSO = New-Object -ComObject Scripting.FileSystemObject;
-            $CertFile = $objFSO.GetAbsolutePathName($CertFile);
-        
-            $cer = New-Object System.Security.Cryptography.X509Certificates.X509Certificate
-            $cer.Import($CertFile);
-            $binCert = $cer.GetRawCertData();
-            $credValue = [System.Convert]::ToBase64String($binCert);
-        
-            Write-Host "Please enter the administrator user name and password of the Office 365 tenant domain..."
-        
-            Connect-MsolService;
-            Import-Module msonlineextended;
-        
-            Write-Host "Adding a key to Service Principal..."
-        
-            $p = Get-MsolServicePrincipal -ServicePrincipalName $ServiceName
-            New-MsolServicePrincipalCredential -AppPrincipalId $p.AppPrincipalId -Type asymmetric -Usage Verify -Value $credValue -StartDate $cer.GetEffectiveDateString() -EndDate $cer.GetExpirationDateString()
-        }
-        Else
-        {
-            Write-Error "Cannot find certificate."
-        } 
+```
+# Make sure to update the following $CertFile with the path to the cert if not using the previous script.
+
+$CertFile = "$env:SYSTEMDRIVE\OAuthConfig\OAuthCert.cer"
+
+If (Test-Path $CertFile)
+{
+    $ServiceName = "00000002-0000-0ff1-ce00-000000000000";
+
+    $objFSO = New-Object -ComObject Scripting.FileSystemObject;
+    $CertFile = $objFSO.GetAbsolutePathName($CertFile);
+
+    $cer = New-Object System.Security.Cryptography.X509Certificates.X509Certificate
+    $cer.Import($CertFile);
+    $binCert = $cer.GetRawCertData();
+    $credValue = [System.Convert]::ToBase64String($binCert);
+
+    Write-Host "Please enter the administrator user name and password of the Office 365 tenant domain..."
+
+    Connect-MsolService;
+    Import-Module msonlineextended;
+
+    Write-Host "Adding a key to Service Principal..."
+
+    $p = Get-MsolServicePrincipal -ServicePrincipalName $ServiceName
+    New-MsolServicePrincipalCredential -AppPrincipalId $p.AppPrincipalId -Type asymmetric -Usage Verify -Value $credValue -StartDate $cer.GetEffectiveDateString() -EndDate $cer.GetExpirationDateString()
+}
+Else
+{
+    Write-Error "Cannot find certificate."
+}
+``` 
     
-    Пример ожидаемого результата приведен ниже.
+Пример ожидаемого результата приведен ниже.
     
-        Please enter the administrator user name and password of the Office 365 tenant domain...
-        Adding a key to Service Principal...
-        Complete.
+    Please enter the administrator user name and password of the Office 365 tenant domain...
+    Adding a key to Service Principal...
+    Complete.
 
 ## Включение передачи push-уведомлений
 
@@ -317,7 +230,8 @@ Complete.
 
   - **Включение отслеживания.** Еще один способ проверить работоспособность push-уведомлений (или узнать, почему они не работают) — включение отслеживания на сервере почтовых ящиков в своей организации. Администратор локального сервера Exchange 2013 должен включить отслеживание передачи push-уведомлений с помощью следующего сценария. Для этого скопируйте и вставьте указанный ниже код.
     
-        # Send a push notification to verify connectivity.
+    ```
+    # Send a push notification to verify connectivity.
         
         $s = Get-ExchangeServer | ?{$_.ServerRole -match "Mailbox"}
         If ($s.Count -gt 1)
@@ -338,10 +252,10 @@ Complete.
         {
             Write-Error "Cannot find a Mailbox server in the current site."
         }
+    ```
     
     Пример ожидаемого результата приведен ниже.
     
         ResultType : Succeeded
         Error      :
         Exception  :
-
