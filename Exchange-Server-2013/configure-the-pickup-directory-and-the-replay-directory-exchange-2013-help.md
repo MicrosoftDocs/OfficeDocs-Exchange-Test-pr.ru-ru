@@ -60,10 +60,8 @@ _**Последнее изменение раздела:** 2015-04-08_
     Set-TransportService Exchange01 -PickupDirectoryPath "D:\Pickup Directory" -PickupDirectoryMaxHeaderSize 96KB -PickupDirectoryMaxRecipientsPerMessage 250 -PickupDirectoryMaxMessagesPerMinute 200
 
 > [!NOTE]  
-> <ul>
-<li><p>Установка для параметра <em>PickupDirectoryPath</em> значения <code>$null</code> отключает использование каталога раскладки.</p></li>
-<li><p>Для параметров <em>PickupDirectoryPath</em> и <em>ReplayDirectoryPath</em> запрещается указывать один каталог.</p></li>
-</ul>
+> <ul><li><p>Установка для параметра <em>PickupDirectoryPath</em> значения<code>$null</code> отключает использование каталога раскладки.</p></li>
+> <li><p>Для параметров <em>PickupDirectoryPath</em> и <em>ReplayDirectoryPath</em> запрещается указывать один каталог.</p></li></ul>
 
 
 ## Использование командной консоли для настройки каталога преобразования
