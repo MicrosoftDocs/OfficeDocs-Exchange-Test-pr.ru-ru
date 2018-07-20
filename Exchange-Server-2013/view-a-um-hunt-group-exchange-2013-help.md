@@ -13,9 +13,9 @@ ms.translationtype: MT
 
  
 
-_**Применимо к:**Exchange Online, Exchange Server 2013, Exchange Server 2016_
+_**Применимо к:** Exchange Online, Exchange Server 2013, Exchange Server 2016_
 
-_**Последнее изменение раздела:**2012-11-05_
+_**Последнее изменение раздела:** 2012-11-05_
 
 При просмотре свойств группы слежения единой системы обмена сообщениями (UM), можно просмотреть свойства, связанные с одной сервисной группы единой системы обмена СООБЩЕНИЯМИ или все сервисные группы единой системы обмена СООБЩЕНИЯМИ, связанные с с одним шлюзом IP единой системы обмена СООБЩЕНИЯМИ. Если ни один параметр не указан, будут возвращены все группы слежения единой системы обмена СООБЩЕНИЯМИ. Нельзя использовать Центр администрирования Exchange для единой системы обмена СООБЩЕНИЯМИ просмотра свойств сервисной группы; необходимо использовать командной консоли Exchange.
 
@@ -37,18 +37,8 @@ _**Последнее изменение раздела:**2012-11-05_
 
   - Сочетания клавиш для процедур, описанных в этой статье, приведены в статье [Сочетания клавиш в Центре администрирования Exchange](keyboard-shortcuts-in-the-exchange-admin-center-exchange-online-protection-help.md).
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Bb124558.tip(EXCHG.150).gif" title="Совет" alt="Совет" />Совет.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.</td>
-</tr>
-</tbody>
-</table>
+> [!TIP]  
+> Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.
 
 
 ## Использование командной консоли для просмотра свойств группы слежения единой системы обмена СООБЩЕНИЯМИ
@@ -61,16 +51,6 @@ _**Последнее изменение раздела:**2012-11-05_
 
     Get-UMHuntGroup -identity MyUMIPGateway\MyUMHuntGroup | Format-List
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>При использовании командлета <strong>Get-UMHuntGroup</strong> не может ввести только имя группы слежения единой системы обмена СООБЩЕНИЯМИ. Необходимо также включить имя шлюза IP единой системы обмена СООБЩЕНИЯМИ, связанную с сервисной группы единой системы обмена СООБЩЕНИЯМИ.</td>
-</tr>
-</tbody>
-</table>
+> [!NOTE]  
+> При использовании командлета <strong>Get-UMHuntGroup</strong> не может ввести только имя группы слежения единой системы обмена СООБЩЕНИЯМИ. Необходимо также включить имя шлюза IP единой системы обмена СООБЩЕНИЯМИ, связанную с сервисной группы единой системы обмена СООБЩЕНИЯМИ.
 

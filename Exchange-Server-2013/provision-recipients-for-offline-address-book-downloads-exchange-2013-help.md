@@ -13,9 +13,9 @@ ms.translationtype: HT
 
  
 
-_**Применимо к:**Exchange Online, Exchange Server 2013_
+_**Применимо к:** Exchange Online, Exchange Server 2013_
 
-_**Последнее изменение раздела:**2013-02-15_
+_**Последнее изменение раздела:** 2013-02-15_
 
 При использовании нескольких автономных адресных книг в организации существует несколько способов настройки доступа различных получателей к загрузке автономных адресных книг.
 
@@ -37,18 +37,8 @@ _**Последнее изменение раздела:**2013-02-15_
 
   - Сочетания клавиш для процедур, описанных в этой статье, приведены в статье [Сочетания клавиш в Центре администрирования Exchange](keyboard-shortcuts-in-the-exchange-admin-center-exchange-online-protection-help.md).
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Bb124558.tip(EXCHG.150).gif" title="Совет" alt="Совет" />Совет.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.</td>
-</tr>
-</tbody>
-</table>
+> [!TIP]  
+> Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.
 
 
 ## Что необходимо сделать?
@@ -71,18 +61,8 @@ _**Последнее изменение раздела:**2013-02-15_
 
     Set-Mailbox -Identity <MailboxIDParameter> -OfflineAddressBook <OfflineAddressBookIdParameter>
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Параметр <em>Identity</em> определяет почтовый ящик и может иметь следующие значения: идентификатор GUID, ADObjectID, различающееся имя (DN), <em>domain\account</em>, имя участника-пользователя (UPN), LegacyExchangeDN, SmtpAddress и псевдоним.</td>
-</tr>
-</tbody>
-</table>
+> [!NOTE]  
+> Параметр <em>Identity</em> определяет почтовый ящик и может иметь следующие значения: идентификатор GUID, ADObjectID, различающееся имя (DN), <em>domain\account</em>, имя участника-пользователя (UPN), LegacyExchangeDN, SmtpAddress и псевдоним.
 
 
 В этом примере показано, как разрешить пользователю Костерина загружать автономную адресную книгу с именем "Моя автономная адресная книга".

@@ -13,24 +13,14 @@ ms.translationtype: MT
 
  
 
-_**Применимо к:**Exchange Online, Exchange Server 2013, Exchange Server 2016_
+_**Применимо к:** Exchange Online, Exchange Server 2013, Exchange Server 2016_
 
-_**Последнее изменение раздела:**2016-12-09_
+_**Последнее изменение раздела:** 2016-12-09_
 
 Партнерскую службу предварительного просмотра голосовой почты можно настроить в политике почтовых ящиков единой системы обмена сообщениями. Параметры партнерской службы предварительного просмотра голосовой почты, такие как партнерский идентификатор и адрес, настроенные в политике почтовых ящиков единой системы обмена сообщениями, применяются для всех пользователей с включенной поддержкой единой системы обмена сообщениями, связанных с этой политикой почтовых ящиков.
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Настройка партнерской службы предварительного просмотра голосовой почты выполняется в командной консоли.</td>
-</tr>
-</tbody>
-</table>
+> [!NOTE]  
+> Настройка партнерской службы предварительного просмотра голосовой почты выполняется в командной консоли.
 
 
 Дополнительные сведения об управленческих задачах, связанных с политиками почтовых ящиков единой системы обмена сообщениями, см. в разделе [Процедуры политики почтовых ящиков единой системы обмена СООБЩЕНИЯМИ](um-mailbox-policy-procedures-exchange-2013-help.md).
@@ -47,18 +37,8 @@ _**Последнее изменение раздела:**2016-12-09_
 
   - Сочетания клавиш для процедур, описанных в этой статье, приведены в статье [Сочетания клавиш в Центре администрирования Exchange](keyboard-shortcuts-in-the-exchange-admin-center-exchange-online-protection-help.md).
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Bb124558.tip(EXCHG.150).gif" title="Совет" alt="Совет" />Совет.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>..</td>
-</tr>
-</tbody>
-</table>
+> [!TIP]  
+> Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>..
 
 
 ## Как это сделать

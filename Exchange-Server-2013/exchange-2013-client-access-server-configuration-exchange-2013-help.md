@@ -13,9 +13,9 @@ ms.translationtype: HT
 
  
 
-_**Применимо к:**Exchange Server 2013_
+_**Применимо к:** Exchange Server 2013_
 
-_**Последнее изменение раздела:**2017-07-25_
+_**Последнее изменение раздела:** 2017-07-25_
 
 После установки сервера клиентского доступа Exchange 2013 можно выполнить различные задачи настройки. Хотя сервер клиентского доступа Exchange 2013 не обрабатывает клиентские протоколы, к нему необходимо применить некоторые настройки, в том числе виртуальные параметры каталога и сертификата.
 
@@ -39,18 +39,8 @@ _**Последнее изменение раздела:**2017-07-25_
     
         Get-OutlookAnywhere | Set-OutlookAnywhere -InternalHostname "internalServer.contoso.com" -InternalClientAuthenticationMethod Ntlm -InternalClientsRequireSsl $true -ExternalHostname "externalServer.company.com" -ExternalClientAuthenticationMethod Basic -ExternalClientsRequireSsl $true -IISAuthenticationMethods Negotiate,NTLM,Basic
     
-    <table>
-    <thead>
-    <tr class="header">
-    <th><img src="images/Bb124558.tip(EXCHG.150).gif" title="Совет" alt="Совет" />Совет.</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr class="odd">
-    <td>Хотя Exchange 2013 поддерживает Negotiate для проверки подлинности HTTP мобильного Outlook, это должно использоваться только если на всех серверах в среде запущен Exchange 2013.</td>
-    </tr>
-    </tbody>
-    </table>
+    > [!TIP]  
+    > Хотя Exchange 2013 поддерживает Negotiate для проверки подлинности HTTP мобильного Outlook, это должно использоваться только если на всех серверах в среде запущен Exchange 2013.
 
 
   - Чтобы настроить Exchange ActiveSync, выполните следующую команду.
@@ -81,10 +71,12 @@ _**Последнее изменение раздела:**2017-07-25_
     
     После настройки виртуального каталога Outlook Web App в командной строке выполните следующие команды.
     
+```
         Net stop IISAdmin /y
-    
+```
+```    
         Net start W3SVC
-
+```
 2.  Чтобы настроить внешний доступ к Центру администрирования Exchange, выполните следующую команду в командной консоли Exchange.
     
         Set-EcpVirtualDirectory "<CAS2013>\ECP (Default Web Site)" -ExternalUrl https://mail.contoso.com/ECP -InternalURL https://mail.contoso.com/ECP 

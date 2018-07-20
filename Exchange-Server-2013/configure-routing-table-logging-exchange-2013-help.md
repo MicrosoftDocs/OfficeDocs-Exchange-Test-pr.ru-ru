@@ -13,9 +13,9 @@ ms.translationtype: HT
 
  
 
-_**Применимо к:**Exchange Server 2013_
+_**Применимо к:** Exchange Server 2013_
 
-_**Последнее изменение раздела:**2015-04-08_
+_**Последнее изменение раздела:** 2015-04-08_
 
 Журнал таблицы маршрутизации периодически делает снимок таблицы маршрутизации, используемой Microsoft Exchange Server 2013 для маршрутизации сообщений по месту назначения.
 
@@ -33,18 +33,8 @@ _**Последнее изменение раздела:**2015-04-08_
 
   - Сочетания клавиш для процедур, описанных в этой статье, приведены в статье [Сочетания клавиш в Центре администрирования Exchange](keyboard-shortcuts-in-the-exchange-admin-center-exchange-online-protection-help.md).
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Bb124558.tip(EXCHG.150).gif" title="Совет" alt="Совет" />Совет.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.</td>
-</tr>
-</tbody>
-</table>
+> [!TIP]  
+> Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.
 
 
 ## Что необходимо сделать?
@@ -67,18 +57,8 @@ _**Последнее изменение раздела:**2015-04-08_
 
     Set-TransportService Mailbox01 -RoutingTableLogPath "D:\Routing Table Log" -RoutingTableLogMaxDirectorySize 70MB -RoutingTableLogMaxAge 45.00:00:00
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Выбрав для параметра <em>RoutingTableLogMaxAge</em> значение <code>00:00:00</code>, можно выключить автоматическое удаление файлов журналов таблицы маршрутизации по истечении срока их хранения.</td>
-</tr>
-</tbody>
-</table>
+> [!NOTE]  
+> Выбрав для параметра <em>RoutingTableLogMaxAge</em> значение <code>00:00:00</code>, можно выключить автоматическое удаление файлов журналов таблицы маршрутизации по истечении срока их хранения.
 
 
 ## Как проверить, что все получилось?

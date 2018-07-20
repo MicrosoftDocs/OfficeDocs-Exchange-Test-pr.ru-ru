@@ -13,7 +13,7 @@ ms.translationtype: MT
 
  
 
-_**Последнее изменение раздела:**2018-01-17_
+_**Последнее изменение раздела:** 2018-01-17_
 
 **Сводка.** О почтовых ящиках арбитража в Exchange 2013 и о том, как создавать их повторно.
 
@@ -85,18 +85,8 @@ _**Последнее изменение раздела:**2018-01-17_
 
 Воспользуйтесь приведенными ниже инструкциями, чтобы повторно создать почтовый ящик арбитража определенного типа.
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Все действия, описанные в приведенных ниже разделах, нужно выполнять в каталоге, в который вы извлекли данные установочного носителя Exchange.</td>
-</tr>
-</tbody>
-</table>
+> [!NOTE]  
+> Все действия, описанные в приведенных ниже разделах, нужно выполнять в каталоге, в который вы извлекли данные установочного носителя Exchange.
 
 
 ## Повторное создание федеративного почтового ящика Microsoft Exchange
@@ -175,16 +165,6 @@ _**Последнее изменение раздела:**2018-01-17_
 
 Просмотрите результаты выполнения команды, чтобы убедиться в том, что необходимый системный почтовый ящик был создан. Для этого вы можете использовать имя или отображаемое имя из таблицы выше.
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Bb124558.tip(EXCHG.150).gif" title="Совет" alt="Совет" />Совет.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.</td>
-</tr>
-</tbody>
-</table>
+> [!TIP]  
+> Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.
 

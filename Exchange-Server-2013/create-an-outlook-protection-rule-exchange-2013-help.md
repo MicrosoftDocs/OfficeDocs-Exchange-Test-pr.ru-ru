@@ -13,9 +13,9 @@ ms.translationtype: HT
 
  
 
-_**Применимо к:**Exchange Server 2013_
+_**Применимо к:** Exchange Server 2013_
 
-_**Последнее изменение раздела:**2016-12-09_
+_**Последнее изменение раздела:** 2016-12-09_
 
 Правила защиты Microsoft Outlook позволяют защитить сообщения с помощью управления правами на доступ к данным, применяя шаблон служб управления правами Active Directory (AD RMS) Active Directory перед отправкой сообщений в Outlook 2010.
 
@@ -35,18 +35,8 @@ _**Последнее изменение раздела:**2016-12-09_
 
   - Сочетания клавиш для процедур, описанных в этой статье, приведены в статье [Сочетания клавиш в Центре администрирования Exchange](keyboard-shortcuts-in-the-exchange-admin-center-exchange-online-protection-help.md).
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Bb124558.tip(EXCHG.150).gif" title="Совет" alt="Совет" />Совет.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.</td>
-</tr>
-</tbody>
-</table>
+> [!TIP]  
+> Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.
 
 
 ## Использование командной консоли для создания правила защиты Outlook
@@ -55,18 +45,8 @@ _**Последнее изменение раздела:**2016-12-09_
 
     New-OutlookProtectionRule -Name "Project Contoso" -SentTo "DL-ContosoPMs@contoso.com" -ApplyRightsProtectionTemplate "Business Critical"
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>При использовании предиката <code>SentTo</code> для правила защиты Outlook и указании группы рассылки, защита с помощью службы управления правами на доступ к данным применяется только для сообщений, отправленным группе рассылки в полях &quot;Кому&quot;, &quot;Копия&quot; или &quot;Скрытая копия&quot;. Защита с помощью управления правами на доступ к данным не применяется к сообщениям, адресованным отдельным членам группы рассылки.</td>
-</tr>
-</tbody>
-</table>
+> [!NOTE]  
+> При использовании предиката <code>SentTo</code> для правила защиты Outlook и указании группы рассылки, защита с помощью службы управления правами на доступ к данным применяется только для сообщений, отправленным группе рассылки в полях &quot;Кому&quot;, &quot;Копия&quot; или &quot;Скрытая копия&quot;. Защита с помощью управления правами на доступ к данным не применяется к сообщениям, адресованным отдельным членам группы рассылки.
 
 
 Кроме того, можно использовать предикаты `FromDepartment` и `SentToScope` для применения защиты с помощью управления правами на доступ к данным к сообщениям, отправляемым пользователями из заданного отдела или в заданную область (`InOrganization` для внутренних сообщений, `All` для всех получателей).
@@ -81,16 +61,6 @@ _**Последнее изменение раздела:**2016-12-09_
 
   - С помощью приложения Outlook 2010 создайте тестовое сообщение, отвечающее условиям правила, и убедитесь, что правило инициировано для клиента.
     
-    <table>
-    <thead>
-    <tr class="header">
-    <th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr class="odd">
-    <td>Для того, чтобы правило защиты Outlook стало доступным в приложении Outlook, может потребоваться некоторое время.</td>
-    </tr>
-    </tbody>
-    </table>
+    > [!NOTE]  
+    > Для того, чтобы правило защиты Outlook стало доступным в приложении Outlook, может потребоваться некоторое время.
 

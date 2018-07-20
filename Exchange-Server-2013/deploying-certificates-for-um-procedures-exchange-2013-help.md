@@ -13,9 +13,9 @@ ms.translationtype: MT
 
  
 
-_**Применимо к:**Exchange Server 2013, Exchange Server 2016_
+_**Применимо к:** Exchange Server 2013, Exchange Server 2016_
 
-_**Последнее изменение раздела:**2013-04-19_
+_**Последнее изменение раздела:** 2013-04-19_
 
 [Создание сертификатов для единой системы обмена сообщениями](create-certificates-for-um-exchange-2013-help.md)
 

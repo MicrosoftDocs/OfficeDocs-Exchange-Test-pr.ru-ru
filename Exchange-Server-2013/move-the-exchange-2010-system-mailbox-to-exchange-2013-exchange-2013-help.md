@@ -13,9 +13,9 @@ ms.translationtype: HT
 
  
 
-_**Применимо к:**Exchange Server 2013_
+_**Применимо к:** Exchange Server 2013_
 
-_**Последнее изменение раздела:**2015-04-07_
+_**Последнее изменение раздела:** 2015-04-07_
 
 В Exchange 2010 системный почтовый ящик Microsoft Exchange — почтовый ящик разрешения конфликтов, в котором хранятся данные всей организации (например, журналы аудита действий администратора, метаданные для обнаружения электронных данных, а также данные единой системы обмена сообщениями, такие как меню, абонентские группы и настраиваемые приветствия). Системный почтовый ящик Microsoft Exchange имеет имя **SystemMailbox{e0dc1c29-89c3-4034-b678-e6c29d823ed9}**; отображаемое имя — **Microsoft Exchange**.
 
@@ -47,18 +47,8 @@ _**Последнее изменение раздела:**2015-04-07_
 
   - Сочетания клавиш для процедур, описанных в этой статье, приведены в статье [Сочетания клавиш в Центре администрирования Exchange](keyboard-shortcuts-in-the-exchange-admin-center-exchange-online-protection-help.md).
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Bb124558.tip(EXCHG.150).gif" title="Совет" alt="Совет" />Совет.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>..</td>
-</tr>
-</tbody>
-</table>
+> [!TIP]  
+> Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>..
 
 
 ## Что необходимо сделать?

@@ -13,24 +13,14 @@ ms.translationtype: HT
 
  
 
-_**Применимо к:**Exchange Online, Exchange Server 2013_
+_**Применимо к:** Exchange Online, Exchange Server 2013_
 
-_**Последнее изменение раздела:**2012-11-14_
+_**Последнее изменение раздела:** 2012-11-14_
 
 Можно использовать командную консоль или EAC для включения или отключения Outlook Web App для почтового ящика пользователя. Когда Outlook Web App включен, пользователь может использовать Outlook Web App для отправки и получения электронной почты. Когда Outlook Web App выключено, почтовый ящик будет получать сообщения электронной почты, и пользователь может получить к нему доступ, чтобы отправлять и получать сообщения электронной почты, с помощью клиента MAPI, такого как Microsoft Outlook, или почтового клиента, работающего по протоколу POP или IMAP при условии, что в почтовом ящике включена поддержка доступа для таких клиентов.
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Поддержка Outlook Web App и MAPI, POP3 и IMAP4 включается по умолчанию при создании почтового ящика пользователя.</td>
-</tr>
-</tbody>
-</table>
+> [!NOTE]  
+> Поддержка Outlook Web App и MAPI, POP3 и IMAP4 включается по умолчанию при создании почтового ящика пользователя.
 
 
 Дополнительные задачи управления, связанные с управлением доступом почтовых клиентов к почтовому ящику, приведены в следующих разделах:
@@ -49,18 +39,8 @@ _**Последнее изменение раздела:**2012-11-14_
 
   - Сочетания клавиш для процедур, описанных в этой статье, приведены в статье [Сочетания клавиш в Центре администрирования Exchange](keyboard-shortcuts-in-the-exchange-admin-center-exchange-online-protection-help.md).
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Bb124558.tip(EXCHG.150).gif" title="Совет" alt="Совет" />Совет.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>..</td>
-</tr>
-</tbody>
-</table>
+> [!TIP]  
+> Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>..
 
 
 ## Что необходимо сделать?
@@ -83,18 +63,8 @@ _**Последнее изменение раздела:**2012-11-14_
 
 5.  Нажмите кнопку **Сохранить**, чтобы сохранить изменения.
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Можно включать и отключать Outlook Web App для нескольких почтовых ящиков, используя функцию массового редактирования в EAC. Дополнительные сведения о том, как это сделать, можно найти в разделе &quot;Массовое редактирование пользовательских почтовых ящиков&quot; в разделе <a href="manage-user-mailboxes-exchange-2013-help.md">Управление почтовыми ящиками пользователей</a>.</td>
-</tr>
-</tbody>
-</table>
+> [!NOTE]  
+> Можно включать и отключать Outlook Web App для нескольких почтовых ящиков, используя функцию массового редактирования в EAC. Дополнительные сведения о том, как это сделать, можно найти в разделе &quot;Массовое редактирование пользовательских почтовых ящиков&quot; в разделе <a href="manage-user-mailboxes-exchange-2013-help.md">Управление почтовыми ящиками пользователей</a>.
 
 
 ## Использование командной консоли для включения или отключения Outlook Web App

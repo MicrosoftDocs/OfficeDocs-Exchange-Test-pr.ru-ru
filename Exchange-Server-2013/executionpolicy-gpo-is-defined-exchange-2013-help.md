@@ -13,9 +13,9 @@ ms.translationtype: HT
 
  
 
-_**Применимо к:**Exchange Server_
+_**Применимо к:** Exchange Server_
 
-_**Последнее изменение раздела:**2016-12-15_
+_**Последнее изменение раздела:** 2016-12-15_
 
 Программа установки Microsoft Exchange Server 2013 не может продолжать работу, так как она обнаружила, что объект групповой политики (GPO) **ExecutionPolicy** определяет одну или обе приведенные ниже политики.
 
@@ -29,20 +29,10 @@ _**Последнее изменение раздела:**2016-12-15_
 
 Чтобы продолжить работу программы установки, необходимо временно удалить все определения политики **MachinePolicy** или **UserPolicy** в объекте групповой политики (GPO) **ExecutionPolicy**.
 
-Сведения об удалении определений политики **MachinePolicy** или **UserPolicy** в объекте групповой политики (GPO) **ExecutionPolicy** см. в [статье KB981474 базы знаний](https://go.microsoft.com/fwlink/?linkid=3052%26kbid=981474).
+Сведения об удалении определений политики **MachinePolicy** или **UserPolicy** в объекте групповой политики (GPO) **ExecutionPolicy** см. в [статье KB981474 базы знаний](https://go.microsoft.com/fwlink/?linkid=3052&kbid=981474).
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Хотя эта статья базы знаний написана для Exchange 2010, она также применима к накопительным и обычным пакетам обновления Exchange 2013.</td>
-</tr>
-</tbody>
-</table>
+> [!NOTE]  
+> Хотя эта статья базы знаний написана для Exchange 2010, она также применима к накопительным и обычным пакетам обновления Exchange 2013.
 
 
 Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: [Exchange Server](https://go.microsoft.com/fwlink/p/?linkid=60612), [Exchange Online](https://go.microsoft.com/fwlink/p/?linkid=267542) или [Exchange Online Protection](https://go.microsoft.com/fwlink/p/?linkid=285351).

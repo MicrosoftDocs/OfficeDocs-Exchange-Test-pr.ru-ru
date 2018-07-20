@@ -13,9 +13,9 @@ ms.translationtype: MT
 
  
 
-_**Применимо к:**Exchange Server_
+_**Применимо к:** Exchange Server_
 
-_**Последнее изменение раздела:**2016-12-15_
+_**Последнее изменение раздела:** 2016-12-15_
 
 Содержимое этой статьи не обновлялось для Microsoft Exchange Server 2013. Несмотря на отсутствие обновления, оно может быть применимо для Exchange 2013. Если вам все еще нужна помощь, ознакомьтесь с указанными ниже ресурсами сообщества.
 
@@ -46,18 +46,9 @@ _**Последнее изменение раздела:**2016-12-15_
 <li><p>Установите для параметра <strong>Тип запуска</strong> значение <strong>Отключено</strong>. При следующем запуске компьютера служба соединителей Active Directory не запустится.</p></li>
 <li><p>Нажмите кнопку <strong>Применить</strong>, а затем — кнопку <strong>ОК</strong>.</p></li>
 <li><p>Чтобы удалить службу соединителей Active Directorty, используйте мастер установки Active Directory на компакт-диске с Microsoft Exchange 2000 Server или Microsoft Exchange Server 2003. Откройте папку \ADC\I386 и дважды щелкните значок программы Setup.exe. Следуйте инструкциям, чтобы <strong>Удалить все</strong> компоненты службы соединителей Active Directory.</p>
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Dd876857.important(EXCHG.150).gif" title="Важно" alt="Важно" />Важно!</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Чтобы устранить проблему, необходимо выполнить шаг 6 и <strong>Удалить все</strong> компоненты соединителей Active Directory. Недостаточно просто отключить службу соединителей Active Directory.</td>
-</tr>
-</tbody>
-</table>
+
+> [!IMPORTANT]  
+> Чтобы устранить проблему, необходимо выполнить шаг 6 и <strong>Удалить все</strong> компоненты соединителей Active Directory. Недостаточно просто отключить службу соединителей Active Directory.
 
 </li>
 </ol></td>
@@ -68,9 +59,9 @@ _**Последнее изменение раздела:**2016-12-15_
 
 Дополнительные сведения о соединителях Active Directory см. в следующих статьях базы знаний Майкрософт:
 
-  - 325300, «веб-трансляция: введение в Active Directory Connector» ([https://go.microsoft.com/fwlink/?linkid=3052\&kbid=325300](https://go.microsoft.com/fwlink/?linkid=3052%26kbid=325300)).
+  - 325300, «веб-трансляция: введение в Active Directory Connector» ([https://go.microsoft.com/fwlink/?linkid=3052\&kbid=325300](https://go.microsoft.com/fwlink/?linkid=3052&kbid=325300)).
 
-  - 325221, «веб-трансляция: Microsoft расширенного соединителя Active Directory» ([https://go.microsoft.com/fwlink/?linkid=3052\&kbid=325221](https://go.microsoft.com/fwlink/?linkid=3052%26kbid=325221)).
+  - 325221, «веб-трансляция: Microsoft расширенного соединителя Active Directory» ([https://go.microsoft.com/fwlink/?linkid=3052\&kbid=325221](https://go.microsoft.com/fwlink/?linkid=3052&kbid=325221)).
 
-  - 312632, «Как установить и настроить соединитель Active Directory в Exchange 2000 Server» ([https://go.microsoft.com/fwlink/?linkid=3052\&kbid=312632](https://go.microsoft.com/fwlink/?linkid=3052%26kbid=312632)).
+  - 312632, «Как установить и настроить соединитель Active Directory в Exchange 2000 Server» ([https://go.microsoft.com/fwlink/?linkid=3052\&kbid=312632](https://go.microsoft.com/fwlink/?linkid=3052&kbid=312632)).
 

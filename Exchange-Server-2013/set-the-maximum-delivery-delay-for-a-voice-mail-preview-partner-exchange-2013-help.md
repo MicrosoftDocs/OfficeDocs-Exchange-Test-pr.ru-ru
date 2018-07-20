@@ -13,24 +13,14 @@ ms.translationtype: MT
 
  
 
-_**Применимо к:**Exchange Online, Exchange Server 2013, Exchange Server 2016_
+_**Применимо к:** Exchange Online, Exchange Server 2013, Exchange Server 2016_
 
-_**Последнее изменение раздела:**2013-02-13_
+_**Последнее изменение раздела:** 2013-02-13_
 
 Можно задать максимальную задержку доставки для партнера просмотра голосовой почты в политике почтовых ящиков единой системы обмена сообщениями. После установки максимальной задержки доставки этот параметр применяется к пользователям, включенным в единую систему обмена сообщениями и связанным с политикой почтовых ящиков этой системы.
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Для задания максимальной задержки доставки для партнера просмотра голосовой почты необходимо использовать командную консоль.</td>
-</tr>
-</tbody>
-</table>
+> [!NOTE]  
+> Для задания максимальной задержки доставки для партнера просмотра голосовой почты необходимо использовать командную консоль.
 
 
 Для получения дополнительных сведений о партнерской программе прослушивания голосовой почты обратитесь к разделу [Помощник просмотра голосовой почты](voice-mail-preview-advisor-exchange-2013-help.md).
@@ -49,18 +39,8 @@ _**Последнее изменение раздела:**2013-02-13_
 
   - Сочетания клавиш для процедур, описанных в этой статье, приведены в статье [Сочетания клавиш в Центре администрирования Exchange](keyboard-shortcuts-in-the-exchange-admin-center-exchange-online-protection-help.md).
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Bb124558.tip(EXCHG.150).gif" title="Совет" alt="Совет" />Совет.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>..</td>
-</tr>
-</tbody>
-</table>
+> [!TIP]  
+> Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>..
 
 
 ## Задание максимальной задержки доставки для партнера просмотра голосовой почты с помощью командной консоли

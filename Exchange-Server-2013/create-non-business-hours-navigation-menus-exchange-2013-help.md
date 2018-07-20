@@ -13,9 +13,9 @@ ms.translationtype: MT
 
  
 
-_**Применимо к:**Exchange Online, Exchange Server 2013, Exchange Server 2016_
+_**Применимо к:** Exchange Online, Exchange Server 2013, Exchange Server 2016_
 
-_**Последнее изменение раздела:**2012-11-05_
+_**Последнее изменение раздела:** 2012-11-05_
 
 Для автосекретаря единой системы обмена сообщениями можно включить сопоставление клавиш в нерабочие часы. После создания автосекретаря единой системы обмена сообщениями в качестве приглашения главного меню для нерабочих часов, которое воспроизводится после приветствия для нерабочих часов, используется приглашение системы по умолчанию. По умолчанию используется следующее приглашение главного меню для нерабочих часов: "Вас приветствует автосекретарь Майкрософт Exchange для нерабочих часов." Так как по умолчанию сопоставления клавиш не определены, звонящие не могут использовать параметры меню и воспроизводится только приглашение главного меню по умолчанию для нерабочих часов.
 
@@ -35,18 +35,8 @@ _**Последнее изменение раздела:**2012-11-05_
 
   - Сочетания клавиш для процедур, описанных в этой статье, приведены в статье [Сочетания клавиш в Центре администрирования Exchange](keyboard-shortcuts-in-the-exchange-admin-center-exchange-online-protection-help.md).
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Bb124558.tip(EXCHG.150).gif" title="Совет" alt="Совет" />Совет.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>..</td>
-</tr>
-</tbody>
-</table>
+> [!TIP]  
+> Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>..
 
 
 ## Что необходимо сделать?

@@ -13,9 +13,9 @@ ms.translationtype: HT
 
  
 
-_**Применимо к:**Exchange Server 2013_
+_**Применимо к:** Exchange Server 2013_
 
-_**Последнее изменение раздела:**2013-02-18_
+_**Последнее изменение раздела:** 2013-02-18_
 
 При ведении журнала подключения записываются данные об операциях подключения для доставки исходящих сообщений из службы транспорта на сервер Exchange. При ведении журнала подключения записываются данные об источнике, назначении, количестве переданных сообщений и байт, а также данные об ошибках подключений.
 
@@ -29,18 +29,8 @@ _**Последнее изменение раздела:**2013-02-18_
 
   - Сочетания клавиш для процедур, описанных в этой статье, приведены в статье [Сочетания клавиш в Центре администрирования Exchange](keyboard-shortcuts-in-the-exchange-admin-center-exchange-online-protection-help.md).
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Bb124558.tip(EXCHG.150).gif" title="Совет" alt="Совет" />Совет.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.</td>
-</tr>
-</tbody>
-</table>
+> [!TIP]  
+> Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.
 
 
 ## Что необходимо сделать?
@@ -69,41 +59,24 @@ _**Последнее изменение раздела:**2013-02-18_
 
 В этом примере показана установка следующих параметров журнала подключения в службе транспорта на сервере почтовых ящиков с именем Mailbox01.
 
-  -  
-    Задает местоположение файлов журнала подключения — D:\\Hub Connectivity Log. Обратите внимание, что если папка не существует, она будет создана.
+  -  Задает местоположение файлов журнала подключения — D:\\Hub Connectivity Log. Обратите внимание, что если папка не существует, она будет создана.
 
-  -  
-    Задает максимальный размер файла журнала подключения — 20 МБ.
+  -  Задает максимальный размер файла журнала подключения — 20 МБ.
 
-  -  
-    Задает максимальный размер каталога журнала подключения — 1,5 ГБ.
+  -  Задает максимальный размер каталога журнала подключения — 1,5 ГБ.
 
-  -  
-    Задает максимальный срок хранения файла журнала подключения — 45 дней.
+  -  Задает максимальный срок хранения файла журнала подключения — 45 дней.
 
 <!-- end list -->
 
     Set-TransportService Mailbox01 -ConnectivityLogPath "D:\Hub Connectivity Log" -ConnectivityLogMaxFileSize 20MB -ConnectivityLogMaxDirectorySize 1.5GB -ConnectivityLogMaxAge 45.00:00:00
 
-<table>
-<colgroup>
-<col style="width: 100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><ul>
+> [!NOTE]  
+> <ul>
 <li><p>Чтобы настроить параметры журнала подключения в службе транспорта почтовых ящиков на сервере почтовых ящиков, воспользуйтесь командлетом <strong>Set-MailboxTransportService</strong>. Чтобы настроить параметры журнала подключения во внешней службе транспорта на сервере клиентского доступа, воспользуйтесь командлетом <strong>Set-FrontEndTransportService</strong>.</p></li>
 <li><p>Установка для параметра <em>ConnectivityLogPath</em> значения <code>$null</code> отключает ведение журнала подключения. Однако если параметру <em>ConnectivityLogEnabled</em> задано значение <code>$true</code>, возникают ошибки журнала событий.</p></li>
 <li><p>Если для параметра <em>ConnectivityLogMaxAge</em> задано значение <code>00:00:00</code>, автоматическое удаление файлов журнала подключения по истечении срока их хранения не выполняется.</p></li>
-</ul></td>
-</tr>
-</tbody>
-</table>
+</ul>
 
 
 ## Как проверить, что все получилось?

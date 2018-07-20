@@ -13,9 +13,9 @@ ms.translationtype: MT
 
  
 
-_**Применимо к:**Exchange Server 2010 Service Pack 2 (SP2), Exchange Server 2013, Exchange Server 2016_
+_**Применимо к:** Exchange Server 2010 Service Pack 2 (SP2), Exchange Server 2013, Exchange Server 2016_
 
-_**Последнее изменение раздела:**2016-12-09_
+_**Последнее изменение раздела:** 2016-12-09_
 
 Средство устранения неполадок единой системы обмена сообщениями Microsoft Exchange 2010 — командлет командной консоли Exchange, **Test-ExchangeUMCallFlow**. С помощью этого командлета вы можете диагностировать ошибки конфигурации, связанные со сценариями ответа на вызовы, и проверки правильности работы голосовой почты при локальном и гибридном развертывании единой системы обмена сообщениями в Microsoft Exchange Server 2010 с пакетом обновления 1 (SP1) или более поздней версии. Вы также можете использовать этот командлет при развертывании Microsoft Lync Server 2010 или более поздней версии для Microsoft Office, а также при развертывании единой системы обмена сообщениями с использованием VoIP-шлюзов, IP-УАТС или пограничных контроллеров сеансов (SBC).
 
@@ -39,34 +39,14 @@ _**Последнее изменение раздела:**2016-12-09_
 
   - Установите средство устранения неполадок единой системы обмена сообщениями. Дополнительные сведения см. в разделе [Установка средства устранения неполадок единой системы обмена сообщениями Exchange](install-the-exchange-um-troubleshooting-tool-exchange-2013-help.md).
     
-    <table>
-    <thead>
-    <tr class="header">
-    <th><img src="images/Dd876857.important(EXCHG.150).gif" title="Важно" alt="Важно" />Важно!</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr class="odd">
-    <td>Если будет использоваться единой системы обмена СООБЩЕНИЯМИ средство устранения неполадок в <code>SIPClient</code> режиме, существует несколько Office Communications Server 2007 R2 или Microsoft Lync Server требования и предварительные требования. Дополнительные сведения можно <a href="https://go.microsoft.com/fwlink/p/?linkid=311961">Контрольный список: развертывание Office Communications Server 2007 R2 и единой системы обмена сообщениями Exchange 2010</a> или <a href="checklist-integrate-exchange-2013-um-with-lync-server-exchange-2013-help.md">Контрольный список: Интеграция единой системы обмена сообщениями Exchange 2013 с сервером Lync</a>.</td>
-    </tr>
-    </tbody>
-    </table>
+    > [!IMPORTANT]  
+    > Если будет использоваться единой системы обмена СООБЩЕНИЯМИ средство устранения неполадок в <code>SIPClient</code> режиме, существует несколько Office Communications Server 2007 R2 или Microsoft Lync Server требования и предварительные требования. Дополнительные сведения можно <a href="https://go.microsoft.com/fwlink/p/?linkid=311961">Контрольный список: развертывание Office Communications Server 2007 R2 и единой системы обмена сообщениями Exchange 2010</a> или <a href="checklist-integrate-exchange-2013-um-with-lync-server-exchange-2013-help.md">Контрольный список: Интеграция единой системы обмена сообщениями Exchange 2013 с сервером Lync</a>.
 
 
   - Сочетания клавиш для процедур, описанных в этой статье, приведены в статье [Сочетания клавиш в Центре администрирования Exchange](keyboard-shortcuts-in-the-exchange-admin-center-exchange-online-protection-help.md).
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Bb124558.tip(EXCHG.150).gif" title="Совет" alt="Совет" />Совет.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>..</td>
-</tr>
-</tbody>
-</table>
+> [!TIP]  
+> Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>..
 
 
 ## Установка учетных данных для использования в средстве устранения неполадок единой системы обмена сообщениями

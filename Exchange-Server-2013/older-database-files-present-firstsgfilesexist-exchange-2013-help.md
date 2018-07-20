@@ -13,9 +13,9 @@ ms.translationtype: HT
 
  
 
-_**Применимо к:**Exchange Server_
+_**Применимо к:** Exchange Server_
 
-_**Последнее изменение раздела:**2012-06-05_
+_**Последнее изменение раздела:** 2012-06-05_
 
 Содержимое этой статьи не обновлялось для Microsoft Exchange Server 2013. Несмотря на отсутствие обновления, оно может быть применимо для Exchange 2013. Если вам все еще нужна помощь, ознакомьтесь с указанными ниже ресурсами сообщества.
 
@@ -31,19 +31,9 @@ To resolve this issue, remove all existing files from target installation paths 
 
 1.  In My Computer or Windows Explorer, locate the target install path.
     
-    <table>
-    <thead>
-    <tr class="header">
-    <th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr class="odd">
-    <td>By default, the database files are located in:<br />
-    &lt;systemDrive&gt;:\Program Files\Microsoft\Exchange Server\Mailbox\First Storage Group.</td>
-    </tr>
-    </tbody>
-    </table>
+    > [!NOTE]  
+    > By default, the database files are located in:<br />
+    &lt;systemDrive&gt;:\Program Files\Microsoft\Exchange Server\Mailbox\First Storage Group.
 
 
 2.  Right-click the files to be removed, and then select **Delete**.

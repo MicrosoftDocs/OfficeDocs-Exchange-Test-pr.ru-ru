@@ -13,9 +13,9 @@ ms.translationtype: HT
 
  
 
-_**Применимо к:**Exchange Server 2013_
+_**Применимо к:** Exchange Server 2013_
 
-_**Последнее изменение раздела:**2016-12-09_
+_**Последнее изменение раздела:** 2016-12-09_
 
 Microsoft Exchange Server 2013 использует Active Directory для хранения и совместного использования данных каталога с Windows. Лес Active Directory для Exchange 2013 аналогичен Exchange Server 2010 кроме нескольких аспектов, рассмотренных ниже.
 

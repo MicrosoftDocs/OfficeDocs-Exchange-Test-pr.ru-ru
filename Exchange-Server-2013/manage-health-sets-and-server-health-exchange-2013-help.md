@@ -13,9 +13,9 @@ ms.translationtype: HT
 
  
 
-_**Применимо к:**Exchange Online, Exchange Server 2013 SP1_
+_**Применимо к:** Exchange Online, Exchange Server 2013 SP1_
 
-_**Последнее изменение раздела:**2013-12-02_
+_**Последнее изменение раздела:** 2013-12-02_
 
 Вы можете использовать встроенные командлеты отчетов о работоспособности для выполнения различных задач, связанных с управляемой доступностью, например:
 
@@ -33,18 +33,8 @@ _**Последнее изменение раздела:**2013-12-02_
 
   - Сочетания клавиш для процедур, описанных в этой статье, приведены в статье [Сочетания клавиш в Центре администрирования Exchange](keyboard-shortcuts-in-the-exchange-admin-center-exchange-online-protection-help.md).
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Bb124558.tip(EXCHG.150).gif" title="Совет" alt="Совет" />Совет.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.</td>
-</tr>
-</tbody>
-</table>
+> [!TIP]  
+> Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.
 
 
 ## Что необходимо сделать?
@@ -57,17 +47,25 @@ _**Последнее изменение раздела:**2013-12-02_
 
 Выполните одну из следующих команд для просмотра настроек работоспособности и сведений об исправности на сервере Exchange 2013.
 
+```
     Get-HealthReport -Identity <ServerName>
-
+```
+```
     Get-ServerHealth -Identity <ServerName> | Format-Table Server,CurrentHealthSetState,Name,HealthSetName,AlertValue,HealthGroupName -Auto
+```
 
 Выполните одну из следующих команд для просмотра настроек работоспособности на сервере или в группе доступности базы данных Exchange 2013.
 
+```
     Get-ExchangeServer | Get-HealthReport -RollupGroup
 
+```
+```
     Get-ExchangeServer | Get-HealthReport -RollupGroup -HealthSetName <HealthSet>
-
+```
+```
     (Get-DatabaseAvailabiltyGroup <DAGName>).Servers | Get-HealthReport -RollupGroup
+```
 
 ## Просмотр списка настроек работоспособности
 

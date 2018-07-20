@@ -13,9 +13,9 @@ ms.translationtype: HT
 
  
 
-_**Применимо к:**Exchange Server 2013_
+_**Применимо к:** Exchange Server 2013_
 
-_**Последнее изменение раздела:**2014-02-15_
+_**Последнее изменение раздела:** 2014-02-15_
 
 Политики общего доступа дают отдельным пользователям в организации Exchange возможность совместного использования данных календаря о доступности с другими федеративными организациями Exchange, организациями Exchange, не входящим в федерацию, и индивидуальными пользователям из Интернета. В ходе обычной работы, возможно, потребуется изменить некоторые свойства политики общего доступа, такие как правила общего доступа, уровень доступа к данным о занятости, временно отключить политику общего доступа или полностью удалить политику общего доступа.
 
@@ -31,18 +31,8 @@ _**Последнее изменение раздела:**2014-02-15_
 
   - Сочетания клавиш для процедур, описанных в этой статье, приведены в статье [Сочетания клавиш в Центре администрирования Exchange](keyboard-shortcuts-in-the-exchange-admin-center-exchange-online-protection-help.md).
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Bb124558.tip(EXCHG.150).gif" title="Совет" alt="Совет" />Совет.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.</td>
-</tr>
-</tbody>
-</table>
+> [!TIP]  
+> Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.
 
 
 ## Что необходимо сделать?
@@ -79,18 +69,8 @@ _**Последнее изменение раздела:**2014-02-15_
 
 ## Использование EAC для удаления политики общего доступа
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Dd876857.important(EXCHG.150).gif" title="Важно" alt="Важно" />Важно!</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Перед удалением политики общего доступа ее нужно удалить из всех почтовых ящиков пользователей.</td>
-</tr>
-</tbody>
-</table>
+> [!IMPORTANT]  
+> Перед удалением политики общего доступа ее нужно удалить из всех почтовых ящиков пользователей.
 
 
 1.  Перейдите к разделу **Организация** \> **Общий доступ**.
@@ -119,9 +99,12 @@ _**Последнее изменение раздела:**2014-02-15_
 
   - В первом примере удаляется политика общего доступа Contoso. Во втором примере удаляется политика общего доступа Contoso, а подтверждение удаления политики не выводится.
     
+```
         Remove-SharingPolicy -Identity Contoso
-    
+```
+```    
         Remove-SharingPolicy -Identity Contoso -Confirm
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделах [Set-SharingPolicy](https://technet.microsoft.com/ru-ru/library/dd297931\(v=exchg.150\)) и [Remove-SharingPolicy](https://technet.microsoft.com/ru-ru/library/dd351071\(v=exchg.150\)).
 

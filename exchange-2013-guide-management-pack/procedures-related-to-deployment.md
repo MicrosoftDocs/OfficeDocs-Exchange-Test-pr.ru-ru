@@ -13,7 +13,7 @@ ms.translationtype: HT
 
  
 
-_**Дата изменения раздела:** 2013-04-17_
+_**Дата изменения раздела:**  2013-04-17_
 
 В этом разделе описаны процедуры, которые можно использовать в справочных целях при работе с пакетом управления Exchange Server 2013 Management Pack. Сведения о процедурах после развертывания см. в разделе [Procedures related to post-deployment operation](procedures-related-to-post-deployment-operation.md).
 

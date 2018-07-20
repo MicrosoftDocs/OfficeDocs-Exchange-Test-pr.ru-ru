@@ -13,7 +13,7 @@ ms.translationtype: HT
 
  
 
-_**Дата изменения раздела:** 2013-04-09_
+_**Дата изменения раздела:**  2013-04-09_
 
 В разделе [Приступая к работе с пакетом управления Exchange Server 2013](getting-started-with-exchange-server-2013-management-pack.md) приведен обзор панели мониторинга пакета управления. В этом разделе рассказывается, как устранять неполадки и решать проблемы с помощью пакета управления. Этот процесс лучше всего проиллюстрирован в примере. Рассмотрим следующий сценарий.
 
@@ -27,39 +27,53 @@ _**Дата изменения раздела:** 2013-04-09_
 
 С помощью ссылки на внешние ресурсы знаний Павел переходит в раздел [Устранение неполадок в наборе для контроля работоспособности OWA.Proxy](https://technet.microsoft.com/ru-ru/library/jj737712\(v=exchg.150\)). В этой статье Павел видит, что прежде всего необходимо убедиться, что проблема не исчезла. Чтобы проверить текущее состояние набора для контроля работоспособности OWA.Proxy он следует указаниям и выполняет следующую команду в командной консоли.
 
+```Powershell
     Get-ServerHealth Server1.contoso.com | ?{$_.HealthSetName -eq "OWA.Proxy"}
+```
 
 Выполнив эту команду, он получает следующие сведения.
 
+```Powershell
     Server          State           Name                 TargetResource       HealthSetName   AlertValue ServerComp
                                                                                                          onent
     ------          -----           ----                 --------------       -------------   ---------- ----------
     Server1         Online          OWAProxyTestMonitor  MSExchangeOWAAppPool OWA.Proxy       Unhealthy  OwaProxy
     Server1         Online          OWAProxyTestMonitor  MSExchangeOWACale... OWA.Proxy       Healthy    OwaProxy
+```
 
 Павел видит, что причиной проблемы стал пул OWA Application. На следующем шаге необходимо перезапустить связанный зонд для монитора, находящегося в неработоспособном состоянии. С помощью таблицы в разделе "Устранение неполадок в наборе для контроля работоспособности OWA.Proxy" он определяет, что необходимо перезапустить зонд OWAProxyTestProbe. Он выполняет следующую команду.
 
+```Powershell
     Invoke-MonitoringProbe OWA.Proxy\OWAProxyTestProbe -Server Server1.contoso.com | Format-List
+```
 
 Он ищет значение ResultType в выходных данных и видит, что произошел сбой зонда.
 
+```Powershell
     ResultType : Failed
+```
 
 Павел переходит в раздел "Действия восстановления для OWAProxyTestMonitor" этой статьи. Он подключается к серверу Server1 с помощью диспетчера IIS, чтобы проверить, работает ли MSExchangeOWAAppPool на сервере IIS. Поскольку он обнаруживает, что MSExchangeOWAAppPool работает, то на следующем шаге ему необходимо перезапустить MSExchangeOWAAppPool.
 
+```Powershell
     C:\Windows\System32\Inetsrv\Appcmd recycle APPPOOL MSExchangeOWAAppPool
+```
 
 Убедившись в том, что MSExchangeOWAAppPool успешно перезапущен, Павел проверяет, не исчезла ли проблема, перезапустив зонд с помощью командлета Invoke-MonitoringProbe, и в этот раз видит, что теперь результат успешный. Затем, чтобы убедиться, что набор для контроля работоспособности снова имеет состояние **Работоспособен**, он выполняет следующую команду.
 
+```Powershell
     Get-ServerHealth Server1.contoso.com | ?{$_.HealthSetName -eq "OWA.Proxy"}
+```
 
 В этот раз он видит, что проблема решена.
 
+```Powershell
     Server          State           Name                 TargetResource       HealthSetName   AlertValue ServerComp
                                                                                                          onent
     ------          -----           ----                 --------------       -------------   ---------- ----------
     Server1         Online          OWAProxyTestMonitor  MSExchangeOWAAppPool OWA.Proxy       Healthy    OwaProxy
     Server1         Online          OWAProxyTestMonitor  MSExchangeOWACale... OWA.Proxy       Healthy    OwaProxy
+```
 
 Он возвращается в консоль SCOM и проверяет, что проблема решена.
 

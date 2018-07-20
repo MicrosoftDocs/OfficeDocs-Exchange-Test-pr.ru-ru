@@ -13,9 +13,9 @@ ms.translationtype: MT
 
  
 
-_**Применимо к:**Exchange Online, Exchange Server 2013, Exchange Server 2016_
+_**Применимо к:** Exchange Online, Exchange Server 2013, Exchange Server 2016_
 
-_**Последнее изменение раздела:**2012-11-14_
+_**Последнее изменение раздела:** 2012-11-14_
 
 Когда вы включаете для пользователя единую систему обмена сообщениями и связываете его с абонентской группой универсального кода ресурса SIP, создаются два прокси-адреса единой системы обмена сообщениями Microsoft Exchange. Один адрес содержит добавочный номер пользователя, а другой — SIP-адрес для него. Добавочный номер используется, когда пользователь выполняет вызов по номеру голосового доступа к Outlook.
 
@@ -45,18 +45,8 @@ _**Последнее изменение раздела:**2012-11-14_
 
   - Сочетания клавиш для процедур, описанных в этой статье, приведены в статье [Сочетания клавиш в Центре администрирования Exchange](keyboard-shortcuts-in-the-exchange-admin-center-exchange-online-protection-help.md).
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Bb124558.tip(EXCHG.150).gif" title="Совет" alt="Совет" />Совет.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>..</td>
-</tr>
-</tbody>
-</table>
+> [!TIP]  
+> Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>..
 
 
 ## Что необходимо сделать?
@@ -75,18 +65,8 @@ _**Последнее изменение раздела:**2012-11-14_
 
 В этом примере удаляется tsmith@contoso.com адрес SIP из почтового ящика Tony Smith, пользователя с включенной поддержкой единой системы обмена СООБЩЕНИЯМИ.
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Прежде чем удалять SIP-адрес, с помощью командной консоли Exchange, необходимо определить положение EUM адрес прокси-сервера, который требуется изменить. Чтобы определить положение, используйте команду <strong>$mbx.EmailAddresses</strong> . Первый адрес прокси-сервера EUM в списке будет иметь значение 0.</td>
-</tr>
-</tbody>
-</table>
+> [!NOTE]  
+> Прежде чем удалять SIP-адрес, с помощью командной консоли Exchange, необходимо определить положение EUM адрес прокси-сервера, который требуется изменить. Чтобы определить положение, используйте команду <strong>$mbx.EmailAddresses</strong> . Первый адрес прокси-сервера EUM в списке будет иметь значение 0.
 
 
     $mbx = Get-Mailbox tony.smith

@@ -13,9 +13,9 @@ ms.translationtype: HT
 
  
 
-_**Применимо к:**Exchange Server 2013, Exchange Server 2016_
+_**Применимо к:** Exchange Server 2013, Exchange Server 2016_
 
-_**Последнее изменение раздела:**2015-07-21_
+_**Последнее изменение раздела:** 2015-07-21_
 
 Вам может потребоваться переместить почтовый ящик общедоступных папок в другую базу данных почтовых ящиков для балансировки нагрузки или перемещения ресурсов ближе к их географическому расположению. Как и при перемещении обычного почтового ящика, для перемещения почтового ящика общедоступных папок нужно использовать командлеты **MoveRequest**. Для получения дополнительных сведений о перемещении почтовых ящиков см. раздел [Перемещение почтовых ящиков в Exchange 2013](mailbox-moves-in-exchange-2013-exchange-2013-help.md).
 
@@ -33,18 +33,8 @@ _**Последнее изменение раздела:**2015-07-21_
 
   - Сочетания клавиш для процедур, описанных в этой статье, приведены в статье [Сочетания клавиш в Центре администрирования Exchange](keyboard-shortcuts-in-the-exchange-admin-center-exchange-online-protection-help.md).
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Bb124558.tip(EXCHG.150).gif" title="Совет" alt="Совет" />Совет.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.</td>
-</tr>
-</tbody>
-</table>
+> [!TIP]  
+> Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.
 
 
 ## Что необходимо сделать?

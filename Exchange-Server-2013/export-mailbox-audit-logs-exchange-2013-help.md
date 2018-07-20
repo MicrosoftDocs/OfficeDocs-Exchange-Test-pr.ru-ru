@@ -13,9 +13,9 @@ ms.translationtype: HT
 
  
 
-_**Применимо к:**Exchange Online, Exchange Server 2013_
+_**Применимо к:** Exchange Online, Exchange Server 2013_
 
-_**Последнее изменение раздела:**2015-04-07_
+_**Последнее изменение раздела:** 2015-04-07_
 
 Если для почтового ящика включен аудит почтовых ящиков, Microsoft Exchange ведет запись действий над данными в почтовом ящике со стороны пользователей, не являющихся владельцами. Записи заносятся в *журнал аудита почтового ящика*. В каждой записи указывается, кто, когда и как обращался к почтовому ящику, был ли это пользователь, отличный от владельца, какие действия он выполнял и были ли они успешными. По умолчанию записи в журнале аудита почтового ящика хранятся в течение 90 дней. По журналу аудита почтовых ящиков можно определить, обращался ли к почтовому ящику пользователь, не являющийся его владельцем.
 
@@ -43,18 +43,8 @@ _**Последнее изменение раздела:**2015-04-07_
 
   - Сочетания клавиш для процедур, описанных в этой статье, приведены в статье [Сочетания клавиш в Центре администрирования Exchange](keyboard-shortcuts-in-the-exchange-admin-center-exchange-online-protection-help.md).
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Bb124558.tip(EXCHG.150).gif" title="Совет" alt="Совет" />Совет.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>..</td>
-</tr>
-</tbody>
-</table>
+> [!TIP]  
+> Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>..
 
 
 ## Настройка ведения журнала аудита почтовых ящиков
@@ -73,9 +63,12 @@ _**Последнее изменение раздела:**2015-04-07_
 
 Чтобы включить ведение журнала аудита для всех почтовых ящиков пользователей в организации, выполните следующие команды:
 
+```
     $UserMailboxes = Get-mailbox -Filter {(RecipientTypeDetails -eq 'UserMailbox')}
-
+```
+```
     $UserMailboxes | ForEach {Set-Mailbox $_.Identity -AuditEnabled $true}
+```
 
 ## Действие 2. Включение XML-вложений в Outlook Web App
 

@@ -13,9 +13,9 @@ ms.translationtype: MT
 
  
 
-_**Применимо к:**Exchange Online, Exchange Server 2013, Exchange Server 2016_
+_**Применимо к:** Exchange Online, Exchange Server 2013, Exchange Server 2016_
 
-_**Последнее изменение раздела:**2012-11-05_
+_**Последнее изменение раздела:** 2012-11-05_
 
 Вам может потребоваться переместить пользователя с включенной поддержкой единой системы обмена сообщениями в другую абонентскую группу этой системы или изменить абонентскую группу, связанную с пользователем. Например, вам может потребоваться переместить пользователя единой системы обмена сообщениями из абонентской группы "Добавочный номер" в группу "Универсальный код ресурса (URI) SIP".
 
@@ -37,36 +37,16 @@ _**Последнее изменение раздела:**2012-11-05_
 
   - Сочетания клавиш для процедур, описанных в этой статье, приведены в статье [Сочетания клавиш в Центре администрирования Exchange](keyboard-shortcuts-in-the-exchange-admin-center-exchange-online-protection-help.md).
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Bb124558.tip(EXCHG.150).gif" title="Совет" alt="Совет" />Совет.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>..</td>
-</tr>
-</tbody>
-</table>
+> [!TIP]  
+> Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>..
 
 
 ## Как это сделать?
 
 ## Действие 1. Создайте абонентскую группу единой системы обмена сообщениями
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Dd876857.important(EXCHG.150).gif" title="Важно" alt="Важно" />Важно!</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>При переносе пользователей единой системы обмена сообщениями в среду Microsoft Office Communications Server 2007 R2 или Microsoft Lync Server сначала нужно создать абонентскую группу универсального кода ресурса SIP.</td>
-</tr>
-</tbody>
-</table>
+> [!IMPORTANT]  
+> При переносе пользователей единой системы обмена сообщениями в среду Microsoft Office Communications Server 2007 R2 или Microsoft Lync Server сначала нужно создать абонентскую группу универсального кода ресурса SIP.
 
 
 Подробные инструкции см. в разделе [Создание абонентской группы единой системы обмена сообщениями](create-a-um-dial-plan-exchange-2013-help.md).
@@ -77,18 +57,8 @@ _**Последнее изменение раздела:**2012-11-05_
 
 ## Действие 3. Включите для пользователя поддержку единой системы обмена сообщениями в новой абонентской группе
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Dd876857.important(EXCHG.150).gif" title="Важно" alt="Важно" />Важно!</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>При перемещении пользователей в среду с Office Communications Server 2007 R2 или Lync Server во время включения их в единую систему обмена сообщениями нужно также указать код ресурса SIP для пользователя. Также необходимо выбрать политику почтовых ящиков единой системы обмена сообщениями, связанную с абонентской группой протокола SIP.</td>
-</tr>
-</tbody>
-</table>
+> [!IMPORTANT]  
+> При перемещении пользователей в среду с Office Communications Server 2007 R2 или Lync Server во время включения их в единую систему обмена сообщениями нужно также указать код ресурса SIP для пользователя. Также необходимо выбрать политику почтовых ящиков единой системы обмена сообщениями, связанную с абонентской группой протокола SIP.
 
 
 Подробные инструкции см. в разделе [Включение для пользователя поддержки голосовой почты](enable-a-user-for-voice-mail-exchange-2013-help.md).

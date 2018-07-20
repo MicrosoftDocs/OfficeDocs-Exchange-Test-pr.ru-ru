@@ -13,9 +13,9 @@ ms.translationtype: HT
 
  
 
-_**Применимо к:**Exchange Online, Exchange Server 2013_
+_**Применимо к:** Exchange Online, Exchange Server 2013_
 
-_**Последнее изменение раздела:**2012-11-29_
+_**Последнее изменение раздела:** 2012-11-29_
 
 Можно использовать EAC или консоль для ограничения доставки сообщений отдельным получателям. Ограничения доставки сообщений могут быть полезны для управления тем, кто может отправлять сообщения пользователям организации. Например, можно настроить почтовый ящик на получение или отклонение сообщений, отправленных определенными пользователями, или прием сообщений только от пользователей в организации Exchange.
 
@@ -41,18 +41,8 @@ _**Последнее изменение раздела:**2012-11-29_
 
   - Сочетания клавиш для процедур, описанных в этой статье, приведены в статье [Сочетания клавиш в Центре администрирования Exchange](keyboard-shortcuts-in-the-exchange-admin-center-exchange-online-protection-help.md).
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Bb124558.tip(EXCHG.150).gif" title="Совет" alt="Совет" />Совет.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>..</td>
-</tr>
-</tbody>
-</table>
+> [!TIP]  
+> Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>..
 
 
 ## Что необходимо сделать?
@@ -91,18 +81,8 @@ _**Последнее изменение раздела:**2012-11-29_
 
     Set-Mailbox -Identity "Robin Wood" -AcceptMessagesOnlyFrom "Lori Penor","Jeff Phillips" -AcceptMessagesOnlyFromDLMembers "Legal Team 1"
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>При настройке почтового ящика для приема сообщений только от отдельных отправителей необходимо использовать параметр <em>AcceptMessagesOnlyFrom</em>. При настройке почтового ящика для приема сообщений только от тех отправителей, которые являются членами определенной группы рассылки, необходимо использовать параметр <em>AcceptMessagesOnlyFromDLMembers</em>.</td>
-</tr>
-</tbody>
-</table>
+> [!NOTE]  
+> При настройке почтового ящика для приема сообщений только от отдельных отправителей необходимо использовать параметр <em>AcceptMessagesOnlyFrom</em>. При настройке почтового ящика для приема сообщений только от тех отправителей, которые являются членами определенной группы рассылки, необходимо использовать параметр <em>AcceptMessagesOnlyFromDLMembers</em>.
 
 
 Этот пример добавляет пользователя с именем David Pelton в список пользователей, чьи сообщения будут приниматься ящиком Robin Wood.
@@ -121,18 +101,8 @@ _**Последнее изменение раздела:**2012-11-29_
 
     Set-Mailbox -Identity "Robin Wood" -RejectMessagesFromDLMembers @{add="Legal Team 3"}
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>При настройке почтового ящика для отклонения сообщений только от отдельных отправителей необходимо использовать параметр <em>RejectMessagesFrom</em>. При настройке почтового ящика для отклонения сообщений только от тех отправителей, которые являются членами определенной группы рассылки, необходимо использовать параметр <em>RejectMessagesFromDLMembers</em>.</td>
-</tr>
-</tbody>
-</table>
+> [!NOTE]  
+> При настройке почтового ящика для отклонения сообщений только от отдельных отправителей необходимо использовать параметр <em>RejectMessagesFrom</em>. При настройке почтового ящика для отклонения сообщений только от тех отправителей, которые являются членами определенной группы рассылки, необходимо использовать параметр <em>RejectMessagesFromDLMembers</em>.
 
 
 Подробный синтаксис и сведения о настройке ограничений доставки для различных типов получателей приведены в следующих разделах:

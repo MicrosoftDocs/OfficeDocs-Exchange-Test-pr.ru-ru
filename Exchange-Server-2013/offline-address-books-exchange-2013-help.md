@@ -13,26 +13,16 @@ ms.translationtype: HT
 
  
 
-_**Применимо к:**Exchange Server 2010, Exchange Server 2013_
+_**Применимо к:** Exchange Server 2010, Exchange Server 2013_
 
-_**Последнее изменение раздела:**2014-11-16_
+_**Последнее изменение раздела:** 2014-11-16_
 
 Автономная адресная книга (OAB) — это скачанная копия коллекции списков адресов, с помощью которой пользователь Microsoft Outlook может работать с адресной книгой при отсутствии соединения с сервером. Microsoft Exchange создает и сжимает файлы автономной адресной книги, а затем помещает их в общую локальную папку. Вы можете выбрать, какие списки адресов доступны для пользователей, работающих в автономном режиме, а также настроить способ распределения адресных книг.
 
 Дополнительные сведения о списках адресов см. в статье [Списки адресов](address-lists-exchange-2013-help.md).
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Dd876857.important(EXCHG.150).gif" title="Важно" alt="Важно" />Важно!</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Данные автономной адресной книги создает служба Microsoft Exchange OABGen, являющаяся помощником по обслуживанию почтовых ящиков. Если вы используете дескриптор безопасности, чтобы скрыть определенных получателей в Active Directory, пользователи, скачавшие автономную адресную книгу, смогут посмотреть этих получателей. Таким образом, чтобы скрыть получателя в списке адресов, необходимо задать параметр <em>HiddenFromAddressListsEnabled</em> для командлетов <a href="https://technet.microsoft.com/ru-ru/library/aa998596(v=exchg.150)">Set-PublicFolder</a>, <a href="https://technet.microsoft.com/ru-ru/library/aa995950(v=exchg.150)">Set-MailContact</a>, <a href="https://technet.microsoft.com/ru-ru/library/aa995971(v=exchg.150)">Set-MailUser</a>, <a href="https://technet.microsoft.com/ru-ru/library/bb123796(v=exchg.150)">Set-DynamicDistributionGroup</a>, <a href="https://technet.microsoft.com/ru-ru/library/bb123981(v=exchg.150)">Set-Mailbox</a><a href="https://technet.microsoft.com/ru-ru/library/bb124955(v=exchg.150)">Set-DistributionGroup</a>. Кроме того, вы можете создать новую автономную адресную книгу по умолчанию, не содержащую скрытых получателей. Сведения о добавлении в адресную книгу списков адресов и удалении их оттуда приведены в статье <a href="add-an-address-list-to-or-remove-an-address-list-from-an-offline-address-book-exchange-2013-help.md">Добавление списка адресов и его удаление из автономной адресной книги</a>.</td>
-</tr>
-</tbody>
-</table>
+> [!IMPORTANT]  
+> Данные автономной адресной книги создает служба Microsoft Exchange OABGen, являющаяся помощником по обслуживанию почтовых ящиков. Если вы используете дескриптор безопасности, чтобы скрыть определенных получателей в Active Directory, пользователи, скачавшие автономную адресную книгу, смогут посмотреть этих получателей. Таким образом, чтобы скрыть получателя в списке адресов, необходимо задать параметр <em>HiddenFromAddressListsEnabled</em> для командлетов <a href="https://technet.microsoft.com/ru-ru/library/aa998596(v=exchg.150)">Set-PublicFolder</a>, <a href="https://technet.microsoft.com/ru-ru/library/aa995950(v=exchg.150)">Set-MailContact</a>, <a href="https://technet.microsoft.com/ru-ru/library/aa995971(v=exchg.150)">Set-MailUser</a>, <a href="https://technet.microsoft.com/ru-ru/library/bb123796(v=exchg.150)">Set-DynamicDistributionGroup</a>, <a href="https://technet.microsoft.com/ru-ru/library/bb123981(v=exchg.150)">Set-Mailbox</a><a href="https://technet.microsoft.com/ru-ru/library/bb124955(v=exchg.150)">Set-DistributionGroup</a>. Кроме того, вы можете создать новую автономную адресную книгу по умолчанию, не содержащую скрытых получателей. Сведения о добавлении в адресную книгу списков адресов и удалении их оттуда приведены в статье <a href="add-an-address-list-to-or-remove-an-address-list-from-an-offline-address-book-exchange-2013-help.md">Добавление списка адресов и его удаление из автономной адресной книги</a>.
 
 
 Необходимы сведения о задачах управления, связанных с автономными адресными книгами? См. раздел [Процедуры автономной адресной книги](offline-address-book-procedures-exchange-2013-help.md).

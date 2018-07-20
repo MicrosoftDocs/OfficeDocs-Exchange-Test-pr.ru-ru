@@ -13,9 +13,9 @@ ms.translationtype: HT
 
  
 
-_**Применимо к:**Exchange Online, Exchange Server 2013_
+_**Применимо к:** Exchange Online, Exchange Server 2013_
 
-_**Последнее изменение раздела:**2016-06-15_
+_**Последнее изменение раздела:** 2016-06-15_
 
 Общие папки предназначены для осуществления общего доступа к файлам. Это простой и эффективный способ сбора, организации и использования информации внутри рабочей группы или в масштабах всей организации. Включение почты для общедоступной папки позволяет пользователям помещать в нее файлы, отправляя сообщения электронной почты. Если для общедоступной папки включена поддержка почты, в Центре администрирования Exchange для нее становятся доступны дополнительные параметры, например адреса электронной почты и почтовые квоты. Если поддержка почты не включена, для управления параметрами общедоступной папки в командной консоли используется командлет **Set-PublicFolder**. Если же она включена, для этого используются командлеты **Set-PublicFolder** и **Set-MailPublicFolder**.
 
@@ -35,18 +35,8 @@ _**Последнее изменение раздела:**2016-06-15_
 
   - Сочетания клавиш для процедур, описанных в этой статье, приведены в статье [Сочетания клавиш в Центре администрирования Exchange](keyboard-shortcuts-in-the-exchange-admin-center-exchange-online-protection-help.md).
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Bb124558.tip(EXCHG.150).gif" title="Совет" alt="Совет" />Совет.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.</td>
-</tr>
-</tbody>
-</table>
+> [!TIP]  
+> Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.
 
 
 ## Что необходимо сделать?

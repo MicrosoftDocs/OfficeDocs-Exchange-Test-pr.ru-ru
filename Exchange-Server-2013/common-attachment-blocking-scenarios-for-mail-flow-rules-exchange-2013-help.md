@@ -13,23 +13,19 @@ ms.translationtype: MT
 
  
 
-_**Применимо к:**Exchange Online, Exchange Online Protection, Exchange Server 2013_
+_**Применимо к:** Exchange Online, Exchange Online Protection, Exchange Server 2013_
 
-_**Последнее изменение раздела:**2017-02-23_
+_**Последнее изменение раздела:** 2017-02-23_
 
 В вашей организации может требоваться блокировка или отклонение некоторых типов сообщений в соответствии с юридическими или нормативными требованиями, а также для удовлетворения определенных бизнес-потребностей. Вот несколько примеров распространенных сценариев блокировки всех вложений, которые можно настроить с помощью правил транспорта в Exchange:
 
-  -  
-    Example 1: Block messages with attachments, and notify the sender
+  -  Example 1: Block messages with attachments, and notify the sender
 
-  -  
-    Example 2: Notify intended recipients when an inbound message is blocked
+  -  Example 2: Notify intended recipients when an inbound message is blocked
 
-  -  
-    Example 3: Modify the subject line for notifications
+  -  Example 3: Modify the subject line for notifications
 
-  -  
-    Example 4: Apply a rule with a time limit
+  -  Example 4: Apply a rule with a time limit
 
 Дополнительные примеры, в которых показано, как заблокировать определенные вложения, см. в таких статьях:
 
@@ -126,18 +122,8 @@ _**Последнее изменение раздела:**2017-02-23_
 
   - Второе правило блокирует сообщение и отправляет обратно уведомление, содержащее новую тему исходного сообщения.
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Dd876857.important(EXCHG.150).gif" title="Важно" alt="Важно" />Важно!</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Оба правила должны предусматривать одинаковые условия. Правила обрабатываются по порядку: первое правило добавляет фразу &quot;не удается доставить&quot;, а второе блокирует сообщение и уведомляет получателя.</td>
-</tr>
-</tbody>
-</table>
+> [!IMPORTANT]  
+> Оба правила должны предусматривать одинаковые условия. Правила обрабатываются по порядку: первое правило добавляет фразу &quot;не удается доставить&quot;, а второе блокирует сообщение и уведомляет получателя.
 
 
 Вот как будет выглядеть первое правило, если необходимо добавить фразу "не удается доставить" в тему сообщения:

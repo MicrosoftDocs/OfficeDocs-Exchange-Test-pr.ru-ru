@@ -13,9 +13,9 @@ ms.translationtype: HT
 
  
 
-_**Применимо к:**Exchange Server 2013_
+_**Применимо к:** Exchange Server 2013_
 
-_**Последнее изменение раздела:**2017-03-20_
+_**Последнее изменение раздела:** 2017-03-20_
 
 В этом разделе приведены инструкции по установке необходимых компонентов операционной системы Windows Server 2012 R2, Windows Server 2012 и Windows Server 2008 R2 с пакетом обновления 1 (SP1) для ролей сервера почтовых ящиков, клиентского доступа и пограничного транспортного сервера Exchange 2013. Тут также описаны компоненты, необходимые для установки средств управления Exchange 2013 на компьютерах под управлением Windows 8, Windows 8.1 и Windows 7.
 
@@ -55,34 +55,14 @@ _**Последнее изменение раздела:**2017-03-20_
 
   - Установите на компьютере последние обновления Windows. Дополнительные сведения см. в разделе [Контрольный список по безопасности развертывания](deployment-security-checklist-exchange-2013-help.md).
     
-    <table>
-    <thead>
-    <tr class="header">
-    <th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr class="odd">
-    <td>Если при установке роли сервера почтовых ящиков необходимо сделать сервер членом группы обеспечения доступности баз данных, потребуется Windows Server 2012 R2 Standard или Datacenter Edition, Windows Server 2012 Standard или Datacenter Edition или Windows Server 2008 R2 с пакетом обновления 1 (SP1) версии Enterprise Edition. Выпуск Windows Server 2008 R2 SP 1 Standard Edition не поддерживает компоненты, требуемые для групп обеспечения доступности баз данных.<br />
+    > [!NOTE]  
+    > Если при установке роли сервера почтовых ящиков необходимо сделать сервер членом группы обеспечения доступности баз данных, потребуется Windows Server 2012 R2 Standard или Datacenter Edition, Windows Server 2012 Standard или Datacenter Edition или Windows Server 2008 R2 с пакетом обновления 1 (SP1) версии Enterprise Edition. Выпуск Windows Server 2008 R2 SP 1 Standard Edition не поддерживает компоненты, требуемые для групп обеспечения доступности баз данных.<br />
     Нельзя обновить Windows, если на сервере установлен Exchange.<br />
-    Для обновления до Microsoft Unified Communications Managed API (UCMA) 4.0 сначала необходимо удалить все предыдущие версии UCMA, которые устанавливаются с помощью компонента <strong>Установка/удаление программ</strong>.</td>
-    </tr>
-    </tbody>
-    </table>
+    Для обновления до Microsoft Unified Communications Managed API (UCMA) 4.0 сначала необходимо удалить все предыдущие версии UCMA, которые устанавливаются с помощью компонента <strong>Установка/удаление программ</strong>.
 
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Bb124558.tip(EXCHG.150).gif" title="Совет" alt="Совет" />Совет.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.</td>
-</tr>
-</tbody>
-</table>
+> [!TIP]  
+> Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.
 
 
 ## Подготовка Active Directory
@@ -135,18 +115,8 @@ _**Последнее изменение раздела:**2017-03-20_
 
 1.  [.NET Framework 4.6.2](https://go.microsoft.com/fwlink/p/?linkid=808659)
     
-    <table>
-    <thead>
-    <tr class="header">
-    <th><img src="images/Dd876857.important(EXCHG.150).gif" title="Важно" alt="Важно" />Важно!</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr class="odd">
-    <td>Для Exchange 2013 с накопительным пакетом обновления 16 (CU16) и более поздней версии <strong>требуется</strong> .NET Framework 4.6.2. Чтобы избежать появления ошибки, обновите .NET Framework на серверах до версии 4.6.2, прежде чем устанавливать Exchange 2013 с накопительным пакетом обновления 16 (CU16). Если на ваших серверах Exchange Server используется платформа .NET Framework 4.5.2, сначала установите накопительный пакет обновления 15 (CU15) для Exchange 2013, а только затем — .NET Framework 4.6.2.</td>
-    </tr>
-    </tbody>
-    </table>
+    > [!IMPORTANT]  
+    > Для Exchange 2013 с накопительным пакетом обновления 16 (CU16) и более поздней версии <strong>требуется</strong> .NET Framework 4.6.2. Чтобы избежать появления ошибки, обновите .NET Framework на серверах до версии 4.6.2, прежде чем устанавливать Exchange 2013 с накопительным пакетом обновления 16 (CU16). Если на ваших серверах Exchange Server используется платформа .NET Framework 4.5.2, сначала установите накопительный пакет обновления 15 (CU15) для Exchange 2013, а только затем — .NET Framework 4.6.2.
 
 
 2.  [Windows Management Framework 4.0](https://go.microsoft.com/fwlink/p/?linkid=390234) (входит в Windows Server 2012 R2)
@@ -169,18 +139,8 @@ _**Последнее изменение раздела:**2017-03-20_
 
 1.  [.NET Framework 4.6.2](https://go.microsoft.com/fwlink/p/?linkid=808659)
     
-    <table>
-    <thead>
-    <tr class="header">
-    <th><img src="images/Dd876857.important(EXCHG.150).gif" title="Важно" alt="Важно" />Важно!</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr class="odd">
-    <td>Для Exchange 2013 с накопительным пакетом обновления 16 (CU16) и более поздней версии <strong>требуется</strong> .NET Framework 4.6.2. Чтобы избежать появления ошибки, обновите .NET Framework на серверах до версии 4.6.2, прежде чем устанавливать Exchange 2013 с накопительным пакетом обновления 16 (CU16). Если на ваших серверах Exchange Server используется платформа .NET Framework 4.5.2, сначала установите накопительный пакет обновления 15 (CU15) для Exchange 2013, а только затем — .NET Framework 4.6.2.</td>
-    </tr>
-    </tbody>
-    </table>
+    > [!IMPORTANT]  
+    > Для Exchange 2013 с накопительным пакетом обновления 16 (CU16) и более поздней версии <strong>требуется</strong> .NET Framework 4.6.2. Чтобы избежать появления ошибки, обновите .NET Framework на серверах до версии 4.6.2, прежде чем устанавливать Exchange 2013 с накопительным пакетом обновления 16 (CU16). Если на ваших серверах Exchange Server используется платформа .NET Framework 4.5.2, сначала установите накопительный пакет обновления 15 (CU15) для Exchange 2013, а только затем — .NET Framework 4.6.2.
 
 
 2.  [Windows Management Framework 4.0](https://go.microsoft.com/fwlink/p/?linkid=390234) (входит в Windows Server 2012 R2)
@@ -215,42 +175,22 @@ _**Последнее изменение раздела:**2017-03-20_
 
 1.  [.NET Framework 4.6.2](https://go.microsoft.com/fwlink/p/?linkid=808659)
     
-    <table>
-    <thead>
-    <tr class="header">
-    <th><img src="images/Dd876857.important(EXCHG.150).gif" title="Важно" alt="Важно" />Важно!</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr class="odd">
-    <td>Для Exchange 2013 с накопительным пакетом обновления 16 (CU16) и более поздней версии <strong>требуется</strong> .NET Framework 4.6.2. Чтобы избежать появления ошибки, обновите .NET Framework на серверах до версии 4.6.2, прежде чем устанавливать Exchange 2013 с накопительным пакетом обновления 16 (CU16). Если на ваших серверах Exchange Server используется платформа .NET Framework 4.5.2, сначала установите накопительный пакет обновления 15 (CU15) для Exchange 2013, а только затем — .NET Framework 4.6.2.</td>
-    </tr>
-    </tbody>
-    </table>
+    > [!IMPORTANT]  
+    > Для Exchange 2013 с накопительным пакетом обновления 16 (CU16) и более поздней версии <strong>требуется</strong> .NET Framework 4.6.2. Чтобы избежать появления ошибки, обновите .NET Framework на серверах до версии 4.6.2, прежде чем устанавливать Exchange 2013 с накопительным пакетом обновления 16 (CU16). Если на ваших серверах Exchange Server используется платформа .NET Framework 4.5.2, сначала установите накопительный пакет обновления 15 (CU15) для Exchange 2013, а только затем — .NET Framework 4.6.2.
 
 
 2.  [Windows Management Framework 4.0](https://go.microsoft.com/fwlink/p/?linkid=390234)
 
 3.  [Microsoft Unified Communications Managed API 4.0, ядро среды выполнения, 64-разрядная версия](https://go.microsoft.com/fwlink/p/?linkid=258269)
 
-4.  [Статья базы знаний KB974405 (Windows Identity Foundation)](http://go.microsoft.com/fwlink/?linkid=3052%26kbid=974405)
+4.  [Статья базы знаний KB974405 (Windows Identity Foundation)](http://go.microsoft.com/fwlink/?linkid=3052&kbid=974405)
 
-5.  [Статья базы знаний KB2619234 (включение куки-файла связи или GUID, используемого в RPC через HTTP, для уровня RPC в Windows 7 и Windows Server 2008 R2)](http://go.microsoft.com/fwlink/?linkid=3052%26kbid=2619234)
+5.  [Статья базы знаний KB2619234 (включение куки-файла связи или GUID, используемого в RPC через HTTP, для уровня RPC в Windows 7 и Windows Server 2008 R2)](http://go.microsoft.com/fwlink/?linkid=3052&kbid=2619234)
 
-6.  [Статья базы знаний KB2533623 (Уязвимость при загрузке библиотек может позволить злоумышленнику выполнить удаленный код)](http://go.microsoft.com/fwlink/?linkid=3052%26kbid=2533623)
+6.  [Статья базы знаний KB2533623 (Уязвимость при загрузке библиотек может позволить злоумышленнику выполнить удаленный код)](http://go.microsoft.com/fwlink/?linkid=3052&kbid=2533623)
     
-    <table>
-    <thead>
-    <tr class="header">
-    <th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr class="odd">
-    <td>Это исправление могло быть уже установлено, если вы настроили в Центре обновления Windows установку обновлений безопасности на своем компьютере.</td>
-    </tr>
-    </tbody>
-    </table>
+    > [!NOTE]  
+    > Это исправление могло быть уже установлено, если вы настроили в Центре обновления Windows установку обновлений безопасности на своем компьютере.
 
 
 ## Роль пограничного транспортного сервера
@@ -273,18 +213,8 @@ _**Последнее изменение раздела:**2017-03-20_
 
 1.  [.NET Framework 4.6.2](https://go.microsoft.com/fwlink/p/?linkid=808659)
     
-    <table>
-    <thead>
-    <tr class="header">
-    <th><img src="images/Dd876857.important(EXCHG.150).gif" title="Важно" alt="Важно" />Важно!</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr class="odd">
-    <td>Для Exchange 2013 с накопительным пакетом обновления 16 (CU16) и более поздней версии <strong>требуется</strong> .NET Framework 4.6.2. Чтобы избежать появления ошибки, обновите .NET Framework на серверах до версии 4.6.2, прежде чем устанавливать Exchange 2013 с накопительным пакетом обновления 16 (CU16). Если на ваших серверах Exchange Server используется платформа .NET Framework 4.5.2, сначала установите накопительный пакет обновления 15 (CU15) для Exchange 2013, а только затем — .NET Framework 4.6.2.</td>
-    </tr>
-    </tbody>
-    </table>
+    > [!IMPORTANT]  
+    > Для Exchange 2013 с накопительным пакетом обновления 16 (CU16) и более поздней версии <strong>требуется</strong> .NET Framework 4.6.2. Чтобы избежать появления ошибки, обновите .NET Framework на серверах до версии 4.6.2, прежде чем устанавливать Exchange 2013 с накопительным пакетом обновления 16 (CU16). Если на ваших серверах Exchange Server используется платформа .NET Framework 4.5.2, сначала установите накопительный пакет обновления 15 (CU15) для Exchange 2013, а только затем — .NET Framework 4.6.2.
 
 
 2.  [Windows Management Framework 4.0](https://go.microsoft.com/fwlink/p/?linkid=390234)
@@ -309,7 +239,7 @@ _**Последнее изменение раздела:**2017-03-20_
 
 2.  [Windows Management Framework 4.0](https://go.microsoft.com/fwlink/p/?linkid=390234)
 
-3.  [Статья базы знаний KB974405 (Windows Identity Foundation)](http://go.microsoft.com/fwlink/?linkid=3052%26kbid=974405)
+3.  [Статья базы знаний KB974405 (Windows Identity Foundation)](http://go.microsoft.com/fwlink/?linkid=3052&kbid=974405)
 
 ## Необходимые условия для установки Windows 8 и Windows 8.1 (только для средств администрирования)
 

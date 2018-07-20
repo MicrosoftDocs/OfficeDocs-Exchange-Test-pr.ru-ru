@@ -13,9 +13,9 @@ ms.translationtype: HT
 
  
 
-_**Применимо к:**Exchange Server 2013_
+_**Применимо к:** Exchange Server 2013_
 
-_**Последнее изменение раздела:**2016-12-09_
+_**Последнее изменение раздела:** 2016-12-09_
 
 Вас приветствует Microsoft Exchange Server 2013\! Мы знаем, что вы хотите приступить к работе, но перед началом использования Exchange 2013 и этого содержимого следует ознакомиться с некоторыми сведениями.
 
@@ -39,31 +39,11 @@ _**Последнее изменение раздела:**2016-12-09_
     
       - [Задачи после установки Exchange 2013](exchange-2013-post-installation-tasks-exchange-2013-help.md)
     
-    <table>
-    <thead>
-    <tr class="header">
-    <th><img src="images/Bb124558.tip(EXCHG.150).gif" title="Совет" alt="Совет" />Совет.</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr class="odd">
-    <td>Вы слышали о помощнике по развертыванию Exchange Server? Это бесплатный инструмент в Интернете, который поможет вам быстро развернуть Exchange 2013 в вашей организации, задав вам несколько вопросов и создав контрольный список пользовательского развертывания именно для вас. Дополнительные сведения см. в разделе <a href="exchange-server-deployment-assistant-exchange-2013-help.md">Помощник по развертыванию Exchange Server</a>.</td>
-    </tr>
-    </tbody>
-    </table>
+    > [!TIP]  
+    > Вы слышали о помощнике по развертыванию Exchange Server? Это бесплатный инструмент в Интернете, который поможет вам быстро развернуть Exchange 2013 в вашей организации, задав вам несколько вопросов и создав контрольный список пользовательского развертывания именно для вас. Дополнительные сведения см. в разделе <a href="exchange-server-deployment-assistant-exchange-2013-help.md">Помощник по развертыванию Exchange Server</a>.
     
-    <table>
-    <thead>
-    <tr class="header">
-    <th><img src="images/Dd876857.important(EXCHG.150).gif" title="Важно" alt="Важно" />Важно!</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr class="odd">
-    <td>Перед началом развертывания обязательно прочитайте <a href="release-notes-for-exchange-2013-exchange-2013-help.md">Заметки о выпуске Exchange 2013</a>. В заметках о выпуске содержатся важные сведения о проблемах, которые могут у вас возникнуть во время или после развертывания.</td>
-    </tr>
-    </tbody>
-    </table>
+    > [!IMPORTANT]  
+    > Перед началом развертывания обязательно прочитайте <a href="release-notes-for-exchange-2013-exchange-2013-help.md">Заметки о выпуске Exchange 2013</a>. В заметках о выпуске содержатся важные сведения о проблемах, которые могут у вас возникнуть во время или после развертывания.
 
 
   - Сведения о загрузке Exchange 2013 см. в разделе [Обновления для Exchange 2013](updates-for-exchange-2013-exchange-2013-help.md).
@@ -110,21 +90,11 @@ _**Последнее изменение раздела:**2016-12-09_
 
   - [Сведения о документации по Exchange](about-exchange-documentation-exchange-2013-help.md)
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Ознакомьтесь с другими материалами об Exchange:<br />
+> [!NOTE]  
+> Ознакомьтесь с другими материалами об Exchange:<br />
 <a href="https://technet.microsoft.com/ru-ru/library/jj200580(v=exchg.150)">Exchange Online</a><br />
 <a href="https://technet.microsoft.com/ru-ru/library/jj200581(v=exchg.150)">Гибридные развертывания Exchange Server</a><br />
-<a href="https://technet.microsoft.com/ru-ru/library/jj723137(v=exchg.150)">Exchange Online Protection</a></td>
-</tr>
-</tbody>
-</table>
+<a href="https://technet.microsoft.com/ru-ru/library/jj723137(v=exchg.150)">Exchange Online Protection</a>
 
 
 ## Сообщите нам о своих впечатлениях

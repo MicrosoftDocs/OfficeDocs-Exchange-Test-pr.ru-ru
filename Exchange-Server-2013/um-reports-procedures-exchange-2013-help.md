@@ -13,9 +13,9 @@ ms.translationtype: MT
 
  
 
-_**Применимо к:**Exchange Online, Exchange Server 2013, Exchange Server 2016_
+_**Применимо к:** Exchange Online, Exchange Server 2013, Exchange Server 2016_
 
-_**Последнее изменение раздела:**2012-11-09_
+_**Последнее изменение раздела:** 2012-11-09_
 
 [Просмотрите вызовов голосовой почты в вашей организации](review-the-voice-mail-calls-in-your-organization-exchange-2013-help.md)
 

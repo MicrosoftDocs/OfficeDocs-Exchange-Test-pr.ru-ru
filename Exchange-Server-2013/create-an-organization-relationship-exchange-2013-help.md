@@ -13,24 +13,14 @@ ms.translationtype: HT
 
  
 
-_**Применимо к:**Exchange Server 2013_
+_**Применимо к:** Exchange Server 2013_
 
-_**Последнее изменение раздела:**2015-04-07_
+_**Последнее изменение раздела:** 2015-04-07_
 
 Настройте связь организации, чтобы предоставлять общий доступ к данным календаря внешним бизнес-партнерам. Связь организации можно настроить между двумя федеративными организациями Exchange 2013 или между федеративной организацией Exchange 2013 и несколькими федеративными организациями Exchange 2010. Вы также можете настроить связь организации между своей локальной организацией Exchange и организацией Office 365.
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Dd876857.important(EXCHG.150).gif" title="Важно" alt="Важно" />Важно!</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Создание связи организаций — это один из этапов настройки федеративного общего доступа в организации Exchange; для этого также требуется настройка доверия федерации для локальной организации Exchange.</td>
-</tr>
-</tbody>
-</table>
+> [!IMPORTANT]  
+> Создание связи организаций — это один из этапов настройки федеративного общего доступа в организации Exchange; для этого также требуется настройка доверия федерации для локальной организации Exchange.
 
 
 Дополнительные сведения о федеративном общем доступе см. в разделе [Общий доступ](sharing-exchange-2013-help.md).
@@ -123,16 +113,6 @@ _**Последнее изменение раздела:**2015-04-07_
 
     Get-OrganizationRelationship | format-list
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Bb124558.tip(EXCHG.150).gif" title="Совет" alt="Совет" />Совет.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.</td>
-</tr>
-</tbody>
-</table>
+> [!TIP]  
+> Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.
 

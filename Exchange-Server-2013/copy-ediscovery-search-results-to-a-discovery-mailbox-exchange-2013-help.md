@@ -13,9 +13,9 @@ ms.translationtype: HT
 
  
 
-_**Применимо к:**Exchange Server 2013_
+_**Применимо к:** Exchange Server 2013_
 
-_**Последнее изменение раздела:**2014-02-24_
+_**Последнее изменение раздела:** 2014-02-24_
 
 После создания поиска методом электронного обнаружения на месте вы можете использовать Центр администрирования Exchange, чтобы скопировать результаты в почтовый ящик найденных сообщений. Вы также можете использовать командную консоль, чтобы начать обнаружение электронных данных, созданное с использованием командлета **New-MailboxSearch**, который копирует результаты в почтовый ящик найденных сообщений, указанный при создании поиска.
 
@@ -31,18 +31,8 @@ _**Последнее изменение раздела:**2014-02-24_
 
   - Сочетания клавиш для процедур, описанных в этой статье, приведены в статье [Сочетания клавиш в Центре администрирования Exchange](keyboard-shortcuts-in-the-exchange-admin-center-exchange-online-protection-help.md).
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Bb124558.tip(EXCHG.150).gif" title="Совет" alt="Совет" />Совет.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.</td>
-</tr>
-</tbody>
-</table>
+> [!TIP]  
+> Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.
 
 
 ## Что необходимо сделать?
@@ -93,9 +83,12 @@ _**Последнее изменение раздела:**2014-02-24_
 
 Чтобы скопировать результаты поиска в почтовый ящик найденных сообщений, вам пришлось бы выполнить такие команды:
 
+```
     Set-MailboxSearch "FY13 Q2 Financial Results" -EstimateOnly $false -TargetMailbox "Discovery Search Mailbox"
-
+```
+```
     Start-MailboxSearch "FY13 Q2 Financial Results"
+```
 
 ## Дополнительные сведения о копировании результатов поиска
 

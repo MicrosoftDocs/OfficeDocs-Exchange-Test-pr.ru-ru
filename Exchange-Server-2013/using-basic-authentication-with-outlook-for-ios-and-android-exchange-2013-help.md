@@ -13,26 +13,16 @@ ms.translationtype: MT
 
  
 
-_**Применимо к:**Exchange Server 2010, Exchange Server 2013_
+_**Применимо к:** Exchange Server 2010, Exchange Server 2013_
 
-_**Последнее изменение раздела:**2018-04-02_
+_**Последнее изменение раздела:** 2018-04-02_
 
-**Сводка:** в этой статье представлены архитектуры и сведения о безопасности для администраторов о Outlook для iOS и Android в Exchange 2013 в локальной среде.
+**Сводка:**  в этой статье представлены архитектуры и сведения о безопасности для администраторов о Outlook для iOS и Android в Exchange 2013 в локальной среде.
 
 Приложение Outlook для iOS и Android предназначен для объединения электронной почты, календарь, контакты и других файлов, что позволит пользователям в вашей организации сделать с помощью своих мобильных устройств. В этой статье представлен обзор архитектуры и проектирование хранилища приложения, чтобы администраторы Exchange могут развертывании и обслуживании Outlook для iOS и Android в своей организации Exchange.
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Справку по использованию приложения на отдельных устройствах и информацию об устранении неполадок можно найти в <a href="https://support.office.com/ru-ru/article/outlook-for-ios-and-android-help-center-cd84214e-a5ac-4e95-9ea3-e07f78d0cde6">Центре справки по Outlook для iOS и Android</a>.</td>
-</tr>
-</tbody>
-</table>
+> [!NOTE]  
+> Справку по использованию приложения на отдельных устройствах и информацию об устранении неполадок можно найти в <a href="https://support.office.com/ru-ru/article/outlook-for-ios-and-android-help-center-cd84214e-a5ac-4e95-9ea3-e07f78d0cde6">Центре справки по Outlook для iOS и Android</a>.
 
 
 ## Архитектура Outlook для iOS и Android

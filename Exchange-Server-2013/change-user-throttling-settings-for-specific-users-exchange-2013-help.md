@@ -13,9 +13,9 @@ ms.translationtype: HT
 
  
 
-_**Применимо к:**Exchange Server 2013_
+_**Применимо к:** Exchange Server 2013_
 
-_**Последнее изменение раздела:**2014-08-05_
+_**Последнее изменение раздела:** 2014-08-05_
 
 Можно управлять тем, как ресурсы потребляются отдельными пользователями организации Exchange, путем изменения параметров регулирования по умолчанию.
 
@@ -33,18 +33,8 @@ _**Последнее изменение раздела:**2014-08-05_
 
   - Сочетания клавиш для процедур, описанных в этой статье, приведены в статье [Сочетания клавиш в Центре администрирования Exchange](keyboard-shortcuts-in-the-exchange-admin-center-exchange-online-protection-help.md).
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Bb124558.tip(EXCHG.150).gif" title="Совет" alt="Совет" />Совет.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>..</td>
-</tr>
-</tbody>
-</table>
+> [!TIP]  
+> Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>..
 
 
 ## Использование командной консоли Exchange для изменения способа использования ресурсов отдельными пользователями во всей организации
@@ -59,9 +49,12 @@ _**Последнее изменение раздела:**2014-08-05_
 
 Командлет **Set-ThrottlingPolicyAssociation** не нужно использовать для связывания пользователя с политикой. Другим способом связать пользователя tonysmith с политикой регулирования ITStaffPolicy являются следующие команды.
 
+```
     $b = Get-ThrottlingPolicy ITStaffPolicy
-
+```
+```
     Set-Mailbox -Identity tonysmith -ThrottlingPolicy $b
+```   
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделах [New-ThrottlingPolicy](https://technet.microsoft.com/ru-ru/library/dd351045\(v=exchg.150\)) и [Set-ThrottlingPolicyAssociation](https://technet.microsoft.com/ru-ru/library/ff459231\(v=exchg.150\)).
 

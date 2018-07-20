@@ -13,9 +13,9 @@ ms.translationtype: HT
 
  
 
-_**Применимо к:**Exchange Server, Exchange Server 2013_
+_**Применимо к:** Exchange Server, Exchange Server 2013_
 
-_**Последнее изменение раздела:**2014-05-26_
+_**Последнее изменение раздела:** 2014-05-26_
 
 При установке Exchange 2013 в лес и домены Active Directory вносятся изменения. Это необходимо Exchange для хранения информации о серверах, почтовых ящиках и других объектах Exchange, связанных с Exchange, в вашей организации. Данные изменения применяются при запуске мастера установки Exchange 2013 или выполнении команд *PrepareSchema*, *PrepareAD* и *PrepareDomains* (использование этих команд описано в разделе [Подготовка Active Directory и доменов](prepare-active-directory-and-domains-exchange-2013-help.md)) при установке Exchange 2013 из командной строки. Если вы хотите узнать, какие изменения Exchange вносит в Active Directory, эта статья для вас. Здесь описывается, что Exchange делает на каждом этапе подготовки Active Directory.
 

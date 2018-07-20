@@ -13,9 +13,9 @@ ms.translationtype: HT
 
  
 
-_**Применимо к:**Exchange Server 2013_
+_**Применимо к:** Exchange Server 2013_
 
-_**Последнее изменение раздела:**2015-04-08_
+_**Последнее изменение раздела:** 2015-04-08_
 
 Каталоги раскладки и преобразования используются транспортной службой на серверах почтовых ящиков и пограничных транспортных серверах для добавления файлов сообщений непосредственно на транспортный конвейер. Правильно отформатированные файлы сообщений электронной почты, скопированные в каталоги раскладки или преобразования, отправляются на доставку. Каталог раскладки используется администраторами для проверки потока сообщений или приложениями, которые создают и отправляют собственные сообщения. Каталог преобразования получает сообщения от серверов, не являющихся шлюзами SMTP, и повторно передает сообщения, экспортированные из очередей серверов Microsoft Exchange.
 
@@ -33,18 +33,8 @@ _**Последнее изменение раздела:**2015-04-08_
 
   - Сочетания клавиш для процедур, описанных в этой статье, приведены в статье [Сочетания клавиш в Центре администрирования Exchange](keyboard-shortcuts-in-the-exchange-admin-center-exchange-online-protection-help.md).
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Bb124558.tip(EXCHG.150).gif" title="Совет" alt="Совет" />Совет.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.</td>
-</tr>
-</tbody>
-</table>
+> [!TIP]  
+> Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.
 
 
 ## Необходимые действия
@@ -69,24 +59,11 @@ _**Последнее изменение раздела:**2015-04-08_
 
     Set-TransportService Exchange01 -PickupDirectoryPath "D:\Pickup Directory" -PickupDirectoryMaxHeaderSize 96KB -PickupDirectoryMaxRecipientsPerMessage 250 -PickupDirectoryMaxMessagesPerMinute 200
 
-<table>
-<colgroup>
-<col style="width: 100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><ul>
+> [!NOTE]  
+> <ul>
 <li><p>Установка для параметра <em>PickupDirectoryPath</em> значения <code>$null</code> отключает использование каталога раскладки.</p></li>
 <li><p>Для параметров <em>PickupDirectoryPath</em> и <em>ReplayDirectoryPath</em> запрещается указывать один каталог.</p></li>
-</ul></td>
-</tr>
-</tbody>
-</table>
+</ul>
 
 
 ## Использование командной консоли для настройки каталога преобразования
@@ -105,24 +82,11 @@ _**Последнее изменение раздела:**2015-04-08_
 
     Set-TransportService Exchange01 -ReplayDirectoryPath "D:\Replay Directory" -PickupDirectoryMaxMessagesPerMinute 200
 
-<table>
-<colgroup>
-<col style="width: 100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><ul>
+> [!NOTE]  
+> <ul>
 <li><p>Установка для параметра <em>ReplayDirectoryPath</em> значения <code>$null</code> отключает использование каталога преобразования.</p></li>
 <li><p>Для параметров <em>PickupDirectoryPath</em> и <em>ReplayDirectoryPath</em> запрещается указывать один каталог.</p></li>
-</ul></td>
-</tr>
-</tbody>
-</table>
+</ul>
 
 
 ## Как проверить, что все получилось?

@@ -13,33 +13,20 @@ ms.translationtype: HT
 
  
 
-_**Применимо к:**Exchange Online, Exchange Server 2013, Exchange Server 2016_
+_**Применимо к:** Exchange Online, Exchange Server 2013, Exchange Server 2016_
 
-_**Последнее изменение раздела:**2015-11-09_
+_**Последнее изменение раздела:** 2015-11-09_
 
 **Сводка**. Узнайте, как настроить общие папки, в том числе назначить для них разрешения, в Центре администрирования Exchange.
 
 В этом разделе описано, как настроить общедоступные папки в новой организации или в организации, которая раньше не использовала общедоступные папки.
 
-<table>
-<colgroup>
-<col style="width: 100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Дополнительные сведения о квотах хранилища и ограничениях для общедоступных папок см. в следующих разделах:
+> [!NOTE]  
+> Дополнительные сведения о квотах хранилища и ограничениях для общедоступных папок см. в следующих разделах:
 <ul>
 <li><p>Сведения об общедоступных папках в Office 365 см. в статье <a href="https://go.microsoft.com/fwlink/?linkid=391188">Ограничения Exchange Online</a>.</p></li>
 <li><p>Сведения об общедоступных папках на локальном сервере Exchange Server 2013 см. в разделе <a href="limits-for-public-folders-exchange-2013-help.md">Ограничения общедоступных папок</a>.</p></li>
-</ul></td>
-</tr>
-</tbody>
-</table>
+</ul>
 
 
 Дополнительные сведения о задачах управления, связанных с общедоступными папками в Exchange Server 2013, см. в разделе [Процедуры с общедоступными папками](public-folder-procedures-exchange-2013-help.md).
@@ -54,18 +41,8 @@ _**Последнее изменение раздела:**2015-11-09_
 
   - Сочетания клавиш для процедур, описанных в этой статье, приведены в статье [Сочетания клавиш в Центре администрирования Exchange](keyboard-shortcuts-in-the-exchange-admin-center-exchange-online-protection-help.md).
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Bb124558.tip(EXCHG.150).gif" title="Совет" alt="Совет" />Совет.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.</td>
-</tr>
-</tbody>
-</table>
+> [!TIP]  
+> Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.
 
 
 ## Как это сделать?

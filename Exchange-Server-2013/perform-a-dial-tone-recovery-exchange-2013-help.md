@@ -13,9 +13,9 @@ ms.translationtype: MT
 
  
 
-_**Применимо к:**Exchange Server 2013_
+_**Применимо к:** Exchange Server 2013_
 
-_**Последнее изменение раздела:**2014-06-27_
+_**Последнее изменение раздела:** 2014-06-27_
 
 Переносимость звонка позволяет пользователям отправлять и получать электронную почту с помощью временного почтового ящика во время восстановления или исправления их исходного почтового ящика. Временный почтовый ящик может находиться на том же сервере почтовых ящиков Exchange 2013 или на любом другом сервере почтовых ящиков Exchange 2013 в организации. Процесс использования переносимости аварийного восстановления называется аварийным восстановлением, которое включает в себя также создание пустой базы данных на сервере почтовых ящиков для замены неисправной базы данных. Дополнительные сведения см. в разделе [Переносимость аварийного восстановления](dial-tone-portability-exchange-2013-help.md).
 
@@ -29,34 +29,14 @@ _**Последнее изменение раздела:**2014-06-27_
 
   - Сочетания клавиш для процедур, описанных в этой статье, приведены в статье [Сочетания клавиш в Центре администрирования Exchange](keyboard-shortcuts-in-the-exchange-admin-center-exchange-online-protection-help.md).
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Bb124558.tip(EXCHG.150).gif" title="Совет" alt="Совет" />Совет.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>..</td>
-</tr>
-</tbody>
-</table>
+> [!TIP]  
+> Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>..
 
 
 ## Использование командной консоли Exchange для выполнения аварийного восстановления на одном сервере
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Невозможно использовать Центр администрирования Exchange для выполнения аварийного восстановления на одном сервере.</td>
-</tr>
-</tbody>
-</table>
+> [!NOTE]  
+> Невозможно использовать Центр администрирования Exchange для выполнения аварийного восстановления на одном сервере.
 
 
 1.  Убедитесь, что все существующие файлы восстанавливаемой базы данных сохраняются на случай необходимости восстановления в дальнейшем.
@@ -102,14 +82,21 @@ _**Последнее изменение раздела:**2014-06-27_
 
 13. Используйте командлеты [Get-Mailbox](https://technet.microsoft.com/ru-ru/library/bb123685\(v=exchg.150\)) и [New-MailboxRestoreRequest](https://technet.microsoft.com/ru-ru/library/ff829875\(v=exchg.150\)) для экспорта данных из базы данных восстановления и их импорта в восстановленную базу, как показано в следующем примере. Все сообщения, отправленные и полученные с помощью аварийной базы данных, будут импортированы в рабочую базу данных.
     
+```
         $mailboxes = Get-Mailbox -Database DTDB1
-    
+```
+```    
         $mailboxes | %{ New-MailboxRestoreRequest -SourceStoreMailbox $_.ExchangeGuid -SourceDatabase RDB1 -TargetMailbox $_ }
+```
 
 14. После завершения операции восстановления можно отключить и удалить базу данных восстановления, как показано в следующем примере.
     
+```
         Dismount-Database -Identity RDB1
+```
+```        
         Remove-MailboxDatabase -Identity RDB1
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в следующих разделах:
 

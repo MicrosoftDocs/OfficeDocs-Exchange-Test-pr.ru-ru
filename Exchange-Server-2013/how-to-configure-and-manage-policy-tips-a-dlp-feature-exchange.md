@@ -13,9 +13,9 @@ ms.translationtype: HT
 
  
 
-_**Применимо к:**Exchange Online, Exchange Server 2013_
+_**Применимо к:** Exchange Online, Exchange Server 2013_
 
-_**Последнее изменение раздела:**2016-12-09_
+_**Последнее изменение раздела:** 2016-12-09_
 
 Подсказки политик — это информационные сообщения, которые видны отправителям электронной почты при составлении сообщения. Их цель — предупредить пользователей о возможном нарушении методов или правил ведения бизнеса, применяемых в вашей компании с помощью политик защиты от потери данных (DLP). Для начала работы с подсказками политик используйте приведенные ниже процедуры. Чтобы узнать больше, просмотрите этот видеоролик.
 
@@ -39,18 +39,8 @@ _**Последнее изменение раздела:**2016-12-09_
 
   - Сочетания клавиш для процедур, описанных в этой статье, приведены в статье [Сочетания клавиш в Центре администрирования Exchange](keyboard-shortcuts-in-the-exchange-admin-center-exchange-online-protection-help.md).
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/Bb124558.tip(EXCHG.150).gif" title="Совет" alt="Совет" />Совет.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.</td>
-</tr>
-</tbody>
-</table>
+> [!TIP]  
+> Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.
 
 
 ## Что необходимо сделать?
@@ -79,18 +69,8 @@ _**Последнее изменение раздела:**2016-12-09_
 
 8.  Чтобы добавить дополнительные условия или действия, в нижней части окна выберите пункт **Дополнительные параметры**.
     
-    <table>
-    <colgroup>
-    <col style="width: 100%" />
-    </colgroup>
-    <thead>
-    <tr class="header">
-    <th><img src="images/JJ126620.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr class="odd">
-    <td>Можно использовать только приведенные ниже условия.
+    > [!NOTE]  
+    > Можно использовать только приведенные ниже условия.
     <ul>
     <li><p><strong>SentTo (Получатель...)</strong></p></li>
     <li><p><strong>SentToScope (Получатель находится...)</strong></p></li>
@@ -103,10 +83,7 @@ _**Последнее изменение раздела:**2016-12-09_
     <li><p><strong>RejectMessageReasonText (Отклонить сообщение и включить объяснение)</strong></p></li>
     <li><p><strong>RejectMessageEnhancedStatusCode (Отклонить сообщение с расширенным кодом состояния)</strong></p></li>
     <li><p><strong>DeletedMessage (Удалить сообщение, не отправляя уведомлений)</strong></p></li>
-    </ul></td>
-    </tr>
-    </tbody>
-    </table>
+    </ul>
 
 
 9.  В списке **Выбор режима для данного правила** выберите, следует ли применять правило. Сначала рекомендуется протестировать правило.
