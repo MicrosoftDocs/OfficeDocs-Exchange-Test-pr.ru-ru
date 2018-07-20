@@ -1,5 +1,5 @@
 ﻿---
-title: Exchange Server 2013 Management Pack: создание отчетов о работоспособности
+title: Exchange Server 2013 Management Pack- создание отчетов о работоспособности
 TOCTitle: Общие сведения о создании отчетов о работоспособности системы пакетом управления Exchange Server 2013 Management Pack
 ms:assetid: 6ca8847f-93fe-458d-bd43-7afad7fdd2f4
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Dn195910(v=EXCHG.150)
