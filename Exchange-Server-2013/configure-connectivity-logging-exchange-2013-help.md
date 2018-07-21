@@ -72,10 +72,9 @@ _**Последнее изменение раздела:** 2013-02-18_
     Set-TransportService Mailbox01 -ConnectivityLogPath "D:\Hub Connectivity Log" -ConnectivityLogMaxFileSize 20MB -ConnectivityLogMaxDirectorySize 1.5GB -ConnectivityLogMaxAge 45.00:00:00
 
 > [!NOTE]  
-> <ul>
-<li><p>Чтобы настроить параметры журнала подключения в службе транспорта почтовых ящиков на сервере почтовых ящиков, воспользуйтесь командлетом <strong>Set-MailboxTransportService</strong>. Чтобы настроить параметры журнала подключения во внешней службе транспорта на сервере клиентского доступа, воспользуйтесь командлетом <strong>Set-FrontEndTransportService</strong>.</p></li>
-<li><p>Установка для параметра <em>ConnectivityLogPath</em> значения <code>$null</code> отключает ведение журнала подключения. Однако если параметру <em>ConnectivityLogEnabled</em> задано значение <code>$true</code>, возникают ошибки журнала событий.</p></li>
-<li><p>Если для параметра <em>ConnectivityLogMaxAge</em> задано значение <code>00:00:00</code>, автоматическое удаление файлов журнала подключения по истечении срока их хранения не выполняется.</p></li>
+> <ul><li><p>Чтобы настроить параметры журнала подключения в службе транспорта почтовых ящиков на сервере почтовых ящиков, воспользуйтесь командлетом <strong>Set-MailboxTransportService</strong>. Чтобы настроить параметры журнала подключения во внешней службе транспорта на сервере клиентского доступа, воспользуйтесь командлетом <strong>Set-FrontEndTransportService</strong>.</p></li>
+> <li><p>Установка для параметра <em>ConnectivityLogPath</em> значения <code>$null</code> отключает ведение журнала подключения. Однако если параметру <em>ConnectivityLogEnabled</em> задано значение <code>$true</code>, возникают ошибки журнала событий.</p></li>
+> <li><p>Если для параметра <em>ConnectivityLogMaxAge</em> задано значение <code>00:00:00</code>, автоматическое удаление файлов журнала подключения по истечении срока их хранения не выполняется.</p></li>
 </ul>
 
 
