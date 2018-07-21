@@ -63,6 +63,7 @@ Office 365 — это облачная служба, которая предн�
 
   -  **Действие 1. Назначение сертификата встроенному издателю токенов локального сервера Exchange Server.** Во-первых, локальный администратор Exchange должен создать сертификат, если он не был создан ранее, и назначить его встроенному издателю токенов локального сервера Exchange Server с помощью сценария командной консоли Exchange. Это действие выполняется только один раз; созданный сертификат не заменяется и повторно используется для других сценариев проверки подлинности. Обязательно обновите значение *$tenantDomain* в соответствии с именем своего домена. Для этого скопируйте и вставьте указанный ниже код.
     
+
         > [!WARNING]  
         > Копирование кода в текстовый редактор, например Блокнот, и сохранение его с расширением PS1 упрощает запуск сценариев командной консоли.
     
@@ -139,43 +140,46 @@ Office 365 — это облачная служба, которая предн�
 
 
   - **Действие 2. Настройка взаимодействия Office 365 с локальным сервером Exchange 2013.** Настройте службу Office 365, с которой будет обмениваться данными сервер Exchange Server 2013, как партнерское приложение. Например, если локальный сервер Exchange Server 2013 должен взаимодействовать с Office 365, необходимо настроить его как партнерское приложение. Партнерское приложение — это любое приложение, непосредственно с которым Exchange 2013 может обмениваться токенами безопасности, не используя при этом сторонний сервер токенов безопасности. Администратор локального сервера Exchange 2013 должен использовать указанный ниже сценарий командной консоли Exchange, чтобы настроить клиент Office 365 для взаимодействия с Exchange 2013 как партнерское приложение. Во время выполнения сценария будет предложено ввести имя пользователя и пароль администратора домена клиента Office 365, например administrator@fabrikam.com. Обязательно обновите значение *$CertFile* в соответствии с расположением сертификата, если он не был создан с помощью предыдущего сценария. Для этого скопируйте и вставьте указанный ниже код.
+
     
-        # Make sure to update the following $CertFile with the path to the cert if not using the previous script.
-        
-        $CertFile = "$env:SYSTEMDRIVE\OAuthConfig\OAuthCert.cer"
-        
-        If (Test-Path $CertFile)
-        {
-            $ServiceName = "00000002-0000-0ff1-ce00-000000000000";
-        
-            $objFSO = New-Object -ComObject Scripting.FileSystemObject;
-            $CertFile = $objFSO.GetAbsolutePathName($CertFile);
-        
-            $cer = New-Object System.Security.Cryptography.X509Certificates.X509Certificate
-            $cer.Import($CertFile);
-            $binCert = $cer.GetRawCertData();
-            $credValue = [System.Convert]::ToBase64String($binCert);
-        
-            Write-Host "Please enter the administrator user name and password of the Office 365 tenant domain..."
-        
-            Connect-MsolService;
-            Import-Module msonlineextended;
-        
-            Write-Host "Adding a key to Service Principal..."
-        
-            $p = Get-MsolServicePrincipal -ServicePrincipalName $ServiceName
-            New-MsolServicePrincipalCredential -AppPrincipalId $p.AppPrincipalId -Type asymmetric -Usage Verify -Value $credValue -StartDate $cer.GetEffectiveDateString() -EndDate $cer.GetExpirationDateString()
-        }
-        Else
-        {
-            Write-Error "Cannot find certificate."
-        } 
+```
+# Make sure to update the following $CertFile with the path to the cert if not using the previous script.
+
+$CertFile = "$env:SYSTEMDRIVE\OAuthConfig\OAuthCert.cer"
+
+If (Test-Path $CertFile)
+{
+    $ServiceName = "00000002-0000-0ff1-ce00-000000000000";
+
+    $objFSO = New-Object -ComObject Scripting.FileSystemObject;
+    $CertFile = $objFSO.GetAbsolutePathName($CertFile);
+
+    $cer = New-Object System.Security.Cryptography.X509Certificates.X509Certificate
+    $cer.Import($CertFile);
+    $binCert = $cer.GetRawCertData();
+    $credValue = [System.Convert]::ToBase64String($binCert);
+
+    Write-Host "Please enter the administrator user name and password of the Office 365 tenant domain..."
+
+    Connect-MsolService;
+    Import-Module msonlineextended;
+
+    Write-Host "Adding a key to Service Principal..."
+
+    $p = Get-MsolServicePrincipal -ServicePrincipalName $ServiceName
+    New-MsolServicePrincipalCredential -AppPrincipalId $p.AppPrincipalId -Type asymmetric -Usage Verify -Value $credValue -StartDate $cer.GetEffectiveDateString() -EndDate $cer.GetExpirationDateString()
+}
+Else
+{
+    Write-Error "Cannot find certificate."
+}
+``` 
     
-    Пример ожидаемого результата приведен ниже.
+Пример ожидаемого результата приведен ниже.
     
-        Please enter the administrator user name and password of the Office 365 tenant domain...
-        Adding a key to Service Principal...
-        Complete.
+    Please enter the administrator user name and password of the Office 365 tenant domain...
+    Adding a key to Service Principal...
+    Complete.
 
 ## Включение передачи push-уведомлений
 
@@ -224,7 +228,8 @@ Office 365 — это облачная служба, которая предн�
 
   - **Включение отслеживания.** Еще один способ проверить работоспособность push-уведомлений (или узнать, почему они не работают) — включение отслеживания на сервере почтовых ящиков в своей организации. Администратор локального сервера Exchange 2013 должен включить отслеживание передачи push-уведомлений с помощью следующего сценария. Для этого скопируйте и вставьте указанный ниже код.
     
-        # Send a push notification to verify connectivity.
+    ```
+    # Send a push notification to verify connectivity.
         
         $s = Get-ExchangeServer | ?{$_.ServerRole -match "Mailbox"}
         If ($s.Count -gt 1)
@@ -245,10 +250,10 @@ Office 365 — это облачная служба, которая предн�
         {
             Write-Error "Cannot find a Mailbox server in the current site."
         }
+    ```
     
     Пример ожидаемого результата приведен ниже.
     
         ResultType : Succeeded
         Error      :
         Exception  :
-
