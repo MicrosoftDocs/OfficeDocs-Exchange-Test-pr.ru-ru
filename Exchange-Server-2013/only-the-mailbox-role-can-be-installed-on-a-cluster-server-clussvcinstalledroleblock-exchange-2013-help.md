@@ -1,5 +1,5 @@
 ﻿---
-title: 'На кластерном сервере может быть установлена только роль сервера почтовых ящиков_ClusSvcInstalledRoleBlock: Exchange 2013 Help'
+title: 'На сервере кластера можно установить только роль сервера почтовых ящиков'
 TOCTitle: На кластерном сервере может быть установлена только роль сервера почтовых ящиков_ClusSvcInstalledRoleBlock
 ms:assetid: 3e20f408-2b8d-47c2-a402-07232ab9f234
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/ms.exch.setupreadiness.clussvcinstalledroleblock(v=EXCHG.150)

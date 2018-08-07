@@ -1,5 +1,5 @@
 ﻿---
-title: 'Программа установки не может установить Exchange в controller_ComputerRODC домена только для чтения: Exchange 2013 Help'
+title: 'Установка Exchange невозможна на контроллере домена только для чтения'
 TOCTitle: Программа установки не может установить Exchange в controller_ComputerRODC домена только для чтения
 ms:assetid: 4934d755-65be-47e2-86b0-6ea1ab148a96
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/ms.exch.setupreadiness.computerrodc(v=EXCHG.150)

@@ -1,5 +1,5 @@
 ﻿---
-title: 'Настройка IP-адресов и портов для доступа по протоколам POP3 и IMAP4: Exchange 2013 Help'
+title: 'Exchange 2013: настройка IP-адресов и портов для доступа по POP3 и IMAP4'
 TOCTitle: Настройка IP-адресов и портов для доступа по протоколам POP3 и IMAP4
 ms:assetid: 8292747b-6626-4d7f-ba73-1e17f5d99fa4
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Bb123530(v=EXCHG.150)

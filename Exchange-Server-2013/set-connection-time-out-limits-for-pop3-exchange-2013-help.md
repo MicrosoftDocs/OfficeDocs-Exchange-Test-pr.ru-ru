@@ -1,5 +1,5 @@
 ﻿---
-title: 'Задайте ограничения времени ожидания подключения для протокола POP3: Exchange 2013 Help'
+title: 'Exchange 2013: задание предельного времени ожидания подключения по POP3'
 TOCTitle: Задайте ограничения времени ожидания подключения для протокола POP3
 ms:assetid: 40003115-be4e-4cf1-97b4-f5ca05b314dc
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Aa997604(v=EXCHG.150)

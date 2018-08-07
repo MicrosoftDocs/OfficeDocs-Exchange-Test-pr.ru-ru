@@ -1,5 +1,5 @@
 ﻿---
-title: 'Настройка группы пользователей, которые смогут связаться пользователи Outlook Voice Access: Exchange 2013 Help'
+title: 'Указание тех, с кем могут связаться пользователи голосового доступа к Outlook'
 TOCTitle: Настройка группы пользователей, которые смогут связаться пользователи Outlook Voice Access
 ms:assetid: a8dc0f9e-dc86-4128-af63-d4e550aed5bb
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Ee423551(v=EXCHG.150)

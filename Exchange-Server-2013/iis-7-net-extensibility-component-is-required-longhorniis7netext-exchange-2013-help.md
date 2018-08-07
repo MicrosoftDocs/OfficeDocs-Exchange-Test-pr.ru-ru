@@ -1,5 +1,5 @@
 ﻿---
-title: 'Требуется компонент расширяемости .NET для IIS 7_LonghornIIS7NetExt: Exchange 2013 Help'
+title: 'Требуется компонент расширяемости .NET для IIS 7'
 TOCTitle: Требуется компонент расширяемости .NET для IIS 7_LonghornIIS7NetExt
 ms:assetid: 8b481626-b68a-4fba-b66e-a02c03856bfd
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/ms.exch.setupreadiness.longhorniis7netext(v=EXCHG.150)

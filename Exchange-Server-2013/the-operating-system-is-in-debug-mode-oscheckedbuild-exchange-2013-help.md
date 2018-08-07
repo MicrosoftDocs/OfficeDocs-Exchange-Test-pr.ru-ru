@@ -1,5 +1,5 @@
 ﻿---
-title: 'Операционная система работает в режиме отладки_OSCheckedBuild: Exchange 2013 Help'
+title: 'Справка по Exchange 2013: операционная система работает в режиме отладки'
 TOCTitle: Операционная система работает в режиме отладки_OSCheckedBuild
 ms:assetid: 93a1380f-1388-494d-8f78-92dfefd069bd
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/ms.exch.setupreadiness.oscheckedbuild(v=EXCHG.150)

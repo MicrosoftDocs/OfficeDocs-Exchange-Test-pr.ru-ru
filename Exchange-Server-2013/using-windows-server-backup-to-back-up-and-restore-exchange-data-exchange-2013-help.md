@@ -1,5 +1,5 @@
 ﻿---
-title: 'Резервное копирование и восстановление данных Exchange с помощью системы архивации данных Windows Server: Exchange 2013 Help'
+title: 'Применение системы архивации данных Windows Server к данным Exchange'
 TOCTitle: Резервное копирование и восстановление данных Exchange с помощью системы архивации данных Windows Server
 ms:assetid: 0fac891a-5713-42b6-afd5-c91b2b88f966
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Dd876851(v=EXCHG.150)

@@ -1,5 +1,5 @@
 ﻿---
-title: 'Включение или отключение электронной почты для пользователя почты: Exchange 2013 Help'
+title: 'Exchange 2013: включение и отключение почты для почтового пользователя'
 TOCTitle: Включение или отключение электронной почты для пользователя почты
 ms:assetid: 1e2571d4-ff84-4fda-bb1d-825e96e1bd26
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Aa996598(v=EXCHG.150)

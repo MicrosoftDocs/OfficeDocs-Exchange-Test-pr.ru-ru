@@ -1,5 +1,5 @@
 ﻿---
-title: 'Установка средства устранения неполадок единой системы обмена сообщениями Exchange: Exchange 2013 Help'
+title: 'Exchange 2013: установка средства устранения неполадок UM Exchange'
 TOCTitle: Установка средства устранения неполадок единой системы обмена сообщениями Exchange
 ms:assetid: 84223af0-a717-49ee-add6-86313bb30d17
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Ff844714(v=EXCHG.150)

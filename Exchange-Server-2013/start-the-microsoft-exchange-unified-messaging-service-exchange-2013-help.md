@@ -1,5 +1,5 @@
 ﻿---
-title: 'Запуск службы единой системы обмена сообщениями Microsoft Exchange: Exchange 2013 Help'
+title: 'Запуск службы единой системы обмена сообщениями Microsoft Exchange 2013'
 TOCTitle: Запуск службы единой системы обмена сообщениями Microsoft Exchange
 ms:assetid: b54008e6-172e-4435-8516-57cff740e89c
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Bb124330(v=EXCHG.150)

@@ -1,5 +1,5 @@
 ﻿---
-title: 'Преимущества возможностей защиты от нежелательной почты в службе Exchange Online Protection в сравнении с Exchange Server 2013: Exchange 2013 Help'
+title: 'Защита от спама в Exchange Online Protection лучше, чем в Exchange Server 2013'
 TOCTitle: Преимущества возможностей защиты от нежелательной почты в службе Exchange Online Protection в сравнении с Exchange Server 2013
 ms:assetid: 00e37a3c-3fbc-488f-bdad-d52a3c80fd72
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/JJ673032(v=EXCHG.150)

@@ -1,5 +1,5 @@
 ﻿---
-title: 'Обновление единой системы обмена СООБЩЕНИЯМИ Exchange 2007 до Exchange 2013: Exchange 2013 Help'
+title: 'Exchange 2013: обновление UM Exchange 2007 до UM Exchange 2013'
 TOCTitle: Обновление единой системы обмена СООБЩЕНИЯМИ Exchange 2007 до Exchange 2013
 ms:assetid: 642c922d-7e85-40f0-bb9b-0f20da692be3
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Dn169227(v=EXCHG.150)

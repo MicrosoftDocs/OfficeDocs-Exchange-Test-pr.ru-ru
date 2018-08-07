@@ -1,5 +1,5 @@
 ﻿---
-title: 'Изменение конфигурации служб Active Directory облегченного доступа к каталогам: Exchange 2013 Help'
+title: 'Справка по Exchange 2013: изменение конфигурации AD LDS'
 TOCTitle: Изменение конфигурации служб Active Directory облегченного доступа к каталогам
 ms:assetid: 381f582c-15ec-43bc-b674-5399fad72c97
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Aa997269(v=EXCHG.150)

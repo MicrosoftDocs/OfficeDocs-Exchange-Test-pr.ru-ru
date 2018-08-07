@@ -1,5 +1,5 @@
 ﻿---
-title: 'Общие сведения об обнулении страниц в системе Exchange 2013: Exchange 2013 Help'
+title: 'Справка по Exchange 2013: общие сведения об обнулении страниц в Exchange 2013'
 TOCTitle: Общие сведения об обнулении страниц в системе Exchange 2013
 ms:assetid: 0ca7b188-efbc-4c0d-bcfe-5138cffc803c
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Gg549096(v=EXCHG.150)

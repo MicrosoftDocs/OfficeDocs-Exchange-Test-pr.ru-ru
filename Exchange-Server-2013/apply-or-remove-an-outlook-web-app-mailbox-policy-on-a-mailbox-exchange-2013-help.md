@@ -1,5 +1,5 @@
 ﻿---
-title: 'Применение или удаление политики почтовых ящиков Outlook Web App в почтовом ящике: Exchange 2013 Help'
+title: 'Применение или удаление политики для почтового ящика Outlook Web App'
 TOCTitle: Применение или удаление политики почтовых ящиков Outlook Web App в почтовом ящике
 ms:assetid: 51d8e269-b0d5-4bc7-9b3d-0460871e54fa
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Dd876884(v=EXCHG.150)

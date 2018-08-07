@@ -1,5 +1,5 @@
 ﻿---
-title: 'Настройка отправки отчетов о сообщениях с удаленного домена: Exchange 2013 Help'
+title: 'Exchange 2013: настройка отчетов об отправке сообщений через удаленный домен'
 TOCTitle: Настройка отправки отчетов о сообщениях с удаленного домена
 ms:assetid: 73dc686a-e7a3-44c7-b82f-f52ff9273199
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/JJ649325(v=EXCHG.150)

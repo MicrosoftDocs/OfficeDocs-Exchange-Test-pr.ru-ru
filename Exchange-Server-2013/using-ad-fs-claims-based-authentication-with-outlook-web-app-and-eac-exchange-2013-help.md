@@ -1,5 +1,5 @@
 ﻿---
-title: 'Использование проверки подлинности, основанной на утверждениях AD FS с Outlook Web App и EAC: Exchange 2013 Help'
+title: 'Проверка подлинности на основе утверждений AD FS в Outlook Web App и EAC'
 TOCTitle: Использование проверки подлинности, основанной на утверждениях AD FS с Outlook Web App и EAC
 ms:assetid: 919a9bfb-c6df-490a-b2c4-51796b0f0596
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Dn635116(v=EXCHG.150)

@@ -1,5 +1,5 @@
 ﻿---
-title: 'Отсутствует в сайте/домене хозяина схемы_NotInSchemaMasterSite: Exchange 2013 Help'
+title: 'Справка по Exchange 2013: отсутствие в сайте или домене хозяина схемы'
 TOCTitle: Отсутствует в сайте/домене хозяина схемы_NotInSchemaMasterSite
 ms:assetid: 3aafd22a-d0f0-4120-a325-886fb2eb43ef
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/ms.exch.setupreadiness.notinschemamastersite(v=EXCHG.150)

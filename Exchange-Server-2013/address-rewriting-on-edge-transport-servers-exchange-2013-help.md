@@ -1,5 +1,5 @@
 ﻿---
-title: 'Переопределение адресов на пограничных транспортных серверах: Exchange 2013 Help'
+title: 'Exchange 2013: переопределение адресов на пограничных транспортных серверах'
 TOCTitle: Переопределение адресов на пограничных транспортных серверах
 ms:assetid: 23f1eaf6-247a-4671-ad72-aae19d9b511d
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Aa996806(v=EXCHG.150)

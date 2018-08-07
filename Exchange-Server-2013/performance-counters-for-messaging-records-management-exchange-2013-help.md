@@ -1,5 +1,5 @@
 ﻿---
-title: 'Счетчики производительности для управления записями сообщений: Exchange 2013 Help'
+title: 'Exchange 2013: счетчики производительности для управления записями сообщений'
 TOCTitle: Счетчики производительности для управления записями сообщений
 ms:assetid: b59def6f-4249-4e0c-8057-8ae6eb7c5676
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Bb310790(v=EXCHG.150)

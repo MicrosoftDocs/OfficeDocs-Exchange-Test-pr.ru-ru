@@ -1,5 +1,5 @@
 ﻿---
-title: 'Настройте количество ошибок ввода перед пользователи Outlook Voice Access не соединены по сети: Exchange 2013 Help'
+title: 'Голосовой доступ к Outlook: количество ошибок ввода, приводящее к отключению'
 TOCTitle: Настройте количество ошибок ввода перед пользователи Outlook Voice Access не соединены по сети
 ms:assetid: 64c13d17-a26a-4c9b-b495-bd69c716456a
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Ee423547(v=EXCHG.150)

@@ -1,5 +1,5 @@
 ﻿---
-title: 'Удалить роль из пользователя или универсальной группы безопасности: Exchange 2013 Help'
+title: 'Exchange 2013: удаление роли для пользователя или USG'
 TOCTitle: Удалить роль из пользователя или универсальной группы безопасности
 ms:assetid: df3510ef-e0c2-4d3c-81b0-7dc3e70c01a0
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Dd351196(v=EXCHG.150)

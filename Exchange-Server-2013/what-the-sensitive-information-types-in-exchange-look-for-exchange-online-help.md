@@ -1,5 +1,5 @@
 ﻿---
-title: 'Что позволяют искать типы конфиденциальной информации в Exchange: Exchange 2013 Help'
+title: 'Что позволяют искать типы конфиденциальной информации в Exchange'
 TOCTitle: Что позволяют искать типы конфиденциальной информации
 ms:assetid: 98b81f9c-87bb-4905-8e53-04621c3ae74d
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/JJ150541(v=EXCHG.150)

@@ -1,5 +1,5 @@
 ﻿---
-title: 'Новые возможности единой системы обмена сообщениями в Exchange 2013: Exchange 2013 Help'
+title: 'Новые возможности в единой системе обмена сообщениями в Exchange 2013'
 TOCTitle: Новые возможности единой системы обмена сообщениями в Exchange 2013
 ms:assetid: a444ef2d-d893-408e-adf9-c9d8a8b07593
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/JJ150545(v=EXCHG.150)

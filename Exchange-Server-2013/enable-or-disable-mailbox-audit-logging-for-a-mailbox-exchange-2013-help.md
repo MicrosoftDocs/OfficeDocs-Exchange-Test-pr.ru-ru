@@ -1,5 +1,5 @@
 ﻿---
-title: 'Включение и отключение ведения журнала аудита для почтового ящика: Exchange 2013 Help'
+title: 'Exchange 2013: включение/отключение ведения журнала аудита для почтового ящика'
 TOCTitle: Включение и отключение ведения журнала аудита для почтового ящика
 ms:assetid: c4bbfd52-6196-49c7-8c31-777fbbee11f2
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Ff461937(v=EXCHG.150)

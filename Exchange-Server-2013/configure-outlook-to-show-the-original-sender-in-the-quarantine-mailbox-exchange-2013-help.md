@@ -1,5 +1,5 @@
 ﻿---
-title: 'Настройка Outlook для отображения исходного отправителя в почтовом ящике карантина: Exchange 2013 Help'
+title: 'Отображение в Outlook исходного отправителя в почтовом ящике карантина'
 TOCTitle: Настройка Outlook для отображения исходного отправителя в почтовом ящике карантина
 ms:assetid: 9249425d-1b06-48a0-ad95-c4eefb641ff4
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Ee861109(v=EXCHG.150)

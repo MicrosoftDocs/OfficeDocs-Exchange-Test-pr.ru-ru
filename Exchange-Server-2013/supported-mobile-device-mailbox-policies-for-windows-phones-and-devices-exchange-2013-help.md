@@ -1,5 +1,5 @@
 ﻿---
-title: 'Поддерживаемые политики почтовых ящиков мобильных устройств для Windows Phone и прочих устройств: Exchange 2013 Help'
+title: 'Доступные политики почтовых ящиков Windows Phone и других мобильных устройств'
 TOCTitle: Поддерживаемые политики почтовых ящиков мобильных устройств для Windows Phone и прочих устройств
 ms:assetid: d76b1d4c-d1f6-4501-a7c9-854327aceda5
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/JJ983805(v=EXCHG.150)

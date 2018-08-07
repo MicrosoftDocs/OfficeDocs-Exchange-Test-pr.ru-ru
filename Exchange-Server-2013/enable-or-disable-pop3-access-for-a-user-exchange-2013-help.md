@@ -1,5 +1,5 @@
 ﻿---
-title: 'Включение или отключение доступа по протоколу POP3 для пользователя: Exchange 2013 Help'
+title: 'Exchange 2013: включение или отключение доступа по POP3 для пользователя'
 TOCTitle: Включение или отключение доступа по протоколу POP3 для пользователя
 ms:assetid: 57e12f07-3b14-45bd-9a82-e6032d14214f
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Bb691018(v=EXCHG.150)

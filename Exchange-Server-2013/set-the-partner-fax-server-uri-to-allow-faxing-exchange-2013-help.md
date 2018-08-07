@@ -1,5 +1,5 @@
 ﻿---
-title: 'Установка сервера факсов URI, чтобы разрешить отправка и прием факсов партнера: Exchange 2013 Help'
+title: 'Exchange 2013: задание URI факс-сервера партнера для отправки факсов'
 TOCTitle: Установка сервера факсов URI, чтобы разрешить отправка и прием факсов партнера
 ms:assetid: 77a9013b-d76b-4af2-8b2c-cef435cf67af
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/JJ650873(v=EXCHG.150)

@@ -1,5 +1,5 @@
 ﻿---
-title: 'Настройка политики активации для копии базы данных почтовых ящиков: Exchange 2013 Help'
+title: 'Exchange 2013: политика активации для копии базы данных почтовых ящиков'
 TOCTitle: Настройка политики активации для копии базы данных почтовых ящиков
 ms:assetid: 6b37ed6e-2e36-4688-b485-8fdbb8193ec8
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Dd298046(v=EXCHG.150)

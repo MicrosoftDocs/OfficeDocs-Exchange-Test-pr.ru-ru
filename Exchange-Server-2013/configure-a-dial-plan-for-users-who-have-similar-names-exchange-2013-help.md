@@ -1,5 +1,5 @@
 ﻿---
-title: 'Настройка абонентской группы для пользователей с похожими именами: Exchange 2013 Help'
+title: 'Exchange 2013: абонентская группа для пользователей с похожими именами'
 TOCTitle: Настройка абонентской группы для пользователей с похожими именами
 ms:assetid: 14783f45-95f5-49de-8215-0a3aef7dc034
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Bb266943(v=EXCHG.150)

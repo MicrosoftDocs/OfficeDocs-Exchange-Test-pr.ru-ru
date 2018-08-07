@@ -1,5 +1,5 @@
 ﻿---
-title: 'Антивирусная программа в операционной системе на серверах Exchange: Exchange 2013 Help'
+title: 'Антивирусная программа в операционной системе на серверах Exchange Server'
 TOCTitle: Антивирусная программа в операционной системе на серверах Exchange
 ms:assetid: 7cef6017-7a55-41f3-a636-1ca4fce575b1
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Bb332342(v=EXCHG.150)

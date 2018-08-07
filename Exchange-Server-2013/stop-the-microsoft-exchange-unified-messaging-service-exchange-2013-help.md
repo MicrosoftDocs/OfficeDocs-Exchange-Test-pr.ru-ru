@@ -1,5 +1,5 @@
 ﻿---
-title: 'Остановка службы единой системы обмена сообщениями Microsoft Exchange: Exchange 2013 Help'
+title: 'Остановка службы единой системы обмена сообщениями Microsoft Exchange 2013'
 TOCTitle: Остановка службы единой системы обмена сообщениями Microsoft Exchange
 ms:assetid: 64fa5535-8150-45c6-82e6-d2346892a031
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Aa998595(v=EXCHG.150)

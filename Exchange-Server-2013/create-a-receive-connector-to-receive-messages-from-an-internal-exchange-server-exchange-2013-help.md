@@ -1,5 +1,5 @@
 ﻿---
-title: 'Создание соединителя получения сообщений от внутреннего сервера Exchange Server: Exchange 2013 Help'
+title: 'Создание соединителя получения писем от внутреннего сервера Exchange Server'
 TOCTitle: Создание соединителя получения сообщений от внутреннего сервера Exchange Server
 ms:assetid: 546cead9-7a2d-4332-a5f6-35343d56c619
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/JJ657448(v=EXCHG.150)

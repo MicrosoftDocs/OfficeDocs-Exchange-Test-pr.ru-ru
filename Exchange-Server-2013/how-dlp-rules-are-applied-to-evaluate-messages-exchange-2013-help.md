@@ -1,5 +1,5 @@
 ﻿---
-title: 'Применение правил защиты от потери данных для оценки сообщений: Exchange 2013 Help'
+title: 'Справка по Exchange 2013: применение правил DLP для оценки сообщений'
 TOCTitle: Применение правил защиты от потери данных для оценки сообщений
 ms:assetid: 1ac77020-26ff-410c-ab09-4f28a99d67a1
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Dn329050(v=EXCHG.150)

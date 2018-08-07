@@ -1,5 +1,5 @@
 ﻿---
-title: 'Задать порт прослушивания TLS на сервере клиентского доступа: Exchange 2013 Help'
+title: 'Exchange 2013: задание порта прослушивания TLS на сервере клиентского доступа'
 TOCTitle: Задать порт прослушивания TLS на сервере клиентского доступа
 ms:assetid: f4401923-61fa-4dc5-95f8-c0d2f515b2ea
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/JJ673576(v=EXCHG.150)

@@ -1,5 +1,5 @@
 ﻿---
-title: 'Разрешения высокого уровня доступности и устойчивости сайта: Exchange 2013 Help'
+title: 'Exchange 2013: разрешения высокого уровня доступности и устойчивости сайта'
 TOCTitle: Разрешения высокого уровня доступности и устойчивости сайта
 ms:assetid: 66085107-4d4d-41c3-a425-82314acd9eee
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Dd638136(v=EXCHG.150)

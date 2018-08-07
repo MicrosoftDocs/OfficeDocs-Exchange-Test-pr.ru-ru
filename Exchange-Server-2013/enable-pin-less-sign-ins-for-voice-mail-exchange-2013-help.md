@@ -1,5 +1,5 @@
 ﻿---
-title: 'Обеспечение входа в голосовую почту без необходимости вводить ПИН-код: Exchange 2013 Help'
+title: 'Exchange 2013: обеспечение входа в голосовую почту без введения ПИН-кода'
 TOCTitle: Обеспечение входа в голосовую почту без необходимости вводить ПИН-код
 ms:assetid: 54133753-317c-42ef-9b0d-ca9f2d2d6bd7
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Gg602127(v=EXCHG.150)

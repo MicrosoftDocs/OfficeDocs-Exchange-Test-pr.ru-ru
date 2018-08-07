@@ -1,5 +1,5 @@
 ﻿---
-title: 'Использование проверки подлинности OAuth для поддержки обнаружения электронных данных в гибридном развертывании Exchange: Exchange 2013 Help'
+title: 'Проверка подлинности OAuth для поддержки eDiscovery в гибридной среде Exchange'
 TOCTitle: Использование проверки подлинности OAuth для поддержки обнаружения электронных данных в гибридном развертывании Exchange
 ms:assetid: b069f8db-fbe1-4047-ad97-d00172ee6a12
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Dn497703(v=EXCHG.150)

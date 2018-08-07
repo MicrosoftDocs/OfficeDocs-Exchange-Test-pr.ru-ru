@@ -1,5 +1,5 @@
 ﻿---
-title: 'Включение и отключение поддержки почты для общедоступной папки: Exchange 2013 Help'
+title: 'Exchange 2013: включение и отключение поддержки почты для общедоступной папки'
 TOCTitle: Включение и отключение поддержки почты для общедоступной папки
 ms:assetid: 3d69f76d-ff3c-46c1-b962-6a1baa425d8a
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Aa997560(v=EXCHG.150)

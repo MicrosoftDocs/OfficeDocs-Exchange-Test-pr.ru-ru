@@ -1,5 +1,5 @@
 ﻿---
-title: 'Удаление абонентской группы единой системы обмена СООБЩЕНИЯМИ: Exchange 2013 Help'
+title: 'Exchange 2013: удаление абонентской группы единой системы обмена сообщениями'
 TOCTitle: Удаление абонентской группы единой системы обмена СООБЩЕНИЯМИ
 ms:assetid: c9b32ef6-432c-45ca-b94c-31bbcc973128
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Bb124546(v=EXCHG.150)

@@ -1,5 +1,5 @@
 ﻿---
-title: 'Настройте количество входящих вызовов на сервере почтовых ящиков: Exchange 2013 Help'
+title: 'Exchange 2013: настройка числа входящих вызовов на сервере почтовых ящиков'
 TOCTitle: Настройте количество входящих вызовов на сервере почтовых ящиков
 ms:assetid: 419e1de9-2bf8-48a8-824d-2a536b0a6d90
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Aa997637(v=EXCHG.150)

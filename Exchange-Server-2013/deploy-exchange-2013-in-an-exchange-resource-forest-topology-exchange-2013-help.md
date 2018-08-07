@@ -1,5 +1,5 @@
 ﻿---
-title: 'Развертывание Exchange 2013 в топологии леса ресурсов Exchange: Exchange 2013 Help'
+title: 'Развертывание Exchange 2013 в топологии леса ресурсов Exchange'
 TOCTitle: Развертывание Exchange 2013 в топологии леса ресурсов Exchange
 ms:assetid: 537a7b2b-d002-40a6-84ae-fd02635f9e23
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Aa998031(v=EXCHG.150)

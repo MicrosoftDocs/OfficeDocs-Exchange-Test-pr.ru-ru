@@ -1,5 +1,5 @@
 ﻿---
-title: 'Задание функций почтовых ящиков для пользователей голосового доступа к Outlook: Exchange 2013 Help'
+title: 'Exchange 2013: функции почтовых ящиков для голосового доступа к Outlook'
 TOCTitle: Задание функций почтовых ящиков для пользователей голосового доступа к Outlook
 ms:assetid: 10960bf0-65cf-4d0b-bae5-d203c53662db
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Aa996307(v=EXCHG.150)

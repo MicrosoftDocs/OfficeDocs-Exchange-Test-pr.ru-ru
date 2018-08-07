@@ -1,5 +1,5 @@
 ﻿---
-title: 'Локальный компьютер является контроллером домена domain_LocalComputerIsDCInChildDomain дочерних: Exchange 2013 Help'
+title: 'Локальный компьютер является контроллером домена для дочернего домена'
 TOCTitle: Локальный компьютер является контроллером домена domain_LocalComputerIsDCInChildDomain дочерних
 ms:assetid: 7db1dcc0-d953-41b8-b081-2a47a70950c4
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/ms.exch.setupreadiness.localcomputerisdcinchilddomain(v=EXCHG.150)

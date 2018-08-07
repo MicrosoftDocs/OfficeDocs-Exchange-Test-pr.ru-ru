@@ -1,5 +1,5 @@
 ﻿---
-title: 'Включите поддержку факсимильной связи для группы пользователей: Exchange 2013 Help'
+title: 'Exchange 2013: включение поддержки факсимильной связи для группы пользователей'
 TOCTitle: Включите поддержку факсимильной связи для группы пользователей
 ms:assetid: b8d9f54d-ff06-4942-83e1-fc6c4ad02178
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Ee423556(v=EXCHG.150)

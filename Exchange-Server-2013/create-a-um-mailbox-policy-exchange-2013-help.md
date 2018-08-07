@@ -1,5 +1,5 @@
 ﻿---
-title: 'Создание политики почтовых ящиков единой системы обмена сообщениями: Exchange 2013 Help'
+title: 'Справка по Exchange 2013: создание политики почтовых ящиков UM'
 TOCTitle: Создание политики почтовых ящиков единой системы обмена сообщениями
 ms:assetid: 7f20874b-c46c-4505-9a78-f63eacb578ff
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Bb123510(v=EXCHG.150)

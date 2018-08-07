@@ -1,5 +1,5 @@
 ﻿---
-title: 'Перед продолжением установки необходимо запустить службу "Система событий COM+"_EventSystemStopped: Exchange 2013 Help'
+title: 'Для продолжения установки необходимо запустить службу "Система событий COM+"'
 TOCTitle: Перед продолжением установки необходимо запустить службу "Система событий COM+"_EventSystemStopped
 ms:assetid: 3b8d2ba3-87fb-4749-b4d1-5dfec97e1ca4
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/ms.exch.setupreadiness.eventsystemstopped(v=EXCHG.150)

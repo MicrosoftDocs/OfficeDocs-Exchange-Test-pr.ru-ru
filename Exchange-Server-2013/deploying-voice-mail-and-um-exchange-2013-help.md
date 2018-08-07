@@ -1,5 +1,5 @@
 ﻿---
-title: 'Развертывание голосовой почты и единой системы обмена сообщениями: Exchange 2013 Help'
+title: 'Справка по Exchange 2013: развертывание голосовой почты и UM'
 TOCTitle: Развертывание голосовой почты и единой системы обмена сообщениями
 ms:assetid: 3df61b62-a1e4-41fb-969c-319189ae4e42
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/JJ673519(v=EXCHG.150)

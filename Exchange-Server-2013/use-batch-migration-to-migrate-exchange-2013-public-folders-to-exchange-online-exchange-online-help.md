@@ -1,5 +1,5 @@
 ﻿---
-title: 'Использование пакетной миграции для переноса общедоступных папок Exchange 2013 в Exchange Online: Exchange 2013 Help'
+title: 'Пакетный перенос общедоступных папок Exchange 2013 в Exchange Online'
 TOCTitle: Использование пакетной миграции для переноса общедоступных папок Exchange 2013 в Exchange Online
 ms:assetid: 25a5234c-dd2c-487b-8541-3655fbeb030a
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Mt798260(v=EXCHG.150)

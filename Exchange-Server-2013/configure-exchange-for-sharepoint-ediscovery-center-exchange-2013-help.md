@@ -1,5 +1,5 @@
 ﻿---
-title: 'Настройка Exchange для центра обнаружения электронных данных SharePoint: Exchange 2013 Help'
+title: 'Настройка Exchange 2013 для центра обнаружения электронных данных SharePoint'
 TOCTitle: Настройка Exchange для центра обнаружения электронных данных SharePoint
 ms:assetid: 795c1a3b-295c-4ee5-ade9-52cf3fda3f19
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/JJ218665(v=EXCHG.150)

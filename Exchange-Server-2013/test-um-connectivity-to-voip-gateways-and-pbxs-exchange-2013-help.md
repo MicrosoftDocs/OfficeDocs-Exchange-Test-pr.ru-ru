@@ -1,5 +1,5 @@
 ﻿---
-title: 'Проверка подключения единой системы обмена сообщениями к шлюзам VoIP и АТС: Exchange 2013 Help'
+title: 'Справка по Exchange 2013: проверка подключения UM к шлюзам VoIP и УАТС'
 TOCTitle: Проверка подключения единой системы обмена сообщениями к шлюзам VoIP и АТС
 ms:assetid: 2aca8631-a99a-4e29-aff0-e462385f03b2
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Aa996906(v=EXCHG.150)

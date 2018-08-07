@@ -1,5 +1,5 @@
 ﻿---
-title: 'Управление политикой почтовых ящиков единой системы обмена СООБЩЕНИЯМИ: Exchange 2013 Help'
+title: 'Exchange 2013: управление политикой почтовых ящиков UM'
 TOCTitle: Управление политикой почтовых ящиков единой системы обмена СООБЩЕНИЯМИ
 ms:assetid: 704b001c-3e6f-4ed5-bbe5-42a778f6ac0d
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Aa998829(v=EXCHG.150)

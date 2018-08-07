@@ -1,5 +1,5 @@
 ﻿---
-title: 'Указание учетных данных для средства устранения неполадок единой системы обмена сообщениями Exchange: Exchange 2013 Help'
+title: 'Указание учетных данных для средства устранения неполадок UM Exchange'
 TOCTitle: Указание учетных данных для средства устранения неполадок единой системы обмена сообщениями Exchange
 ms:assetid: 542b7718-9345-40cc-bcb2-e307e70a1fa2
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Ff630916(v=EXCHG.150)

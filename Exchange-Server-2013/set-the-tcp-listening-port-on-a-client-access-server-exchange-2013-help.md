@@ -1,5 +1,5 @@
 ﻿---
-title: 'Настройка TCP-порт прослушивания на сервере клиентского доступа: Exchange 2013 Help'
+title: 'Exchange 2013: настройка TCP-порта прослушивания на сервере CAS'
 TOCTitle: Настройка TCP-порт прослушивания на сервере клиентского доступа
 ms:assetid: 5f48f21a-d8d4-48b2-868f-9a3647693841
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/JJ673530(v=EXCHG.150)

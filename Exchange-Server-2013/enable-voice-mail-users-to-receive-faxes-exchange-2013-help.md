@@ -1,5 +1,5 @@
 ﻿---
-title: 'Обеспечение возможности получать факсы для пользователей голосовой почты: Exchange 2013 Help'
+title: 'Exchange 2013: возможность получать факсы для пользователей голосовой почты'
 TOCTitle: Обеспечение возможности получать факсы для пользователей голосовой почты
 ms:assetid: 451ab0ea-21e1-4c1f-ae62-4ba7cdfd1e4d
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Bb232022(v=EXCHG.150)

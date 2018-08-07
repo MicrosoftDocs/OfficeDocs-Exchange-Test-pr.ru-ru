@@ -1,5 +1,5 @@
 ﻿---
-title: 'Перевод почтового ящика в режим хранения для судебного разбирательства: Exchange 2013 Help'
+title: 'Exchange 2013: настройка хранения для судебного разбирательства'
 TOCTitle: Перевод почтового ящика в режим хранения для судебного разбирательства
 ms:assetid: adee4621-3626-4aec-aa53-00b35ff0d0b0
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Dn743673(v=EXCHG.150)

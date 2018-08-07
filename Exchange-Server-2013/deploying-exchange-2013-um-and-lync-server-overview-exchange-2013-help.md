@@ -1,5 +1,5 @@
 ﻿---
-title: 'Развертывание единой системы обмена сообщениями в Exchange 2013 и обзор Lync Server: Exchange 2013 Help'
+title: 'Справка по Exchange 2013: развертывание UM в Exchange 2013 и обзор Lync Server'
 TOCTitle: Развертывание единой системы обмена сообщениями в Exchange 2013 и обзор Lync Server
 ms:assetid: 96fcb0dd-79ee-4e55-9e59-3ee7fbe3c4a1
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Bb676409(v=EXCHG.150)

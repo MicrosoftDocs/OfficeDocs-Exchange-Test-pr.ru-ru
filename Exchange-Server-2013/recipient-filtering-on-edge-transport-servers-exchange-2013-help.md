@@ -1,5 +1,5 @@
 ﻿---
-title: 'Фильтрация получателей на пограничных транспортных серверах: Exchange 2013 Help'
+title: 'Exchange 2013: фильтрация получателей на пограничных транспортных серверах'
 TOCTitle: Фильтрация получателей на пограничных транспортных серверах
 ms:assetid: 994eefd9-3903-41e6-a882-1e333d6d2d18
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Bb123891(v=EXCHG.150)

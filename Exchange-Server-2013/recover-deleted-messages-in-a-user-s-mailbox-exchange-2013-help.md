@@ -1,5 +1,5 @@
 ﻿---
-title: 'Восстановление удаленных сообщений в почтовом ящике пользователя: Exchange 2013 Help'
+title: 'Exchange 2013: восстановление удаленных сообщений в почтовом ящике'
 TOCTitle: Восстановление удаленных сообщений в почтовом ящике пользователя
 ms:assetid: 9e0e34ce-efc5-454e-8d15-57b4da867f12
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Ff660637(v=EXCHG.150)

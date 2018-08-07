@@ -1,5 +1,5 @@
 ﻿---
-title: 'Установка роли пограничного транспортного сервера Exchange 2013 с помощью мастера установки: Exchange 2013 Help'
+title: 'Мастер для установки роли пограничного транспортного сервера Exchange 2013'
 TOCTitle: Установка роли пограничного транспортного сервера Exchange 2013 с помощью мастера установки
 ms:assetid: b8e51b0b-201e-4c64-92c8-3ac0db04b6e2
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Dn635117(v=EXCHG.150)

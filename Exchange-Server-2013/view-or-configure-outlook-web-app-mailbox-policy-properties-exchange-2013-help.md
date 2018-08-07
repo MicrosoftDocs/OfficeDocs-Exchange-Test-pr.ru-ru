@@ -1,5 +1,5 @@
 ﻿---
-title: 'Просмотр и настройка свойств политики почтовых ящиков Outlook Web App: Exchange 2013 Help'
+title: 'Просмотр и настройка свойств политики почтовых ящиков Outlook Web App'
 TOCTitle: Просмотр и настройка свойств политики почтовых ящиков Outlook Web App
 ms:assetid: be012ffe-8fdb-4fb7-aebd-78b3a55593fa
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Dd351097(v=EXCHG.150)

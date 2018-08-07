@@ -1,5 +1,5 @@
 ﻿---
-title: 'Изменение записи роли в роли верхнего уровня с незаданной областью: Exchange 2013 Help'
+title: 'Exchange 2013: изменение записи для роли верхнего уровня с незаданной областью'
 TOCTitle: Изменение записи роли в роли верхнего уровня с незаданной областью
 ms:assetid: 65c0bfb3-aafd-4c64-8429-7616c57adf1c
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Dd876896(v=EXCHG.150)

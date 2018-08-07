@@ -1,5 +1,5 @@
 ﻿---
-title: 'Сетевые порты для клиентов и потока обработки почты в Exchange 2013: Exchange 2013 Help'
+title: 'Сетевые порты для клиентов и потока обработки почты в Exchange 2013'
 TOCTitle: Сетевые порты для клиентов и потока обработки почты в Exchange 2013
 ms:assetid: fec09455-e99e-42eb-8b32-1ddc08d9a19e
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Bb331973(v=EXCHG.150)

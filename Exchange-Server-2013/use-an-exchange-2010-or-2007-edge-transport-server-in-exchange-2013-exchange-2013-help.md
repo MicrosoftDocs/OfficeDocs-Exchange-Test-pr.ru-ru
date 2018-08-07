@@ -1,5 +1,5 @@
 ﻿---
-title: 'Использование пограничного транспортного сервера Exchange 2010 или 2007 в Exchange 2013: Exchange 2013 Help'
+title: 'Пограничный транспортный сервер Exchange 2010 или 2007 в Exchange 2013'
 TOCTitle: Использование пограничного транспортного сервера Exchange 2010 или 2007 в Exchange 2013
 ms:assetid: ce99b4bd-868c-4767-9009-e22c17ac0ac7
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/JJ150569(v=EXCHG.150)

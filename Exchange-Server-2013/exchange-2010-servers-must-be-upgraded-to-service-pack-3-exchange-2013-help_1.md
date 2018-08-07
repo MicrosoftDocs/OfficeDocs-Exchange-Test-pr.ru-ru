@@ -1,5 +1,5 @@
 ﻿---
-title: 'Серверы Exchange 2010 необходимо обновить до пакета обновления 3: Exchange 2013 Help'
+title: 'Exchange 2013: серверы Exchange 2010 требуют установки пакета обновления 3'
 TOCTitle: Серверы Exchange 2010 необходимо обновить до пакета обновления 3
 ms:assetid: 06f99869-79a2-4ac4-b947-b71430b178ad
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/ms.exch.setupreadiness.e15e14coexistenceminmajorversionrequirement(v=EXCHG.150)

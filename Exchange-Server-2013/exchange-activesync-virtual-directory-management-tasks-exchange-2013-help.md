@@ -1,5 +1,5 @@
 ﻿---
-title: 'Задачи управления виртуального каталога Exchange ActiveSync: Exchange 2013 Help'
+title: 'Exchange 2013: задачи управления виртуальным каталогом Exchange ActiveSync'
 TOCTitle: Задачи управления виртуального каталога Exchange ActiveSync
 ms:assetid: f0b339b7-e184-4392-a133-20523183459d
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Bb125170(v=EXCHG.150)

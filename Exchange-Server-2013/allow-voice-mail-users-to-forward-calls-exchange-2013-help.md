@@ -1,5 +1,5 @@
 ﻿---
-title: 'Включение переадресации вызовов для пользователей голосовой почты: Exchange 2013 Help'
+title: 'Exchange 2013: включение переадресации вызовов для голосовой почты'
 TOCTitle: Включение переадресации вызовов для пользователей голосовой почты
 ms:assetid: 1f8e0a53-3d9d-4f8c-9be3-9f1e2a4347a3
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Dd335138(v=EXCHG.150)

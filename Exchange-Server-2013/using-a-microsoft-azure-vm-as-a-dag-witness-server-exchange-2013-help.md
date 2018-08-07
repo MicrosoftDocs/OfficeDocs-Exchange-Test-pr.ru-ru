@@ -1,5 +1,5 @@
 ﻿---
-title: 'Использование виртуальной машины Microsoft Azure в качестве следящего сервера DAG: Exchange 2013 Help'
+title: 'Справка по Exchange 2013: ВМ Microsoft Azure в качестве следящего сервера DAG'
 TOCTitle: Использование виртуальной машины Microsoft Azure в качестве следящего сервера DAG
 ms:assetid: 03d1e215-518b-4b48-bfcd-8d187ff8f5ef
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Dn903504(v=EXCHG.150)

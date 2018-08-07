@@ -1,5 +1,5 @@
 ﻿---
-title: 'Поддержка протокола IPv6 в единой системе обмена сообщениями: Exchange 2013 Help'
+title: 'Exchange 2013: поддержка протокола IPv6 в единой системе обмена сообщениями'
 TOCTitle: Поддержка протокола IPv6 в единой системе обмена сообщениями
 ms:assetid: 91242c85-ce4e-422a-954e-ab623d3d6939
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/JJ150536(v=EXCHG.150)

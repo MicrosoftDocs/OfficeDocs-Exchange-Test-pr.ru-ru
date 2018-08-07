@@ -1,5 +1,5 @@
 ﻿---
-title: 'Управление членством в группе обеспечения доступности баз данных: Exchange 2013 Help'
+title: 'Exchange 2013: управление членством группы обеспечения доступности баз данных'
 TOCTitle: Управление членством в группе обеспечения доступности баз данных
 ms:assetid: fb2ea15e-96d5-4045-b75b-b0aa5fc60479
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Dd351278(v=EXCHG.150)

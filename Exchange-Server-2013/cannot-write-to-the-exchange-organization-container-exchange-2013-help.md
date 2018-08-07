@@ -1,5 +1,5 @@
 ﻿---
-title: 'Не удается выполнить запись в контейнер организации Exchange: Exchange 2013 Help'
+title: 'Exchange 2013: не удается выполнить запись в контейнер организации Exchange'
 TOCTitle: Не удается выполнить запись в контейнер организации Exchange
 ms:assetid: 17c4667b-7db1-4e0a-b824-1f6d51d980a9
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/ms.exch.setupreadiness.globalserverinstall(v=EXCHG.150)

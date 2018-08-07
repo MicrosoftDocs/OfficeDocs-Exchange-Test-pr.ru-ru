@@ -1,5 +1,5 @@
 ﻿---
-title: 'Подключение к телефонной системе единой системы обмена СООБЩЕНИЯМИ: Exchange 2013 Help'
+title: 'Справка по Exchange 2013: подключение UM к телефонной системе'
 TOCTitle: Подключение к телефонной системе единой системы обмена СООБЩЕНИЯМИ
 ms:assetid: 92c3e029-f732-4d6d-b147-2b3006d5f088
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/JJ673544(v=EXCHG.150)

@@ -1,5 +1,5 @@
 ﻿---
-title: 'Процедуры плана телефонным единой системы обмена СООБЩЕНИЯМИ: Exchange 2013 Help'
+title: 'Справка по Exchange 2013: процедуры абонентской группы UM'
 TOCTitle: Процедуры плана телефонным единой системы обмена СООБЩЕНИЯМИ
 ms:assetid: 1bda77c8-c4e2-4ae0-a001-76ae029bf843
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/JJ822152(v=EXCHG.150)

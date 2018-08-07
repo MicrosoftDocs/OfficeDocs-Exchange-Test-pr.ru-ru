@@ -1,5 +1,5 @@
 ﻿---
-title: 'Наследование списка управления доступом (ACL) заблокировано_InhBlockPublicFolderTree: Exchange 2013 Help'
+title: 'Наследование списков управления доступом (ACL) заблокировано'
 TOCTitle: Наследование списка управления доступом (ACL) заблокировано_InhBlockPublicFolderTree
 ms:assetid: e3b89c8a-d6f8-4864-8bf0-35a78ce87cc4
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/ms.exch.setupreadiness.inhblockpublicfoldertree(v=EXCHG.150)

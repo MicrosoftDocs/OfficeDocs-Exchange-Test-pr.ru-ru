@@ -1,5 +1,5 @@
 ﻿---
-title: 'Настройка параметров формата получения сообщений для протоколов POP3 и IMAP4: Exchange 2013 Help'
+title: 'Exchange 2013: настройка параметров формата получения сообщений (POP3 и IMAP4)'
 TOCTitle: Настройка параметров формата получения сообщений для протоколов POP3 и IMAP4
 ms:assetid: 481096e0-4492-46c2-8ca8-bdf84a84531e
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Aa997869(v=EXCHG.150)

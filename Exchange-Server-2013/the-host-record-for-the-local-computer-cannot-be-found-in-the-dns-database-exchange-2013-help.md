@@ -1,5 +1,5 @@
 ﻿---
-title: 'Невозможно найти запись узла для локального компьютера в базе данных DNS: Exchange 2013 Help'
+title: 'Не удается найти запись узла для локального компьютера в базе данных DNS'
 TOCTitle: Невозможно найти запись узла для локального компьютера в базе данных DNS
 ms:assetid: 2f18cb65-29fe-4b72-8d68-52fd503d5673
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/ms.exch.setupreadiness.hostrecordmissing(v=EXCHG.150)

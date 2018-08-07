@@ -1,5 +1,5 @@
 ﻿---
-title: 'Требуется компонент "Служба активации Windows — Модель процесса"_LonghornWASProcessModelInstalled: Exchange 2013 Help'
+title: 'Требуется компонент "Служба активации Windows: модель процесса"'
 TOCTitle: Требуется компонент "Служба активации Windows — Модель процесса"_LonghornWASProcessModelInstalled
 ms:assetid: 8cc13dbb-4921-4c07-8602-d26613d7730a
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/ms.exch.setupreadiness.longhornwasprocessmodelinstalled(v=EXCHG.150)

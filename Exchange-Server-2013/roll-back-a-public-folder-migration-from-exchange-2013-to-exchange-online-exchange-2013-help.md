@@ -1,5 +1,5 @@
 ﻿---
-title: 'Откат миграции общедоступных папок с Exchange 2013 до Exchange Online: Exchange 2013 Help'
+title: 'Откат переноса в Exchange Online общедоступных папок Exchange 2013'
 TOCTitle: Откат миграции общедоступных папок с Exchange 2013 до Exchange Online
 ms:assetid: bcd54aa0-aa45-4c68-b504-1475842d4b96
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Mt798259(v=EXCHG.150)

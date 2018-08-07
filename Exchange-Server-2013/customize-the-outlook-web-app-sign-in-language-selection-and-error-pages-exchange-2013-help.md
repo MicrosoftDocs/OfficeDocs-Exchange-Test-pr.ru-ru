@@ -1,5 +1,5 @@
 ﻿---
-title: 'Настройка страниц ошибок, входа и выбора языка в Outlook Web App: Exchange 2013 Help'
+title: 'Настройка страниц ошибок, входа и выбора языка для Outlook Web App'
 TOCTitle: Настройка страниц ошибок, входа и выбора языка в Outlook Web App
 ms:assetid: d8d9f735-7181-428f-9049-b9886dce5159
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Ee633483(v=EXCHG.150)

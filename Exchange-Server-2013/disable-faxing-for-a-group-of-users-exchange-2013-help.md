@@ -1,5 +1,5 @@
 ﻿---
-title: 'Отключение, отправка и прием факсов для группы пользователей: Exchange 2013 Help'
+title: 'Справка по Exchange 2013: отключение отправки факсов для группы пользователей'
 TOCTitle: Отключение, отправка и прием факсов для группы пользователей
 ms:assetid: 1c57c3ba-2b0e-43dd-9b28-43bada1592c5
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/JJ650864(v=EXCHG.150)

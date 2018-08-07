@@ -1,5 +1,5 @@
 ﻿---
-title: 'Настройка ограничений доставки сообщений для почтового ящика: Exchange 2013 Help'
+title: 'Exchange 2013: настройка ограничений доставки сообщений для почтового ящика'
 TOCTitle: Настройка ограничений доставки сообщений для почтового ящика
 ms:assetid: c4b8b89f-3dbe-4cb8-8839-9a4e8067e00c
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Bb397214(v=EXCHG.150)

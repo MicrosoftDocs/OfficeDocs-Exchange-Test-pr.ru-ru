@@ -1,5 +1,5 @@
 ﻿---
-title: 'Политика обмена сообщениями и разрешения для соответствия требованиям: Exchange 2013 Help'
+title: 'Exchange 2013: разрешения для политики сообщений и соответствия требованиям'
 TOCTitle: Политика обмена сообщениями и разрешения для соответствия требованиям
 ms:assetid: ec4d3b9f-b85a-4cb9-95f5-6fc149c3899b
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Dd638205(v=EXCHG.150)

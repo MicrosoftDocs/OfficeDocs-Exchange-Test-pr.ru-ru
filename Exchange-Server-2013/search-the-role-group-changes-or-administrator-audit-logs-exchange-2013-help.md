@@ -1,5 +1,5 @@
 ﻿---
-title: 'Поиск изменений группы ролей или журналов аудита администраторов: Exchange 2013 Help'
+title: 'Exchange 2013: поиск изменений группы ролей и журналов аудита администраторов'
 TOCTitle: Поиск изменений группы ролей или журналов аудита администраторов
 ms:assetid: c7188d53-e672-492b-b57d-cd711379ddb3
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Ff459262(v=EXCHG.150)

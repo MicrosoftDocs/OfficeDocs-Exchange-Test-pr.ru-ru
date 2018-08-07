@@ -1,5 +1,5 @@
 ﻿---
-title: 'Тестирование и устранение неполадок с помощью командлета Test-UMConnectivity: Exchange 2013 Help'
+title: 'Тестирование и устранение неполадок с помощью командлета Test-UMConnectivity'
 TOCTitle: Тестирование и устранение неполадок с помощью командлета Test-UMConnectivity
 ms:assetid: 08e67a99-e37f-4afd-bd58-455b62580af7
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Aa995978(v=EXCHG.150)

@@ -1,5 +1,5 @@
 ﻿---
-title: 'Недостаточно прав для подготовки Active Directory_DomainPrepWithoutADUpdate: Exchange 2013 Help'
+title: 'Не достаточно прав для подготовки Active Directory'
 TOCTitle: Недостаточно прав для подготовки Active Directory_DomainPrepWithoutADUpdate
 ms:assetid: 4283c4b9-983f-460e-a5de-42b2772eae0d
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/ms.exch.setupreadiness.domainprepwithoutadupdate(v=EXCHG.150)

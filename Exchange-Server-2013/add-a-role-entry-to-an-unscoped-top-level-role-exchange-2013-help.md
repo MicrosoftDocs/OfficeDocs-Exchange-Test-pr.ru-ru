@@ -1,5 +1,5 @@
 ﻿---
-title: 'Добавление записи роли в роль верхнего уровня с незаданной областью: Exchange 2013 Help'
+title: 'Exchange 2013: добавление записи роли верхнего уровня с незаданной областью'
 TOCTitle: Добавление записи роли в роль верхнего уровня с незаданной областью
 ms:assetid: 52fd3f20-c348-49d5-9bdb-f2cbf780cf2d
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Dd979789(v=EXCHG.150)

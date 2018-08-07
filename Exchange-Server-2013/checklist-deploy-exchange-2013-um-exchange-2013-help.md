@@ -1,5 +1,5 @@
 ﻿---
-title: 'Контрольный список: Развертывание единой системы обмена сообщениями Exchange 2013: Exchange 2013 Help'
+title: 'Справка по Exchange 2013: развертывание UM Exchange 2013'
 TOCTitle: 'Контрольный список: Развертывание единой системы обмена сообщениями Exchange 2013'
 ms:assetid: 41b666a2-0d0d-471f-90a3-07c3c562af85
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/JJ673520(v=EXCHG.150)

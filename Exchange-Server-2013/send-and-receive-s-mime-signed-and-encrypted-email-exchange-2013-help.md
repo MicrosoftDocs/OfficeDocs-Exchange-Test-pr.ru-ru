@@ -1,5 +1,5 @@
 ﻿---
-title: 'Отправка и получение электронной почты, подписанной и зашифрованной с помощью S/MIME: Exchange 2013 Help'
+title: 'Exchange 2013: отправка и получение подписанных и зашифрованных писем S/MIME'
 TOCTitle: Отправка и получение электронной почты, подписанной и зашифрованной с помощью S/MIME
 ms:assetid: 1ce37ada-0a80-4b47-8611-d008979589ff
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Dn626157(v=EXCHG.150)

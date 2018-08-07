@@ -1,5 +1,5 @@
 ﻿---
-title: 'Удаление политики почтовых ящиков единой системы обмена СООБЩЕНИЯМИ: Exchange 2013 Help'
+title: 'Справка по Exchange 2013: удаление политики почтовых ящиков UM'
 TOCTitle: Удаление политики почтовых ящиков единой системы обмена СООБЩЕНИЯМИ
 ms:assetid: c8758464-3c52-4dd3-b2a6-142a99bb0628
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Bb124536(v=EXCHG.150)

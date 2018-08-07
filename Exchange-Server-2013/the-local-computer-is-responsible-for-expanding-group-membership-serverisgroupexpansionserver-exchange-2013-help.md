@@ -1,5 +1,5 @@
 ﻿---
-title: 'Локальный компьютер несет ответственность за развертывание membership_ServerIsGroupExpansionServer группы: Exchange 2013 Help'
+title: 'Локальный компьютер несет ответственность за расширение членства группы'
 TOCTitle: Локальный компьютер несет ответственность за развертывание membership_ServerIsGroupExpansionServer группы
 ms:assetid: 52872561-60e6-4f3d-bbc6-6de0edf74b09
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/ms.exch.setupreadiness.serverisgroupexpansionserver(v=EXCHG.150)

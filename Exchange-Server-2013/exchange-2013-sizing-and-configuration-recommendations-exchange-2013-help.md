@@ -1,5 +1,5 @@
 ﻿---
-title: 'Рекомендации по выбору размера развертывания Exchange 2013 и его настройке: Exchange 2013 Help'
+title: 'Рекомендации по масштабированию и настройке Exchange 2013'
 TOCTitle: Рекомендации по выбору размера развертывания Exchange 2013 и его настройке
 ms:assetid: 4c4ba2fc-014a-46fb-949a-2dabba92c4a5
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Dn879075(v=EXCHG.150)

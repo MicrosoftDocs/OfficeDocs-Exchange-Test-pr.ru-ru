@@ -1,5 +1,5 @@
 ﻿---
-title: 'Терминология единой системы обмена сообщениями и голосовой почты: Exchange 2013 Help'
+title: 'Справка по Exchange 2013: терминология UM и голосовой почты'
 TOCTitle: Терминология единой системы обмена сообщениями и голосовой почты
 ms:assetid: 3a6d93f2-1802-4aed-8b83-35c7fd004d0c
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Ee633462(v=EXCHG.150)

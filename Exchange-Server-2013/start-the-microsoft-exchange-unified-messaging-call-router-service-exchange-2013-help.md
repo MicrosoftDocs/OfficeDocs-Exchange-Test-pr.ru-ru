@@ -1,5 +1,5 @@
 ﻿---
-title: 'Запуск службы единой системы обмена сообщениями маршрутизатора вызовов Microsoft Exchange: Exchange 2013 Help'
+title: 'Запуск службы маршрутизатора вызовов для единой системы обмена сообщениями'
 TOCTitle: Запуск службы единой системы обмена сообщениями маршрутизатора вызовов Microsoft Exchange
 ms:assetid: 8b7e1a4c-87b3-4477-a95f-6b41cf2d38f0
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/JJ673542(v=EXCHG.150)

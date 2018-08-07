@@ -1,5 +1,5 @@
 ﻿---
-title: 'Планирование использования сайтов Active Directory для маршрутизации почты: Exchange 2013 Help'
+title: 'Exchange 2013: планирование использования сайтов AD для маршрутизации почты'
 TOCTitle: Планирование использования сайтов Active Directory для маршрутизации почты
 ms:assetid: 0f697cee-bcaa-4c69-b80c-7a2afd1817d2
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Aa996299(v=EXCHG.150)

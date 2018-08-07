@@ -1,5 +1,5 @@
 ﻿---
-title: 'Языки, приглашения и приветствия единой системы обмена сообщениями: Exchange 2013 Help'
+title: 'Справка по Exchange 2013: языки, приглашения и приветствия UM'
 TOCTitle: Языки, приглашения и приветствия единой системы обмена сообщениями
 ms:assetid: d48df962-9669-420b-838f-44bfe1012e2f
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Bb124728(v=EXCHG.150)

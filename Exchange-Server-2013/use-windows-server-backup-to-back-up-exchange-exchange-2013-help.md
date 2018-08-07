@@ -1,5 +1,5 @@
 ﻿---
-title: 'Использование системы архивации данных Windows Server для резервного копирования в Exchange: Exchange 2013 Help'
+title: 'Применение системы архивации данных Windows Server к данным Exchange 2013'
 TOCTitle: Использование системы архивации данных Windows Server для резервного копирования в Exchange
 ms:assetid: 188a8291-0a41-4ca2-b6d2-94242e2b1ffc
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Dd876854(v=EXCHG.150)

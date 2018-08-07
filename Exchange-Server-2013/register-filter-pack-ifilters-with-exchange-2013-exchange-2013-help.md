@@ -1,5 +1,5 @@
 ﻿---
-title: 'Регистрация фильтров IFilter из пакета фильтров с помощью Exchange 2013: Exchange 2013 Help'
+title: 'Регистрация IFilter из пакета фильтров в Exchange 2013'
 TOCTitle: Регистрация фильтров IFilter из пакета фильтров с помощью Exchange 2013
 ms:assetid: 0338980f-3a64-49d3-bc3c-bf6f10f88cb4
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/JJ837174(v=EXCHG.150)

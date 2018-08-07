@@ -1,5 +1,5 @@
 ﻿---
-title: 'Экспорт результатов поиска при обнаружении электронных данных в PST-файл: Exchange 2013 Help'
+title: 'Exchange 2013: экспорт результатов обнаружения электронных данных в PST-файл'
 TOCTitle: Экспорт результатов поиска при обнаружении электронных данных в PST-файл
 ms:assetid: bc47f5f9-d056-4b69-b669-ae65fad541c8
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Dn440164(v=EXCHG.150)

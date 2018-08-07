@@ -1,5 +1,5 @@
 ﻿---
-title: 'Создание сертификатов для единой системы обмена сообщениями: Exchange 2013 Help'
+title: 'Exchange 2013: создание сертификатов для единой системы обмена сообщениями'
 TOCTitle: Создание сертификатов для единой системы обмена сообщениями
 ms:assetid: 66807ee7-3d3f-482d-a3ac-d4e9baca3271
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Dn205141(v=EXCHG.150)

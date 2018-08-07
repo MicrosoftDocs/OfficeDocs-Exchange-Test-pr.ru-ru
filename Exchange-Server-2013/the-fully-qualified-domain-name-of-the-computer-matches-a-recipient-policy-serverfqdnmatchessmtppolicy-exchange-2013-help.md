@@ -1,5 +1,5 @@
 ﻿---
-title: 'Соответствие полного доменного имени компьютера политике_ServerFQDNMatchesSMTPPolicy получателя: Exchange 2013 Help'
+title: 'Соответствие полного доменного имени компьютера политике получателя'
 TOCTitle: Соответствие полного доменного имени компьютера политике_ServerFQDNMatchesSMTPPolicy получателя
 ms:assetid: f3ea61f8-1788-4cbf-814e-f7c088c1ac47
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/ms.exch.setupreadiness.serverfqdnmatchessmtppolicy(v=EXCHG.150)

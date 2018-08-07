@@ -1,5 +1,5 @@
 ﻿---
-title: 'Помощь в определении проблемы с помощью автоматических проверок — Active Directory: Exchange 2013 Help'
+title: 'Active Directory: определение проблемы с помощью автоматических проверок'
 TOCTitle: Помощь в определении проблемы с помощью автоматических проверок — Active Directory
 ms:assetid: af08e7a1-775a-4e56-a6fe-4ffc10460514
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Dn793979(v=EXCHG.150)

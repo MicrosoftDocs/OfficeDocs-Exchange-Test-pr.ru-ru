@@ -1,5 +1,5 @@
 ﻿---
-title: 'Экспорт типов конфиденциальных сведений DLP из Exchange 2013: Exchange 2013 Help'
+title: 'Экспорт типов конфиденциальных данных DLP из Exchange 2013'
 TOCTitle: Экспорт типов конфиденциальных сведений DLP из Exchange
 ms:assetid: 8f02fbc2-dd1c-4276-be1a-517a43fe39b2
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Dn479225(v=EXCHG.150)

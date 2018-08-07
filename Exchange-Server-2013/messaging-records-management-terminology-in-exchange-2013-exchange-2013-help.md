@@ -1,5 +1,5 @@
 ﻿---
-title: 'Записями сообщений в терминология управления в Exchange 2013: Exchange 2013 Help'
+title: 'Терминология для управления записями сообщений в Exchange 2013'
 TOCTitle: Записями сообщений в терминология управления в Exchange 2013
 ms:assetid: de3e3503-6de3-4666-aeb9-cd877efb93bb
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Bb408414(v=EXCHG.150)

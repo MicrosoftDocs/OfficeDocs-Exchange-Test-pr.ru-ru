@@ -1,5 +1,5 @@
 ﻿---
-title: 'Какие изменения происходят в Active Directory при установке Exchange 2013?: Exchange 2013 Help'
+title: 'Какие изменения происходят в Active Directory при установке Exchange 2013'
 TOCTitle: Какие изменения происходят в Active Directory при установке Exchange 2013?
 ms:assetid: 07386078-6103-49a2-8698-2d41db9cec95
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Dn750898(v=EXCHG.150)

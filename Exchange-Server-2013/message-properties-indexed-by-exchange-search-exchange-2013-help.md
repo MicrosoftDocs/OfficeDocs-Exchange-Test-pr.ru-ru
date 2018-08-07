@@ -1,5 +1,5 @@
 ﻿---
-title: 'Свойства сообщений, индексированные службой поиска Exchange: Exchange 2013 Help'
+title: 'Exchange 2013: свойства сообщений, индексированные службой поиска Exchange'
 TOCTitle: Свойства сообщений, индексированные службой поиска Exchange
 ms:assetid: a9754dc1-44aa-4076-8b59-a5d39246d5b0
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/JJ983804(v=EXCHG.150)

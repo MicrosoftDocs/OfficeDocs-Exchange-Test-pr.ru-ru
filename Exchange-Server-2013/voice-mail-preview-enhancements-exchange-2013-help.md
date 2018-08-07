@@ -1,5 +1,5 @@
 ﻿---
-title: 'Предварительная версия расширение возможностей голосовой почты: Exchange 2013 Help'
+title: 'Справка по Exchange 2013: расширение возможностей просмотра голосовой почты'
 TOCTitle: Предварительная версия расширение возможностей голосовой почты
 ms:assetid: 1fcccec1-4edc-40b8-948c-111647d7d770
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/JJ150501(v=EXCHG.150)

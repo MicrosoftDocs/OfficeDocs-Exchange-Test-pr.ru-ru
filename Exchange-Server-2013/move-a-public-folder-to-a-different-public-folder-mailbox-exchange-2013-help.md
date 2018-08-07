@@ -1,5 +1,5 @@
 ﻿---
-title: 'Перемещение общедоступной папки в другой почтовый ящик общедоступной папки: Exchange 2013 Help'
+title: 'Exchange 2013: перемещение общедоступной папки в другой почтовый ящик'
 TOCTitle: Перемещение общедоступной папки в другой почтовый ящик общедоступной папки
 ms:assetid: b8744934-a3cb-443e-acce-a9a6ca5d88f6
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/JJ906435(v=EXCHG.150)

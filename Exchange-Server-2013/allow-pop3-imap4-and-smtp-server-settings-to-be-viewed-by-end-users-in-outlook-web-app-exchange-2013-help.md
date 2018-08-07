@@ -1,5 +1,5 @@
 ﻿---
-title: 'Предоставление пользователям возможности просматривать параметры сервера POP3, IMAP4 и SMTP в Outlook Web App: Exchange 2013 Help'
+title: 'Разрешение на просмотр параметров серверов POP3, IMAP4, SMTP в Outlook Web App'
 TOCTitle: Предоставление пользователям возможности просматривать параметры сервера POP3, IMAP4 и SMTP в Outlook Web App
 ms:assetid: bd22bf7e-3bf7-45e6-8790-919b780166f6
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Gg298947(v=EXCHG.150)

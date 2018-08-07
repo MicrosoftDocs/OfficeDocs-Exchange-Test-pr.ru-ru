@@ -1,5 +1,5 @@
 ﻿---
-title: 'Просмотр отчетов об обнаружении политик защиты от потери данных: Exchange 2013 Help'
+title: 'Exchange 2013: просмотр отчетов об обнаружении политик защиты от потери данных'
 TOCTitle: Просмотр отчетов об обнаружении политик защиты от потери данных
 ms:assetid: 5c3f1cf6-d8c7-4d83-bb24-641ea9d50cbc
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/JJ150520(v=EXCHG.150)

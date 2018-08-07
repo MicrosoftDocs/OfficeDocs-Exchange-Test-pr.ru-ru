@@ -1,5 +1,5 @@
 ﻿---
-title: 'Разрешение или запрет отправки сообщений голосовой почты из голосового доступа к Outlook: Exchange 2013 Help'
+title: 'Голосовой доступ к Outlook: разрешение и запрет отправки голосовых сообщений'
 TOCTitle: Разрешение или запрет отправки сообщений голосовой почты из голосового доступа к Outlook
 ms:assetid: 63544ae2-6a28-40b2-82fc-3df83e93ee56
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Ee423546(v=EXCHG.150)

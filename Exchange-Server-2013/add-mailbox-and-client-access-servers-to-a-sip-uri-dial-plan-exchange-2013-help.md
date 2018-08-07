@@ -1,5 +1,5 @@
 ﻿---
-title: 'Добавьте серверы клиентского доступа и почтовых ящиков для абонентской группы SIP URI: Exchange 2013 Help'
+title: 'Серверы клиентского доступа и почтовых ящиков для абонентской группы SIP URI'
 TOCTitle: Добавьте серверы клиентского доступа и почтовых ящиков для абонентской группы SIP URI
 ms:assetid: 17fed308-ff0d-4e61-b9f9-e6680b6eccaa
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Aa996399(v=EXCHG.150)

@@ -1,5 +1,5 @@
 ﻿---
-title: 'Настройка функции почтового ящика для пользователя с голосовой доступ к Outlook: Exchange 2013 Help'
+title: 'Задание функций почтового ящика Exchange 2013 для голосового доступа к Outlook'
 TOCTitle: Настройка функции почтового ящика для пользователя с голосовой доступ к Outlook
 ms:assetid: a56bfd75-7bc5-49b9-b098-06855a720dcd
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Bb124030(v=EXCHG.150)

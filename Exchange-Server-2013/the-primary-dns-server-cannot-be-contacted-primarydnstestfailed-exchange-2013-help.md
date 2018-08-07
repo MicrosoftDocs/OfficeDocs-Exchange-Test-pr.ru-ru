@@ -1,5 +1,5 @@
 ﻿---
-title: 'Не удалось связаться с основным сервером DNS_PrimaryDNSTestFailed: Exchange 2013 Help'
+title: 'Не удалось связаться с основным сервером DNS'
 TOCTitle: Не удалось связаться с основным сервером DNS_PrimaryDNSTestFailed
 ms:assetid: 5b39cb64-c8f1-4fd3-843b-ecd23f99fe3a
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/ms.exch.setupreadiness.primarydnstestfailed(v=EXCHG.150)

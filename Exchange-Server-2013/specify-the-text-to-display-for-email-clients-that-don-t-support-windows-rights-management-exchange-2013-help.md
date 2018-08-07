@@ -1,5 +1,5 @@
 ﻿---
-title: 'Задать текст, отображаемый для клиентов электронной почты, не поддерживающие службу управления правами Windows: Exchange 2013 Help'
+title: 'Указание текста для клиентов почты без поддержки Windows Rights Management'
 TOCTitle: Задать текст, отображаемый для клиентов электронной почты, не поддерживающие службу управления правами Windows
 ms:assetid: a9b2238a-b534-469c-a0c3-2768bc3d005b
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Ee423552(v=EXCHG.150)

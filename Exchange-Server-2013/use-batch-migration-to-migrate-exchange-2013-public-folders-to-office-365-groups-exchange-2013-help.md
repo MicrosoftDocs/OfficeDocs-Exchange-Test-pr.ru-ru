@@ -1,5 +1,5 @@
 ﻿---
-title: 'Использование пакетной миграции для переноса общедоступных папок Exchange 2013 в группы Office 365: Exchange 2013 Help'
+title: 'Пакетный перенос общедоступных папок Exchange 2013 в "Группы Office 365"'
 TOCTitle: Использование пакетной миграции для переноса общедоступных папок Exchange 2013 в группы Office 365
 ms:assetid: 1d800576-957d-4916-ae2a-55c08ca75be1
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Mt843873(v=EXCHG.150)
