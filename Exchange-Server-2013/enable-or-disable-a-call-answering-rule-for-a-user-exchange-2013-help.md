@@ -1,5 +1,5 @@
 ﻿---
-title: 'Включение и отключение правила автоответчика для пользователя: Exchange 2013 Help'
+title: 'Exchange 2013: включение и отключение правила автоответчика для пользователя'
 TOCTitle: Включение и отключение правила автоответчика для пользователя
 ms:assetid: f9e40ac3-117f-44f6-9ab1-dc9f4c72e8ac
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Dn140252(v=EXCHG.150)

@@ -1,5 +1,5 @@
 ﻿---
-title: 'Настройка проверки подлинности OAuth между организациями Exchange и Exchange Online: Exchange 2013 Help'
+title: 'Настройка проверки подлинности OAuth между Exchange и Exchange Online'
 TOCTitle: Настройка проверки подлинности OAuth между организациями Exchange и Exchange Online
 ms:assetid: f703e153-98e2-4268-8a6e-07a86b0a1d22
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Dn594521(v=EXCHG.150)

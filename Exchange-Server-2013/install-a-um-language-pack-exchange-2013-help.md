@@ -1,5 +1,5 @@
 ﻿---
-title: 'Установка языкового пакета единой системы обмена сообщениями: Exchange 2013 Help'
+title: 'Справка по Exchange 2013: установка языкового пакета UM'
 TOCTitle: Установка языкового пакета единой системы обмена сообщениями
 ms:assetid: ed14ffa5-c9b0-4367-b5da-564024b360ff
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Dd876951(v=EXCHG.150)

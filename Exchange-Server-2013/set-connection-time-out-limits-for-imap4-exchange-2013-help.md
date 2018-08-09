@@ -1,5 +1,5 @@
 ﻿---
-title: 'Установка для протокола IMAP4 пределов времени ожидания подключения: Exchange 2013 Help'
+title: 'Exchange 2013: установка для IMAP4 пределов времени ожидания подключения'
 TOCTitle: Установка для протокола IMAP4 пределов времени ожидания подключения
 ms:assetid: 6b6a5bd1-a878-4a70-8e21-14d5042a58f1
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Aa998665(v=EXCHG.150)

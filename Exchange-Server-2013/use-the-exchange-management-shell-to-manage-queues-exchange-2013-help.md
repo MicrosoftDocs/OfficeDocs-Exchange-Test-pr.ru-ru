@@ -1,5 +1,5 @@
 ﻿---
-title: 'Использование командной консоли Exchange для управления очередями: Exchange 2013 Help'
+title: 'Справка по Exchange 2013: управление очередями в командной консоли Exchange'
 TOCTitle: Использование командной консоли Exchange для управления очередями
 ms:assetid: 5433c1d3-ad2e-4f82-b50d-b67964b32f26
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Aa998047(v=EXCHG.150)

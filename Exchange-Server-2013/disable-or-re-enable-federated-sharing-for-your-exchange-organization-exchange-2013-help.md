@@ -1,5 +1,5 @@
 ﻿---
-title: 'Отключение или повторное включение федеративного общего доступа для организации Exchange: Exchange 2013 Help'
+title: 'Отключение и включение федеративного общего доступа для организации Exchange'
 TOCTitle: Отключение или повторное включение федеративного общего доступа для организации Exchange
 ms:assetid: d36490d8-0268-47b9-a6d4-e56427f1b02e
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/JJ657497(v=EXCHG.150)

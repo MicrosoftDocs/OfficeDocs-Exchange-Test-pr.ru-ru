@@ -1,5 +1,5 @@
 ﻿---
-title: 'Недостаточно прав для подготовки Active Directory_ADUpdateRequired: Exchange 2013 Help'
+title: 'Не достаточно прав для подготовки Active Directory'
 TOCTitle: Недостаточно прав для подготовки Active Directory_ADUpdateRequired
 ms:assetid: 1412d8a1-605a-4b1e-bee3-0c97f2cc9e65
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/ms.exch.setupreadiness.adupdaterequired(v=EXCHG.150)

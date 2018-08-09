@@ -1,5 +1,5 @@
 ﻿---
-title: 'Процедуры политики почтовых ящиков единой системы обмена СООБЩЕНИЯМИ: Exchange 2013 Help'
+title: 'Справка по Exchange 2013: процедуры политики почтовых ящиков UM'
 TOCTitle: Процедуры политики почтовых ящиков единой системы обмена СООБЩЕНИЯМИ
 ms:assetid: 37db12de-109f-4e81-9e6a-effab2c2171d
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/JJ851061(v=EXCHG.150)

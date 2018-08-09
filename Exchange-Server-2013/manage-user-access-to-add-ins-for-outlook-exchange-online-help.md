@@ -1,5 +1,5 @@
 ﻿---
-title: 'Управление доступом пользователей к приложениям для Outlook: Exchange 2013 Help'
+title: 'Справка по Exchange Online: управление доступом к надстройкам Outlook'
 TOCTitle: Управление доступом пользователей к приложениям для Outlook
 ms:assetid: e5833dec-a23a-439e-ac03-92671817bff8
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/JJ943757(v=EXCHG.150)

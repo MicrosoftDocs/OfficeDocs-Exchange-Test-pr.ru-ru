@@ -1,5 +1,5 @@
 ﻿---
-title: 'Настройка отправки автоматических ответов через удаленные домены: Exchange 2013 Help'
+title: 'Exchange 2013: настройка автоматических ответов через удаленные домены'
 TOCTitle: Настройка отправки автоматических ответов через удаленные домены
 ms:assetid: 3d88a1fb-4b62-419a-a50d-ffd868e229d0
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/JJ657720(v=EXCHG.150)

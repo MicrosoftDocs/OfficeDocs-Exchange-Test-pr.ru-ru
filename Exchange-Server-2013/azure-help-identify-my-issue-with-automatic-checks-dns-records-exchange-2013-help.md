@@ -1,5 +1,5 @@
 ﻿---
-title: 'Azure: помощь с определением неполадок путем автоматических проверок — записи DNS: Exchange 2013 Help'
+title: 'Azure: автоматические проверки для определения проблем с записями DNS'
 TOCTitle: 'Azure: помощь с определением неполадок путем автоматических проверок — записи DNS'
 ms:assetid: 1ef42cde-4df4-401a-b8f2-494630996ca8
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Dn793619(v=EXCHG.150)

@@ -1,5 +1,5 @@
 ﻿---
-title: 'Настройка обслуживаемого домена в организации Exchange как заслуживающего доверия: Exchange 2013 Help'
+title: 'Настройка доверенного обслуживаемого домена в организации Exchange'
 TOCTitle: Настройка обслуживаемого домена в организации Exchange как заслуживающего доверия
 ms:assetid: e182d54f-e58a-47ba-a5c1-28c0dfa86eed
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/JJ657734(v=EXCHG.150)

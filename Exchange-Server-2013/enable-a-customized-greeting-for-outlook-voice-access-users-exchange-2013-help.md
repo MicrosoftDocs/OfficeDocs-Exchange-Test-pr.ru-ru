@@ -1,5 +1,5 @@
 ﻿---
-title: 'Включение настраиваемого приветствия для пользователей голосового доступа к Outlook: Exchange 2013 Help'
+title: 'Настраиваемое приветствие для пользователей голосового доступа к Outlook'
 TOCTitle: Включение настраиваемого приветствия для пользователей голосового доступа к Outlook
 ms:assetid: abd418ec-2c65-4720-859d-c11a2698dc06
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Bb124125(v=EXCHG.150)

@@ -1,5 +1,5 @@
 ﻿---
-title: 'Настройка переадресации электронной почты для почтового ящика: Exchange 2013 Help'
+title: 'Exchange 2013: настройка переадресации электронной почты для почтового ящика'
 TOCTitle: Настройка переадресации электронной почты для почтового ящика
 ms:assetid: c7a7afaf-577e-49d6-8cee-bb4c4a5d570b
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Dd351134(v=EXCHG.150)

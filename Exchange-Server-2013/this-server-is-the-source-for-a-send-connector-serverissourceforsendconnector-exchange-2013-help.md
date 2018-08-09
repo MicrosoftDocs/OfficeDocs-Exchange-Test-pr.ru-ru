@@ -1,5 +1,5 @@
 ﻿---
-title: 'Этот сервер — источник соединителя отправки_ServerIsSourceForSendConnector: Exchange 2013 Help'
+title: 'Этот сервер является исходным для соединителя отправки'
 TOCTitle: Этот сервер — источник соединителя отправки_ServerIsSourceForSendConnector
 ms:assetid: 151c0014-c90c-4c52-8e74-4b3f1bc7aaf1
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/ms.exch.setupreadiness.serverissourceforsendconnector(v=EXCHG.150)

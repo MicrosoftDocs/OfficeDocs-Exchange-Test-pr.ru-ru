@@ -1,5 +1,5 @@
 ﻿---
-title: 'Active Directory работает не в режиме Windows Server 2003 или более поздней версии: Exchange 2013 Help'
+title: 'Функциональный уровень Active Directory не Windows Server версии 2003 или выше'
 TOCTitle: Active Directory работает не в режиме Windows Server 2003 или более поздней версии
 ms:assetid: 45f45976-62ac-4b6c-889a-ebd449402009
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/ms.exch.setupreadiness.forestlevelnotwin2003native(v=EXCHG.150)

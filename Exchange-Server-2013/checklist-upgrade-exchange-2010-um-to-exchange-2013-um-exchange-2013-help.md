@@ -1,5 +1,5 @@
 ﻿---
-title: 'Контрольный список: Обновление единой системы обмена сообщениями Exchange 2010 до Exchange 2013: Exchange 2013 Help'
+title: 'Exchange 2013: обновление UM Exchange 2010 до UM Exchange 2013'
 TOCTitle: 'Контрольный список: Обновление единой системы обмена сообщениями Exchange 2010 до Exchange 2013'
 ms:assetid: 799bd1b1-a918-4bd8-911e-e6ca08bd7b52
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Dn169228(v=EXCHG.150)

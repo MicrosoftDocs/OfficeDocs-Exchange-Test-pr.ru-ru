@@ -1,5 +1,5 @@
 ﻿---
-title: 'Подключение к поддерживаемые шлюз VoIP единой системы обмена СООБЩЕНИЯМИ: Exchange 2013 Help'
+title: 'Справка по Exchange 2013: подключение UM к поддерживаемому шлюзу VoIP'
 TOCTitle: Подключение к поддерживаемые шлюз VoIP единой системы обмена СООБЩЕНИЯМИ
 ms:assetid: b8dfc8bd-2ee5-418d-b0a4-4fa2ec7e2a2e
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Bb124360(v=EXCHG.150)

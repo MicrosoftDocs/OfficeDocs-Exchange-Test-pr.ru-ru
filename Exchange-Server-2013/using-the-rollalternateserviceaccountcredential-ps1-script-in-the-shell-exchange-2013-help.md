@@ -1,5 +1,5 @@
 ﻿---
-title: 'Использование сценария RollAlternateserviceAccountCredential.ps1 в консоли: Exchange 2013 Help'
+title: 'Использование скрипта RollAlternateserviceAccountCredential.ps1 в консоли'
 TOCTitle: Использование сценария RollAlternateserviceAccountCredential.ps1 в консоли
 ms:assetid: 6ac55aae-472a-4ed6-83df-2d0e7b48e05c
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Ff808311(v=EXCHG.150)

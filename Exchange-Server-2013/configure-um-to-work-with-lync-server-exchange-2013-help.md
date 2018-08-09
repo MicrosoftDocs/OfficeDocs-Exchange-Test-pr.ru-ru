@@ -1,5 +1,5 @@
 ﻿---
-title: 'Настройка единой системы обмена сообщениями для работы с Lync Server: Exchange 2013 Help'
+title: 'Справка по Exchange 2013: настройка UM для работы с Lync Server'
 TOCTitle: Настройка единой системы обмена сообщениями для работы с Lync Server
 ms:assetid: 29bdddbf-75d5-4c92-988e-c8506ecc7a1c
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/JJ966276(v=EXCHG.150)

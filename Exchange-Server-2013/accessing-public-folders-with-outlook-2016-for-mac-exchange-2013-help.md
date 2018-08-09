@@ -1,5 +1,5 @@
 ﻿---
-title: 'Доступ к общедоступным папкам с помощью Outlook 2016 для Mac: Exchange 2013 Help'
+title: 'Exchange 2013: доступ к общедоступным папкам с помощью Outlook 2016 для Mac'
 TOCTitle: Доступ к общедоступным папкам с помощью Outlook 2016 для Mac
 ms:assetid: bc9b8226-bd8b-4edc-882b-4f19cfe118eb
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Mt788631(v=EXCHG.150)

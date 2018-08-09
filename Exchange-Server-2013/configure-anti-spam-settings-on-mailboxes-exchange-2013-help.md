@@ -1,5 +1,5 @@
 ﻿---
-title: 'Настройка параметров защиты от нежелательной почты в почтовых ящиках: Exchange 2013 Help'
+title: 'Exchange 2013: настройка защиты от нежелательной почты в почтовых ящиках'
 TOCTitle: Настройка параметров защиты от нежелательной почты в почтовых ящиках
 ms:assetid: 868d7fd8-e817-46ba-9b67-edf2f50b9494
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Bb123559(v=EXCHG.150)

@@ -1,5 +1,5 @@
 ﻿---
-title: 'Включение конечной точки прокси-сервера MRS для удаленных перемещений: Exchange 2013 Help'
+title: 'Exchange 2013: включение конечной точки прокси MRS для удаленных перемещений'
 TOCTitle: Включение конечной точки прокси-сервера MRS для удаленных перемещений
 ms:assetid: 9840f712-127e-4c2d-bfe5-1b35cdb2a31b
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Dn155787(v=EXCHG.150)

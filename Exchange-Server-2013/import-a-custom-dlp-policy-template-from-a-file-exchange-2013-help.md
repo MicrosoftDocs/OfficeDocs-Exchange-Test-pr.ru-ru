@@ -1,5 +1,5 @@
 ﻿---
-title: 'Импорт настраиваемого шаблона политики защиты от потери данных из файла: Exchange 2013 Help'
+title: 'Справка по Exchange 2013: импорт настраиваемого шаблона DLP из файла'
 TOCTitle: Импорт настраиваемого шаблона политики защиты от потери данных из файла
 ms:assetid: 83f49dbd-f9b1-498e-b548-1529c5e1ccdb
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/JJ150531(v=EXCHG.150)

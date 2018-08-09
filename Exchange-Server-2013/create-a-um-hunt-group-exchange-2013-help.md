@@ -1,5 +1,5 @@
 ﻿---
-title: 'Создание сервисной группы единой системы обмена сообщениями: Exchange 2013 Help'
+title: 'Exchange 2013: создание сервисной группы для единой системы обмена сообщениями'
 TOCTitle: Создание сервисной группы единой системы обмена сообщениями
 ms:assetid: 43ecb1ec-5f82-4516-9010-de8f954d3758
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Aa997679(v=EXCHG.150)

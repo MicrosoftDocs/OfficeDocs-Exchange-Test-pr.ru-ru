@@ -1,5 +1,5 @@
 ﻿---
-title: 'Назначение политики почтовых ящиков единой системы обмена СООБЩЕНИЯМИ: Exchange 2013 Help'
+title: 'Справка по Exchange 2013: назначение политики почтовых ящиков UM'
 TOCTitle: Назначение политики почтовых ящиков единой системы обмена СООБЩЕНИЯМИ
 ms:assetid: c8da6cbe-3d22-4fff-8b5a-416b1c8adb6c
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Bb201728(v=EXCHG.150)

@@ -1,5 +1,5 @@
 ﻿---
-title: 'Отсутствует спецификация диска группы хранения_MailboxLogDriveDoesNotExist: Exchange 2013 Help'
+title: 'Не указан диск группы хранения'
 TOCTitle: Отсутствует спецификация диска группы хранения_MailboxLogDriveDoesNotExist
 ms:assetid: fe210f29-60cb-4d34-877e-1356a21dc02a
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/ms.exch.setupreadiness.mailboxlogdrivedoesnotexist(v=EXCHG.150)

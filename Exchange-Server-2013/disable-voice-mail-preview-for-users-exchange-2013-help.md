@@ -1,5 +1,5 @@
 ﻿---
-title: 'Отключить Предварительный просмотр голосовой почты для пользователей: Exchange 2013 Help'
+title: 'Exchange 2013: отключение просмотра голосовой почты для пользователей'
 TOCTitle: Отключить Предварительный просмотр голосовой почты для пользователей
 ms:assetid: 362fed13-3a9c-4111-bfa4-8c45ab6a3a01
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Dd335199(v=EXCHG.150)

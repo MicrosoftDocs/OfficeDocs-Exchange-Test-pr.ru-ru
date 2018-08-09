@@ -1,5 +1,5 @@
 ﻿---
-title: 'Создание поискового запроса на локальное обнаружение электронных данных: Exchange 2013 Help'
+title: 'Exchange 2013: создание запроса на обнаружение электронных данных на месте'
 TOCTitle: Создание поискового запроса на локальное обнаружение электронных данных
 ms:assetid: feedc0c9-4a44-4bb2-8520-cc29d66d4fc3
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Dd353189(v=EXCHG.150)

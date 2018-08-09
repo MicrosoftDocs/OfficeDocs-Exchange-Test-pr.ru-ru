@@ -1,5 +1,5 @@
 ﻿---
-title: 'Настройка дополнительного способа поиска пользователями голосового доступа к Outlook: Exchange 2013 Help'
+title: 'Дополнительный способ поиска для пользователей голосового доступа к Outlook'
 TOCTitle: Настройка дополнительного способа поиска пользователями голосового доступа к Outlook
 ms:assetid: 5cd4e0a0-d023-45a1-aa3c-b8dea6ec6d72
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Aa998311(v=EXCHG.150)

@@ -1,5 +1,5 @@
 ﻿---
-title: 'Запуск средства устранения неполадок единой системы обмена сообщениями Exchange в операционной системе Windows 7 или Windows 8: Exchange 2013 Help'
+title: 'Запуск средства устранения неполадок UM Exchange в Windows 7 или Windows 8'
 TOCTitle: Запуск средства устранения неполадок единой системы обмена сообщениями Exchange в операционной системе Windows 7 или Windows 8
 ms:assetid: 98d6869d-ee4a-4088-849d-ef75b0f5d932
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Ff851872(v=EXCHG.150)

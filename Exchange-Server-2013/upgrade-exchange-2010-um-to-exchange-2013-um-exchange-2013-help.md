@@ -1,5 +1,5 @@
 ﻿---
-title: 'Обновление единой системы обмена сообщениями Exchange 2010 до Exchange 2013: Exchange 2013 Help'
+title: 'Справка по Exchange 2013: обновление UM Exchange 2010 до UM Exchange 2013'
 TOCTitle: Обновление единой системы обмена сообщениями Exchange 2010 до Exchange 2013
 ms:assetid: 01aa5dab-689b-4738-afab-0d2f11a60b39
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Dn169226(v=EXCHG.150)

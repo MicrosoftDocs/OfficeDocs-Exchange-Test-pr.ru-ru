@@ -1,5 +1,5 @@
 ﻿---
-title: 'Добавление федеративного почтового ящика в группу суперпользователей службы управления правами Active Directory: Exchange 2013 Help'
+title: 'Exchange 2013: федеративный почтовый ящик для группы суперпользователей AD RMS'
 TOCTitle: Добавление федеративного почтового ящика в группу суперпользователей службы управления правами Active Directory
 ms:assetid: 44618df9-54f0-4474-a450-dcba48a02901
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Ee424431(v=EXCHG.150)

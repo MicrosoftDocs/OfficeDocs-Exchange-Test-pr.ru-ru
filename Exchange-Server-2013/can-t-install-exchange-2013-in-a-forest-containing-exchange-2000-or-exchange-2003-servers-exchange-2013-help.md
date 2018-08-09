@@ -1,5 +1,5 @@
 ﻿---
-title: 'Невозможно установить Exchange 2013 в лесу, в котором находятся серверы Exchange 2000 или Exchange 2003. параметр: Exchange 2013 Help'
+title: 'Не удается установить Exchange 2013 в лесу с серверами Exchange 2000 или 2003'
 TOCTitle: Невозможно установить Exchange 2013 в лесу, в котором находятся серверы Exchange 2000 или Exchange 2003. параметр
 ms:assetid: a115b182-cbd2-4d31-aa0e-375240939301
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/ms.exch.setupreadiness.exchange2000or2003presentinorg(v=EXCHG.150)

@@ -1,5 +1,5 @@
 ﻿---
-title: 'Краткий справочник по командной консоли Exchange для Exchange 2013: Exchange 2013 Help'
+title: 'Краткий справочник по командной консоли Exchange для Exchange 2013'
 TOCTitle: Краткий справочник по командной консоли Exchange для Exchange 2013
 ms:assetid: 3ea4a105-a93c-48ba-96ce-6170125354e1
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/JJ619302(v=EXCHG.150)

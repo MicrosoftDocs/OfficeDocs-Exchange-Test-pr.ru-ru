@@ -1,5 +1,5 @@
 ﻿---
-title: 'Управление устройствами с Outlook для iOS и Android для Exchange Server: Exchange 2013 Help'
+title: 'Управление устройствами с Outlook для iOS и Android для Exchange Server'
 TOCTitle: Управление устройствами с Outlook для iOS и Android для Exchange Server
 ms:assetid: 16ce7d24-be74-4466-b126-828a67f69b6e
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Mt465748(v=EXCHG.150)

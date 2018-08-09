@@ -1,5 +1,5 @@
 ﻿---
-title: 'Подготовка получателей для загрузки автономных адресных книг: Exchange 2013 Help'
+title: 'Exchange 2013: подготовка получателей для загрузки автономных адресных книг'
 TOCTitle: Подготовка получателей для загрузки автономных адресных книг
 ms:assetid: 141751ac-16d3-4e3c-b70c-004aeedcb5a0
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Aa996345(v=EXCHG.150)

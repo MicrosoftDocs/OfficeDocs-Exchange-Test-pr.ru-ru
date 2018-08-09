@@ -1,5 +1,5 @@
 ﻿---
-title: 'Развертывание единой системы обмена сообщениями Exchange 2013: Exchange 2013 Help'
+title: 'Развертывание единой системы обмена сообщениями для Exchange 2013'
 TOCTitle: Развертывание единой системы обмена сообщениями Exchange 2013
 ms:assetid: d147d4b1-32d7-476b-b76f-ee3c0b35ba49
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/JJ673564(v=EXCHG.150)

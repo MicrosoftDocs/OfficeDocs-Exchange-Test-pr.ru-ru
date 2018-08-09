@@ -1,5 +1,5 @@
 ﻿---
-title: 'Контроллер домена переопределен в реестре_ConfigDCHostNameMismatch: Exchange 2013 Help'
+title: 'В реестре задано переопределение контроллера домена'
 TOCTitle: Контроллер домена переопределен в реестре_ConfigDCHostNameMismatch
 ms:assetid: 3aef5470-d510-4b59-a4b6-36d274a984ae
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/ms.exch.setupreadiness.configdchostnamemismatch(v=EXCHG.150)

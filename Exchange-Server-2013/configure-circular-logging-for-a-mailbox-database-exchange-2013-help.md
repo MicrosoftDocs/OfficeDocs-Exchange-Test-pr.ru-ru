@@ -1,5 +1,5 @@
 ﻿---
-title: 'Настройка циклического ведения журнала для базы данных почтовых ящиков: Exchange 2013 Help'
+title: 'Exchange 2013: циклическое ведение журнала для базы данных почтовых ящиков'
 TOCTitle: Настройка циклического ведения журнала для базы данных почтовых ящиков
 ms:assetid: 29cbd7cd-382b-4e0d-8368-2e49e75df2fc
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Dn756374(v=EXCHG.150)

@@ -1,5 +1,5 @@
 ﻿---
-title: 'Включение настраиваемого не - приветствие для рабочих часов: Exchange 2013 Help'
+title: 'Exchange 2013: включение настраиваемого приветствия для нерабочих часов'
 TOCTitle: Включение настраиваемого не - приветствие для рабочих часов
 ms:assetid: d4743805-bab0-4735-a1e0-2cea4e088e8c
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Bb232183(v=EXCHG.150)

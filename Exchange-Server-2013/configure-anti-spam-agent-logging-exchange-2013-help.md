@@ -1,5 +1,5 @@
 ﻿---
-title: 'Настройка ведения журнала агента защиты от нежелательной почты: Exchange 2013 Help'
+title: 'Exchange 2013: настройка ведения журнала агента защиты от нежелательной почты'
 TOCTitle: Настройка ведения журнала агента защиты от нежелательной почты
 ms:assetid: df157ca3-ad8e-4302-acbc-5fbb8570c21d
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Bb691337(v=EXCHG.150)

@@ -1,5 +1,5 @@
 ﻿---
-title: 'Журналы IIS и отчеты средства синтаксического анализа журнала Log Parser Studio: Exchange 2013 Help'
+title: 'Exchange 2013: журналы IIS и отчеты средства Log Parser Studio'
 TOCTitle: Журналы IIS и отчеты средства синтаксического анализа журнала Log Parser Studio
 ms:assetid: 01fa67d4-dc02-4c5f-93af-6da7b97d282f
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Dn904092(v=EXCHG.150)

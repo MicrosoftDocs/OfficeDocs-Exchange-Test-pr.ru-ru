@@ -1,5 +1,5 @@
 ﻿---
-title: 'Создание отчетов об инцидентах для обнаружений политики DLP: Exchange 2013 Help'
+title: 'Exchange 2013: создание отчетов об инцидентах для обнаруженных элементов DLP'
 TOCTitle: Создание отчетов об инцидентах для обнаружений политики DLP
 ms:assetid: 8e807f94-384c-43f5-be6f-06c5587175a0
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/JJ150534(v=EXCHG.150)

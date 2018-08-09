@@ -1,5 +1,5 @@
 ﻿---
-title: 'Включение или отключение Outlook Web App для почтового ящика: Exchange 2013 Help'
+title: 'Exchange 2013: включение или отключение Outlook Web App для почтового ящика'
 TOCTitle: Включение или отключение Outlook Web App для почтового ящика
 ms:assetid: abc19646-6211-4f18-a060-e347452dcc53
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Bb124124(v=EXCHG.150)

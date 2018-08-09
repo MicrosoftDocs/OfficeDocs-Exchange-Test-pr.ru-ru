@@ -1,5 +1,5 @@
 ﻿---
-title: 'Отключение уведомлений о пропущенных звонках для пользователя: Exchange 2013 Help'
+title: 'Exchange 2013: отключение уведомлений о пропущенных звонках для пользователя'
 TOCTitle: Отключение уведомлений о пропущенных звонках для пользователя
 ms:assetid: e54937d5-3074-454f-b561-e601fecfc6ad
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/JJ673570(v=EXCHG.150)

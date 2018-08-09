@@ -1,5 +1,5 @@
 ﻿---
-title: 'Управление абонентской группой единой системы обмена сообщениями: Exchange 2013 Help'
+title: 'Справка по Exchange 2013: управление абонентской группой UM'
 TOCTitle: Управление абонентской группой единой системы обмена сообщениями
 ms:assetid: a89735e4-36ec-49fb-ad0f-192fad37e801
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Bb124090(v=EXCHG.150)

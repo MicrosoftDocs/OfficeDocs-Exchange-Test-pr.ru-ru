@@ -1,5 +1,5 @@
 ﻿---
-title: 'Настройка основной способ для пользователей голосового доступа к Outlook для поиска: Exchange 2013 Help'
+title: 'Основной способ поиска для пользователей голосового доступа к Outlook'
 TOCTitle: Настройка основной способ для пользователей голосового доступа к Outlook для поиска
 ms:assetid: 3d93a037-5820-41d3-9206-69f534414daf
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Aa997563(v=EXCHG.150)

@@ -1,5 +1,5 @@
 ﻿---
-title: 'Включить предварительный просмотр голосовой почты для пользователей: Exchange 2013 Help'
+title: 'Exchange 2013: включение просмотра голосовой почты для пользователей'
 TOCTitle: Включить предварительный просмотр голосовой почты для пользователей
 ms:assetid: 206a5d2b-27c9-4e9b-a29a-6ddffaa07109
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/JJ673514(v=EXCHG.150)

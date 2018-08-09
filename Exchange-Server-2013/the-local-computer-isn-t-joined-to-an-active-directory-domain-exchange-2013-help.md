@@ -1,5 +1,5 @@
 ﻿---
-title: 'Локальный компьютер не присоединен к домену Active Directory: Exchange 2013 Help'
+title: 'Локальный компьютер не присоединен к домену Active Directory'
 TOCTitle: Локальный компьютер не присоединен к домену Active Directory
 ms:assetid: feb08845-6d44-4760-9932-6eca22f35eec
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/ms.exch.setupreadiness.computernotpartofdomain(v=EXCHG.150)

@@ -1,5 +1,5 @@
 ﻿---
-title: 'Поиск внутренних и внешних URL-адресов для Центра администрирования Exchange: Exchange 2013 Help'
+title: 'Поиск внутренних и внешних URL-адресов для Центра администрирования Exchange'
 TOCTitle: Поиск внутренних и внешних URL-адресов для Центра администрирования Exchange
 ms:assetid: 3ddb30ff-a405-4b9d-8d77-2d7a3a5ab8fa
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/JJ680108(v=EXCHG.150)

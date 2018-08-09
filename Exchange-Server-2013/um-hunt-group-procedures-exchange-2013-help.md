@@ -1,5 +1,5 @@
 ﻿---
-title: 'Процедуры группы слежения единой системы обмена СООБЩЕНИЯМИ: Exchange 2013 Help'
+title: 'Справка по Exchange 2013: процедуры сервисной группы UM'
 TOCTitle: Процедуры группы слежения единой системы обмена СООБЩЕНИЯМИ
 ms:assetid: 4251c24a-9616-4923-92da-ed783aa8d802
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/JJ851063(v=EXCHG.150)

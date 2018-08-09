@@ -1,5 +1,5 @@
 ﻿---
-title: 'Рекомендации по настройке правил обработки почтового потока: Exchange Online Protection Help'
+title: 'Справка по Exchange Online Protection: настройка правил потока обработки почты'
 TOCTitle: Рекомендации по настройке правил обработки почтового потока
 ms:assetid: abd863c3-c0ce-42f3-9470-a573adc3cbba
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Dn960147(v=EXCHG.150)

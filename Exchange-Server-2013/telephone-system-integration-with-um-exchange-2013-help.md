@@ -1,5 +1,5 @@
 ﻿---
-title: 'Интеграция телефонной системы с единой системой обмена сообщениями: Exchange 2013 Help'
+title: 'Exchange 2013: интеграция телефонной системы с UM'
 TOCTitle: Интеграция телефонной системы с единой системой обмена сообщениями
 ms:assetid: b8790117-b040-4c84-9d34-005c75088e76
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/JJ673558(v=EXCHG.150)

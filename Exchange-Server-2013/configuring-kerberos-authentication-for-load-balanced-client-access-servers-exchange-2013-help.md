@@ -1,5 +1,5 @@
 ﻿---
-title: 'Настройка проверки подлинности Kerberos для серверов клиентского доступа с балансировкой нагрузки: Exchange 2013 Help'
+title: 'Проверка подлинности Kerberos для серверов CAS с балансировкой нагрузки'
 TOCTitle: Настройка проверки подлинности Kerberos для серверов клиентского доступа с балансировкой нагрузки
 ms:assetid: 8f4faeea-a825-438d-97dc-1c398ce7aba5
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Ff808312(v=EXCHG.150)

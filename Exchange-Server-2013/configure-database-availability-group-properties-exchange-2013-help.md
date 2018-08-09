@@ -1,5 +1,5 @@
 ﻿---
-title: 'Настройка свойств группы обеспечения доступности баз данных: Exchange 2013 Help'
+title: 'Exchange 2013: настройка свойств группы обеспечения доступности баз данных'
 TOCTitle: Настройка свойств группы обеспечения доступности баз данных
 ms:assetid: 50daeac5-a16f-4362-a325-19e0fe25d59d
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Dd297985(v=EXCHG.150)

@@ -1,5 +1,5 @@
 ﻿---
-title: 'Серверы Exchange 2007 необходимо обновить до пакета обновления 3 со сведением 10: Exchange 2013 Help'
+title: 'Для серверов Exchange 2007 необходимо установить SP3 и UR10'
 TOCTitle: Серверы Exchange 2007 необходимо обновить до пакета обновления 3 со сведением 10
 ms:assetid: b8028a00-c451-412e-86f2-1669f6eee8fc
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/ms.exch.setupreadiness.e15e12coexistenceminversionrequirement(v=EXCHG.150)

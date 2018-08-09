@@ -1,5 +1,5 @@
 ﻿---
-title: 'Подготовка почтовых ящиков к перемещению между лесами с использованием в консоли сценария Prepare-MoveRequest.ps1: Exchange 2013 Help'
+title: 'Подготовка почтовых ящиков к перемещению в иной лес с помощью MoveRequest.ps1'
 TOCTitle: Подготовка почтовых ящиков к перемещению между лесами с использованием в консоли сценария Prepare-MoveRequest.ps1
 ms:assetid: 2cea59fb-69b7-4a2f-833f-de4d93cf1810
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Ee861103(v=EXCHG.150)

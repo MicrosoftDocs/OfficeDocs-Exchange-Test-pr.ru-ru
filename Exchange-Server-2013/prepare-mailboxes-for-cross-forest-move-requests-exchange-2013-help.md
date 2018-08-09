@@ -1,5 +1,5 @@
 ﻿---
-title: 'Подготовка почтовых ящиков для запросов на перемещение между лесами: Exchange 2013 Help'
+title: 'Exchange 2013: подготовка почтовых ящиков к запросам на перемещение в иной лес'
 TOCTitle: Подготовка почтовых ящиков для запросов на перемещение между лесами
 ms:assetid: fdbed4fc-a77e-40d5-a211-863b05d74784
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Ee633491(v=EXCHG.150)

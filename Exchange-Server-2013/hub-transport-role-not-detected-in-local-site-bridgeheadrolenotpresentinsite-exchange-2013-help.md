@@ -1,5 +1,5 @@
 ﻿---
-title: 'Hub Transport role not detected in local site_BridgeheadRoleNotPresentInSite: Exchange 2013 Help'
+title: 'Роль транспортного сервера-концентратора не обнаружена в локальном сайте'
 TOCTitle: Hub Transport role not detected in local site_BridgeheadRoleNotPresentInSite
 ms:assetid: f318c947-81a8-4c18-975a-0f1e7868042a
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/ms.exch.setupreadiness.bridgeheadrolenotpresentinsite(v=EXCHG.150)

@@ -1,5 +1,5 @@
 ﻿---
-title: 'Отключение выбранных компонентов для пользователей голосового доступа к Outlook: Exchange 2013 Help'
+title: 'Exchange 2013: отключение выбранных функций для голосового доступа к Outlook'
 TOCTitle: Отключение выбранных компонентов для пользователей голосового доступа к Outlook
 ms:assetid: 37421edf-af60-4ca9-9e8b-262b8b851607
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Gg602126(v=EXCHG.150)

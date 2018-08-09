@@ -1,5 +1,5 @@
 ﻿---
-title: 'Уведомления о доставке и отчеты о недоставке в Exchange 2013: Exchange 2013 Help'
+title: 'Exchange 2013: уведомления о доставке и отчеты о недоставке в Exchange 2013'
 TOCTitle: Уведомления о доставке и отчеты о недоставке в Exchange 2013
 ms:assetid: 8e91de84-76fa-49b2-898c-c5eface76560
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Bb232118(v=EXCHG.150)

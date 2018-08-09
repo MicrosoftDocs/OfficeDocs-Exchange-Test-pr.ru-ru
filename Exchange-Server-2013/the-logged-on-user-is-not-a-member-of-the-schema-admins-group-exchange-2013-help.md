@@ -1,5 +1,5 @@
 ﻿---
-title: 'Вошедший в систему пользователь не является членом группы администраторов схемы: Exchange 2013 Help'
+title: 'Вошедший пользователь не является членом группы "Администраторы схемы"'
 TOCTitle: Вошедший в систему пользователь не является членом группы администраторов схемы
 ms:assetid: a4a3f293-afb9-4c00-aa07-c438238b6a98
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/ms.exch.setupreadiness.schemaupdaterequired(v=EXCHG.150)

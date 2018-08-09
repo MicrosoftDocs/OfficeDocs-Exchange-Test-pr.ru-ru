@@ -1,5 +1,5 @@
 ﻿---
-title: 'Не удалось установить роли Exchange 2007 после подготовки Active Directory для Exchange 2010_NoE12ServerWarning: Exchange 2013 Help'
+title: 'Не удается установить роли Exchange 2007 после подготовки AD для Exchange 2010'
 TOCTitle: Не удалось установить роли Exchange 2007 после подготовки Active Directory для Exchange 2010_NoE12ServerWarning
 ms:assetid: 4e579f69-0de9-421c-ba31-4e63a25e6a45
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/ms.exch.setupreadiness.noe12serverwarning(v=EXCHG.150)

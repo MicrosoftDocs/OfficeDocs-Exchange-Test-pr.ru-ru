@@ -1,5 +1,5 @@
 ﻿---
-title: 'Обновление организации Exchange из-за перехода на летнее время или изменения часового пояса: Exchange 2013 Help'
+title: 'Обновление организации Exchange при изменении летнего времени и часового пояса'
 TOCTitle: Обновление организации Exchange из-за перехода на летнее время или изменения часового пояса
 ms:assetid: 5b12615c-24cf-4f46-bf3c-2334dc734ef8
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Hh530051(v=EXCHG.150)

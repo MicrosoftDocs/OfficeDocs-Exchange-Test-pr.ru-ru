@@ -1,5 +1,5 @@
 ﻿---
-title: 'Вопросы и ответы: Центр администрирования Exchange (локальный): Exchange 2013 Help'
+title: 'Exchange 2013: вопросы и ответы по Центру администрирования Exchange'
 TOCTitle: 'Вопросы и ответы: Центр администрирования Exchange (локальный)'
 ms:assetid: 3de0042f-74a6-458f-947c-3cd6eeacd6ab
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/JJ552409(v=EXCHG.150)

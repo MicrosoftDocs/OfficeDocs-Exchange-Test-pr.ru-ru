@@ -1,5 +1,5 @@
 ﻿---
-title: 'Разрешение или запрещение передача вызовов из голосового доступа к Outlook: Exchange 2013 Help'
+title: 'Голосовой доступ к Outlook: разрешение и запрет переадресации вызовов'
 TOCTitle: Разрешение или запрещение передача вызовов из голосового доступа к Outlook
 ms:assetid: b80c57f1-394c-4608-8ad3-52a3e6d697db
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Ee423554(v=EXCHG.150)

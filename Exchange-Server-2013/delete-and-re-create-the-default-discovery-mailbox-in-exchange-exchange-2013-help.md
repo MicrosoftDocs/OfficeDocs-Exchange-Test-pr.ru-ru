@@ -1,5 +1,5 @@
 ﻿---
-title: 'Удаление и воссоздание почтового ящика найденных сообщений по умолчанию в Exchange: Exchange 2013 Help'
+title: 'Удаление/воссоздание почтового ящика найденных сообщений Exchange по умолчанию'
 TOCTitle: Удаление и воссоздание почтового ящика найденных сообщений по умолчанию в Exchange
 ms:assetid: 4bde0b00-bdf7-44b4-ba64-aa062bc10ca2
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Dn750894(v=EXCHG.150)

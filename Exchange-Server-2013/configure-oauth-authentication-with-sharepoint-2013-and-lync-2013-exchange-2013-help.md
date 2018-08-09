@@ -1,5 +1,5 @@
 ﻿---
-title: 'Настройка проверки подлинности OAuth в SharePoint 2013 и Lync 2013: Exchange 2013 Help'
+title: 'Настройка проверки подлинности OAuth в SharePoint 2013 и Lync 2013'
 TOCTitle: Настройка проверки подлинности OAuth в SharePoint 2013 и Lync 2013
 ms:assetid: ca3c78a3-80cc-4df2-859f-0106bbd57a07
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/JJ649094(v=EXCHG.150)

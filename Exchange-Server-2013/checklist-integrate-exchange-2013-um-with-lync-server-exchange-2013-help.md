@@ -1,5 +1,5 @@
 ﻿---
-title: 'Контрольный список: Интеграция единой системы обмена сообщениями Exchange 2013 с сервером Lync: Exchange 2013 Help'
+title: 'Интеграция единой системы обмена сообщениями для Exchange 2013 с Lync Server'
 TOCTitle: 'Контрольный список: Интеграция единой системы обмена сообщениями Exchange 2013 с сервером Lync'
 ms:assetid: 3b82e86f-9f30-4445-96ad-744082abeaeb
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Dd638120(v=EXCHG.150)

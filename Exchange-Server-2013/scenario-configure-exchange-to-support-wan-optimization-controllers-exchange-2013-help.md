@@ -1,5 +1,5 @@
 ﻿---
-title: 'Сценарий. Настройка Exchange для поддержки контроллеров оптимизации глобальной сети: Exchange 2013 Help'
+title: 'Настройка Exchange для поддержки контроллеров оптимизации глобальной сети'
 TOCTitle: Сценарий. Настройка Exchange для поддержки контроллеров оптимизации глобальной сети
 ms:assetid: 1f407698-0b71-45a3-867a-640ccf7351da
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Ee633456(v=EXCHG.150)

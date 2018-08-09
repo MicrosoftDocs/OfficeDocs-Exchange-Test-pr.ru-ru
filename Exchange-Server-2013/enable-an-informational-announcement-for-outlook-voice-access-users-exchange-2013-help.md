@@ -1,5 +1,5 @@
 ﻿---
-title: 'Включение информационного сообщения для пользователей голосового доступа к Outlook: Exchange 2013 Help'
+title: 'Информационные сообщения для пользователей голосового доступа к Outlook'
 TOCTitle: Включение информационного сообщения для пользователей голосового доступа к Outlook
 ms:assetid: b69ed0e1-f978-498a-963e-42a047678db4
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Bb124344(v=EXCHG.150)

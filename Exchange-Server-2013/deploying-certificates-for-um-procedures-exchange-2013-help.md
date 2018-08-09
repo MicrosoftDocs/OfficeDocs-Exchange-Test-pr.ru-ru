@@ -1,5 +1,5 @@
 ﻿---
-title: 'Развертывание сертификатов для единой системы обмена СООБЩЕНИЯМИ процедур: Exchange 2013 Help'
+title: 'Exchange 2013: развертывание сертификатов для процедур UM'
 TOCTitle: Развертывание сертификатов для единой системы обмена СООБЩЕНИЯМИ процедур
 ms:assetid: 21631c68-86ad-4f00-a1eb-dcc2758f6bf0
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Dn205139(v=EXCHG.150)

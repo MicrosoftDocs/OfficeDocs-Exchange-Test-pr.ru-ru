@@ -1,5 +1,5 @@
 ﻿---
-title: 'Хозяин схемы не под управлением Windows Server 2003 с пакетом обновления 1 или later_SchemaFSMONotWin2003SPn: Exchange 2013 Help'
+title: 'Хозяин схемы без Windows Server 2003 с пакетом обновления 1 или более поздним'
 TOCTitle: Хозяин схемы не под управлением Windows Server 2003 с пакетом обновления 1 или later_SchemaFSMONotWin2003SPn
 ms:assetid: 644a85ca-7b36-4ed0-bd21-c64f2742df70
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/ms.exch.setupreadiness.schemafsmonotwin2003spn(v=EXCHG.150)

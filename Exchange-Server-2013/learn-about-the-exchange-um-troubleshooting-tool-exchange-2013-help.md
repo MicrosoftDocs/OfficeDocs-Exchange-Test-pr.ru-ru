@@ -1,5 +1,5 @@
 ﻿---
-title: 'Сведения о средстве устранения неполадок единой системы обмена сообщениями Exchange: Exchange 2013 Help'
+title: 'Справка по Exchange 2013: сведения о средстве устранения неполадок UM Exchange'
 TOCTitle: Сведения о средстве устранения неполадок единой системы обмена сообщениями Exchange
 ms:assetid: cc11bf5e-2c87-4495-b2ad-3e9a6bc81dbc
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Gg584301(v=EXCHG.150)

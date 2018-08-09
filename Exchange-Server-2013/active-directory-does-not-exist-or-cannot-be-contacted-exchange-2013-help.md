@@ -1,5 +1,5 @@
 ﻿---
-title: 'Службы каталогов Active Directory не существует или с ней невозможно связаться: Exchange 2013 Help'
+title: 'Exchange 2013: служба AD не существует или с ней невозможно связаться'
 TOCTitle: Службы каталогов Active Directory не существует или с ней невозможно связаться
 ms:assetid: 56adb6fe-ecb8-4a7f-b440-89aa401c28b7
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/ms.exch.setupreadiness.cannotaccessad(v=EXCHG.150)

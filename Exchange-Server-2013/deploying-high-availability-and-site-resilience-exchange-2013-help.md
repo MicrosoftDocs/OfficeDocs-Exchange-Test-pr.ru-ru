@@ -1,5 +1,5 @@
 ﻿---
-title: 'Развертывание с высоким уровнем доступности и устойчивости сайта: Exchange 2013 Help'
+title: 'Exchange 2013: развертывание высокого уровня доступности и устойчивости сайта'
 TOCTitle: Развертывание с высоким уровнем доступности и устойчивости сайта
 ms:assetid: 4c4e00a4-1f57-4fdb-b9b2-2779abf381a9
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Dd638129(v=EXCHG.150)

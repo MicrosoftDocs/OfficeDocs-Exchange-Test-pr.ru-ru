@@ -1,5 +1,5 @@
 ﻿---
-title: 'Настройка коллекции виртуальных сертификатов для проверки S/MIME: Exchange 2013 Help'
+title: 'Exchange 2013: коллекция виртуальных сертификатов для проверки S/MIME'
 TOCTitle: Настройка коллекции виртуальных сертификатов для проверки S/MIME
 ms:assetid: 04a616e6-197c-490c-ae8c-c8d5f0f0b3dd
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Dn626155(v=EXCHG.150)

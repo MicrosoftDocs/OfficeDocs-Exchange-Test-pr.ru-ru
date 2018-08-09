@@ -1,5 +1,5 @@
 ﻿---
-title: 'Установка предельного числа подключений для протокола IMAP4: Exchange 2013 Help'
+title: 'Exchange 2013: установка ограничений для подключений IMAP4'
 TOCTitle: Установка предельного числа подключений для протокола IMAP4
 ms:assetid: 8e3aa366-e77c-4c70-b78d-ddbb178cb521
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Bb123712(v=EXCHG.150)

@@ -1,5 +1,5 @@
 ﻿---
-title: 'Удаление серверов клиентского доступа и почтовых ящиков из абонентской группы SIP URI: Exchange 2013 Help'
+title: 'Удаление серверов CAS и серверов почтовых ящиков из абонентской группы SIP URI'
 TOCTitle: Удаление серверов клиентского доступа и почтовых ящиков из абонентской группы SIP URI
 ms:assetid: 367441e1-1a0f-42c8-9fa8-8abe80b3d015
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Aa997238(v=EXCHG.150)

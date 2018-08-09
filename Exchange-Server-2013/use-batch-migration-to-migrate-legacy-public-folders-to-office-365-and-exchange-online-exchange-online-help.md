@@ -1,5 +1,5 @@
 ﻿---
-title: 'Использование пакетной миграции для переноса устаревших общедоступных папок в Office 365 и Exchange Online: Exchange 2013 Help'
+title: 'Пакетный перенос устаревших общедоступных папок в Office 365 и Exchange Online'
 TOCTitle: Использование пакетной миграции для переноса устаревших общедоступных папок в Office 365 и Exchange Online
 ms:assetid: e8ab9309-7d12-4f02-bfc4-14e61a373958
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Dn874017(v=EXCHG.150)

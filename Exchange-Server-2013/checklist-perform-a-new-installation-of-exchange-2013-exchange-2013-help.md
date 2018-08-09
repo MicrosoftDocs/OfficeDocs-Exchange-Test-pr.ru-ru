@@ -1,5 +1,5 @@
 ﻿---
-title: 'Контрольный список: Выполнение новой установки Exchange 2013: Exchange 2013 Help'
+title: 'Справка по Exchange 2013: выполнение новой установки Exchange 2013'
 TOCTitle: 'Контрольный список: Выполнение новой установки Exchange 2013'
 ms:assetid: f70d9dd3-7370-472e-b05e-1ea1671272b2
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Ff805042(v=EXCHG.150)

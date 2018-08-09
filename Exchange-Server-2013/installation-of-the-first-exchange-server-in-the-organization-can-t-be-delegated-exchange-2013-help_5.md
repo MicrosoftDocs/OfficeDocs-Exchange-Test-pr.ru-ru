@@ -1,5 +1,5 @@
 ﻿---
-title: 'Установку первого сервера Exchange в организации нельзя делегировать: Exchange 2013 Help'
+title: 'Нельзя делегировать установку первого сервера Exchange Server в организации'
 TOCTitle: Установку первого сервера Exchange в организации нельзя делегировать
 ms:assetid: 0f4c5b2f-85ae-4160-9a53-f4b890d8ccdb
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/ms.exch.setupreadiness.delegatedfrontendtransportfirstinstall(v=EXCHG.150)

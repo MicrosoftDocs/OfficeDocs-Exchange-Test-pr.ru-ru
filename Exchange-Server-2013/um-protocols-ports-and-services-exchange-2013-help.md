@@ -1,5 +1,5 @@
 ﻿---
-title: 'Протоколы, порты и службы единой системы обмена сообщениями: Exchange 2013 Help'
+title: 'Справка по Exchange 2013: протоколы, порты и службы UM'
 TOCTitle: Протоколы, порты и службы единой системы обмена сообщениями
 ms:assetid: 5997ce29-1755-48bb-8ff4-b08da549482a
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Aa998265(v=EXCHG.150)

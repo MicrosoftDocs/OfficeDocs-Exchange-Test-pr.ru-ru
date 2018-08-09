@@ -1,5 +1,5 @@
 ﻿---
-title: 'Удаление языкового пакета единой системы обмена сообщениями: Exchange 2013 Help'
+title: 'Exchange 2013: удаление языкового пакета единой системы обмена сообщениями'
 TOCTitle: Удаление языкового пакета единой системы обмена сообщениями
 ms:assetid: a2bc2753-2c25-4ea0-a9d5-e3d42a699c6c
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Bb124004(v=EXCHG.150)

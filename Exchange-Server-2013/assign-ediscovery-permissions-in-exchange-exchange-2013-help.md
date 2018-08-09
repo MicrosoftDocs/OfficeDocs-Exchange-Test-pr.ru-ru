@@ -1,5 +1,5 @@
 ﻿---
-title: 'Назначение разрешений обнаружения электронных данных в Exchange: Exchange 2013 Help'
+title: 'Назначение разрешений обнаружения электронных данных в Exchange 2013'
 TOCTitle: Назначение разрешений обнаружения электронных данных в Exchange
 ms:assetid: 729e09d8-614b-431f-ae04-ae41fb4c628e
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Dd298059(v=EXCHG.150)

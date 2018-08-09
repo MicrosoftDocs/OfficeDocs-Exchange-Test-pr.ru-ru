@@ -1,5 +1,5 @@
 ﻿---
-title: 'Настройка общедоступных папок Exchange 2013 для гибридного развертывания: Exchange 2013 Help'
+title: 'Настройка общедоступных папок Exchange 2013 для гибридного развертывания'
 TOCTitle: Настройка общедоступных папок Exchange 2013 для гибридного развертывания
 ms:assetid: b828520f-022c-4fcb-ab68-e1c330e87c33
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Dn986544(v=EXCHG.150)

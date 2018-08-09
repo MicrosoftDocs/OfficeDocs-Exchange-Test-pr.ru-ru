@@ -1,5 +1,5 @@
 ﻿---
-title: 'Управление правами на доступ к данным в Exchange ActiveSync: Exchange 2013 Help'
+title: 'Exchange 2013: управление правами на доступ к данным в Exchange ActiveSync'
 TOCTitle: Управление правами на доступ к данным в Exchange ActiveSync
 ms:assetid: ebf04460-4d61-4b00-86b9-85ec1dbbd6a1
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Ff657743(v=EXCHG.150)

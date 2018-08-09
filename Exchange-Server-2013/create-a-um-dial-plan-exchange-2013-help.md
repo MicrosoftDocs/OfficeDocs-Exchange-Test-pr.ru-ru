@@ -1,5 +1,5 @@
 ﻿---
-title: 'Создание абонентской группы единой системы обмена сообщениями: Exchange 2013 Help'
+title: 'Справка по Exchange 2013: создание абонентской группы UM'
 TOCTitle: Создание абонентской группы единой системы обмена сообщениями
 ms:assetid: 963ff2e1-515d-439a-953a-664174e5e283
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Bb123819(v=EXCHG.150)

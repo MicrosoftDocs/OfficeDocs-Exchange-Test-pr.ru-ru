@@ -1,5 +1,5 @@
 ﻿---
-title: 'Добавление роли для пользователя или универсальной группы безопасности: Exchange 2013 Help'
+title: 'Справка по Exchange 2013: добавление роли для пользователя или USG'
 TOCTitle: Добавление роли для пользователя или универсальной группы безопасности
 ms:assetid: ae5608de-a141-4714-8876-bce7d2a22cb5
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Dd351056(v=EXCHG.150)

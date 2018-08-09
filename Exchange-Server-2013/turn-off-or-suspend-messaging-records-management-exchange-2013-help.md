@@ -1,5 +1,5 @@
 ﻿---
-title: 'Отключение или приостановка функции управления записями сообщений: Exchange 2013 Help'
+title: 'Exchange 2013: отключение и приостановка функции управления записями сообщений'
 TOCTitle: Отключение или приостановка функции управления записями сообщений
 ms:assetid: 631191aa-3bba-4ebf-a727-c48ed2ebe176
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Aa998580(v=EXCHG.150)

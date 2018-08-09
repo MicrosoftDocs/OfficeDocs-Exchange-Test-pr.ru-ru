@@ -1,5 +1,5 @@
 ﻿---
-title: 'Отсутствует спецификация диска базы данных почтового ящика_MailboxEDBDriveDoesNotExist: Exchange 2013 Help'
+title: 'Диск базы данных почтовых ящиков не указан'
 TOCTitle: Отсутствует спецификация диска базы данных почтового ящика_MailboxEDBDriveDoesNotExist
 ms:assetid: 0e487aa1-3194-4a14-b255-a8b9f9afbf0e
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/ms.exch.setupreadiness.mailboxedbdrivedoesnotexist(v=EXCHG.150)

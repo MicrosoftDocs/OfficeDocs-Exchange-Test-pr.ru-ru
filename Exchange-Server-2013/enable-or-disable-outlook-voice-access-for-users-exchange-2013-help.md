@@ -1,5 +1,5 @@
 ﻿---
-title: 'Включение или отключение голосового доступа к Outlook для пользователей: Exchange 2013 Help'
+title: 'Exchange 2013: включение или отключение голосового доступа к Outlook'
 TOCTitle: Включение или отключение голосового доступа к Outlook для пользователей
 ms:assetid: c0c244a0-ad2f-4adf-bc1f-1d55fd7ea2d5
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Dd351106(v=EXCHG.150)

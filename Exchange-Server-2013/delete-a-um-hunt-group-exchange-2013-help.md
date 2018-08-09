@@ -1,5 +1,5 @@
 ﻿---
-title: 'Удаление сервисной группы единой системы обмена сообщениями.: Exchange 2013 Help'
+title: 'Справка по Exchange 2013: удаление сервисной группы UM'
 TOCTitle: Удаление сервисной группы единой системы обмена сообщениями.
 ms:assetid: 11ac102d-b58d-486c-85b6-e096428e556d
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Aa996318(v=EXCHG.150)

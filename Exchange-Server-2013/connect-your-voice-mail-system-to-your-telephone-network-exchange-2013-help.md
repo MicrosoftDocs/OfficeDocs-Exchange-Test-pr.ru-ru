@@ -1,5 +1,5 @@
 ﻿---
-title: 'Подключиться к телефонной сети вашей системы голосовой почты: Exchange 2013 Help'
+title: 'Exchange 2013: подключение системы голосовой почты к телефонной сети'
 TOCTitle: Подключиться к телефонной сети вашей системы голосовой почты
 ms:assetid: b606b49d-5bd3-4321-ae77-99fa4604c875
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/JJ673554(v=EXCHG.150)

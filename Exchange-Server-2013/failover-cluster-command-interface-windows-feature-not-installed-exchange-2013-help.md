@@ -1,5 +1,5 @@
 ﻿---
-title: 'Компонент Windows "Командный интерфейс отказоустойчивого кластера" не установлен: Exchange 2013 Help'
+title: 'Нет компонента Windows "Командный интерфейс отказоустойчивого кластера"'
 TOCTitle: Компонент Windows "Командный интерфейс отказоустойчивого кластера" не установлен
 ms:assetid: 0d839514-5ab7-497d-8945-41392b4c3980
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/ms.exch.setupreadiness.rsatclusteringcmdinterfaceinstalled(v=EXCHG.150)

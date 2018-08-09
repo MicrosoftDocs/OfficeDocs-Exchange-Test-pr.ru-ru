@@ -1,5 +1,5 @@
 ﻿---
-title: 'Настройка управления правами на доступ к данным для поиска Exchange и обнаружения электронных данных на месте: Exchange 2013 Help'
+title: 'Exchange 2013: настройка IRM для поиска Exchange и eDiscovery на месте'
 TOCTitle: Настройка управления правами на доступ к данным для поиска Exchange и обнаружения электронных данных на месте
 ms:assetid: d96790e9-93ad-4a56-b90f-2dbfa2f2073c
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Gg588319(v=EXCHG.150)

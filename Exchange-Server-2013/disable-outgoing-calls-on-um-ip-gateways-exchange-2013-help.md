@@ -1,5 +1,5 @@
 ﻿---
-title: 'Отключение исходящих звонков на шлюзы IP единой системы обмена СООБЩЕНИЯМИ: Exchange 2013 Help'
+title: 'Exchange 2013: отключение исходящих звонков для шлюзов IP UM'
 TOCTitle: Отключение исходящих звонков на шлюзы IP единой системы обмена СООБЩЕНИЯМИ
 ms:assetid: a3777cc6-37e4-4359-ada3-a962ac0ef0c3
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Bb232153(v=EXCHG.150)

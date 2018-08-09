@@ -1,5 +1,5 @@
 ﻿---
-title: 'Сведения о сосуществовании разрешений в Exchange 2007 и Exchange 2010: Exchange 2013 Help'
+title: 'Сведения о сосуществовании разрешений в Exchange 2007 и Exchange 2010'
 TOCTitle: Сведения о сосуществовании разрешений в Exchange 2007 и Exchange 2010
 ms:assetid: 28ab1433-23ee-4914-8f21-9a32578792e5
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Dd335157(v=EXCHG.150)

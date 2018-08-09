@@ -1,5 +1,5 @@
 ﻿---
-title: 'Обновление Exchange 2013 с помощью последнего накопительного или обычного пакета обновления: Exchange 2013 Help'
+title: 'Установка для Exchange 2013 последнего пакета CU или SP'
 TOCTitle: Обновление Exchange 2013 с помощью последнего накопительного или обычного пакета обновления
 ms:assetid: 928a4a0b-0082-4d50-a696-bfaf2782f42d
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/JJ983803(v=EXCHG.150)

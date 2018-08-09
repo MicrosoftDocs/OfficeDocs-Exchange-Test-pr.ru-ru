@@ -1,5 +1,5 @@
 ﻿---
-title: 'Импорт или экспорт сертификатов для единой системы обмена СООБЩЕНИЯМИ: Exchange 2013 Help'
+title: 'Справка по Exchange 2013: импорт или экспорт сертификатов для UM'
 TOCTitle: Импорт или экспорт сертификатов для единой системы обмена СООБЩЕНИЯМИ
 ms:assetid: ee688c33-2e08-47e7-95fc-04ba10238341
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Dn205143(v=EXCHG.150)

@@ -1,5 +1,5 @@
 ﻿---
-title: 'Установка на контроллерах домена не поддерживается с разделением разрешений Active Directory: Exchange 2013 Help'
+title: 'Установка на контроллерах домена не поддерживается с разделением разрешений AD'
 TOCTitle: Установка на контроллерах домена не поддерживается с разделением разрешений Active Directory
 ms:assetid: 977e3758-5e09-40a2-80c1-fe344b1d8a2a
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/ms.exch.setupreadiness.installondcinadsplitpermissionmode(v=EXCHG.150)

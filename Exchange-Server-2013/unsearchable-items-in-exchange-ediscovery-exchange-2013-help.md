@@ -1,5 +1,5 @@
 ﻿---
-title: 'Элементы, которые не включены в поиск при обнаружении электронных данных Exchange: Exchange 2013 Help'
+title: 'Exchange 2013: элементы, исключенные при обнаружении электронных данных'
 TOCTitle: Элементы, которые не включены в поиск при обнаружении электронных данных Exchange
 ms:assetid: 32550081-9af9-474b-ae7b-28f1e68cad41
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Dn602498(v=EXCHG.150)

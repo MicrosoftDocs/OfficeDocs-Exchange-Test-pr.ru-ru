@@ -1,5 +1,5 @@
 ﻿---
-title: 'Не рекомендуется устанавливать Exchange на контроллере домена: Exchange 2013 Help'
+title: 'Не рекомендуем устанавливать Exchange на контроллере домена'
 TOCTitle: Не рекомендуется устанавливать Exchange на контроллере домена
 ms:assetid: 48922de2-a68c-4092-96a5-d38c8e5f49f5
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/ms.exch.setupreadiness.warninginstallexchangerolesondomaincontroller(v=EXCHG.150)

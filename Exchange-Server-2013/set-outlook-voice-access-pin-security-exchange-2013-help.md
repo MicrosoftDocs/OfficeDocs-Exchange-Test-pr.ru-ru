@@ -1,5 +1,5 @@
 ﻿---
-title: 'Настройка безопасности с помощью ПИН-кода для голосового доступа к Outlook: Exchange 2013 Help'
+title: 'Exchange 2013: настройка ПИН-кода для голосового доступа к Outlook'
 TOCTitle: Настройка безопасности с помощью ПИН-кода для голосового доступа к Outlook
 ms:assetid: ef6d9151-d333-4f52-9338-273f7a291e54
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Bb125162(v=EXCHG.150)

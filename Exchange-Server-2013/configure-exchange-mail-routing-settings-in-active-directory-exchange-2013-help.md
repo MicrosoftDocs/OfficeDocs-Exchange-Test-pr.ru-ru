@@ -1,5 +1,5 @@
 ﻿---
-title: 'Настройка параметров маршрутизации почты Exchange в Active Directory: Exchange 2013 Help'
+title: 'Настройка параметров маршрутизации почты Exchange в Active Directory'
 TOCTitle: Настройка параметров маршрутизации почты Exchange в Active Directory
 ms:assetid: d01f8545-c201-4a96-be39-ed4c7008afcf
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/JJ674705(v=EXCHG.150)

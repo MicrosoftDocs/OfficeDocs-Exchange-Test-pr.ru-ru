@@ -1,5 +1,5 @@
 ﻿---
-title: 'Не удается определить имя сайта Active Directory_InvalidADSite: Exchange 2013 Help'
+title: 'Не удается определить имя сайта Active Directory'
 TOCTitle: Не удается определить имя сайта Active Directory_InvalidADSite
 ms:assetid: ef96e077-08a0-4108-9f7d-0d61758abcd4
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/ms.exch.setupreadiness.invalidadsite(v=EXCHG.150)

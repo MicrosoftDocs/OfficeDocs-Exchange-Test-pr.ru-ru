@@ -1,5 +1,5 @@
 ﻿---
-title: 'Управление фильтрацией подключений на пограничных транспортных серверах: Exchange 2013 Help'
+title: 'Exchange 2013: фильтрация подключений для пограничных транспортных серверов'
 TOCTitle: Управление фильтрацией подключений на пограничных транспортных серверах
 ms:assetid: baebc865-ec3e-48ca-ac48-7aac8b34c003
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Bb124376(v=EXCHG.150)

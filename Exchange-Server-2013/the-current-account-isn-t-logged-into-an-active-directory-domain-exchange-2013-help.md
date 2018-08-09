@@ -1,5 +1,5 @@
 ﻿---
-title: 'С текущей учетной записи не выполнен вход в домен Active Directory: Exchange 2013 Help'
+title: 'Для текущей учетной записи не выполнен вход в домен Active Directory'
 TOCTitle: С текущей учетной записи не выполнен вход в домен Active Directory
 ms:assetid: 0e229d10-605a-420f-bf8b-58a7fcb5b259
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/ms.exch.setupreadiness.loggedontodomain(v=EXCHG.150)

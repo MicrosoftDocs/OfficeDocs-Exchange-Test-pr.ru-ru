@@ -1,5 +1,5 @@
 ﻿---
-title: 'IIS находится в mode_IIS32BitMode совместимость 32-разрядная версия: Exchange 2013 Help'
+title: 'Справка по Exchange 2013: IIS в режиме совместимости с 32-разрядной системой'
 TOCTitle: IIS находится в mode_IIS32BitMode совместимость 32-разрядная версия
 ms:assetid: 742dfc32-353c-46a2-830e-68aed6a68ce0
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/ms.exch.setupreadiness.iis32bitmode(v=EXCHG.150)

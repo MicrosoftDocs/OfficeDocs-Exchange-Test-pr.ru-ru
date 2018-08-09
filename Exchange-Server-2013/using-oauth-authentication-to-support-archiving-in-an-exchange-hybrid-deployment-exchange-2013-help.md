@@ -1,5 +1,5 @@
 ﻿---
-title: 'Использование проверки подлинности OAuth для поддержки архивации в гибридном развертывании Exchange: Exchange 2013 Help'
+title: 'Проверка подлинности OAuth для архивации в гибридном развертывании Exchange'
 TOCTitle: Использование проверки подлинности OAuth для поддержки архивации в гибридном развертывании Exchange
 ms:assetid: deb882b1-1ae2-40f3-a71c-423fafe3d66a
 ms:mtpsurl: https://technet.microsoft.com/ru-ru/library/Dn689104(v=EXCHG.150)
