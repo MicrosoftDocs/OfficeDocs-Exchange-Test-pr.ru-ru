@@ -82,9 +82,9 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 > [!NOTE]  
 > <ul>
-<li><p>Установка для параметра <em>ReplayDirectoryPath</em> значения <code>$null</code> отключает использование каталога преобразования.</p></li>
-<li><p>Для параметров <em>PickupDirectoryPath</em> и <em>ReplayDirectoryPath</em> запрещается указывать один каталог.</p></li>
-</ul>
+> <li><p>Установка для параметра <em>ReplayDirectoryPath</em> значения <code>$null</code> отключает использование каталога преобразования.</p></li>
+> <li><p>Для параметров <em>PickupDirectoryPath</em> и <em>ReplayDirectoryPath</em> запрещается указывать один каталог.</p></li>
+> </ul>
 
 
 ## Как проверить, что все получилось?
