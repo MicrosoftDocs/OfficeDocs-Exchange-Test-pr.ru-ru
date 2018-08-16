@@ -13,9 +13,9 @@ ms.translationtype: HT
 
  
 
-_**Применимо к:**Exchange Online, Exchange Server, Exchange Server 2013, Exchange Server 2016_
+_<strong>Применимо к:</strong>Exchange Online, Exchange Server, Exchange Server 2013, Exchange Server 2016_
 
-_**Последнее изменение раздела:**2016-01-27_
+_<strong>Последнее изменение раздела:</strong>2016-01-27_
 
 Устройства Exchange ActiveSync автоматически перенастраиваются при перемещении почтового ящика из локальной организации Exchange в Office 365. Exchange ActiveSync обнаружит новый почтовый ящик в Office 365 и обновит его конфигурацию для непосредственного подключения к Office 365. После успешного перенаправления на Office 365 устройство Exchange ActiveSync не будет пытаться связаться с локальным сервером Exchange. За несколькими исключениями (подробнее об этом ниже) пользователю больше не нужно вручную настраивать свое устройство для обеспечения работы почты.
 

@@ -46,12 +46,12 @@
                   "globalMetadata":  {
                                          "breadcrumb_path":  "/office/exchange-2013-guide-management-pack/breadcrumb/toc.json",
                                          "extendBreadcrumb":  true,
-                                         "ROBOTS":  "INDEX,FOLLOW",
-                                         "ms.topic":  "conceptual",
-                                         "author":  "dstrome",
-                                         "ms.author":  "dstrome",
-                                         "ms.prod":  "exchange-2013",
-                                         "ms.technology":  "Exchange-2013"
+                                            "ROBOTS":  "INDEX,FOLLOW",
+                                            "ms.topic":  "conceptual",
+                                            "author":  "dstrome",
+                                            "ms.author":  "dstrome",
+                                            "ms.prod":  "exchange-server-2013",
+                                            "ms.technology": "server-general"
                                      },
                   "fileMetadata":  {
 

@@ -13,9 +13,9 @@ ms.translationtype: HT
 
  
 
-_**Применимо к:**Exchange Online, Exchange Online Protection, Exchange Server 2013_
+_<strong>Применимо к:</strong>Exchange Online, Exchange Online Protection, Exchange Server 2013_
 
-_**Последнее изменение раздела:**2013-02-18_
+_<strong>Последнее изменение раздела:</strong>2013-02-18_
 
 Outside In HTML Export © 1991, 2011 Oracle
 

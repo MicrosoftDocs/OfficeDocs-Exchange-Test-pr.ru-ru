@@ -13,9 +13,9 @@ ms.translationtype: MT
 
  
 
-_**Применимо к:**Exchange Online, Exchange Server 2013, Exchange Server 2016_
+_<strong>Применимо к:</strong>Exchange Online, Exchange Server 2013, Exchange Server 2016_
 
-_**Последнее изменение раздела:**2017-01-20_
+_<strong>Последнее изменение раздела:</strong>2017-01-20_
 
 В гибридном развертывании Exchange можно настроить локальный основной почтовый ящик с облачным архивным почтовым ящиком в Exchange Online.
 

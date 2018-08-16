@@ -13,9 +13,9 @@ ms.translationtype: HT
 
  
 
-_**Применимо к:**Exchange Online, Exchange Server 2013, Exchange Server 2016_
+_<strong>Применимо к:</strong>Exchange Online, Exchange Server 2013, Exchange Server 2016_
 
-_**Последнее изменение раздела:**2016-04-29_
+_<strong>Последнее изменение раздела:</strong>2016-04-29_
 
 Если настраивать гибридное развертывание в Exchange с помощью мастера гибридной конфигурации, вероятность возникновения последующих проблем будет значительно ниже. Тем не менее есть параметры, которые не входят в набор настроек этого мастера, и их неправильная настройка может привести к возникновению ошибок. В этой статье рассматриваются общие области, в которых возможны проблемы, и предлагаются основные действия для диагностики или исправления ошибок.
 
@@ -25,26 +25,11 @@ _**Последнее изменение раздела:**2016-04-29_
 
   - Ошибки диспетчера гибридных конфигураций
 
-<table>
-<colgroup>
-<col style="width: 100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><img src="images/Dn986544.note(EXCHG.150).gif" title="Примечание" alt="Примечание" />Примечание.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>В этой статье термин &quot;серверы Exchange Server&quot; обозначает следующее:
-<ul>
-<li><p><strong>серверы клиентского доступа</strong> Exchange 2013 и более ранних версий;</p></li>
-<li><p><strong>серверы почтовых ящиков</strong> Exchange 2016 и более поздних версий.</p></li>
-</ul></td>
-</tr>
-</tbody>
-</table>
-
+> [!NOTE]  
+> В этой статье термин &quot;серверы Exchange Server&quot; обозначает следующее:
+> <ul>
+> <li><p><strong>серверы клиентского доступа</strong> Exchange 2013 и более ранних версий;</p></li>
+> <li><p><strong>серверы почтовых ящиков</strong> Exchange 2016 и более поздних версий.</p></li></ul>
 
 Дополнительные сведения см. в статье [Гибридные развертывания Exchange Server](exchange-server-hybrid-deployments-exchange-2013-help.md).
 
@@ -142,12 +127,11 @@ _**Последнее изменение раздела:**2016-04-29_
 
   - **Сообщение "Не удалось найти соединитель получения по умолчанию на сервере \<имя сервера\>"**. Это сообщение появляется, если соединитель получения на каком-либо сервере Exchange Server, указанном в приведенном далее атрибуте, не слушает TCP-порт 25 для протоколов IPv4 и IPv6: `(Get-HybridConfiguration).ReceivingTransportServers.`
     
-      -  
-        Чтобы проверить, есть ли правильные привязки для соединителей получения на серверах Exchange, указанных при запуске `(Get-HybridConfiguration).ReceivingTransportServers.`, в Командная консоль Exchange выполните указанную ниже команду.
+      -    Чтобы проверить, есть ли правильные привязки для соединителей получения на серверах Exchange, указанных при запуске `(Get-HybridConfiguration).ReceivingTransportServers.`, в Командная консоль Exchange выполните указанную ниже команду.
         
-            Get-ReceiveConnector -Server <Server Name> | FT Identity, Bindings
+      Get-ReceiveConnector -Server <Server Name> | FT Identity, Bindings
         
-        Для серверов Exchange Server должна появиться следующая запись: `{[::]:25, 0.0.0.0:25}`
+      Для серверов Exchange Server должна появиться следующая запись: `{[::]:25, 0.0.0.0:25}`
         
-        Если эта привязка не указана, необходимо добавить ее в принимающий соединитель, используя командлет **Set-ReceiveConnector** с параметром *Bindings*. Дополнительные сведения см. в разделе [Set-ReceiveConnector](https://technet.microsoft.com/ru-ru/library/bb125140\(v=exchg.150\)).
+      Если эта привязка не указана, необходимо добавить ее в принимающий соединитель, используя командлет **Set-ReceiveConnector** с параметром *Bindings*. Дополнительные сведения см. в разделе [Set-ReceiveConnector](https://technet.microsoft.com/ru-ru/library/bb125140\(v=exchg.150\)).
 
