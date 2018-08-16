@@ -84,5 +84,5 @@ _**Последнее изменение раздела:** 2014-11-16_
   - [Set-ThrottlingPolicyAssociation](https://technet.microsoft.com/ru-ru/library/ff459231\(v=exchg.150\))
 
 > [!NOTE]  
-> Командлеты управления системными нагрузками <strong>*-ResourcePolicy</strong>, <strong>*-WorkloadManagementPolicy</strong> и <strong>*-WorkloadPolicy</strong> больше не используются. Параметры управления системными нагрузками следует настраивать только под руководством службы поддержки пользователей Майкрософт.
+> Командлеты управления системными нагрузками <strong>&#42;-ResourcePolicy</strong>, <strong>*-WorkloadManagementPolicy</strong> и <strong>&#42;-WorkloadPolicy</strong> больше не используются. Параметры управления системными нагрузками следует настраивать только под руководством службы поддержки пользователей Майкрософт.
 

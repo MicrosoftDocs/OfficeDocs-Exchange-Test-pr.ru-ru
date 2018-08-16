@@ -103,10 +103,14 @@ _**Последнее изменение раздела:** 2013-02-25_
 
 В данном примере создается пакет миграции для локального перемещения, при котором почтовые ящики, указанные в CSV-файле, перемещаются в другую базу данных почтовых ящиков. Этот файл состоит из одного столбца, содержащего адрес электронной почты каждого из перемещаемых почтовых ящиков. Для заголовка этого столбца должно быть назначено имя **EmailAddress**. Пакет миграции в этом примере следует запустить вручную с помощью командлета **Start-MigrationBatch** или Центра администрирования Exchange. Кроме того, запустить пакет миграции автоматически можно с помощью параметра *AutoStart*.
 
-    New-MigrationBatch -Local -Name LocalMove1 -CSVData ([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\LocalMove1.csv")) -TargetDatabases MBXDB2 -TimeZone "Pacific Standard Time"
+  ```
+  New-MigrationBatch -Local -Name LocalMove1 -CSVData ([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\LocalMove1.csv")) -TargetDatabases MBXDB2 -TimeZone "Pacific Standard Time"
+  ```
 
-    Start-MigrationBatch -Identity LocalMove1
-
+  ```
+  Start-MigrationBatch -Identity LocalMove1
+  ```
+  
 Дополнительные сведения о синтаксисе и параметрах см. в разделах [New-MigrationBatch](https://technet.microsoft.com/ru-ru/library/jj219166\(v=exchg.150\)) и [Start-MigrationBatch](https://technet.microsoft.com/ru-ru/library/jj219165\(v=exchg.150\)).
 
 ## Как проверить, что все получилось?
@@ -160,12 +164,12 @@ _**Последнее изменение раздела:** 2013-02-25_
 В этом примере настраивается конечная точка миграции, а затем создается межлесное перемещение — из исходного в целевой лес — с помощью CSV-файла.
 
 ```
-    New-MigrationEndpoint -Name Fabrikam -ExchangeRemote -Autodiscover -EmailAddress tonysmith@fabrikam.com -Credentials (Get-Credential fabrikam\tonysmith) 
+New-MigrationEndpoint -Name Fabrikam -ExchangeRemote -Autodiscover -EmailAddress tonysmith@fabrikam.com -Credentials (Get-Credential fabrikam\tonysmith) 
+
+$csvData=[System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\batch.csv")
+New-MigrationBatch -CSVData $csvData -Timezone "Pacific Standard Time" -Name FabrikamMerger -SourceEndpoint Fabrikam -TargetDeliveryDomain "mail.contoso.com"
 ```
-```    
-    $csvData=[System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\batch.csv")
-    New-MigrationBatch -CSVData $csvData -Timezone "Pacific Standard Time" -Name FabrikamMerger -SourceEndpoint Fabrikam -TargetDeliveryDomain "mail.contoso.com"
-```
+
 Дополнительные сведения о подготовке леса к межлесному перемещению см. в следующих разделах.
 
   - [Подготовка почтовых ящиков для запросов на перемещение между лесами](prepare-mailboxes-for-cross-forest-move-requests-exchange-2013-help.md)

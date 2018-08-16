@@ -88,12 +88,12 @@ _**Последнее изменение раздела:** 2015-03-09_
 
 1.  Чтобы остановить службу поиска Microsoft Exchange и службу контроллера узлов поиска Microsoft Exchange, выполните приведенные ниже команды.
     
-```
-        Stop-Service MSExchangeFastSearch
-```
-```    
-        Stop-Service HostControllerService
-```
+    ```
+    Stop-Service MSExchangeFastSearch
+    ```
+    ```
+    Stop-Service HostControllerService
+    ```
 
 2.  Удалите, переместите или переименуйте папку, которая содержит каталог индексов контента Exchange. Она называется `%ExchangeInstallPath\Mailbox\<name of mailbox database>_Catalog\<GUID>12.1.Single`. Например, можно переименовать папку `C:\Program Files\Microsoft\Exchange Server\V15\Mailbox\Mailbox Database 0657134726_Catalog\F0627A72-9F1D-494A-839A-D7C915C279DB12.1.Single_OLD`.
     
@@ -103,12 +103,12 @@ _**Последнее изменение раздела:** 2015-03-09_
 
 3.  Чтобы перезапустить службу поиска Microsoft Exchange и службу контроллера узлов поиска Microsoft Exchange, выполните приведенные ниже команды.
     
-```
-        Start-Service MSExchangeFastSearch
-```
-```    
-        Start-Service HostControllerService
-```
+    ```
+    Start-Service MSExchangeFastSearch
+    ```
+    ```
+    Start-Service HostControllerService
+    ```
     
     После их перезапуска служба поиска Exchange перестроит каталог индексов контента.
 
@@ -116,7 +116,9 @@ _**Последнее изменение раздела:** 2015-03-09_
 
 Повторное заполнение каталога индексов контента службой поиска Exchange может занять некоторое время. Чтобы отобразить состояние процесса повторного заполнения, выполните приведенную ниже команду.
 
-    Get-MailboxDatabaseCopyStatus | FL Name,*Index*
+  ```
+  Get-MailboxDatabaseCopyStatus | FL Name,*Index*
+  ```
 
 Во время повторного заполнения каталога поиска свойство *ContentIndexState* имеет значение **Идет обход**. После завершения повторного заполнения значение меняется на **Работоспособно**.
 
