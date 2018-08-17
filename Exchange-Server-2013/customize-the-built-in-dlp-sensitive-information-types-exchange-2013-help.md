@@ -48,7 +48,7 @@ _**Последнее изменение раздела:** 2016-05-26_
 3.  Создайте форматированный XML-файл со всеми данными, введя команду **Set-Content -path "C:\\custompath\\exportedRules.xml" -Encoding Byte -Value $ruleCollections.SerializedClassificationRuleCollection**. (**Set-content** — это часть командлета, который записывает XML в файл.)
     
     > [!IMPORTANT]  
-    > Убедитесь, что используется расположение, где фактически хранится пакет правил. <strong>C:\custompath\</strong> — это просто замещающий текст.
+    > Убедитесь, что используется расположение, где фактически хранится пакет правил. <strong>C:\custompath\ </strong> — это просто замещающий текст.
 
 
 ## Найдите правило, которое требуется изменить, в XML.
@@ -195,7 +195,7 @@ _**Последнее изменение раздела:** 2016-05-26_
 3.  В Командная консоль Exchange или Exchange Online PowerShell введите команду **New-ClassificationRuleCollection -FileData (Get-Content -Path "C:\\custompath\\MyNewRulePack.xml " -Encoding Byte)**.
     
     > [!IMPORTANT]  
-    > Убедитесь, что используется расположение, где фактически хранится пакет правил. <strong>C:\custompath\</strong> — это просто замещающий текст.
+    > Убедитесь, что используется расположение, где фактически хранится пакет правил. <strong>C:\custompath\ </strong> — это просто замещающий текст.
 
 
 4.  Для подтверждения введите **Y** и нажмите клавишу **ВВОД**.

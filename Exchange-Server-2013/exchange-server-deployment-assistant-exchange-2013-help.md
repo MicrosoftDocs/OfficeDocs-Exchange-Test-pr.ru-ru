@@ -27,9 +27,9 @@ _**Последнее изменение раздела:** 2016-12-09_
     
       - Обновление с Exchange Server 2010
     
-      - Обновление с Exchange Server 2013*(скоро)*
+      - Обновление с Exchange Server 2013 *(скоро)*
     
-      - Обновление со смешанной организации Exchange Server 2010 и Exchange Server 2013*(скоро)*
+      - Обновление со смешанной организации Exchange Server 2010 и Exchange Server 2013 *(скоро)*
     
     Дополнительные сведения об этом сценарии см. в разделе [Планирование и развертывание](planning-and-deployment-for-exchange-2013-installation-instructions.md).
 
