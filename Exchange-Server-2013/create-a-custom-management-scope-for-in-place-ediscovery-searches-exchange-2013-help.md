@@ -147,28 +147,40 @@ _**Последнее изменение раздела:** 2015-01-21_
 
   - Хотя в качестве фильтра получателей для настраиваемой области управления, используемой для обнаружения электронного данных, можно применять только членство в группе рассылки, другие свойства получателей можно использовать для добавления пользователей в эту группу рассылки. Вот несколько примеров использования командлетов **Get-Mailbox** и **Get-Recipient** для получения определенной группы пользователей на основе общих атрибутов пользователей или почтовых ящиков.
     
+      ```
         Get-Recipient -RecipientTypeDetails UserMailbox -ResultSize unlimited -Filter 'Department -eq "HR"'
+      ```
     
+      ```
         Get-Mailbox -RecipientTypeDetails UserMailbox -ResultSize unlimited -Filter 'CustomAttribute15 -eq "VancouverSubsidiary"'
+      ```
     
-        Get-Recipient -RecipientTypeDetails UserMailbox -ResultSize unlimited -Filter 'PostalCode -eq "98052"'
+      ```
+       Get-Recipient -RecipientTypeDetails UserMailbox -ResultSize unlimited -Filter 'PostalCode -eq "98052"'
+      ```
+      
+      ```
+      Get-Recipient -RecipientTypeDetails UserMailbox -ResultSize unlimited -Filter 'StateOrProvince -eq "WA"'
+      ```
     
-        Get-Recipient -RecipientTypeDetails UserMailbox -ResultSize unlimited -Filter 'StateOrProvince -eq "WA"'
-    
-        Get-Mailbox -RecipientTypeDetails UserMailbox -ResultSize unlimited -OrganizationalUnit "namsr01a002.sdf.exchangelabs.com/Microsoft Exchange Hosted Organizations/contoso.onmicrosoft.com"
+      ```
+       Get-Mailbox -RecipientTypeDetails UserMailbox -ResultSize unlimited -OrganizationalUnit "namsr01a002.sdf.exchangelabs.com/Microsoft Exchange Hosted Organizations/contoso.onmicrosoft.com"
+      ```
 
   - Затем можно использовать примеры из предыдущего списка для создания переменной, применяемой с командлетом **Add-DistributionGroupMember**, для добавления группы пользователей в группу рассылки. В следующем примере первая команда создает переменную, содержащую все почтовые ящики пользователей, значение свойства *Department* которых в учетной записи равно **Vancouver**. Вторая команда добавляет этих пользователей в группу рассылки "Vancouver Users".
     
-```
-        $members = Get-Recipient -RecipientTypeDetails UserMailbox -ResultSize unlimited -Filter 'Department -eq "Vancouver"'
-```
-```
-        $members | ForEach {Add-DistributionGroupMember "Ottawa Users" -Member $_.Name}
-```
+    ```
+    $members = Get-Recipient -RecipientTypeDetails UserMailbox -ResultSize unlimited -Filter 'Department -eq "Vancouver"'
+    ```
+    ```
+    $members | ForEach {Add-DistributionGroupMember "Ottawa Users" -Member $_.Name}
+    ```
 
   - С помощью командлета **Add-RoleGroupMember** можно добавить члена в существующую группу ролей, которая используется для определения областей поиска обнаружения электронных данных. Например, следующая команда добавляет пользователя admin@ottawa.contoso.com в группу ролей "Ottawa Discovery Management".
     
-        Add-RoleGroupMember "Vancouver Discovery Management" -Member paralegal@vancouver.contoso.com
+    ```
+    Add-RoleGroupMember "Vancouver Discovery Management" -Member paralegal@vancouver.contoso.com
+    ```
     
     Для добавления членов в группу ролей также можно использовать центр администрирования Exchange. Дополнительные сведения см. в разделе "Добавление членов в группу ролей" статьи [Управление участниками группы ролей](manage-role-group-members-exchange-2013-help.md).
 

@@ -230,14 +230,16 @@ _**Последнее изменение раздела:** 2015-03-09_
 
 В следующем примере показано, как можно использовать простой сценарий для обработки данных, возвращаемых командой, и отображения их в браузере Internet Explorer. В этом сценарии используются объекты, переданные по конвейеру, открывается окно браузера Internet Explorer, а затем в Internet Explorer отображаются данные:
 
+   ```
     $Ie = New-Object -Com InternetExplorer.Application
     $Ie.Navigate("about:blank")
     While ($Ie.Busy) { Sleep 1 }
     $Ie.Visible = $True
     $Ie.Document.Write("$Input")
     # If the previous line doesn't work on your system, uncomment the line below.
-    # $Ie.Document.IHtmlDocument2_Write(\"$Input\")
+    # $Ie.Document.IHtmlDocument2_Write("$Input")
     $Ie
+   ```
 
 Чтобы использовать этот сценарий, сохраните его в каталоге `C:\Program Files\Microsoft\Exchange Server\V15\Scripts` на компьютере, где следует выполнить этот сценарий. Назовите этот файл `Out-Ie.ps1`. После сохранения файла можно использовать этот сценарий как стандартный командлет.
 

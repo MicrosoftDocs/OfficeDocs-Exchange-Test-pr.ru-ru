@@ -69,6 +69,8 @@ Office 365 — это облачная служба, которая предн�
     
         ```
         # Make sure to update the following $tenantDomain with your Office 365 tenant domain.
+
+        $tenantDomain = "Fabrikam.com"
         
         # Check whether the cert returned from Get-AuthConfig is valid and keysize must be >= 2048
         
