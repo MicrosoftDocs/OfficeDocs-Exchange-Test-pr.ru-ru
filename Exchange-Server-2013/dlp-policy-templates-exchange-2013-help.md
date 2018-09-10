@@ -57,7 +57,7 @@ _**Последнее изменение раздела:** 2015-01-14_
 
   -  [Правила потока обработки почты (правила транспорта) в Exchange Online](https://technet.microsoft.com/ru-ru/library/jj919238\(v=exchg.150\)) (Exchange Online)
 
-  -  [Управление правилами потока обработки почты](manage-mail-flow-rules-exchange-2013-help.md)
+  -  [Управление правилами потока обработки почты](https://docs.microsoft.com/ru-ru/exchange/security-and-compliance/mail-flow-rules/manage-mail-flow-rules)
     
   -  [Командлеты управления политикой и соответствием требованиям](https://technet.microsoft.com/ru-ru/library/dd298082\(v=exchg.150\))
 
@@ -65,11 +65,11 @@ _**Последнее изменение раздела:** 2015-01-14_
 
 Корпорация Майкрософт предоставляет многочисленные политики DLP. Это самый легкий, гибкий и простой в реализации способ начать работу с решениями DLP. Предоставленные политики всегда можно использовать в качестве отправной точки и в дальнейшем настраивать для удовлетворения своим требованиям. Сначала следует ознакомиться со следующими сведениями:
 
-  - [Шаблоны политики защиты от потери данных в Exchange](dlp-policy-templates-supplied-in-exchange-exchange-2013-help.md)
+  - [Шаблоны политики защиты от потери данных в Exchange](https://docs.microsoft.com/ru-ru/exchange/security-and-compliance/data-loss-prevention/dlp-policy-templates)
 
-  - [Создание политики защиты от потери данных на основе шаблона](how-to-new-dlp-data-loss-prevention-policy-template.md)
+  - [Создание политики защиты от потери данных на основе шаблона](https://docs.microsoft.com/ru-ru/exchange/security-and-compliance/data-loss-prevention/create-dlp-policy-from-template)
 
 ## Дополнительные сведения
 
-[Защита от потери данных](technical-overview-of-dlp-data-loss-prevention-in-exchange.md)
+[Защита от потери данных](https://docs.microsoft.com/ru-ru/exchange/security-and-compliance/data-loss-prevention/data-loss-prevention)
 

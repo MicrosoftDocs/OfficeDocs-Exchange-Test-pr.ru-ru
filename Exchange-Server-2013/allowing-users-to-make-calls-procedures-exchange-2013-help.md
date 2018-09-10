@@ -17,19 +17,19 @@ _**Применимо к:** Exchange Online, Exchange Server 2013, Exchange Serv
 
 _**Последнее изменение раздела:** 2013-05-03_
 
-[Включение исходящих вызовов](enable-outgoing-calls-on-um-ip-gateways-exchange-2013-help.md)
+[Включение исходящих вызовов](enable-outgoing-calls-on-https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/connect-voice-mail-system/um-ip-gateways)
 
-[Отключение исходящих звонков на шлюзы IP единой системы обмена СООБЩЕНИЯМИ](disable-outgoing-calls-on-um-ip-gateways-exchange-2013-help.md)
+[Отключение исходящих звонков на шлюзы IP единой системы обмена СООБЩЕНИЯМИ](disable-outgoing-calls-on-https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/connect-voice-mail-system/um-ip-gateways)
 
 [Настройка телефонные коды](configure-dial-codes-exchange-2013-help.md)
 
-[Создание правил набора номера для пользователей](create-dialing-rules-for-users-exchange-2013-help.md)
+[Создание правил набора номера для пользователей](https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-client-voice-mail-features/create-dialing-rules)
 
-[Авторизация вызовов с помощью правил набора номера](authorize-calls-using-dialing-rules-exchange-2013-help.md)
+[Авторизация вызовов с помощью правил набора номера](https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-client-voice-mail-features/authorize-calls-using-dialing-rules)
 
-[Авторизации вызовов для автосекретаря](authorize-calls-for-auto-attendant-callers-exchange-2013-help.md)
+[Авторизации вызовов для автосекретаря](https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-client-voice-mail-features/authorize-calls-for-auto-attendant-callers)
 
-[Авторизации вызовов для пользователей в абонентской группы](authorize-calls-for-users-in-a-dial-plan-exchange-2013-help.md)
+[Авторизации вызовов для пользователей в абонентской группы](https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-client-voice-mail-features/authorize-calls-for-users-in-a-dial-plan)
 
 [Авторизовать звонки для группы пользователей](authorize-calls-for-a-group-of-users-exchange-2013-help.md)
 

@@ -77,7 +77,7 @@ _**Последнее изменение раздела:** 2016-12-09_
 В этом примере показано создание общего почтового ящика "Отдел продаж" и предоставление группе безопасности MarketingSG разрешений "Полный доступ" и "Отправить от имени". Пользователям, являющимся членами группы безопасности, будут предоставлены разрешения на доступ к данному почтовому ящику.
 
 > [!NOTE]  
-> В этом примере предполагается, что вы уже создали группу безопасности MarketingSG и что для нее включена почта. См. статью <a href="manage-mail-enabled-security-groups-exchange-2013-help.md">Управление группами безопасности с поддержкой электронной почты</a>.
+> В этом примере предполагается, что вы уже создали группу безопасности MarketingSG и что для нее включена почта. См. статью <a href="https://docs.microsoft.com/ru-ru/exchange/recipients-in-exchange-online/manage-mail-enabled-security-groups">Управление группами безопасности с поддержкой электронной почты</a>.
 
 
     New-Mailbox -Shared -Name "Sales Department" -DisplayName "Sales Department" -Alias Sales | Set-Mailbox -GrantSendOnBehalfTo MarketingSG | Add-MailboxPermission -User MarketingSG -AccessRights FullAccess -InheritanceType All

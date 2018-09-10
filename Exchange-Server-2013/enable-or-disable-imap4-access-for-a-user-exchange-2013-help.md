@@ -23,7 +23,7 @@ _**Последнее изменение раздела:** 2013-01-18_
 > После включения или отключения доступа по протоколу IMAP4 для пользователя необходимо перезапустить службу Microsoft Exchange IMAP4 и фоновую службу Microsoft Exchange IMAP4. Дополнительные сведения о перезапуске службы IMAP4 приведены в разделе <a href="start-and-stop-the-imap4-services-exchange-2013-help.md">Запуск и остановка служб IMAP4</a>.
 
 
-Дополнительные сведения об управлении почтовыми ящиками пользователей см. в разделе [Управление почтовыми ящиками пользователей](manage-user-mailboxes-exchange-2013-help.md).
+Дополнительные сведения об управлении почтовыми ящиками пользователей см. в разделе [Управление почтовыми ящиками пользователей](https://docs.microsoft.com/ru-ru/exchange/recipients-in-exchange-online/manage-user-mailboxes/manage-user-mailboxes).
 
 Дополнительные сведения относительно POP3 и IMAP4 см. в разделе [POP3 и IMAP4 в Exchange Server 2013](pop3-and-imap4-in-exchange-server-2013-exchange-2013-help.md).
 

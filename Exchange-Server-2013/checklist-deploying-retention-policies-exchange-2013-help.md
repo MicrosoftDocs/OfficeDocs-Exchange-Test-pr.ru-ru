@@ -19,7 +19,7 @@ _**Последнее изменение раздела:** 2016-12-09_
 
 Используйте этот контрольный список для развертывания политик хранения в организации Майкрософт Exchange Server 2013. Перед началом работы с этим контрольным списком необходимо прочитать следующие разделы.
 
-  - [Управление записями сообщений](messaging-records-management-exchange-2013-help.md)
+  - [Управление записями сообщений](https://docs.microsoft.com/ru-ru/exchange/security-and-compliance/messaging-records-management/messaging-records-management)
 
   - [Теги хранения и политики хранения](retention-tags-and-retention-policies-exchange-2013-help.md)
 
@@ -43,7 +43,7 @@ _**Последнее изменение раздела:** 2016-12-09_
 <tr class="odd">
 <td><p> </p></td>
 <td><p>Оценка требований к управлению записями сообщений (MRM) для различных наборов пользователей.</p></td>
-<td><p><a href="messaging-records-management-exchange-2013-help.md">Управление записями сообщений</a></p></td>
+<td><p><a href="https://docs.microsoft.com/ru-ru/exchange/security-and-compliance/messaging-records-management/messaging-records-management">Управление записями сообщений</a></p></td>
 </tr>
 <tr class="even">
 <td><p><strong> </strong></p></td>
@@ -53,12 +53,12 @@ _**Последнее изменение раздела:** 2016-12-09_
 <tr class="odd">
 <td><p> </p></td>
 <td><p>Создание тегов хранения.</p></td>
-<td><p><a href="create-a-retention-policy-exchange-2013-help.md">Создание политики хранения</a></p></td>
+<td><p><a href="https://docs.microsoft.com/ru-ru/exchange/security-and-compliance/messaging-records-management/create-a-retention-policy">Создание политики хранения</a></p></td>
 </tr>
 <tr class="even">
 <td><p><strong> </strong></p></td>
 <td><p>Создание политик хранения.</p></td>
-<td><p><a href="create-a-retention-policy-exchange-2013-help.md">Создание политики хранения</a></p></td>
+<td><p><a href="https://docs.microsoft.com/ru-ru/exchange/security-and-compliance/messaging-records-management/create-a-retention-policy">Создание политики хранения</a></p></td>
 </tr>
 <tr class="odd">
 <td><p> </p></td>
@@ -73,7 +73,7 @@ _**Последнее изменение раздела:** 2016-12-09_
 <tr class="odd">
 <td><p> </p></td>
 <td><p>Применение политики хранения к одному почтовому ящику для проверки.</p></td>
-<td><p><a href="apply-a-retention-policy-to-mailboxes-exchange-2013-help.md">Применение политики хранения к почтовым ящикам</a></p></td>
+<td><p><a href="https://docs.microsoft.com/ru-ru/exchange/security-and-compliance/messaging-records-management/apply-retention-policy">Применение политики хранения к почтовым ящикам</a></p></td>
 </tr>
 <tr class="even">
 <td><p><strong> </strong></p></td>
@@ -88,7 +88,7 @@ _**Последнее изменение раздела:** 2016-12-09_
 <tr class="even">
 <td><p><strong> </strong></p></td>
 <td><p>Применение политики хранения к дополнительным почтовым ящикам.</p></td>
-<td><p><a href="apply-a-retention-policy-to-mailboxes-exchange-2013-help.md">Применение политики хранения к почтовым ящикам</a></p></td>
+<td><p><a href="https://docs.microsoft.com/ru-ru/exchange/security-and-compliance/messaging-records-management/apply-retention-policy">Применение политики хранения к почтовым ящикам</a></p></td>
 </tr>
 <tr class="odd">
 <td><p> </p></td>

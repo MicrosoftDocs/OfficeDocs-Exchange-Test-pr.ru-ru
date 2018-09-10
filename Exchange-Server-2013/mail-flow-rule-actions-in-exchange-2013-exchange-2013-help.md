@@ -61,7 +61,7 @@ _**Последнее изменение раздела:** 2017-05-03_
 <p><strong>Перенаправить сообщение для утверждения</strong> &gt; <strong>Этим пользователям</strong></p></td>
 <td><p><em>ModerateMessageByUser</em></p></td>
 <td><p><code>Addresses</code></p></td>
-<td><p>Переадресует сообщение к определенным модераторам запросу об утверждении. Для получения дополнительных сведений см <a href="common-message-approval-scenarios-exchange-2013-help.md">Распространенные сценарии утверждения сообщений</a>. Группы рассылки нельзя использовать в качестве модератора.</p></td>
+<td><p>Переадресует сообщение к определенным модераторам запросу об утверждении. Для получения дополнительных сведений см <a href="https://docs.microsoft.com/ru-ru/exchange/security-and-compliance/mail-flow-rules/common-message-approval-scenarios">Распространенные сценарии утверждения сообщений</a>. Группы рассылки нельзя использовать в качестве модератора.</p></td>
 <td><p>Exchange 2010 или более поздней версии</p></td>
 </tr>
 <tr class="even">
@@ -632,7 +632,7 @@ _**Последнее изменение раздела:** 2017-05-03_
 
 ## Дополнительные сведения
 
-[Управление правилами потока обработки почты](manage-mail-flow-rules-exchange-2013-help.md)
+[Управление правилами потока обработки почты](https://docs.microsoft.com/ru-ru/exchange/security-and-compliance/mail-flow-rules/manage-mail-flow-rules)
 
 [Правила обработки почтового потока и транспорта](mail-flow-rules-transport-rules-in-exchange-2013-exchange-2013-help.md)
 

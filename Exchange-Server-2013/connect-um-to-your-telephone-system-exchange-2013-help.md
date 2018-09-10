@@ -27,7 +27,7 @@ _**Последнее изменение раздела:** 2012-11-30_
 
   - [Подключение VoIP шлюз, IP-УАТС или сеанс пограничного контроллера единой системы обмена сообщениями](connect-a-voip-gateway-ip-pbx-or-session-border-controller-to-um-exchange-2013-help.md)   Подключение шлюзов VoIP или IP-УАТС к единой системе обмена сообщениями.
 
-  - [Рекомендации по телефонии в Exchange 2013](telephony-advisor-for-exchange-2013-exchange-2013-help.md)   Сведения о поддерживаемых шлюзах VoIP, IP-УАТС и УАТС.
+  - [Рекомендации по телефонии в Exchange 2013](https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/telephone-system-integration-with-um/telephony-advisor-for-exchange-2013)   Сведения о поддерживаемых шлюзах VoIP, IP-УАТС и УАТС.
 
-  - [Заметки по конфигурации для поддерживаемых шлюзов VoIP, IP-УАТС и УАТС](configuration-notes-for-supported-voip-gateways-ip-pbxs-and-pbxs-exchange-2013-help.md)   Сведения о настройке шлюзов VoIP, IP-УАТС и УАТС.
+  - [Заметки по конфигурации для поддерживаемых шлюзов VoIP, IP-УАТС и УАТС](https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/telephone-system-integration-with-um/configuration-notes-for-voip-gateways)   Сведения о настройке шлюзов VoIP, IP-УАТС и УАТС.
 

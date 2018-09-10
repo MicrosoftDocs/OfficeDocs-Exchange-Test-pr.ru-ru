@@ -1,4 +1,4 @@
-- name: Гибридные развертывания Exchange Server 2013
+﻿- name: Гибридные развертывания Exchange Server 2013
   href: exchange-server-hybrid-deployments-exchange-2013-help.md
   items:
   - name: Мастер гибридной конфигурации
@@ -41,7 +41,7 @@
     - name: Перемещение почтовых ящиков между локальными организациями и организациями Exchange Online в случаях гибридного развертывания
       href: move-mailboxes-between-on-premises-and-exchange-online-organizations-in-hybrid-deployments-exchange-2013-help.md
     - name: Настройка локальных общедоступных папок прежних версий для гибридного развертывания
-      href: configure-legacy-on-premises-public-folders-for-a-hybrid-deployment-exchange-2013-help.md
+      href: https://docs.microsoft.com/ru-ru/exchange/collaboration-exo/public-folders/set-up-legacy-hybrid-public-folders
     - name: Настройка общедоступных папок Exchange 2013 для гибридного развертывания
       href: configure-exchange-2013-public-folders-for-a-hybrid-deployment-exchange-2013-help.md
     - name: Настройка общедоступных папок Exchange Online для гибридного развертывания
@@ -85,9 +85,9 @@
     - name: Маршрутизация транспорта в гибридных развертываниях Exchange 2013 и Exchange 2010
       href: transport-routing-in-exchange-2013-exchange-2010-hybrid-deployments-exchange-2013-help.md
   - name: Сведения о документации по Exchange
-    href: about-exchange-documentation-exchange-2013-help.md
+    href: https://docs.microsoft.com/ru-ru/exchange/about-exchange-documentation
     items:
     - name: Специальные возможности для инвалидов
-      href: accessibility-for-people-with-disabilities-exchange-2013-help.md
+      href: https://docs.microsoft.com/ru-ru/exchange/about-exchange-documentation/accessibility
     - name: Уведомления об авторских правах сторонних разработчиков
-      href: third-party-copyright-notices-exchange-2013-help.md
+      href: https://docs.microsoft.com/ru-ru/exchange/about-exchange-documentation/third-party-copyright-notices

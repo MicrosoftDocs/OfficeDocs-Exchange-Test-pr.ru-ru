@@ -64,11 +64,11 @@ _**Последнее изменение раздела:** 2015-03-09_
 </thead>
 <tbody>
 <tr class="odd">
-<td><p><a href="address-lists-exchange-2013-help.md">Списки адресов</a></p></td>
+<td><p><a href="https://docs.microsoft.com/ru-ru/exchange/address-books/address-lists/address-lists">Списки адресов</a></p></td>
 <td><p>Подробнее о списках адресов и глобальных списках адресов как о методах упорядочить получателей для более простого доступа конечных пользователей.</p></td>
 </tr>
 <tr class="even">
-<td><p><a href="address-book-policies-exchange-2013-help.md">Политики адресных книг</a></p></td>
+<td><p><a href="https://docs.microsoft.com/ru-ru/exchange/address-books/address-book-policies/address-book-policies">Политики адресных книг</a></p></td>
 <td><p>Подробнее о том, как выделить свои списки адресов и глобальные списки адресов в отдельные виртуальные организации.</p></td>
 </tr>
 <tr class="odd">

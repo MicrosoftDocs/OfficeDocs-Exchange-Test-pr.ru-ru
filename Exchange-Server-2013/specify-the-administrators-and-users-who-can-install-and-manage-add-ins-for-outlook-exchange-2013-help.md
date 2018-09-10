@@ -39,7 +39,7 @@ _**Последнее изменение раздела:** 2017-02-08_
 
 Дополнительные сведения об этих ролях см. в статьях [Роль "Приложения Org Marketplace"](org-marketplace-apps-role-exchange-2013-help.md), [Роль "Настраиваемые приложения Org"](org-custom-apps-role-exchange-2013-help.md), [Роль My Marketplace Apps](my-marketplace-apps-role-exchange-2013-help.md), [Роль "Мои настраиваемые приложения"](my-custom-apps-role-exchange-2013-help.md) и [Роль в моих приложениях с правами ReadWriteMailbox](my-readwritemailbox-apps-role-exchange-2013-help.md).
 
-Сведения о надстройках см. в статье [Приложения для Outlook](add-ins-for-outlook-exchange-2013-help.md).
+Сведения о надстройках см. в статье [Приложения для Outlook](https://docs.microsoft.com/ru-ru/exchange/clients-and-mobile-in-exchange-online/add-ins-for-outlook/add-ins-for-outlook).
 
 ## Что нужно знать перед началом работы
 

@@ -17,15 +17,15 @@ _**Применимо к:** Exchange Server 2013, Exchange Server 2016_
 
 _**Последнее изменение раздела:** 2013-05-03_
 
-[Разрешить сообщение ожидание индикатор (ожидающего сообщения) на шлюз IP единой системы обмена СООБЩЕНИЯМИ](allow-message-waiting-indicator-mwi-on-a-um-ip-gateway-exchange-2013-help.md)
+[Разрешить сообщение ожидание индикатор (ожидающего сообщения) на шлюз IP единой системы обмена СООБЩЕНИЯМИ](https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-client-voice-mail-features/allow-mwi-on-um-ip-gateway)
 
-[Запретить сообщение ожидание индикатор (ожидающего сообщения) на шлюз IP единой системы обмена СООБЩЕНИЯМИ](prevent-message-waiting-indicator-mwi-on-a-um-ip-gateway-exchange-2013-help.md)
+[Запретить сообщение ожидание индикатор (ожидающего сообщения) на шлюз IP единой системы обмена СООБЩЕНИЯМИ](https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-client-voice-mail-features/prevent-mwi-on-um-ip-gateway)
 
-[Предоставление пользователям сообщение ожидание индикатор (ожидающего сообщения)](enable-message-waiting-indicator-mwi-for-users-exchange-2013-help.md)
+[Предоставление пользователям сообщение ожидание индикатор (ожидающего сообщения)](https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-client-voice-mail-features/enable-mwi-for-users)
 
 [Отключить сообщение ожидание индикатор (ожидающего сообщения) для пользователей](disable-message-waiting-indicator-mwi-for-users-exchange-2013-help.md)
 
-[Включение уведомлений пользователей о пропущенных вызовах](enable-missed-call-notifications-for-a-user-exchange-2013-help.md)
+[Включение уведомлений пользователей о пропущенных вызовах](https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-client-voice-mail-features/enable-missed-call-notifications)
 
-[Отключение уведомлений о пропущенных звонках для пользователя](disable-missed-call-notifications-for-a-user-exchange-2013-help.md)
+[Отключение уведомлений о пропущенных звонках для пользователя](https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-client-voice-mail-features/disable-missed-call-notifications)
 

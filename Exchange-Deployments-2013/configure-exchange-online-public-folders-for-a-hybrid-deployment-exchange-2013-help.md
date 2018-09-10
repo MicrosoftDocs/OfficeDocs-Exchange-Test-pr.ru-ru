@@ -24,7 +24,7 @@ _<strong>Последнее изменение раздела:</strong>2016-12-1
 В этой статье описано, как предоставить пользователям локальной среды Exchange 2013 доступ к общедоступным папкам Exchange Online или Office 365. Сведения о том, как предоставить пользователям Exchange Online или Office 365 доступ к общедоступным папкам в локальной среде Exchange 2013, см. в статье [Настройка общедоступных папок Exchange 2013 для гибридного развертывания](configure-exchange-2013-public-folders-for-a-hybrid-deployment-exchange-2013-help.md).
 
 > [!NOTE]
-> Если у вас есть общедоступные папки Exchange 2010 или Exchange 2007, ознакомьтесь с разделом <a href="configure-legacy-on-premises-public-folders-for-a-hybrid-deployment-exchange-2013-help.md">Настройка локальных общедоступных папок прежних версий для гибридного развертывания</a>.
+> Если у вас есть общедоступные папки Exchange 2010 или Exchange 2007, ознакомьтесь с разделом <a href="https://docs.microsoft.com/ru-ru/exchange/collaboration-exo/public-folders/set-up-legacy-hybrid-public-folders">Настройка локальных общедоступных папок прежних версий для гибридного развертывания</a>.
 
 
 ## Что нужно знать перед началом работы

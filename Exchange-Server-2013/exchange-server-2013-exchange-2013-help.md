@@ -88,7 +88,7 @@ _**Последнее изменение раздела:** 2016-12-09_
 
   - [Работоспособность и производительность сервера](server-health-and-performance-exchange-2013-help.md)
 
-  - [Сведения о документации по Exchange](about-exchange-documentation-exchange-2013-help.md)
+  - [Сведения о документации по Exchange](https://docs.microsoft.com/ru-ru/exchange/about-exchange-documentation)
 
 > [!NOTE]  
 > Ознакомьтесь с другими материалами об Exchange:<br />

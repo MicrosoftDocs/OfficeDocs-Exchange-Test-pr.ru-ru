@@ -320,7 +320,7 @@ _**Последнее изменение раздела:** 2016-07-28_
 
 ## Дополнительные сведения
 
-[Защита от потери данных](technical-overview-of-dlp-data-loss-prevention-in-exchange.md)
+[Защита от потери данных](https://docs.microsoft.com/ru-ru/exchange/security-and-compliance/data-loss-prevention/data-loss-prevention)
 
 [Определение собственных шаблонов DLP и типов сведений](define-your-own-dlp-templates-and-information-types-exchange-2013-help.md)
 

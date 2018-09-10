@@ -156,7 +156,7 @@ _**Последнее изменение раздела:** 2015-03-09_
 
 ## Для получения дополнительной информации
 
-[Защита от потери данных](technical-overview-of-dlp-data-loss-prevention-in-exchange.md)
+[Защита от потери данных](https://docs.microsoft.com/ru-ru/exchange/security-and-compliance/data-loss-prevention/data-loss-prevention)
 
 [Правила потока обработки почты (правила транспорта) в Exchange Online](https://technet.microsoft.com/ru-ru/library/jj919238\(v=exchg.150\))
 

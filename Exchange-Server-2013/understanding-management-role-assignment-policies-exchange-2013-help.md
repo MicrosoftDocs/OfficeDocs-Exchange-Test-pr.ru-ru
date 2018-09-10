@@ -105,7 +105,7 @@ Exchange 2013 включает в себя политику назначения
 <tbody>
 <tr class="odd">
 <td><p>Почтовый ящик</p></td>
-<td><p><a href="manage-user-mailboxes-exchange-2013-help.md">Управление почтовыми ящиками пользователей</a></p>
+<td><p><a href="https://docs.microsoft.com/ru-ru/exchange/recipients-in-exchange-online/manage-user-mailboxes/manage-user-mailboxes">Управление почтовыми ящиками пользователей</a></p>
 <p><a href="change-the-assignment-policy-on-a-mailbox-exchange-2013-help.md">Изменение политики назначения для почтового ящика</a></p></td>
 </tr>
 <tr class="even">

@@ -29,7 +29,7 @@ _**Последнее изменение раздела:** 2013-11-01_
 
 [Включение и отключение расшифровки транспорта](enable-or-disable-transport-decryption-exchange-2013-help.md)
 
-[Настройка управления правами на доступ к данным для поиска Exchange и обнаружения электронных данных на месте](configure-irm-for-exchange-search-and-in-place-ediscovery-exchange-2013-help.md)
+[Настройка управления правами на доступ к данным для поиска Exchange и обнаружения электронных данных на месте](configure-irm-for-exchange-search-and-https://docs.microsoft.com/ru-ru/exchange/security-and-compliance/in-place-ediscovery/in-place-ediscovery)
 
 [Включение и отключение расшифровки отчета журнала](enable-or-disable-journal-report-decryption-exchange-2013-help.md)
 

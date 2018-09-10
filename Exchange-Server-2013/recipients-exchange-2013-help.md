@@ -326,7 +326,7 @@ _**Последнее изменение раздела:** 2015-03-09_
 <td><p>Узнайте, как создавать почтовые ящики пользователей с помощью Центра администрирования Exchange или командной консоли Exchange.</p></td>
 </tr>
 <tr class="even">
-<td><p><a href="manage-user-mailboxes-exchange-2013-help.md">Управление почтовыми ящиками пользователей</a></p></td>
+<td><p><a href="https://docs.microsoft.com/ru-ru/exchange/recipients-in-exchange-online/manage-user-mailboxes/manage-user-mailboxes">Управление почтовыми ящиками пользователей</a></p></td>
 <td><p>Узнайте, как создавать почтовые ящики пользователей, изменять их свойства и выполнять групповую настройку выбранных свойств для нескольких почтовых ящиков.</p></td>
 </tr>
 <tr class="odd">
@@ -334,11 +334,11 @@ _**Последнее изменение раздела:** 2015-03-09_
 <td><p>Узнайте о требованиях для связанных почтовых ящиков, о том, как создавать и связывать их с главной учетной записью, а также изменять их свойства.</p></td>
 </tr>
 <tr class="even">
-<td><p><a href="create-and-manage-distribution-groups-exchange-2013-help.md">Создание групп рассылки и управление ими</a></p></td>
+<td><p><a href="https://docs.microsoft.com/ru-ru/exchange/recipients-in-exchange-online/manage-distribution-groups/manage-distribution-groups">Создание групп рассылки и управление ими</a></p></td>
 <td><p>Узнайте о том, как создавать группы рассылки, настраивать их, а также о том, как создать политику именования групп для организации.</p></td>
 </tr>
 <tr class="odd">
-<td><p><a href="manage-mail-enabled-security-groups-exchange-2013-help.md">Управление группами безопасности с поддержкой электронной почты</a></p></td>
+<td><p><a href="https://docs.microsoft.com/ru-ru/exchange/recipients-in-exchange-online/manage-mail-enabled-security-groups">Управление группами безопасности с поддержкой электронной почты</a></p></td>
 <td><p>Узнайте, как создавать группы безопасности с поддержкой почты и управлять ими.</p></td>
 </tr>
 <tr class="even">
@@ -350,7 +350,7 @@ _**Последнее изменение раздела:** 2015-03-09_
 <td><p>Узнайте, как создавать почтовые контакты и управлять ими.</p></td>
 </tr>
 <tr class="even">
-<td><p><a href="manage-mail-users-exchange-2013-help.md">Управление пользователями почты</a></p></td>
+<td><p><a href="https://docs.microsoft.com/ru-ru/exchange/recipients-in-exchange-online/manage-mail-users">Управление пользователями почты</a></p></td>
 <td><p>Узнайте, как создавать почтовых пользователей и управлять ими.</p></td>
 </tr>
 <tr class="odd">
@@ -358,7 +358,7 @@ _**Последнее изменение раздела:** 2015-03-09_
 <td><p>Узнайте, как создавать почтовые ящики помещений и управлять их свойствами, в том числе включать повторяющиеся собрания и настраивать параметры резервирования и планирования.</p></td>
 </tr>
 <tr class="even">
-<td><p><a href="manage-equipment-mailboxes-exchange-2013-help.md">Управление почтовыми ящиками оборудования</a></p></td>
+<td><p><a href="https://docs.microsoft.com/ru-ru/exchange/recipients-in-exchange-online/manage-equipment-mailboxes">Управление почтовыми ящиками оборудования</a></p></td>
 <td><p>Узнайте, как создавать почтовые ящики оборудования, управлять их свойствами, а также настраивать параметры резервирования и планирования.</p></td>
 </tr>
 <tr class="odd">
@@ -374,7 +374,7 @@ _**Последнее изменение раздела:** 2015-03-09_
 <td><p>Узнайте, как использовать предустановленные или настраиваемые фильтры с командами, чтобы фильтровать список получателей.</p></td>
 </tr>
 <tr class="even">
-<td><p><a href="manage-permissions-for-recipients-exchange-online-help.md">Управление разрешениями для получателей</a></p></td>
+<td><p><a href="https://docs.microsoft.com/ru-ru/exchange/recipients-in-exchange-online/manage-permissions-for-recipients">Управление разрешениями для получателей</a></p></td>
 <td><p>Узнайте, как назначать разрешения пользователям и группам с помощью Центра администрирования Exchange и командной консоли.</p></td>
 </tr>
 <tr class="odd">
