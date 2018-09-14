@@ -165,5 +165,5 @@ IP-УАТС
 
 [Протоколы, порты и службы единой системы обмена сообщениями](um-protocols-ports-and-services-exchange-2013-help.md)
 
-[Рекомендации по телефонии в Exchange 2013](telephony-advisor-for-exchange-2013-exchange-2013-help.md)
+[Рекомендации по телефонии в Exchange 2013](https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/telephone-system-integration-with-um/telephony-advisor-for-exchange-2013)
 

@@ -199,7 +199,7 @@ Active Directory replication
 
 Дополнительные сведения об использовании этих отчетов см. в разделе [Поиск изменений группы ролей или журналов аудита администраторов](search-the-role-group-changes-or-administrator-audit-logs-exchange-2013-help.md).
 
-Сведения о других отчетах, доступных на странице **аудита**, см. в разделе [Отчеты аудита Exchange](exchange-auditing-reports-exchange-2013-help.md).
+Сведения о других отчетах, доступных на странице **аудита**, см. в разделе [Отчеты аудита Exchange](https://docs.microsoft.com/ru-ru/exchange/security-and-compliance/exchange-auditing-reports/exchange-auditing-reports).
 
 ## Командлет Search-AdminAuditLog
 

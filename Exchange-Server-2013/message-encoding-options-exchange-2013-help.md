@@ -399,7 +399,7 @@ _**Последнее изменение раздела:** 2016-12-09_
 
 [Удаленные домены в Exchange Online](https://technet.microsoft.com/ru-ru/library/jj966211\(v=exchg.150\))
 
-[Управление пользователями почты](manage-mail-users-exchange-2013-help.md)
+[Управление пользователями почты](https://docs.microsoft.com/ru-ru/exchange/recipients-in-exchange-online/manage-mail-users)
 
 [Управление почтовыми контактами](manage-mail-contacts-exchange-2013-help.md)
 

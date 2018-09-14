@@ -23,7 +23,7 @@ _**Последнее изменение раздела:** 2017-08-02_
 
 [Настройка общедоступных папок в новой организации](set-up-public-folders-in-a-new-organization-exchange-2013-help.md)
 
-[Настройка локальных общедоступных папок прежних версий для гибридного развертывания](configure-legacy-on-premises-public-folders-for-a-hybrid-deployment-exchange-2013-help.md)
+[Настройка локальных общедоступных папок прежних версий для гибридного развертывания](https://docs.microsoft.com/ru-ru/exchange/collaboration-exo/public-folders/set-up-legacy-hybrid-public-folders)
 
 [Настройка общедоступных папок Exchange 2013 для гибридного развертывания](configure-exchange-2013-public-folders-for-a-hybrid-deployment-exchange-2013-help.md)
 
@@ -35,17 +35,17 @@ _**Последнее изменение раздела:** 2017-08-02_
 
 [Использование пакетной миграции для переноса устаревших общедоступных папок в Office 365 и Exchange Online](use-batch-migration-to-migrate-legacy-public-folders-to-office-365-and-exchange-online-exchange-online-help.md)
 
-[Использование пакетной миграции для переноса общедоступных папок Exchange 2013 в Exchange Online](use-batch-migration-to-migrate-exchange-2013-public-folders-to-exchange-online-exchange-online-help.md)
+[Использование пакетной миграции для переноса общедоступных папок Exchange 2013 в Exchange Online](https://docs.microsoft.com/ru-ru/exchange/collaboration-exo/public-folders/batch-migration-of-exchange-2013-public-folders)
 
 [Создание почтового ящика общедоступных папок](create-a-public-folder-mailbox-exchange-2013-help.md)
 
-[Создание общедоступной папки](create-a-public-folder-exchange-2013-help.md)
+[Создание общедоступной папки](https://docs.microsoft.com/ru-ru/exchange/collaboration-exo/public-folders/create-public-folder)
 
-[Включение и отключение поддержки почты для общедоступной папки](mail-enable-or-mail-disable-a-public-folder-exchange-2013-help.md)
+[Включение и отключение поддержки почты для общедоступной папки](https://docs.microsoft.com/ru-ru/exchange/collaboration-exo/public-folders/enable-or-disable-mail-for-public-folder)
 
 [обновлять иерархию общих папок;](update-the-public-folder-hierarchy-exchange-2013-help.md)
 
-[Удаление общедоступной папки](remove-a-public-folder-exchange-2013-help.md)
+[Удаление общедоступной папки](https://docs.microsoft.com/ru-ru/exchange/collaboration-exo/public-folders/remove-public-folder)
 
 [Использование избранных общих папок в Outlook в Интернете](use-favorite-public-folders-in-outlook-on-the-web-exchange-2013-help.md)
 
@@ -55,5 +55,5 @@ _**Последнее изменение раздела:** 2017-08-02_
 
 [Восстановление общедоступных папок и их почтовых ящиков после неудачных перемещений](restore-public-folders-and-public-folder-mailboxes-from-failed-moves-exchange-2013-help.md)
 
-[Просмотр статистики для общедоступных папок и их элементов](view-statistics-for-public-folders-and-public-folder-items-exchange-2013-help.md)
+[Просмотр статистики для общедоступных папок и их элементов](https://docs.microsoft.com/ru-ru/exchange/collaboration-exo/public-folders/view-public-folder-statistics)
 

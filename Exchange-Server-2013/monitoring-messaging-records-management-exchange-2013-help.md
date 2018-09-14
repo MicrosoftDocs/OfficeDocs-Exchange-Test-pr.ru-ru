@@ -17,9 +17,9 @@ _**Применимо к:** Exchange Server 2013_
 
 _**Последнее изменение раздела:** 2009-11-03_
 
-[Счетчики производительности представления для системы управления записями обмена сообщениями](view-performance-counters-for-messaging-records-management-exchange-2013-help.md)
+[Счетчики производительности представления для системы управления записями обмена сообщениями](view-performance-counters-for-https://docs.microsoft.com/ru-ru/exchange/security-and-compliance/messaging-records-management/messaging-records-management)
 
-[Счетчики производительности для управления записями сообщений](performance-counters-for-messaging-records-management-exchange-2013-help.md)
+[Счетчики производительности для управления записями сообщений](performance-counters-for-https://docs.microsoft.com/ru-ru/exchange/security-and-compliance/messaging-records-management/messaging-records-management)
 
 [Ошибки и события управления записями сообщений](messaging-records-management-errors-and-events-exchange-2013-help.md)
 

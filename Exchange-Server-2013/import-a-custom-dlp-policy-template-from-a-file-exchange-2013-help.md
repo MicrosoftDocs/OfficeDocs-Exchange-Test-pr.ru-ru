@@ -65,5 +65,5 @@ _**Последнее изменение раздела:** 2016-08-09_
 
 ## Дополнительные сведения
 
-[Защита от потери данных](technical-overview-of-dlp-data-loss-prevention-in-exchange.md)
+[Защита от потери данных](https://docs.microsoft.com/ru-ru/exchange/security-and-compliance/data-loss-prevention/data-loss-prevention)
 

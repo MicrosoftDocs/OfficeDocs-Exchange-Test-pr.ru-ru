@@ -83,12 +83,12 @@ _**Последнее изменение раздела:** 2016-12-09_
 <tr class="odd">
 <td><p><strong> </strong></p></td>
 <td><p>Создать некоторое количество абонентских групп с универсальными кодами ресурса (URI) SIP, необходимое для организации.</p></td>
-<td><p><a href="create-a-um-dial-plan-exchange-2013-help.md">Создание абонентской группы единой системы обмена сообщениями</a></p></td>
+<td><p><a href="https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/connect-voice-mail-system/create-um-dial-plan">Создание абонентской группы единой системы обмена сообщениями</a></p></td>
 </tr>
 <tr class="even">
 <td><p></p></td>
 <td><p>Настройте параметры безопасности абонентской группы.</p></td>
-<td><p><a href="configure-the-voip-security-setting-exchange-2013-help.md">Настройка параметра безопасности VoIP</a></p></td>
+<td><p><a href="https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/connect-voice-mail-system/configure-voip-security-setting">Настройка параметра безопасности VoIP</a></p></td>
 </tr>
 <tr class="odd">
 <td><p></p></td>
@@ -108,18 +108,18 @@ _**Последнее изменение раздела:** 2016-12-09_
 <tr class="even">
 <td><p></p></td>
 <td><p>Настройте исходящие номера для единой системы обмена сообщениями. Разрешите все вызовы для абонентских групп с универсальным кодом ресурса (URI) протокола SIP и политики почтовых ящиков единой системы обмена сообщениями, которые связаны с этими группами.</p></td>
-<td><p><a href="authorize-calls-for-users-in-a-dial-plan-exchange-2013-help.md">Авторизации вызовов для пользователей в абонентской группы</a></p>
+<td><p><a href="https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-client-voice-mail-features/authorize-calls-for-users-in-a-dial-plan">Авторизации вызовов для пользователей в абонентской группы</a></p>
 <p><a href="authorize-calls-for-a-group-of-users-exchange-2013-help.md">Авторизовать звонки для группы пользователей</a></p></td>
 </tr>
 <tr class="odd">
 <td><p></p></td>
 <td><p>Создайте требуемое число автосекретарей.</p></td>
-<td><p><a href="create-a-um-auto-attendant-exchange-2013-help.md">Создание автосекретаря единой системы обмена сообщениями</a></p></td>
+<td><p><a href="https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/automatically-answer-and-route-calls/create-a-um-auto-attendant">Создание автосекретаря единой системы обмена сообщениями</a></p></td>
 </tr>
 <tr class="even">
 <td><p></p></td>
 <td><p>Настройте по отдельности каждого из автосекретарей единой системы обмена сообщениями.</p></td>
-<td><p><a href="set-up-a-um-auto-attendant-exchange-2013-help.md">Настройка автосекретаря единой системы обмена сообщениями</a></p></td>
+<td><p><a href="https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/automatically-answer-and-route-calls/set-up-um-auto-attendant">Настройка автосекретаря единой системы обмена сообщениями</a></p></td>
 </tr>
 <tr class="odd">
 <td><p> </p></td>
@@ -143,13 +143,13 @@ _**Последнее изменение раздела:** 2016-12-09_
 <tr class="even">
 <td><p><strong> </strong></p></td>
 <td><p>Создайте политику почтовых ящиков единой системы обмена сообщениями или настройте политику почтовых ящиков по умолчанию.</p></td>
-<td><p><a href="create-a-um-mailbox-policy-exchange-2013-help.md">Создание политики почтовых ящиков единой системы обмена сообщениями</a></p>
-<p><a href="manage-a-um-mailbox-policy-exchange-2013-help.md">Управление политикой почтовых ящиков единой системы обмена СООБЩЕНИЯМИ</a></p></td>
+<td><p><a href="https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-voice-mail/create-um-mailbox-policy">Создание политики почтовых ящиков единой системы обмена сообщениями</a></p>
+<p><a href="https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-voice-mail/manage-um-mailbox-policy">Управление политикой почтовых ящиков единой системы обмена СООБЩЕНИЯМИ</a></p></td>
 </tr>
 <tr class="odd">
 <td><p> </p></td>
 <td><p>Разрешите пользователям с SIP-адресом подключение к единой системе обмена сообщениями и свяжите их с абонентской группой с универсальным кодом ресурса (URI) по протоколу SIP.</p></td>
-<td><p><a href="enable-a-user-for-voice-mail-exchange-2013-help.md">Включение для пользователя поддержки голосовой почты</a></p></td>
+<td><p><a href="https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-voice-mail/enable-a-user-for-voice-mail">Включение для пользователя поддержки голосовой почты</a></p></td>
 </tr>
 <tr class="even">
 <td><p></p></td>

@@ -65,7 +65,7 @@ _**Последнее изменение раздела:** 2016-12-09_
 
   - [Создание поискового запроса на локальное обнаружение электронных данных](create-an-in-place-ediscovery-search-exchange-2013-help.md)
 
-  - [Экспорт результатов поиска при обнаружении электронных данных в PST-файл](export-ediscovery-search-results-to-a-pst-file-exchange-2013-help.md)
+  - [Экспорт результатов поиска при обнаружении электронных данных в PST-файл](https://docs.microsoft.com/ru-ru/exchange/security-and-compliance/in-place-ediscovery/export-search-results)
 
   - [SharePoint: экспорт контента eDiscovery и создание отчетов](https://go.microsoft.com/fwlink/p/?linkid=324757).
 

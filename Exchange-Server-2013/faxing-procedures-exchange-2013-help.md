@@ -17,19 +17,19 @@ _**Применимо к:** Exchange Online, Exchange Server 2013, Exchange Serv
 
 _**Последнее изменение раздела:** 2013-02-15_
 
-[Установка сервера факсов URI, чтобы разрешить отправка и прием факсов партнера](set-the-partner-fax-server-uri-to-allow-faxing-exchange-2013-help.md)
+[Установка сервера факсов URI, чтобы разрешить отправка и прием факсов партнера](https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-client-voice-mail-features/set-the-partner-fax-server-uri-to-allow-faxing)
 
 [Включение текста с сообщением электронной почты при получении сообщения факсов](include-text-with-the-email-message-sent-when-a-fax-message-is-received-exchange-2013-help.md)
 
-[Разрешить пользователям в той же абонентской прием факсов](allow-users-in-the-same-dial-plan-to-receive-faxes-exchange-2013-help.md)
+[Разрешить пользователям в той же абонентской прием факсов](https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-client-voice-mail-features/allow-users-in-the-same-dial-plan-to-receive-faxes)
 
-[Запретить пользователям в той же абонентской прием факсов](prevent-users-in-the-same-dial-plan-from-receiving-faxes-exchange-2013-help.md)
+[Запретить пользователям в той же абонентской прием факсов](https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-client-voice-mail-features/prevent-users-in-the-same-dial-plan-from-receiving-faxes)
 
-[Включите поддержку факсимильной связи для группы пользователей](enable-faxing-for-a-group-of-users-exchange-2013-help.md)
+[Включите поддержку факсимильной связи для группы пользователей](https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-client-voice-mail-features/enable-faxing-for-a-group-of-users)
 
-[Отключение, отправка и прием факсов для группы пользователей](disable-faxing-for-a-group-of-users-exchange-2013-help.md)
+[Отключение, отправка и прием факсов для группы пользователей](https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-client-voice-mail-features/disable-faxing-for-a-group-of-users)
 
-[Разрешить пользователям принимать факсы](enable-a-user-to-receive-faxes-exchange-2013-help.md)
+[Разрешить пользователям принимать факсы](https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-client-voice-mail-features/enable-a-user-to-receive-faxes)
 
 [Запретить пользователям принимать факсы](prevent-a-user-from-receiving-faxes-exchange-2013-help.md)
 

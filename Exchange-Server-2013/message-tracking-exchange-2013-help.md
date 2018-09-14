@@ -75,7 +75,7 @@ _**Последнее изменение раздела:** 2016-12-09_
 
   - **MSGTRK**   Эти журналы связаны со службой транспорта.
 
-  - **MSGTRKMA**   В этих журналах регистрируются одобрения и отклонения, используемые управляемым транспортом. Подробнее см. в разделе [Управление утверждением сообщений](manage-message-approval-exchange-2013-help.md).
+  - **MSGTRKMA**   В этих журналах регистрируются одобрения и отклонения, используемые управляемым транспортом. Подробнее см. в разделе [Управление утверждением сообщений](https://docs.microsoft.com/ru-ru/exchange/security-and-compliance/mail-flow-rules/manage-message-approval).
 
   - **MSGTRKMD**   Это журналы для сообщений, доставляемых в почтовые ящики службы доставки почты.
 
@@ -340,7 +340,7 @@ _**Последнее изменение раздела:** 2016-12-09_
 </tr>
 <tr class="even">
 <td><p><strong>INITMESSAGECREATED</strong></p></td>
-<td><p>Сообщение отправлено контролируемому получателю, поэтому оно отправлено в почтовый ящик вынесения решения для утверждения. Подробнее см. в разделе <a href="manage-message-approval-exchange-2013-help.md">Управление утверждением сообщений</a>.</p></td>
+<td><p>Сообщение отправлено контролируемому получателю, поэтому оно отправлено в почтовый ящик вынесения решения для утверждения. Подробнее см. в разделе <a href="https://docs.microsoft.com/ru-ru/exchange/security-and-compliance/mail-flow-rules/manage-message-approval">Управление утверждением сообщений</a>.</p></td>
 </tr>
 <tr class="odd">
 <td><p><strong>LOAD</strong></p></td>
@@ -348,7 +348,7 @@ _**Последнее изменение раздела:** 2016-12-09_
 </tr>
 <tr class="even">
 <td><p><strong>MODERATIONEXPIRE</strong></p></td>
-<td><p>Модератор контролируемого получателя не утвердил и не отклонил сообщение, поэтому для него истек срок ожидания. Дополнительные сведения о контролируемых получателях см. в разделе <a href="manage-message-approval-exchange-2013-help.md">Управление утверждением сообщений</a>.</p></td>
+<td><p>Модератор контролируемого получателя не утвердил и не отклонил сообщение, поэтому для него истек срок ожидания. Дополнительные сведения о контролируемых получателях см. в разделе <a href="https://docs.microsoft.com/ru-ru/exchange/security-and-compliance/mail-flow-rules/manage-message-approval">Управление утверждением сообщений</a>.</p></td>
 </tr>
 <tr class="odd">
 <td><p><strong>MODERATORAPPROVE</strong></p></td>
@@ -475,7 +475,7 @@ _**Последнее изменение раздела:** 2016-12-09_
 </tr>
 <tr class="odd">
 <td><p><strong>APPROVAL</strong></p></td>
-<td><p>Источником события была платформа утверждения, используемая для контролируемых получателей. Подробнее см. в разделе <a href="manage-message-approval-exchange-2013-help.md">Управление утверждением сообщений</a>.</p></td>
+<td><p>Источником события была платформа утверждения, используемая для контролируемых получателей. Подробнее см. в разделе <a href="https://docs.microsoft.com/ru-ru/exchange/security-and-compliance/mail-flow-rules/manage-message-approval">Управление утверждением сообщений</a>.</p></td>
 </tr>
 <tr class="even">
 <td><p><strong>BOOTLOADER</strong></p></td>

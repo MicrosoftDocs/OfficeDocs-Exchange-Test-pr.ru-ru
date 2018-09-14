@@ -19,9 +19,9 @@ _**Последнее изменение раздела:** 2012-10-11_
 
 [Создание политики адресных книг](create-an-address-book-policy-exchange-2013-help.md)
 
-[Назначение политики адресной книги пользователям почты](assign-an-address-book-policy-to-mail-users-exchange-2013-help.md)
+[Назначение политики адресной книги пользователям почты](https://docs.microsoft.com/ru-ru/exchange/address-books/address-book-policies/assign-an-address-book-policy-to-mail-users)
 
 [Изменение параметров политики адресной книги](change-the-settings-of-an-address-book-policy-exchange-2013-help.md)
 
-[Удаление политики адресной книги](remove-an-address-book-policy-exchange-2013-help.md)
+[Удаление политики адресной книги](https://docs.microsoft.com/ru-ru/exchange/address-books/address-book-policies/remove-an-address-book-policy)
 

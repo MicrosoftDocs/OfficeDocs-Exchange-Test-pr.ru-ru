@@ -25,9 +25,9 @@ _**Последнее изменение раздела:** 2016-12-15_
 
 Следующие ресурсы в центре технической поддержки Exchange содержат сведения, которые помогут правильно настроить шлюзы VoIP и УАТС:
 
-  - **Документация на поддерживаемые шлюз VoIP, IP-УАТС и УАТС**   [Рекомендации по телефонии в Exchange 2013](telephony-advisor-for-exchange-2013-exchange-2013-help.md) содержит файлы конфигурации и сведения по установке, которые можно использовать при настройке шлюзов VoIP и УАТС.
+  - **Документация на поддерживаемые шлюз VoIP, IP-УАТС и УАТС**   [Рекомендации по телефонии в Exchange 2013](https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/telephone-system-integration-with-um/telephony-advisor-for-exchange-2013) содержит файлы конфигурации и сведения по установке, которые можно использовать при настройке шлюзов VoIP и УАТС.
 
-  - **Конфигурация и технические заметки**   [Заметки по конфигурации для поддерживаемых шлюзов VoIP, IP-УАТС и УАТС](configuration-notes-for-supported-voip-gateways-ip-pbxs-and-pbxs-exchange-2013-help.md) содержит файлы конфигурации и сведения по установке, которые можно использовать при настройке шлюзов VoIP и УАТС.
+  - **Конфигурация и технические заметки**   [Заметки по конфигурации для поддерживаемых шлюзов VoIP, IP-УАТС и УАТС](https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/telephone-system-integration-with-um/configuration-notes-for-voip-gateways) содержит файлы конфигурации и сведения по установке, которые можно использовать при настройке шлюзов VoIP и УАТС.
 
   - **Настройка шлюза VoIP на основе решений AudioCodes**. Новейшие сведения о поддержке и настройке см. на [странице с ресурсами по Microsoft Exchange Server](https://www.audiocodes.com/solutions/microsoft/exchange-server). Эти сведения помогут настроить шлюзы VoIP на основе решений AudioCodes для использования с единой системой обмена сообщениями.
 
@@ -37,7 +37,7 @@ _**Последнее изменение раздела:** 2016-12-15_
 
 ## Дополнительные сведения
 
-[Заметки по конфигурации для поддерживаемых шлюзов VoIP, IP-УАТС и УАТС](configuration-notes-for-supported-voip-gateways-ip-pbxs-and-pbxs-exchange-2013-help.md)
+[Заметки по конфигурации для поддерживаемых шлюзов VoIP, IP-УАТС и УАТС](https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/telephone-system-integration-with-um/configuration-notes-for-voip-gateways)
 
 [Подключение к поддерживаемые шлюз VoIP единой системы обмена СООБЩЕНИЯМИ](connect-um-to-a-supported-voip-gateway-exchange-2013-help.md)
 

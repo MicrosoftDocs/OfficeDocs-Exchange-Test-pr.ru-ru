@@ -110,7 +110,7 @@ _**Последнее изменение раздела:** 2016-03-17_
 </tr>
 <tr class="even">
 <td><p>MailUser</p></td>
-<td><p>Объект пользователя, для которого назначен адрес электронной почты и не определен параметр <em>Database</em>. Подробнее см. в разделе <a href="manage-mail-users-exchange-2013-help.md">Управление пользователями почты</a>.</p></td>
+<td><p>Объект пользователя, для которого назначен адрес электронной почты и не определен параметр <em>Database</em>. Подробнее см. в разделе <a href="https://docs.microsoft.com/ru-ru/exchange/recipients-in-exchange-online/manage-mail-users">Управление пользователями почты</a>.</p></td>
 </tr>
 <tr class="odd">
 <td><p>MailContact</p></td>

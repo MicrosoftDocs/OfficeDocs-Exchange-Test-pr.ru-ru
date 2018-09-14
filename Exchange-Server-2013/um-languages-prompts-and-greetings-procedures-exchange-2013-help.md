@@ -21,7 +21,7 @@ _**Последнее изменение раздела:** 2013-04-17_
 
 [Выбрать язык по умолчанию для абонентской группы](set-the-default-language-on-a-dial-plan-exchange-2013-help.md)
 
-[Выберите язык для автосекретарю.](select-the-language-for-an-auto-attendant-exchange-2013-help.md)
+[Выберите язык для автосекретарю.](https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/greetings-announcements-menus-and-prompts/select-auto-attendant-language)
 
 [Удаление языкового пакета единой системы обмена сообщениями](remove-a-um-language-pack-exchange-2013-help.md)
 
@@ -29,5 +29,5 @@ _**Последнее изменение раздела:** 2013-04-17_
 
 [Импорт настраиваемых приглашений из Exchange 2007 в Exchange 2013](import-custom-prompts-from-exchange-2007-to-exchange-2013-exchange-2013-help.md)
 
-[Включение записи настраиваемых приглашений с помощью телефонного интерфейса пользователя](enable-custom-prompt-recording-using-the-telephone-user-interface-exchange-2013-help.md)
+[Включение записи настраиваемых приглашений с помощью телефонного интерфейса пользователя](https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/greetings-announcements-menus-and-prompts/enable-custom-prompt-recording)
 

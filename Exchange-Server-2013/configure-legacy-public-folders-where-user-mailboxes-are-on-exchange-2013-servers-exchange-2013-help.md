@@ -68,7 +68,7 @@ _**Последнее изменение раздела:** 2017-03-27_
 
 Конечным действием этой процедуры является настройка почтовых ящиков пользователей для предоставления доступа к локальным общедоступным папкам прежних версий.
 
-Разрешите локальным пользователям Exchange Server 2013 для доступа к устаревшим общедоступным папкам. Укажите все промежуточные почтовые ящики общедоступных папок, которые вы создали в [Step 2: Make remote public folders discoverable](configure-legacy-on-premises-public-folders-for-a-hybrid-deployment-exchange-2013-help.md). Выполните следующую команду на сервере Exchange 2013 с накопительным пакетом обновления 5 (CU5) или более поздней версии.
+Разрешите локальным пользователям Exchange Server 2013 для доступа к устаревшим общедоступным папкам. Укажите все промежуточные почтовые ящики общедоступных папок, которые вы создали в [Step 2: Make remote public folders discoverable](https://docs.microsoft.com/ru-ru/exchange/collaboration-exo/public-folders/set-up-legacy-hybrid-public-folders). Выполните следующую команду на сервере Exchange 2013 с накопительным пакетом обновления 5 (CU5) или более поздней версии.
 
     Set-OrganizationConfig -PublicFoldersEnabled Remote -RemotePublicFolderMailboxes ProxyMailbox1,ProxyMailbox2,ProxyMailbox3
 

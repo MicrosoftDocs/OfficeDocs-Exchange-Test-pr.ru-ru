@@ -27,17 +27,17 @@ _**Последнее изменение раздела:** 2013-04-20_
 
 Дополнительные сведения об объектах единой системы обмена сообщениями см. в разделах:
 
-  - [Абонентские группы единой системы обмена сообщениями](um-dial-plans-exchange-2013-help.md)
+  - [Абонентские группы единой системы обмена сообщениями](https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/connect-voice-mail-system/um-dial-plans)
 
-  - [IP-шлюзы единой системы обмена сообщениями](um-ip-gateways-exchange-2013-help.md)
+  - [IP-шлюзы единой системы обмена сообщениями](https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/connect-voice-mail-system/um-ip-gateways)
 
-  - [Сервисные группы единой системы обмена сообщениями](um-hunt-groups-exchange-2013-help.md)
+  - [Сервисные группы единой системы обмена сообщениями](https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/connect-voice-mail-system/um-hunt-groups)
 
   - [Автоматический ответ и маршрутизация входящих вызовов](automatically-answer-and-route-incoming-calls-exchange-2013-help.md)
 
 Дополнительные сведения о настройке голосовой почты для пользователей см. в следующих разделах.
 
-  - [Политики почтовых ящиков единой системы обмена сообщениями](um-mailbox-policies-exchange-2013-help.md)
+  - [Политики почтовых ящиков единой системы обмена сообщениями](https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-voice-mail/um-mailbox-policies)
 
-  - [Голосовая почта для пользователей](voice-mail-for-users-exchange-2013-help.md)
+  - [Голосовая почта для пользователей](https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-voice-mail/voice-mail-for-users)
 
