@@ -23,7 +23,7 @@ _**Последнее изменение раздела:** 2017-03-27_
 
 ## Часто задаваемые вопросы о миграции общих папок
 
-В этом разделе содержатся часто задаваемые вопросы о миграции общих папок. Для получения дополнительных сведений см [Использование пакетной миграции для переноса общедоступных папок в Exchange 2013 из предыдущих версий](use-batch-migration-to-migrate-public-folders-to-exchange-2013-from-previous-versions-exchange-2013-help.md), [Использование пакетной миграции для переноса устаревших общедоступных папок в Office 365 и Exchange Online](use-batch-migration-to-migrate-legacy-public-folders-to-office-365-and-exchange-online-exchange-online-help.md)или [Использование пакетной миграции для переноса общедоступных папок Exchange 2013 в Exchange Online](https://docs.microsoft.com/ru-ru/exchange/collaboration-exo/public-folders/batch-migration-of-exchange-2013-public-folders).
+В этом разделе содержатся часто задаваемые вопросы о миграции общих папок. Для получения дополнительных сведений см [Использование пакетной миграции для переноса общедоступных папок в Exchange 2013 из предыдущих версий](use-batch-migration-to-migrate-public-folders-to-exchange-2013-from-previous-versions-exchange-2013-help.md), [Использование пакетной миграции для переноса устаревших общедоступных папок в Office 365 и Exchange Online](https://docs.microsoft.com/ru-ru/exchange/collaboration-exo/public-folders/batch-migration-of-legacy-public-folders)или [Использование пакетной миграции для переноса общедоступных папок Exchange 2013 в Exchange Online](https://docs.microsoft.com/ru-ru/exchange/collaboration-exo/public-folders/batch-migration-of-exchange-2013-public-folders).
 
 ## Какие сценарии переноса общедоступных папок поддерживаются?
 

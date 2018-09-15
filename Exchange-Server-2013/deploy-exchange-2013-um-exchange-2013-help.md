@@ -39,7 +39,7 @@ _**Последнее изменение раздела:** 2016-12-09_
 
   - [Сервисные группы единой системы обмена сообщениями](https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/connect-voice-mail-system/um-hunt-groups)
 
-  - [Автоматический ответ и маршрутизация входящих вызовов](automatically-answer-and-route-incoming-calls-exchange-2013-help.md)
+  - [Автоматический ответ и маршрутизация входящих вызовов](https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/automatically-answer-and-route-calls/automatically-answer-and-route-calls)
 
   - [Политики почтовых ящиков единой системы обмена сообщениями](https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-voice-mail/um-mailbox-policies)
 
@@ -314,11 +314,11 @@ IP-шлюз единой системы обмена сообщениями пр
 
 После развертывания серверов и требуемых компонентов единой системы обмена сообщениями становятся доступны несколько дополнительных настраиваемых функций, связанных с голосовой почтой. Дополнительные сведения см. в следующих разделах.
 
-  - [Настройка голосового доступа к Outlook](setting-up-outlook-voice-access-exchange-2013-help.md)
+  - [Настройка голосового доступа к Outlook](https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-client-voice-mail-features/set-up-outlook-voice-access)
 
   - [Включение переадресации вызовов для пользователей голосовой почты](https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-client-voice-mail-features/allow-voice-mail-users-to-forward-calls)
 
-  - [Включение функции просмотра записей разговоров голосовой почты для пользователей](allow-users-to-see-a-voice-mail-transcript-exchange-2013-help.md)
+  - [Включение функции просмотра записей разговоров голосовой почты для пользователей](https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-client-voice-mail-features/allow-users-to-see-a-voice-mail-transcript)
 
   - [Обеспечение возможности получать факсы для пользователей голосовой почты](enable-voice-mail-users-to-receive-faxes-exchange-2013-help.md)
 

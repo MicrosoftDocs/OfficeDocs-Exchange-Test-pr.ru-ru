@@ -220,7 +220,7 @@ SMS-уведомления о сообщениях голосовой почты
 
   - [Предоставление пользователям сообщение ожидание индикатор (ожидающего сообщения)](https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-client-voice-mail-features/enable-mwi-for-users)
 
-  - [Отключить сообщение ожидание индикатор (ожидающего сообщения) для пользователей](disable-message-waiting-indicator-mwi-for-users-exchange-2013-help.md)
+  - [Отключить сообщение ожидание индикатор (ожидающего сообщения) для пользователей](https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-client-voice-mail-features/disable-mwi-for-users)
 
   - [Set-UMMailboxPolicy](https://technet.microsoft.com/ru-ru/library/bb124903\(v=exchg.150\))
 

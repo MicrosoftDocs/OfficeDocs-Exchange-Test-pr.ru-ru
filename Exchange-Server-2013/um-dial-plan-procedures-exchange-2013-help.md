@@ -19,7 +19,7 @@ _**Последнее изменение раздела:** 2013-04-16_
 
 [Создание абонентской группы единой системы обмена сообщениями](https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/connect-voice-mail-system/create-um-dial-plan)
 
-[Управление абонентской группой единой системы обмена сообщениями](manage-a-um-dial-plan-exchange-2013-help.md)
+[Управление абонентской группой единой системы обмена сообщениями](https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/connect-voice-mail-system/manage-um-dial-plan)
 
 [Добавьте серверы клиентского доступа и почтовых ящиков для абонентской группы SIP URI](add-mailbox-and-client-access-servers-to-a-sip-uri-dial-plan-exchange-2013-help.md)
 
@@ -29,9 +29,9 @@ _**Последнее изменение раздела:** 2013-04-16_
 
 [Настройка максимальной длительности звонка](https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/connect-voice-mail-system/configure-maximum-call-duration)
 
-[Настройка Максимальная продолжительность записи](configure-the-maximum-recording-duration-exchange-2013-help.md)
+[Настройка Максимальная продолжительность записи](https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/connect-voice-mail-system/configure-maximum-recording-duration)
 
-[Настройте значение времени ожидания простоя записи](configure-the-recording-idle-time-out-value-exchange-2013-help.md)
+[Настройте значение времени ожидания простоя записи](https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/connect-voice-mail-system/configure-recording-idle-time-out)
 
 [Настройка параметра безопасности VoIP](https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/connect-voice-mail-system/configure-voip-security-setting)
 

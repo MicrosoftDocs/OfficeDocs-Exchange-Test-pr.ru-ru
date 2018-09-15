@@ -27,7 +27,7 @@ _**Последнее изменение раздела:** 2015-01-22_
 
   - [Папка "Элементы для восстановления"](recoverable-items-folder-exchange-2013-help.md)
 
-  - [Хранение на месте и хранение для судебного разбирательства](in-place-hold-and-litigation-hold-exchange-2013-help.md)
+  - [Хранение на месте и хранение для судебного разбирательства](https://docs.microsoft.com/ru-ru/exchange/security-and-compliance/in-place-and-litigation-holds)
 
 ## Что нужно знать перед началом работы
 

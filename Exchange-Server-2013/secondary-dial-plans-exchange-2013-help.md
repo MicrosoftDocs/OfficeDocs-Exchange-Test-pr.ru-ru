@@ -116,7 +116,7 @@ UM features that operate differently for secondary dial plans
 
 Сведения об изменении SIP-адресов или номеров E.164 для пользователей с включенной поддержкой единой системы обмена сообщениями см. в следующих разделах.
 
-  - [Добавление SIP-адрес](add-a-sip-address-exchange-2013-help.md)
+  - [Добавление SIP-адрес](https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-voice-mail/add-sip-address)
 
   - [Изменение SIP-адреса](https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-voice-mail/change-sip-address)
 
