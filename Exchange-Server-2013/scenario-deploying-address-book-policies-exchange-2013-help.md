@@ -205,7 +205,7 @@ _**Последнее изменение раздела:** 2016-12-09_
 
   - Не используйте роль сервера клиентского доступа Exchange 2010 на сервере глобального каталога. Это приведет к использованию Active Directory в качестве интерфейса NSPI, а не службы адресных книг Microsoft Exchange. Политики адресных книга могут правильно работать при использовании роли сервера Exchange 2013 на сервере глобального каталога, однако мы не рекомендуем устанавливать Exchange на контроллере домена.
 
-  - Невозможно одновременно использовать иерархические адресные книги и политики адресных книг. Дополнительные сведения см. в разделе [Иерархические адресные книги](hierarchical-address-books-exchange-2013-help.md).
+  - Невозможно одновременно использовать иерархические адресные книги и политики адресных книг. Дополнительные сведения см. в разделе [Иерархические адресные книги](https://docs.microsoft.com/ru-ru/exchange/address-books/hierarchical-address-books/hierarchical-address-books).
 
   - Любой пользователь, к которому применяется политика адресной книги, должен содержаться в доступном ему глобальном списке адресов.
 
@@ -289,7 +289,7 @@ _**Последнее изменение раздела:** 2016-12-09_
 
     New-AddressList -Name "AL_TAIL_Users_DGs" -RecipientFilter {((RecipientType -eq 'UserMailbox') -or (RecipientType -eq "MailUniversalDistributionGroup") -or (RecipientType -eq "DynamicDistributionGroup")) -and (CustomAttribute15 -eq "TAIL")}
 
-Дополнительные сведения о создании списков адресов с помощью фильтров получателей см. в разделе [Создание списка адресов с помощью фильтров получателей](create-an-address-list-by-using-recipient-filters-exchange-2013-help.md).
+Дополнительные сведения о создании списков адресов с помощью фильтров получателей см. в разделе [Создание списка адресов с помощью фильтров получателей](https://docs.microsoft.com/ru-ru/exchange/address-books/address-lists/use-recipient-filters-to-create-an-address-list).
 
 Для создания ABP необходимо предоставить список адресов помещений. Если в организации нет почтовых ящиков ресурсов для оборудования и помещений, стоит создать пустой список адресов помещений. В следующем примере создается пустой список адресов помещений, так как в организации отсутствуют почтовые ящики помещений.
 
@@ -319,7 +319,7 @@ _**Последнее изменение раздела:** 2016-12-09_
 
     New-AddressBookPolicy -Name "ABP_TAIL" -AddressLists "AL_TAIL_Users_DGs"," AL_TAIL_Contacts" -OfflineAddressBook "\OAB_TAIL" -GlobalAddressList "\GAL_TAIL" -RoomList "\AL_TAIL_Rooms"
 
-Подробнее см. в разделе [Создание политики адресных книг](create-an-address-book-policy-exchange-2013-help.md).
+Подробнее см. в разделе [Создание политики адресных книг](https://docs.microsoft.com/ru-ru/exchange/address-books/address-book-policies/create-an-address-book-policy).
 
 ## Действие 5. Назначение политик адресной книги почтовым ящикам
 

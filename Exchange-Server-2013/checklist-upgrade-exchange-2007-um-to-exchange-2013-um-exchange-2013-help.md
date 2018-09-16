@@ -25,7 +25,7 @@ _**Последнее изменение раздела:** 2016-12-09_
 
   - [Интеграция телефонной системы с единой системой обмена сообщениями](https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/telephone-system-integration-with-um/telephone-system-integration-with-um)
 
-  - [Подключиться к телефонной сети вашей системы голосовой почты](connect-your-voice-mail-system-to-your-telephone-network-exchange-2013-help.md)
+  - [Подключиться к телефонной сети вашей системы голосовой почты](https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/connect-voice-mail-system/connect-voice-mail-system)
 
 Пошаговое руководство по обновлению единой системы обмена сообщениями Exchange 2010 до версии единой системы обмена сообщениями Exchange 2013 см. в разделе [Контрольный список: Обновление единой системы обмена сообщениями Exchange 2010 до Exchange 2013](checklist-upgrade-exchange-2010-um-to-exchange-2013-um-exchange-2013-help.md).
 
@@ -100,7 +100,7 @@ _**Последнее изменение раздела:** 2016-12-09_
 <td><p></p></td>
 <td><p>Создание или настройка существующих абонентских доступов единой системы обмена сообщениями</p></td>
 <td><p><a href="https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/connect-voice-mail-system/create-um-dial-plan">Создание абонентской группы единой системы обмена сообщениями</a></p>
-<p><a href="manage-a-um-dial-plan-exchange-2013-help.md">Управление абонентской группой единой системы обмена сообщениями</a></p></td>
+<p><a href="https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/connect-voice-mail-system/manage-um-dial-plan">Управление абонентской группой единой системы обмена сообщениями</a></p></td>
 </tr>
 <tr class="even">
 <td><p></p></td>
@@ -111,7 +111,7 @@ _**Последнее изменение раздела:** 2016-12-09_
 <tr class="odd">
 <td><p></p></td>
 <td><p>Создание сервисной группы единой системы обмена сообщениями</p></td>
-<td><p><a href="create-a-um-hunt-group-exchange-2013-help.md">Создание сервисной группы единой системы обмена сообщениями</a></p></td>
+<td><p><a href="https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/connect-voice-mail-system/create-um-hunt-group">Создание сервисной группы единой системы обмена сообщениями</a></p></td>
 </tr>
 <tr class="even">
 <td><p></p></td>

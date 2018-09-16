@@ -259,7 +259,7 @@ _**Последнее изменение раздела:** 2016-05-26_
 
 ## Дополнительные сведения
 
-  - [Применение правил защиты от потери данных для оценки сообщений](how-dlp-rules-are-applied-to-evaluate-messages-exchange-2013-help.md)
+  - [Применение правил защиты от потери данных для оценки сообщений](https://docs.microsoft.com/ru-ru/exchange/security-and-compliance/data-loss-prevention/dlp-rule-application)
 
   - [Создание настраиваемой политики DLP](https://docs.microsoft.com/ru-ru/exchange/security-and-compliance/data-loss-prevention/create-custom-dlp-policy)
 

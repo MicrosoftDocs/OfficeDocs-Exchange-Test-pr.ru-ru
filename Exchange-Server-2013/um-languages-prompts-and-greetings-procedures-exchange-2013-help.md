@@ -19,7 +19,7 @@ _**Последнее изменение раздела:** 2013-04-17_
 
 [Установка языкового пакета единой системы обмена сообщениями](install-a-um-language-pack-exchange-2013-help.md)
 
-[Выбрать язык по умолчанию для абонентской группы](set-the-default-language-on-a-dial-plan-exchange-2013-help.md)
+[Выбрать язык по умолчанию для абонентской группы](https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/greetings-announcements-menus-and-prompts/set-dial-plan-default-language)
 
 [Выберите язык для автосекретарю.](https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/greetings-announcements-menus-and-prompts/select-auto-attendant-language)
 

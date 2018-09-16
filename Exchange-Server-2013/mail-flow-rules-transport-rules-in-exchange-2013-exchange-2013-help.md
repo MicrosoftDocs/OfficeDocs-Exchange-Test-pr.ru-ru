@@ -31,13 +31,13 @@ _**Последнее изменение раздела:** 2017-04-28_
 
   - [Использование правил транспорта для проверки вложений сообщений](use-transport-rules-to-inspect-message-attachments-exchange-2013-help.md)
 
-  - [Распространенные сценарии блокирования вложений](common-attachment-blocking-scenarios-for-mail-flow-rules-exchange-2013-help.md)
+  - [Распространенные сценарии блокирования вложений](https://docs.microsoft.com/ru-ru/exchange/security-and-compliance/mail-flow-rules/common-attachment-blocking-scenarios)
 
   - [Заявления об отказе, подписи, верхние или нижние колонтитулы на уровне организации](organization-wide-disclaimers-signatures-footers-or-headers-exchange-online-help.md)
 
-  - [Использование правил обработки почтового потока для обхода папки "Несрочные"](use-mail-flow-rules-so-messages-can-bypass-clutter-exchange-2013-help.md)
+  - [Использование правил обработки почтового потока для обхода папки "Несрочные"](https://docs.microsoft.com/ru-ru/exchange/security-and-compliance/mail-flow-rules/use-rules-to-bypass-clutter)
 
-  - [Использование правил обработки почтового потока для маршрутизации электронной почты с учетом списка слов, фраз или шаблонов](use-mail-flow-rules-to-route-email-based-on-a-list-of-words-phrases-or-patterns-exchange-2013-help.md)
+  - [Использование правил обработки почтового потока для маршрутизации электронной почты с учетом списка слов, фраз или шаблонов](https://docs.microsoft.com/ru-ru/exchange/security-and-compliance/mail-flow-rules/use-rules-to-route-email)
 
   - [Распространенные сценарии утверждения сообщений](https://docs.microsoft.com/ru-ru/exchange/security-and-compliance/mail-flow-rules/common-message-approval-scenarios)
 

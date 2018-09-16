@@ -39,7 +39,7 @@ Exchange 2013 позволяет SharePoint 2013 искать контент п�
 
   - [Обнаружение электронных данных на месте](https://docs.microsoft.com/ru-ru/exchange/security-and-compliance/in-place-ediscovery/in-place-ediscovery)
 
-  - [Хранение на месте и хранение для судебного разбирательства](in-place-hold-and-litigation-hold-exchange-2013-help.md)
+  - [Хранение на месте и хранение для судебного разбирательства](https://docs.microsoft.com/ru-ru/exchange/security-and-compliance/in-place-and-litigation-holds)
 
   - [Настройка обнаружения электронных данных в SharePoint Server 2013](https://go.microsoft.com/fwlink/p/?linkid=257727)
 

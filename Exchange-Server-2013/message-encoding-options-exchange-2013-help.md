@@ -401,7 +401,7 @@ _**Последнее изменение раздела:** 2016-12-09_
 
 [Управление пользователями почты](https://docs.microsoft.com/ru-ru/exchange/recipients-in-exchange-online/manage-mail-users)
 
-[Управление почтовыми контактами](manage-mail-contacts-exchange-2013-help.md)
+[Управление почтовыми контактами](https://docs.microsoft.com/ru-ru/exchange/recipients-in-exchange-online/manage-mail-contacts)
 
 [Изменение формата сообщения в Outlook](https://go.microsoft.com/fwlink/p/?linkid=397890)
 

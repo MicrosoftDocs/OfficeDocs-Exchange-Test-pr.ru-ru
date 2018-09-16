@@ -98,7 +98,7 @@ _**Последнее изменение раздела:** 2016-12-09_
 <tr class="even">
 <td><p></p></td>
 <td><p>Настройте номера голосовых доступов Outlook и другие параметры.</p></td>
-<td><p><a href="manage-a-um-dial-plan-exchange-2013-help.md">Управление абонентской группой единой системы обмена сообщениями</a></p></td>
+<td><p><a href="https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/connect-voice-mail-system/manage-um-dial-plan">Управление абонентской группой единой системы обмена сообщениями</a></p></td>
 </tr>
 <tr class="odd">
 <td><p></p></td>
@@ -109,7 +109,7 @@ _**Последнее изменение раздела:** 2016-12-09_
 <td><p></p></td>
 <td><p>Настройте исходящие номера для единой системы обмена сообщениями. Разрешите все вызовы для абонентских групп с универсальным кодом ресурса (URI) протокола SIP и политики почтовых ящиков единой системы обмена сообщениями, которые связаны с этими группами.</p></td>
 <td><p><a href="https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-client-voice-mail-features/authorize-calls-for-users-in-a-dial-plan">Авторизации вызовов для пользователей в абонентской группы</a></p>
-<p><a href="authorize-calls-for-a-group-of-users-exchange-2013-help.md">Авторизовать звонки для группы пользователей</a></p></td>
+<p><a href="https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-client-voice-mail-features/authorize-calls-for-a-group-of-users">Авторизовать звонки для группы пользователей</a></p></td>
 </tr>
 <tr class="odd">
 <td><p></p></td>

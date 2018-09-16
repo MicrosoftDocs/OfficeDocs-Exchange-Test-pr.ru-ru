@@ -63,7 +63,7 @@ _**Последнее изменение раздела:** 2016-12-09_
 
 Дополнительные сведения о добавлении в результаты поиска элементов, не включаемых в поиск, см. в следующей статье:
 
-  - [Создание поискового запроса на локальное обнаружение электронных данных](create-an-in-place-ediscovery-search-exchange-2013-help.md)
+  - [Создание поискового запроса на локальное обнаружение электронных данных](https://docs.microsoft.com/ru-ru/exchange/security-and-compliance/in-place-ediscovery/create-in-place-ediscovery-search)
 
   - [Экспорт результатов поиска при обнаружении электронных данных в PST-файл](https://docs.microsoft.com/ru-ru/exchange/security-and-compliance/in-place-ediscovery/export-search-results)
 

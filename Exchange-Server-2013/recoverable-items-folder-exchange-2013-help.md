@@ -222,7 +222,7 @@ _**Последнее изменение раздела:** 2016-12-09_
 
   - [Обнаружение электронных данных на месте](https://docs.microsoft.com/ru-ru/exchange/security-and-compliance/in-place-ediscovery/in-place-ediscovery)
 
-  - [Хранение на месте и хранение для судебного разбирательства](in-place-hold-and-litigation-hold-exchange-2013-help.md)
+  - [Хранение на месте и хранение для судебного разбирательства](https://docs.microsoft.com/ru-ru/exchange/security-and-compliance/in-place-and-litigation-holds)
 
 В начало
 

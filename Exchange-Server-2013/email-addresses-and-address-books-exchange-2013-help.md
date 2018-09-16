@@ -80,7 +80,7 @@ _**Последнее изменение раздела:** 2015-03-09_
 <td><p>Подробнее о прокси адресах электронной почты, чтобы получателей было легче обнаружить.</p></td>
 </tr>
 <tr class="odd">
-<td><p><a href="hierarchical-address-books-exchange-2013-help.md">Иерархические адресные книги</a></p></td>
+<td><p><a href="https://docs.microsoft.com/ru-ru/exchange/address-books/hierarchical-address-books/hierarchical-address-books">Иерархические адресные книги</a></p></td>
 <td><p>Подробнее о настройке глобальных списков адресов и списков адресов для соответствия уникальной бизнес-структуре организации.</p></td>
 </tr>
 <tr class="even">

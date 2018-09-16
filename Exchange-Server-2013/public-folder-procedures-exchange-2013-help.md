@@ -21,33 +21,33 @@ _**Последнее изменение раздела:** 2017-08-02_
 
 Воспользуйтесь приведенными ниже процедурами, чтобы подготовить инфраструктуру общедоступных папок, а также выполнить другие необходимые действия по управлению ими.
 
-[Настройка общедоступных папок в новой организации](set-up-public-folders-in-a-new-organization-exchange-2013-help.md)
+[Настройка общедоступных папок в новой организации](https://docs.microsoft.com/ru-ru/exchange/collaboration-exo/public-folders/set-up-public-folders)
 
 [Настройка локальных общедоступных папок прежних версий для гибридного развертывания](https://docs.microsoft.com/ru-ru/exchange/collaboration-exo/public-folders/set-up-legacy-hybrid-public-folders)
 
-[Настройка общедоступных папок Exchange 2013 для гибридного развертывания](configure-exchange-2013-public-folders-for-a-hybrid-deployment-exchange-2013-help.md)
+[Настройка общедоступных папок Exchange 2013 для гибридного развертывания](https://docs.microsoft.com/ru-ru/exchange/collaboration-exo/public-folders/set-up-modern-hybrid-public-folders)
 
-[Настройка общедоступных папок Exchange Online для гибридного развертывания](configure-exchange-online-public-folders-for-a-hybrid-deployment-exchange-2013-help.md)
+[Настройка общедоступных папок Exchange Online для гибридного развертывания](https://docs.microsoft.com/ru-ru/exchange/collaboration-exo/public-folders/set-up-exo-hybrid-public-folders)
 
 [Настройка устаревших общедоступных папок, почтовые ящики которых размещены на серверах Exchange 2013](configure-legacy-public-folders-where-user-mailboxes-are-on-exchange-2013-servers-exchange-2013-help.md)
 
 [Использование пакетной миграции для переноса общедоступных папок в Exchange 2013 из предыдущих версий](use-batch-migration-to-migrate-public-folders-to-exchange-2013-from-previous-versions-exchange-2013-help.md)
 
-[Использование пакетной миграции для переноса устаревших общедоступных папок в Office 365 и Exchange Online](use-batch-migration-to-migrate-legacy-public-folders-to-office-365-and-exchange-online-exchange-online-help.md)
+[Использование пакетной миграции для переноса устаревших общедоступных папок в Office 365 и Exchange Online](https://docs.microsoft.com/ru-ru/exchange/collaboration-exo/public-folders/batch-migration-of-legacy-public-folders)
 
 [Использование пакетной миграции для переноса общедоступных папок Exchange 2013 в Exchange Online](https://docs.microsoft.com/ru-ru/exchange/collaboration-exo/public-folders/batch-migration-of-exchange-2013-public-folders)
 
-[Создание почтового ящика общедоступных папок](create-a-public-folder-mailbox-exchange-2013-help.md)
+[Создание почтового ящика общедоступных папок](https://docs.microsoft.com/ru-ru/exchange/collaboration-exo/public-folders/create-public-folder-mailbox)
 
 [Создание общедоступной папки](https://docs.microsoft.com/ru-ru/exchange/collaboration-exo/public-folders/create-public-folder)
 
 [Включение и отключение поддержки почты для общедоступной папки](https://docs.microsoft.com/ru-ru/exchange/collaboration-exo/public-folders/enable-or-disable-mail-for-public-folder)
 
-[обновлять иерархию общих папок;](update-the-public-folder-hierarchy-exchange-2013-help.md)
+[обновлять иерархию общих папок;](https://docs.microsoft.com/ru-ru/exchange/collaboration-exo/public-folders/update-public-folder-hierarchy)
 
 [Удаление общедоступной папки](https://docs.microsoft.com/ru-ru/exchange/collaboration-exo/public-folders/remove-public-folder)
 
-[Использование избранных общих папок в Outlook в Интернете](use-favorite-public-folders-in-outlook-on-the-web-exchange-2013-help.md)
+[Использование избранных общих папок в Outlook в Интернете](https://docs.microsoft.com/ru-ru/exchange/collaboration-exo/public-folders/use-favorite-public-folders)
 
 [Перемещение почтового ящика общедоступных папок в другую базу данных почтовых ящиков](move-a-public-folder-mailbox-to-a-different-mailbox-database-exchange-2013-help.md)
 

@@ -21,7 +21,7 @@ _**Последнее изменение раздела:** 2012-10-12_
 
 [Обновление списка адресов](update-an-address-list-exchange-2013-help.md)
 
-[Создание списка адресов с помощью фильтров получателей](create-an-address-list-by-using-recipient-filters-exchange-2013-help.md)
+[Создание списка адресов с помощью фильтров получателей](https://docs.microsoft.com/ru-ru/exchange/address-books/address-lists/use-recipient-filters-to-create-an-address-list)
 
 [Перемещение списка адресов](move-an-address-list-exchange-2013-help.md)
 
