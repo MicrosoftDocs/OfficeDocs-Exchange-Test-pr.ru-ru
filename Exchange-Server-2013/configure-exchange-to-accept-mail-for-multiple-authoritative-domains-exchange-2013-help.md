@@ -129,11 +129,15 @@ _**Последнее изменение раздела:** 2016-06-15_
 
 Чтобы применить обновленную политику адресов электронной почты к получателям, введите команду в следующем формате.
 
-    Update-EmailAddressPolicy <EamilAddressPolicyIdentity>
+```powershell
+Update-EmailAddressPolicy <EamilAddressPolicyIdentity>
+```
 
 Например, чтобы применить обновленную политику с именем "Default Policy", выполните следующую команду:
 
-    Update-EmailAddressPolicy "Default Policy"
+```powershell
+Update-EmailAddressPolicy "Default Policy"
+```
 
 ## Замена существующего основного адреса электронной почты для фильтрованного набора получателей
 
@@ -191,7 +195,9 @@ _**Последнее изменение раздела:** 2016-06-15_
 
 Чтобы применить новую политику адресов электронной почты к заданным получателям, выполните следующую команду:
 
-    Update-EmailAddressPolicy "Fourth Coffee Recipients"
+```powershell
+Update-EmailAddressPolicy "Fourth Coffee Recipients"
+```
 
 ## Как проверить, что шаг выполнен?
 

@@ -253,7 +253,9 @@ Exchange 2013 улучшает устойчивость сервера и хра
 
 Воспроизведение изолированных копий по умолчанию отключено. Его можно включить с помощью следующей команды.
 
-    Set-DatabaseAvailabilityGroup <DAGName> -ReplayLagManagerEnabled $true
+```powershell
+Set-DatabaseAvailabilityGroup <DAGName> -ReplayLagManagerEnabled $true
+```
 
 После включения воспроизведение происходит при наличии менее трех копий. Можно изменить значение по умолчанию, равное 3, изменив следующее значение DWORD в реестре.
 

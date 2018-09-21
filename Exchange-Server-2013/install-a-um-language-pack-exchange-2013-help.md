@@ -63,7 +63,9 @@ _**Последнее изменение раздела:** 2016-12-09_
 
 В этом примере устанавливается языковой пакет японского языка (ja-JP) для единой системы обмена сообщениями, который ранее был загружен в папку D:\\Exchange\\UMLanguagePacks на сервере почтовых ящиков.
 
-    setup.exe /AddUmLanguagePack:ja-JP /s:d:\Exchange\UMLanguagePacks /IAcceptExchangeServerLicenseTerms
+```powershell
+setup.exe /AddUmLanguagePack:ja-JP /s:d:\Exchange\UMLanguagePacks /IAcceptExchangeServerLicenseTerms
+```
 
 В этом примере устанавливаются языковые пакеты мексиканского испанского (es-MX) и немецкого (de-DE) языков для единой системы обмена сообщениями, которые ранее были загружены в папку D:\\Exchange\\UMLanguagePacks на сервере почтовых ящиков.
 

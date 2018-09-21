@@ -55,7 +55,9 @@ _**Последнее изменение раздела:** 2013-08-13_
 
 Чтобы исключить базу данных почтовых ящиков из автоматического распределения, используйте следующую команду:
 
-    Set-MailboxDatabase <database name> -IsExcludedFromProvisioning $True
+```powershell
+Set-MailboxDatabase <database name> -IsExcludedFromProvisioning $True
+```
 
 Когда база данных почтовых ящиков исключена из автоматического распределения, то единственный способ создания почтового ящика в этой базе данных или перемещения почтового ящика в нее заключается в использовании параметра *Database* в командлетах **New-Mailbox** и **Enable-Mailbox** или параметра *TargetDatabase* в командлете **New-MoveRequest**.
 

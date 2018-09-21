@@ -43,15 +43,21 @@ _**Последнее изменение раздела:** 2014-09-17_
 
 В этом примере выполняется проверка возможности прослушивания шлюзом IP единой системы обмена сообщениями входящих SIP-запросов на TCP-порте 5060.
 
-    Test-UMConnectivity -ListenPort 5060 -UMIPGateway MyIPGateway
+```powershell
+Test-UMConnectivity -ListenPort 5060 -UMIPGateway MyIPGateway
+```
 
 Во этом примере проверяется возможность использования сервером почтовых ящиков незащищенного подключения протокола TCP вместо защищенного подключения Mutual TLS, чтобы передать вызов через IP-шлюз единой системы обмена сообщениями `MyUMIPGateway` по телефонному номеру 56780.
 
-    Test-UMConnectivity -UMIPGateway MyUMIPGateway -Phone 56780 -Secured $false
+```powershell
+Test-UMConnectivity -UMIPGateway MyUMIPGateway -Phone 56780 -Secured $false
+```
 
 В этом примере выполняется проверка кода голосового доступа к Outlook для абонентской группы с помощью универсального кода ресурса (URI) SIP. Этот пример можно использовать в среде, включающей Lync Server.
 
-    Test-UMConnectivity -UMIPGateway OCSGateway1 -Phone "sip:SIPdialplan.contoso.com@contoso.com"
+```powershell
+Test-UMConnectivity -UMIPGateway OCSGateway1 -Phone "sip:SIPdialplan.contoso.com@contoso.com"
+```
 
 > [!NOTE]  
 > Для параметра <code>-Timeout</code> можно установить значение менее 5 секунд. Тем не менее, рекомендуется всегда устанавливать для этого параметра значение, равное 5 секундам или более. Используйте режим 2 при указании параметра <code>­UMIPGateway</code> в синтаксисе командной строки.

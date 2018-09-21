@@ -55,11 +55,15 @@ _**Последнее изменение раздела:** 2015-04-13_
 
 2.  Чтобы экспортировать данные конфигурации исходного сервера в файл на исходном сервере, используйте приведенный ниже синтаксис.
     
-        ./ExportEdgeConfig.ps1 -CloneConfigData:"<configuration file>"
+    ```powershell
+./ExportEdgeConfig.ps1 -CloneConfigData:"<configuration file>"
+```
     
     Например, чтобы экспортировать данные конфигурации исходного сервера в файл C:\\CloneConfigData.xml, выполните приведенную ниже команду.
     
-        ./ExportEdgeConfig.ps1 -CloneConfigData:"C:\CloneConfigData.xml"
+    ```powershell
+./ExportEdgeConfig.ps1 -CloneConfigData:"C:\CloneConfigData.xml"
+```
 
 ## Как проверить, что шаг выполнен?
 

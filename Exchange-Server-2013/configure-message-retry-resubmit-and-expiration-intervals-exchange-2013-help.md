@@ -41,7 +41,9 @@ _**Последнее изменение раздела:** 2014-12-16_
 
 1.  В командной строке на сервере почтовых ящиков или пограничном транспортном сервере откройте файл EdgeTransport.exe.config в Блокноте, выполнив следующую команду:
     
-        Notepad %ExchangeInstallPath%Bin\EdgeTransport.exe.config
+    ```powershell
+Notepad %ExchangeInstallPath%Bin\EdgeTransport.exe.config
+```
 
 2.  В разделе `<appSettings>` найдите следующие ключи.
     
@@ -139,11 +141,15 @@ _**Последнее изменение раздела:** 2014-12-16_
 
 Для настройки интервала повторной отправки сообщения введите команду в следующем формате.
 
-    Set-TransportService <ServerIdentity> -MessageRetryInterval <dd.hh:mm:ss>
+```powershell
+Set-TransportService <ServerIdentity> -MessageRetryInterval <dd.hh:mm:ss>
+```
 
 В этом примере интервал повторной отправки сообщения на сервере почтовых ящиков с именем Mailbox01 меняется на значение 20 минут.
 
-    Set-TransportService Mailbox01 -MessageRetryInterval 00:20:00
+```powershell
+Set-TransportService Mailbox01 -MessageRetryInterval 00:20:00
+```
 
 ## Настроить время ожидания для уведомления о состоянии задержанной доставки
 
@@ -165,11 +171,15 @@ _**Последнее изменение раздела:** 2014-12-16_
 
 Для настройки интервала повторной отправки сообщения введите команду в следующем формате.
 
-    Set-TransportService <ServerIdentity> -DelayNotificationTimeout <dd.hh:mm:ss>
+```powershell
+Set-TransportService <ServerIdentity> -DelayNotificationTimeout <dd.hh:mm:ss>
+```
 
 В этом примере интервал ожидания уведомления о состоянии задержанной доставки на сервере почтовых ящиков с именем Mailbox01 меняется на значение 6 минут.
 
-    Set-TransportService Mailbox01 -DelayNotificationTimeout 06:00:00
+```powershell
+Set-TransportService Mailbox01 -DelayNotificationTimeout 06:00:00
+```
 
 ## Использовать командную консоль для включения или отключения отправки уведомлений о состоянии задержанной доставки для внешних или внутренних отправителей сообщений
 
@@ -179,11 +189,15 @@ _**Последнее изменение раздела:** 2014-12-16_
 
 В этом примере запрещается отправка уведомлений о состоянии задержанной доставки внешним отправителям.
 
-    Set-TransportConfig -ExternalDelayDSNEnabled $false
+```powershell
+Set-TransportConfig -ExternalDelayDSNEnabled $false
+```
 
 В этом примере запрещается отправка уведомлений о состоянии задержанной доставки внутренним отправителям.
 
-    Set-TransportConfig -InternalDelayDSNEnabled $false
+```powershell
+Set-TransportConfig -InternalDelayDSNEnabled $false
+```
 
 ## Настроить интервал срока действия сообщений
 
@@ -199,9 +213,13 @@ _**Последнее изменение раздела:** 2014-12-16_
 
 Чтобы настроить интервал срока действия сообщения введите команду в следующем формате.
 
-    Set-TransportService <ServerIdentity> -MessageExpirationTimeout <dd.hh:mm:ss>
+```powershell
+Set-TransportService <ServerIdentity> -MessageExpirationTimeout <dd.hh:mm:ss>
+```
 
 В этом примере на сервере Exchange с именем Mailbox01 интервал срока действия сообщения меняется на 4 дня.
 
-    Set-TransportService Mailbox01 -MessageExpirationTimeout 4.00:00:00
+```powershell
+Set-TransportService Mailbox01 -MessageExpirationTimeout 4.00:00:00
+```
 

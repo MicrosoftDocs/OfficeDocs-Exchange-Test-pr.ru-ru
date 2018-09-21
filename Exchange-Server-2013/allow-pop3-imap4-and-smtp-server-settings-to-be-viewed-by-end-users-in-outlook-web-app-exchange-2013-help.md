@@ -47,19 +47,25 @@ _**Последнее изменение раздела:** 2012-11-28_
 
 В этом примере конечным пользователям разрешается просматривать внешние параметры POP3-сервера.
 
-    Set-PopSettings -ExternalConnectionSettings {Dublin01.Contoso.com:995:SSL}
+```powershell
+Set-PopSettings -ExternalConnectionSettings {Dublin01.Contoso.com:995:SSL}
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Set-POPSettings](https://technet.microsoft.com/ru-ru/library/aa997154\(v=exchg.150\)).
 
 В этом примере конечным пользователям разрешается просматривать внешние параметры IMAP4-сервера.
 
-    Set-ImapSettings -ExternalConnectionSettings {Dublin01.Contoso.com:993:SSL}
+```powershell
+Set-ImapSettings -ExternalConnectionSettings {Dublin01.Contoso.com:993:SSL}
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Set-IMAPSettings](https://technet.microsoft.com/ru-ru/library/aa998252\(v=exchg.150\)).
 
 Чтобы применить эти изменения, необходимо перезапустить IIS. Вам не нужно перезапускать службы POP3. Чтобы перезапустить IIS, в командной строке введите следующее:
 
-    iisreset
+```powershell
+iisreset
+```
 
 ## Как проверить, что все получилось?
 
@@ -67,7 +73,9 @@ _**Последнее изменение раздела:** 2012-11-28_
 
 1.  Выполните в командной консоли следующую команду.
     
-        Get-PopSettings | format-list
+    ```powershell
+Get-PopSettings | format-list
+```
 
 2.  Убедитесь, что свойство *ExternalConnectionSettings* задано.
 
@@ -75,7 +83,9 @@ _**Последнее изменение раздела:** 2012-11-28_
 
 1.  Выполните в командной консоли следующую команду.
     
-        Get-ImapSettings | format-list
+    ```powershell
+Get-ImapSettings | format-list
+```
 
 2.  Убедитесь, что свойство *ExternalConnectionSettings* задано.
 
@@ -95,7 +105,9 @@ _**Последнее изменение раздела:** 2012-11-28_
 
 1.  Выполните в командной консоли следующую команду.
     
-        Get-ReceiveConnector | format-list
+    ```powershell
+Get-ReceiveConnector | format-list
+```
 
 2.  Если свойство *AdvertiseClientSettings* равно `true`, пользователи смогут просматривать настройки SMTP-сервера в Outlook Web App. Если свойство *AdvertiseClientSettings* равно `false`, пользователи не смогут просматривать настройки SMTP-сервера в Outlook Web App.
 

@@ -39,9 +39,13 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 В этом примере разрешаются автоматические ответы в удаленный домен Contoso. Этот параметр отключен по умолчанию.
 
-    Set-RemoteDomain Contoso -AutoReplyEnabled $true
+```powershell
+Set-RemoteDomain Contoso -AutoReplyEnabled $true
+```
 
 В этом примере разрешается автоматическая пересылка в удаленный домен. Этот параметр отключен по умолчанию.
 
-    Set-RemoteDomain Contoso -AutoForwardEnabled $true
+```powershell
+Set-RemoteDomain Contoso -AutoForwardEnabled $true
+```
 

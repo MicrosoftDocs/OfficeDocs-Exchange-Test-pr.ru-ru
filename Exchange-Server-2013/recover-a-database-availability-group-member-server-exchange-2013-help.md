@@ -53,11 +53,15 @@ _**Последнее изменение раздела:** 2016-12-09_
 
 2.  Удалите все копии баз данных почтовых ящиков, существовавшие на восстанавливаемом сервере, с помощью командлета [Remove-MailboxDatabaseCopy](https://technet.microsoft.com/ru-ru/library/dd335119\(v=exchg.150\)).
     
-        Remove-MailboxDatabaseCopy DB1\MBX1
+    ```powershell
+Remove-MailboxDatabaseCopy DB1\MBX1
+```
 
 3.  Удалите конфигурацию отказавшего сервера из группы обеспечения доступности баз данных с помощью командлета [Remove-DatabaseAvailabilityGroupServer](https://technet.microsoft.com/ru-ru/library/dd297956\(v=exchg.150\)).
     
-        Remove-DatabaseAvailabilityGroupServer -Identity DAG1 -MailboxServer MBX1
+    ```powershell
+Remove-DatabaseAvailabilityGroupServer -Identity DAG1 -MailboxServer MBX1
+```
     
     > [!NOTE]  
     > Если удаляемый член DAG отключен и не может быть включен, к команде выше следует добавить параметр <em>ConfigurationOnly</em>. Если вы используете параметр <em>ConfigurationOnly</em>, необходимо также вручную исключить узел из кластера.
@@ -67,11 +71,15 @@ _**Последнее изменение раздела:** 2016-12-09_
 
 5.  Откройте окно командной строки. С помощью исходного установочного носителя выполните такую команду:
     
-        Setup /m:RecoverServer
+    ```powershell
+Setup /m:RecoverServer
+```
 
 6.  После завершения процесса восстановления программы установки добавьте восстановленный сервер в группу обеспечения доступности баз данных с помощью командлета [Add-DatabaseAvailabilityGroupServer](https://technet.microsoft.com/ru-ru/library/dd298049\(v=exchg.150\)).
     
-        Add-DatabaseAvailabilityGroupServer -Identity DAG1 -MailboxServer MBX1
+    ```powershell
+Add-DatabaseAvailabilityGroupServer -Identity DAG1 -MailboxServer MBX1
+```
 
 7.  После того как сервер будет снова добавлен в группу обеспечения доступности баз данных, можно заново выполнить конфигурацию копий баз данных почтовых ящиков с помощью командлета [Add-MailboxDatabaseCopy](https://technet.microsoft.com/ru-ru/library/dd298105\(v=exchg.150\)). Если какая-либо из копий баз данных, добавленных ранее, имела время задержки преобразования или задержки усечения более 0, то можно использовать параметры *ReplayLagTime* и *TruncationLagTime* командлета [Add-MailboxDatabaseCopy](https://technet.microsoft.com/ru-ru/library/dd298105\(v=exchg.150\)) для переконфигурации этих параметров.
     
@@ -86,10 +94,14 @@ _**Последнее изменение раздела:** 2016-12-09_
   - В консоли выполните следующую команду для проверки работоспособности и состояния восстановленного члена группы DAG:
     
 ```
-        Test-ReplicationHealth <ServerName>
+    ```powershell
+Test-ReplicationHealth <ServerName>
+```
 ```    
 ```
-        Get-MailboxDatabaseCopyStatus -Server <ServerName>
+    ```powershell
+Get-MailboxDatabaseCopyStatus -Server <ServerName>
+```
 ```    
  Все тесты работоспособности репликации должны пройти успешно, и состояние баз данных и их индексы содержания должны быть работоспособны.
 

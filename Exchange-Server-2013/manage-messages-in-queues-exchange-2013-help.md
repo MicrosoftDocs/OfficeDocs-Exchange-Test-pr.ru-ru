@@ -61,11 +61,15 @@ _**Последнее изменение раздела:** 2014-05-07_
 
 В этом примере из очереди удаляются сообщения с темой "Win Big" без отправки отчета о недоставке.
 
-    Remove-Message -Filter {Subject -eq "Win Big"} -WithNDR $false
+```powershell
+Remove-Message -Filter {Subject -eq "Win Big"} -WithNDR $false
+```
 
 В этом примере из очереди недоставленных сообщений на сервере с именем Mailbox01 удаляются сообщения с идентификатором сообщения 3 с отправкой отчета о недоставке.
 
-    Remove-Message -Identity Mailbox01\Unreachable\3 -WithNDR $true
+```powershell
+Remove-Message -Identity Mailbox01\Unreachable\3 -WithNDR $true
+```
 
 ## Как проверить, что все получилось?
 
@@ -103,7 +107,9 @@ _**Последнее изменение раздела:** 2014-05-07_
 
 Для возобновления сообщений введите команду в следующем формате.
 
-    Resume-Message <-Identity MessageIdentity | -Filter {MessageFilter}>
+```powershell
+Resume-Message <-Identity MessageIdentity | -Filter {MessageFilter}>
+```
 
 В данном примере возобновляется передача всех сообщений от всех отправителей в домене Contoso.com.
 
@@ -111,7 +117,9 @@ _**Последнее изменение раздела:** 2014-05-07_
 
 В данном примере возобновляется передача сообщения с идентификатором сообщения 3 в недоступной очереди на сервере Hub01.
 
-    Resume-Message -Identity Hub01\Unreachable\3
+```powershell
+Resume-Message -Identity Hub01\Unreachable\3
+```
 
 Чтобы повторно отправить сообщения из очереди подозрительных сообщений, выполните следующие действия.
 
@@ -145,7 +153,9 @@ _**Последнее изменение раздела:** 2014-05-07_
 
 Для приостановки сообщений введите команду в следующем формате.
 
-    Suspend-Message <-Identity MessageIdentity | -Filter {MessageFilter}>
+```powershell
+Suspend-Message <-Identity MessageIdentity | -Filter {MessageFilter}>
+```
 
 В следующем примере производится приостановка всех сообщений в очередях от любых отправителей в домене Contoso.com.
 
@@ -153,7 +163,9 @@ _**Последнее изменение раздела:** 2014-05-07_
 
 В этом примере производится приостановка сообщения с идентификатором 3 в очереди недоставленных сообщений на сервере с именем Mailbox01.
 
-    Suspend-Message -Identity Mailbox01\Unreachable\3
+```powershell
+Suspend-Message -Identity Mailbox01\Unreachable\3
+```
 
 ## Как проверить, что все получилось?
 

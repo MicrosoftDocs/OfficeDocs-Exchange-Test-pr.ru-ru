@@ -110,11 +110,15 @@ _**Последнее изменение раздела:** 2015-03-09_
 
 1.  В окне командной строки на сервере Exchange 2013, где требуется настроить поддержу устаревших агентов транспорта, откройте в Блокноте соответствующий файл конфигурации приложения с помощью следующей команды:
     
-        Notepad %ExchangeInstallPath%Bin\<AppConfigFile>
+    ```powershell
+Notepad %ExchangeInstallPath%Bin\<AppConfigFile>
+```
     
     Например, чтобы открыть файл EdgeTransport.exe.config на сервере почтовых ящиков, выполните следующую команду:
     
-        Notepad %ExchangeInstallPath%Bin\EdgeTransport.exe.config
+    ```powershell
+Notepad %ExchangeInstallPath%Bin\EdgeTransport.exe.config
+```
 
 2.  Найдите ключ *\</configuration\>* в конце файла и вставьте следующие ключи перед ключом *\</configuration\>*:
     

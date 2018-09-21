@@ -63,7 +63,9 @@ _**Последнее изменение раздела:** 2016-12-09_
 
 В данном примере описывается настройка почтового ящика April Stewart для хранения удаленных элементов в течение 30 дней.
 
-    Set-Mailbox -Identity - "April Stewart" -RetainDeletedItemsFor 30
+```powershell
+Set-Mailbox -Identity - "April Stewart" -RetainDeletedItemsFor 30
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Set-Mailbox](https://technet.microsoft.com/ru-ru/library/bb123981\(v=exchg.150\)).
 
@@ -91,7 +93,9 @@ _**Последнее изменение раздела:** 2016-12-09_
 
 В данном примере описывается настройка хранения удаленных элементов в течение 10 дней для базы данных почтовых ящиков MDB2.
 
-    Set-MailboxDatabase -Identity MDB2 -DeletedItemRetention 10
+```powershell
+Set-MailboxDatabase -Identity MDB2 -DeletedItemRetention 10
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Set-MailboxDatabase](https://technet.microsoft.com/ru-ru/library/bb123971\(v=exchg.150\)).
 
@@ -103,7 +107,9 @@ _**Последнее изменение раздела:** 2016-12-09_
 
 В данном примере описывается настройка квоты предупреждения элементов для восстановления в размере 15 ГБ и квоты элементов для восстановления в размере 20 ГБ для базы данных почтовых ящиков MDB2.
 
-    Set-MailboxDatabase -Identity MDB2 -RecoverableItemsWarningQuota 15GB -RecoverableItemsQuota 20GB
+```powershell
+Set-MailboxDatabase -Identity MDB2 -RecoverableItemsWarningQuota 15GB -RecoverableItemsQuota 20GB
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Set-MailboxDatabase](https://technet.microsoft.com/ru-ru/library/bb123971\(v=exchg.150\)).
 

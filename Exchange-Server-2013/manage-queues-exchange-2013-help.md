@@ -53,11 +53,15 @@ _**Последнее изменение раздела:** 2014-01-31_
 
 В этом примере показано, как отобразить основные сведения о непустых очередях в сервере почтовых ящиков Exchange 2013 с именем Mailbox01.
 
-    Get-Queue -Server Mailbox01 -Exclude Empty
+```powershell
+Get-Queue -Server Mailbox01 -Exclude Empty
+```
 
 В этом примере показано, как отобразить подробные сведения обо всех очередях, содержащих более 100 сообщений, для сервера почтовых ящиков, на котором выполняется команда.
 
-    Get-Queue -Filter {MessageCount -gt 100} | Format-List
+```powershell
+Get-Queue -Filter {MessageCount -gt 100} | Format-List
+```
 
 ## Просмотр сводных сведений об очередях на нескольких серверах Exchange с помощью командной консоли
 
@@ -73,11 +77,15 @@ _**Последнее изменение раздела:** 2014-01-31_
 
 В этом примере показано, как отобразить сводные сведения об очередях, для которых количество сообщений превышает 100, на всех серверах почтовых ящиков Exchange 2013 на сайте Active Directory с именем FirstSite.
 
-    Get-QueueDigest -Site FirstSite -Filter {MessageCount -gt 100}
+```powershell
+Get-QueueDigest -Site FirstSite -Filter {MessageCount -gt 100}
+```
 
 В этом примере показано, как отобразить сводные сведения об очередях на всех серверах почтовых ящиков Exchange 2013 в группе обеспечения доступности баз данных (DAG) с именем DAG01, для которых состояние очереди имеет значение **Повтор**.
 
-    Get-QueueDigest -Dag DAG01 -Filter {Status -eq "Retry"}
+```powershell
+Get-QueueDigest -Dag DAG01 -Filter {Status -eq "Retry"}
+```
 
 ## Возобновление очередей
 
@@ -111,11 +119,15 @@ _**Последнее изменение раздела:** 2014-01-31_
 
 В этом примере показано, как возобновить все очереди на локальном сервере, находящиеся в состоянии "Приостановлено".
 
-    Resume-Queue -Filter {Status -eq "Suspended"}
+```powershell
+Resume-Queue -Filter {Status -eq "Suspended"}
+```
 
 В этом примере показано, как возобновить приостановленную очередь доставки с именем contoso.com на сервере с именем Mailbox01.
 
-    Resume-Queue -Identity Mailbox01\contoso.com
+```powershell
+Resume-Queue -Identity Mailbox01\contoso.com
+```
 
 ## Как проверить, что все получилось?
 
@@ -157,11 +169,15 @@ _**Последнее изменение раздела:** 2014-01-31_
 
 В этом примере показано, как на локальном сервере выполнить повтор всех очередей, находящихся в состоянии "Повтор".
 
-    Retry-Queue -Filter {status -eq "retry"}
+```powershell
+Retry-Queue -Filter {status -eq "retry"}
+```
 
 В этом примере показано, как повторить очередь с именем contoso.com, находящуюся в состоянии `Retry`, на сервере с именем Mailbox01.
 
-    Retry-Queue -Identity Mailbox01\contoso.com
+```powershell
+Retry-Queue -Identity Mailbox01\contoso.com
+```
 
 ## Как проверить, что все получилось?
 
@@ -189,11 +205,15 @@ _**Последнее изменение раздела:** 2014-01-31_
 
 В этом примере показано, как повторно отправить все сообщения, находящиеся в любых очередях доставки с состоянием "Повтор", на сервере Mailbox01.
 
-    Retry-Queue -Filter {Status -eq "Retry"} -Server Mailbox01 -Resubmit $true
+```powershell
+Retry-Queue -Filter {Status -eq "Retry"} -Server Mailbox01 -Resubmit $true
+```
 
 В этом примере показано, как повторно отправить все сообщения, находящиеся в очереди "Сообщения с недостижимым местом назначения", на сервере Mailbox01.
 
-    Retry-Queue -Identity Mailbox01\Unreachable -Resubmit $true
+```powershell
+Retry-Queue -Identity Mailbox01\Unreachable -Resubmit $true
+```
 
 ## Повторная отправка сообщений, находящихся в очереди подозрительных сообщений
 
@@ -221,15 +241,21 @@ _**Последнее изменение раздела:** 2014-01-31_
 
 1.  Найдите идентификатор сообщения, выполнив следующую команду.
     
-        Get-Message -Queue Poison | Format-Table Identity
+    ```powershell
+Get-Message -Queue Poison | Format-Table Identity
+```
 
 2.  Используйте идентификатор сообщения, найденный на предыдущем шаге, в следующей команде.
     
-        Resume-Message <PoisonMessageIdentity>
+    ```powershell
+Resume-Message <PoisonMessageIdentity>
+```
     
     В этом примере возобновляется сообщение из очереди опасных сообщений со значением идентификатора 222.
     
-        Resume-Message 222
+    ```powershell
+Resume-Message 222
+```
 
 ## Как проверить, что все получилось?
 
@@ -265,11 +291,15 @@ _**Последнее изменение раздела:** 2014-01-31_
 
 В этом примере показано, как приостановить все очереди на локальном сервере, которые находятся в состоянии "Повтор" и в которых не менее 1000 сообщений.
 
-    Suspend-Queue -Filter {MessageCount -ge 1000 -and Status -eq "Retry"}
+```powershell
+Suspend-Queue -Filter {MessageCount -ge 1000 -and Status -eq "Retry"}
+```
 
 В этом примере показано, как приостановить очередь с именем contoso.com на сервере с именем Mailbox01.
 
-    Suspend-Queue -Identity Mailbox01\contoso.com
+```powershell
+Suspend-Queue -Identity Mailbox01\contoso.com
+```
 
 ## Как проверить, что все получилось?
 

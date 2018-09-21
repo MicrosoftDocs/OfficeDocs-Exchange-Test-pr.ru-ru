@@ -45,7 +45,9 @@ _**Последнее изменение раздела:** 2015-07-21_
 
 В этом примере показано начало выполнения запроса на перемещение почтового ящика общедоступных папок PF\_SanFrancisco в базу данных почтовых ящиков MBX\_DB01.
 
-    New-MoveRequest -Identity "PF_SanFrancisco" -TargetDatabase MBX_DB01
+```powershell
+New-MoveRequest -Identity "PF_SanFrancisco" -TargetDatabase MBX_DB01
+```
 
 Подробные сведения о синтаксисе и параметрах см. в разделе [New-MoveRequest](https://technet.microsoft.com/ru-ru/library/dd351123\(v=exchg.150\)).
 
@@ -55,19 +57,25 @@ _**Последнее изменение раздела:** 2015-07-21_
 
 В этом примере показано начало выполнения запроса на перемещение почтового ящика общедоступных папок PF\_SanFrancisco в базу данных почтовых ящиков MBX\_DB01 и его приостановка в момент перед завершением запроса на перемещение.
 
-    New-MoveRequest -Identity "PF_SanFrancisco" -TargetDatabase MBX_DB01 -SuspendWhenReadyToComplete
+```powershell
+New-MoveRequest -Identity "PF_SanFrancisco" -TargetDatabase MBX_DB01 -SuspendWhenReadyToComplete
+```
 
 Подробные сведения о синтаксисе и параметрах см. в разделе [New-MoveRequest](https://technet.microsoft.com/ru-ru/library/dd351123\(v=exchg.150\)).
 
 В этом примере показано получение состояния текущего перемещения почтового ящика общедоступных папок PF\_SanFrancisco.
 
-    Get-MoveRequest -Identity "PF_SanFrancisco"
+```powershell
+Get-MoveRequest -Identity "PF_SanFrancisco"
+```
 
 Подробные сведения о синтаксисе и параметрах см. в разделе [Get-MoveRequest](https://technet.microsoft.com/ru-ru/library/dd335227\(v=exchg.150\)).
 
 Когда запрос на перемещение достигает состояния "Приостановлено", можно восстановить запрос. В этом примере показано восстановление запроса на перемещение почтового ящика общедоступных папок PF\_SanFrancisco.
 
-    Resume-MoveRequest -Identity "PF_SanFrancisco"
+```powershell
+Resume-MoveRequest -Identity "PF_SanFrancisco"
+```
 
 Подробные сведения о синтаксисе и параметрах см. в разделе [Resume-MoveRequest](https://technet.microsoft.com/ru-ru/library/ee332320\(v=exchg.150\)).
 
@@ -75,7 +83,9 @@ _**Последнее изменение раздела:** 2015-07-21_
 
 Чтобы проверить, успешно ли создан запрос на перемещение, выполните следующую команду:
 
-    Get-MoveRequestStatistics -Identity PF_SanFrancisco | Format-List Status
+```powershell
+Get-MoveRequestStatistics -Identity PF_SanFrancisco | Format-List Status
+```
 
 Состояние `Completed` означает, что запрос на перемещение успешно выполнен.
 

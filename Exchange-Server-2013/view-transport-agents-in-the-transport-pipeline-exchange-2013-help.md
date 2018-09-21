@@ -45,11 +45,15 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 Чтобы при помощи командной консоли просмотреть список агентов транспорта в конвейере транспорта на сервере Exchange Server, выполните следующую команду:
 
-    Get-TransportPipeline | Format-List
+```powershell
+Get-TransportPipeline | Format-List
+```
 
 Чтобы экспортировать результаты в текстовый файл с именем C:\\My Documents\\Transport Agents.txt, выполните следующую команду:
 
-    Get-TransportPipeline | Format-List > "C:\My Documents\Transport Agents.txt"
+```powershell
+Get-TransportPipeline | Format-List > "C:\My Documents\Transport Agents.txt"
+```
 
 ## Как проверить, что все получилось?
 

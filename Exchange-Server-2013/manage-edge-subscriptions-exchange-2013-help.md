@@ -71,19 +71,27 @@ _**Последнее изменение раздела:** 2018-04-16_
 
 1.  Для удаления пограничной подписки с пограничного транспортного сервера используйте приведенный ниже синтаксис.
     
-        Remove-EdgeSubscription <EdgeTransportServerIdentity>
+    ```powershell
+Remove-EdgeSubscription <EdgeTransportServerIdentity>
+```
     
     Например, чтобы удалить пограничную подписку с пограничного транспортного сервера Edge01, выполните указанную ниже команду.
     
-        Remove-EdgeSubscription Edge01
+    ```powershell
+Remove-EdgeSubscription Edge01
+```
 
 2.  Для удаления пограничной подписки с сервера почтовых ящиков используйте приведенный ниже синтаксис.
     
-        Remove-EdgeSubscription <MailboxServerIdentity>
+    ```powershell
+Remove-EdgeSubscription <MailboxServerIdentity>
+```
     
     Например, чтобы удалить пограничную подписку с сервера почтовых ящиков Mailbox01, выполните указанную ниже команду.
     
-        Remove-EdgeSubscription Mailbox01
+    ```powershell
+Remove-EdgeSubscription Mailbox01
+```
 
 Пограничную подписку понадобится удалить в указанных ниже случаях.
 
@@ -151,7 +159,9 @@ _**Последнее изменение раздела:** 2018-04-16_
 
 <!-- end list -->
 
-    Start-EdgeSynchronization -Server Mailbox01
+```powershell
+Start-EdgeSynchronization -Server Mailbox01
+```
 
 В примере ниже показано, как запустить EdgeSync со следующими параметрами:
 
@@ -163,7 +173,9 @@ _**Последнее изменение раздела:** 2018-04-16_
 
 <!-- end list -->
 
-    Start-EdgeSynchronization -TargetServer Edge03 -ForceFullSync
+```powershell
+Start-EdgeSynchronization -TargetServer Edge03 -ForceFullSync
+```
 
 ## Проверка результатов EdgeSync
 
@@ -177,11 +189,15 @@ _**Последнее изменение раздела:** 2018-04-16_
 
 Чтобы проверить результаты EdgeSync для одного получателя, используйте приведенный ниже синтаксис на сервере почтовых ящиков на подписанном сайте Active Directory.
 
-    Test-EdgeSynchronization -VerifyRecipient <emailaddress>
+```powershell
+Test-EdgeSynchronization -VerifyRecipient <emailaddress>
+```
 
 В примере ниже выполняется проверка результатов EdgeSync для пользователя kate@contoso.com.
 
-    Test-EdgeSynchronization -VerifyRecipient kate@contoso.com
+```powershell
+Test-EdgeSynchronization -VerifyRecipient kate@contoso.com
+```
 
 В начало
 

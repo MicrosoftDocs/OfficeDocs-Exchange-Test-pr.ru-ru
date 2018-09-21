@@ -31,7 +31,9 @@ _**Последнее изменение раздела:** 2015-03-09_
 
 Следующую команду можно использовать для просмотра списка пользователей или универсальных групп безопасности, которые являются участниками этой группы ролей.
 
-    Get-RoleGroupMember "Compliance Management"
+```powershell
+Get-RoleGroupMember "Compliance Management"
+```
 
 Дополнительные сведения об участниках группы ролей см. в разделе [View the members of a role group](manage-role-group-members-exchange-2013-help.md) в статье [Управление участниками группы ролей](manage-role-group-members-exchange-2013-help.md).
 

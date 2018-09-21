@@ -49,11 +49,15 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 Этот пример настраивает конвейерную трассировку для получения мгновенных снимков всех сообщений, отправленных с адреса chris@contoso.com в службе транспорта на сервере почтовых ящиков Mailbox01.
 
-    Set-TransportService Mailbox01 -PipelineTracingSenderAddress chris@contoso.com
+```powershell
+Set-TransportService Mailbox01 -PipelineTracingSenderAddress chris@contoso.com
+```
 
 В этом примере конвейерная трассировка настраивается для получения мгновенных снимков всех созданных системой сообщений, полученных службой транспорта на сервере почтовых ящиков Mailbox02.
 
-    Set-TransportService Mailbox02 -PipelineTracingSenderAddress "<>"
+```powershell
+Set-TransportService Mailbox02 -PipelineTracingSenderAddress "<>"
+```
 
 > [!CAUTION]  
 > Если настроить конвейерную трассировку для записи всех созданных серверами сообщений в службе транспорта, нагрузка на сервер может сильно возрасти, а свободное место на диске может быстро закончиться. Если включена конвейерная трассировка, всегда следите за объемом свободного дискового пространства.
@@ -69,7 +73,9 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 В этом примере настраивается папка конвейерной трассировки для службы транспорта на сервере почтовых ящиков Mailbox01, имя папки — D:\\Hub\\Pipeline Tracing.
 
-    Set-TransportService Mailbox01 -PipelineTracingPath "D:\Hub\Pipeline Tracing"
+```powershell
+Set-TransportService Mailbox01 -PipelineTracingPath "D:\Hub\Pipeline Tracing"
+```
 
 ## Действие 3. Использование командной консоли для включения конвейерной трассировки
 
@@ -81,7 +87,9 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 В этом примере активируется конвейерная трассировка в службе транспорта на сервере почтовых ящиков с именем Mailbox01.
 
-    Set-TransportService Mailbox01 -PipelineTracingEnabled $true
+```powershell
+Set-TransportService Mailbox01 -PipelineTracingEnabled $true
+```
 
 ## Как проверить, что все получилось?
 
@@ -105,7 +113,9 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 В этом примере отключается конвейерная трассировка в службе транспорта на сервере почтовых ящиков с именем Mailbox01.
 
-    Set-TransportService Mailbox01 -PipelineTracingEnabled $false
+```powershell
+Set-TransportService Mailbox01 -PipelineTracingEnabled $false
+```
 
 ## Как проверить, что все получилось?
 

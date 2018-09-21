@@ -37,7 +37,9 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 Командлет **Set-OrganizationConfig** используется для включения или отключения подсказок в организации. При установке новой организации Exchange подсказки включаются по умолчанию. В этом примере показано, как включить подсказки в организации.
 
-    Set-OrganizationConfig -MailTipsAllTipsEnabled $true
+```powershell
+Set-OrganizationConfig -MailTipsAllTipsEnabled $true
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Set-OrganizationConfig](https://technet.microsoft.com/ru-ru/library/aa997443\(v=exchg.150\)).
 

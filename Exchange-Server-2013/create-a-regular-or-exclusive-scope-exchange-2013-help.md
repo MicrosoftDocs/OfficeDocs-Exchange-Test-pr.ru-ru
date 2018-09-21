@@ -81,7 +81,9 @@ _**Последнее изменение раздела:** 2015-04-07_
 
 Используйте следующий синтаксис для создания области фильтра серверов.
 
-    New-ManagementScope -Name <scope name> -ServerRestrictionFilter <filter query>
+```powershell
+New-ManagementScope -Name <scope name> -ServerRestrictionFilter <filter query>
+```
 
 В данном примере создается область, включающая все серверы в пределах сайта Active Directory "CN=Redmond,CN=Sites,CN=Configuration,DC=contoso,DC=com" (Active Directory).
 
@@ -95,11 +97,15 @@ _**Последнее изменение раздела:** 2015-04-07_
 
 Используйте следующий синтаксис для создания области списка серверов.
 
-    New-ManagementScope -Name <scope name> -ServerList <server 1>, <server 2...>
+```powershell
+New-ManagementScope -Name <scope name> -ServerList <server 1>, <server 2...>
+```
 
 В этом примере создается область, применяемая только к серверам MBX1, MBX3 и MBX5.
 
-    New-ManagementScope -Name "Mailbox servers" -ServerList MBX1,MBX3,MBX5
+```powershell
+New-ManagementScope -Name "Mailbox servers" -ServerList MBX1,MBX3,MBX5
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [New-ManagementScope](https://technet.microsoft.com/ru-ru/library/dd335137\(v=exchg.150\)).
 
@@ -115,7 +121,9 @@ _**Последнее изменение раздела:** 2015-04-07_
 
 Используйте следующий синтаксис для создания фильтра ограничений баз данных.
 
-    New-ManagementScope -Name <scope name> -DatabaseRestrictionFilter <filter query>
+```powershell
+New-ManagementScope -Name <scope name> -DatabaseRestrictionFilter <filter query>
+```
 
 В этом примере создается область, включающая в себя все базы данных, содержащие строку Executive в свойстве **Name**.
 
@@ -133,11 +141,15 @@ _**Последнее изменение раздела:** 2015-04-07_
 
 Используйте следующий синтаксис для создания области списка баз данных.
 
-    New-ManagementScope -Name <scope name> -DatabaseList <database 1>, <database 2...>
+```powershell
+New-ManagementScope -Name <scope name> -DatabaseList <database 1>, <database 2...>
+```
 
 В этом примере создается область, которая применяется только к базам данных Database 1, Database 2 и Database 3.
 
-    New-ManagementScope -Name "Primary databases" -DatabaseList "Database 1", "Database 2", "Database 3"
+```powershell
+New-ManagementScope -Name "Primary databases" -DatabaseList "Database 1", "Database 2", "Database 3"
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [New-ManagementScope](https://technet.microsoft.com/ru-ru/library/dd335137\(v=exchg.150\)).
 

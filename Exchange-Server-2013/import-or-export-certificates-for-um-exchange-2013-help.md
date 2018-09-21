@@ -81,7 +81,9 @@ _**Последнее изменение раздела:** 2013-12-18_
     $file = Get-ExchangeCertificate -DomainName umcorp.northwindtraders.com | Export-ExchangeCertificate -BinaryEncoded:$true -Password (Get-Credential).password
 ```
 ```
-    Set-Content -Path "d:\umcerts\selfsigned.pfx" -Value $file.FileData =Encoding Byte
+```powershell
+Set-Content -Path "d:\umcerts\selfsigned.pfx" -Value $file.FileData =Encoding Byte
+```
 ```
 
 ## Использование Центра администрирования Exchange для импорта сертификата

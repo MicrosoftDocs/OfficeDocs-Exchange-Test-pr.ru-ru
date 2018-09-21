@@ -45,11 +45,15 @@ _**Последнее изменение раздела:** 2014-02-17_
 
 В этом примере отключаются идентификатор OrgID, федерация и федеративный общий доступ для организации Exchange.
 
-    Set-FederatedOrganizationIdentifier -Enabled $false
+```powershell
+Set-FederatedOrganizationIdentifier -Enabled $false
+```
 
 В этом примере включается идентификатор OrgID и повторно включаются федерация и федеративный общий доступ для организации Exchange.
 
-    Set-FederatedOrganizationIdentifier -Enabled $true
+```powershell
+Set-FederatedOrganizationIdentifier -Enabled $true
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Set-FederatedOrganizationIdentifier](https://technet.microsoft.com/ru-ru/library/dd351037\(v=exchg.150\)).
 
@@ -59,7 +63,9 @@ _**Последнее изменение раздела:** 2014-02-17_
 
 Чтобы далее убедиться в успехе, выполните следующую команду командной строки и убедитесь, что для параметра *Enabled* возвращается значение
 
-    Get-FederatedOrganizationIdentifier
+```powershell
+Get-FederatedOrganizationIdentifier
+```
 
 > [!TIP]  
 > Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.

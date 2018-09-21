@@ -57,17 +57,23 @@ _**Последнее изменение раздела:** 2013-02-21_
 
 В этом примере показывается возврат подробных сведений обо всех политиках подготовки почтовых ящиков сайта в организации.
 
-    Get-SiteMailboxProvisioningPolicy | Format-List
+```powershell
+Get-SiteMailboxProvisioningPolicy | Format-List
+```
 
 В этом примере показывается возврат всех политик в организации, но отображаются только сведения `IsDefault`, чтобы определить, какая из них является политикой по умолчанию.
 
-    Get-SiteMailboxProvisioningPolicy | Format-List IsDefault
+```powershell
+Get-SiteMailboxProvisioningPolicy | Format-List IsDefault
+```
 
 ## Изменение существующей политики подготовки почтового ящика сайта
 
 В этом примере показано изменение политики подготовки почтового ящика сайта с именем Default, устанавливая максимально возможный размер сообщений электронной почты, которые может принимать почтовый ящик сайта, на 25 МБ. (При установке Exchange создается политика подготовки с именем **Default**.)
 
-    Set-SiteMailboxProvisioningPolicy -Identity Default -MaxReceiveSize 25MB
+```powershell
+Set-SiteMailboxProvisioningPolicy -Identity Default -MaxReceiveSize 25MB
+```
 
 В этом примере показано изменение квоты предупреждений на 9,5 ГБ, а квоты запрета на отправку и получение — на 10 ГБ.
 
@@ -97,7 +103,9 @@ _**Последнее изменение раздела:** 2013-02-21_
 
 В этом примере удаляется политика подготовки почтового ящика сайта, созданная во время установки Exchange.
 
-    Remove-SiteMailboxProvisioningPolicy -Identity Default
+```powershell
+Remove-SiteMailboxProvisioningPolicy -Identity Default
+```
 
 > [!IMPORTANT]  
 > Для удаления политики <strong>По умолчанию</strong> нужно создать и указать другую политику по умолчанию.

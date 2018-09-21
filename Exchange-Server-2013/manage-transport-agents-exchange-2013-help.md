@@ -49,13 +49,17 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 1.  На сервере клиентского доступа откройте Windows PowerShell и выполните команду, приведенную ниже:
     
-        Add-PSSnapin Microsoft.Exchange.Management.PowerShell.SnapIn
+    ```powershell
+Add-PSSnapin Microsoft.Exchange.Management.PowerShell.SnapIn
+```
 
 2.  Запустите команду, как описано, но добавьте к ней следующее значение: `-TransportService FrontEnd`.
     
     Например, для просмотра агентов транспорта в службе транспорта переднего плана выполните команду, приведенную ниже:
     
-        Get-TransportAgent -TransportService FrontEnd
+    ```powershell
+Get-TransportAgent -TransportService FrontEnd
+```
 
 ## Установка агента транспорта с помощью командной консоли Exchange
 
@@ -81,11 +85,15 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 Чтобы включить агент транспорта, используйте следующий синтаксис.
 
-    Enable-TransportAgent <TransportAgentIdentity>
+```powershell
+Enable-TransportAgent <TransportAgentIdentity>
+```
 
 В этом примере фиктивный агент транспорта Contoso Transport Agent включается в службе транспорта на сервере почтовых ящиков.
 
-    Enable-TransportAgent "Contoso Transport Agent"
+```powershell
+Enable-TransportAgent "Contoso Transport Agent"
+```
 
 ## Как проверить, что все получилось?
 
@@ -95,11 +103,15 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 Чтобы отключить агент транспорта, используйте следующий синтаксис:
 
-    Disable-TransportAgent <TransportAgentIdentity>
+```powershell
+Disable-TransportAgent <TransportAgentIdentity>
+```
 
 В этом примере фиктивный агент транспорта Fabirkam Transport Agent отключается в службе транспорта на сервере почтовых ящиков.
 
-    Disable-TransportAgent "Fabrikam Transport Agent"
+```powershell
+Disable-TransportAgent "Fabrikam Transport Agent"
+```
 
 ## Как проверить, что все получилось?
 
@@ -109,15 +121,21 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 Чтобы просмотреть сводный список всех агентов транспорта, выполните следующую команду:
 
-    Get-TransportAgent
+```powershell
+Get-TransportAgent
+```
 
 Чтобы просмотреть подробные сведения о конфигурации определенного агента транспорта, выполните следующую команду:
 
-    Get-TransportAgent <TransportAgentIdentity> | Format-List
+```powershell
+Get-TransportAgent <TransportAgentIdentity> | Format-List
+```
 
 В этом примере предоставляются подробные сведения о конфигурации агента транспорта Transport Rule Agent.
 
-    Get-TransportAgent "Transport Rule Agent" | Format-List
+```powershell
+Get-TransportAgent "Transport Rule Agent" | Format-List
+```
 
 ## Настройка приоритета агента транспорта с помощью командной консоли Exchange
 
@@ -125,11 +143,15 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 Чтобы изменить приоритет существующего агента транспорта, выполните следующую команду:
 
-    Set-TransportAgent <TransportAgentIdentity> -Priority <Integer>
+```powershell
+Set-TransportAgent <TransportAgentIdentity> -Priority <Integer>
+```
 
 В этом примере для существующего агента транспорта Contoso Transport Agent устанавливается значение приоритета агента 3 в службе транспорта на сервере почтовых ящиков.
 
-    Set-TransportAgent "Contoso Transport Agent" -Priority 3
+```powershell
+Set-TransportAgent "Contoso Transport Agent" -Priority 3
+```
 
 ## Как проверить, что все получилось?
 
@@ -141,11 +163,15 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 Для удаления агента транспорта выполните следующую команду:
 
-    Uninstall-TransportAgent <TransportAgentIdentity>
+```powershell
+Uninstall-TransportAgent <TransportAgentIdentity>
+```
 
 В этом примере фиктивный агент транспорта Fabrikam Transport Agent удаляется из службы транспорта на сервере почтовых ящиков.
 
-    Uninstall-TransportAgent "Fabrikam Transport Agent"
+```powershell
+Uninstall-TransportAgent "Fabrikam Transport Agent"
+```
 
 ## Как проверить, что все получилось?
 

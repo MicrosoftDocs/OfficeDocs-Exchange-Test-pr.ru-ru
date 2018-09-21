@@ -65,5 +65,7 @@ _**Последнее изменение раздела:** 2013-02-17_
 
 В этом примере порт TLS для прослушивания на сервере клиентского доступа `MyClientAccessServer` устанавливается как 5561.
 
-    Set-UMCallRouterSettings -Server MyClientAccessServer -SipTlsListeningPort 5561
+```powershell
+Set-UMCallRouterSettings -Server MyClientAccessServer -SipTlsListeningPort 5561
+```
 

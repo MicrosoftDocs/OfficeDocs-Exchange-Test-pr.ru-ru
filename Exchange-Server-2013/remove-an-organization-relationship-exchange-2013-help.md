@@ -43,7 +43,9 @@ _**Последнее изменение раздела:** 2015-01-04_
 
 В этом примере из организации Exchange удаляется организационное отношение «Contoso»
 
-    Remove-OrganizationRelationship -Identity "Contoso"
+```powershell
+Remove-OrganizationRelationship -Identity "Contoso"
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Remove-OrganizationRelationship](https://technet.microsoft.com/ru-ru/library/ee332362\(v=exchg.150\)).
 
@@ -55,7 +57,9 @@ _**Последнее изменение раздела:** 2015-01-04_
 
   - Выполните следующую команду операционной системы, чтобы убедиться в удалении информации организационного отношения.
     
-        Get-OrganizationRelationship | Format-List
+    ```powershell
+Get-OrganizationRelationship | Format-List
+```
 
 > [!TIP]  
 > Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.

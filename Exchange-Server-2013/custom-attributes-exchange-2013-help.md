@@ -71,7 +71,9 @@ Microsoft Exchange Server 2013 предоставляет 15 атрибутов 
 
 Если получатели в этом подразделении не используют совместно какие-либо общие свойства, по которым можно выполнить фильтрацию, например отдел или местоположение, один из настраиваемых атрибутов можно заполнить общим значением, как показано в следующем примере.
 
-    Get-Mailbox -OrganizationalUnit Sales | Set-Mailbox CustomAttribute1 "SalesOU"
+```powershell
+Get-Mailbox -OrganizationalUnit Sales | Set-Mailbox CustomAttribute1 "SalesOU"
+```
 
 Теперь можно создать политику адресов электронной почты для всех получателей, имеющих свойство *CustomAttribute1*, равное SalesOU, как показано в следующем примере.
 
@@ -93,7 +95,9 @@ Microsoft Exchange Server 2013 предоставляет 15 атрибутов 
 
 В этом примере атрибут *ExtensionCustomAttribute1* почтового ящика для Kweku будет обновлен, чтобы указать, что пользователь зарегистрирован в следующих образовательных группах: MATH307, ECON202 и ENGL300.
 
-    Set-Mailbox -Identity Kweku -ExtensionCustomAttribute1 MATH307,ECON202,ENGL300
+```powershell
+Set-Mailbox -Identity Kweku -ExtensionCustomAttribute1 MATH307,ECON202,ENGL300
+```
 
 Затем создается динамическая группа рассылки для всех студентов из группы MATH307 с помощью параметра *RecipientFilter*, где значение *ExtensionCustomAttribute1* равно MATH307. При использовании параметров *ExtentionCustomAttributes* можно использовать оператор `-eq` вместо оператора `-like`.
 
@@ -101,5 +105,7 @@ Microsoft Exchange Server 2013 предоставляет 15 атрибутов 
 
 В этом примере значения *ExtensionCustomAttribute1* пользователя Kweku обновляются, чтобы указать, что он добавил группу ENGL210 и удалил ECON202.
 
-    Set-Mailbox -Identity Kweku -ExtensionCustomAttribute1 @{Add="ENGL210"; Remove="ECON202"}
+```powershell
+Set-Mailbox -Identity Kweku -ExtensionCustomAttribute1 @{Add="ENGL210"; Remove="ECON202"}
+```
 

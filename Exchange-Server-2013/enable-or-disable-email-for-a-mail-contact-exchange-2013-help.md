@@ -57,7 +57,9 @@ _**Последнее изменение раздела:** 2012-12-05_
 
 В этом примере отключается электронная почта для почтового контакта Neil Black.
 
-    Disable-MailContact -Identity "Neil Black"
+```powershell
+Disable-MailContact -Identity "Neil Black"
+```
 
 Подробные сведения о синтаксисе и параметрах см. в разделе [Disable-MailContact](https://technet.microsoft.com/ru-ru/library/aa997465\(v=exchg.150\)).
 
@@ -71,13 +73,17 @@ _**Последнее изменение раздела:** 2012-12-05_
 
 3.  В консоли Shell выполните следующую команду:
     
-        Get-MailContact
+    ```powershell
+Get-MailContact
+```
     
     Контакт, для которого вы отключили почту, не возвращается в результатах выполнения командлета, так как он возвращает только контакты с включенной поддержкой почты.
 
 4.  В консоли Shell выполните следующую команду:
     
-        Get-Contact
+    ```powershell
+Get-Contact
+```
     
     Контакт, отключенных сообщение для возвращается в результатах выполнения команды поскольку командлет возвращает все контактными объектами Active Directory.
 
@@ -89,7 +95,9 @@ _**Последнее изменение раздела:** 2012-12-05_
 
 В этом примере включается поддержка почты для контакта Rene Valdes. Вы должны предоставить внешний адрес.
 
-    Enable-MailContact -Identity "Rene Valdes" -ExternalEmailAddress renev@tailspintoys.com
+```powershell
+Enable-MailContact -Identity "Rene Valdes" -ExternalEmailAddress renev@tailspintoys.com
+```
 
 ## Использование командной консоли и CSV-файла для включения поддержки почты для нескольких контактов
 
@@ -137,5 +145,7 @@ _**Последнее изменение раздела:** 2012-12-05_
 
   - В командной консоли Exchange выполните следующую команду для вывода информации о новых почтовых контактах.
     
-        Get-MailContact | Format-Table Name,RecipientTypeDetails,ExternalEmailAddress
+    ```powershell
+Get-MailContact | Format-Table Name,RecipientTypeDetails,ExternalEmailAddress
+```
 

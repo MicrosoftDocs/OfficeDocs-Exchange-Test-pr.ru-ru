@@ -49,7 +49,9 @@ _**Последнее изменение раздела:** 2016-12-09_
     
     Импортируйте модуль Active Directory с помощью командлета **Import-Module**.
     
-        Import-Module ActiveDirectory
+    ```powershell
+Import-Module ActiveDirectory
+```
 
 2.  Выполните командлет **New-ADComputer**, чтобы создать учетную запись компьютера Active Directory, используя следующий синтаксис:
     
@@ -67,7 +69,9 @@ _**Последнее изменение раздела:** 2016-12-09_
     
     **Пример:** 
     
-        Set-ADComputer EXCH2013ASA -add @{"msDS-SupportedEncryptionTypes"="28"}
+    ```powershell
+Set-ADComputer EXCH2013ASA -add @{"msDS-SupportedEncryptionTypes"="28"}
+```
     
     Где *EXCH2013ASA* — имя учетной записи, а изменяемый атрибут — *msDS-SupportedEncryptionTypes* с десятичным значением 28, что позволяет использовать следующие шифры: RC4-HMAC, AES128-CTS-HMAC-SHA1-96, AES256-CTS-HMAC-SHA1-96.
 
@@ -290,11 +294,15 @@ _**Последнее изменение раздела:** 2016-12-09_
 
 2.  Введите следующую команду:
     
-        setspn -F -Q <SPN>
+    ```powershell
+setspn -F -Q <SPN>
+```
     
     Где \<SPN\> — это имя участника-службы, которое требуется связать с учетными данными ASA. Например:
     
-        setspn -F -Q http/mail.corp.tailspintoys.com
+    ```powershell
+setspn -F -Q http/mail.corp.tailspintoys.com
+```
     
     Команда должна не возвратить никаких данных. Если она возвратит данные, значит, это имя участника службы уже сопоставлено с другой учетной записью. Повторите это действие один раз для каждого имени участника-службы, которое требуется связать с учетными данными ASA.
 
@@ -304,11 +312,15 @@ _**Последнее изменение раздела:** 2016-12-09_
 
 2.  Введите следующую команду:
     
-        setspn -S <SPN> <Account>$
+    ```powershell
+setspn -S <SPN> <Account>$
+```
     
     Где \<SPN\> — это имя участника-службы, которое требуется связать с учетными данными ASA, а \<Account\> — это учетная запись, связанная с учетными данными ASA. Например:
     
-        setspn -S http/mail.corp.tailspintoys.com tailspin\EXCH2013ASA$
+    ```powershell
+setspn -S http/mail.corp.tailspintoys.com tailspin\EXCH2013ASA$
+```
     
     Выполните эту команду один раз для каждого имени участника-службы, которое требуется связать с учетными данными ASA.
 
@@ -318,11 +330,15 @@ _**Последнее изменение раздела:** 2016-12-09_
 
 2.  Введите следующую команду:
     
-        setspn -L <Account>$
+    ```powershell
+setspn -L <Account>$
+```
     
     Где \<Account\> — это учетная запись, связанная с учетными данными ASA. Например:
     
-        setspn -L tailspin\EXCH2013ASA$
+    ```powershell
+setspn -L tailspin\EXCH2013ASA$
+```
     
     Эту команду необходимо выполнить только один раз.
 
@@ -384,7 +400,9 @@ _**Последнее изменение раздела:** 2016-12-09_
 
 1.  Откройте консоль управления Exchange на сервере Exchange 2013 и выполните следующую команду:
     
-        Set-ClientAccessServer CAS-1 -RemoveAlternateServiceAccountCredentials
+    ```powershell
+Set-ClientAccessServer CAS-1 -RemoveAlternateServiceAccountCredentials
+```
 
 2.  Хотя и не сразу, но вам потребуется перезапустить все клиентские компьютеры, чтобы удалить кэш билетов Kerberos с компьютера.
 

@@ -91,7 +91,9 @@ _**Последнее изменение раздела:** 2018-03-26_
 
 4.  Для клиента Office 365 должна быть включена функция миграции **PAW**. Чтобы проверить, включена ли она, выполните следующую команду в Exchange Online PowerShell:
     
-        Get-MigrationConfig
+    ```powershell
+Get-MigrationConfig
+```
     
     Если в разделе **Features** указана функция **PAW**, то она включена и можно переходить к этапу 3 — *Создание CSV-файла*.
     
@@ -107,7 +109,9 @@ CSV-файл должен содержать следующие столбцы:
 
   - **TargetGroupMailbox**. SMTP-адрес целевой группы в Office 365. Вы можете выполнить приведенную ниже команду, чтобы просмотреть основной SMTP-адрес.
     
-        Get-UnifiedGroup <alias of the group> | Format-Table PrimarySmtpAddress
+    ```powershell
+Get-UnifiedGroup <alias of the group> | Format-Table PrimarySmtpAddress
+```
 
 Пример CSV-файла:
 
@@ -134,7 +138,9 @@ CSV-файл должен содержать следующие столбцы:
     
     2.  Используя сведения о прокси-сервере MRS из среды Exchange 2013, записанные на этапе 1, передайте это значение в переменную `$Source_RemoteServer`.
         
-            $Source_RemoteServer = "<MRS proxy endpoint>"
+        ```powershell
+$Source_RemoteServer = "<MRS proxy endpoint>"
+```
 
 3.  В Exchange Online PowerShell выполните следующую команду, чтобы создать конечную точку миграции:
     
@@ -156,7 +162,9 @@ CSV-файл должен содержать следующие столбцы:
 
 5.  Запустите миграцию, выполнив приведенную ниже команду в Exchange Online PowerShell. Обратите внимание, что это необходимо, только если параметр `-AutoStart` не использовался при создании пакета на этапе 4.
     
-        Start-MigrationBatch PublicFolderToGroupMigration
+    ```powershell
+Start-MigrationBatch PublicFolderToGroupMigration
+```
 
 Пакетные миграции необходимо создавать с помощью командлета `New-MigrationBatch` в Exchange Online PowerShell, но просматривать ход выполнения миграции и управлять им можно в Центре администрирования Exchange. Вы также можете просматривать ход выполнения миграции с помощью командлетов [Get-MigrationBatch](https://technet.microsoft.com/ru-ru/library/jj219164\(v=exchg.150\)) и [Get-MigrationUser](https://technet.microsoft.com/ru-ru/library/jj218702\(v=exchg.150\)). Командлет `New-MigrationBatch` инициирует пользователя миграции для каждого почтового ящика группы Office 365, и вы можете просматривать состояние этих запросов на странице миграции почтовых ящиков.
 
@@ -216,7 +224,9 @@ CSV-файл должен содержать следующие столбцы:
 
 После того как вы сделаете общедоступные папки доступными только для чтения, вам нужно будет снова выполнить миграцию. Это необходимо для окончательного добавочного копирования данных. Перед повторным запуском миграции вам нужно будет удалить существующий пакет. Это можно сделать с помощью следующей команды:
 
-    Remove-MigrationBatch <name of migration batch>
+```powershell
+Remove-MigrationBatch <name of migration batch>
+```
 
 После этого создайте новый пакет с помощью того же CSV-файла, выполнив приведенную ниже команду. В этой команде:
 
@@ -232,7 +242,9 @@ CSV-файл должен содержать следующие столбцы:
 
 После создания нового пакета запустите миграцию, выполнив приведенную ниже команду в Exchange Online PowerShell. Обратите внимание, что это необходимо, только если параметр `-AutoStart` не использовался в предыдущей команде.
 
-    Start-MigrationBatch PublicFolderToGroupMigration
+```powershell
+Start-MigrationBatch PublicFolderToGroupMigration
+```
 
 По завершении этого этапа (когда для пакета будет отображаться состояние **Завершено**) убедитесь, что все данные были скопированы в "Группы Office 365". Если вас устраивают группы Office 365, вы можете приступить к удалению перенесенных общедоступных папок из среды Exchange 2013.
 

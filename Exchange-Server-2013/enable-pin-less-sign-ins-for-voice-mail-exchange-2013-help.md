@@ -63,11 +63,15 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 В этом примере включается доступ к голосовой почте без ПИН-кода в политике почтовых ящиков единой системы обмена сообщениями с именем `MyUMMailboxPolicy` для пользователей, связанных с этой политикой почтовых ящиков и осуществляющих голосовой доступ к Outlook.
 
-    Set-UMMailboxPolicy -id MyUMMailboxPolicy -AllowPinlessVoiceMailAccess $true
+```powershell
+Set-UMMailboxPolicy -id MyUMMailboxPolicy -AllowPinlessVoiceMailAccess $true
+```
 
 ## Использовать командную консоли для включения доступа к голосовой почте без ввода ПИН-кода в почтовом ящике пользователя с включенной поддержкой единой системы обмена сообщениями
 
 В этом примере включается доступ к голосовой почте без ПИН-кода для пользователя, осуществляющего голосовой доступ к Outlook для входа в почтовый ящик с именем `tonys@contoso.com`.
 
-    Set-UMMailbox -id tonys@contoso.com -PinlessAccessToVoiceMailEnabled $true
+```powershell
+Set-UMMailbox -id tonys@contoso.com -PinlessAccessToVoiceMailEnabled $true
+```
 

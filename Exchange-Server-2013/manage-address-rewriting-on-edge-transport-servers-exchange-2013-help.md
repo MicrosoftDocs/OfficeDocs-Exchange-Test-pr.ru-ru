@@ -71,7 +71,9 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 1.  Выполните приведенную ниже команду.
     
-        Get-TransportAgent
+    ```powershell
+Get-TransportAgent
+```
 
 2.  Убедитесь, что для свойства **Enabled** агентов переопределения адресов входящих и исходящих сообщений заданы настроенные вами значения.
 
@@ -79,15 +81,21 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 Чтобы просмотреть сводный список всех записей переопределения адресов, выполните приведенную ниже команду.
 
-    Get-AddressRewriteEntry
+```powershell
+Get-AddressRewriteEntry
+```
 
 Чтобы просмотреть сведения о записи переопределения адресов, используйте указанный ниже синтаксис.
 
-    Get-AddressRewriteEntry <AddressRewriteEntryIdentity> | Format-List
+```powershell
+Get-AddressRewriteEntry <AddressRewriteEntryIdentity> | Format-List
+```
 
 В примере ниже показаны сведения о записи переопределения адресов "Rewrite Contoso.com to Northwindtraders.com".
 
-    Get-AddressRewriteEntry "Rewrite Contoso.com to Northwindtraders.com" | Format-List
+```powershell
+Get-AddressRewriteEntry "Rewrite Contoso.com to Northwindtraders.com" | Format-List
+```
 
 ## Создание записей переопределения адресов с помощью командной консоли
 
@@ -169,7 +177,9 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 В примере ниже изменяется значение внутреннего адреса записи переопределения адресов для отдельного домена "Northwind Traders to Contoso".
 
-    Set-AddressRewriteEntry "Northwindtraders to Contoso" -InternalAddress northwindtraders.net
+```powershell
+Set-AddressRewriteEntry "Northwindtraders to Contoso" -InternalAddress northwindtraders.net
+```
 
 ## Изменение записей переопределения адресов для получателей в нескольких поддоменах
 
@@ -207,11 +217,15 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 Чтобы удалить отдельную запись переопределения адресов, используйте указанный ниже синтаксис.
 
-    Remove-AddressRewriteEntry <AddressRewriteEntryIdentity>
+```powershell
+Remove-AddressRewriteEntry <AddressRewriteEntryIdentity>
+```
 
 В примере ниже удаляется запись переопределения адресов "Contoso.com to Northwindtraders.com".
 
-    Remove-AddressRewriteEntry "Contoso.com to Northwindtraders.com"
+```powershell
+Remove-AddressRewriteEntry "Contoso.com to Northwindtraders.com"
+```
 
 Чтобы удалить несколько записей переопределения адресов, используйте указанный ниже синтаксис.
 
@@ -219,7 +233,9 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 В примере ниже удаляются все записи переопределения адресов.
 
-    Get-AddressRewriteEntry | Remove-AddressRewriteEntry
+```powershell
+Get-AddressRewriteEntry | Remove-AddressRewriteEntry
+```
 
 В примере ниже имитируется удаление записей переопределения адресов, в именах которых содержится текст "to contoso.com". Переключатель *WhatIf* позволяет выполнить предварительный просмотр результата без внесения изменений.
 

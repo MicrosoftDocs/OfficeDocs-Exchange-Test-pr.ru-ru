@@ -81,11 +81,15 @@ _**Последнее изменение раздела:** 2017-02-28_
 
 1.  Найдите нужные значения для необходимых TXT-записей, выполнив следующую команду в командной консоли Exchange:
     
-        Get-FederatedDomainProof -DomainName <Domain> | Format-List Thumbprint,Proof
+    ```powershell
+Get-FederatedDomainProof -DomainName <Domain> | Format-List Thumbprint,Proof
+```
     
     Например, если федеративным является домен contoso.com, выполните следующую команду:
     
-        Get-FederatedDomainProof -DomainName contoso.com | Format-List Thumbprint,Proof
+    ```powershell
+Get-FederatedDomainProof -DomainName contoso.com | Format-List Thumbprint,Proof
+```
     
     Команда возвращает такие сведения:
     
@@ -115,7 +119,9 @@ Exchange автоматически распространяет новый се
 
 Чтобы активировать новый сертификат федерации с помощью командной консоли Exchange, выполните следующую команду:
 
-    Set-FederationTrust -Identity "Microsoft Federation Gateway" -PublishFederationCertificate
+```powershell
+Set-FederationTrust -Identity "Microsoft Federation Gateway" -PublishFederationCertificate
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в статье [Set-FederationTrust](https://technet.microsoft.com/ru-ru/library/dd298034\(v=exchg.150\)).
 
@@ -135,7 +141,9 @@ Exchange автоматически распространяет новый се
 
   - В Командная консоль Exchange замените *\<user's email address\>* на адрес электронной почты пользователя в организации и выполните следующую команду, чтобы убедиться, что доверие федерации работает:
     
-        Test-FederationTrust -UserIdentity <user's email address>
+    ```powershell
+Test-FederationTrust -UserIdentity <user's email address>
+```
 
 ## Замена сертификата федерации с истекшим сроком действия
 
@@ -143,21 +151,29 @@ Exchange автоматически распространяет новый се
 
 1.  Если у вас несколько федеративных доменов, основной общий домен необходимо удалить в последнюю очередь. Чтобы определить основной общий домен и все федеративные домены с помощью командной консоли Exchange, выполните следующую команду:
     
-        Get-FederatedOrganizationIdentifier | Format-List AccountNamespace,Domains
+    ```powershell
+Get-FederatedOrganizationIdentifier | Format-List AccountNamespace,Domains
+```
     
     Значение свойства **AccountNamespace** содержит основной общий домен в формате `FYDIBOHF25SPDLT<primary shared domain>`. Например, в значении `FYDIBOHF25SPDLT.contoso.com` contoso.com — основной общий домен.
 
 2.  Удалите все федеративные домены, кроме общего основного домена, выполнив следующую команду в командной консоли Exchange:
     
-        Remove-FederatedDomain -DomainName <domain> -Force
+    ```powershell
+Remove-FederatedDomain -DomainName <domain> -Force
+```
 
 3.  После этого удалите общий основной домен, выполнив следующую команду в командной консоли Exchange:
     
-        Remove-FederatedDomain -DomainName <domain> -Force
+    ```powershell
+Remove-FederatedDomain -DomainName <domain> -Force
+```
 
 4.  Удалите доверие федерации, выполнив следующую команду в командной консоли Exchange:
     
-        Remove-FederationTrust "Microsoft Federation Gateway"
+    ```powershell
+Remove-FederationTrust "Microsoft Federation Gateway"
+```
 
 5.  Создайте доверие федерации заново. Инструкции см. в статье [Создание доверия федерации](https://technet.microsoft.com/ru-ru/library/dd335198\(v=exchg.150\)).
 

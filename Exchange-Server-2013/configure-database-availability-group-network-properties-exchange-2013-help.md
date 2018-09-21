@@ -53,7 +53,9 @@ _**Последнее изменение раздела:** 2012-10-31_
 
 В этом примере в сеть MapiDagNetwork группы обеспечения доступности баз данных DAG1 добавляются подсеть 10.0.0.0 и маска подсети 255.0.0.0.
 
-    Set-DatabaseAvailabilityGroupNetwork -Subnets 10.0.0.0/8 -Identity DAG1\MapiDagNetwork
+```powershell
+Set-DatabaseAvailabilityGroupNetwork -Subnets 10.0.0.0/8 -Identity DAG1\MapiDagNetwork
+```
 
 ## Как проверить, что все получилось?
 
@@ -61,7 +63,9 @@ _**Последнее изменение раздела:** 2012-10-31_
 
   - Выполните в командной консоли приведенную ниже команду, чтобы просмотреть параметры настройки для сети DAG и убедиться, что сеть была настроена успешно.
     
-        Get-DatabaseAvailabilityGroupNetwork <DAGNetworkName> | Format-List
+    ```powershell
+Get-DatabaseAvailabilityGroupNetwork <DAGNetworkName> | Format-List
+```
 
 ## Дополнительные сведения
 

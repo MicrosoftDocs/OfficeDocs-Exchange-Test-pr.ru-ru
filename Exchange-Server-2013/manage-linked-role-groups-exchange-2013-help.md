@@ -61,7 +61,9 @@ _**Последнее изменение раздела:** 2012-10-09_
 
 1.  Сохраните учетные данные внешнего леса Active Directory в переменной.
     
-        $ForeignCredential = Get-Credential
+    ```powershell
+$ForeignCredential = Get-Credential
+```
 
 2.  Создайте связанную группу ролей, используя следующую синтаксическую конструкцию.
     
@@ -81,7 +83,9 @@ _**Последнее изменение раздела:** 2012-10-09_
 
 <!-- end list -->
 
-    $ForeignCredential = Get-Credential
+```powershell
+$ForeignCredential = Get-Credential
+```
     New-RoleGroup "Compliance Role Group" -LinkedForeignGroup "Compliance Administrators" -LinkedDomainController DC01.users.contoso.com -LinkedCredential $ForeignCredential -Roles "Transport Rules", "Journaling"
 
 ## Использование командной консоли для создания связанной группы ролей с настраиваемой областью управления
@@ -90,7 +94,9 @@ _**Последнее изменение раздела:** 2012-10-09_
 
 1.  Сохраните учетные данные внешнего леса Active Directory в переменной.
     
-        $ForeignCredential = Get-Credential
+    ```powershell
+$ForeignCredential = Get-Credential
+```
 
 2.  Создайте связанную группу ролей, используя следующую синтаксическую конструкцию.
     
@@ -110,7 +116,9 @@ _**Последнее изменение раздела:** 2012-10-09_
 
 <!-- end list -->
 
-    $ForeignCredential = Get-Credential
+```powershell
+$ForeignCredential = Get-Credential
+```
     New-RoleGroup "Seattle Compliance Role Group" -LinkedForeignGroup "Seattle Compliance Administrators" -LinkedDomainController DC01.users.contoso.com -LinkedCredential $ForeignCredential -CustomRecipientWriteScope "Seattle Recipients" -Roles "Transport Rules", "Journaling"
 
 Дополнительные сведения об областях управления см. в разделе [Общие сведения об областях ролей управления](understanding-management-role-scopes-exchange-2013-help.md).
@@ -121,7 +129,9 @@ _**Последнее изменение раздела:** 2012-10-09_
 
 1.  Сохраните учетные данные внешнего леса Active Directory в переменной.
     
-        $ForeignCredential = Get-Credential
+    ```powershell
+$ForeignCredential = Get-Credential
+```
 
 2.  Создайте связанную группу ролей, используя следующую синтаксическую конструкцию.
     
@@ -141,7 +151,9 @@ _**Последнее изменение раздела:** 2012-10-09_
 
 <!-- end list -->
 
-    $ForeignCredential = Get-Credential
+```powershell
+$ForeignCredential = Get-Credential
+```
     New-RoleGroup "Executives Compliance Role Group" -LinkedForeignGroup "Executives Compliance Administrators" -LinkedDomainController DC01.users.contoso.com -LinkedCredential $ForeignCredential -RecipientOrganizationalUnitScope "Executives OU" -Roles "Transport Rules", "Journaling"
 
 Дополнительные сведения об областях управления см. в разделе [Общие сведения об областях ролей управления](understanding-management-role-scopes-exchange-2013-help.md).
@@ -154,7 +166,9 @@ _**Последнее изменение раздела:** 2012-10-09_
 
 1.  Сохраните учетные данные внешнего леса Active Directory в переменной.
     
-        $ForeignCredential = Get-Credential
+    ```powershell
+$ForeignCredential = Get-Credential
+```
 
 2.  Изменение внешней универсальной группы безопасности на существующий связанная группа ролей, используя следующий синтаксис.
     
@@ -168,6 +182,8 @@ _**Последнее изменение раздела:** 2012-10-09_
 
 <!-- end list -->
 
-    $ForeignCredential = Get-Credential
+```powershell
+$ForeignCredential = Get-Credential
+```
     Set-RoleGroup "Compliance Role Group" -LinkedForeignGroup "Regulatory Compliance Officers" -LinkedDomainController DC01.users.contoso.com -LinkedCredential $ForeignCredential
 

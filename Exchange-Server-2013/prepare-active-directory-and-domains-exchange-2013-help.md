@@ -81,7 +81,9 @@ _**Последнее изменение раздела:** 2016-12-09_
 
 3.  Чтобы расширить схему, выполните следующую команду.
     
-        Setup.exe /PrepareSchema /IAcceptExchangeServerLicenseTerms
+    ```powershell
+Setup.exe /PrepareSchema /IAcceptExchangeServerLicenseTerms
+```
 
 Когда программа установки завершит расширение схемы, вам потребуется подождать, пока Active Directory не реплицирует изменения на все контроллеры доменов. Чтобы узнать, как выполняется репликация, используйте средство `repadmin`. `Repadmin` входит в набор средств доменных служб Active Directory в Windows Server 2012 R2, Windows Server 2012 и Windows Server 2008 R2. Дополнительные сведения об использовании этого средства см. в статье [Repadmin](https://go.microsoft.com/fwlink/p/?linkid=257879).
 
@@ -143,7 +145,9 @@ _**Последнее изменение раздела:** 2016-12-09_
 
 2.  Выполните следующую команду:
     
-        Setup.exe /PrepareAllDomains /IAcceptExchangeServerLicenseTerms
+    ```powershell
+Setup.exe /PrepareAllDomains /IAcceptExchangeServerLicenseTerms
+```
 
 ## Позволить мне выбрать, какие домены Active Directory необходимо подготовить
 

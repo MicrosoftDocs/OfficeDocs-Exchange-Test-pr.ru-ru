@@ -75,7 +75,9 @@ _**Последнее изменение раздела:** 2014-02-24_
 
 Например, вы выполнили следующую команду для запуска обнаружения электронных данных под названием *Fabrikam Investigation*, чтобы скопировать результаты поиска в указанный почтовый ящик найденных сообщений:
 
-    Start-MailboxSearch "Fabrikam Investigation"
+```powershell
+Start-MailboxSearch "Fabrikam Investigation"
+```
 
 Если вы использовали переключатель *EstimateOnly*, чтобы получить оценку результатов поиска, то вам необходимо удалить переключатель перед копированием результатов поиска. Вам также нужно указать почтовый ящик найденных сообщений для копирования результатов поиска. Например, вы создали оценочный поиск с помощью следующей команды:
 
@@ -87,7 +89,9 @@ _**Последнее изменение раздела:** 2014-02-24_
     Set-MailboxSearch "FY13 Q2 Financial Results" -EstimateOnly $false -TargetMailbox "Discovery Search Mailbox"
 ```
 ```
-    Start-MailboxSearch "FY13 Q2 Financial Results"
+```powershell
+Start-MailboxSearch "FY13 Q2 Financial Results"
+```
 ```
 
 ## Дополнительные сведения о копировании результатов поиска

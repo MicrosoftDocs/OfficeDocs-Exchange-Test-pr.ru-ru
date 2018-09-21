@@ -140,7 +140,9 @@ Microsoft Exchange Server 2013 использует возможности уд�
 
 Командная консоль должна знать, что пользователь хочет сохранить данные, хранящиеся в свойстве **FileData**, на локальном компьютере. Для этого используется следующий синтаксис.
 
-    <cmdlet> | ForEach { $_.FileData | Add-Content <local path to file> -Encoding Byte }
+```command line
+<cmdlet> | ForEach {     <cmdlet> | ForEach { $_.FileData | Add-Content <local path to file> -Encoding Byte }.FileData | Add-Content <local path to file> -Encoding Byte }
+```
 
 Например, следующая команда экспортирует данные, хранящиеся в свойстве **FileData**, в объект, созданный с помощью фиктивного командлета **Export-SomeData**. Экспортированные данные сохраняются в указанный файл на локальном компьютере (в данном случае MyData.dat).
 
@@ -148,7 +150,9 @@ Microsoft Exchange Server 2013 использует возможности уд�
 > В этой процедуре используется командлет <strong>ForEach</strong>, объекты и конвейеризация. Дополнительные сведения см. в разделах <a href="https://technet.microsoft.com/ru-ru/library/aa998260(v=exchg.150)">Конвейеризация</a> и <a href="https://technet.microsoft.com/ru-ru/library/aa996386(v=exchg.150)">Структура данных</a>.
 
 
-    Export-SomeData | ForEach { $_.FileData | Add-Content C:\MyData.dat -Encoding Byte }
+```powershell
+Export-SomeData | ForEach {     Export-SomeData | ForEach { $_.FileData | Add-Content C:\MyData.dat -Encoding Byte }.FileData | Add-Content C:\MyData.dat -Encoding Byte }
+```
 
 При выполнении команды выполняются следующие действия:
 

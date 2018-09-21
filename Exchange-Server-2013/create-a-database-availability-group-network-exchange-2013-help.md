@@ -70,7 +70,9 @@ _**Последнее изменение раздела:** 2012-11-02_
 
   - Чтобы проверить, создана ли сеть DAG, и вывести сведения о ее конфигурации, выполните в командной консоли Exchange следующую команду:
     
-        Get-DatabaseAvailabilityGroupNetwork <DAGNetworkName> | Format-List
+    ```powershell
+Get-DatabaseAvailabilityGroupNetwork <DAGNetworkName> | Format-List
+```
 
 ## Дополнительные сведения
 

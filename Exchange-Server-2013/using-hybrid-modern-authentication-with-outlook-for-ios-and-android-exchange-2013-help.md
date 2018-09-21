@@ -171,7 +171,9 @@ _**Последнее изменение раздела:** 2018-04-19_
 
 1.  Вы можете применить встроенные в Exchange правила доступа с мобильных устройств и запретить всем мобильным устройствам подключаться, выполнив следующую команду в командной консоли Exchange:
     
-        Set-ActiveSyncOrganizationSettings -DefaultAccessLevel Block
+    ```powershell
+Set-ActiveSyncOrganizationSettings -DefaultAccessLevel Block
+```
 
 2.  Вы можете использовать локальную политику условного доступа в Intune после установки локального соединителя Exchange. Дополнительные сведения см. в статье [Создание политики условного доступа к локальной организации Exchange и устаревшей версии выделенной среды Exchange Online](https://docs.microsoft.com/intune/conditional-access-exchange-create#configure-exchange-on-premises-access).
 

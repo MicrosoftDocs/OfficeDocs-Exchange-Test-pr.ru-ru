@@ -85,7 +85,9 @@ _**Последнее изменение раздела:** 2013-04-16_
 
 В этом примере сервер клиентского доступа с именем `MyClientAccessServer` добавляется в абонентскую группу с универсальным кодом ресурса SIP с именем `MySIPDialPlan`. Также показано переключение из режима запуска в двойной режим, который позволяет серверу клиентского доступа принимать запросы по протоколам TCP и TLS.
 
-    Set-UMCallRouterSettings -DialPlans MySIPDialPlan -Server MyClientAccessServer -UMStartupMode Dual
+```powershell
+Set-UMCallRouterSettings -DialPlans MySIPDialPlan -Server MyClientAccessServer -UMStartupMode Dual
+```
 
 В этом примере сервер клиентского доступа с именем `MyClientAccessServer` добавляется в две абонентские группы SIP с именами `MySIPDialPlan` и `MySIPDialPlan2`; кроме того, серверу разрешается использовать адреса IPv4 и IPv6.
 

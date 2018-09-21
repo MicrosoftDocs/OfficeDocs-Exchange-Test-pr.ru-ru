@@ -55,7 +55,9 @@ _**Последнее изменение раздела:** 2016-12-09_
 
 В этом примере описана процедура установки пакета поддержки японского языка единой системы обмена сообщениями с помощью команды setup.exe.
 
-    setup.exe /AddUmLanguagePack:ja-JP /s:d:\Exchange\UMLanguagePacks /IAcceptExchangeServerLicenseTerms
+```powershell
+setup.exe /AddUmLanguagePack:ja-JP /s:d:\Exchange\UMLanguagePacks /IAcceptExchangeServerLicenseTerms
+```
 
 ## Действие 2. Перемещение системного почтового ящика Exchange 2010, используемого для настраиваемых приветствий, объявлений, меню и приглашений единой системы обмена сообщениями, в Exchange 2013
 
@@ -65,11 +67,15 @@ _**Последнее изменение раздела:** 2016-12-09_
 
 Эта команда возвращает список всех системных почтовых ящиков.
 
-    Get-Mailbox -Arbitration
+```powershell
+Get-Mailbox -Arbitration
+```
 
 Эта команда возвращает список системных почтовых ящиков, а также их свойства и параметры.
 
-    Get-Mailbox -Arbitration |fl
+```powershell
+Get-Mailbox -Arbitration |fl
+```
 
 Используя этот системный почтовый ящик, можно создавать резервные копии настраиваемых приглашений, объявлений, меню и приглашений, а также восстанавливать их вместе с другими почтовыми ящиками базы данных. Это сокращает количество необходимых ресурсов. При сохранении настраиваемых приветствий, объявлений, меню и приглашений в системный почтовый ящик исправляются любые возможные несоответствия. Подробнее о перемещении почтовых ящиков см. в статье [Перемещение почтовых ящиков в Exchange 2013](mailbox-moves-in-exchange-2013-exchange-2013-help.md).
 
@@ -204,7 +210,9 @@ _**Последнее изменение раздела:** 2016-12-09_
 
 Настройте режим запуска единой системы обмена сообщениями на сервере клиентского доступа Exchange 2013, выполнив в командной консоли следующую команду:
 
-    Set-UMCallRouterSettings -Server MyUMCallRouter.northwindtraders.com -UMStartupMode Dual
+```powershell
+Set-UMCallRouterSettings -Server MyUMCallRouter.northwindtraders.com -UMStartupMode Dual
+```
 
 ## Действие 6. Настройка режима запуска единой системы обмена сообщениями на всех серверах почтовых ящиков Exchange 2013
 
@@ -264,7 +272,9 @@ _**Последнее изменение раздела:** 2016-12-09_
 
 При необходимости вы можете создать абонентскую группу единой системы обмена сообщениями, выполнив в командной консоли следующую команду:
 
-    New-UMDialplan -Name MyUMDialPlan -URIType E164 -NumberOfDigitsInExtension 5 -VoIPSecurity Secured
+```powershell
+New-UMDialplan -Name MyUMDialPlan -URIType E164 -NumberOfDigitsInExtension 5 -VoIPSecurity Secured
+```
 
 При необходимости можно настроить существующую абонентскую группу единой системы обмена сообщениями с помощью Центра администрирования Exchange следующим образом.
 
@@ -308,7 +318,9 @@ _**Последнее изменение раздела:** 2016-12-09_
 
 При необходимости можно создать IP-шлюз единой системы обмена сообщениями, выполнив следующую команду.
 
-    New-UMIPGateway -Identity MyUMIPGateway -Address "MyUMIPGateway.contoso.com"
+```powershell
+New-UMIPGateway -Identity MyUMIPGateway -Address "MyUMIPGateway.contoso.com"
+```
 
 Чтобы настроить существующий шлюз IP единой системы обмена сообщениями с помощью Центра администрирования Exchange, сделайте следующее.
 
@@ -416,7 +428,9 @@ _**Последнее изменение раздела:** 2016-12-09_
 
 При необходимости можно создать политику почтовых ящиков единой системы обмена сообщениями, выполнив в командной консоли следующую команду.
 
-    New-UMMailboxPolicy -Name MyUMMailboxPolicy -UMDialPlan MyUMDialPlan
+```powershell
+New-UMMailboxPolicy -Name MyUMMailboxPolicy -UMDialPlan MyUMDialPlan
+```
 
 При необходимости вы можете настроить существующую политику почтовых ящиков единой системы обмена сообщениями с помощью Центра администрирования Exchange:
 
@@ -454,7 +468,9 @@ _**Последнее изменение раздела:** 2016-12-09_
 
 Чтобы переместить почтовый ящик Exchange 2010 на сервер почтовых ящиков Exchange 2013 с помощью командной консоли, выполните следующую команду:
 
-    New-MoveRequest -Identity 'tony@alpineskihouse.com' -TargetDatabase "DB01"
+```powershell
+New-MoveRequest -Identity 'tony@alpineskihouse.com' -TargetDatabase "DB01"
+```
 
 ## Действие 13. Включение новых пользователей для единой системы обмена сообщениями или настройка параметров для существующего пользователя с включенной единой системой обмена сообщениями
 
@@ -560,7 +576,9 @@ _**Последнее изменение раздела:** 2016-12-09_
 
 Чтобы отключить единую систему обмена сообщениями на сервере единой системы обмена сообщениями Exchange 2010 с помощью командной консоли, выполните следующую команду.
 
-    Disable-UMServer -Identity MyUMServer -Immediate $true
+```powershell
+Disable-UMServer -Identity MyUMServer -Immediate $true
+```
 
 > [!TIP]  
 > Чтобы отключить автоответчик, выполните командлет <strong>Disable-UMServer</strong> на сервере единой системы обмена сообщениями Exchange 2010 или командлет <strong>Disable-UMService</strong> на сервере почтовых ящиков Exchange 2013.
@@ -593,11 +611,15 @@ _**Последнее изменение раздела:** 2016-12-09_
 
 В этом примере фигурирует три абонентские группы SIP URI: SipDP1, SipDP2 и SipDP3. В этом примере описана процедура удаления сервера единой системы обмена сообщениями `MyUMServer` из абонентской группы SipDP3.
 
-    Set-UMServer -id MyUMServer -DialPlans SipDP1,SipDP2
+```powershell
+Set-UMServer -id MyUMServer -DialPlans SipDP1,SipDP2
+```
 
 В этом примере фигурирует две абонентские группы SIP URI: SipDP1 и SipDP2. В этом примере описана процедура удаления сервера единой системы обмена сообщениями `MyUMServer` из абонентской группы SipDP2.
 
-    Set-UMServer -id MyUMServer -DialPlans SipDP1
+```powershell
+Set-UMServer -id MyUMServer -DialPlans SipDP1
+```
 
 > [!TIP]  
 > Чтобы удалить сервер единой системы обмена сообщениями Exchange 2010 из одной или нескольких абонентских групп, выполните командлет <strong>Set-UMServer</strong> в командной консоли на сервере единой системы обмена сообщениями Exchange 2010 или командлет <strong>Set-UMService</strong> на сервере почтовых ящиков Exchange 2013. Например, чтобы удалить сервер единой системы обмена сообщениями из всех абонентских групп, выполните следующую команду: <code>Set-UMServer -identity MyUMServer -DialPlans $null</code>

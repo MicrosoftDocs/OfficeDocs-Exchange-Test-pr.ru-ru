@@ -43,11 +43,15 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 Чтобы отключить фильтрацию отправителей, выполните следующую команду:
 
-    Set-SenderFilterConfig -Enabled $false
+```powershell
+Set-SenderFilterConfig -Enabled $false
+```
 
 Чтобы включить фильтрацию отправителей, выполните следующую команду:
 
-    Set-SenderFilterConfig -Enabled $true
+```powershell
+Set-SenderFilterConfig -Enabled $true
+```
 
 > [!NOTE]  
 > Когда фильтрация отправителей отключена, базовый агент фильтрации отправителей остается включенным. Чтобы отключить агент фильтрации отправителей, выполните следующую команду: <code>Disable-TransportAgent &quot;Sender Filter Agent&quot;</code>.
@@ -59,7 +63,9 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 1.  Выполните следующую команду:
     
-        Get-SenderFilterConfig | Format-List Enabled
+    ```powershell
+Get-SenderFilterConfig | Format-List Enabled
+```
 
 2.  Убедитесь, что отображается значение, которое вы настроили.
 
@@ -95,7 +101,9 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 1.  Выполните следующую команду:
     
-        Get-SenderFilterConfig | Format-List BlockedSenders,BlockedDomains,BlockedDomainsAndSubdomains
+    ```powershell
+Get-SenderFilterConfig | Format-List BlockedSenders,BlockedDomains,BlockedDomainsAndSubdomains
+```
 
 2.  Убедитесь, что отображаются значения, которые вы настроили.
 
@@ -103,11 +111,15 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 Чтобы включить или отключить блокировку сообщений, отправители которых не указаны, выполните следующую команду:
 
-    Set-SenderFilterConfig -BlankSenderBlockingenabled <$true | $false>
+```powershell
+Set-SenderFilterConfig -BlankSenderBlockingenabled <$true | $false>
+```
 
 В данном примере представлена настройка агента фильтрации отправителей таким образом, чтобы блокировать сообщения, в которых отправитель не указан в SMTP-команде MAIL FROM:
 
-    Set-SenderFilterConfig -BlankSenderBlockingEnabled $true
+```powershell
+Set-SenderFilterConfig -BlankSenderBlockingEnabled $true
+```
 
 ## Как проверить, что все получилось?
 
@@ -115,7 +127,9 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 1.  Выполните следующую команду:
     
-        Get-SenderFilterConfig | Format-List BlankSenderBlockingEnabled
+    ```powershell
+Get-SenderFilterConfig | Format-List BlankSenderBlockingEnabled
+```
 
 2.  Убедитесь, что отображается значение, которое вы настроили.
 

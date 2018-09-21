@@ -105,21 +105,29 @@ _**Последнее изменение раздела:** 2015-03-09_
 
 Чтобы настроить метод кодирования передаваемого содержимого для организации, выполните следующую команду:
 
-    Set-OrganizationConfig -ByteEncoderTypeFor7BitCharsets <Integer>
+```powershell
+Set-OrganizationConfig -ByteEncoderTypeFor7BitCharsets <Integer>
+```
 
 Например, чтобы задать для кодировки при передаче содержимого Base64, выполните следующую команду:
 
-    Set-OrganizationConfig -ByteEncoderTypeFor7BitCharsets 2
+```powershell
+Set-OrganizationConfig -ByteEncoderTypeFor7BitCharsets 2
+```
 
 ## Использование командной консоли для настройки метода кодирования передаваемого содержимого для удаленного домена
 
 Чтобы настроить метод кодирования передаваемого содержимого для всех получателей в удаленном домене, выполните следующую команду:
 
-    Set-RemoteDomain -ByteEncoderTypeFor7BitCharsets <Value>
+```powershell
+Set-RemoteDomain -ByteEncoderTypeFor7BitCharsets <Value>
+```
 
 Например, чтобы задать для кодировки при передаче содержимого Base64, выполните следующую команду:
 
-    Set- RemoteDomain -ByteEncoderTypeFor7BitCharsets UseBase64
+```powershell
+Set- RemoteDomain -ByteEncoderTypeFor7BitCharsets UseBase64
+```
 
 ## Как проверить, что все получилось?
 

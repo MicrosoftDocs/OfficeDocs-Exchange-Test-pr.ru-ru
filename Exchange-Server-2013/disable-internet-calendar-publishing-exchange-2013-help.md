@@ -65,11 +65,15 @@ _**Последнее изменение раздела:** 2014-02-15_
 
 В этом примере выполняется отключение публикации календаря в Интернете через политику общего доступа с именем **Internet**.
 
-    Set-SharingPolicy -Identity "Internet" -Enabled $false
+```powershell
+Set-SharingPolicy -Identity "Internet" -Enabled $false
+```
 
 В этом примере выполняется отключение выделенной политики публикации календаря в Интернете с именем **Internet**.
 
-    Remove-SharingPolicy -Identity "Internet"
+```powershell
+Remove-SharingPolicy -Identity "Internet"
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Set-SharingPolicy](https://technet.microsoft.com/ru-ru/library/dd297931\(v=exchg.150\)).
 
@@ -77,7 +81,9 @@ _**Последнее изменение раздела:** 2014-02-15_
 
 Чтобы получить другое подтверждение успешного удаления или изменения политики общего доступа, в командной консоли выполните следующую команду и просмотрите информацию о политике общего доступа.
 
-    Get-SharingPolicy <policy name> | format-list
+```powershell
+Get-SharingPolicy <policy name> | format-list
+```
 
 Если вы удалили выделенную политику публикации календаря в Интернете, вы не увидите ее в результатах работы командлета.
 
@@ -97,7 +103,9 @@ _**Последнее изменение раздела:** 2014-02-15_
 
 В этом примере показано, как отключить анонимные функции для виртуального каталога Outlook Web App на сервере клиентского доступа CAS01.
 
-    Set-OwaVirtualDirectory -Identity "CAS01" - AnonymousFeaturesEnabled -$false
+```powershell
+Set-OwaVirtualDirectory -Identity "CAS01" - AnonymousFeaturesEnabled -$false
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Set-OwaVirtualDirectory](https://technet.microsoft.com/ru-ru/library/bb123515\(v=exchg.150\)).
 
@@ -105,7 +113,9 @@ _**Последнее изменение раздела:** 2014-02-15_
 
 Чтобы убедиться в том, что вы успешно отключили анонимные функции виртуального каталога Outlook Web App на сервере клиентского доступа, выполните следующую команду и убедитесь, что параметр *AnonymousFeaturesEnabled* равен `$false`.
 
-    Get-OwaVirtualDirectory | format-list
+```powershell
+Get-OwaVirtualDirectory | format-list
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Get-OwaVirtualDirectory](https://technet.microsoft.com/ru-ru/library/aa998588\(v=exchg.150\)).
 

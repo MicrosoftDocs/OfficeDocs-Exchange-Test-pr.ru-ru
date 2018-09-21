@@ -128,7 +128,9 @@ _**Последнее изменение раздела:** 2018-04-16_
     
     2.  Выполните следующую команду.
         
-            Add-PSSnapin Microsoft.Exchange.Management.PowerShell.SnapIn
+        ```powershell
+Add-PSSnapin Microsoft.Exchange.Management.PowerShell.SnapIn
+```
     
     3.  Выполните задачи по управлению агентом транспорта обычным способом.
     

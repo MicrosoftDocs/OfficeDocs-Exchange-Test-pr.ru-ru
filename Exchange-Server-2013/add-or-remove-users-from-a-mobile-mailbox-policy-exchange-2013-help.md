@@ -114,5 +114,7 @@ _**Последнее изменение раздела:** 2015-07-16_
 
 2.  В консоли Shell выполните следующую команду:
     
-        Get-CASMailbox -Identity tony@contoso.com
+    ```powershell
+Get-CASMailbox -Identity tony@contoso.com
+```
 

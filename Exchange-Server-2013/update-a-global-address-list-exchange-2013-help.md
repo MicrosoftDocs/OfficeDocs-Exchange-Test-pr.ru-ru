@@ -45,7 +45,9 @@ _**Последнее изменение раздела:** 2014-12-16_
 > Выполнение этой команды приводит только к запуску обновления. Обновление глобального списка адресов может занять несколько часов.
 
 
-    Update-GlobalAddressList -Identity "Fourth Coffee"
+```powershell
+Update-GlobalAddressList -Identity "Fourth Coffee"
+```
 
 Подробные сведения о синтаксисе и параметрах см. в разделе [Update-GlobalAddressList](https://technet.microsoft.com/ru-ru/library/aa998806\(v=exchg.150\)).
 

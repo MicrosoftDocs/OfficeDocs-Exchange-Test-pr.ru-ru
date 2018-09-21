@@ -123,5 +123,7 @@ _**Последнее изменение раздела:** 2012-10-16_
 
 2.  В консоли Shell выполните следующую команду:
     
-        Get-MobileDeviceMailboxPolicy -Identity <PolicyName>
+    ```powershell
+Get-MobileDeviceMailboxPolicy -Identity <PolicyName>
+```
 

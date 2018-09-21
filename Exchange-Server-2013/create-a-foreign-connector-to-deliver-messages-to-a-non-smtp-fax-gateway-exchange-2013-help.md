@@ -55,7 +55,9 @@ _**Последнее изменение раздела:** 2012-10-17_
 
 Чтобы проверить, успешно ли создан внешний соединитель, выполните следующую команду:
 
-    Get-ForeignConnector | Format-List Name
+```powershell
+Get-ForeignConnector | Format-List Name
+```
 
 Убедитесь, что отображается имя созданного внешнего соединителя.
 
@@ -67,13 +69,17 @@ _**Последнее изменение раздела:** 2012-10-17_
 
 1.  Запустите следующий сценарий, чтобы указать транзитный каталог для внешнего соединителя (в параметре *DropDirectory* задайте путь, который подходит для вашей среды):
     
-        Set-ForeignConnector "Contoso Foreign Connector" -DropDirectory "C:\Drop Directory"
+    ```powershell
+Set-ForeignConnector "Contoso Foreign Connector" -DropDirectory "C:\Drop Directory"
+```
 
 ## Как проверить, что шаг выполнен?
 
 Чтобы убедиться в правильной настройке транзитного каталога, можно выполнить следующий командлет и проверить значение параметра *DropDirectory*:
 
-    Get-ForeignConnector "Contoso Foreign Connector" | Format-List
+```powershell
+Get-ForeignConnector "Contoso Foreign Connector" | Format-List
+```
 
 После создания внешнего соединителя и указания транзитного каталога можно отправить сообщение через сервер почтовых ящиков, где создан внешний соединитель, и убедиться, что файл передается в транзитный каталог.
 
@@ -87,7 +93,9 @@ _**Последнее изменение раздела:** 2012-10-17_
 
 Чтобы убедиться, что вы правильно настроили каталог раскладки, можно выполнить следующую команду и проверить значение параметра *PickupDirectoryPath*:
 
-    Get-TransportService | Format-List PickupDirectoryPath
+```powershell
+Get-TransportService | Format-List PickupDirectoryPath
+```
 
 ## Действие 4. Использование командной консоли Exchange для настройки каталога преобразования для службы транспорта на сервере почтовых ящиков
 
@@ -99,7 +107,9 @@ _**Последнее изменение раздела:** 2012-10-17_
 
 Чтобы убедиться, что вы правильно настроили каталог преобразования, можно выполнить следующую команду и проверить значение параметра *ReplayDirectoryPath*:
 
-    Get-TransportService | Format-List ReplayDirectoryPath
+```powershell
+Get-TransportService | Format-List ReplayDirectoryPath
+```
 
 ## Дополнительные сведения
 

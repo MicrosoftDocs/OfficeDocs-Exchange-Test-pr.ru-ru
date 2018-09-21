@@ -57,7 +57,9 @@ _**Последнее изменение раздела:** 2013-04-29_
 
   - В командной консоли убедитесь, что база данных создана на сервере Mailbox01, выполнив следующую команду.
     
-        Get-MailboxDatabase -Server "Mailbox01"
+    ```powershell
+Get-MailboxDatabase -Server "Mailbox01"
+```
 
 ## Получение свойств базы данных почтовых ящиков
 
@@ -148,7 +150,9 @@ _**Последнее изменение раздела:** 2013-04-29_
 
   - В командной консоли выполните следующую команду, чтобы извлечь сведения о свойствах базы данных почтовых ящиков.
     
-        Get-MailboxDatabase -Identity MailboxDatabase01 -Status | Format-List
+    ```powershell
+Get-MailboxDatabase -Identity MailboxDatabase01 -Status | Format-List
+```
 
 ## Перемещение пути к базе данных почтовых ящиков
 
@@ -180,7 +184,9 @@ _**Последнее изменение раздела:** 2013-04-29_
 
   - В командной консоли выполните следующую команду, чтобы извлечь сведения о свойствах всех баз данных почтовых ящиков.
     
-        Get-MailboxDatabase -IncludePreExchange2013
+    ```powershell
+Get-MailboxDatabase -IncludePreExchange2013
+```
 
 ## Отключение базы данных почтовых ящиков
 
@@ -212,7 +218,9 @@ _**Последнее изменение раздела:** 2013-04-29_
 
 1.  Выполните следующую команду, чтобы удалить базу данных почтовых ящиков MyDatabase.
     
-        Remove-MailboxDatabase -Identity "MyDatabase"
+    ```powershell
+Remove-MailboxDatabase -Identity "MyDatabase"
+```
 
 2.  При запросе подтверждения выбранного действия введите **Y**.
 

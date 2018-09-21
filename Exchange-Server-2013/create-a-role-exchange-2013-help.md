@@ -49,11 +49,15 @@ _**Последнее изменение раздела:** 2012-10-17_
 
 Для создания новой роли используйте следующий синтаксис.
 
-    New-ManagementRole -Parent <existing role to copy> -Name <name of new role>
+```powershell
+New-ManagementRole -Parent <existing role to copy> -Name <name of new role>
+```
 
 В этом примере роль получателей почты и соответствующие записи роли управления копируются в роль Seattle Mail Recipients.
 
-    New-ManagementRole -Parent "Mail Recipients" -Name "Seattle Mail Recipients"
+```powershell
+New-ManagementRole -Parent "Mail Recipients" -Name "Seattle Mail Recipients"
+```
 
 Подробные сведения о синтаксисе и параметрах см. в разделе [New-ManagementRole](https://technet.microsoft.com/ru-ru/library/dd298073\(v=exchg.150\)).
 

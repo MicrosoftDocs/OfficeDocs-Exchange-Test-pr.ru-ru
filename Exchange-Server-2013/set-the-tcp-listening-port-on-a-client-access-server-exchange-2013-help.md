@@ -55,5 +55,7 @@ _**Последнее изменение раздела:** 2013-04-09_
 
 В этом примере показано, как установить номер 5566 для прослушивающего TCP-порта на сервере клиентского доступа с именем `MyClientAccessServer`.
 
-    Set-UMCallRouterSettings -Server MyClientAccessServer -SipTCPListeningPort 5566
+```powershell
+Set-UMCallRouterSettings -Server MyClientAccessServer -SipTCPListeningPort 5566
+```
 

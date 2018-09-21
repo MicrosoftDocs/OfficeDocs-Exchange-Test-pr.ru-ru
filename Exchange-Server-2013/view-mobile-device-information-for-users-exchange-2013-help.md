@@ -47,5 +47,7 @@ _**Последнее изменение раздела:** 2012-11-29_
 
 1.  Выполните следующую команду.
     
-        Get-MobileDevice -Mailbox useralias
+    ```powershell
+Get-MobileDevice -Mailbox useralias
+```
 

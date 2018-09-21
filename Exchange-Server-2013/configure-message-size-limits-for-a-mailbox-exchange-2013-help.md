@@ -61,7 +61,9 @@ _**Последнее изменение раздела:** 2012-11-12_
 
 В этом примере показано, как установить максимальный размер отправляемых сообщений в 25 МБ и максимальный размер получаемых сообщений в 35 МБ для почтового ящика Debra Garcia.
 
-    Set-Mailbox "Debra Garcia" -MaxSendSize 25mb -MaxReceiveSize 35mb
+```powershell
+Set-Mailbox "Debra Garcia" -MaxSendSize 25mb -MaxReceiveSize 35mb
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Set-Mailbox](https://technet.microsoft.com/ru-ru/library/bb123981\(v=exchg.150\)).
 
@@ -81,5 +83,7 @@ _**Последнее изменение раздела:** 2012-11-12_
 
 Выполните в командной консоли следующую команду.
 
-    Get-Mailbox <identity> | fl MaxSendSize,MaxReceiveSize
+```powershell
+Get-Mailbox <identity> | fl MaxSendSize,MaxReceiveSize
+```
 

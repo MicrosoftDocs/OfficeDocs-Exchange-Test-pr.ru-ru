@@ -75,15 +75,21 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 1.  В командной строке откройте файл конфигурации приложения EdgeTransport.exe.config в Блокноте, выполнив следующую команду:
     
-        Notepad %ExchangeInstallPath%Bin\EdgeTransport.exe.config
+    ```powershell
+Notepad %ExchangeInstallPath%Bin\EdgeTransport.exe.config
+```
 
 2.  Измените в разделе `<appSettings>` следующую строку.
     
-        <add key="RoutingConfigReloadInterval" value="<hh:mm:ss>" />
+    ```command line
+<add key="RoutingConfigReloadInterval" value="<hh:mm:ss>" />
+```
     
     Например, чтобы изменить интервал автоматического пересчета таблицы маршрутизации на 10 часов, нужно использовать следующее значение:
     
-        <add key="RoutingConfigReloadInterval" value="10:00:00" />
+    ```command line
+<add key="RoutingConfigReloadInterval" value="10:00:00" />
+```
 
 3.  Закончив, сохраните и закройте файл EdgeTransport.exe.config.
 

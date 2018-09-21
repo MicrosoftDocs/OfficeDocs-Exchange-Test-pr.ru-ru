@@ -61,11 +61,15 @@ _**Последнее изменение раздела:** 2014-01-06_
 
 В этом примере показано, как включить протокол POP3 для пользователя Вадим Корепин.
 
-    Set-CASMailbox -Identity "John Smith" -POPEnabled $true
+```powershell
+Set-CASMailbox -Identity "John Smith" -POPEnabled $true
+```
 
 В этом примере показано, как отключить протокол POP3 для пользователя Вадим Корепин.
 
-    Set-CASMailbox -Identity "John Smith" -POPEnabled $false
+```powershell
+Set-CASMailbox -Identity "John Smith" -POPEnabled $false
+```
 
 ## Как проверить, что все получилось?
 

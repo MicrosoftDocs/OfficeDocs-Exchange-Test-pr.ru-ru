@@ -41,11 +41,15 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 Чтобы отключить фильтрацию контента, выполните следующую команду:
 
-    Set-ContentFilterConfig -Enabled $false
+```powershell
+Set-ContentFilterConfig -Enabled $false
+```
 
 Чтобы включить фильтрацию содержимого, выполните следующую команду:
 
-    Set-ContentFilterConfig -Enabled $true
+```powershell
+Set-ContentFilterConfig -Enabled $true
+```
 
 > [!NOTE]  
 > При отключении фильтрации контента, соответствующий агент фильтрации все еще включен. Чтобы выключить агент фильтрации контента, выполните следующую команду: <code>Disable-TransportAgent &quot;Content Filter Agent&quot;</code>.
@@ -57,7 +61,9 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 1.  Выполните следующую команду:
     
-        Get-ContentFilterConfig | Format-List Enabled
+    ```powershell
+Get-ContentFilterConfig | Format-List Enabled
+```
 
 2.  Проверьте значение отображаемого свойства *Enabled*.
 
@@ -67,11 +73,15 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 Чтобы отключить фильтрацию контента для внешних сообщений, выполните следующую команду:
 
-    Set-ContentFilterConfig -ExternalMailEnabled $false
+```powershell
+Set-ContentFilterConfig -ExternalMailEnabled $false
+```
 
 Чтобы включить фильтрацию контента для внешних сообщений, выполните следующую команду:
 
-    Set-ContentFilterConfig -ExternalMailEnabled $true
+```powershell
+Set-ContentFilterConfig -ExternalMailEnabled $true
+```
 
 ## Как проверить, что все получилось?
 
@@ -79,7 +89,9 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 1.  Выполните следующую команду:
     
-        Get-ContentFilterConfig | Format-List ExternalMailEnabled
+    ```powershell
+Get-ContentFilterConfig | Format-List ExternalMailEnabled
+```
 
 2.  Проверьте значение отображаемого свойства *ExternalMailEnabled*.
 
@@ -89,11 +101,15 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 Чтобы включить фильтрацию контента для внутренних сообщений, выполните следующую команду:
 
-    Set-ContentFilterConfig -InternalMailEnabled $true
+```powershell
+Set-ContentFilterConfig -InternalMailEnabled $true
+```
 
 Чтобы выключить фильтрацию контента для внутренних сообщений, выполните следующую команду:
 
-    Set-ContentFilterConfig -InternalMailEnabled $false
+```powershell
+Set-ContentFilterConfig -InternalMailEnabled $false
+```
 
 ## Как проверить, что все получилось?
 
@@ -101,7 +117,9 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 1.  Выполните следующую команду:
     
-        Get-ContentFilterConfig | Format-List InternalMailEnabled
+    ```powershell
+Get-ContentFilterConfig | Format-List InternalMailEnabled
+```
 
 2.  Проверьте значение отображаемого свойства *InternalMailEnabled*.
 
@@ -159,19 +177,27 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 Этот пример разрешает все сообщения, которые содержат фразу "отзыв клиента".
 
-    Add-ContentFilterPhrase -Influence GoodWord -Phrase "customer feedback"
+```powershell
+Add-ContentFilterPhrase -Influence GoodWord -Phrase "customer feedback"
+```
 
 В этом примере блокирует все сообщения, которые содержат фразу "подсказка по акциям".
 
-    Add-ContentFilterPhrase -Influence BadWord -Phrase "stock tip"
+```powershell
+Add-ContentFilterPhrase -Influence BadWord -Phrase "stock tip"
+```
 
 Чтобы удалить разрешенные или заблокированные фразы, выполните следующую команду:
 
-    Remove-ContentFilterPhrase -Phrase <Phrase>
+```powershell
+Remove-ContentFilterPhrase -Phrase <Phrase>
+```
 
 В этом примере удаляется фраза "подсказка по акциям":
 
-    Remove-ContentFilterPhrase -Phrase "stock tip"
+```powershell
+Remove-ContentFilterPhrase -Phrase "stock tip"
+```
 
 ## Как проверить, что все получилось?
 
@@ -179,7 +205,9 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 1.  Выполните следующую команду:
     
-        Get-ContentFilterPhrase | Format-List Influence,Phrase
+    ```powershell
+Get-ContentFilterPhrase | Format-List Influence,Phrase
+```
 
 2.  Убедитесь, что отображаемые значения соответствуют заданным параметрам.
 
@@ -221,7 +249,9 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 Чтобы задать пользовательский ответ при отклонении, выполните следующую команду:
 
-    Set-ContentFilterConfig -RejectionResponse "<Custom Text>"
+```powershell
+Set-ContentFilterConfig -RejectionResponse "<Custom Text>"
+```
 
 В этом примере для агента фильтрации контента настраивается отправка настроенного ответа об отклонении.
 
@@ -243,11 +273,15 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 Чтобы отключить проверку почтового штемпеля Outlook, выполните следующую команду:
 
-    Set-ContentFilterConfig -OutlookEmailPostmarkValidationEnabled $false
+```powershell
+Set-ContentFilterConfig -OutlookEmailPostmarkValidationEnabled $false
+```
 
 Чтобы включить проверку почтового штемпеля Outlook, выполните следующую команду:
 
-    Set-ContentFilterConfig -OutlookEmailPostmarkValidationEnabled $true
+```powershell
+Set-ContentFilterConfig -OutlookEmailPostmarkValidationEnabled $true
+```
 
 ## Как проверить, что все получилось?
 
@@ -255,7 +289,9 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 1.  Выполните следующую команду:
     
-        Get-ContentFilterConfig | Format-List OutlookEmailPostmarkValidationEnabled
+    ```powershell
+Get-ContentFilterConfig | Format-List OutlookEmailPostmarkValidationEnabled
+```
 
 2.  Сравните показанное значение с заданным вами значением.
 

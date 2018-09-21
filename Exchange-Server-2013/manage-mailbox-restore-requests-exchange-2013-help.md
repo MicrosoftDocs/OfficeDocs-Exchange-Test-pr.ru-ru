@@ -43,7 +43,9 @@ _**Последнее изменение раздела:** 2015-03-09_
 
   - Чтобы просмотреть значение свойства *Identity* для всех запросов на восстановление почтовых ящиков, выполните следующую команду.
     
-        Get-MailboxRestoreRequest | Format-Table Identity
+    ```powershell
+Get-MailboxRestoreRequest | Format-Table Identity
+```
     
     Можно использовать это значение идентификатора для указания определенного запроса на восстановление почтового ящика при выполнении процедур, приведенных в данном разделе.
 
@@ -61,31 +63,43 @@ _**Последнее изменение раздела:** 2015-03-09_
 
 Чтобы просмотреть список и значение свойства *Identity* для всех запросов на восстановление почтовых ящиков, выполните следующую команду.
 
-    Get-MailboxRestoreRequest | Format-Table Identity
+```powershell
+Get-MailboxRestoreRequest | Format-Table Identity
+```
 
 Можно использовать идентификатор для получения сведений о конкретных запросах на восстановление почтовых ящиков.
 
 В этом примере возвращается состояние запроса на восстановление "Pilar Pinilla \\MailboxRestore" с помощью параметра *Identity*.
 
-    Get-MailboxRestoreRequest -Identity "Pilar Pinilla\MailboxRestore"
+```powershell
+Get-MailboxRestoreRequest -Identity "Pilar Pinilla\MailboxRestore"
+```
 
 В этом примере возвращается вся информация для второго запроса на восстановление для целевого почтового ящика "Pilar Pinilla".
 
-    Get-MailboxRestoreRequest -Identity "Pilar Pinilla\MailboxRestore1" | Format-List
+```powershell
+Get-MailboxRestoreRequest -Identity "Pilar Pinilla\MailboxRestore1" | Format-List
+```
 
 В этом примере возвращается состояние запросов на восстановление, восстанавливаемых из исходной базы данных MBD01.
 
-    Get-MailboxRestoreRequest -SourceDatabase MBD01
+```powershell
+Get-MailboxRestoreRequest -SourceDatabase MBD01
+```
 
 Этот пример возвращает все запросы на восстановление, которые в настоящее время выполняются.
 
-    Get-MailboxRestoreRequest -Status InProgress
+```powershell
+Get-MailboxRestoreRequest -Status InProgress
+```
 
 Другие полезные состояния — `Queued`, `Completed`, `Suspended` и `Failed`.
 
 В этом примере возвращаются все приостановленные запросы на восстановление.
 
-    Get-MailboxRestoreRequest -Suspend $true
+```powershell
+Get-MailboxRestoreRequest -Suspend $true
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Get-MailboxRestoreRequest](https://technet.microsoft.com/ru-ru/library/ff829907\(v=exchg.150\)).
 
@@ -148,7 +162,9 @@ _**Последнее изменение раздела:** 2015-03-09_
 
 В этом примере возвращается статистика по умолчанию для запроса на восстановление danp\\MailboxRestore1. Сведения, получаемые по умолчанию, включают в себя имя, почтовый ящик, состояние и процент выполнения.
 
-    Get-MailboxRestoreRequestStatistics -Identity danp\MailboxRestore1
+```powershell
+Get-MailboxRestoreRequestStatistics -Identity danp\MailboxRestore1
+```
 
 В этом примере возвращается статистика почтового ящика «Dan Park», а отчет экспортируется в CSV-файл.
 
@@ -399,7 +415,9 @@ _**Последнее изменение раздела:** 2015-03-09_
 
 В этом примере кода указывается, что запрос на восстановление MailboxRestore1 для почтового ящика Debra Garcia будет пропускать 10 поврежденных элементов.
 
-    Set-MailboxRestoreRequest -Identity "Debra Garcia\MailboxRestore1" -BadItemLimit 10
+```powershell
+Set-MailboxRestoreRequest -Identity "Debra Garcia\MailboxRestore1" -BadItemLimit 10
+```
 
 В этом примере кода указывается, что запрос на восстановление MailboxRestore1 для почтового ящика Florence Flipo будет пропускать 100 поврежденных элементов. В связи с тем, что значение параметра *BadItemLimit* больше 50, необходимо указывать значение для параметра *AcceptLargeDataLoss*.
 
@@ -419,7 +437,9 @@ _**Последнее изменение раздела:** 2015-03-09_
 
 В этом примере приостанавливается запрос MailboxRestore1 на восстановление почтового ящика пользователя Pilar Pinilla.
 
-    Suspend-MailboxRestoreRequest -Identity "Pilar Pinilla\MailboxRestore1"
+```powershell
+Suspend-MailboxRestoreRequest -Identity "Pilar Pinilla\MailboxRestore1"
+```
 
 В этом примере все выполняемые запросы на восстановление приостанавливаются путем получения всех запросов с состоянием `InProgress` и последующей конвейерной передачи выходных данных в командлет **Suspend-MailboxRestoreRequest** с примечанием о приостановке «Resume after FY13Q2 Maintenance» (Возобновить после обслуживания в FY13Q2).
 
@@ -431,7 +451,9 @@ _**Последнее изменение раздела:** 2015-03-09_
 
 Чтобы убедиться в том, что запрос на восстановление почтового ящика успешно приостановлен, выполните следующую команду.
 
-    Get-MailboxRestoreRequest <identity> | Format-List Suspend,Status
+```powershell
+Get-MailboxRestoreRequest <identity> | Format-List Suspend,Status
+```
 
 Если значение свойства *Suspend* равняется `True`, запрос на восстановление успешно приостановлен. Кроме того, значение `Suspended` у свойства *Status* указывает, что запрос приостановлен.
 
@@ -441,11 +463,15 @@ _**Последнее изменение раздела:** 2015-03-09_
 
 В этом примере возобновляется запрос на восстановление Pilar Pinilla\\MailboxRestore1.
 
-    Resume-MailboxRestoreRequest -Identity "Pilar Pinilla\MailboxRestore1"
+```powershell
+Resume-MailboxRestoreRequest -Identity "Pilar Pinilla\MailboxRestore1"
+```
 
 В этом примере показано, как возобновить все запросы на восстановление, которые имеют состояние Failed.
 
-    Get-MailboxRestoreRequest -Status Failed | Resume-MailboxRestoreRequest
+```powershell
+Get-MailboxRestoreRequest -Status Failed | Resume-MailboxRestoreRequest
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Resume-MailboxRestoreRequest](https://technet.microsoft.com/ru-ru/library/ff829908\(v=exchg.150\)).
 
@@ -453,7 +479,9 @@ _**Последнее изменение раздела:** 2015-03-09_
 
 Чтобы убедиться, что запрос на восстановление возобновился, выполните следующую команду.
 
-    Get-MailboxRestoreRequest <identity> | Format-List Suspend,Status
+```powershell
+Get-MailboxRestoreRequest <identity> | Format-List Suspend,Status
+```
 
 Если значение свойства *Suspend* равняется `False`, запрос на восстановление успешно восстановлен. Кроме того, значение `InProgress` у свойства *Status* указывает, что запрос возобновлен.
 
@@ -467,15 +495,21 @@ _**Последнее изменение раздела:** 2015-03-09_
 
 В этом примере удаляется запрос на восстановление Pilar Pinilla\\MailboxRestore1.
 
-    Remove-MailboxRestoreRequest -Identity "Pilar Pinilla\MailboxRestore1"
+```powershell
+Remove-MailboxRestoreRequest -Identity "Pilar Pinilla\MailboxRestore1"
+```
 
 Этот пример удаляет все запросы на восстановление, которые имеют состояние «Completed».
 
-    Get-MailboxRestoreRequest -Status Completed | Remove-MailboxRestoreRequest
+```powershell
+Get-MailboxRestoreRequest -Status Completed | Remove-MailboxRestoreRequest
+```
 
 В этом примере запрос на восстановление на сервере MBXDB01 отменяется с помощью параметра *RequestGuid*. Набор параметров, в котором обязательными являются параметры *RequestGuid* и *RequestQueue*, используется только для отладки службы репликации Microsoft. Эти параметры можно использовать только при получении соответствующих указаний от службы технической поддержки корпорации Майкрософт.
 
-    Remove-MailboxRestoreRequest -RequestQueue MBXDB01 -RequestGuid 25e0eaf2-6cc2-4353-b83e-5cb7b72d441f
+```powershell
+Remove-MailboxRestoreRequest -RequestQueue MBXDB01 -RequestGuid 25e0eaf2-6cc2-4353-b83e-5cb7b72d441f
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Remove-MailboxRestoreRequest](https://technet.microsoft.com/ru-ru/library/ff829910\(v=exchg.150\)).
 
@@ -483,7 +517,9 @@ _**Последнее изменение раздела:** 2015-03-09_
 
 Чтобы убедиться в том, что запрос на восстановление почтового ящика успешно удален, выполните следующую команду.
 
-    Get-MailboxRestoreRequest -Identity <identity of removed restore request>
+```powershell
+Get-MailboxRestoreRequest -Identity <identity of removed restore request>
+```
 
 Команда возвратит ошибку, указывающую, что запрос на восстановление не существует.
 

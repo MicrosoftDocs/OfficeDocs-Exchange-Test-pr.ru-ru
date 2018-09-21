@@ -39,9 +39,13 @@ _**Последнее изменение раздела:** 2012-10-02_
 
 Чтобы удалить область, используйте следующий синтаксис.
 
-    Remove-ManagementScope <scope name>
+```powershell
+Remove-ManagementScope <scope name>
+```
 
 Например, чтобы удалить область Dublin Servers, используйте следующую команду.
 
-    Remove-ManagementScope "Dublin Servers"
+```powershell
+Remove-ManagementScope "Dublin Servers"
+```
 

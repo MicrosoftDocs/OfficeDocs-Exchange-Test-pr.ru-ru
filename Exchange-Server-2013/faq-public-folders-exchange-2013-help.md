@@ -53,7 +53,9 @@ CSV-файл используется для определения сопост
 
 Чтобы разностная синхронизация запускалась до завершения (до блокировки источника), выполните следующую команду.
 
-    Resume-PublicFolderMigrationRequest \PublicFolderMigration
+```powershell
+Resume-PublicFolderMigrationRequest \PublicFolderMigration
+```
 
 Подробные сведения о синтаксисе и параметрах см. в разделе [Resume-PublicFolderMigrationRequest](https://technet.microsoft.com/ru-ru/library/jj218689\(v=exchg.150\)).
 
@@ -101,7 +103,9 @@ Outlook в Интернете и Outlook 2011 для Mac не поддержив
 
 Выполните следующую команду:
 
-    Get-OrganizationConfig | Format-List RootPublicFolderMailbox
+```powershell
+Get-OrganizationConfig | Format-List RootPublicFolderMailbox
+```
 
 Подробные сведения о синтаксисе и параметрах см. в разделе [Get-OrganizationConfig](https://technet.microsoft.com/ru-ru/library/aa997571\(v=exchg.150\)).
 
@@ -109,7 +113,9 @@ Outlook в Интернете и Outlook 2011 для Mac не поддержив
 
 Чтобы создать первый почтовый ящик иерархии общих папок и дополнительные почтовые ящики иерархии, выполните следующую команду.
 
-    New-Mailbox -PublicFolder -Name <name of public folder>
+```powershell
+New-Mailbox -PublicFolder -Name <name of public folder>
+```
 
 Дополнительные сведения см. в разделе [Создание общедоступной папки](https://docs.microsoft.com/ru-ru/exchange/collaboration-exo/public-folders/create-public-folder).
 
@@ -145,7 +151,9 @@ Outlook в Интернете и Outlook 2011 для Mac не поддержив
 
 В Exchange 2007 и Exchange 2010 можно было указать, какие пользователи имеют доступ к определенным общедоступным папкам. В Exchange 2013 можно задать почтовый ящик общих папок по умолчанию для каждого пользователя. Для этого запустите командлет [Set-Mailbox](https://technet.microsoft.com/ru-ru/library/bb123981\(v=exchg.150\)) с параметром *DefaultPublicFolderMailbox*.
 
-    Set-Mailbox -Identity kweku@contoso.com -DefaultPublicFolderMailbox "PF_Administration"
+```powershell
+Set-Mailbox -Identity kweku@contoso.com -DefaultPublicFolderMailbox "PF_Administration"
+```
 
 ## Как влияет на пользователя нарушение основной иерархии?
 

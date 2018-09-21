@@ -58,15 +58,21 @@ _**Последнее изменение раздела:** 2013-04-16_
 
 В этом примере фигурирует три абонентские группы SIP URI: SipDP1, SipDP2 и SipDP3. В следующем примере сервер почтовых ящиков `MyMailboxServer` удаляется из абонентской группы SipDP3.
 
-    Set-UMService -id MyMailboxServer -DialPlans SipDP1,SipDP2
+```powershell
+Set-UMService -id MyMailboxServer -DialPlans SipDP1,SipDP2
+```
 
 В этом примере фигурирует две абонентские группы SIP URI: SipDP1 и SipDP2. В следующем примере сервер почтовых ящиков `MyMailboxServer` удаляется из абонентской группы SipDP2.
 
-    Set-UMService -id MyMailboxServer -DialPlans SipDP1
+```powershell
+Set-UMService -id MyMailboxServer -DialPlans SipDP1
+```
 
 В следующем примере сервер почтовых ящиков `MyMailboxServer` удаляется из абонентских групп SIP.
 
-    Set-UMService -id MyUMServer -DialPlans $null
+```powershell
+Set-UMService -id MyUMServer -DialPlans $null
+```
 
 ## Использование Центра администрирования Exchange для удаления сервера клиентского доступа из абонентской группы SIP URI
 
@@ -89,13 +95,19 @@ _**Последнее изменение раздела:** 2013-04-16_
 
 В этом примере фигурирует три абонентские группы SIP URI: SipDP1, SipDP2 и SipDP3. В следующем примере сервер клиентского доступа `MyClientAccessServer` удаляется из абонентской группы SipDP3.
 
-    Set-UMCallRouterSettings -id MyClientAccessServer -DialPlans SipDP1,SipDP2
+```powershell
+Set-UMCallRouterSettings -id MyClientAccessServer -DialPlans SipDP1,SipDP2
+```
 
 В этом примере фигурирует две абонентские группы SIP URI: SipDP1 и SipDP2. В следующем примере сервер клиентского доступа `MyClientAccessServer` удаляется из абонентской группы SipDP2.
 
-    Set-UMCallRouterSettings -id MyClientAccessServer -DialPlans SipDP1
+```powershell
+Set-UMCallRouterSettings -id MyClientAccessServer -DialPlans SipDP1
+```
 
 В следующем примере сервер клиентского доступа `MyClientAccessServer` удаляется из абонентских групп SIP.
 
-    Set-UMCallRouterSettings -id MyClientAccessServer -DialPlans $null
+```powershell
+Set-UMCallRouterSettings -id MyClientAccessServer -DialPlans $null
+```
 

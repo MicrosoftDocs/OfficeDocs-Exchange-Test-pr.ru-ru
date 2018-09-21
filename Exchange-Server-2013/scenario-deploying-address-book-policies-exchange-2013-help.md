@@ -309,7 +309,9 @@ _**Последнее изменение раздела:** 2016-12-09_
 
 В этом примере для Fabrikam создается автономная адресная книга с именем OAB\_FAB.
 
-    New-OfflineAddressBook -Name "OAB_FAB" -AddressLists "GAL_FAB"
+```powershell
+New-OfflineAddressBook -Name "OAB_FAB" -AddressLists "GAL_FAB"
+```
 
 Подробнее см. в разделе [Создание автономной адресной книги](https://docs.microsoft.com/ru-ru/exchange/address-books/offline-address-books/create-offline-address-book).
 

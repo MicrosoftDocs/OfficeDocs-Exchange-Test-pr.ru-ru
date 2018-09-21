@@ -65,11 +65,15 @@ _**Последнее изменение раздела:** 2012-11-28_
 
 В этом примере устанавливается ограничение числа подключений для сервера.
 
-    Set-PopSettings -Identity CAS01 -MaxConnections Value
+```powershell
+Set-PopSettings -Identity CAS01 -MaxConnections Value
+```
 
 В этом примере устанавливается ограничение числа подключений для IP-адреса.
 
-    Set-PopSettings -Identity CAS01 -MaxConnectionsFromSingleIP Value
+```powershell
+Set-PopSettings -Identity CAS01 -MaxConnectionsFromSingleIP Value
+```
 
 В этом примере устанавливается ограничение числа подключений для пользователя.
 
@@ -77,7 +81,9 @@ _**Последнее изменение раздела:** 2012-11-28_
 
 В этом примере устанавливается максимальный размер команды.
 
-    Set-PopSettings -MaxCommandSize Value
+```powershell
+Set-PopSettings -MaxCommandSize Value
+```
 
 После настройки ограничений числа подключений необходимо перезапустить службы POP3. Дополнительные сведения о перезапуске служб POP3 см. в разделе [Запуск и остановка служб POP3](start-and-stop-the-pop3-services-exchange-2013-help.md).
 
@@ -101,7 +107,9 @@ _**Последнее изменение раздела:** 2012-11-28_
 
 1.  Выполните в командной консоли следующую команду.
     
-        Get-PopSettings | format-list
+    ```powershell
+Get-PopSettings | format-list
+```
 
 2.  Убедитесь, что параметры указаны правильно.
 

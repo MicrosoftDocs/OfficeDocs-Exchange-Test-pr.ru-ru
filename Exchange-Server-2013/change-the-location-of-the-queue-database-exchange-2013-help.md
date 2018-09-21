@@ -93,7 +93,9 @@ _**Последнее изменение раздела:** 2015-03-09_
 
 2.  В окне командной строки откройте файл EdgeTransport.exe.config в Блокноте, выполнив следующую команду:
     
-        Notepad %ExchangeInstallPath%Bin\EdgeTransport.exe.config
+    ```powershell
+Notepad %ExchangeInstallPath%Bin\EdgeTransport.exe.config
+```
 
 3.  В разделе `<appSettings>` измените следующие ключи:
     
@@ -137,7 +139,9 @@ _**Последнее изменение раздела:** 2015-03-09_
 
 2.  В окне командной строки откройте файл EdgeTransport.exe.config в Блокноте, выполнив следующую команду:
     
-        Notepad %ExchangeInstallPath%Bin\EdgeTransport.exe.config
+    ```powershell
+Notepad %ExchangeInstallPath%Bin\EdgeTransport.exe.config
+```
 
 3.  В разделе `<appSettings>` измените следующие ключи:
     
@@ -153,7 +157,9 @@ _**Последнее изменение раздела:** 2015-03-09_
 
 5.  Остановите службу транспорта Microsoft Exchange, выполнив следующую команду:
     
-        net stop MSExchangeTransport
+    ```powershell
+net stop MSExchangeTransport
+```
 
 6.  Переместите существующие файлы базы данных Mail.que и Trn.chk из исходного расположения в новое.
 
@@ -161,7 +167,9 @@ _**Последнее изменение раздела:** 2015-03-09_
 
 8.  Запустите службу транспорта Microsoft Exchange, выполнив следующую команду:
     
-        net start MSExchangeTransport
+    ```powershell
+net start MSExchangeTransport
+```
 
 ## Как проверить, что все получилось?
 

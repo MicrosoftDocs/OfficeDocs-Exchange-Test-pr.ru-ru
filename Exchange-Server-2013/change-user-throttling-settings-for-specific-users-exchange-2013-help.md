@@ -41,19 +41,27 @@ _**Последнее изменение раздела:** 2014-08-05_
 
 В этом примере создается пользовательская политика регулирования ITStaffPolicy, не являющаяся политикой по умолчанию, которую можно связать с определенными пользователями. Любые пропущенные параметры наследуют значения из политики регулирования по умолчанию (GlobalThrottlingPolicy). После создания этой политики необходимо связать ее с конкретными пользователями.
 
-    New-ThrottlingPolicy -Name ITStaffPolicy -EwsMaxConcurrency 4 -ThrottlingPolicyScope Regular
+```powershell
+New-ThrottlingPolicy -Name ITStaffPolicy -EwsMaxConcurrency 4 -ThrottlingPolicyScope Regular
+```
 
 В данном примере пользователь tonysmith связывается с политикой регулирования ITStaffPolicy (который задает более высокие пределы).
 
-    Set-ThrottlingPolicyAssociation -Identity tonysmith -ThrottlingPolicy ITStaffPolicy
+```powershell
+Set-ThrottlingPolicyAssociation -Identity tonysmith -ThrottlingPolicy ITStaffPolicy
+```
 
 Командлет **Set-ThrottlingPolicyAssociation** не нужно использовать для связывания пользователя с политикой. Другим способом связать пользователя tonysmith с политикой регулирования ITStaffPolicy являются следующие команды.
 
 ```
-    $b = Get-ThrottlingPolicy ITStaffPolicy
+```powershell
+$b = Get-ThrottlingPolicy ITStaffPolicy
 ```
 ```
-    Set-Mailbox -Identity tonysmith -ThrottlingPolicy $b
+```
+```powershell
+Set-Mailbox -Identity tonysmith -ThrottlingPolicy $b
+```
 ```   
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделах [New-ThrottlingPolicy](https://technet.microsoft.com/ru-ru/library/dd351045\(v=exchg.150\)) и [Set-ThrottlingPolicyAssociation](https://technet.microsoft.com/ru-ru/library/ff459231\(v=exchg.150\)).
@@ -64,19 +72,25 @@ _**Последнее изменение раздела:** 2014-08-05_
 
 1.  Выполните следующую команду.
     
-        Get-ThrottlingPolicy | Format-List
+    ```powershell
+Get-ThrottlingPolicy | Format-List
+```
 
 2.  Убедитесь, что созданная регулярная политика регулирования отображается в столбце с объектом GlobalThrottlingPolicy.
 
 3.  Выполните следующую команду.
     
-        Get-ThrottlingPolicy | Format-List
+    ```powershell
+Get-ThrottlingPolicy | Format-List
+```
 
 4.  Убедитесь, что свойства новой регулярной политики соответствуют ранее настроенным значениям.
 
 5.  Выполните следующую команду.
     
-        Get-ThrottlingPolicyAssociation
+    ```powershell
+Get-ThrottlingPolicyAssociation
+```
 
 6.  Убедитесь, что новая регулярная политика связана с нужными пользователями.
 

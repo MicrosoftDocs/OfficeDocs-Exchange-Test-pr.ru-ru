@@ -39,11 +39,15 @@ _**Последнее изменение раздела:** 2012-10-02_
 
 Если известно имя назначения роли, которое необходимо удалить, используйте следующий синтаксис.
 
-    Remove-ManagementRoleAssignment <assignment name>
+```powershell
+Remove-ManagementRoleAssignment <assignment name>
+```
 
 Например, чтобы удалить назначение роли "Tier 2 Help Desk", выполните следующую команду.
 
-    Remove-ManagementRoleAssignment "Tier 2 Help Desk Assignment"
+```powershell
+Remove-ManagementRoleAssignment "Tier 2 Help Desk Assignment"
+```
 
 Если имя назначения роли не известно, используйте следующий синтаксис.
 

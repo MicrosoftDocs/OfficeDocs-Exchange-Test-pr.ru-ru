@@ -312,7 +312,9 @@ _**Последнее изменение раздела:** 2015-03-09_
 
 Этот пример возвращает все непустые внешние очереди на серверах почтовых ящиков Exchange 2013 с именами Mailbox01,Mailbox02 и Mailbox03.
 
-    Get-QueueDigest -Server Mailbox01,Mailbox02,Mailbox03 -Include External -Exclude Empty
+```powershell
+Get-QueueDigest -Server Mailbox01,Mailbox02,Mailbox03 -Include External -Exclude Empty
+```
 
 В начало
 

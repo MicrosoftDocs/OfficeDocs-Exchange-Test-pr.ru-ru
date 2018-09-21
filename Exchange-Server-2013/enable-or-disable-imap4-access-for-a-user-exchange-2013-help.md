@@ -61,11 +61,15 @@ _**Последнее изменение раздела:** 2013-01-18_
 
 В следующем примере протокол IMAP4 включается для пользователя John Smith.
 
-    Set-CASMailbox -Identity "John Smith" -IMAPEnabled $true
+```powershell
+Set-CASMailbox -Identity "John Smith" -IMAPEnabled $true
+```
 
 В следующем примере протокол IMAP4 отключается для пользователя John Smith.
 
-    Set-CASMailbox -Identity "John Smith" -IMAPEnabled $false
+```powershell
+Set-CASMailbox -Identity "John Smith" -IMAPEnabled $false
+```
 
 ## Как проверить, что все получилось?
 

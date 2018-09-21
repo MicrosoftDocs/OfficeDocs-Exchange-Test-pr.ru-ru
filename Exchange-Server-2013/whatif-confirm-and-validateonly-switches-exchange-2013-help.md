@@ -39,7 +39,9 @@ _**Последнее изменение раздела:** 2012-10-04_
 
 При выполнении команды из данного примера командная консоль возвращает следующий текст:
 
-    What if: Creating Accepted Domain "Contoso Domain" with domain name "contoso.com".
+```powershell
+What if: Creating Accepted Domain "Contoso Domain" with domain name "contoso.com".
+```
 
 ## Параметр Confirm
 
@@ -67,7 +69,9 @@ _**Последнее изменение раздела:** 2012-10-04_
 
 При применении параметра *Confirm* в какой-либо команде вручную, параметр *Confirm* должен быть помещен в конец команды, как в следующем примере:
 
-    Get-JournalRule | Enable-JournalRule -Confirm
+```powershell
+Get-JournalRule | Enable-JournalRule -Confirm
+```
 
 При выполнении команды из данного примера командная консоль возвращает следующий запрос на подтверждение:
 
@@ -93,7 +97,9 @@ _**Последнее изменение раздела:** 2012-10-04_
 
 Если необходимо переопределить настройки по умолчанию среды управления и отключить вывод запросов на подтверждение для командлетов, для которых он применяется автоматически, необходимо включить в них параметр *Confirm* со значением `$False`, как в следующем примере:
 
-    Get-JournalRule | Disable-JournalRule -Confirm:$False
+```powershell
+Get-JournalRule | Disable-JournalRule -Confirm:$False
+```
 
 В данном случае не отображается никаких запросов на подтверждение.
 

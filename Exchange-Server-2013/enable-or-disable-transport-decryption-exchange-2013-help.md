@@ -57,7 +57,9 @@ _**Последнее изменение раздела:** 2016-12-09_
 
 В этом примере показано, как включить расшифровку транспорта для организации Exchange 2013. Сообщения, которые не удалось расшифровать, отклоняются, и отправителю возвращается отчет о недоставке.
 
-    Set-IRMConfiguration -TransportDecryptionSetting Mandatory
+```powershell
+Set-IRMConfiguration -TransportDecryptionSetting Mandatory
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Set-IRMConfiguration](https://technet.microsoft.com/ru-ru/library/dd979792\(v=exchg.150\)).
 
@@ -65,7 +67,9 @@ _**Последнее изменение раздела:** 2016-12-09_
 
 В этом примере показано, как отключить расшифровку транспорта для организации Exchange 2013.
 
-    Set-IRMConfiguration -TransportDecryptionSetting Disabled
+```powershell
+Set-IRMConfiguration -TransportDecryptionSetting Disabled
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Set-IRMConfiguration](https://technet.microsoft.com/ru-ru/library/dd979792\(v=exchg.150\)).
 

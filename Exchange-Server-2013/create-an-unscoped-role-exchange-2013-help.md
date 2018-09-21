@@ -61,11 +61,15 @@ _**Последнее изменение раздела:** 2014-06-09_
 
 Роли верхнего уровня с незаданной областью не имеют родительской роли. Чтобы создать роль без родительской роли, необходимо указать параметр *UnscopedTopLevel*. Для создания новой роли используйте следующий синтаксис.
 
-    New-ManagementRole <name of new role> -UnscopedTopLevel
+```powershell
+New-ManagementRole <name of new role> -UnscopedTopLevel
+```
 
 В этом примере создается роль верхнего уровня с незаданной областью "ИТ-сценарии".
 
-    New-ManagementRole "IT Scripts" -UnscopedTopLevel
+```powershell
+New-ManagementRole "IT Scripts" -UnscopedTopLevel
+```
 
 После создания роль будет пустой до добавления в нее сценариев или командлетов, не относящихся к серверу Exchange.
 
@@ -145,7 +149,9 @@ _**Последнее изменение раздела:** 2014-06-09_
 
 В этом примере копируется роль "Глобальные ИТ-сценарии" и ее записи роли управления в роль "Диагностические ИТ-сценарии".
 
-    New-ManagementRole -Parent "IT Global Scripts" -Name "Diagnostic IT Scripts"
+```powershell
+New-ManagementRole -Parent "IT Global Scripts" -Name "Diagnostic IT Scripts"
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [New-ManagementRole](https://technet.microsoft.com/ru-ru/library/dd298073\(v=exchg.150\)).
 

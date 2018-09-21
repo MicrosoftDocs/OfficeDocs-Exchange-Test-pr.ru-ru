@@ -51,7 +51,9 @@ _**Последнее изменение раздела:** 2016-11-17_
 
 В этом примере в почтовом ящике пользователя с именем Jeff Phillips настраивается обход фильтров защиты от нежелательной почты и включается пересылка почтовых сообщений с порогом вероятности нежелательной почты не менее 5 из папки нежелательной почты в Microsoft Outlook.
 
-    Set-Mailbox "Jeff Phillips" -AntispamBypassEnabled $true -SCLJunkEnabled $true -SCLJunkThreshold 4
+```powershell
+Set-Mailbox "Jeff Phillips" -AntispamBypassEnabled $true -SCLJunkEnabled $true -SCLJunkThreshold 4
+```
 
 ## Как проверить, что все получилось?
 
@@ -87,11 +89,15 @@ _**Последнее изменение раздела:** 2016-11-17_
 
 Выполните следующую команду:
 
-    Set-OrganizationConfig -SCLJunkThreshold <Integer>
+```powershell
+Set-OrganizationConfig -SCLJunkThreshold <Integer>
+```
 
 В этом примере выполняется установка порогового значения нежелательной почты, равного 5, для всей организации.
 
-    Set-OrganizationConfig -SCLJunkThreshold 5
+```powershell
+Set-OrganizationConfig -SCLJunkThreshold 5
+```
 
 ## Как проверить, что все получилось?
 
@@ -99,7 +105,9 @@ _**Последнее изменение раздела:** 2016-11-17_
 
 1.  Выполните следующую команду:
     
-        Get-OrganizationConfig | Format-List SCLJunkThreshold
+    ```powershell
+Get-OrganizationConfig | Format-List SCLJunkThreshold
+```
 
 2.  Убедитесь, что отображается значение, которое вы настроили.
 

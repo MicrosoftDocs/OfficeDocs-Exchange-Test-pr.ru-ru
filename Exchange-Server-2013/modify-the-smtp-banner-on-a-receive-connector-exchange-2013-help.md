@@ -25,7 +25,9 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 При указании пользовательского значения для заголовка SMTP на соединителе получения удаленный сервер обмена сообщениями SMTP, подключенный к этому соединителю, получит приведенный ниже ответ.
 
-    220 <Banner Text>
+```powershell
+220 <Banner Text>
+```
 
 Может потребоваться изменение заголовка SMTP для соединителей получения SMTP с выходом в Интернет во избежание раскрытия имение и программного обеспечения сервера обмена сообщениями в заголовке SMTP.
 
@@ -49,15 +51,21 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 Выполните следующую команду:
 
-    Set-ReceiveConnector <ConnectorIdentity> -Banner "220 <Banner Text>"
+```powershell
+Set-ReceiveConnector <ConnectorIdentity> -Banner "220 <Banner Text>"
+```
 
 В этом примере выполняется изменение заголовка SMTP на существующем соединителе получения с именем "Из Интернета". В заголовке SMTP отображается `220 Contoso Corporation`.
 
-    Set-ReceiveConnector "From the Internet" -Banner "220 Contoso Corporation"
+```powershell
+Set-ReceiveConnector "From the Internet" -Banner "220 Contoso Corporation"
+```
 
 В этом примере удаляется пользовательский заголовок SMTP на соединителе получения с именем "Из Интернета", который восстанавливает значение заголовка SMTP по умолчанию.
 
-    Set-ReceiveConnector "From the Internet" -Banner $null
+```powershell
+Set-ReceiveConnector "From the Internet" -Banner $null
+```
 
 ## Как проверить, что все получилось?
 
@@ -65,7 +73,9 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 1.  Откройте клиент Telnet на компьютере, который может получить доступ к соединителю получения, и выполните следующую команду:
     
-        open <Connector FQDN or IP address> <Port>
+    ```powershell
+open <Connector FQDN or IP address> <Port>
+```
 
 2.  Убедитесь, что ответ от соединителя получения содержит заданный заголовок SMTP.
 

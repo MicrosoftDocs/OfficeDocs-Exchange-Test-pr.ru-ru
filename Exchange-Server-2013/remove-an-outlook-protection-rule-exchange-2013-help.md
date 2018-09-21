@@ -41,7 +41,9 @@ _**Последнее изменение раздела:** 2016-12-09_
 
 В этом примере удаляется правило защиты Outlook OPR-DG-Finance.
 
-    Remove-OutlookProtectionRule -Identity "OPR-DG-Finance"
+```powershell
+Remove-OutlookProtectionRule -Identity "OPR-DG-Finance"
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Remove-OutlookProtectionRule](https://technet.microsoft.com/ru-ru/library/dd297961\(v=exchg.150\)).
 
@@ -49,7 +51,9 @@ _**Последнее изменение раздела:** 2016-12-09_
 
 В этом примере удаляются все правила защиты Outlook в организации Exchange.
 
-    Get-OutlookProtectionRule | Remove-OutlookProtectionRule
+```powershell
+Get-OutlookProtectionRule | Remove-OutlookProtectionRule
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделах [Get-OutlookProtectionRule](https://technet.microsoft.com/ru-ru/library/dd298004\(v=exchg.150\)) и [Remove-OutlookProtectionRule](https://technet.microsoft.com/ru-ru/library/dd297961\(v=exchg.150\)).
 

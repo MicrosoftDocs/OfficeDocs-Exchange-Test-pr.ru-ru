@@ -77,7 +77,9 @@ _**Последнее изменение раздела:** 2014-06-24_
 
 В этом примере показано, как установить следящий каталог C:\\DAG1DIR для группы обеспечения доступности баз данных с именем DAG1.
 
-    Set-DatabaseAvailabilityGroup -Identity DAG1 -WitnessDirectory C:\DAG1DIR
+```powershell
+Set-DatabaseAvailabilityGroup -Identity DAG1 -WitnessDirectory C:\DAG1DIR
+```
 
 В этом примере показано, как предварительно настроить альтернативный следящий сервер CAS3 и альтернативный следящий каталог C:\\DAGFileShareWitnesses\\DAG1.contoso.com для группы обеспечения доступности баз данных с именем DAG1.
 
@@ -85,23 +87,33 @@ _**Последнее изменение раздела:** 2014-06-24_
 
 В этом примере показано, как настроить использование протокола DHCP для получения IP-адреса в группе обеспечения доступности баз данных с именем DAG1.
 
-    Set-DatabaseAvailabilityGroup -Identity DAG1 -DatabaseAvailabilityGroupIPAddresses 0.0.0.0
+```powershell
+Set-DatabaseAvailabilityGroup -Identity DAG1 -DatabaseAvailabilityGroupIPAddresses 0.0.0.0
+```
 
 В этом примере показано, как настроить использование статического IP-адреса 10.0.0.8 в группе обеспечения доступности баз данных с именем DAG1.
 
-    Set-DatabaseAvailabilityGroup -Identity DAG1 -DatabaseAvailabilityGroupIPAddresses 10.0.0.8
+```powershell
+Set-DatabaseAvailabilityGroup -Identity DAG1 -DatabaseAvailabilityGroupIPAddresses 10.0.0.8
+```
 
 В этом примере показано, как настроить группу обеспечения доступности баз данных DAG1 в нескольких подсетях с использованием нескольких статических IP-адресов.
 
-    Set-DatabaseAvailabilityGroup -Identity DAG1 -DatabaseAvailabilityGroupIPAddresses 10.0.0.8,10.0.1.8
+```powershell
+Set-DatabaseAvailabilityGroup -Identity DAG1 -DatabaseAvailabilityGroupIPAddresses 10.0.0.8,10.0.1.8
+```
 
 В этом примере показано, как настроить режим активации центра обработки данных для группы обеспечения доступности баз данных DAG1.
 
-    Set-DatabaseAvailabilityGroup -Identity DAG1 -DatacenterActivationMode DagOnly
+```powershell
+Set-DatabaseAvailabilityGroup -Identity DAG1 -DatacenterActivationMode DagOnly
+```
 
 В этом примере показано, как настроить порт репликации 63132 для группы обеспечения доступности баз данных DAG1.
 
-    Set-DatabaseAvailabilityGroup -Identity DAG1 -ReplicationPort 63132
+```powershell
+Set-DatabaseAvailabilityGroup -Identity DAG1 -ReplicationPort 63132
+```
 
 > [!NOTE]  
 > После изменения порта репликации по умолчанию для группы доступности базы данных необходимо вручную изменить исключения брандмауэра Windows для каждого участника группы DAG, чтобы разрешить подключение через указанный порт.
@@ -113,7 +125,9 @@ _**Последнее изменение раздела:** 2014-06-24_
 
   - В командной консоли выполните следующую команду, чтобы отобразить параметры конфигурации группы обеспечения доступности баз данных и проверить, настроена ли эта группа успешно.
     
-        Get-DatabaseAvailabilityGroup <DAGName> | Format-List
+    ```powershell
+Get-DatabaseAvailabilityGroup <DAGName> | Format-List
+```
 
 ## Дополнительные сведения
 

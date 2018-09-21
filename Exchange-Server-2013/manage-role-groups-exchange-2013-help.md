@@ -93,7 +93,9 @@ _**Последнее изменение раздела:** 2012-10-08_
 
 1.  Сохраните группу ролей, которую необходимо копировать, в переменной с помощью следующей синтаксической конструкции:
     
-        $RoleGroup = Get-RoleGroup <name of role group to copy>
+    ```powershell
+$RoleGroup = Get-RoleGroup <name of role group to copy>
+```
 
 2.  Создайте новую группу ролей, добавьте в нее членов и укажите пользователей, которые могут делегировать новую группу ролей другим пользователям, с помощью следующего синтаксиса.
     
@@ -112,7 +114,9 @@ _**Последнее изменение раздела:** 2012-10-08_
 
 1.  Сохраните группу ролей, которую необходимо копировать, в переменной с помощью следующей синтаксической конструкции:
     
-        $RoleGroup = Get-RoleGroup <name of role group to copy>
+    ```powershell
+$RoleGroup = Get-RoleGroup <name of role group to copy>
+```
 
 2.  Создайте новую группу ролей с настраиваемой областью с помощью следующей синтаксической конструкции:
     
@@ -133,7 +137,9 @@ _**Последнее изменение раздела:** 2012-10-08_
 
 1.  Сохраните группу ролей, которую необходимо копировать, в переменной с помощью следующей синтаксической конструкции:
     
-        $RoleGroup = Get-RoleGroup <name of role group to copy>
+    ```powershell
+$RoleGroup = Get-RoleGroup <name of role group to copy>
+```
 
 2.  Создайте новую группу ролей с настраиваемой областью с помощью следующей синтаксической конструкции:
     
@@ -214,11 +220,15 @@ _**Последнее изменение раздела:** 2012-10-08_
 
 Используйте следующий синтаксис для назначения группе ролей роли без области. Если имя назначения роли не задано, оно создается автоматически.
 
-    New-ManagementRoleAssignment -SecurityGroup <role group name> -Role <role name>
+```powershell
+New-ManagementRoleAssignment -SecurityGroup <role group name> -Role <role name>
+```
 
 В этом примере группе ролей Seattle Compliance назначается роль управления Transport Rules.
 
-    New-ManagementRoleAssignment -SecurityGroup "Seattle Compliance" -Role "Transport Rules"
+```powershell
+New-ManagementRoleAssignment -SecurityGroup "Seattle Compliance" -Role "Transport Rules"
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [New-ManagementRoleAssignment](https://technet.microsoft.com/ru-ru/library/dd335193\(v=exchg.150\)).
 
@@ -437,7 +447,9 @@ Exchange 2013 включает в себя области, которые при
 
 1.  Чтобы найти имена всех назначений ролей группы ролей, используйте следующую команду. При передаче по конвейеру назначений ролей управления в командлет **Format-List** отображается полное имя назначения.
     
-        Get-ManagementRoleAssignment -RoleAssignee <role group name> | Format-List Name
+    ```powershell
+Get-ManagementRoleAssignment -RoleAssignee <role group name> | Format-List Name
+```
 
 2.  Поиск имени назначения роли, которое необходимо изменить. Используйте имя назначения роли на следующем шаге.
 
@@ -490,7 +502,9 @@ Exchange 2013 включает в себя области, которые при
 
 1.  Сохраните группу ролей в переменной с помощью следующей команды.
     
-        $RoleGroup = Get-RoleGroup <role group name>
+    ```powershell
+$RoleGroup = Get-RoleGroup <role group name>
+```
 
 2.  Добавьте делегата в группу ролей, сохраненную в переменной, используя следующую команду.
     
@@ -504,7 +518,9 @@ Exchange 2013 включает в себя области, которые при
 
 4.  Примените новый список делегатов для текущей группы ролей с помощью следующей команды.
     
-        Set-RoleGroup <role group name> -ManagedBy $RoleGroup.ManagedBy
+    ```powershell
+Set-RoleGroup <role group name> -ManagedBy $RoleGroup.ManagedBy
+```
 
 В этом примере в качестве делегата в группу ролей Управление организацией добавляется пользователь Сергей Озеров.
 
@@ -520,7 +536,9 @@ Exchange 2013 включает в себя области, которые при
 
 1.  Сохраните группу ролей в переменной с помощью следующей команды.
     
-        $RoleGroup = Get-RoleGroup <role group name>
+    ```powershell
+$RoleGroup = Get-RoleGroup <role group name>
+```
 
 2.  Удалите делегата из группы ролей, сохраненной в переменной, используя следующую команду.
     
@@ -534,7 +552,9 @@ Exchange 2013 включает в себя области, которые при
 
 4.  Примените новый список делегатов для текущей группы ролей с помощью следующей команды.
     
-        Set-RoleGroup <role group name> -ManagedBy $RoleGroup.ManagedBy
+    ```powershell
+Set-RoleGroup <role group name> -ManagedBy $RoleGroup.ManagedBy
+```
 
 В этом примере в качестве делегата из группы ролей Управление организацией удаляется пользователь Сергей Озеров.
 
@@ -550,7 +570,9 @@ Exchange 2013 включает в себя области, которые при
 
 1.  В консоли Shell выполните следующую команду.
     
-        Get-RoleGroup <role group name> | Format-List ManagedBy
+    ```powershell
+Get-RoleGroup <role group name> | Format-List ManagedBy
+```
 
 2.  Убедитесь, что в состав перечисленных в свойстве *ManagedBy* делегатов входят только делегаты, которые могут управлять группой ролей.
 

@@ -43,11 +43,15 @@ _**Последнее изменение раздела:** 2012-10-03_
 
 Используйте следующий синтаксис для удаления всей записи роли управления из роли.
 
-    Remove-ManagementRoleEntry <management role>\<management role entry>
+```powershell
+Remove-ManagementRoleEntry <management role>\<management role entry>
+```
 
 В этом примере удаляется командлет **Enable-MailUser** из роли Seattle Server Administrators.
 
-    Remove-ManagementRoleEntry "Seattle Server Administrators\Enable-MailUser"
+```powershell
+Remove-ManagementRoleEntry "Seattle Server Administrators\Enable-MailUser"
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Remove-ManagementRoleEntry](https://technet.microsoft.com/ru-ru/library/dd351187\(v=exchg.150\)).
 

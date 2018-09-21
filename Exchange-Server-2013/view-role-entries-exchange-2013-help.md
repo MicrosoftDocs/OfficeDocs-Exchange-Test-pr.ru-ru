@@ -93,11 +93,15 @@ _**Последнее изменение раздела:** 2012-10-03_
 
 Чтобы просмотреть сведения об отдельной записи роли, используйте следующий синтаксис.
 
-    Get-ManagementRoleEntry <role name>\<cmdlet name> | Format-List
+```powershell
+Get-ManagementRoleEntry <role name>\<cmdlet name> | Format-List
+```
 
 В этом примере отображаются сведения о записи роли **Set-Mailbox** для роли `Recipient Administrators`.
 
-    Get-ManagementRoleEntry "Recipient Administrators\Set-Mailbox" | Format-List
+```powershell
+Get-ManagementRoleEntry "Recipient Administrators\Set-Mailbox" | Format-List
+```
 
 Если просматриваемая запись роли содержит слишком много параметров для отображения с помощью командлета **Format-List**, см. подраздел «Просмотр параметров отдельной записи роли» ниже в этом разделе.
 

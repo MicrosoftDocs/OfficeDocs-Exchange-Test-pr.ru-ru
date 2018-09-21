@@ -35,7 +35,9 @@ _**Последнее изменение раздела:** 2015-04-08_
 
   - Параметр *AddressBookEnabled* командлета **Set-AcceptedDomain** позволяет включить или отключить фильтрацию получателей для получателей в обслуживаемом домене. По умолчанию фильтрация получателей включена для уполномоченных доменов и отключена для доменов внутренней и внешней ретрансляции. Чтобы просмотреть состояние параметра *AddressBookEnabled* для обслуживаемых доменов в своей организации, выполните следующую команду.
     
-        Get-AcceptedDomain | Format-List Name,AddressBookEnabled
+    ```powershell
+Get-AcceptedDomain | Format-List Name,AddressBookEnabled
+```
 
   - Если отключить фильтрацию получателей с помощью описанной в данном разделе процедуры, функция фильтрации получателей будет отключена, но соответствующий агент фильтра получателей будет оставаться включенным.
 
@@ -51,11 +53,15 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 Чтобы отключить фильтрацию получателей, выполните следующую команду:
 
-    Set-RecipientFilterConfig -Enabled $false
+```powershell
+Set-RecipientFilterConfig -Enabled $false
+```
 
 Чтобы включить фильтрацию получателей, выполните следующую команду:
 
-    Set-RecipientFilterConfig -Enabled $true
+```powershell
+Set-RecipientFilterConfig -Enabled $true
+```
 
 > [!NOTE]  
 > В случае отключения фильтрации получателей соответствующий агент фильтра получателей будет оставаться включенным. Чтобы выключить агент фильтра получателей, выполните следующую команду. <code>Disable-TransportAgent &quot;Recipient Filter Agent&quot;</code>.
@@ -67,7 +73,9 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 1.  Выполните следующую команду:
     
-        Get-RecipientFilterConfig | Format-List Enabled
+    ```powershell
+Get-RecipientFilterConfig | Format-List Enabled
+```
 
 2.  Убедитесь, что отображается значение, которое вы настроили.
 
@@ -75,11 +83,15 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 Выполните следующую команду:
 
-    Set-RecipientFilterConfig -BlockListEnabled <$true | $false>
+```powershell
+Set-RecipientFilterConfig -BlockListEnabled <$true | $false>
+```
 
 В этом примере демонстрируется, как включить список заблокированных получателей.
 
-    Set-RecipientFilterConfig -BlockListEnabled $true
+```powershell
+Set-RecipientFilterConfig -BlockListEnabled $true
+```
 
 ## Как проверить, что все получилось?
 
@@ -87,7 +99,9 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 1.  Выполните следующую команду:
     
-        Get-RecipientFilterConfig | Format-List BlockListEnabled
+    ```powershell
+Get-RecipientFilterConfig | Format-List BlockListEnabled
+```
 
 2.  Убедитесь, что отображается значение, которое вы настроили.
 
@@ -95,11 +109,15 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 Чтобы заменить существующие значения, выполните следующую команду:
 
-    Set-RecipientFilterConfig -BlockedRecipients <recipient1,recipient2...>
+```powershell
+Set-RecipientFilterConfig -BlockedRecipients <recipient1,recipient2...>
+```
 
 В этом примере демонстрируется настройка списка заблокированных получателей для valuesmark@contoso.com и kim@contoso.com.
 
-    Set-RecipientFilterConfig -BlockedRecipients mark@contoso.com,kim@contoso.com
+```powershell
+Set-RecipientFilterConfig -BlockedRecipients mark@contoso.com,kim@contoso.com
+```
 
 Чтобы добавить или удалить записи, не изменив существующие значения, выполните следующую команду:
 
@@ -115,7 +133,9 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 1.  Выполните следующую команду:
     
-        Get-RecipientFilterConfig | Format-List BlockedRecipients
+    ```powershell
+Get-RecipientFilterConfig | Format-List BlockedRecipients
+```
 
 2.  Убедитесь, что отображаются значения, которые вы настроили.
 
@@ -123,11 +143,15 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 Выполните следующую команду:
 
-    Set-RecipientFilterConfig -RecipientValidationEnabled <$true | $false>
+```powershell
+Set-RecipientFilterConfig -RecipientValidationEnabled <$true | $false>
+```
 
 Чтобы заблокировать сообщения получателям, не существующим в организации, выполните следующую команду:
 
-    Set-RecipientFilterConfig -RecipientValidationEnabled $true
+```powershell
+Set-RecipientFilterConfig -RecipientValidationEnabled $true
+```
 
 ## Как проверить, что все получилось?
 
@@ -135,7 +159,9 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 1.  Выполните следующую команду:
     
-        Get-RecipientFilterConfig | Format-List RecipientValidationEnabled
+    ```powershell
+Get-RecipientFilterConfig | Format-List RecipientValidationEnabled
+```
 
 2.  Убедитесь, что отображается значение, которое вы настроили.
 

@@ -39,11 +39,15 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 В этом примере отключается ведение журнала голосовой почты и уведомлений о пропущенных вызовах с помощью установки для параметра *VoicemailJournalingEnabled* значения `$false`.
 
-    Set-TransportConfig -VoicemailJournalingEnabled $false
+```powershell
+Set-TransportConfig -VoicemailJournalingEnabled $false
+```
 
 В этом примере включается ведение журнала голосовой почты и уведомлений о пропущенных вызовах с помощью установки значения `$true` для того же параметра.
 
-    Set-TransportConfig -VoicemailJournalingEnabled $true
+```powershell
+Set-TransportConfig -VoicemailJournalingEnabled $true
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Set-TransportConfig](https://technet.microsoft.com/ru-ru/library/bb124151\(v=exchg.150\)).
 

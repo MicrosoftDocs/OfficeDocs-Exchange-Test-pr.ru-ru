@@ -188,7 +188,9 @@ _**Последнее изменение раздела:** 2017-05-10_
     
     Выполните приведенную ниже команду.
     
-        Set-OrganizationConfig -MapiHttpEnabled $true
+    ```powershell
+Set-OrganizationConfig -MapiHttpEnabled $true
+```
 
 ## Проверка подключений MAPI через HTTP
 
@@ -196,7 +198,9 @@ _**Последнее изменение раздела:** 2017-05-10_
 
 В примере ниже проверяется подключение MAPI через HTTP от сервера Exchange с именем ContosoMail.
 
-    Test-OutlookConnectivity -RunFromServerId ContosoMail -ProbeIdentity OutlookMapiHttpSelfTestProbe
+```powershell
+Test-OutlookConnectivity -RunFromServerId ContosoMail -ProbeIdentity OutlookMapiHttpSelfTestProbe
+```
 
 При успешной проверке возвращаются результаты, похожие на приведенный ниже пример.
 

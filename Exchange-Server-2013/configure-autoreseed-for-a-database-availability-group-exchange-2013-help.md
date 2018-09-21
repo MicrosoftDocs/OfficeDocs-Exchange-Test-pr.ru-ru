@@ -49,11 +49,15 @@ _**Последнее изменение раздела:** 2013-04-15_
 
 В этом примере показано, как настроить корневой путь для баз данных.
 
-    Set-DatabaseAvailabilityGroup DAG1 -AutoDagDatabasesRootFolderPath "C:\ExchDbs"
+```powershell
+Set-DatabaseAvailabilityGroup DAG1 -AutoDagDatabasesRootFolderPath "C:\ExchDbs"
+```
 
 В этом примере показано, как настроить корневой путь для томов хранения.
 
-    Set-DatabaseAvailabilityGroup DAG1 -AutoDagVolumesRootFolderPath "C:\ExchVols"
+```powershell
+Set-DatabaseAvailabilityGroup DAG1 -AutoDagVolumesRootFolderPath "C:\ExchVols"
+```
 
 ## Как проверить, что шаг выполнен?
 
@@ -69,7 +73,9 @@ _**Последнее изменение раздела:** 2013-04-15_
 
 В этом примере показано, как настроить этот параметр автоматического повторного заполнения (AutoReseed) для группы обеспечения доступности баз данных, задав 4 базы данных на один том.
 
-    Set-DatabaseAvailabilityGroup DAG1 -AutoDagDatabaseCopiesPerVolume 4
+```powershell
+Set-DatabaseAvailabilityGroup DAG1 -AutoDagDatabaseCopiesPerVolume 4
+```
 
 ## Как проверить, что шаг выполнен?
 
@@ -92,7 +98,9 @@ _**Последнее изменение раздела:** 2013-04-15_
 
 Чтобы проверить, успешно ли настроены корневые каталоги для баз данных и томов, выполните следующую команду.
 
-    Dir C:\
+```powershell
+Dir C:\
+```
 
 Созданные папки должны появиться в списке вывода.
 
@@ -112,7 +120,9 @@ _**Последнее изменение раздела:** 2013-04-15_
 
 Чтобы проверить, успешно ли подключены тома к папкам, выполните следующую команду.
 
-    Dir C:\
+```powershell
+Dir C:\
+```
 
 Должен быть выведен список подключенных томов.
 
@@ -121,23 +131,33 @@ _**Последнее изменение раздела:** 2013-04-15_
 Далее создайте каталоги баз данных в корневом пути C:\\ExchangeDatabases. В этом примере показано, как создать каталоги для конфигурации хранилища с 4-мя базами данных в каждом томе.
 
 ```
-    md c:\ExchangeDatabases\db001
+```powershell
+md c:\ExchangeDatabases\db001
 ```
 ```
-    md c:\ExchangeDatabases\db002
+```
+```powershell
+md c:\ExchangeDatabases\db002
 ```
 ```
-    md c:\ExchangeDatabases\db003
+```
+```powershell
+md c:\ExchangeDatabases\db003
 ```
 ```
-    md c:\ExchangeDatabases\db004
+```
+```powershell
+md c:\ExchangeDatabases\db004
+```
 ```
 
 ## Как проверить, что шаг выполнен?
 
 Чтобы проверить, успешно ли подключены папки баз данных, выполните следующую команду.
 
-    Dir C:\ExchangeDatabases
+```powershell
+Dir C:\ExchangeDatabases
+```
 
 Созданные папки должны появиться в списке вывода.
 
@@ -151,7 +171,9 @@ _**Последнее изменение раздела:** 2013-04-15_
 
 Чтобы проверить, успешно ли созданы точки подключения для базы данных, выполните следующую команду.
 
-    Mountvol.exe C:\ExchangeDatabases\db001 /L
+```powershell
+Mountvol.exe C:\ExchangeDatabases\db001 /L
+```
 
 Подключенный том должен появиться в списке точек подключения.
 
@@ -166,28 +188,44 @@ C:\\\< *DatabaseFolderName*\>\\*DatabaseName*\\\<*DatabaseName*\>.log
 В этом примере показано, как создать каталоги для 4 баз данных, которые будут храниться в томе 1.
 
 ```
-    md c:\ExchangeDatabases\db001\db001.db
+```powershell
+md c:\ExchangeDatabases\db001\db001.db
 ```
 ```
-    md c:\ExchangeDatabases\db001\db001.log
+```
+```powershell
+md c:\ExchangeDatabases\db001\db001.log
 ```
 ```
-    md c:\ExchangeDatabases\db002\db002.db
+```
+```powershell
+md c:\ExchangeDatabases\db002\db002.db
 ```
 ```
-    md c:\ExchangeDatabases\db002\db002.log
+```
+```powershell
+md c:\ExchangeDatabases\db002\db002.log
 ```
 ```
-    md c:\ExchangeDatabases\db003\db003.db
+```
+```powershell
+md c:\ExchangeDatabases\db003\db003.db
 ```
 ```
-    md c:\ExchangeDatabases\db003\db003.log
+```
+```powershell
+md c:\ExchangeDatabases\db003\db003.log
 ```
 ```
-    md c:\ExchangeDatabases\db004\db004.db
+```
+```powershell
+md c:\ExchangeDatabases\db004\db004.db
 ```
 ```
-    md c:\ExchangeDatabases\db004\db004.log
+```
+```powershell
+md c:\ExchangeDatabases\db004\db004.log
+```
 ```
 
 Повторите указанные выше команды для баз данных в каждом томе.
@@ -196,7 +234,9 @@ C:\\\< *DatabaseFolderName*\>\\*DatabaseName*\\\<*DatabaseName*\>.log
 
 Чтобы проверить, успешно ли создана структура каталогов баз данных, выполните следующую команду.
 
-    Dir C:\ExchangeDatabases /s
+```powershell
+Dir C:\ExchangeDatabases /s
+```
 
 Созданные папки должны появиться в списке вывода.
 
@@ -225,8 +265,12 @@ C:\\\< *DatabaseFolderName*\>\\*DatabaseName*\\\<*DatabaseName*\>.log
 2.  Чтобы проверить, правильно ли настроена структура каталогов, выполните следующую команду (ниже указаны пути по умолчанию; при необходимости замените их на другие).
     
     ```
-    Dir c:\ExchangeDatabases /s
+```powershell
+Dir C:\ExchangeDatabases /s
+```
     ```
     ```
-    Dir c:\ExchangeVolumes /s
+```powershell
+Dir c:\ExchangeVolumes /s
+```
     ```

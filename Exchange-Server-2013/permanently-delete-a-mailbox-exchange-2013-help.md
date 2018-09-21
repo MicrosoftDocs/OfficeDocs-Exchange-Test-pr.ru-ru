@@ -55,7 +55,9 @@ _**Последнее изменение раздела:** 2012-11-16_
 
 Выполните следующую команду, чтобы окончательно удалить активный почтовый ящик и соответствующую учетную запись пользователя в Active Directory.
 
-    Remove-Mailbox -Identity <identity> -Permanent $true
+```powershell
+Remove-Mailbox -Identity <identity> -Permanent $true
+```
 
 > [!NOTE]  
 > Если не включить параметр <em>Permanent</em>, удаленный почтовый ящик остается в базе данных почтовых ящиков на 30 дней по умолчанию, прежде чем будет окончательно удален.
@@ -73,7 +75,9 @@ _**Последнее изменение раздела:** 2012-11-16_
 
 3.  Выполните следующую команду, чтобы убедиться, что почтовый ящик был успешно удален из базы данных почтовых ящиков Exchange.
     
-        Get-MailboxDatabase | Get-MailboxStatistics | Where { $_.DisplayName -eq "<display name>" }
+    ```powershell
+Get-MailboxDatabase | Get-MailboxStatistics | Where {         Get-MailboxDatabase | Get-MailboxStatistics | Where { $_.DisplayName -eq "<display name>" }.DisplayName -eq "<display name>" }
+```
     
     Если почтовый ящик успешно очищен, команда не даст никаких результатов. Если почтовый ящик не был очищен, команда вернет сведения о почтовом ящике.
 
@@ -103,7 +107,9 @@ _**Последнее изменение раздела:** 2012-11-16_
 
 В этом примере выполняется окончательное удаление обратимо удаленного почтового ящика пользователя Dan Jump из базы данных почтовых ящиков MBD01.
 
-    Remove-StoreMailbox -Database MBD01 -Identity "Dan Jump" -MailboxState SoftDeleted
+```powershell
+Remove-StoreMailbox -Database MBD01 -Identity "Dan Jump" -MailboxState SoftDeleted
+```
 
 В этом примере окончательно удаляются все обратимо удаленные почтовые ящики из базы данных почтовых ящиков MBD01.
 
@@ -115,7 +121,9 @@ _**Последнее изменение раздела:** 2012-11-16_
 
 Чтобы убедиться в том, что отключенный почтовый ящик окончательно удален и успешно очищен из базы данных почтовых ящиков Exchange, выполните следующую команду.
 
-    Get-MailboxDatabase | Get-MailboxStatistics | Where { $_.DisplayName -eq "<display name>" }
+```powershell
+Get-MailboxDatabase | Get-MailboxStatistics | Where {     Get-MailboxDatabase | Get-MailboxStatistics | Where { $_.DisplayName -eq "<display name>" }.DisplayName -eq "<display name>" }
+```
 
 Если почтовый ящик успешно очищен, команда не даст никаких результатов. Если почтовый ящик не был очищен, команда вернет сведения о почтовом ящике.
 

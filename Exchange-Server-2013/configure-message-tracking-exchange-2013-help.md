@@ -79,11 +79,15 @@ _**Последнее изменение раздела:** 2013-02-18_
 
 В этом примере показано, как выключить ведение журнала темы сообщений в журнале отслеживания сообщений на сервере почтовых ящиков с именем Mailbox01.
 
-    Set-TransportService Mailbox01 -MessageTrackingLogSubjectLoggingEnabled $false
+```powershell
+Set-TransportService Mailbox01 -MessageTrackingLogSubjectLoggingEnabled $false
+```
 
 В этом примере показано, как выключить отслеживание сообщений на сервере почтовых ящиков с именем Mailbox01.
 
-    Set-TransportService Mailbox01 -MessageTrackingLogEnabled $false
+```powershell
+Set-TransportService Mailbox01 -MessageTrackingLogEnabled $false
+```
 
 ## Как проверить, что все получилось?
 

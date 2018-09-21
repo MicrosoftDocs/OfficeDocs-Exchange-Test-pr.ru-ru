@@ -83,7 +83,9 @@ _**Последнее изменение раздела:** 2016-11-16_
 
 Чтобы проверить, успешно ли создан запрос на перемещение общедоступной папки, выполните следующую команду:
 
-    Get-PublicFolderMoveRequest | Format-List Status
+```powershell
+Get-PublicFolderMoveRequest | Format-List Status
+```
 
 Состояние `Completed` означает, что запрос на перемещение успешно выполнен.
 

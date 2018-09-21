@@ -125,7 +125,9 @@ _**Последнее изменение раздела:** 2013-01-28_
     > [!IMPORTANT]  
     > Если управление доступом на уровне пользователей (UAC) включено, необходимо выполнить <code>Setup.exe</code> из командной строки с повышенными полномочиями.
     
-        Setup.exe /Role:ManagementTools /IAcceptExchangeServerLicenseTerms
+    ```powershell
+Setup.exe /Role:ManagementTools /IAcceptExchangeServerLicenseTerms
+```
 
 Дополнительные сведения см. в разделе [Установка Exchange 2013 в автоматическом режиме](install-exchange-2013-using-unattended-mode-exchange-2013-help.md).
 

@@ -71,7 +71,9 @@ _**Последнее изменение раздела:** 2012-11-01_
 
 В данном примере выполняется настройка копии базы данных почтовых ящиков со значением приоритета активации 3.
 
-    Set-MailboxDatabaseCopy -Identity DB3\EX3 -ActivationPreference 3
+```powershell
+Set-MailboxDatabaseCopy -Identity DB3\EX3 -ActivationPreference 3
+```
 
 В данном примере выполняется настройка копии базы данных с именем DB1, которая размещена на сервере Server1 с временем задержки преобразования со значением, равным 1 день, и значением приоритета активации — 2.
 
@@ -85,7 +87,9 @@ _**Последнее изменение раздела:** 2012-11-01_
 
   - Для отображения сведений о настройке копии базы данных запустите в консоли следующую команду:
     
-        Get-MailboxDatabaseCopyStatus <DatabaseCopyName> | Format-List
+    ```powershell
+Get-MailboxDatabaseCopyStatus <DatabaseCopyName> | Format-List
+```
 
 ## Дополнительные сведения
 

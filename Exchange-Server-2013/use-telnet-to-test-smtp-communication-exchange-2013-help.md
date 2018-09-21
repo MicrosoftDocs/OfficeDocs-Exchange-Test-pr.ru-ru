@@ -117,7 +117,9 @@ _**Последнее изменение раздела:** 2016-12-09_
 
 8.  Введите **DATA** и нажмите клавишу ВВОД. Появится отклик, подобный приведенному ниже:
     
-        354 Start mail input; end with <CLRF>.<CLRF>
+    ```powershell
+354 Start mail input; end with <CLRF>.<CLRF>
+```
 
 9.  Введите **Subject: Test from Contoso** и нажмите клавишу ВВОД.
 
@@ -127,11 +129,15 @@ _**Последнее изменение раздела:** 2016-12-09_
 
 12. Нажмите клавишу ВВОД, введите точку ( **.** ) и нажмите клавишу ВВОД. Появится отклик, подобный приведенному ниже:
     
-        250 2.6.0 <GUID> Queued mail for delivery
+    ```powershell
+250 2.6.0 <GUID> Queued mail for delivery
+```
 
 13. Чтобы отключиться от конечного сервера SMTP, введите **QUIT** и нажмите клавишу ВВОД. Появится отклик, подобный приведенному ниже:
     
-        221 2.0.0 Service closing transmission channel
+    ```powershell
+221 2.0.0 Service closing transmission channel
+```
 
 14. Чтобы закрыть сеанс Telnet, введите **quit** и нажмите клавишу ВВОД.
 

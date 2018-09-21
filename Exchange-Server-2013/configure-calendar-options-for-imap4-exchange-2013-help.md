@@ -37,7 +37,9 @@ _**Последнее изменение раздела:** 2012-11-27_
 
 показано, как включить для пользователей IMAP4 использование стандарта iCalendar для обмена данными календаря.
 
-    Set-ImapSettings -Identity CAS01 -CalendarItemRetrievalOption iCalendar
+```powershell
+Set-ImapSettings -Identity CAS01 -CalendarItemRetrievalOption iCalendar
+```
 
 В этом примере показано, как включить для пользователей IMAP4 доступ к внутренним данным календаря на внутреннем сервере.
 
@@ -45,11 +47,15 @@ _**Последнее изменение раздела:** 2012-11-27_
 
 В этом примере показано, как включить для пользователей IMAP4 доступ к данным календаря на внешнем сервере через Интернет.
 
-    Set-ImapSettings -CalendarItemRetrievalOption InternetUrl
+```powershell
+Set-ImapSettings -CalendarItemRetrievalOption InternetUrl
+```
 
 В этом примере показано, как включить для пользователей IMAP4 доступ к данным календаря по прямому URL-адресу Outlook Web App. Если используется `Custom`, с помощью параметра *OWAServerUrl* необходимо указать URL-адрес Outlook Web App.
 
-    Set-Imap4Settings -CalendarItemRetrievalOption Custom -OwaServerUrl "https://OwaServer01"
+```powershell
+Set-Imap4Settings -CalendarItemRetrievalOption Custom -OwaServerUrl "https://OwaServer01"
+```
 
 После настройки параметров календаря необходимо перезапустить службы IMAP4. Дополнительные сведения о перезапуске служб IMAP4 см. в разделе [Запуск и остановка служб IMAP4](start-and-stop-the-imap4-services-exchange-2013-help.md).
 
@@ -61,7 +67,9 @@ _**Последнее изменение раздела:** 2012-11-27_
 
 Выполните в командной консоли следующую команду.
 
-    Get-ImapSettings | format-list
+```powershell
+Get-ImapSettings | format-list
+```
 
 Убедитесь, что параметры календаря указаны правильно.
 

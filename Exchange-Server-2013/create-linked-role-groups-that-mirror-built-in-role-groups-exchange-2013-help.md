@@ -65,7 +65,9 @@ _**Последнее изменение раздела:** 2012-10-03_
 
 2.  Сохраните учетные данные внешнего леса Active Directory в переменной.
     
-        $ForeignCredential = Get-Credential
+    ```powershell
+$ForeignCredential = Get-Credential
+```
 
 3.  Сохраните все роли, назначенные группе ролей Управление организацией в переменной.
     
@@ -91,7 +93,9 @@ _**Последнее изменение раздела:** 2012-10-03_
 
 В этом примере группа ролей Управление организацией создается заново как связанная группа ролей с помощью значений, полученных в предыдущем шаге.
 
-    $ForeignCredential = Get-Credential
+```powershell
+$ForeignCredential = Get-Credential
+```
     $OrgMgmt  = Get-RoleGroup "Organization Management"
     New-RoleGroup "Organization Management - Linked" -LinkedForeignGroup "Organization Management Administrators" -LinkedDomainController DC01.users.contoso.com -LinkedCredential $ForeignCredential -Roles $OrgMgmt.Roles
     Get-ManagementRoleAssignment -RoleAssignee "Organization Management - Linked" -Role My* | Remove-ManagementRoleAssignment
@@ -105,11 +109,15 @@ _**Последнее изменение раздела:** 2012-10-03_
 
 2.  Сохраните учетные данные внешнего леса Active Directory в переменной. Это необходимо сделать только один раз.
     
-        $ForeignCredential = Get-Credential
+    ```powershell
+$ForeignCredential = Get-Credential
+```
 
 3.  Получите список групп ролей, используя следующий командлет.
     
-        Get-RoleGroup
+    ```powershell
+Get-RoleGroup
+```
 
 4.  Для каждой группы ролей, отличной от группы ролей Управление организацией, выполните следующие действия.
     
@@ -130,8 +138,12 @@ _**Последнее изменение раздела:** 2012-10-03_
 
 В этом примере Управление получателями и группы ролей управления сервером создаются заново как связанные группы ролей с помощью значений, полученных в предыдущем шаге.
 
-    $ForeignCredential = Get-Credential
-    Get-RoleGroup
+```powershell
+$ForeignCredential = Get-Credential
+```
+```powershell
+Get-RoleGroup
+```
     $RoleGroup = Get-RoleGroup "Recipient Management"
     New-RoleGroup "Recipient Management - Linked" -LinkedForeignGroup "Recipient Management Administrators" -LinkedDomainController DC01.users.contoso.com -LinkedCredential $ForeignCredential -Roles $RoleGroup.Roles
     $RoleGroup = Get-RoleGroup "Server Management"

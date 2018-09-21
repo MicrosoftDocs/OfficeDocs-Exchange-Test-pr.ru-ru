@@ -65,7 +65,9 @@ _**Последнее изменение раздела:** 2015-01-23_
 
 В этом примере задается *FrontendProxyEnabled*, равный `$true`, для соединителя отправки.
 
-    Set-SendConnector "Contoso.com Send Connector" -FrontendProxyEnabled $true
+```powershell
+Set-SendConnector "Contoso.com Send Connector" -FrontendProxyEnabled $true
+```
 
 ## Как проверить, что все получилось?
 

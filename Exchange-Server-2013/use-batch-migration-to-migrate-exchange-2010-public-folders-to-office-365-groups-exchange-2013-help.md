@@ -91,7 +91,9 @@ _**Последнее изменение раздела:** 2018-04-30_
 
 4.  Для клиента Office 365 должна быть включена функция миграции **PAW**. Чтобы проверить, включена ли она, выполните следующую команду в Exchange Online PowerShell:
     
-        Get-MigrationConfig
+    ```powershell
+Get-MigrationConfig
+```
     
     Если в разделе **Features** указано **PAW**, функция включена, и можно переходить к *шагу 3*.
     
@@ -107,7 +109,9 @@ CSV-файл должен содержать следующие столбцы:
 
   - **TargetGroupMailbox**. SMTP-адрес целевой группы в Office 365. Выполните указанную ниже команду, чтобы просмотреть основной SMTP-адрес.
     
-        Get-UnifiedGroup <alias of the group> | Format-Table PrimarySmtpAddress
+    ```powershell
+Get-UnifiedGroup <alias of the group> | Format-Table PrimarySmtpAddress
+```
 
 Пример CSV-файла:
 
@@ -127,15 +131,21 @@ CSV-файл должен содержать следующие столбцы:
     
     1.  Найдите **LegacyExchangeDN** для учетной записи администратора общедоступной папки, введя указанную ниже команду. Обратите внимание, что это тот же пользователь, чьи учетные данные вам понадобятся позже, на шаге 3 этой процедуры.
         
-            Get-Mailbox <PublicFolder_Administrator_Account> | Select-Object LegacyExchangeDN
+        ```powershell
+Get-Mailbox <PublicFolder_Administrator_Account> | Select-Object LegacyExchangeDN
+```
     
     2.  Найдите LegacyExchangeDN любого сервера почтовых ящиков с базой данных общедоступных папок, введя следующую команду:
         
-            Get-ExchangeServer <public folder server> | Select-Object -Expand ExchangeLegacyDN
+        ```powershell
+Get-ExchangeServer <public folder server> | Select-Object -Expand ExchangeLegacyDN
+```
     
     3.  Найдите полное доменное имя узла мобильного Outlook. Это внешнее имя узла. Если имеется несколько экземпляров мобильного Outlook, рекомендуется выбрать либо экземпляр, находящийся ближе всего к конечной точке миграции, либо экземпляр, находящийся ближе всего к репликам общедоступных папок в организации Exchange 2010. С помощью следующей команды можно найти все экземпляры мобильного Outlook.
         
-            Get-OutlookAnywhere | Format-Table Identity, ExternalHostName
+        ```powershell
+Get-OutlookAnywhere | Format-Table Identity, ExternalHostName
+```
 
 2.  В Exchange Online PowerShell используйте информацию с шага 1 для выполнения приведенных ниже команд. Для переменных в этих командах используются значения с шага 1.
     
@@ -146,15 +156,21 @@ CSV-файл должен содержать следующие столбцы:
     
     2.  Используйте значение ExchangeLegacyDN пользователя миграции на сервере Exchange прежней версии, найденное ранее на шаге 1a, и передайте его в переменную `$Source_RemoteMailboxLegacyDN`.
         
-            $Source_RemoteMailboxLegacyDN = "<LegacyExchangeDN from step 1a>"
+        ```powershell
+$Source_RemoteMailboxLegacyDN = "<LegacyExchangeDN from step 1a>"
+```
     
     3.  Используйте значение ExchangeLegacyDN сервера общедоступных папок, найденное ранее на шаге 1b выше, и передайте его в переменную `$Source_RemotePublicFolderServerLegacyDN`.
         
-            $Source_RemotePublicFolderServerLegacyDN = "<LegacyExchangeDN from step 1b>"
+        ```powershell
+$Source_RemotePublicFolderServerLegacyDN = "<LegacyExchangeDN from step 1b>"
+```
     
     4.  Используйте внешнее имя узла мобильного Outlook, возвращенное ранее на шаге 1c, и передайте его в переменную `$Source_OutlookAnywhereExternalHostName`.
         
-            $Source_OutlookAnywhereExternalHostName = "<ExternalHostName from step 1c>"
+        ```powershell
+$Source_OutlookAnywhereExternalHostName = "<ExternalHostName from step 1c>"
+```
 
 3.  В Exchange Online PowerShell выполните следующую команду, чтобы создать конечную точку миграции:
     
@@ -176,7 +192,9 @@ CSV-файл должен содержать следующие столбцы:
 
 5.  Запустите миграцию, выполнив приведенную ниже команду в Exchange Online PowerShell. Обратите внимание, что это необходимо, только если параметр `-AutoStart` не использовался при создании пакета на шаге 4.
     
-        Start-MigrationBatch PublicFolderToGroupMigration
+    ```powershell
+Start-MigrationBatch PublicFolderToGroupMigration
+```
 
 Пакетные миграции необходимо создавать с помощью командлета `New-MigrationBatch` в Exchange Online PowerShell, но просматривать ход миграции и управлять им можно в Центре администрирования Exchange. Ход миграции также можете просматривать с помощью командлетов [Get-MigrationBatch](https://technet.microsoft.com/ru-ru/library/jj219164\(v=exchg.150\)) и [Get-MigrationUser](https://technet.microsoft.com/ru-ru/library/jj218702\(v=exchg.150\)). Командлет `New-MigrationBatch` инициирует пользователя миграции для каждого почтового ящика группы Office 365, и вы можете просматривать состояние этих запросов на странице миграции почтовых ящиков.
 
@@ -236,7 +254,9 @@ CSV-файл должен содержать следующие столбцы:
 
 После того как вы сделаете общедоступные папки доступными только для чтения, вам нужно будет снова выполнить миграцию. Это необходимо для окончательного добавочного копирования данных. Перед повторным запуском миграции вам нужно будет удалить существующий пакет. Это можно сделать с помощью следующей команды:
 
-    Remove-MigrationBatch <name of migration batch>
+```powershell
+Remove-MigrationBatch <name of migration batch>
+```
 
 После этого создайте новый пакет с помощью того же CSV-файла, выполнив приведенную ниже команду. В этой команде:
 
@@ -252,7 +272,9 @@ CSV-файл должен содержать следующие столбцы:
 
 После создания нового пакета запустите миграцию, выполнив приведенную ниже команду в Exchange Online PowerShell. Обратите внимание, что это необходимо, только если параметр `-AutoStart` не использовался в предыдущей команде.
 
-    Start-MigrationBatch PublicFolderToGroupMigration
+```powershell
+Start-MigrationBatch PublicFolderToGroupMigration
+```
 
 После того как пакет получит статус **Завершено**, убедитесь, что все данные были скопированы в группы Office 365. Если вас устраивают группы, вы можете приступить к удалению перенесенных общедоступных папок из среды Exchange 2010.
 

@@ -43,11 +43,15 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 В этом примере показано, как отключить функцию репутации отправителя.
 
-    Set-SenderReputationConfig -Enabled $false
+```powershell
+Set-SenderReputationConfig -Enabled $false
+```
 
 В этом примере показано, как включить функцию репутации отправителя.
 
-    Set-SenderReputationConfig -Enabled $true
+```powershell
+Set-SenderReputationConfig -Enabled $true
+```
 
 ## Как проверить, что все получилось?
 
@@ -55,7 +59,9 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 1.  Убедитесь, что агент анализа протокола установлен и включен, выполнив следующую команду:
     
-        Get-TransportAgent
+    ```powershell
+Get-TransportAgent
+```
 
 2.  Проверьте настроенные значения репутации отправителя, выполнив следующую команду:
     
@@ -67,19 +73,27 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 Чтобы отключить репутацию отправителя, выполните следующую команду:
 
-    Set-SenderReputationConfig -ExternalMailEnabled $false
+```powershell
+Set-SenderReputationConfig -ExternalMailEnabled $false
+```
 
 Чтобы включить репутацию отправителя, выполните следующую команду:
 
-    Set-SenderReputationConfig -ExternalMailEnabled $true
+```powershell
+Set-SenderReputationConfig -ExternalMailEnabled $true
+```
 
 Чтобы отключить репутацию отправителя для внутренних сообщений, выполните следующую команду:
 
-    Set-SenderReputationConfig -InternalMailEnabled $false
+```powershell
+Set-SenderReputationConfig -InternalMailEnabled $false
+```
 
 Чтобы включить репутацию отправителя для внутренних сообщений, выполните следующую команду:
 
-    Set-SenderReputationConfig -InternalMailEnabled $true
+```powershell
+Set-SenderReputationConfig -InternalMailEnabled $true
+```
 
 ## Как проверить, что все получилось?
 
@@ -95,11 +109,15 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 Чтобы настроить свойства репутации отправителя, выполните следующую команду:
 
-    Set-SenderReputationConfig -SrlBlockThreshold <Value> -SenderBlockingPeriod <Hours>
+```powershell
+Set-SenderReputationConfig -SrlBlockThreshold <Value> -SenderBlockingPeriod <Hours>
+```
 
 В этом примере устанавливается значение 6 для порога блокировки уровня репутации отправителя (SRL), и выполняется настройка репутации отправителя для добавления нежелательных отправителей в список заблокированных IP-адресов на 36 часов:
 
-    Set-SenderReputationConfig -SrlBlockThreshold 6 -SenderBlockingPeriod 36
+```powershell
+Set-SenderReputationConfig -SrlBlockThreshold 6 -SenderBlockingPeriod 36
+```
 
 ## Как проверить, что все получилось?
 
@@ -107,7 +125,9 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 1.  Выполните следующую команду:
     
-        Get-SenderReputationConfig
+    ```powershell
+Get-SenderReputationConfig
+```
 
 2.  Убедитесь, что отображаемые значения совпадают с настроенными значениями.
 

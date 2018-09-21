@@ -59,7 +59,9 @@ _**Последнее изменение раздела:** 2014-12-16_
 
 1.  В окне командной строки откройте файл EdgeTransport.exe.config в Блокноте, выполнив следующую команду:
     
-        Notepad %ExchangeInstallPath%Bin\EdgeTransport.exe.config
+    ```powershell
+Notepad %ExchangeInstallPath%Bin\EdgeTransport.exe.config
+```
 
 2.  Добавьте один или оба следующих ключа в раздел `<appSettings>`.
     
@@ -79,11 +81,15 @@ _**Последнее изменение раздела:** 2014-12-16_
 
 5.  Чтобы изменить значение параметра *QueueDiagnosticsAggregationInterval* в командной консоли Exchange, используйте следующий синтаксис:
     
-        Set-TransportConfig -QueueDiagnosticsAggregationInterval <hh:mm:ss>
+    ```powershell
+Set-TransportConfig -QueueDiagnosticsAggregationInterval <hh:mm:ss>
+```
     
     Например, чтобы изменить значение на 30 секунд, выполните следующую команду:
     
-        Set-TransportConfig -QueueDiagnosticsAggregationInterval 00:00:30
+    ```powershell
+Set-TransportConfig -QueueDiagnosticsAggregationInterval 00:00:30
+```
 
 ## Как проверить, что все получилось?
 

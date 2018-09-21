@@ -59,7 +59,9 @@ _**Последнее изменение раздела:** 2017-07-26_
     
     Рекомендуется, чтобы все организации Exchange использовали бизнес-экземпляр системы проверки подлинности Azure AD для доверия федерации. Перед настройкой федеративного общего доступа необходимо проверить, какой экземпляр системы проверки подлинности Azure AD используется каждой организацией Exchange для существующих доверий федерации. Чтобы определить экземпляр системы проверки подлинности Azure AD, используемый организацией Exchange для существующего доверия федерации, выполните следующую команду командной консоли.
     
-        Get-FederationInformation -DomainName <hosted Exchange domain namespace>
+    ```powershell
+Get-FederationInformation -DomainName <hosted Exchange domain namespace>
+```
     
     Бизнес-экземпляр возвращает значение `<uri:federation:MicrosoftOnline>` для параметра *TokenIssuerURIs*.
     
@@ -127,11 +129,15 @@ _**Последнее изменение раздела:** 2017-07-26_
 
 4.  Используйте следующий синтаксис для возврата проверки факта владения доменом запись TXT, необходимые для любого домена, который вы настроите для доверия федерации.
     
-        Get-FederatedDomainProof -DomainName <domain>
+    ```powershell
+Get-FederatedDomainProof -DomainName <domain>
+```
     
     В этом примере возвращается проверки факта владения доменом запись TXT, необходимые для основной общий домен contoso.com.
     
-        Get-FederatedDomainProof -DomainName contoso.com
+    ```powershell
+Get-FederatedDomainProof -DomainName contoso.com
+```
     
     **Примечания**.
     
@@ -143,7 +149,9 @@ _**Последнее изменение раздела:** 2017-07-26_
 
 6.  Выполните следующую команду для извлечения метаданных и сертификат из Azure AD.
     
-        Set-FederationTrust -RefreshMetadata -Identity "Azure AD authentication"
+    ```powershell
+Set-FederationTrust -RefreshMetadata -Identity "Azure AD authentication"
+```
 
 7.  Используйте следующий синтаксис для настройки основного общего домена для доверия федерации, созданной на шаге 3. Домен, который указан будет использоваться для настройки идентификатор организации (OrgID) для доверия федерации. Дополнительные сведения о OrgID можно [Федеративный идентификатор организации](federation-exchange-2013-help.md).
     
@@ -155,11 +163,15 @@ _**Последнее изменение раздела:** 2017-07-26_
 
 8.  Чтобы добавить других доменов для доверия федерации, используйте следующий синтаксис:
     
-        Add-FederatedDomain -DomainName <AdditionalDomain>
+    ```powershell
+Add-FederatedDomain -DomainName <AdditionalDomain>
+```
     
     В этом примере показано добавление дочернего домена sales.contoso.com в доверие федерации так как пользователи с адресами электронной почты в домене sales.contoso.com требуют функций федеративного общего доступа.
     
-        Add-FederatedDomain -DomainName sales.contoso.com
+    ```powershell
+Add-FederatedDomain -DomainName sales.contoso.com
+```
     
     Помните, что любой домен или дочерний домен, добавленные в доверии федерации требует проверки факта владения доменом запись TXT
 
@@ -173,11 +185,15 @@ _**Последнее изменение раздела:** 2017-07-26_
 
 1.  Чтобы проверить сведения о доверии федерации, выполните следующую команду командной консоли Exchange.
     
-        Get-FederationTrust | Format-List
+    ```powershell
+Get-FederationTrust | Format-List
+```
 
 2.  Замените *\<PrimarySharedDomain\>* вашего основного общего домена и выполните следующую команду командной консоли, чтобы убедиться, что сведения о федерации можно извлечь из вашей организации.
     
-        Get-FederationInformation -DomainName <PrimarySharedDomain>
+    ```powershell
+Get-FederationInformation -DomainName <PrimarySharedDomain>
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделах [Get-FederationTrust](https://technet.microsoft.com/ru-ru/library/dd351262\(v=exchg.150\)) и [Get-FederationInformation](https://technet.microsoft.com/ru-ru/library/dd351221\(v=exchg.150\)).
 

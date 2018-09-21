@@ -408,7 +408,9 @@ Installing updates on DAG members
 
 В Exchange 2010 во многих сценариях необходима ручная настройка сетей DAG. По умолчанию в Exchange 2013 сети DAG будут настроены автоматически системой. Перед созданием или изменением сетей DAG необходимо сначала включить ручное управление сетью DAG, выполнив следующую команду:
 
-    Set-DatabaseAvailabilityGroup <DAGName> -ManualDagNetworkConfiguration $true
+```powershell
+Set-DatabaseAvailabilityGroup <DAGName> -ManualDagNetworkConfiguration $true
+```
 
 После включения ручной настройки сети DAG можно использовать командлет **New-DatabaseAvailabilityGroupNetwork** в командной консоли для создания сети группы обеспечения доступности баз данных. Дополнительные сведения о создании сети группы обеспечения доступности баз данных см. в разделе [Создание сети группы доступности базы данных](create-a-database-availability-group-network-exchange-2013-help.md).
 
@@ -514,7 +516,9 @@ Installing updates on DAG members
 
 Чтобы завершить настройку Replicationdagnetwork01 в качестве выделенной сети репликации, отключите репликацию для MapiDagNetwork, выполнив следующую команду.
 
-    Set-DatabaseAvailabilityGroupNetwork -Identity DAG1\MapiDagNetwork -ReplicationEnabled:$false
+```powershell
+Set-DatabaseAvailabilityGroupNetwork -Identity DAG1\MapiDagNetwork -ReplicationEnabled:$false
+```
 
 После отключения репликации для MapiDagNetwork служба репликации Microsoft Exchange использует ReplicationDagNetwork01 для непрерывной репликации. Если произойдет сбой ReplicationDagNetwork01, то служба репликации Microsoft Exchange вернется к использованию MapiDagNetwork для непрерывной репликации. Это преднамеренное действие системы для обеспечения высокого уровня доступности.
 
@@ -644,7 +648,9 @@ Installing updates on DAG members
 
 В следующем примере для параметра *AutoDatabaseMountDial* сервера почтовых ящиков устанавливается значение `GoodAvailability`.
 
-    Set-MailboxServer -Identity EX1 -AutoDatabaseMountDial GoodAvailability
+```powershell
+Set-MailboxServer -Identity EX1 -AutoDatabaseMountDial GoodAvailability
+```
 
 ## Политика автоматической активации копии базы данных
 
@@ -660,7 +666,9 @@ Installing updates on DAG members
 
 В следующем примере для параметра *DatabaseCopyAutoActivationPolicy* сервера почтовых ящиков устанавливается значение `Blocked`.
 
-    Set-MailboxServer -Identity EX1 -DatabaseCopyAutoActivationPolicy Blocked
+```powershell
+Set-MailboxServer -Identity EX1 -DatabaseCopyAutoActivationPolicy Blocked
+```
 
 ## Максимальное количество активных баз данных
 
@@ -672,7 +680,9 @@ Installing updates on DAG members
 
 В следующем примере показана настройка сервера почтовых ящиков для поддержки не более 20 активных баз данных.
 
-    Set-MailboxServer -Identity EX1 -MaximumActiveDatabases 20
+```powershell
+Set-MailboxServer -Identity EX1 -MaximumActiveDatabases 20
+```
 
 В начало
 

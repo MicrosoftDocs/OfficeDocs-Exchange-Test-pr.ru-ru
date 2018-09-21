@@ -51,15 +51,21 @@ _**Последнее изменение раздела:** 2016-12-09_
 
 Чтобы настроить внешний адрес администратора почты, введите команду в следующем формате.
 
-    Set-TransportConfig -ExternalPostmasterAddress <postmaster address>
+```powershell
+Set-TransportConfig -ExternalPostmasterAddress <postmaster address>
+```
 
 Например, чтобы задать для внешнего адреса администратора почты значение `postmaster@contoso.com`, выполните следующую команду:
 
-    Set-TransportConfig -ExternalPostmasterAddress postmaster@contoso.com
+```powershell
+Set-TransportConfig -ExternalPostmasterAddress postmaster@contoso.com
+```
 
 Чтобы сбросить внешний адрес администратора почты к значению по умолчанию, выполните следующую команду:
 
-    Set-TransportConfig -ExternalPostmasterAddress $null
+```powershell
+Set-TransportConfig -ExternalPostmasterAddress $null
+```
 
 ## Как проверить, что все получилось?
 
@@ -67,7 +73,9 @@ _**Последнее изменение раздела:** 2016-12-09_
 
 1.  Чтобы проверить значение внешнего адреса администратора почты, выполните следующую команду на сервере почтовых ящиков:
     
-        Get-TransportConfig | Format-List ExternalPostmasterAddress
+    ```powershell
+Get-TransportConfig | Format-List ExternalPostmasterAddress
+```
 
 2.  С внешней учетной записи электронной почты отправьте сообщение в свою организацию Exchange, после чего будет создано уведомление о доставке (DSN). Например, можно настроить правило транспорта на отправку отчета о недоставке в отношении сообщения отправителя, в котором содержатся определенные ключевые слова. Убедитесь, что адрес электронной почты отправителя в уведомлении о доставке соответствует указанному вами значению.
 

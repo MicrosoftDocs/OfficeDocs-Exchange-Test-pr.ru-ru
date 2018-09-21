@@ -118,7 +118,9 @@ _**Последнее изменение раздела:** 2012-11-27_
 
   - В командной консоли Exchange, выполните следующую команду, чтобы отобразить информацию о новый связанный почтовый ящик.
     
-        Get-Mailbox <Name> | FL Name,RecipientTypeDetails,IsLinked,LinkedMasterAccount
+    ```powershell
+Get-Mailbox <Name> | FL Name,RecipientTypeDetails,IsLinked,LinkedMasterAccount
+```
 
 ## Изменить свойства связанного почтового ящика
 
@@ -374,5 +376,7 @@ _**Последнее изменение раздела:** 2012-11-27_
     
     Для вышеприведенного примера где Связанная главная учетная запись была изменена, выполните следующую команду, чтобы проверить новое значение.
     
-        Get-Mailbox "Ayla Kol" | fl LinkedMasterAccount
+    ```powershell
+Get-Mailbox "Ayla Kol" | fl LinkedMasterAccount
+```
 

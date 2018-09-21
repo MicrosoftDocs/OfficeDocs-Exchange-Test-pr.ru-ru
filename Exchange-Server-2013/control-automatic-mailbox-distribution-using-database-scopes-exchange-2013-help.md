@@ -59,7 +59,9 @@ _**Последнее изменение раздела:** 2015-04-07_
 
 Список баз данных используется для определения статического списка тех баз данных почтовых ящиков, которые необходимо включить в область. Для создания области списка баз данных применяется следующая синтаксическая конструкция:
 
-    New-ManagementScope -Name <scope name> -DatabaseList <database 1>, <database 2...>
+```powershell
+New-ManagementScope -Name <scope name> -DatabaseList <database 1>, <database 2...>
+```
 
 В этом примере создается область, которая применяется только к базам данных Database 1, Database 2 и Database 3.
 
@@ -75,7 +77,9 @@ _**Последнее изменение раздела:** 2015-04-07_
 
 Для создания области фильтра баз данных применяется следующая синтаксическая конструкция:
 
-    New-ManagementScope -Name <scope name> -DatabaseRestrictionFilter <filter query>
+```powershell
+New-ManagementScope -Name <scope name> -DatabaseRestrictionFilter <filter query>
+```
 
 В этом примере создается область, включающая в себя все базы данных, содержащие строку ACCT в свойстве **Name**.
 

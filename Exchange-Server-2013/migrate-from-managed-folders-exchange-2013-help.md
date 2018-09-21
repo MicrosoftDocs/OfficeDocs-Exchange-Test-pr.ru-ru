@@ -299,7 +299,9 @@ _**Последнее изменение раздела:** 2015-04-07_
 
 В этом примере из почтового ящика пользователя Ивана Воронкова удаляется политика почтовых ящиков управляемых папок и все управляемые папки. Управляемые папки без сообщений не удаляются.
 
-    Set-Mailbox -Identity Kwok -RemoveManagedFolderAndPolicy RP-Corp
+```powershell
+Set-Mailbox -Identity Kwok -RemoveManagedFolderAndPolicy RP-Corp
+```
 
 ## Действие 4. Применение политики хранения к почтовым ящикам пользователя
 
@@ -311,7 +313,9 @@ _**Последнее изменение раздела:** 2015-04-07_
 
 В этом примере новая созданная политика хранения RP-Corp применяется к пользователю почтового ящика Ивана Воронкова.
 
-    Set-Mailbox -Identity Kwok -RetentionPolicy RP-Corp
+```powershell
+Set-Mailbox -Identity Kwok -RetentionPolicy RP-Corp
+```
 
 Подробные сведения о синтаксисе и параметрах см. в разделе [Set-Mailbox](https://technet.microsoft.com/ru-ru/library/bb123981\(v=exchg.150\)).
 
@@ -329,5 +333,7 @@ _**Последнее изменение раздела:** 2015-04-07_
     
     Эта команда получает теги хранения, примененные к почтовому ящику Анастасии Лебедевой.
     
-        Get-RetentionPolicyTag -Mailbox astewart
+    ```powershell
+Get-RetentionPolicyTag -Mailbox astewart
+```
 

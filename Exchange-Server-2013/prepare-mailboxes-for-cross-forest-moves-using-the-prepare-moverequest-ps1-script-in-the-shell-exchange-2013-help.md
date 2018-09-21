@@ -182,7 +182,9 @@ Microsoft Exchange 2013 поддерживает перемещение почт
 
 1.  Выполните следующую команду.
     
-        $UserCredentials = Get-Credential
+    ```powershell
+$UserCredentials = Get-Credential
+```
 
 2.  Выполните следующую команду, чтобы передать эти учетные данные в параметр *RemoteForestCredential* в сценарии Prepare-MoveRequest.ps1.
     
@@ -206,7 +208,9 @@ Cindy@contoso.com
 
 1.  Выполните следующую команду, чтобы получить учетные данные леса.
     
-        $UserCredentials = Get-Credential
+    ```powershell
+$UserCredentials = Get-Credential
+```
 
 2.  Выполните следующую команду, чтобы передать эти учетные данные в параметр *RemoteForestCredential* в сценарии Prepare-MoveRequest.ps1.
     

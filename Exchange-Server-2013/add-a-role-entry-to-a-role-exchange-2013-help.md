@@ -51,11 +51,15 @@ _**Последнее изменение раздела:** 2012-10-04_
 
 Запись роли можно добавить в роль в соответствии с ее представлением в родительской роли, используя следующую синтаксическую конструкцию.
 
-    Add-ManagementRoleEntry <child role name>\<cmdlet>
+```powershell
+Add-ManagementRoleEntry <child role name>\<cmdlet>
+```
 
 В этом примере командлет **Set-Mailbox** добавляется в роль администраторов получателей.
 
-    Add-ManagementRoleEntry "Recipient Administrators\Set-Mailbox"
+```powershell
+Add-ManagementRoleEntry "Recipient Administrators\Set-Mailbox"
+```
 
 Эта команда проверяет родительскую роль и, если запись роли существует, добавляет ее в дочернюю роль. Если запись роли уже существует в дочерней роли, можно добавить параметр *Overwrite*, чтобы заменить существующую запись роли.
 
@@ -69,7 +73,9 @@ _**Последнее изменение раздела:** 2012-10-04_
 
 В этом примере в роль службы поддержки добавляется командлет **Set-Mailbox**. При этом в запись дочерней роли включаются только параметры *DisplayName* и *EmailAddresses*.
 
-    Add-ManagementRoleEntry "Help Desk\Set-Mailbox" -Parameters DisplayName, EmailAddresses
+```powershell
+Add-ManagementRoleEntry "Help Desk\Set-Mailbox" -Parameters DisplayName, EmailAddresses
+```
 
 Эта команда проверяет родительскую роль и, если запись роли существует, добавляет ее в дочернюю роль. Если запись роли уже существует в дочерней роли, можно добавить параметр *Overwrite*, чтобы заменить существующую запись роли.
 

@@ -91,7 +91,9 @@ _**Последнее изменение раздела:** 2015-01-01_
 
   - В этом примере отключается организационная связь Contoso.
     
-        Set-OrganizationRelationship -Identity Contoso -Enabled $false
+    ```powershell
+Set-OrganizationRelationship -Identity Contoso -Enabled $false
+```
 
   - В этом примере включается доступ к сведениям календаря о доступности для связи организации WoodgroveBank, а для уровня доступа устанавливается значение `AvailabilityOnly` (сведения календаря о доступности только по времени).
     
@@ -103,7 +105,9 @@ _**Последнее изменение раздела:** 2015-01-01_
 
 Чтобы проверить успешность обновления связи, выполните следующую команду консоли и проверьте данные связи организации:
 
-    Get-OrganizationRelationship | format-list
+```powershell
+Get-OrganizationRelationship | format-list
+```
 
 > [!TIP]  
 > Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.

@@ -43,7 +43,9 @@ _**Последнее изменение раздела:** 2017-03-27_
     
     Для Exchange 2007 выполните приведенную ниже команду.
     
-        New-MailboxDatabase -StorageGroup "<PFServerName>\StorageGroup>" -Name <NewMDBforPFs>
+    ```powershell
+New-MailboxDatabase -StorageGroup "<PFServerName>\StorageGroup>" -Name <NewMDBforPFs>
+```
     
     > [!NOTE]  
     > Мы рекомендуем добавлять в эту базу данных единственный почтовый ящик — промежуточный почтовый ящик, который будет создан в действии 3. В этой базе данных почтовых ящиков не нужно добавлять никакие другие почтовые ящики.
@@ -55,12 +57,16 @@ _**Последнее изменение раздела:** 2017-03-27_
         New-Mailbox -Name <PFMailbox1> -Database <NewMDBforPFs> 
 ```
 ```    
-        Set-Mailbox -Identity <PFMailbox1> -HiddenFromAddressListsEnabled $true
+    ```powershell
+Set-Mailbox -Identity <PFMailbox1> -HiddenFromAddressListsEnabled $true
+```
 ```
 
 4.  Для Exchange 2010 включите функцию автообнаружения, чтобы вернуть промежуточные почтовые ящики общедоступных папок. Этот шаг можно пропустить в Exchange 2007.
     
-        Set-MailboxDatabase <NewMDBforPFs> -RPCClientAccessServer <PFServerName_with_CASRole>
+    ```powershell
+Set-MailboxDatabase <NewMDBforPFs> -RPCClientAccessServer <PFServerName_with_CASRole>
+```
 
 5.  Повторите предыдущие действия для каждого сервера общедоступных папок в своей организации.
 

@@ -51,11 +51,15 @@ _**Последнее изменение раздела:** 2012-10-03_
 
 Чтобы просмотреть сведения об определенной области, используйте следующую синтаксическую конструкцию.
 
-    Get-ManagementScope <scope name> | Format-List
+```powershell
+Get-ManagementScope <scope name> | Format-List
+```
 
 В этом примере извлекаются сведения об области "Серверы Сиэтла".
 
-    Get-ManagementScope "Seattle Servers" | Format-List
+```powershell
+Get-ManagementScope "Seattle Servers" | Format-List
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Get-ManagementScope](https://technet.microsoft.com/ru-ru/library/dd298180\(v=exchg.150\)).
 
@@ -63,7 +67,9 @@ _**Последнее изменение раздела:** 2012-10-03_
 
 В этом примере извлекается список областей в данной организации.
 
-    Get-ManagementScope
+```powershell
+Get-ManagementScope
+```
 
 Этот командлет извлекает исключительную и стандартную области. Сведения о возвращении исключительных или стандартных областей см. в подразделе "Список только исключительных или стандартных областей" в этом разделе.
 
@@ -75,7 +81,9 @@ _**Последнее изменение раздела:** 2012-10-03_
 
 В этом примере возвращается список потерянных областей.
 
-    Get-ManagementScope -Orphan
+```powershell
+Get-ManagementScope -Orphan
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Get-ManagementScope](https://technet.microsoft.com/ru-ru/library/dd298180\(v=exchg.150\)).
 
@@ -83,15 +91,21 @@ _**Последнее изменение раздела:** 2012-10-03_
 
 По умолчанию командлет **Get-ManagementScope** возвращает список, в который включены как исключительные, так и стандартные области. Если требуется возвращать области одно типа, только исключительные или только стандартные, используйте следующую синтаксическую конструкцию.
 
-    Get-ManagementScope -Exclusive < $true | $false >
+```powershell
+Get-ManagementScope -Exclusive < $true | $false >
+```
 
 В этом примере возвращаются только исключительные области.
 
-    Get-ManagementScope -Exclusive $true
+```powershell
+Get-ManagementScope -Exclusive $true
+```
 
 В этом примере возвращается список только стандартных областей.
 
-    Get-ManagementScope -Exclusive $false
+```powershell
+Get-ManagementScope -Exclusive $false
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Get-ManagementScope](https://technet.microsoft.com/ru-ru/library/dd298180\(v=exchg.150\)).
 

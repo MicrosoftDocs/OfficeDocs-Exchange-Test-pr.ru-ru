@@ -59,7 +59,9 @@ _**Последнее изменение раздела:** 2012-11-06_
 
 В этом примере копия базы данных почтовых ящиков DB1 удаляется с сервера почтовых ящиков MBX1.
 
-    Remove-MailboxDatabaseCopy -Identity DB1\MBX1 -Confirm:$False
+```powershell
+Remove-MailboxDatabaseCopy -Identity DB1\MBX1 -Confirm:$False
+```
 
 ## Как проверить, что все получилось?
 
@@ -69,7 +71,9 @@ _**Последнее изменение раздела:** 2012-11-06_
 
   - Выполните в командной консоли Exchange следующую команду, чтобы проверить, удалена ли копия:
     
-        Get-MailboxDatabase <DatabaseName> | Format-List DatabaseCopies
+    ```powershell
+Get-MailboxDatabase <DatabaseName> | Format-List DatabaseCopies
+```
     
     Удаленная пассивная копия больше не отображается.
 

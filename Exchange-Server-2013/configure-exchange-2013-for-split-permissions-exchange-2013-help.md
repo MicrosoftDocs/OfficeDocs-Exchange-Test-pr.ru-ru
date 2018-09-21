@@ -93,7 +93,9 @@ Microsoft Exchange Server 2013 предлагает следующие типы 
     
     1.  Отключите разделенные разрешения Active Directory, выполнив следующую команду с установочного носителя Exchange 2013.
         
-            setup.exe /PrepareAD /ActiveDirectorySplitPermissions:false
+        ```powershell
+setup.exe /PrepareAD /ActiveDirectorySplitPermissions:false
+```
     
     2.  Перезапустите серверы Exchange 2013 в организации или подождите, пока маркер доступа к службе каталогов Active Directory не будет реплицирован на все серверы Exchange 2013.
         
@@ -117,11 +119,15 @@ Microsoft Exchange Server 2013 предлагает следующие типы 
     
     3.  Добавьте участников в новую группу ролей с помощью следующей команды.
         
-            Add-RoleGroupMember "Active Directory Administrators" -Member <user to add>
+        ```powershell
+Add-RoleGroupMember "Active Directory Administrators" -Member <user to add>
+```
     
     4.  Замените список делегатов на новую группу ролей, чтобы только участники группы ролей могли добавлять или удалять участников.
         
-            Set-RoleGroup "Active Directory Administrators" -ManagedBy "Active Directory Administrators"
+        ```powershell
+Set-RoleGroup "Active Directory Administrators" -ManagedBy "Active Directory Administrators"
+```
         
         > [!IMPORTANT]  
         > Члены группы ролей Управление организацией, а также те, которым назначена роль управления ролями напрямую или через другую группу ролей либо универсальную группу безопасности, могут пропускать проверку безопасности делегатов. Чтобы запретить администратору Exchange добавлять себя в новую группу ролей, необходимо удалить назначение роли между ролью управления ролями и любым администратором Exchange, а затем назначить ее другой группе.
@@ -132,7 +138,9 @@ Microsoft Exchange Server 2013 предлагает следующие типы 
     
     6.  Удалите все назначения стандартных ролей и ролей делегирования для роли создания получателей почты, не связанные с новой группой ролей или с любыми другими группами, универсальными группами безопасности или прямыми назначениями, которые необходимо сохранить, с помощью следующей команды.
         
-            Remove-ManagementRoleAssignment <Mail Recipient Creation role assignment to remove>
+        ```powershell
+Remove-ManagementRoleAssignment <Mail Recipient Creation role assignment to remove>
+```
         
         > [!NOTE]  
         > Если требуется удалить все назначения обычной роли и роли делегирования для роли создания получателей почты (Mail Recipient Creation) по отношению к уполномоченному роли, не связанному с группой ролей администраторов Active Directory, используйте следующую команду. Параметр <em>WhatIf</em> позволяет увидеть, какие назначения ролей будут удалены. Удалите параметр <em>WhatIf</em> и снова запустите команду, чтобы удалить назначения ролей.
@@ -207,7 +215,9 @@ Microsoft Exchange Server 2013 предлагает следующие типы 
 
 1.  Чтобы включить разделенные разрешения Active Directory, в командной консоли Windows выполните следующую команду с установочного носителя Exchange 2013.
     
-        setup.exe /PrepareAD /ActiveDirectorySplitPermissions:true
+    ```powershell
+setup.exe /PrepareAD /ActiveDirectorySplitPermissions:true
+```
 
 2.  Если в организации имеется несколько доменов Active Directory, необходимо либо запустить `setup.exe /PrepareDomain` в каждом дочернем домене, содержащем серверы или объекты Exchange, либо запустить `setup.exe /PrepareAllDomains` с сайта, где находится сервер Active Directory из каждого домена.
 

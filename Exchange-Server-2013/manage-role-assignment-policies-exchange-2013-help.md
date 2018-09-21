@@ -57,7 +57,9 @@ _**Последнее изменение раздела:** 2012-10-09_
 
 Чтобы создать явную политику назначения, которая может быть вручную назначена почтовым ящикам, используйте следующий синтаксис.
 
-    New-RoleAssignmentPolicy <assignment policy name> -Roles <roles to assign>
+```powershell
+New-RoleAssignmentPolicy <assignment policy name> -Roles <roles to assign>
+```
 
 В этом примере создается явная политика назначения Limited Mailbox Configuration, а затем ей назначаются роли `MyBaseOptions`, `MyAddressInformation` и `MyDisplayName`.
 
@@ -69,7 +71,9 @@ _**Последнее изменение раздела:** 2012-10-09_
 
 Чтобы создать политику назначения по умолчанию для новых ящиков, используйте следующий синтаксис.
 
-    New-RoleAssignmentPolicy <assignment policy name> -Roles <roles to assign> -IsDefault
+```powershell
+New-RoleAssignmentPolicy <assignment policy name> -Roles <roles to assign> -IsDefault
+```
 
 В этом примере создается политика назначения по умолчанию Limited Mailbox Configuration, а затем ей назначаются роли `MyBaseOptions`, `MyAddressInformation` и `MyDisplayName`.
 
@@ -99,11 +103,15 @@ _**Последнее изменение раздела:** 2012-10-09_
 
 Чтобы удалить политику назначения, используйте следующий синтаксис.
 
-    Remove-RoleAssignmentPolicy <role assignment policy>
+```powershell
+Remove-RoleAssignmentPolicy <role assignment policy>
+```
 
 В данном примере удаляется политика назначения New York Temporary Users.
 
-    Remove-RoleAssignmentPolicy "New York Temporary Users"
+```powershell
+Remove-RoleAssignmentPolicy "New York Temporary Users"
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Remove-RoleAssignmentPolicy](https://technet.microsoft.com/ru-ru/library/dd638190\(v=exchg.150\)).
 
@@ -131,15 +139,21 @@ _**Последнее изменение раздела:** 2012-10-09_
 
 Чтобы получить список всех политик назначений в организации, используйте следующую команду.
 
-    Get-RoleAssignmentPolicy
+```powershell
+Get-RoleAssignmentPolicy
+```
 
 Чтобы получить список с определенными свойствами для всех политик назначений в организации, можно передать конвейерным образом результаты в командлет **Format-Table** и указать свойства, которые будут включены в список результатов. Используйте следующий синтаксис.
 
-    Get-RoleAssignmentPolicy | Format-Table <property 1>, <property 2...>
+```powershell
+Get-RoleAssignmentPolicy | Format-Table <property 1>, <property 2...>
+```
 
 В этом примере показано возвращение списка всех политик назначений в организации и включение таких свойств, как **Name** и **IsDefault**.
 
-    Get-RoleAssignmentPolicy | Format-Table Name, IsDefault
+```powershell
+Get-RoleAssignmentPolicy | Format-Table Name, IsDefault
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделах [Get-Mailbox](https://technet.microsoft.com/ru-ru/library/bb123685\(v=exchg.150\)) или [Get-RoleAssignmentPolicy](https://technet.microsoft.com/ru-ru/library/dd638195\(v=exchg.150\)).
 
@@ -155,11 +169,15 @@ _**Последнее изменение раздела:** 2012-10-09_
 
 Чтобы просмотреть сведения об определенной политике назначения, используйте следующую синтаксическую конструкцию.
 
-    Get-RoleAssignmentPolicy <assignment policy name> | Format-List
+```powershell
+Get-RoleAssignmentPolicy <assignment policy name> | Format-List
+```
 
 В этом примере показан просмотр сведений о политике назначения «Пользователи Редмонда» — нет текстовых сообщений.
 
-    Get-RoleAssignmentPolicy "Redmond Users - no Text Messaging" | Format-List
+```powershell
+Get-RoleAssignmentPolicy "Redmond Users - no Text Messaging" | Format-List
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделах [Get-Mailbox](https://technet.microsoft.com/ru-ru/library/bb123685\(v=exchg.150\)) или [Get-RoleAssignmentPolicy](https://technet.microsoft.com/ru-ru/library/dd638195\(v=exchg.150\)).
 
@@ -175,7 +193,9 @@ _**Последнее изменение раздела:** 2012-10-09_
 
 В этом примере возвращается политика назначения по умолчанию.
 
-    Get-RoleAssignmentPolicy | Where { $_.IsDefault -eq $True }
+```powershell
+Get-RoleAssignmentPolicy | Where {     Get-RoleAssignmentPolicy | Where { $_.IsDefault -eq $True }.IsDefault -eq $True }
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделах [Get-Mailbox](https://technet.microsoft.com/ru-ru/library/bb123685\(v=exchg.150\)) или [Get-RoleAssignmentPolicy](https://technet.microsoft.com/ru-ru/library/dd638195\(v=exchg.150\)).
 
@@ -191,11 +211,15 @@ _**Последнее изменение раздела:** 2012-10-09_
 
 Используйте следующий синтаксис.
 
-    Get-Mailbox | Where { $_.RoleAssignmentPolicy -Eq "<role assignment policy>" }
+```powershell
+Get-Mailbox | Where {     Get-Mailbox | Where { $_.RoleAssignmentPolicy -Eq "<role assignment policy>" }.RoleAssignmentPolicy -Eq "<role assignment policy>" }
+```
 
 В этом примере выполняется поиск всех почтовых ящиков, для которых назначена политика конечных пользователей Ванкувера.
 
-    Get-Mailbox | Where { $_.RoleAssignmentPolicy -Eq "Vancouver End Users" }
+```powershell
+Get-Mailbox | Where {     Get-Mailbox | Where { $_.RoleAssignmentPolicy -Eq "Vancouver End Users" }.RoleAssignmentPolicy -Eq "Vancouver End Users" }
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделах [Get-Mailbox](https://technet.microsoft.com/ru-ru/library/bb123685\(v=exchg.150\)) или [Get-RoleAssignmentPolicy](https://technet.microsoft.com/ru-ru/library/dd638195\(v=exchg.150\)).
 
@@ -211,11 +235,15 @@ _**Последнее изменение раздела:** 2012-10-09_
 
 Чтобы изменить политику назначения по умолчанию, используйте следующий синтаксис.
 
-    Set-RoleAssignmentPolicy <assignment policy name> -IsDefault
+```powershell
+Set-RoleAssignmentPolicy <assignment policy name> -IsDefault
+```
 
 В этом примере в качестве политики назначения по умолчанию задается политика «Пользователи Ванкувера».
 
-    Set-RoleAssignmentPolicy "Vancouver End Users" -IsDefault
+```powershell
+Set-RoleAssignmentPolicy "Vancouver End Users" -IsDefault
+```
 
 > [!IMPORTANT]  
 > Новым почтовым ящикам назначается политика назначения по умолчанию даже в том случае, если политика не назначена ролям управления. Назначенные политики назначения почтовых ящиков без назначенных ролей управления не обеспечивают доступ к функциям конфигурации почтового ящика в Microsoft Outlook Web App.

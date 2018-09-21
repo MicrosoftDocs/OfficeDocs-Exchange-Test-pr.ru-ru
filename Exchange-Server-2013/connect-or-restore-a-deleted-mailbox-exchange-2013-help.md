@@ -95,7 +95,9 @@ _**Последнее изменение раздела:** 2015-05-04_
 
 В данном примере подключается почтовый ящик пользователя. Параметр *Identity* задает отображаемое имя удаленного почтового ящика в базе данных почтовых ящиков с именем MBXDB01. В параметре *User* указывается учетная запись пользователя в Active Directory, к которой подключается почтовый ящик.
 
-    Connect-Mailbox -Identity "Paul Cannon" -Database MBXDB01 -User "Robin Wood" -Alias robinw
+```powershell
+Connect-Mailbox -Identity "Paul Cannon" -Database MBXDB01 -User "Robin Wood" -Alias robinw
+```
 
 > [!NOTE]  
 > К тому же, можно использовать значения свойств <code>LegacyDN</code> или <code>MailboxGuid</code> для идентификации удаленного почтового ящика.
@@ -133,7 +135,9 @@ _**Последнее изменение раздела:** 2015-05-04_
 
   - В консоли Shell выполните следующую команду:
     
-        Get-User <identity>
+    ```powershell
+Get-User <identity>
+```
     
     Значение **UserMailbox** свойства *RecipientType* указывает, что учетная запись и почтовый ящик пользователя связаны. Для проверки того, что почтовый ящик подключен, можно запустить командлет **Get-Mailbox \<identity\>**.
 
@@ -171,7 +175,9 @@ _**Последнее изменение раздела:** 2015-05-04_
 
 1.  Получите лес Active Directory и полное доменное имя контроллера домена Active Directory, выполнив следующий командлет:
     
-        Get-OrganizationConfig | fl OriginatingServer
+    ```powershell
+Get-OrganizationConfig | fl OriginatingServer
+```
 
 2.  Используя данные, полученные на шаге 1, выполните в контейнере удаленных объектов в Active Directory поиск идентификатора GUID почтового ящика общих папок и идентификатора GUID или имени базы данных почтовых ящиков, в которой хранился почтовый ящик.
     

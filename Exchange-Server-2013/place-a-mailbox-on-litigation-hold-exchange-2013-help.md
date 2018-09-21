@@ -69,7 +69,9 @@ _**Последнее изменение раздела:** 2016-10-18_
 
 В этом примере к почтовому ящику bsuneja@contoso.com применяется хранение для судебного разбирательства. Элементы в почтовом ящике хранятся в течение неопределенного времени или до отмены хранения.
 
-    Set-Mailbox bsuneja@contoso.com -LitigationHoldEnabled $true
+```powershell
+Set-Mailbox bsuneja@contoso.com -LitigationHoldEnabled $true
+```
 
 > [!NOTE]  
 > Если к почтовому ящику применяется хранение для судебного разбирательства в течение неопределенного времени (без указания длительности), для свойства почтового ящика <em>LitigationHoldDuration</em> задается значение <code>Unlimited</code>.
@@ -79,7 +81,9 @@ _**Последнее изменение раздела:** 2016-10-18_
 
 В этом примере к почтовому ящику bsuneja@contoso.com применяется хранение для судебного разбирательства, а элементы сохраняются в течение 2555 дней (приблизительно 7 лет).
 
-    Set-Mailbox bsuneja@contoso.com -LitigationHoldEnabled $true -LitigationHoldDuration 2555
+```powershell
+Set-Mailbox bsuneja@contoso.com -LitigationHoldEnabled $true -LitigationHoldDuration 2555
+```
 
 ## Использование командной консоли для перевода всех почтовых ящиков в режим хранения для судебного разбирательства в течение указанного времени
 
@@ -99,7 +103,9 @@ _**Последнее изменение раздела:** 2016-10-18_
 
 В этом примере с почтового ящика bsuneja@contoso.com снимается функция хранения для судебного разбирательства.
 
-    Set-Mailbox bsuneja@contoso.com -LitigationHoldEnabled $false
+```powershell
+Set-Mailbox bsuneja@contoso.com -LitigationHoldEnabled $false
+```
 
 В начало
 
@@ -149,7 +155,9 @@ _**Последнее изменение раздела:** 2016-10-18_
         Get-Mailbox -RecipientTypeDetails UserMailbox -ResultSize unlimited -Filter 'CustomAttribute15 -eq "OneYearLitigationHold"'
 ```
 ```    
-        Get-Recipient -RecipientTypeDetails UserMailbox -ResultSize unlimited -Filter 'Department -eq "HR"'
+    ```powershell
+Get-Recipient -RecipientTypeDetails UserMailbox -ResultSize unlimited -Filter 'Department -eq "HR"'
+```
 ```    
 ```
      Get-Recipient -RecipientTypeDetails UserMailbox -ResultSize unlimited -Filter 'PostalCode -eq "98052"'
@@ -158,7 +166,9 @@ _**Последнее изменение раздела:** 2016-10-18_
         Get-Recipient -RecipientTypeDetails UserMailbox -ResultSize unlimited -Filter 'StateOrProvince -eq "WA"'
 ```
 ```    
-        Get-Mailbox -ResultSize Unlimited -Filter {RecipientTypeDetails -ne "DiscoveryMailbox"}
+    ```powershell
+Get-Mailbox -ResultSize Unlimited -Filter {RecipientTypeDetails -ne "DiscoveryMailbox"}
+```
 ```    
  Вы можете использовать в фильтре другие свойства почтовых ящиков пользователей, чтобы включить или исключить почтовые ящики. Дополнительные сведения см. в статье [Фильтруемые свойства для параметра -Filter](https://technet.microsoft.com/ru-ru/library/bb738155\(v=exchg.150\)).
 

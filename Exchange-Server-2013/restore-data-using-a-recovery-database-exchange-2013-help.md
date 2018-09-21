@@ -41,11 +41,15 @@ _**Последнее изменение раздела:** 2014-10-01_
 
 2.  С помощью программы Eseutil переведите эту базу данных в состояние чистого отключения. В следующем примере EXX — это префикс создания журнала для базы данных (например, E00, E01, E02 и т. д.).
     
-        Eseutil /R EXX /l <RDBLogFilePath> /d <RDBEdbFolder>
+    ```powershell
+Eseutil /R EXX /l <RDBLogFilePath> /d <RDBEdbFolder>
+```
     
     В следующем примере показан префикс создания журнала E01 и путь базы данных восстановления и файла журнала E:\\Databases\\RDB1:
     
-        Eseutil /R E01 /l E:\Databases\RDB1 /d E:\Databases\RDB1
+    ```powershell
+Eseutil /R E01 /l E:\Databases\RDB1 /d E:\Databases\RDB1
+```
 
 3.  Создание базы данных восстановления Задайте для базы данных восстановления уникальное имя, но в параметре EdbFilePath введите имя и путь файла базы данных, а расположение восстановленных файлов журнала укажите в параметре LogFolderPath.
     
@@ -57,15 +61,21 @@ _**Последнее изменение раздела:** 2014-10-01_
 
 4.  Перезапустите службу банка данных Microsoft Exchange:
     
-        Restart-Service MSExchangeIS
+    ```powershell
+Restart-Service MSExchangeIS
+```
 
 5.  Подключите базу данных:
     
-        Mount-database <RDBName>
+    ```powershell
+Mount-database <RDBName>
+```
 
 6.  Убедитесь, что подключенная база данных содержит почтовые ящики, которые вы хотите восстановить:
     
-        Get-MailboxStatistics -Database <RDBName> | ft -auto
+    ```powershell
+Get-MailboxStatistics -Database <RDBName> | ft -auto
+```
 
 7.  С помощью командлета New-MailboxRestoreRequest восстановите почтовый ящик или элементы из базы данных восстановления в производственный почтовый ящик.
     
@@ -81,7 +91,9 @@ _**Последнее изменение раздела:** 2014-10-01_
     
     Когда состояние восстановления изменится на "Завершено", уделите запрос, используя командлет [Remove-MailboxRestoreRequest](https://technet.microsoft.com/ru-ru/library/ff829910\(v=exchg.150\)). Например:
     
-        Get-MailboxRestoreRequest -Status Completed | Remove-MailboxRestoreRequest
+    ```powershell
+Get-MailboxRestoreRequest -Status Completed | Remove-MailboxRestoreRequest
+```
 
 ## Как проверить, что все получилось?
 

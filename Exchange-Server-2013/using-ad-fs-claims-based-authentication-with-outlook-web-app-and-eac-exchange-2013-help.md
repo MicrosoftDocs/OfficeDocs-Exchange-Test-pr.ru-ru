@@ -257,7 +257,9 @@ AD FS в Windows Server 2012 R2 обеспечивают упрощенную, �
 Следующие команды PowerShell Windows сделать то же самое предыдущие действия.
 
 ```
-    Import-Module ADFS
+```powershell
+Import-Module ADFS
+```
 ```
 ```
     Install-AdfsFarm -CertificateThumbprint 0E0C205D252002D535F6D32026B6AB074FB840E7 -FederationServiceDisplayName "Contoso Corporation" -FederationServiceName adfs.contoso.com -GroupServiceAccountIdentifier "contoso\FSgmsa`$"
@@ -409,7 +411,9 @@ EAC использует виртуальный каталог ECP. Вы мож�
 
 Указанный ниже командлет Windows PowerShell выполняет те же действия, что описаны выше.
 
-    Install-WindowsFeature Web-Application-Proxy -IncludeManagementTools
+```powershell
+Install-WindowsFeature Web-Application-Proxy -IncludeManagementTools
+```
 
 ## Действие 5. Настройка службы роли "Прокси-служба веб-приложения" (необязательно)
 
@@ -534,7 +538,9 @@ EAC использует виртуальный каталог ECP. Вы мож�
 
   - Использование Windows PowerShell.
     
-        Restart-Service W3SVC,WAS -noforce
+    ```powershell
+Restart-Service W3SVC,WAS -noforce
+```
 
   - Использование командной строки. Нажмите кнопку **Пуск**, выберите команду **Выполнить**, введите `IISReset /noforce` и нажмите кнопку **ОК**.
 

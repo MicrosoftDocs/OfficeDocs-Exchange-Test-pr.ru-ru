@@ -43,7 +43,9 @@ _**Последнее изменение раздела:** 2014-10-01_
 
 В этом примере выполняется настройка помощника для управляемых папок на обработку всех почтовых ящиков за один день.
 
-    Set-MailboxServer MyMailboxServer -ManagedFolderWorkCycle 1
+```powershell
+Set-MailboxServer MyMailboxServer -ManagedFolderWorkCycle 1
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в статье [Set-MailboxServer](https://technet.microsoft.com/ru-ru/library/aa998651\(v=exchg.150\)).
 
@@ -59,7 +61,9 @@ _**Последнее изменение раздела:** 2014-10-01_
 
 В этом примере помощник для управляемых папок активируется для немедленной обработки почтового ящика пользователя Morris Cornejo.
 
-    Start-ManagedFolderAssistant -Identity morris.cornejo@contoso.com
+```powershell
+Start-ManagedFolderAssistant -Identity morris.cornejo@contoso.com
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в статье [Start-ManagedFolderAssistant](https://technet.microsoft.com/ru-ru/library/aa998864\(v=exchg.150\)).
 

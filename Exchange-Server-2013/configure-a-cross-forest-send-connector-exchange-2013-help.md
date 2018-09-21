@@ -73,7 +73,9 @@ _**Последнее изменение раздела:** 2013-02-21_
 
 Этот пример использует сценарий Enable-CrossForestConnector.ps1 в командной консоли для установки разрешений соединителя отправки, который будет использоваться в топологии перекрестного леса.
 
-    .\Enable-CrossForestConnector.ps1 -Connector "Cross-Forest" -user "ANONYMOUS LOGON"
+```powershell
+.\Enable-CrossForestConnector.ps1 -Connector "Cross-Forest" -user "ANONYMOUS LOGON"
+```
 
 ## Как проверить, что все получилось?
 

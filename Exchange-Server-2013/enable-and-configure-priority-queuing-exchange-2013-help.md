@@ -41,7 +41,9 @@ _**Последнее изменение раздела:** 2014-12-16_
 
 1.  В командной строке откройте файл конфигурации приложения EdgeTransport.exe.config в Блокноте, выполнив следующую команду:
     
-        Notepad %ExchangeInstallPath%Bin\EdgeTransport.exe.config
+    ```powershell
+Notepad %ExchangeInstallPath%Bin\EdgeTransport.exe.config
+```
 
 2.  Найдите следующие ключи в разделе `<appSettings>`.
     
@@ -59,7 +61,9 @@ _**Последнее изменение раздела:** 2014-12-16_
     
     Чтобы включить приоритетную организацию очереди в службе транспорта на сервере почтовых ящиков, используйте следующее значение.
     
-        <add key="PriorityQueuingEnabled" value="true" />
+    ```command line
+<add key="PriorityQueuingEnabled" value="true" />
+```
     
     Настройте остающиеся значения приоритетной организации очереди или оставьте их по умолчанию.
 

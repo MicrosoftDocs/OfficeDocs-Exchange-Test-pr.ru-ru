@@ -43,7 +43,9 @@ _**Последнее изменение раздела:** 2013-02-04_
 
 В этом примере возвращаются имя, внутренний URL-адрес и внешний URL-адрес виртуального каталога ECP в виде форматированного списка.
 
-    Get-ECPVirtualDirectory | Format-List Name,InternalURL,ExternalURL
+```powershell
+Get-ECPVirtualDirectory | Format-List Name,InternalURL,ExternalURL
+```
 
 Чтобы запустить Центр администрирования Exchange, введите в адресной строке браузера возвращенное значение *InternalURL* или *ExternalURL*.
 

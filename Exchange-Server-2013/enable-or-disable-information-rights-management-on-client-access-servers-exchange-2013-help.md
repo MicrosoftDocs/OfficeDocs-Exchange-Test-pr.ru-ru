@@ -61,7 +61,9 @@ _**Последнее изменение раздела:** 2016-12-09_
 
 В этом примере выполняется включение IRM на сервере клиентского доступа для организации Exchange.
 
-    Set-IRMConfiguration -ClientAccessServerEnabled $true
+```powershell
+Set-IRMConfiguration -ClientAccessServerEnabled $true
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Set-IRMConfiguration](https://technet.microsoft.com/ru-ru/library/dd979792\(v=exchg.150\)).
 
@@ -69,7 +71,9 @@ _**Последнее изменение раздела:** 2016-12-09_
 
 В этом примере выполняется отключение IRM на сервере клиентского доступа для организации Exchange.
 
-    Set-IRMConfiguration -ClientAccessServerEnabled $false
+```powershell
+Set-IRMConfiguration -ClientAccessServerEnabled $false
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Set-IRMConfiguration](https://technet.microsoft.com/ru-ru/library/dd979792\(v=exchg.150\)).
 

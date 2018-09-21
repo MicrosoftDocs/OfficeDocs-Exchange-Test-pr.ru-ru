@@ -91,7 +91,9 @@ _**Последнее изменение раздела:** 2013-03-15_
 
 В этом примере показано, как включить ведение журнала протокола для соединителя получения с именем "Connection from Contoso.com".
 
-    Set-ReceiveConnector "Connection from Contoso.com" -ProtocolLoggingLevel Verbose
+```powershell
+Set-ReceiveConnector "Connection from Contoso.com" -ProtocolLoggingLevel Verbose
+```
 
 ## Как проверить, что все получилось?
 
@@ -99,7 +101,9 @@ _**Последнее изменение раздела:** 2013-03-15_
 
 1.  В командной консоли выполните следующую команду:
     
-        <Get-SendConnector |Get-ReceiveConnector> | Format-List Name,ProtocolLoggingLevel
+    ```command line
+<Get-SendConnector |Get-ReceiveConnector> | Format-List Name,ProtocolLoggingLevel
+```
 
 2.  Убедитесь, что отображаются значения, которые вы настроили.
 
@@ -111,7 +115,9 @@ _**Последнее изменение раздела:** 2013-03-15_
 
 В этом примере показано, как включить ведение журнала протокола для внутриорганизационного соединителя отправки в транспортной службе на сервере почтовых ящиков с именем Mailbox01.
 
-    Set-TransportService Mailbox01 -IntraOrgConnectorProtocolLoggingLevel Verbose
+```powershell
+Set-TransportService Mailbox01 -IntraOrgConnectorProtocolLoggingLevel Verbose
+```
 
 ## Как проверить, что все получилось?
 
@@ -127,11 +133,15 @@ _**Последнее изменение раздела:** 2013-03-15_
 
 Чтобы включить или выключить ведение журнала протокола для неявного и невидимого соединителя отправки электронной почты, расположенного в транспортной службе почтовых ящиков на сервере почтовых ящиков, выполните следующую команду.
 
-    Set-MailboxTransportService -MailboxDeliveryConnectorProtocolLoggingLevel <Verbose | None>
+```powershell
+Set-MailboxTransportService -MailboxDeliveryConnectorProtocolLoggingLevel <Verbose | None>
+```
 
 В этом примере показано, как включить ведение журнала протокола для соединителя получения доставки в почтовые ящики в транспортной службе почтовых ящиков на сервере почтовых ящиков с именем Mailbox01.
 
-    Set-MailboxTransportService Mailbox01 -MailboxDeliveryConnectorProtocolLoggingLevel Verbose
+```powershell
+Set-MailboxTransportService Mailbox01 -MailboxDeliveryConnectorProtocolLoggingLevel Verbose
+```
 
 ## Как проверить, что все получилось?
 

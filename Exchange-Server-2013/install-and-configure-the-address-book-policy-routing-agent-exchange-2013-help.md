@@ -57,7 +57,9 @@ _**Последнее изменение раздела:** 2014-01-09_
 
 После установки агента маршрутизации политики адресной книги необходимо включить его, выполнив следующую команду.
 
-    Enable-TransportAgent "ABP Routing Agent"
+```powershell
+Enable-TransportAgent "ABP Routing Agent"
+```
 
 Подробные сведения о синтаксисе и параметрах см. в разделе [Enable-TransportAgent](https://technet.microsoft.com/ru-ru/library/bb124921\(v=exchg.150\)).
 
@@ -67,11 +69,15 @@ _**Последнее изменение раздела:** 2014-01-09_
 
 1.  Перезапустите транспортную службу, выполнив следующую команду.
     
-        Restart-Service MSExchangeTransport
+    ```powershell
+Restart-Service MSExchangeTransport
+```
 
 2.  После того как служба будет перезапущена, убедитесь в том, что агент маршрутизации политики адресной книги установлен и включен. Для этого запустите следующий командлет.
     
-        Get-TransportAgent
+    ```powershell
+Get-TransportAgent
+```
     
     Если агент маршрутизации политики адресной книги имеется в списке, то он установлен правильно.
 
@@ -83,7 +89,9 @@ _**Последнее изменение раздела:** 2014-01-09_
 
 Последний шаг в этом процессе — включение агента маршрутизации политики адресной книги в организации Выполните следующую команду.
 
-    Set-TransportConfig -AddressBookPolicyRoutingEnabled $true
+```powershell
+Set-TransportConfig -AddressBookPolicyRoutingEnabled $true
+```
 
 Подробные сведения о синтаксисе и параметрах см. в разделе [Set-TransportConfig](https://technet.microsoft.com/ru-ru/library/bb124151\(v=exchg.150\)).
 

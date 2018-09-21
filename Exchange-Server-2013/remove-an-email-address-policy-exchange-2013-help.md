@@ -53,7 +53,9 @@ _**Последнее изменение раздела:** 2012-10-13_
 
 В этом примере выполняется удаление политики адресов электронной почты юго-восточных филиалов.
 
-    Remove-EmailAddressPolicy -Identity "South East Offices"
+```powershell
+Remove-EmailAddressPolicy -Identity "South East Offices"
+```
 
 Введите **Y**, чтобы подтвердить удаление политики, а затем нажмите клавишу ВВОД.
 

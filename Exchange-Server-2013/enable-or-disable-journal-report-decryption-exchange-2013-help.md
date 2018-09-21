@@ -47,7 +47,9 @@ _**Последнее изменение раздела:** 2016-12-09_
 
 В этом примере показано, как включить расшифровку отчета по журналу для организации Exchange.
 
-    Set-IRMConfiguration -JournalReportDecryptionEnabled $true
+```powershell
+Set-IRMConfiguration -JournalReportDecryptionEnabled $true
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Set-IRMConfiguration](https://technet.microsoft.com/ru-ru/library/dd979792\(v=exchg.150\)).
 
@@ -55,7 +57,9 @@ _**Последнее изменение раздела:** 2016-12-09_
 
 В этом примере показано, как отключить расшифровку отчета по журналу для организации Exchange.
 
-    Set-IRMConfiguration -JournalReportDecryptionEnabled $false
+```powershell
+Set-IRMConfiguration -JournalReportDecryptionEnabled $false
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Set-IRMConfiguration](https://technet.microsoft.com/ru-ru/library/dd979792\(v=exchg.150\)).
 

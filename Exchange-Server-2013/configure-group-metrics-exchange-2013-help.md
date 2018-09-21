@@ -45,11 +45,15 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 Для включения или отключения создания групповых метрик на сервере почтовых ящиков выполните следующую команду:
 
-    Set-MailboxServer <ServerIdentity> -ForceGroupMetricsGeneration <$true | $false>
+```powershell
+Set-MailboxServer <ServerIdentity> -ForceGroupMetricsGeneration <$true | $false>
+```
 
 В этом примере показано, как включить создание показателей группы на сервере почтовых ящиков с именем MBX1.
 
-    Set-MailboxServer MBX1 -ForceGroupMetricsGeneration $true
+```powershell
+Set-MailboxServer MBX1 -ForceGroupMetricsGeneration $true
+```
 
 ## Как проверить, что все получилось?
 
@@ -57,7 +61,9 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 1.  Выполните следующую команду:
     
-        Get-MailboxServer <ServerIdentity> | Format-List ForceGroupMetricsGeneration
+    ```powershell
+Get-MailboxServer <ServerIdentity> | Format-List ForceGroupMetricsGeneration
+```
 
 2.  Убедитесь, что отображается параметр, который вы выбрали.
 

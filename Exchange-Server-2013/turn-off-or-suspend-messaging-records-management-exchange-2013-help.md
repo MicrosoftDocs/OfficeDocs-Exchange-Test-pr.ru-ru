@@ -71,7 +71,9 @@ _**Последнее изменение раздела:** 2013-02-14_
 
 В этом примере командной консоли удаляется политика хранения из почтового ящика jpeoples.
 
-    Set-Mailbox jpeoples -RetentionPolicy $null.
+```powershell
+Set-Mailbox jpeoples -RetentionPolicy $null.
+```
 
 В этом примере командной консоли удаляется политика хранения из всех почтовых ящиков организации Exchange.
 
@@ -109,7 +111,9 @@ _**Последнее изменение раздела:** 2013-02-14_
 
 Эта команда удаляет политику хранения Corp-Users из организации Exchange.
 
-    Remove-RetentionPolicy Corp-Users
+```powershell
+Remove-RetentionPolicy Corp-Users
+```
 
 Подробные сведения о синтаксисе и параметрах см. в таких разделах:
 

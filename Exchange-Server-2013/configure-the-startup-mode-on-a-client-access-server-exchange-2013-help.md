@@ -63,9 +63,13 @@ _**Последнее изменение раздела:** 2013-02-15_
 
 В этом примере показано, как настроить двойной режим запуска для сервера клиентского доступа с именем `UMCallRouter1`.
 
-    Set-UMCallRouterSettings -Server UMCallRouter1 -UMStartUpMode Dual
+```powershell
+Set-UMCallRouterSettings -Server UMCallRouter1 -UMStartUpMode Dual
+```
 
 В этом примере показано, как настроить режим запуска TLS для сервера клиентского доступа с именем `UMCallRouter1`.
 
-    Set-UMCallRouterSettings -Server UMCallRouter1 -UMStartUpMode TLS
+```powershell
+Set-UMCallRouterSettings -Server UMCallRouter1 -UMStartUpMode TLS
+```
 

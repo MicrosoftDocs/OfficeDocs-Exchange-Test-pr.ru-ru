@@ -39,7 +39,9 @@ _**Последнее изменение раздела:** 2013-02-14_
 
 В командной строке выполните следующую команду:
 
-    Setup.exe /RemoveUmLanguagePack:<UmLanguagePackName>
+```powershell
+Setup.exe /RemoveUmLanguagePack:<UmLanguagePackName>
+```
 
 Параметр *\<UmLanguagePackName\>* — это имя удаляемого языкового пакета единой системы обмена сообщениями, например fr-FR.
 

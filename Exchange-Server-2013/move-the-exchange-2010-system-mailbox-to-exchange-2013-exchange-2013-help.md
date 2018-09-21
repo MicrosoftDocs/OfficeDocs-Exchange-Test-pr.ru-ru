@@ -41,7 +41,9 @@ _**Последнее изменение раздела:** 2015-04-07_
 
   - В Exchange 2013 запустите следующую команду, чтобы получить идентификатор и версию серверов Exchange и баз данных почтовых ящиков, которые содержат системные почтовые ящики в вашей организации.
     
-        Get-Mailbox -Arbitration | FL Name,DisplayName,ServerName,Database,AdminDisplayVersion
+    ```powershell
+Get-Mailbox -Arbitration | FL Name,DisplayName,ServerName,Database,AdminDisplayVersion
+```
     
     Свойство **AdminDisplayVersion** указывает версию Exchange, которая запущена на сервере. Значение `Version 14.x` указывает Exchange 2010; значение `Version 15.x` указывает Exchange 2013.
 
@@ -81,7 +83,9 @@ _**Последнее изменение раздела:** 2015-04-07_
 
 Сначала выполните следующую команду в Exchange 2013, чтобы получить имена и версии всех баз данных почтовых ящиков в своей организации.
 
-    Get-MailboxDatabase -IncludePreExchange2013 | FL Name,Server,AdminDisplayVersion
+```powershell
+Get-MailboxDatabase -IncludePreExchange2013 | FL Name,Server,AdminDisplayVersion
+```
 
 После того как вы определите имена баз данных почтовых ящиков в своей организации, в Exchange 2013 запустите следующую команду, чтобы переместить системный почтовый ящик Microsoft Exchange в базу данных почтовых ящиков, расположенную на сервере Exchange 2013.
 

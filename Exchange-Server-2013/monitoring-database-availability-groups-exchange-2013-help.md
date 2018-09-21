@@ -113,15 +113,21 @@ _**Последнее изменение раздела:** 2015-03-09_
 
 В этом примере возвращаются сведения о состоянии всех копий базы данных с именем DB2.
 
-    Get-MailboxDatabaseCopyStatus -Identity DB2 | Format-List
+```powershell
+Get-MailboxDatabaseCopyStatus -Identity DB2 | Format-List
+```
 
 В этом примере возвращаются сведения о состоянии всех копий базы данных на сервере почтовых ящиков с именем MBX2.
 
-    Get-MailboxDatabaseCopyStatus -Server MBX2 | Format-List
+```powershell
+Get-MailboxDatabaseCopyStatus -Server MBX2 | Format-List
+```
 
 В этом примере возвращаются сведения о состоянии всех копий базы данных на локальном сервере почтовых ящиков.
 
-    Get-MailboxDatabaseCopyStatus -Local | Format-List
+```powershell
+Get-MailboxDatabaseCopyStatus -Local | Format-List
+```
 
 Дополнительные сведения об использовании командлета **Get-MailboxDatabaseCopyStatus** см. в разделе [Get-MailboxDatabaseCopyStatus](https://technet.microsoft.com/ru-ru/library/dd298044\(v=exchg.150\)).
 
@@ -225,7 +231,9 @@ _**Последнее изменение раздела:** 2015-03-09_
 
 В этом примере командлет **Test-ReplicationHealth** используется для тестирования исправности репликации сервера почтовых ящиков MBX1.
 
-    Test-ReplicationHealth -Identity MBX1
+```powershell
+Test-ReplicationHealth -Identity MBX1
+```
 
 ## Ведение журнала событий канала Crimson
 
@@ -448,7 +456,9 @@ CollectReplicationMetrics.ps1 — это еще один сценарий сбо
 
 В следующем примере показан сбор данных в течение одного часа с минутными интервалами со всех серверов в группе обеспечения доступности баз данных DAG1, а затем создание сводного отчета. Кроме того, используется параметр *ReportPath*, поэтому сценарий помещает все файлы в текущий каталог.
 
-    CollectReplicationMetrics.ps1 -DagName DAG1 -Duration "01:00:00" -Frequency "00:01:00" -ReportPath
+```powershell
+CollectReplicationMetrics.ps1 -DagName DAG1 -Duration "01:00:00" -Frequency "00:01:00" -ReportPath
+```
 
 В следующем примере показано чтение данных из всех файлов, отвечающих критерию "CounterData\*", и затем создание сводного отчета.
 

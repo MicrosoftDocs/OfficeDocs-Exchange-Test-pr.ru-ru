@@ -44,15 +44,21 @@ Microsoft Exchange Server 2013 использует уведомления о д
 
 Чтобы просмотреть сводный список всех встроенных сообщений DSN в составе Exchange 2013, выполните следующую команду.
 
-    Get-SystemMessage -Original
+```powershell
+Get-SystemMessage -Original
+```
 
 Чтобы просмотреть сводный список всех настраиваемых сообщений DSN в организации, выполните следующую команду.
 
-    Get-SystemMessage
+```powershell
+Get-SystemMessage
+```
 
 Чтобы просмотреть подробные сведения о настраиваемом сообщении DSN для кода 5.1.2, которое отправлено внутренним отправителям на английском языке, выполните следующую команду.
 
-    Get-SystemMessage En\Internal\5.1.2 | Format-List
+```powershell
+Get-SystemMessage En\Internal\5.1.2 | Format-List
+```
 
 ## Использование командной консоли для создания настраиваемого сообщения DSN
 
@@ -78,7 +84,9 @@ Microsoft Exchange Server 2013 использует уведомления о д
 
 1.  Выполните следующую команду:
     
-        Get-SystemMessge -DSNCode <x.y.z> | Format-List Name,Internal,Text,Language
+    ```powershell
+Get-SystemMessge -DSNCode <x.y.z> | Format-List Name,Internal,Text,Language
+```
 
 2.  Убедитесь, что отображаются настроенные значения.
 
@@ -100,7 +108,9 @@ Microsoft Exchange Server 2013 использует уведомления о д
 
 1.  Выполните следующую команду: `Get-SystemMessage`.
     
-        Set-SystemMessage <Locale>\<Internal | External>\<DSNcode> | Format-List -Text
+    ```powershell
+Set-SystemMessage <Locale>\<Internal | External>\<DSNcode> | Format-List -Text
+```
 
 2.  Убедитесь, что отображается значение, которое вы настроили.
 
@@ -108,11 +118,15 @@ Microsoft Exchange Server 2013 использует уведомления о д
 
 Выполните следующую команду:
 
-    Remove-SystemMessage <Local>\<Internal | External>\<DSNcode>
+```powershell
+Remove-SystemMessage <Local>\<Internal | External>\<DSNcode>
+```
 
 В этом примере показано удаление настраиваемого сообщения DSN для кода 5.1.2, отправляемого внутренним отправителям на английском языке.
 
-    Remove-SystemMessage En\Internal\5.1.2
+```powershell
+Remove-SystemMessage En\Internal\5.1.2
+```
 
 ## Как проверить, что все получилось?
 
@@ -134,11 +148,15 @@ Microsoft Exchange Server 2013 использует уведомления о д
 
 2.  Выполните следующую команду:
     
-        Set-OrganizationConfig -MicrosoftExchangeRecipientReplyRecipient <MailboxIdentity>
+    ```powershell
+Set-OrganizationConfig -MicrosoftExchangeRecipientReplyRecipient <MailboxIdentity>
+```
     
     Например, чтобы назначить существующий почтовый ящик с именем "Системный почтовый ящик Contoso" получателю Exchange, выполните следующую команду.
     
-        Set-OrganizationConfig -MicrosoftExchangeRecipientReplyRecipient "Contoso System Mailbox"
+    ```powershell
+Set-OrganizationConfig -MicrosoftExchangeRecipientReplyRecipient "Contoso System Mailbox"
+```
 
 ## Действие 2. Указание кодов уведомлений о доставке, которые нужно отслеживать
 
@@ -152,11 +170,15 @@ Microsoft Exchange Server 2013 использует уведомления о д
 
 Чтобы заменить существующие значения, выполните следующую команду:
 
-    Set-TransportConfig -GenerateCopyOfDSNFor <x.y.z>,<x.y.z>...
+```powershell
+Set-TransportConfig -GenerateCopyOfDSNFor <x.y.z>,<x.y.z>...
+```
 
 В этом примере выполняется настройка организации Exchange для пересылки всех сообщений DSN с кодами 5.7.1, 5.7.2 и 5.7.3 получателю Exchange.
 
-    Set-TransportConfig -GenerateCopyOfDSNFor 5.7.1,5.7.2,5.7.3
+```powershell
+Set-TransportConfig -GenerateCopyOfDSNFor 5.7.1,5.7.2,5.7.3
+```
 
 Чтобы добавить или удалить записи, не изменив существующие значения, выполните следующую команду:
 
@@ -164,7 +186,9 @@ Microsoft Exchange Server 2013 использует уведомления о д
 
 В этом примере показано добавление кода уведомлений о доставке 5.7.5 и удаление кода 5.7.1 из существующего списка сообщений DSN, которые перенаправляются получателю Exchange.
 
-    Set-TransportConfig -GenerateCopyOfDSNFor @{Add="5.7.5"; Remove="5.7.1"}
+```powershell
+Set-TransportConfig -GenerateCopyOfDSNFor @{Add="5.7.5"; Remove="5.7.1"}
+```
 
 ## Как проверить, что все получилось?
 

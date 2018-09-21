@@ -72,7 +72,9 @@ _**Последнее изменение раздела:** 2016-12-09_
 
 3.  Запустите редактор реестра и перейдите к приведенному ниже подразделу реестра.
     
-        HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ExchangeServer\v15\HubTransportRole\CLSID
+    ```powershell
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ExchangeServer\v15\HubTransportRole\CLSID
+```
 
 4.  В разделе **CLSID** добавьте подраздел для файлов OneNote следующим образом.
     
@@ -100,7 +102,9 @@ _**Последнее изменение раздела:** 2016-12-09_
 
 6.  Откройте следующий раздел реестра:
     
-        HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ExchangeServer\v15\HubTransportRole\filters
+    ```powershell
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ExchangeServer\v15\HubTransportRole\filters
+```
 
 7.  В разделе **фильтры** добавьте подраздел для расширений ONE следующим образом.
     
@@ -168,7 +172,9 @@ _**Последнее изменение раздела:** 2016-12-09_
 
 2.  Запустите редактор реестра и перейдите к приведенному ниже подразделу.
     
-        HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ExchangeServer\v15\HubTransportRole\CLSID
+    ```powershell
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ExchangeServer\v15\HubTransportRole\CLSID
+```
 
 3.  В разделе **CLSID** добавьте подраздел для PDF-файлов следующим образом.
     
@@ -183,7 +189,9 @@ _**Последнее изменение раздела:** 2016-12-09_
 
 4.  Откройте следующий раздел реестра:
     
-        HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ExchangeServer\v15\HubTransportRole\filters
+    ```powershell
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ExchangeServer\v15\HubTransportRole\filters
+```
 
 5.  В разделе **фильтры** добавьте подраздел для расширений PDF следующим образом.
     

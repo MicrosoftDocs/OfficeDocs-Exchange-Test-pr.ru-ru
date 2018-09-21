@@ -37,7 +37,9 @@ _**Последнее изменение раздела:** 2016-12-09_
 
 Чтобы просмотреть номер сборки своей версии Exchange 2013, выполните следующую команду в командной консоли Exchange:
 
-    Get-ExchangeServer | fl name,edition,admindisplayversion
+```powershell
+Get-ExchangeServer | fl name,edition,admindisplayversion
+```
 
 ## Типы лицензий Exchange 2013
 

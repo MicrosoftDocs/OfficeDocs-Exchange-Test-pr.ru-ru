@@ -63,11 +63,15 @@ _**Последнее изменение раздела:** 2014-02-15_
 
 В этом примере политика общего доступа Contoso применяется к отдельному почтовому ящику пользователя Инны.
 
-    Set-Mailbox -Identity Barbara -SharingPolicy "Contoso"
+```powershell
+Set-Mailbox -Identity Barbara -SharingPolicy "Contoso"
+```
 
 В этом примере устанавливаются параметры, согласно которым для всех почтовых ящиков пользователей в отделе маркетинга используется политика общего доступа Contoso Marketing.
 
-    Get-Mailbox -Filter {Department -eq "Marketing"} | Set-Mailbox -SharingPolicy "Contoso Marketing"
+```powershell
+Get-Mailbox -Filter {Department -eq "Marketing"} | Set-Mailbox -SharingPolicy "Contoso Marketing"
+```
 
 В этом примере возвращаются все почтовые ящики, к которым применена политика общего доступа Contoso, а также выполняется сортировка пользователей в таблице, в которой выводятся только их псевдонимы и адреса электронной почты.
 
@@ -83,7 +87,9 @@ _**Последнее изменение раздела:** 2014-02-15_
 
   - Чтобы убедиться, что почтовому ящику пользователя назначена политика общего доступа, выполните следующую команду в командной консоли. Убедитесь, что в параметре *SharingPolicy* отображается правильная политика общего доступа.
     
-        Get-Mailbox <user name> | format-list
+    ```powershell
+Get-Mailbox <user name> | format-list
+```
 
 > [!TIP]  
 > Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.

@@ -49,11 +49,15 @@ _**Последнее изменение раздела:** 2012-10-09_
 
 Чтобы отобразить список всех пользователей, которым ролью управления предоставлены разрешения, используйте следующий синтаксис.
 
-    Get-ManagementRoleAssignment -Role <role name> -GetEffectiveUsers
+```powershell
+Get-ManagementRoleAssignment -Role <role name> -GetEffectiveUsers
+```
 
 В этом примере отображается список пользователей, которые имеют разрешения, предоставленные ролью «Mail Recipients».
 
-    Get-ManagementRoleAssignment -Role "Mail Recipients" -GetEffectiveUsers
+```powershell
+Get-ManagementRoleAssignment -Role "Mail Recipients" -GetEffectiveUsers
+```
 
 Если нужно изменить свойства, которые возвращаются в списке, или экспортировать список в файл данных с разделителями-запятыми (CSV), см. подраздел Use the Shell to customize output and display it далее в этом разделе.
 
@@ -81,7 +85,9 @@ _**Последнее изменение раздела:** 2012-10-09_
 
 В этом примере выполняется поиск всех назначений ролей, в соответствии с которыми были предоставлены разрешения пользователю Kim Akers.
 
-    Get-ManagementRoleAssignment -GetEffectiveUsers | Where { $_.EffectiveUserName -Eq "Kim Akers" }
+```powershell
+Get-ManagementRoleAssignment -GetEffectiveUsers | Where {     Get-ManagementRoleAssignment -GetEffectiveUsers | Where { $_.EffectiveUserName -Eq "Kim Akers" }.EffectiveUserName -Eq "Kim Akers" }
+```
 
 Сведения об изменении списка возвращаемых свойств или экспорте списка в файл в формате CSV см. в подразделе Use the Shell to customize output and display it далее в этом разделе.
 

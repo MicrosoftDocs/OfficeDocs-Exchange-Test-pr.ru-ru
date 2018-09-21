@@ -83,11 +83,15 @@ _**Последнее изменение раздела:** 2017-03-20_
     
       - На компьютере под управлением Windows Server 2012 R2 или Windows Server 2012 выполните следующую команду.
         
-            Install-WindowsFeature RSAT-ADDS
+        ```powershell
+Install-WindowsFeature RSAT-ADDS
+```
     
       - На компьютере под управлением Windows Server 2008 R2 с пакетом обновления 1 (SP1) выполните следующую команду.
         
-            Add-WindowsFeature RSAT-ADDS
+        ```powershell
+Add-WindowsFeature RSAT-ADDS
+```
 
 ## Необходимые условия для установки Windows Server 2012 R2 и Windows Server 2012
 
@@ -133,7 +137,9 @@ _**Последнее изменение раздела:** 2017-03-20_
 
 2.  Запустите следующую команду для установки необходимых компонентов Windows.
     
-        Install-WindowsFeature ADLDS
+    ```powershell
+Install-WindowsFeature ADLDS
+```
 
 Установите версию Microsoft .NET Framework, соответствующую устанавливаемой версии Exchange 2013.
 
@@ -165,7 +171,9 @@ _**Последнее изменение раздела:** 2017-03-20_
 
 2.  Запустите следующую команду, чтобы загрузить модуль диспетчера сервера.
     
-        Import-Module ServerManager
+    ```powershell
+Import-Module ServerManager
+```
 
 3.  Запустите следующую команду для установки необходимых компонентов Windows.
     
@@ -203,11 +211,15 @@ _**Последнее изменение раздела:** 2017-03-20_
 
 2.  Запустите следующую команду, чтобы загрузить модуль диспетчера сервера.
     
-        Import-Module ServerManager
+    ```powershell
+Import-Module ServerManager
+```
 
 3.  Запустите следующую команду для установки необходимых компонентов Windows.
     
-        Add-WindowsFeature NET-Framework, ADLDS
+    ```powershell
+Add-WindowsFeature NET-Framework, ADLDS
+```
 
 После установки ролей и компонентов операционной системы установите следующее программное обеспечение в порядке перечисления:
 

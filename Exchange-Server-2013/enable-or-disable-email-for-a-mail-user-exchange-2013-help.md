@@ -61,7 +61,9 @@ _**Последнее изменение раздела:** 2012-11-14_
 
 В этом примере показано, как отключить электронную почту для почтового пользователя Yan Li.
 
-    Disable-MailUser -Identity "Yan Li"
+```powershell
+Disable-MailUser -Identity "Yan Li"
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Disable-MailUser](https://technet.microsoft.com/ru-ru/library/aa998578\(v=exchg.150\)).
 
@@ -75,13 +77,17 @@ _**Последнее изменение раздела:** 2012-11-14_
 
 3.  В консоли Shell выполните следующую команду:
     
-        Get-MailUser
+    ```powershell
+Get-MailUser
+```
     
     Почтовый пользователь, для которого отключена электронная почта, будет отсутствовать в результатах, поскольку данный командлет возвращает только пользователей с включенной поддержкой почты.
 
 4.  В консоли Shell выполните следующую команду:
     
-        Get-User
+    ```powershell
+Get-User
+```
     
     Почтовый пользователь, для которого отключена электронная почта, отобразится в результатах, поскольку данный командлет возвращает все объекты-пользователи Active Directory.
 
@@ -93,7 +99,9 @@ _**Последнее изменение раздела:** 2012-11-14_
 
 В этом примере включается поддержка почты для пользователя Sanjay Shah. Необходимо предоставить внешний адрес электронной почты.
 
-    Enable-MailUser -Identity "Sanjay Shah" -ExternalEmailAddress renev@tailspintoys.com
+```powershell
+Enable-MailUser -Identity "Sanjay Shah" -ExternalEmailAddress renev@tailspintoys.com
+```
 
 ## Использование командной консоли и CSV-файла для включения поддержки почты для нескольких пользователей
 
@@ -155,5 +163,7 @@ _**Последнее изменение раздела:** 2012-11-14_
 
   - В командной консоли выполните приведенную ниже команду, чтобы отобразить сведения о новых почтовых пользователях.
     
-        Get-MailUser | Format-Table Name,RecipientTypeDetails,ExternalEmailAddress
+    ```powershell
+Get-MailUser | Format-Table Name,RecipientTypeDetails,ExternalEmailAddress
+```
 

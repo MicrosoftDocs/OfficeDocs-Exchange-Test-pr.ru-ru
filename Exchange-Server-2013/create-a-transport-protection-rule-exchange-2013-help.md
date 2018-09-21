@@ -70,7 +70,9 @@ _**Последнее изменение раздела:** 2016-12-09_
 
   - Чтобы создать правило защиты транспорта, в развертывании AD RMS должны быть существующие шаблоны RMS. В этом примере показано, как получить доступные шаблоны из кластера AD RMS.
     
-        Get-RMSTemplate | format-list
+    ```powershell
+Get-RMSTemplate | format-list
+```
     
     Дополнительные сведения о синтаксисе и параметрах см. в разделе [Get-RMSTemplate](https://technet.microsoft.com/ru-ru/library/dd297960\(v=exchg.150\)).
 

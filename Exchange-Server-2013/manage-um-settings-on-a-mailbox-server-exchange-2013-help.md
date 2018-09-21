@@ -47,7 +47,9 @@ _**Последнее изменение раздела:** 2013-02-11_
 
 В этом примере показано, как удалить сервер почтовых ящиков `MyMailboxServer` из всех абонентских групп на основе протокола SIP.
 
-    Set-UMService -Identity MyMailboxServer -DialPlans $null
+```powershell
+Set-UMService -Identity MyMailboxServer -DialPlans $null
+```
 
 В этом примере показано, как добавить сервер почтовых ящиков `MyMailboxServer` в абонентскую группу SIP этой системы с именем `MySIPDialPlanName`, а также установить максимальное число входящих голосовых вызовов.
 
@@ -61,9 +63,13 @@ _**Последнее изменение раздела:** 2013-02-11_
 
 В этом примере отображается список всех серверов почтовых ящиков.
 
-    Get-UMService
+```powershell
+Get-UMService
+```
 
 В этом примере отображается форматированный список свойств для сервера почтовых ящиков `MyMailboxServer`.
 
-    Get-UMService -Identity MyMailboxServer | Format-List
+```powershell
+Get-UMService -Identity MyMailboxServer | Format-List
+```
 

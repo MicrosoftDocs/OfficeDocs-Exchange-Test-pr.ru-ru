@@ -47,7 +47,9 @@ _**Последнее изменение раздела:** 2015-01-22_
 
 В данном примере показано получение статистики о папке "Элементы для восстановления" для почтового ящика Soumya Singhi и отображаются выходные данные в стандартном списке.
 
-    Get-MailboxFolderStatistics -Identity "Soumya Singhi" -FolderScope RecoverableItems | Format-List
+```powershell
+Get-MailboxFolderStatistics -Identity "Soumya Singhi" -FolderScope RecoverableItems | Format-List
+```
 
 В данном примере показано получение статистики о папке "Элементы для восстановления" для почтового ящика Soumya Singhi и отображение имени, пути к папке, количества элементов в папке и размера папки в формате таблицы.
 

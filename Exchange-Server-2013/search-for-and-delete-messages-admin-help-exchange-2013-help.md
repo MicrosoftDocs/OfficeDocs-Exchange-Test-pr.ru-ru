@@ -67,7 +67,9 @@ _**Последнее изменение раздела:** 2017-12-20_
 > При использовании командлета <strong>Search-Mailbox</strong> с параметром <em>DeleteContent</em> сообщения окончательно удаляются из исходного почтового ящика. Перед окончательным удалением сообщений рекомендуется использовать параметр <em>LogOnly</em> для создания журнала сообщений, найденных в результатах поиска, или скопировать эти сообщения в другой почтовый ящик перед их удалением из исходного почтового ящика.
 
 
-    Search-Mailbox -Identity "April Stewart" -SearchQuery 'Subject:"Your bank statement"' -DeleteContent
+```powershell
+Search-Mailbox -Identity "April Stewart" -SearchQuery 'Subject:"Your bank statement"' -DeleteContent
+```
 
 В этом примере в почтовом ящике пользователя April Stewart выполняется поиск сообщений, содержащих фразу "Your bank statement" в теме; результаты поиска копируются в папку AprilStewart-DeletedMessages почтового ящика BackupMailbox, а сообщения удаляются из почтового ящика April.
 

@@ -47,11 +47,15 @@ _**Последнее изменение раздела:** 2012-10-08_
 
 Для изменения политики назначения для почтового ящика используйте следующую синтаксическую конструкцию.
 
-    Set-Mailbox <mailbox alias or name> -RoleAssignmentPolicy <assignment policy>
+```powershell
+Set-Mailbox <mailbox alias or name> -RoleAssignmentPolicy <assignment policy>
+```
 
 В данном примере политика назначения устанавливается для пользователей единой системы обмена сообщениями на почтовом ящике "Виктор".
 
-    Set-Mailbox Brian -RoleAssignmentPolicy "Unified Messaging Users"
+```powershell
+Set-Mailbox Brian -RoleAssignmentPolicy "Unified Messaging Users"
+```
 
 ## Использование командной консоли для изменения политики назначения для группы почтовых ящиков с определенной политикой назначения
 
