@@ -63,7 +63,7 @@ _**Последнее изменение раздела:** 2015-03-09_
 <td><p>Подробнее о приложении Outlook Web App, с помощью которого пользователи могут получить доступ к своему почтовому ящику Exchange 2013 через веб-браузер.</p></td>
 </tr>
 <tr class="odd">
-<td><p><a href="mailtips-exchange-2013-help.md">MailTips</a></p></td>
+<td><p><a href="https://docs.microsoft.com/ru-ru/exchange/clients-and-mobile-in-exchange-online/mailtips/mailtips">MailTips</a></p></td>
 <td><p>Подробнее о подсказках — информационных сообщениях, которые пользователи видят при составлении сообщения.</p></td>
 </tr>
 </tbody>

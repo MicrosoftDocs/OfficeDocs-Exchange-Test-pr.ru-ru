@@ -102,7 +102,7 @@ _**Последнее изменение раздела:** 2016-03-17_
 </tr>
 <tr class="even">
 <td><p>DynamicDistributionGroup</p></td>
-<td><p>Объект с классом Active Directory <strong>msExchDynamicDistributionList</strong>. Подробнее см. в разделе <a href="manage-dynamic-distribution-groups-exchange-2013-help.md">Управление динамическими группами рассылки</a>.</p></td>
+<td><p>Объект с классом Active Directory <strong>msExchDynamicDistributionList</strong>. Подробнее см. в разделе <a href="https://docs.microsoft.com/ru-ru/exchange/recipients-in-exchange-online/manage-dynamic-distribution-groups/manage-dynamic-distribution-groups">Управление динамическими группами рассылки</a>.</p></td>
 </tr>
 <tr class="odd">
 <td><p>Mailbox</p></td>
@@ -110,11 +110,11 @@ _**Последнее изменение раздела:** 2016-03-17_
 </tr>
 <tr class="even">
 <td><p>MailUser</p></td>
-<td><p>Объект пользователя, для которого назначен адрес электронной почты и не определен параметр <em>Database</em>. Подробнее см. в разделе <a href="manage-mail-users-exchange-2013-help.md">Управление пользователями почты</a>.</p></td>
+<td><p>Объект пользователя, для которого назначен адрес электронной почты и не определен параметр <em>Database</em>. Подробнее см. в разделе <a href="https://docs.microsoft.com/ru-ru/exchange/recipients-in-exchange-online/manage-mail-users">Управление пользователями почты</a>.</p></td>
 </tr>
 <tr class="odd">
 <td><p>MailContact</p></td>
-<td><p>Объект контакта, который имеет адрес электронной почты. Обычно почтовые контакты используются для получателей за пределами организации Exchange. Почтовые контакты также используются в межлесной среде Exchange. Подробнее см. в разделе <a href="manage-mail-contacts-exchange-2013-help.md">Управление почтовыми контактами</a>.</p></td>
+<td><p>Объект контакта, который имеет адрес электронной почты. Обычно почтовые контакты используются для получателей за пределами организации Exchange. Почтовые контакты также используются в межлесной среде Exchange. Подробнее см. в разделе <a href="https://docs.microsoft.com/ru-ru/exchange/recipients-in-exchange-online/manage-mail-contacts">Управление почтовыми контактами</a>.</p></td>
 </tr>
 <tr class="even">
 <td><p>MailPublicFolder</p></td>

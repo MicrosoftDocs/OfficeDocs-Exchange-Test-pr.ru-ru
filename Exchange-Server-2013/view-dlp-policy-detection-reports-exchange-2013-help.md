@@ -267,7 +267,7 @@ S:TRA=ETRP|ruleId=C27D21EECA0311E0BCB896154924019B|LoadW=200|LoadC=100|ExecW=550
 
 ## Дополнительные сведения
 
-[Защита от потери данных](technical-overview-of-dlp-data-loss-prevention-in-exchange.md)
+[Защита от потери данных](https://docs.microsoft.com/ru-ru/exchange/security-and-compliance/data-loss-prevention/data-loss-prevention)
 
 [Создание отчетов об инцидентах для обнаружений политики DLP](create-incident-reports-for-dlp-policy-detections-exchange-2013-help.md)
 

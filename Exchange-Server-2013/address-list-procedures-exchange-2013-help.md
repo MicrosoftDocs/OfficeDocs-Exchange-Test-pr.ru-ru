@@ -21,17 +21,17 @@ _**Последнее изменение раздела:** 2012-10-12_
 
 [Обновление списка адресов](update-an-address-list-exchange-2013-help.md)
 
-[Создание списка адресов с помощью фильтров получателей](create-an-address-list-by-using-recipient-filters-exchange-2013-help.md)
+[Создание списка адресов с помощью фильтров получателей](https://docs.microsoft.com/ru-ru/exchange/address-books/address-lists/use-recipient-filters-to-create-an-address-list)
 
 [Перемещение списка адресов](move-an-address-list-exchange-2013-help.md)
 
 [Удаление списка адресов](remove-an-address-list-exchange-2013-help.md)
 
-[Создание глобального списка адресов](create-a-global-address-list-exchange-2013-help.md)
+[Создание глобального списка адресов](https://docs.microsoft.com/ru-ru/exchange/address-books/address-lists/create-global-address-list)
 
-[Настройка свойств глобального списка адресов](configure-global-address-list-properties-exchange-2013-help.md)
+[Настройка свойств глобального списка адресов](https://docs.microsoft.com/ru-ru/exchange/address-books/address-lists/configure-global-address-list-properties)
 
-[Удаление глобального списка адресов](remove-a-global-address-list-exchange-2013-help.md)
+[Удаление глобального списка адресов](https://docs.microsoft.com/ru-ru/exchange/address-books/address-lists/remove-a-global-address-list)
 
 [Обновление глобального списка адресов](update-a-global-address-list-exchange-2013-help.md)
 

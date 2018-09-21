@@ -17,13 +17,13 @@ _**Применимо к:** Exchange Server 2013_
 
 _**Последнее изменение раздела:** 2012-10-14_
 
-[Создание политики хранения](create-a-retention-policy-exchange-2013-help.md)
+[Создание политики хранения](https://docs.microsoft.com/ru-ru/exchange/security-and-compliance/messaging-records-management/create-a-retention-policy)
 
-[Добавление и удаление тегов хранения для политики хранения](add-retention-tags-to-or-remove-retention-tags-from-a-retention-policy-exchange-2013-help.md)
+[Добавление и удаление тегов хранения для политики хранения](https://docs.microsoft.com/ru-ru/exchange/security-and-compliance/messaging-records-management/add-or-remove-retention-tags)
 
-[Применение политики хранения к почтовым ящикам](apply-a-retention-policy-to-mailboxes-exchange-2013-help.md)
+[Применение политики хранения к почтовым ящикам](https://docs.microsoft.com/ru-ru/exchange/security-and-compliance/messaging-records-management/apply-retention-policy)
 
 [Настройка помощника для управляемых папок](configure-the-managed-folder-assistant-exchange-2013-help.md)
 
-[Включение временного сохранения для почтового ящика](place-a-mailbox-on-retention-hold-exchange-2013-help.md)
+[Включение временного сохранения для почтового ящика](https://docs.microsoft.com/ru-ru/exchange/security-and-compliance/messaging-records-management/mailbox-retention-hold)
 

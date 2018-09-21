@@ -123,7 +123,7 @@ _**Последнее изменение раздела:** 2015-01-14_
 
 ## Дополнительные сведения
 
-[Защита от потери данных](technical-overview-of-dlp-data-loss-prevention-in-exchange.md)
+[Защита от потери данных](https://docs.microsoft.com/ru-ru/exchange/security-and-compliance/data-loss-prevention/data-loss-prevention)
 
-[Советы политик](technical-overview-of-policy-tips-in-exchange-online-and-exchange-2013.md)
+[Советы политик](https://docs.microsoft.com/ru-ru/exchange/security-and-compliance/data-loss-prevention/policy-tips)
 

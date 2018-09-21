@@ -168,7 +168,7 @@ _**Последнее изменение раздела:** 2017-12-20_
 <td><p><em>HasSenderOverride</em></p>
 <p><em>ExceptIfHasSenderOverride</em></p></td>
 <td><p>Н/д</p></td>
-<td><p>Сообщения, для которых отправитель переопределил политику защиты от потери данных (DLP). Дополнительные сведения о политиках защиты от потери данных см. в статье <a href="technical-overview-of-dlp-data-loss-prevention-in-exchange.md">Защита от потери данных</a>.</p></td>
+<td><p>Сообщения, для которых отправитель переопределил политику защиты от потери данных (DLP). Дополнительные сведения о политиках защиты от потери данных см. в статье <a href="https://docs.microsoft.com/ru-ru/exchange/security-and-compliance/data-loss-prevention/data-loss-prevention">Защита от потери данных</a>.</p></td>
 <td><p>Exchange 2013 или более поздней версии</p></td>
 </tr>
 <tr class="odd">

@@ -23,9 +23,9 @@ _**Последнее изменение раздела:** 2014-10-03_
 
 Функции предотвращения потери данных (DLP) Exchange 2013 помогут организациям сократить непреднамеренное раскрытие конфиденциальных данных. Правила транспорта были обновлены для поддержки создания правил, которые сопровождают и применяют политики DLP. Дополнительные сведения о поддержке DLP в правилах транспорта см. в следующих разделах:
 
-[Интеграция правил конфиденциальной информации с правилами транспорта](integrating-sensitive-information-rules-with-transport-rules-exchange-2013-help.md)
+[Интеграция правил конфиденциальной информации с правилами транспорта](https://docs.microsoft.com/ru-ru/exchange/security-and-compliance/data-loss-prevention/integrate-sensitive-information-rules)
 
-[Защита от потери данных](technical-overview-of-dlp-data-loss-prevention-in-exchange.md)
+[Защита от потери данных](https://docs.microsoft.com/ru-ru/exchange/security-and-compliance/data-loss-prevention/data-loss-prevention)
 
 ## Новые действия и предикаты
 

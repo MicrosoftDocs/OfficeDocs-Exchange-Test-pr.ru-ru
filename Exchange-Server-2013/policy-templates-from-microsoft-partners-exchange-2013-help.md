@@ -23,7 +23,7 @@ _**Последнее изменение раздела:** 2013-01-31_
 
 ## Дополнительные сведения
 
-[Защита от потери данных](technical-overview-of-dlp-data-loss-prevention-in-exchange.md)
+[Защита от потери данных](https://docs.microsoft.com/ru-ru/exchange/security-and-compliance/data-loss-prevention/data-loss-prevention)
 
 [Импорт настраиваемого шаблона политики защиты от потери данных из файла](import-a-custom-dlp-policy-template-from-a-file-exchange-2013-help.md)
 

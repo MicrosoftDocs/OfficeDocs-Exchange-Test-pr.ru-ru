@@ -140,11 +140,11 @@ Active Directory replication
 </tr>
 <tr class="even">
 <td><p><code>CmdletParameters</code></p></td>
-<td><p>В этом поле содержатся параметры, заданные при запуске командлета, указанного в поле <code>CmdletName</code>. В этом поле, при наличии, также хранится, но не отображается в выходных данных по умолчанию, значение, указанное с помощью параметра. Дополнительные сведения о доступе к другим данным в этом поле см. в разделе <a href="search-the-role-group-changes-or-administrator-audit-logs-exchange-2013-help.md">Поиск изменений группы ролей или журналов аудита администраторов</a>.</p></td>
+<td><p>В этом поле содержатся параметры, заданные при запуске командлета, указанного в поле <code>CmdletName</code>. В этом поле, при наличии, также хранится, но не отображается в выходных данных по умолчанию, значение, указанное с помощью параметра. Дополнительные сведения о доступе к другим данным в этом поле см. в разделе <a href="https://docs.microsoft.com/ru-ru/exchange/security-and-compliance/exchange-auditing-reports/search-role-group-changes">Поиск изменений группы ролей или журналов аудита администраторов</a>.</p></td>
 </tr>
 <tr class="odd">
 <td><p><code>ModifiedProperties</code></p></td>
-<td><p>В этом поле содержатся свойства, которые были изменены в объекте, указанном в поле <code>ObjectModified</code>. В этом поле также хранятся, но не отображаются в выходных данных по умолчанию, старое значение свойства и новое сохраненное значение. Дополнительные сведения о доступе к другим данным в этом поле см. в разделе <a href="search-the-role-group-changes-or-administrator-audit-logs-exchange-2013-help.md">Поиск изменений группы ролей или журналов аудита администраторов</a>.</p>
+<td><p>В этом поле содержатся свойства, которые были изменены в объекте, указанном в поле <code>ObjectModified</code>. В этом поле также хранятся, но не отображаются в выходных данных по умолчанию, старое значение свойства и новое сохраненное значение. Дополнительные сведения о доступе к другим данным в этом поле см. в разделе <a href="https://docs.microsoft.com/ru-ru/exchange/security-and-compliance/exchange-auditing-reports/search-role-group-changes">Поиск изменений группы ролей или журналов аудита администраторов</a>.</p>
 
 > [!IMPORTANT]  
 > Это поле заполняется, только если для параметра <em>LogLevel</em> командлета <strong>Set-AdminAuditLogConfig</strong> установлено значение <code>Verbose</code>.
@@ -197,9 +197,9 @@ Active Directory replication
 
   - **Журнал аудита администратора:**  этот отчет позволяет экспортировать записи журнала аудита, записанные в пределах заданных временных рамок, в XML-файл, а затем отправлять этот файл по электронной почте указанному получателю. Дополнительные сведения о содержимом файла XML см. в разделе [Структура журнала аудита администратора](administrator-audit-log-structure-exchange-2013-help.md).
 
-Дополнительные сведения об использовании этих отчетов см. в разделе [Поиск изменений группы ролей или журналов аудита администраторов](search-the-role-group-changes-or-administrator-audit-logs-exchange-2013-help.md).
+Дополнительные сведения об использовании этих отчетов см. в разделе [Поиск изменений группы ролей или журналов аудита администраторов](https://docs.microsoft.com/ru-ru/exchange/security-and-compliance/exchange-auditing-reports/search-role-group-changes).
 
-Сведения о других отчетах, доступных на странице **аудита**, см. в разделе [Отчеты аудита Exchange](exchange-auditing-reports-exchange-2013-help.md).
+Сведения о других отчетах, доступных на странице **аудита**, см. в разделе [Отчеты аудита Exchange](https://docs.microsoft.com/ru-ru/exchange/security-and-compliance/exchange-auditing-reports/exchange-auditing-reports).
 
 ## Командлет Search-AdminAuditLog
 
@@ -221,7 +221,7 @@ Active Directory replication
 
 Каждая возвращенная запись журнала аудита содержит сведения, описанные в таблице в разделе Audit Log Contents. По умолчанию возвращается только первая 1000 записей журнала, соответствующих заданным критериям. Однако значение по умолчанию можно изменить с помощью параметра *ResultSize* для вывода большего или меньшего количества записей. Если для параметра *ResultSize* установить значение `Unlimited`, возвращены будут все записи журнала, соответствующие указанным критериям.
 
-Дополнительные сведения об использовании командлета **Search-AdminAuditLog** см. в разделе [Поиск изменений группы ролей или журналов аудита администраторов](search-the-role-group-changes-or-administrator-audit-logs-exchange-2013-help.md).
+Дополнительные сведения об использовании командлета **Search-AdminAuditLog** см. в разделе [Поиск изменений группы ролей или журналов аудита администраторов](https://docs.microsoft.com/ru-ru/exchange/security-and-compliance/exchange-auditing-reports/search-role-group-changes).
 
 ## Командлет New-AdminAuditLogSearch
 
@@ -235,7 +235,7 @@ Active Directory replication
 > Outlook Web App не позволяет открывать вложения XML по умолчанию. В системе Exchange можно разрешить просмотр вложений XML с помощью приложения Outlook Web App или же использовать другой почтовый клиент, например Microsoft Outlook. Сведения о том, как включить в Outlook Web App просмотр вложений XML, см. в разделе <a href="view-or-configure-outlook-web-app-virtual-directories-exchange-2013-help.md">Просмотр и настройка виртуальных каталогов Outlook Web App</a>.
 
 
-Дополнительные сведения об использовании командлета **New-AdminAuditLogSearch** см. в разделе [Поиск изменений группы ролей или журналов аудита администраторов](search-the-role-group-changes-or-administrator-audit-logs-exchange-2013-help.md).
+Дополнительные сведения об использовании командлета **New-AdminAuditLogSearch** см. в разделе [Поиск изменений группы ролей или журналов аудита администраторов](https://docs.microsoft.com/ru-ru/exchange/security-and-compliance/exchange-auditing-reports/search-role-group-changes).
 
 В начало
 
@@ -253,7 +253,7 @@ Active Directory replication
 
 Просматривать записи журнала аудита, внесенные вручную, можно таким же образом, как и любые другие записи журнала — с помощью страницы **аудита** Центра администрирования Exchange или командлетов **Search-AdminAuditLog** и **New-AdminAuditLogSearch**.
 
-Сведения о просмотре содержимого параметра *Comment* командлета **Write-AdminAuditLog** в записи журнала аудита, внесенной вручную, см. в разделе [Поиск изменений группы ролей или журналов аудита администраторов](search-the-role-group-changes-or-administrator-audit-logs-exchange-2013-help.md).
+Сведения о просмотре содержимого параметра *Comment* командлета **Write-AdminAuditLog** в записи журнала аудита, внесенной вручную, см. в разделе [Поиск изменений группы ролей или журналов аудита администраторов](https://docs.microsoft.com/ru-ru/exchange/security-and-compliance/exchange-auditing-reports/search-role-group-changes).
 
 ## Репликация Active Directory
 

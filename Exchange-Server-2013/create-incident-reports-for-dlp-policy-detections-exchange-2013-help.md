@@ -139,5 +139,5 @@ _**Последнее изменение раздела:** 2015-04-07_
 
 [Просмотр отчетов об обнаружении политик защиты от потери данных](view-dlp-policy-detection-reports-exchange-2013-help.md)
 
-[Защита от потери данных](technical-overview-of-dlp-data-loss-prevention-in-exchange.md)
+[Защита от потери данных](https://docs.microsoft.com/ru-ru/exchange/security-and-compliance/data-loss-prevention/data-loss-prevention)
 

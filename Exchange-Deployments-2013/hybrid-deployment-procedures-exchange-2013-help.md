@@ -25,7 +25,7 @@ _<strong>Последнее изменение раздела:</strong>2017-06-1
 
 [Перемещение почтовых ящиков между локальными организациями и организациями Exchange Online в случаях гибридного развертывания](move-mailboxes-between-on-premises-and-exchange-online-organizations-in-hybrid-deployments-exchange-2013-help.md)
 
-[Настройка локальных общедоступных папок прежних версий для гибридного развертывания](configure-legacy-on-premises-public-folders-for-a-hybrid-deployment-exchange-2013-help.md)
+[Настройка локальных общедоступных папок прежних версий для гибридного развертывания](https://docs.microsoft.com/ru-ru/exchange/collaboration-exo/public-folders/set-up-legacy-hybrid-public-folders)
 
 [Настройка общедоступных папок Exchange 2013 для гибридного развертывания](configure-exchange-2013-public-folders-for-a-hybrid-deployment-exchange-2013-help.md)
 

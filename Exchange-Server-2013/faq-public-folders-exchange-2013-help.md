@@ -23,7 +23,7 @@ _**Последнее изменение раздела:** 2017-03-27_
 
 ## Часто задаваемые вопросы о миграции общих папок
 
-В этом разделе содержатся часто задаваемые вопросы о миграции общих папок. Для получения дополнительных сведений см [Использование пакетной миграции для переноса общедоступных папок в Exchange 2013 из предыдущих версий](use-batch-migration-to-migrate-public-folders-to-exchange-2013-from-previous-versions-exchange-2013-help.md), [Использование пакетной миграции для переноса устаревших общедоступных папок в Office 365 и Exchange Online](use-batch-migration-to-migrate-legacy-public-folders-to-office-365-and-exchange-online-exchange-online-help.md)или [Использование пакетной миграции для переноса общедоступных папок Exchange 2013 в Exchange Online](use-batch-migration-to-migrate-exchange-2013-public-folders-to-exchange-online-exchange-online-help.md).
+В этом разделе содержатся часто задаваемые вопросы о миграции общих папок. Для получения дополнительных сведений см [Использование пакетной миграции для переноса общедоступных папок в Exchange 2013 из предыдущих версий](use-batch-migration-to-migrate-public-folders-to-exchange-2013-from-previous-versions-exchange-2013-help.md), [Использование пакетной миграции для переноса устаревших общедоступных папок в Office 365 и Exchange Online](https://docs.microsoft.com/ru-ru/exchange/collaboration-exo/public-folders/batch-migration-of-legacy-public-folders)или [Использование пакетной миграции для переноса общедоступных папок Exchange 2013 в Exchange Online](https://docs.microsoft.com/ru-ru/exchange/collaboration-exo/public-folders/batch-migration-of-exchange-2013-public-folders).
 
 ## Какие сценарии переноса общедоступных папок поддерживаются?
 
@@ -111,7 +111,7 @@ Outlook в Интернете и Outlook 2011 для Mac не поддержив
 
     New-Mailbox -PublicFolder -Name <name of public folder>
 
-Дополнительные сведения см. в разделе [Создание общедоступной папки](create-a-public-folder-exchange-2013-help.md).
+Дополнительные сведения см. в разделе [Создание общедоступной папки](https://docs.microsoft.com/ru-ru/exchange/collaboration-exo/public-folders/create-public-folder).
 
 ## В предыдущих версиях Exchange для каждой базы данных почтовых ящиков существовал параметр для указания ее базы данных общедоступных папок. Как это будет работать в Exchange 2013?
 

@@ -205,7 +205,7 @@ _**Последнее изменение раздела:** 2016-12-09_
 
   - Не используйте роль сервера клиентского доступа Exchange 2010 на сервере глобального каталога. Это приведет к использованию Active Directory в качестве интерфейса NSPI, а не службы адресных книг Microsoft Exchange. Политики адресных книга могут правильно работать при использовании роли сервера Exchange 2013 на сервере глобального каталога, однако мы не рекомендуем устанавливать Exchange на контроллере домена.
 
-  - Невозможно одновременно использовать иерархические адресные книги и политики адресных книг. Дополнительные сведения см. в разделе [Иерархические адресные книги](hierarchical-address-books-exchange-2013-help.md).
+  - Невозможно одновременно использовать иерархические адресные книги и политики адресных книг. Дополнительные сведения см. в разделе [Иерархические адресные книги](https://docs.microsoft.com/ru-ru/exchange/address-books/hierarchical-address-books/hierarchical-address-books).
 
   - Любой пользователь, к которому применяется политика адресной книги, должен содержаться в доступном ему глобальном списке адресов.
 
@@ -267,7 +267,7 @@ _**Последнее изменение раздела:** 2016-12-09_
 
   - Атрибуты CustomAttributeX явным образом зарезервированы для настройки организации и полностью находятся под контролем администраторов организации.
 
-Еще одна рекомендация по разделению организаций — использовать идентификаторы компаний для имен обычных и динамических групп рассылки. В Exchange есть политики именования групп, которые автоматически добавляют суффикс или префикс к имени группы рассылки на основе многих атрибутов пользователя, создающего группу рассылки, включая Company, StateorProvince, Title и CustomAttribute1—CustomAttribute15. Политика именования групп особенно важна, если пользователям разрешено создавать собственные группы рассылки. Подробнее см. в разделе [Создание политики именования групп рассылки](create-a-distribution-group-naming-policy-exchange-2013-help.md).
+Еще одна рекомендация по разделению организаций — использовать идентификаторы компаний для имен обычных и динамических групп рассылки. В Exchange есть политики именования групп, которые автоматически добавляют суффикс или префикс к имени группы рассылки на основе многих атрибутов пользователя, создающего группу рассылки, включая Company, StateorProvince, Title и CustomAttribute1—CustomAttribute15. Политика именования групп особенно важна, если пользователям разрешено создавать собственные группы рассылки. Подробнее см. в разделе [Создание политики именования групп рассылки](https://docs.microsoft.com/ru-ru/exchange/recipients-in-exchange-online/manage-distribution-groups/create-group-naming-policy).
 
 Политики именования групп не применяются для динамических групп рассылки, поэтому необходимо вручную разделить их и вручную применить политику именования.
 
@@ -289,7 +289,7 @@ _**Последнее изменение раздела:** 2016-12-09_
 
     New-AddressList -Name "AL_TAIL_Users_DGs" -RecipientFilter {((RecipientType -eq 'UserMailbox') -or (RecipientType -eq "MailUniversalDistributionGroup") -or (RecipientType -eq "DynamicDistributionGroup")) -and (CustomAttribute15 -eq "TAIL")}
 
-Дополнительные сведения о создании списков адресов с помощью фильтров получателей см. в разделе [Создание списка адресов с помощью фильтров получателей](create-an-address-list-by-using-recipient-filters-exchange-2013-help.md).
+Дополнительные сведения о создании списков адресов с помощью фильтров получателей см. в разделе [Создание списка адресов с помощью фильтров получателей](https://docs.microsoft.com/ru-ru/exchange/address-books/address-lists/use-recipient-filters-to-create-an-address-list).
 
 Для создания ABP необходимо предоставить список адресов помещений. Если в организации нет почтовых ящиков ресурсов для оборудования и помещений, стоит создать пустой список адресов помещений. В следующем примере создается пустой список адресов помещений, так как в организации отсутствуют почтовые ящики помещений.
 
@@ -303,7 +303,7 @@ _**Последнее изменение раздела:** 2016-12-09_
 
     New-GlobalAddressList -Name "GAL_TAIL" -RecipientFilter {(CustomAttribute15 -eq "TAIL")}
 
-Подробнее см. в разделе [Создание глобального списка адресов](create-a-global-address-list-exchange-2013-help.md).
+Подробнее см. в разделе [Создание глобального списка адресов](https://docs.microsoft.com/ru-ru/exchange/address-books/address-lists/create-global-address-list).
 
 При создании автономной адресной книги необходимо включить соответствующий глобальный список адресов при указании параметра *AddressLists* в командлете New- или Set-OfflineAddressBook, чтобы не пропустить записи. В целом можно настроить набор записей, которые пользователь будет видеть, или уменьшить размер автономной адресной книги, указав список AddressLists в AddressLists для New/Set-OfflineAddressBook Если же пользователь должен видеть полный набор записей глобального списка адресов в автономной адресной книге, включите глобальный список адресов в AddressLists.
 
@@ -311,7 +311,7 @@ _**Последнее изменение раздела:** 2016-12-09_
 
     New-OfflineAddressBook -Name "OAB_FAB" -AddressLists "GAL_FAB"
 
-Подробнее см. в разделе [Создание автономной адресной книги](create-an-offline-address-book-exchange-2013-help.md).
+Подробнее см. в разделе [Создание автономной адресной книги](https://docs.microsoft.com/ru-ru/exchange/address-books/offline-address-books/create-offline-address-book).
 
 ## Действие 4. Создание политик адресных книг
 
@@ -319,7 +319,7 @@ _**Последнее изменение раздела:** 2016-12-09_
 
     New-AddressBookPolicy -Name "ABP_TAIL" -AddressLists "AL_TAIL_Users_DGs"," AL_TAIL_Contacts" -OfflineAddressBook "\OAB_TAIL" -GlobalAddressList "\GAL_TAIL" -RoomList "\AL_TAIL_Rooms"
 
-Подробнее см. в разделе [Создание политики адресных книг](create-an-address-book-policy-exchange-2013-help.md).
+Подробнее см. в разделе [Создание политики адресных книг](https://docs.microsoft.com/ru-ru/exchange/address-books/address-book-policies/create-an-address-book-policy).
 
 ## Действие 5. Назначение политик адресной книги почтовым ящикам
 
@@ -329,5 +329,5 @@ _**Последнее изменение раздела:** 2016-12-09_
 
     Get-Mailbox -resultsize unlimited | where {$_.CustomAttribute15 -eq "TAIL"} | Set-Mailbox -AddressBookPolicy "ABP_TAIL"
 
-Подробнее см. в разделе [Назначение политики адресной книги пользователям почты](assign-an-address-book-policy-to-mail-users-exchange-2013-help.md).
+Подробнее см. в разделе [Назначение политики адресной книги пользователям почты](https://docs.microsoft.com/ru-ru/exchange/address-books/address-book-policies/assign-an-address-book-policy-to-mail-users).
 

@@ -23,9 +23,9 @@ _**Последнее изменение раздела:** 2016-12-09_
 
   - [Планирование единой системы обмена сообщениями](planning-for-unified-messaging-exchange-2013-help.md)
 
-  - [Интеграция телефонной системы с единой системой обмена сообщениями](telephone-system-integration-with-um-exchange-2013-help.md)
+  - [Интеграция телефонной системы с единой системой обмена сообщениями](https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/telephone-system-integration-with-um/telephone-system-integration-with-um)
 
-  - [Подключиться к телефонной сети вашей системы голосовой почты](connect-your-voice-mail-system-to-your-telephone-network-exchange-2013-help.md)
+  - [Подключиться к телефонной сети вашей системы голосовой почты](https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/connect-voice-mail-system/connect-voice-mail-system)
 
 Пошаговое руководство по обновлению единой системы обмена сообщениями Exchange 2007 до версии единой системы обмена сообщениями Exchange 2013 см. в разделе [Обновление единой системы обмена СООБЩЕНИЯМИ Exchange 2007 до Exchange 2013](upgrade-exchange-2007-um-to-exchange-2013-um-exchange-2013-help.md).
 
@@ -109,31 +109,31 @@ _**Последнее изменение раздела:** 2016-12-09_
 <tr class="odd">
 <td><p></p></td>
 <td><p>Создание или настройка существующих абонентских доступов единой системы обмена сообщениями.</p></td>
-<td><p><a href="create-a-um-dial-plan-exchange-2013-help.md">Создание абонентской группы единой системы обмена сообщениями</a></p>
-<p><a href="manage-a-um-dial-plan-exchange-2013-help.md">Управление абонентской группой единой системы обмена сообщениями</a></p></td>
+<td><p><a href="https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/connect-voice-mail-system/create-um-dial-plan">Создание абонентской группы единой системы обмена сообщениями</a></p>
+<p><a href="https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/connect-voice-mail-system/manage-um-dial-plan">Управление абонентской группой единой системы обмена сообщениями</a></p></td>
 </tr>
 <tr class="even">
 <td><p></p></td>
 <td><p>Создание или настройка существующих шлюзов IP единой системы обмена сообщениями.</p></td>
-<td><p><a href="create-a-um-ip-gateway-exchange-2013-help.md">Создание шлюза IP единой системы обмена сообщениями</a></p>
-<p><a href="manage-a-um-ip-gateway-exchange-2013-help.md">Управление шлюзом IP единой системы обмена сообщениями</a></p></td>
+<td><p><a href="https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/connect-voice-mail-system/create-um-ip-gateway">Создание шлюза IP единой системы обмена сообщениями</a></p>
+<p><a href="https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/connect-voice-mail-system/manage-um-ip-gateway">Управление шлюзом IP единой системы обмена сообщениями</a></p></td>
 </tr>
 <tr class="odd">
 <td><p></p></td>
 <td><p>Создание сервисной группы единой системы обмена сообщениями.</p></td>
-<td><p><a href="create-a-um-hunt-group-exchange-2013-help.md">Создание сервисной группы единой системы обмена сообщениями</a></p></td>
+<td><p><a href="https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/connect-voice-mail-system/create-um-hunt-group">Создание сервисной группы единой системы обмена сообщениями</a></p></td>
 </tr>
 <tr class="even">
 <td><p></p></td>
 <td><p>Создание или настройка автосекретарей единой системы обмена сообщениями.</p></td>
-<td><p><a href="create-a-um-auto-attendant-exchange-2013-help.md">Создание автосекретаря единой системы обмена сообщениями</a></p>
-<p><a href="manage-a-um-auto-attendant-exchange-2013-help.md">Управление автосекретаря единой системы обмена СООБЩЕНИЯМИ</a></p></td>
+<td><p><a href="https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/automatically-answer-and-route-calls/create-a-um-auto-attendant">Создание автосекретаря единой системы обмена сообщениями</a></p>
+<p><a href="https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/automatically-answer-and-route-calls/manage-um-auto-attendant">Управление автосекретаря единой системы обмена СООБЩЕНИЯМИ</a></p></td>
 </tr>
 <tr class="odd">
 <td><p></p></td>
 <td><p>Создание или настройка политики почтовых ящиков единой системы обмена сообщениями.</p></td>
-<td><p><a href="create-a-um-mailbox-policy-exchange-2013-help.md">Создание политики почтовых ящиков единой системы обмена сообщениями</a></p>
-<p><a href="manage-a-um-mailbox-policy-exchange-2013-help.md">Управление политикой почтовых ящиков единой системы обмена СООБЩЕНИЯМИ</a></p></td>
+<td><p><a href="https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-voice-mail/create-um-mailbox-policy">Создание политики почтовых ящиков единой системы обмена сообщениями</a></p>
+<p><a href="https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-voice-mail/manage-um-mailbox-policy">Управление политикой почтовых ящиков единой системы обмена СООБЩЕНИЯМИ</a></p></td>
 </tr>
 <tr class="even">
 <td><p></p></td>
@@ -143,13 +143,13 @@ _**Последнее изменение раздела:** 2016-12-09_
 <tr class="odd">
 <td><p></p></td>
 <td><p>Включение новых пользователей для единой системы обмена сообщениями или настройка параметров для существующего пользователя с включенной единой системой обмена сообщениями.</p></td>
-<td><p><a href="enable-a-user-for-voice-mail-exchange-2013-help.md">Включение для пользователя поддержки голосовой почты</a></p>
-<p><a href="manage-voice-mail-settings-for-a-user-exchange-2013-help.md">Управление параметрами голосовой почты для пользователя</a></p></td>
+<td><p><a href="https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-voice-mail/enable-a-user-for-voice-mail">Включение для пользователя поддержки голосовой почты</a></p>
+<p><a href="https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-voice-mail/manage-voice-mail-settings">Управление параметрами голосовой почты для пользователя</a></p></td>
 </tr>
 <tr class="even">
 <td><p></p></td>
 <td><p>Настройка шлюзов VoIP, IP УАТС и УАТС с поддержкой SIP для направления всех входящих вызовов на серверы клиентского доступа Exchange 2013.</p></td>
-<td><p><a href="configuration-notes-for-supported-voip-gateways-ip-pbxs-and-pbxs-exchange-2013-help.md">Заметки по конфигурации для поддерживаемых шлюзов VoIP, IP-УАТС и УАТС</a> <a href="connect-a-voip-gateway-ip-pbx-or-session-border-controller-to-um-exchange-2013-help.md">Подключение VoIP шлюз, IP-УАТС или сеанс пограничного контроллера единой системы обмена сообщениями</a></p></td>
+<td><p><a href="https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/telephone-system-integration-with-um/configuration-notes-for-voip-gateways">Заметки по конфигурации для поддерживаемых шлюзов VoIP, IP-УАТС и УАТС</a> <a href="connect-a-voip-gateway-ip-pbx-or-session-border-controller-to-um-exchange-2013-help.md">Подключение VoIP шлюз, IP-УАТС или сеанс пограничного контроллера единой системы обмена сообщениями</a></p></td>
 </tr>
 <tr class="odd">
 <td><p></p></td>

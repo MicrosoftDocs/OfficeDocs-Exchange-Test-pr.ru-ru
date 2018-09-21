@@ -108,25 +108,25 @@ UM features that operate differently for secondary dial plans
 
 Дополнительные сведения о добавлении, удалении или изменении добавочных номеров см. в одном из следующих разделов.
 
-  - [Изменение добавочного номера](change-an-extension-number-exchange-2013-help.md)
+  - [Изменение добавочного номера](https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-voice-mail/change-extension-number)
 
-  - [Добавление добавочный номер](add-an-extension-number-exchange-2013-help.md)
+  - [Добавление добавочный номер](https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-voice-mail/add-extension-number)
 
-  - [Удалить добавочный номер](remove-an-extension-number-exchange-2013-help.md)
+  - [Удалить добавочный номер](https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-voice-mail/remove-extension-number)
 
 Сведения об изменении SIP-адресов или номеров E.164 для пользователей с включенной поддержкой единой системы обмена сообщениями см. в следующих разделах.
 
-  - [Добавление SIP-адрес](add-a-sip-address-exchange-2013-help.md)
+  - [Добавление SIP-адрес](https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-voice-mail/add-sip-address)
 
-  - [Изменение SIP-адреса](change-a-sip-address-exchange-2013-help.md)
+  - [Изменение SIP-адреса](https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-voice-mail/change-sip-address)
 
-  - [Удалите адрес SIP](remove-a-sip-address-exchange-2013-help.md)
+  - [Удалите адрес SIP](https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-voice-mail/remove-sip-address)
 
-  - [Добавление номера E.164](add-an-e-164-number-exchange-2013-help.md)
+  - [Добавление номера E.164](https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-voice-mail/add-e-164-number)
 
-  - [Измените номер формата E.164](change-an-e-164-number-exchange-2013-help.md)
+  - [Измените номер формата E.164](https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-voice-mail/change-e-164-number)
 
-  - [Удаление номером E.164](remove-an-e-164-number-exchange-2013-help.md)
+  - [Удаление номером E.164](https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-voice-mail/remove-e-164-number)
 
 ## Автоответчик
 
