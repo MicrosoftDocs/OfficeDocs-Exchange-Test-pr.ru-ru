@@ -756,14 +756,14 @@
           - name: Перенос из управляемых папок
             href: migrate-from-managed-folders-exchange-2013-help.md
           - name: Отключение или приостановка функции управления записями сообщений
-            href: turn-off-or-suspend-https://docs.microsoft.com/ru-ru/exchange/security-and-compliance/messaging-records-management/messaging-records-management
+            href: turn-off-or-suspend-messaging-records-management-exchange-2013-help.md
       - name: Мониторинг системы обмена сообщениями управления записями
-        href: monitoring-https://docs.microsoft.com/ru-ru/exchange/security-and-compliance/messaging-records-management/messaging-records-management
+        href: monitoring-messaging-records-management-exchange-2013-help.md
         items:
         - name: Счетчики производительности представления для системы управления записями обмена сообщениями
-          href: view-performance-counters-for-https://docs.microsoft.com/ru-ru/exchange/security-and-compliance/messaging-records-management/messaging-records-management
+          href: view-performance-counters-for-messaging-records-management-exchange-2013-help.md
         - name: Счетчики производительности для управления записями сообщений
-          href: performance-counters-for-https://docs.microsoft.com/ru-ru/exchange/security-and-compliance/messaging-records-management/messaging-records-management
+          href: performance-counters-for-messaging-records-management-exchange-2013-help.md
         - name: Ошибки и события управления записями сообщений
           href: messaging-records-management-errors-and-events-exchange-2013-help.md
     - name: Ведение журнала
@@ -895,7 +895,7 @@
         - name: Включение и отключение расшифровки транспорта
           href: enable-or-disable-transport-decryption-exchange-2013-help.md
         - name: Настройка управления правами на доступ к данным для поиска Exchange и обнаружения электронных данных на месте
-          href: configure-irm-for-exchange-search-and-https://docs.microsoft.com/ru-ru/exchange/security-and-compliance/in-place-ediscovery/in-place-ediscovery
+          href: configure-irm-for-exchange-search-and-in-place-ediscovery-exchange-2013-help.md
         - name: Включение и отключение расшифровки отчета журнала
           href: enable-or-disable-journal-report-decryption-exchange-2013-help.md
         - name: Включение и отключение управления правами на доступ к данным на серверах клиентского доступа
@@ -1415,7 +1415,7 @@
       href: https://docs.microsoft.com/ru-ru/exchange/address-books/address-book-policies/address-book-policies
       items:
       - name: Сценарий. Развертывание политик адресных книг
-        href: scenario-deploying-https://docs.microsoft.com/ru-ru/exchange/address-books/address-book-policies/address-book-policies
+        href: scenario-deploying-address-book-policies-exchange-2013-help.md
       - name: Процедуры политики адресной книги
         href: address-book-policy-procedures-exchange-2013-help.md
         items:
@@ -1711,7 +1711,7 @@
       - name: Управление доступом пользователей к приложениям для Outlook
         href: https://docs.microsoft.com/ru-ru/exchange/clients-and-mobile-in-exchange-online/add-ins-for-outlook/manage-user-access-to-add-ins
       - name: Выбор администраторов и пользователей, которые могут устанавливать надстройки для Outlook и управлять ими
-        href: specify-the-administrators-and-users-who-can-install-and-manage-https://docs.microsoft.com/ru-ru/exchange/clients-and-mobile-in-exchange-online/add-ins-for-outlook/add-ins-for-outlook
+        href: https://docs.microsoft.com/ru-ru/exchange/clients-and-mobile-in-exchange-online/add-ins-for-outlook/specify-who-can-install-and-manage-add-ins
     - name: Настройка разгрузки SSL в Exchange 2013
       href: configuring-ssl-offloading-in-exchange-2013-exchange-2013-help.md
   - name: Единая система обмена сообщениями
@@ -2113,9 +2113,9 @@
           href: allowing-users-to-make-calls-procedures-exchange-2013-help.md
           items:
           - name: Включение исходящих вызовов
-            href: enable-outgoing-calls-on-https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/connect-voice-mail-system/um-ip-gateways
+            href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-client-voice-mail-features/enable-outgoing-calls-on-um-ip-gateways
           - name: Отключение исходящих звонков на шлюзы IP единой системы обмена СООБЩЕНИЯМИ
-            href: disable-outgoing-calls-on-https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/connect-voice-mail-system/um-ip-gateways
+            href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-client-voice-mail-features/disable-outgoing-calls-on-um-ip-gateways
           - name: Настройка телефонные коды
             href: configure-dial-codes-exchange-2013-help.md
           - name: Создание правил набора номера для пользователей
