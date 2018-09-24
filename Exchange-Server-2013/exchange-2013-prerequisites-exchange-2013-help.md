@@ -84,14 +84,14 @@ _**Последнее изменение раздела:** 2017-03-20_
       - На компьютере под управлением Windows Server 2012 R2 или Windows Server 2012 выполните следующую команду.
         
         ```powershell
-Install-WindowsFeature RSAT-ADDS
-```
+        Install-WindowsFeature RSAT-ADDS
+        ```
     
       - На компьютере под управлением Windows Server 2008 R2 с пакетом обновления 1 (SP1) выполните следующую команду.
         
         ```powershell
-Add-WindowsFeature RSAT-ADDS
-```
+        Add-WindowsFeature RSAT-ADDS
+        ```
 
 ## Необходимые условия для установки Windows Server 2012 R2 и Windows Server 2012
 
@@ -113,7 +113,10 @@ Add-WindowsFeature RSAT-ADDS
 
 2.  Запустите следующую команду для установки необходимых компонентов Windows.
     
-        Install-WindowsFeature AS-HTTP-Activation, Desktop-Experience, NET-Framework-45-Features, RPC-over-HTTP-proxy, RSAT-Clustering, RSAT-Clustering-CmdInterface, RSAT-Clustering-Mgmt, RSAT-Clustering-PowerShell, Web-Mgmt-Console, WAS-Process-Model, Web-Asp-Net45, Web-Basic-Auth, Web-Client-Auth, Web-Digest-Auth, Web-Dir-Browsing, Web-Dyn-Compression, Web-Http-Errors, Web-Http-Logging, Web-Http-Redirect, Web-Http-Tracing, Web-ISAPI-Ext, Web-ISAPI-Filter, Web-Lgcy-Mgmt-Console, Web-Metabase, Web-Mgmt-Console, Web-Mgmt-Service, Web-Net-Ext45, Web-Request-Monitor, Web-Server, Web-Stat-Compression, Web-Static-Content, Web-Windows-Auth, Web-WMI, Windows-Identity-Foundation, RSAT-ADDS
+    ```powershell
+    Install-WindowsFeature AS-HTTP-Activation, Desktop-Experience, NET-Framework-45-Features, RPC-over-HTTP-proxy, RSAT-Clustering, RSAT-Clustering-CmdInterface, RSAT-Clustering-Mgmt, RSAT-Clustering-PowerShell, Web-Mgmt-Console, WAS-Process-Model, Web-Asp-Net45, Web-Basic-Auth, Web-Client-Auth, Web-Digest-Auth, Web-Dir-Browsing, Web-Dyn-Compression, Web-Http-Errors, Web-Http-Logging, Web-Http-Redirect, Web-Http-Tracing, Web-ISAPI-Ext, Web-ISAPI-Filter, Web-Lgcy-Mgmt-Console, Web-Metabase, Web-Mgmt-Console, Web-Mgmt-Service, Web-Net-Ext45, Web-Request-Monitor, Web-Server, Web-Stat-Compression, Web-Static-Content, Web-Windows-Auth, Web-WMI,Windows-Identity-Foundation, RSAT-ADDS
+    ```
+
 
 После установки ролей и компонентов операционной системы установите следующее программное обеспечение в порядке перечисления:
 
@@ -138,8 +141,8 @@ Add-WindowsFeature RSAT-ADDS
 2.  Запустите следующую команду для установки необходимых компонентов Windows.
     
     ```powershell
-Install-WindowsFeature ADLDS
-```
+    Install-WindowsFeature ADLDS
+    ```
 
 Установите версию Microsoft .NET Framework, соответствующую устанавливаемой версии Exchange 2013.
 
@@ -172,12 +175,14 @@ Install-WindowsFeature ADLDS
 2.  Запустите следующую команду, чтобы загрузить модуль диспетчера сервера.
     
     ```powershell
-Import-Module ServerManager
-```
+    Import-Module ServerManager
+    ```
 
 3.  Запустите следующую команду для установки необходимых компонентов Windows.
     
-        Add-WindowsFeature Desktop-Experience, NET-Framework, NET-HTTP-Activation, RPC-over-HTTP-proxy, RSAT-Clustering, RSAT-Web-Server, WAS-Process-Model, Web-Asp-Net, Web-Basic-Auth, Web-Client-Auth, Web-Digest-Auth, Web-Dir-Browsing, Web-Dyn-Compression, Web-Http-Errors, Web-Http-Logging, Web-Http-Redirect, Web-Http-Tracing, Web-ISAPI-Ext, Web-ISAPI-Filter, Web-Lgcy-Mgmt-Console, Web-Metabase, Web-Mgmt-Console, Web-Mgmt-Service, Web-Net-Ext, Web-Request-Monitor, Web-Server, Web-Stat-Compression, Web-Static-Content, Web-Windows-Auth, Web-WMI, RSAT-ADDS
+    ```powershell
+    Add-WindowsFeature Desktop-Experience, NET-Framework, NET-HTTP-Activation, RPC-over-HTTP-proxy, RSAT-Clustering, RSAT-Web-Server, WAS-Process-Model, Web-Asp-Net, Web-Basic-Auth, Web-Client-Auth, Web-Digest-Auth, Web-Dir-Browsing, Web-Dyn-Compression, Web-Http-Errors, Web-Http-Logging, Web-Http-Redirect, Web-Http-Tracing, Web-ISAPI-Ext, Web-ISAPI-Filter, Web-Lgcy-Mgmt-Console, Web-Metabase, Web-Mgmt-Console, Web-Mgmt-Service, Web-Net-Ext, Web-Request-Monitor, Web-Server, Web-Stat-Compression, Web-Static-Content, Web-Windows-Auth, Web-WMI, RSAT-ADDS
+    ```
 
 После установки ролей и компонентов операционной системы установите следующее программное обеспечение в порядке перечисления:
 
@@ -212,14 +217,14 @@ Import-Module ServerManager
 2.  Запустите следующую команду, чтобы загрузить модуль диспетчера сервера.
     
     ```powershell
-Import-Module ServerManager
-```
+    Import-Module ServerManager
+    ```
 
 3.  Запустите следующую команду для установки необходимых компонентов Windows.
     
     ```powershell
-Add-WindowsFeature NET-Framework, ADLDS
-```
+    Add-WindowsFeature NET-Framework, ADLDS
+    ```
 
 После установки ролей и компонентов операционной системы установите следующее программное обеспечение в порядке перечисления:
 

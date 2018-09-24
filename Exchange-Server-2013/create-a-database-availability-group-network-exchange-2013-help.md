@@ -60,7 +60,9 @@ _**Последнее изменение раздела:** 2012-11-02_
 
 В этом примере создается сеть ReplicationDagNetwork02 с подсетью 10.0.0.0 и битовой маской 8 в группе DAG1. Для этой сети включена репликация, а также добавляется необязательное описание.
 
-    New-DatabaseAvailabilityGroupNetwork -DatabaseAvailabilityGroup DAG1 -Name ReplicationDagNetwork02 -Description "Replication network 2" -Subnets 10.0.0.0/8 -ReplicationEnabled:$True
+```powershell
+New-DatabaseAvailabilityGroupNetwork -DatabaseAvailabilityGroup DAG1 -Name ReplicationDagNetwork02 -Description "Replication network 2" -Subnets 10.0.0.0/8 -ReplicationEnabled:$True
+```
 
 ## Как проверить, что все получилось?
 
@@ -71,8 +73,8 @@ _**Последнее изменение раздела:** 2012-11-02_
   - Чтобы проверить, создана ли сеть DAG, и вывести сведения о ее конфигурации, выполните в командной консоли Exchange следующую команду:
     
     ```powershell
-Get-DatabaseAvailabilityGroupNetwork <DAGNetworkName> | Format-List
-```
+    Get-DatabaseAvailabilityGroupNetwork <DAGNetworkName> | Format-List
+    ```
 
 ## Дополнительные сведения
 

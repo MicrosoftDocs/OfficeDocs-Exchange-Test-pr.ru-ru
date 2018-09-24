@@ -73,5 +73,6 @@ Set-Mailbox -Identity "Chris Ashton" -ArchiveQuota 10GB -ArchiveWarningQuota 9.5
 
   - Чтобы просмотреть сведения об архиве, выполните в командной консоли следующую команду.
     
-        Get-Mailbox <Name> | FL Name,Archive*Quota
-
+    ```powershell
+    Get-Mailbox <Name> | FL Name,Archive*Quota
+    ```

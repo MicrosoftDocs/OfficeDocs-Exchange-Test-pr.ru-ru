@@ -43,7 +43,9 @@ New-MailboxDatabase -Recovery -Name RDB1 -Server MBX2
 
 В этом примере показано, как создать базу данных восстановления RDB2 на сервере почтовых ящиков MBX1 с помощью пользовательского пути к файлу базы данных и папке журнала.
 
-    New-MailboxDatabase -Recovery -Name RDB2 -Server MBX1 -EdbFilePath "C:\Recovery\RDB2\RDB2.EDB" -LogFolderPath "C:\Recovery\RDB2"
+```powershell
+New-MailboxDatabase -Recovery -Name RDB2 -Server MBX1 -EdbFilePath "C:\Recovery\RDB2\RDB2.EDB" -LogFolderPath "C:\Recovery\RDB2"
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [New-MailboxDatabase](https://technet.microsoft.com/ru-ru/library/aa997976\(v=exchg.150\)).
 
@@ -54,8 +56,8 @@ New-MailboxDatabase -Recovery -Name RDB1 -Server MBX2
   - Чтобы просмотреть сведения о конфигурации базы данных восстановления, выполните в консоли следующую команду:
     
     ```powershell
-Get-MailboxDatabase <RecoveryDatabaseName> | Format-List
-```
+    Get-MailboxDatabase <RecoveryDatabaseName> | Format-List
+    ```
 
 ## Другие задачи
 

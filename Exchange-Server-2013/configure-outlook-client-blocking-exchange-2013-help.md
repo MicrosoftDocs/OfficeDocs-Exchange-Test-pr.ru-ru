@@ -175,8 +175,9 @@ Set-CASMailbox -Identity adam@contoso.com -MAPIBlockOutlookVersions $null
 > [!IMPORTANT]  
 > Значения, используемые с параметром <em>BlockedClientVersions</em>, приводятся в качестве примеров. Определить правильные версии клиентского программного обеспечения можно с помощью анализа файлов журнала клиентского доступа RPC, находящихся в папке <code>%ExchangeInstallPath%Logging\RPC Client Access</code>.
 
-
-    Set-RpcClientAccess -Server CAS01 -BlockedClientVersions "0.0.0-5.65535.65535;7.0.0;8.02.4-11.65535.65535"
+```powershell
+Set-RpcClientAccess -Server CAS01 -BlockedClientVersions "0.0.0-5.65535.65535;7.0.0;8.02.4-11.65535.65535"
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в статье [Set-RpcClientAccess](https://technet.microsoft.com/ru-ru/library/dd351072\(v=exchg.150\)).
 

@@ -250,7 +250,9 @@ _**Последнее изменение раздела:** 2015-03-09_
 
 Как упоминалось ранее, группа ролей включает в себя несколько уровней. Чтобы понять, что происходит при создании группы ролей, см. следующий пример создания новой группы ролей.
 
-    New-RoleGroup -Name "Seattle Recipient Management" -Roles "Mail Recipients", "Distribution Groups", "Move Mailboxes", "UM Mailboxes" -CustomRecipientWriteScope "Seattle Users", -ManagedBy "Brian", "David", "Katie" -Members "Ray", "Jenn", "Maria", "Chris", "Maija", "Carter", "Jenny", "Sam", "Lukas", "Isabel", "Katie"
+```powershell
+New-RoleGroup -Name "Seattle Recipient Management" -Roles "Mail Recipients", "Distribution Groups", "Move Mailboxes", "UM Mailboxes" -CustomRecipientWriteScope "Seattle Users", -ManagedBy "Brian", "David", "Katie" -Members "Ray", "Jenn", "Maria", "Chris", "Maija", "Carter", "Jenny", "Sam", "Lukas", "Isabel", "Katie"
+```
 
 При выполнении предыдущей команды происходит следующее.
 
