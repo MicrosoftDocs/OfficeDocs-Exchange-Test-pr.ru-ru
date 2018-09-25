@@ -63,21 +63,21 @@ Get-SystemMessage En\Internal\5.1.2 | Format-List
 ## Использование командной консоли для создания настраиваемого сообщения DSN
 
 Выполните следующую команду:
-
+```powershell
     New-SystemMessage -Internal <$true | $false> -Language <Locale> -DSNCode <x.y.z> -Text "<DSN text>"
-
+```
 В этом примере показано создание настраиваемого сообщения DSN в виде простого текста для кода DSN 5.1.2, отправляемого внутренним отправителям на английском языке.
-
+```powershell
     New-SystemMessage -Internal $true -Language En -DSNCode 5.1.2 -Text "You tried to send a message to a disabled mailbox that's no longer accepting messages. Please contact the Help Desk at extension 123 for assistance."
-
+```
 В этом примере показано создание настраиваемого сообщения DSN в виде простого текста для кода DSN 5.1.2, отправляемого внешним отправителям на английском языке.
-
+```powershell
     New-SystemMessage -Internal $false -Language En -DSNCode 5.1.2 -Text "You tried to send a message to a disabled mailbox that's no longer accepting messages. Please contact your System Administrator for more information."
-
+```
 В этом примере показано создание настраиваемого HTML сообщения DSN в виде простого текста для кода DSN 5.1.2, отправляемого внутренним отправителям на английском языке.
-
+```powershell
     New-SystemMessage -DSNCode 5.1.2 -Internal $true -Language En -Text 'You tried to send a message to a <B>disabled</B> mailbox. Please visit <A HREF="http://it.contoso.com">Internal Support</A> or contact &quot;InfoSec&quot; for more information.'
-
+```
 ## Как проверить, что все получилось?
 
 Чтобы проверить, успешно ли создано настраиваемое сообщение DSN, выполните следующие действия.
@@ -85,8 +85,8 @@ Get-SystemMessage En\Internal\5.1.2 | Format-List
 1.  Выполните следующую команду:
     
     ```powershell
-Get-SystemMessge -DSNCode <x.y.z> | Format-List Name,Internal,Text,Language
-```
+	Get-SystemMessge -DSNCode <x.y.z> | Format-List Name,Internal,Text,Language
+	```
 
 2.  Убедитесь, что отображаются настроенные значения.
 
@@ -95,13 +95,13 @@ Get-SystemMessge -DSNCode <x.y.z> | Format-List Name,Internal,Text,Language
 ## Изменение текста настраиваемого уведомления о доставке с помощью командной консоли Exchange
 
 Чтобы изменить текст настраиваемого сообщения DSN выполните следующую команду.
-
+```powershell
     Set-SystemMessage <Locale>\<Internal | External>\<DSNcode> -Text "<DSN text>"
-
+```
 В этом примере показано изменение текста, назначенного настраиваемому сообщению DSN для кода 5.1.2, отправляемого внутренним отправителям на английском языке.
-
+```powershell
     Set-SystemMessage En\Internal\5.1.2 -Text "The mailbox you tried to send an e-mail message to is disabled and is no longer accepting messages. Please contact the Help Desk at extension 123 for assistance."
-
+```
 ## Как проверить, что все получилось?
 
 Чтобы проверить, успешно ли изменен текст настраиваемого сообщения DSN, выполните следующие действия.
@@ -109,8 +109,8 @@ Get-SystemMessge -DSNCode <x.y.z> | Format-List Name,Internal,Text,Language
 1.  Выполните следующую команду: `Get-SystemMessage`.
     
     ```powershell
-Set-SystemMessage <Locale>\<Internal | External>\<DSNcode> | Format-List -Text
-```
+	Set-SystemMessage <Locale>\<Internal | External>\<DSNcode> | Format-List -Text
+	```
 
 2.  Убедитесь, что отображается значение, которое вы настроили.
 
@@ -149,14 +149,14 @@ Remove-SystemMessage En\Internal\5.1.2
 2.  Выполните следующую команду:
     
     ```powershell
-Set-OrganizationConfig -MicrosoftExchangeRecipientReplyRecipient <MailboxIdentity>
-```
+	Set-OrganizationConfig -MicrosoftExchangeRecipientReplyRecipient <MailboxIdentity>
+	```
     
     Например, чтобы назначить существующий почтовый ящик с именем "Системный почтовый ящик Contoso" получателю Exchange, выполните следующую команду.
     
     ```powershell
-Set-OrganizationConfig -MicrosoftExchangeRecipientReplyRecipient "Contoso System Mailbox"
-```
+	Set-OrganizationConfig -MicrosoftExchangeRecipientReplyRecipient "Contoso System Mailbox"
+	```
 
 ## Действие 2. Указание кодов уведомлений о доставке, которые нужно отслеживать
 
@@ -181,9 +181,9 @@ Set-TransportConfig -GenerateCopyOfDSNFor 5.7.1,5.7.2,5.7.3
 ```
 
 Чтобы добавить или удалить записи, не изменив существующие значения, выполните следующую команду:
-
+```powershell
     Set-TransportConfig -GenerateCopyOfDSNFor @{Add="<x.y.z>","<x.y.z>"...; Remove="<x.y.z>","<x.y.z>"...}
-
+```
 В этом примере показано добавление кода уведомлений о доставке 5.7.5 и удаление кода 5.7.1 из существующего списка сообщений DSN, которые перенаправляются получателю Exchange.
 
 ```powershell

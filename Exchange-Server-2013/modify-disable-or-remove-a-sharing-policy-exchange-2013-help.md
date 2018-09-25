@@ -84,37 +84,34 @@ _**Последнее изменение раздела:** 2014-02-15_
   - В этом примере имя политики общего доступа Contoso изменяется на contoso.com, которое принадлежит внешнему домену. Эта политика позволяет пользователям домена Contoso просматривать сведения о занятости.
     
     ```powershell
-Set-SharingPolicy -Identity Contoso -Domains 'sales.contoso.com: CalendarSharingFreeBusySimple'
-```
+	Set-SharingPolicy -Identity Contoso -Domains 'sales.contoso.com: CalendarSharingFreeBusySimple'
+	```
 
   - В этом примере к политике общего доступа Contoso добавляется второй домен. При добавлении домена к существующей политике необходимо включить в нее все ранее включенные домены.
-    
+    ```powershell
         Set-SharingPolicy -Identity Contoso -Domains 'contoso.com: CalendarSharingFreeBusySimple', 'atlanta.contoso.com: CalendarSharingFreeBusyReviewer', 'beijing.contoso.com: CalendarSharingFreeBusyReviewer'
-
+	```
   - В этом примере политика общего доступа Contoso устанавливается как политика общего доступа по умолчанию.
     
     ```powershell
-Set-SharingPolicy -Identity Contoso -Default $True
-```
+	Set-SharingPolicy -Identity Contoso -Default $True
+	```
 
   - В этом примере отключается политика общего доступа Contoso.
     
     ```powershell
-Set-SharingPolicy -Identity "Contoso" -Enabled $False
-```
+	Set-SharingPolicy -Identity "Contoso" -Enabled $False
+	```
 
   - В первом примере удаляется политика общего доступа Contoso. Во втором примере удаляется политика общего доступа Contoso, а подтверждение удаления политики не выводится.
-    
-```
-    ```powershell
-Remove-SharingPolicy -Identity Contoso
-```
-```
-```    
-    ```powershell
-Remove-SharingPolicy -Identity Contoso -Confirm
-```
-```
+
+	```powershell
+	Remove-SharingPolicy -Identity Contoso
+	```
+	```powershell
+	Remove-SharingPolicy -Identity Contoso -Confirm
+	```
+
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделах [Set-SharingPolicy](https://technet.microsoft.com/ru-ru/library/dd297931\(v=exchg.150\)) и [Remove-SharingPolicy](https://technet.microsoft.com/ru-ru/library/dd351071\(v=exchg.150\)).
 

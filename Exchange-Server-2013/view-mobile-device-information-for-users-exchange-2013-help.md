@@ -48,6 +48,6 @@ _**Последнее изменение раздела:** 2012-11-29_
 1.  Выполните следующую команду.
     
     ```powershell
-Get-MobileDevice -Mailbox useralias
-```
+    Get-MobileDevice -Mailbox useralias
+    ```
 

@@ -52,16 +52,16 @@ _**Последнее изменение раздела:** 2013-02-13_
 ## Восстановление обратимо удаленной общедоступной папки
 
 В этом примере показано, как восстановить общедоступную папку \\Dev\\CustomerEnagagements в целевой почтовый ящик общедоступной папки Development01.
-
+```powershell
     New-MailboxRestoreRequest -SourceStoreMailbox Development -SourceDatabase MBX_DB01 -TargetMailbox Development01 -AllowLegacyDNMismatch -IncludeFolders \Dev\CustomerEngagements
-
+```
 Подробные сведения о синтаксисе и параметрах см. в разделе [New-MailboxRestoreRequest](https://technet.microsoft.com/ru-ru/library/ff829875\(v=exchg.150\)).
 
 ## Восстановление обратимо удаленного почтового ящика общедоступной папки
 
 В этом примере показано, как восстановить почтовый ящик общедоступной папки PF\_Singapore в новый почтовый ящик общедоступной папки PF\_Singapore\_Restore.
-
+```powershell
     New-MailboxRestoreRequest -SourceStoreMailbox PF_Singapore -SourceDatabase MBX_DB01 -TargetMailbox PF_Singapore_Restore -AllowLegacyDNMismatch
-
+```
 Подробные сведения о синтаксисе и параметрах см. в разделе [New-MailboxRestoreRequest](https://technet.microsoft.com/ru-ru/library/ff829875\(v=exchg.150\)).
 

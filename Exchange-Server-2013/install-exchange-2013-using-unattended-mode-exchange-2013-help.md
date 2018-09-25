@@ -86,7 +86,7 @@ _**Последнее изменение раздела:** 2014-06-19_
     
     > [!IMPORTANT]  
     > Если управление доступом на уровне пользователей (UAC) включено, необходимо выполнить <code>Setup.exe</code> из командной строки с повышенными полномочиями.
-    
+    ```powershell
         Setup.exe [/Mode:<setup mode>] [/IAcceptExchangeServerLicenseTerms]
         [/Roles:<server roles to install>] [/InstallWindowsComponents] 
         [/OrganizationName:<name for the new Exchange organization>] 
@@ -101,7 +101,7 @@ _**Последнее изменение раздела:** 2014-06-19_
         [/MdbName:<mailbox database name>] [/DbFilePath:<Edb file path>] 
         [/LogFolderPath:<log folder path>] [/ActiveDirectorySplitPermissions:<True | False>]
         [/TenantOrganizationConfig:<path>]
-
+	```
 4.  Программа установки копирует файлы установки локально на компьютер, на который устанавливается сервер Exchange 2013.
 
 5.  Программа установки проверяет выполнение предварительных условий, в том числе относящихся к устанавливаемым ролям сервера. Если выполнены не все предварительные условия, установка будет прекращена с возвратом ошибки, в которой объясняется причина сбоя. Если выполнены все условия, установка Exchange 2013 будет выполнена.

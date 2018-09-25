@@ -74,8 +74,8 @@ Set-ReceiveConnector "From the Internet" -Banner $null
 1.  Откройте клиент Telnet на компьютере, который может получить доступ к соединителю получения, и выполните следующую команду:
     
     ```powershell
-open <Connector FQDN or IP address> <Port>
-```
+	open <Connector FQDN or IP address> <Port>
+	```
 
 2.  Убедитесь, что ответ от соединителя получения содержит заданный заголовок SMTP.
 

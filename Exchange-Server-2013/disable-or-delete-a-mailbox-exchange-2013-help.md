@@ -137,19 +137,19 @@ Disable-Mailbox <identity>
 
 Ниже приведено несколько примеров команд для отключения почтовых ящиков.
 
-```
+
 ```powershell
 Disable-Mailbox danj
 ```
-```
-```
+
+```powershell
     Disable-Mailbox "Conf Room 31/1234 (12)"
 ```
-```
+
 ```powershell
 Disable-Mailbox sharedmbx@contoso.com
 ```
-```
+
 
 ## Как проверить, что все получилось?
 
@@ -160,9 +160,9 @@ Disable-Mailbox sharedmbx@contoso.com
   - В средстве "Пользователи и компьютеры Active Directory" щелкните правой кнопкой мыши учетную запись пользователя, почтовый ящик которого отключен, и выберите пункт **Свойства**. Обратите внимание, что поле **Электронная почта** на вкладке **Общие** пустое. Таким образом, почтовый ящик отключен, но учетная запись пользователя все еще существует.
 
   - В консоли Shell выполните следующую команду:
-    
+    ```powershell
         Get-MailboxDatabase | Get-MailboxStatistics | Where { $_.DisplayName -eq "<display name>" } | fl DisconnectReason,DisconnectDate
-    
+    ```
     Значение `Disabled` свойства *DisconnectReason* указывает, что почтовый ящик отключен.
     
     > [!NOTE]  
@@ -172,8 +172,8 @@ Disable-Mailbox sharedmbx@contoso.com
   - В консоли Shell выполните следующую команду:
     
     ```powershell
-Get-User <identity>
-```
+	Get-User <identity>
+	```
     
     Обратите внимание, что свойство *RecipientType* имеет значение `User`, а не `UserMailbox`, которое является значением для пользователей с включенными почтовыми ящиками. Также подтверждается, что почтовый ящик отключен, но учетная запись пользователя сохранена.
 
@@ -205,19 +205,18 @@ Remove-Mailbox <identity>
 
 Ниже приведено несколько примеров команд для удаления почтовых ящиков.
 
-```
+
 ```powershell
 Remove-Mailbox pilarp@contoso.com
 ```
-```
-```
+
+```powershell
     Remove-Mailbox "Fleet Van (16)"
-````
 ```
 ```powershell
 Remove-Mailbox corpprint
 ```
-```
+
 
 ## Как проверить, что все получилось?
 
@@ -230,9 +229,9 @@ Remove-Mailbox corpprint
 Или
 
 1.  Выполните следующую команду, чтобы убедиться, что почтовый ящик удален.
-    
+    ```powershell
         Get-MailboxDatabase | Get-MailboxStatistics | Where { $_.DisplayName -eq "<display name>" } | fl DisconnectReason,DisconnectDate
-    
+    ```
     Значение `Disabled` свойства *DisconnectReason* указывает, что почтовый ящик удален.
     
     > [!NOTE]  
@@ -242,8 +241,8 @@ Remove-Mailbox corpprint
 2.  Выполните следующую команду, чтобы убедиться, что учетная запись пользователя Active Directory удалена.
     
     ```powershell
-Get-User <identity>
-```
+	Get-User <identity>
+	```
     
     Команда вернет ошибку (не удалось найти пользователя), что подтверждает удаление учетной записи.
 

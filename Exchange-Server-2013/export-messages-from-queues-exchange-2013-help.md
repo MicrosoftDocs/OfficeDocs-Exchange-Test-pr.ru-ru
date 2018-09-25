@@ -50,37 +50,37 @@ _**Последнее изменение раздела:** 2014-05-05_
 ## Использование командной консоли для экспорта определенного сообщения из определенной очереди
 
 Чтобы экспортировать определенное сообщение из очереди, выполните следующую команду:
-
+```powershell
     Export-Message -Identity <MessageIdentity> | AssembleMessage -Path <FilePath>\<FileName>.eml
-
+```
 В этом примере описана процедура экспорта копии сообщения со значением 1234 для параметра **InternalMessageID**, расположенного в очереди доставки contoso.com на сервере Mailbox01 для файла с именем export.eml, который находится в каталоге D:\\Contoso Export.
-
+```powershell
     Export-Message -Identity Exchange01\Contoso.com\1234 | AssembleMessage -Path "D:\Contoso Export\export.eml"
-
+```
 ## Использование командной консоли для экспорта всех сообщений из определенной очереди
 
 Чтобы экспортировать все сообщения из определенной очереди и использовать значение параметра **InternetMessageID** для каждого сообщения в качестве имени файла, введите команду в следующем формате:
-
+```powershell
     Get-Message -Queue <QueueIdentity> | ForEach-Object {$Temp=<Path>+$_.InternetMessageID+".eml";$Temp=$Temp.Replace("<","_");$Temp=$Temp.Replace(">","_");Export-Message $_.Identity | AssembleMessage -Path $Temp}
-
+```
 Обратите внимание, что значение **InternetMessageID** содержит угловые скобки (\> и \<), которые необходимо удалить, т. к. они не разрешены в названиях файлов.
 
 В этом примере описана процедура экспорта копии всех сообщений из очереди доставки contoso.com на сервере Mailbox01 в локальный каталог с именем D:\\Contoso Export.
-
+```powershell
     Get-Message -Queue Mailbox01\Contoso.com | ForEach-Object {$Temp="D:\Contoso Export\"+$_.InternetMessageID+".eml";$Temp=$Temp.Replace("<","_");$Temp=$Temp.Replace(">","_");Export-Message $_.Identity | AssembleMessage -Path $Temp}
-
+```
 ## Использование командной консоли для экспорта определенных сообщений из всех очередей на сервере
 
 Чтобы экспортировать определенные сообщения из всех очередей на сервере и использовать значение **InternetMessageID** каждого сообщения в качестве имени файла, введите команду в следующем формате:
-
+```powershell
     Get-Message -Filter {<MessageFilter>} [-Server <ServerIdentity>] | ForEach-Object {$Temp=<Path>+$_.InternetMessageID+".eml";$Temp=$Temp.Replace("<","_");$Temp=$Temp.Replace(">","_");Export-Message $_.Identity | AssembleMessage -Path $Temp}
-
+```
 Обратите внимание, что значение **InternetMessageID** содержит угловые скобки (\> и \<), которые необходимо удалить, т. к. они не разрешены в названиях файлов.
 
 В этом примере описана процедура экспорта копии всех сообщений от отправителей в домене contoso.com со всех очередей на сервере Mailbox01 в локальный каталог с именем D:\\Contoso Export.
-
+```powershell
     Get-Message -Filter {FromAddress -like "*@contoso.com"} -Server Mailbox01 | ForEach-Object {$Temp="D:\Contoso Export\"+$_.InternetMessageID+".eml";$Temp=$Temp.Replace("<","_");$Temp=$Temp.Replace(">","_");Export-Message $_.Identity | AssembleMessage -Path $Temp}
-
+```
 > [!NOTE]  
 > Если опустить параметр <em>Server</em>, команда будет выполняться на локальном сервере.
 

@@ -94,8 +94,8 @@ Set-TransportConfig -InternalSMTPServers @{Add="10.0.1.10","10.0.1.11"}
 1.  Выполните следующую команду:
     
     ```powershell
-Get-TransportConfig | Format-List InternalSMTPServers
-```
+	Get-TransportConfig | Format-List InternalSMTPServers
+	```
 
 2.  Проверить IP-адрес хотя бы одного допустимого внутренние SMTP-сервера.
 

@@ -111,36 +111,36 @@ _**Последнее изменение раздела:** 2015-03-09_
 1.  В окне командной строки на сервере Exchange 2013, где требуется настроить поддержу устаревших агентов транспорта, откройте в Блокноте соответствующий файл конфигурации приложения с помощью следующей команды:
     
     ```powershell
-Notepad %ExchangeInstallPath%Bin\<AppConfigFile>
-```
+	Notepad %ExchangeInstallPath%Bin\<AppConfigFile>
+	```
     
     Например, чтобы открыть файл EdgeTransport.exe.config на сервере почтовых ящиков, выполните следующую команду:
     
     ```powershell
-Notepad %ExchangeInstallPath%Bin\EdgeTransport.exe.config
-```
+	Notepad %ExchangeInstallPath%Bin\EdgeTransport.exe.config
+	```
 
 2.  Найдите ключ *\</configuration\>* в конце файла и вставьте следующие ключи перед ключом *\</configuration\>*:
-    
+    ```powershell
         <startup useLegacyV2RuntimeActivationPolicy="true">
            <supportedRuntime version="v4.0" />
            <supportedRuntime version="v3.5" />
            <supportedRuntime version="v3.0" />
            <supportedRuntime version="v2.0" />
         </startup>
-
+	```
 3.  По завершении сохраните и закройте файл конфигурации приложения.
 
 4.  Повторите шаги с 1 по 3, чтобы изменить остальные файлы конфигурации приложения.
 
 5.  Перезапустите связанную службу Windows, выполнив следующую команду:
-    
+    ```powershell
         net stop <service> && net start <service>
-    
+    ```
     Например, если изменения были внесены в файл EdgeTransport.exe.config, перезапустите службу транспорта Microsoft Exchange, выполнив следующую команду:
-    
+    ```powershell
         net stop MSExchangeTransport && net start MSExchangeTransport
-
+	```
 6.  Повторите шаг 5, чтобы перезапустить службы, связанные с остальными измененными файлами конфигурации приложения.
 
 ## Как проверить, что все получилось?

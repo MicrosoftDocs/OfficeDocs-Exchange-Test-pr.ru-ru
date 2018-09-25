@@ -56,9 +56,9 @@ New-RemoteDomain -Name Contoso -DomainName contoso.com
 ```
 
 В этом примере показано, как создать запись удаленного домена для сообщений, отправляемых на домен fabrikam.com и на все его поддомены.
-
+```powershell
     New-RemoteDomain -Name Fabrikam -DomainName *.fabrikam.com
-
+```
 ## Как проверить, что все получилось?
 
 Чтобы убедиться, что вы успешно создали удаленный домен, сделайте следующее.

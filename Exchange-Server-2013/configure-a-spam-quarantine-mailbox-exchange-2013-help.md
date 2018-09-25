@@ -42,14 +42,14 @@ _**Последнее изменение раздела:** 2013-02-19_
 1.  Выполните следующую команду, чтобы убедиться, что агент фильтра содержимого установлен и включен на сервере Exchange Server:
     
     ```powershell
-Get-TransportAgent "Content Filter Agent"
-```
+	Get-TransportAgent "Content Filter Agent"
+	```
 
 2.  Выполните следующую команду, чтобы убедиться, что фильтрация содержимого включена.
     
     ```powershell
-Get-ContentFilterConfig | Format-List Enabled
-```
+	Get-ContentFilterConfig | Format-List Enabled
+	```
 
 Дополнительные сведения см. в статье [Управление фильтрацией содержимого](manage-content-filtering-exchange-2013-help.md).
 
@@ -92,8 +92,8 @@ Set-ContentFilterConfig -QuarantineMailbox spamQ@contoso.com
 1.  Выполните следующую команду:
     
     ```powershell
-Get-ContentFilterConfig | Format-List QuarantineMailbox
-```
+	Get-ContentFilterConfig | Format-List QuarantineMailbox
+	```
 
 2.  Убедитесь, что отображается значение, которое вы настроили.
 

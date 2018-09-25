@@ -48,15 +48,15 @@ Exchange Server 2013 позволяет другим приложениям ис
 После настройки проверки подлинности OAuth из Exchange партнерское приложение может использовать ресурсы Exchange 2013. Если серверу Exchange 2013 также нужно получать доступ к ресурсам, предлагаемым партнерским приложением, необходимо также настроить проверку подлинности OAuth в партнерском приложении.
 
 В этом примере настраивается проверка подлинности OAuth для SharePoint 2013.
-
+```powershell
     Cd C:\Program Files\Microsoft\Exchange Server\V15\Scripts
     Configure-EnterprisePartnerApplication.ps1 -AuthMetaDataUrl https://sharepoint.contoso.com/_layouts/15/metadata/json/1 -ApplicationType SharePoint
-
+```
 В этом примере настраивается проверка подлинности OAuth для Lync Server 2013.
-
+```powershell
     Cd C:\Program Files\Microsoft\Exchange Server\V15\Scripts
     Configure-EnterprisePartnerApplication.ps1 -AuthMetaDataUrl https://lync.contoso.com/metadata/json/1 -ApplicationType Lync
-
+```
 ## Как проверить, что все получилось?
 
 Чтобы подтвердить успешную настройку партнерского приложения предприятия для проверки подлинности на сервере Exchange 2013, в командной консоли запустите командлет [Get-PartnerApplication](https://technet.microsoft.com/ru-ru/library/jj218721\(v=exchg.150\)), чтобы получить конфигурацию. Можно также запустить командлет [Test-OAuthConnectivity](https://technet.microsoft.com/ru-ru/library/jj218623\(v=exchg.150\)), чтобы проверить подключение OAuth к партнерскому приложению для пользователя.

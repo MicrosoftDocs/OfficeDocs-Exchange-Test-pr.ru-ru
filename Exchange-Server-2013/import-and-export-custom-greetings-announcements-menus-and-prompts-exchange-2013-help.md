@@ -60,24 +60,24 @@ _**Последнее изменение раздела:** 2015-04-08_
 ## Использование командной консоли для импорта настраиваемых приветствий, объявлений, меню и приглашений для абонентских групп и автосекретарей единой системы обмена сообщениями
 
 В этом примере импортируется файл приветствия с именем welcomegreeting.wav из d:\\UMPrompts в абонентскую группу единой системы обмена сообщениями `MyUMDialPlan`.
-
+```powershell
     [byte[]]$c = Get-content -Path "d:\UMPrompts\welcomegreeting.wav" -Encoding Byte -ReadCount 0
     Import-UMPrompt -UMDialPlan MyUMDialPlan -PromptFileName "welcomegreeting.wav" -PromptFileData $c
-
+```
 В этом примере импортируется файл приветствия с именем welcomegreeting.wav из d:\\UMPrompts в автосекретарь единой системы обмена сообщениями `MyUMAutoAttendant`.
-
+```powershell
     [byte[]]$c = Get-content -Path "d:\UMPrompts\welcomegreeting.wav" -Encoding Byte -ReadCount 0
     Import-UMPrompt -UMAutoAttendant MyUMAutoAttendant -PromptFileName "welcomegreeting.wav" -PromptFileData $c
-
+```
 ## Использование командной консоли для экспорта настраиваемых приветствий, объявлений, меню и приглашений для абонентских групп и автосекретарей единой системы обмена сообщениями
 
 В этом примере экспортируется приветствие для абонентской группы единой системы обмена сообщениями `MyUMDialPlan`, которое сохраняется как файл welcomegreeting.wav.
-
+```powershell
     $prompt = Export-UMPrompt -PromptFileName "customgreeting.wav�? -UMDialPlan MyUMDialPlan
     set-content -Path "d:\DialPlanPrompts\welcomegreeting.wav" -Value $prompt.AudioData -Encoding Byte
-
+```
 В этом примере экспортируется приветствие для рабочих часов для автосекретаря единой системы обмена сообщениями `MYUMAutoAttendant`, которое сохраняется как файл BusinessHoursWelcomeGreeting.wav.
-
+```powershell
     $prompt = Export-UMPrompt -BusinessHoursWelcomeGreeting -UMAutoAttendant MyUMAutoAttendant
     set-content -Path "d:\UMPrompts\BusinessHoursWelcomeGreeting.wav" -Value $prompt.AudioData -Encoding Byte
-
+```

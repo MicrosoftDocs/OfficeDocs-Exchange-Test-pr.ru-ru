@@ -66,25 +66,25 @@ _**Последнее изменение раздела:** 2012-10-03_
 2.  Сохраните учетные данные внешнего леса Active Directory в переменной.
     
     ```powershell
-$ForeignCredential = Get-Credential
-```
+	$ForeignCredential = Get-Credential
+	```
 
 3.  Сохраните все роли, назначенные группе ролей Управление организацией в переменной.
-    
+    ```powershell
         $OrgMgmt  = Get-RoleGroup "Organization Management"
-
+	```
 4.  Создайте связанную группу ролей Управление организацией и добавьте роли, назначенные встроенной группе ролей Управление организацией.
-    
+    ```powershell
         New-RoleGroup "Organization Management - Linked" -LinkedForeignGroup <name of foreign USG> -LinkedDomainController <FQDN of foreign Active Directory domain controller> -LinkedCredential $ForeignCredential -Roles $OrgMgmt.Roles
-
+	```
 5.  Удалите все обычные назначения между новой связанной группой ролей Управление организацией и ролями, созданными конечным пользователем.
-    
+    ```powershell
         Get-ManagementRoleAssignment -RoleAssignee "Organization Management - Linked" -Role My* | Remove-ManagementRoleAssignment
-
+	```
 6.  Добавьте назначения ролей делегирования между новой связанной группой ролей Управление организацией и всеми ролями управления.
-    
+    ```powershell
         Get-ManagementRole | New-ManagementRoleAssignment -SecurityGroup "Organization Management - Linked" -Delegating
-
+	```
 В этом примере предполагается, что для каждого параметра используются следующие значения:
 
   - **LinkedForeignGroup** `Organization Management Administrators`
@@ -96,11 +96,12 @@ $ForeignCredential = Get-Credential
 ```powershell
 $ForeignCredential = Get-Credential
 ```
+```powershell
     $OrgMgmt  = Get-RoleGroup "Organization Management"
     New-RoleGroup "Organization Management - Linked" -LinkedForeignGroup "Organization Management Administrators" -LinkedDomainController DC01.users.contoso.com -LinkedCredential $ForeignCredential -Roles $OrgMgmt.Roles
     Get-ManagementRoleAssignment -RoleAssignee "Organization Management - Linked" -Role My* | Remove-ManagementRoleAssignment
     Get-ManagementRole | New-ManagementRoleAssignment -SecurityGroup "Organization Management - Linked" -Delegating
-
+```
 ## Создание других связанных групп ролей
 
 Чтобы заново создать встроенные группы ролей (отличные от группы ролей Управление организацией) в качестве связанных групп ролей, используйте следующую процедуру для каждой группы.
@@ -110,20 +111,20 @@ $ForeignCredential = Get-Credential
 2.  Сохраните учетные данные внешнего леса Active Directory в переменной. Это необходимо сделать только один раз.
     
     ```powershell
-$ForeignCredential = Get-Credential
-```
+	$ForeignCredential = Get-Credential
+	```
 
 3.  Получите список групп ролей, используя следующий командлет.
     
     ```powershell
-Get-RoleGroup
-```
+	Get-RoleGroup
+	```
 
 4.  Для каждой группы ролей, отличной от группы ролей Управление организацией, выполните следующие действия.
-    
+    ```powershell
         $RoleGroup = Get-RoleGroup <name of role group to re-create>
         New-RoleGroup "<role group name> - Linked" -LinkedForeignGroup <name of foreign USG> -LinkedDomainController <FQDN of foreign Active Directory domain controller> -LinkedCredential $ForeignCredential -Roles $RoleGroup.Roles
-
+	```
 5.  Повторите предыдущий шаг для каждой встроенной группы ролей, которую необходимо создать заново в качестве связанной группы ролей.
 
 В этом примере предполагается, что для каждого параметра используются следующие значения:
@@ -144,11 +145,12 @@ $ForeignCredential = Get-Credential
 ```powershell
 Get-RoleGroup
 ```
+```powershell
     $RoleGroup = Get-RoleGroup "Recipient Management"
     New-RoleGroup "Recipient Management - Linked" -LinkedForeignGroup "Recipient Management Administrators" -LinkedDomainController DC01.users.contoso.com -LinkedCredential $ForeignCredential -Roles $RoleGroup.Roles
     $RoleGroup = Get-RoleGroup "Server Management"
     New-RoleGroup "Server Management - Linked" -LinkedForeignGroup "Server Management Administrators" -LinkedDomainController DC01.users.contoso.com -LinkedCredential $ForeignCredential -Roles $RoleGroup.Roles
-
+```
 ## Другие задачи
 
 После создания связанных групп ролей можно выполнить другие действия:

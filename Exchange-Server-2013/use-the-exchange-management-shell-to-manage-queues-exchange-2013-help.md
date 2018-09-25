@@ -514,13 +514,13 @@ Get-QueueDigest -Server Mailbox01,Mailbox02,Mailbox03 -Include External -Exclude
 С помощью оператора сравнения **-and** вы можете указать фильтр, который использует несколько выражений. Чтобы попасть в результирующий набор, сообщения или очереди должны удовлетворять всем условиям фильтрации.
 
 Этот пример отображает список очередей, назначениями которых являются любые имена SMTP-доменов, заканчивающихся на Contoso.com, и которые содержат более 500 сообщений.
-
+```powershell
     Get-Queue -Filter {Identity -like "*contoso.com*" -and MessageCount -gt 500}
-
+```
 Этот пример отображает список сообщений, отправленных с любого адреса в домене contoso.com, вероятность нежелательной почты которых больше 5.
-
+```powershell
     Get-Message -Filter {FromAddress -like "*Contoso.com*" -and SCL -gt 5}
-
+```
 В начало
 
 ## Расширенные параметры разбивки по страницам
@@ -593,16 +593,16 @@ Get-QueueDigest -Server Mailbox01,Mailbox02,Mailbox03 -Include External -Exclude
 В следующем примере с помощью сценария извлекается первая страница результатов, устанавливается объект закладки, исключается объект закладки из набора результатов, и затем извлекаются следующие 500 объектов на указанном сервере.
 
 1.  Откройте командную консоль и введите следующую команду, чтобы извлечь первую страницу результатов.
-    
+    ```powershell
         $Results=Get-message -Server mailbox01.contoso.com -ResultSize 500 -SortOrder +FromAddress,-Size
-
+	```
 2.  Чтобы установить объект закладки, введите следующую команду для сохранения последнего элемента первой страницы в переменной.
-    
+    ```powershell
         $temp=$results[$results.length-1]
-
+	```
 3.  Чтобы извлечь следующие 500 объектов на указанном сервере и исключить объект закладки, введите следующую команду.
-    
+    ```powershell
         Get-message -Server mailbox01.contoso.com -BookmarkObject:$temp -IncludeBookmark $False -ResultSize 500 -SortOrder +FromAddress,-Size
-
+	```
 В начало
 

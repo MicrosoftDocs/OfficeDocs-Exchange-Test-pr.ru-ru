@@ -76,8 +76,8 @@ Remove-Mailbox -Identity <identity> -Permanent $true
 3.  Выполните следующую команду, чтобы убедиться, что почтовый ящик был успешно удален из базы данных почтовых ящиков Exchange.
     
     ```powershell
-Get-MailboxDatabase | Get-MailboxStatistics | Where {         Get-MailboxDatabase | Get-MailboxStatistics | Where { $_.DisplayName -eq "<display name>" }.DisplayName -eq "<display name>" }
-```
+	Get-MailboxDatabase | Get-MailboxStatistics | Where {         Get-MailboxDatabase | Get-MailboxStatistics | Where { $_.DisplayName -eq "<display name>" }.DisplayName -eq "<display name>" }
+	```
     
     Если почтовый ящик успешно очищен, команда не даст никаких результатов. Если почтовый ящик не был очищен, команда вернет сведения о почтовом ящике.
 
@@ -88,23 +88,23 @@ Get-MailboxDatabase | Get-MailboxStatistics | Where {         Get-MailboxDatabas
 Существует два типа отключенных почтовых ящиков: обратимо удаленные и отключенные. Необходимо указать один из следующих типов при выполнении командлета, чтобы окончательно удалить почтовый ящик. Если заданный тип не совпадает с фактическим типом отключенного почтового ящика, происходит сбой команды.
 
 Выполните следующую команду, чтобы определить, удален ли отключенный почтовый ящик.
-
+```powershell
     Get-MailboxDatabase | Get-MailboxStatistics | Where { $_.DisplayName -eq "<display name>" } | fl DisplayName,MailboxGuid,Database,DisconnectReason
-
+```
 Значение свойства *DisconnectReason* для отключенных почтовых ящиков будет равно `Disabled` или `SoftDeleted`.
 
 Можно выполнить следующую команду, чтобы отобразить типы всех отключенных почтовых ящиков в организации.
-
+```powershell
     Get-MailboxDatabase | Get-MailboxStatistics | Where { $_.DisconnectReason -ne $null } | fl DisplayName,MailboxGuid,Database,DisconnectReason
-
+```
 > [!WARNING]  
 > При использовании командлета <strong>Remove-StoreMailbox</strong> для очистки отключенного почтового ящика и всего его содержимого из базы данных почтовых ящиков происходит окончательная потеря данных.
 
 
 В этом примере окончательно удаляется отключенный почтовый ящик с идентификатором GUID 2ab32ce3-fae1-4402-9489-c67e3ae173d3 из базы данных почтовых ящиков MBD01.
-
+```powershell
     Remove-StoreMailbox -Database MBD01 -Identity "2ab32ce3-fae1-4402-9489-c67e3ae173d3" -MailboxState Disabled
-
+```
 В этом примере выполняется окончательное удаление обратимо удаленного почтового ящика пользователя Dan Jump из базы данных почтовых ящиков MBD01.
 
 ```powershell
@@ -112,9 +112,9 @@ Remove-StoreMailbox -Database MBD01 -Identity "Dan Jump" -MailboxState SoftDelet
 ```
 
 В этом примере окончательно удаляются все обратимо удаленные почтовые ящики из базы данных почтовых ящиков MBD01.
-
+```powershell
     Get-MailboxStatistics -Database MBD01 | where {$_.DisconnectReason -eq "SoftDeleted"} | ForEach {Remove-StoreMailbox -Database $_.Database -Identity $_.MailboxGuid -MailboxState SoftDeleted}
-
+```
 Дополнительные сведения о синтаксисе и параметрах см. в разделах [Remove-StoreMailbox](https://technet.microsoft.com/ru-ru/library/ff829913\(v=exchg.150\)) и [Get-MailboxStatistics](https://technet.microsoft.com/ru-ru/library/bb124612\(v=exchg.150\)).
 
 ## Как проверить, что все получилось?

@@ -82,8 +82,8 @@ _**Последнее изменение раздела:** 2016-12-09_
 3.  Чтобы расширить схему, выполните следующую команду.
     
     ```powershell
-Setup.exe /PrepareSchema /IAcceptExchangeServerLicenseTerms
-```
+	Setup.exe /PrepareSchema /IAcceptExchangeServerLicenseTerms
+	```
 
 Когда программа установки завершит расширение схемы, вам потребуется подождать, пока Active Directory не реплицирует изменения на все контроллеры доменов. Чтобы узнать, как выполняется репликация, используйте средство `repadmin`. `Repadmin` входит в набор средств доменных служб Active Directory в Windows Server 2012 R2, Windows Server 2012 и Windows Server 2008 R2. Дополнительные сведения об использовании этого средства см. в статье [Repadmin](https://go.microsoft.com/fwlink/p/?linkid=257879).
 
@@ -118,9 +118,9 @@ Setup.exe /PrepareSchema /IAcceptExchangeServerLicenseTerms
 1.  Откройте окно командной строки Windows и перейдите к установочным файлам Exchange.
 
 2.  Выполните следующую команду:
-    
+    ```powershell
         Setup.exe /PrepareAD /OrganizationName:"<organization name>" /IAcceptExchangeServerLicenseTerms
-
+	```
 Когда программа установки завершит подготовку Active Directory к использованию Exchange, вам потребуется подождать, пока Active Directory не реплицирует изменения на все контроллеры доменов. Чтобы узнать, как выполняется репликация, используйте средство `repadmin`. `repadmin` входит в набор средств доменных служб Active Directory в Windows Server 2012 R2, Windows Server 2012 и Windows Server 2008 R2. Дополнительные сведения об использовании этого средства см. в статье [Repadmin](https://go.microsoft.com/fwlink/p/?linkid=257879).
 
 ## 3\. Подготовка доменов Active Directory
@@ -146,8 +146,8 @@ Setup.exe /PrepareSchema /IAcceptExchangeServerLicenseTerms
 2.  Выполните следующую команду:
     
     ```powershell
-Setup.exe /PrepareAllDomains /IAcceptExchangeServerLicenseTerms
-```
+	Setup.exe /PrepareAllDomains /IAcceptExchangeServerLicenseTerms
+	```
 
 ## Позволить мне выбрать, какие домены Active Directory необходимо подготовить
 
@@ -172,9 +172,9 @@ Setup.exe /PrepareAllDomains /IAcceptExchangeServerLicenseTerms
 1.  Откройте окно командной строки Windows и перейдите к установочным файлам Exchange.
 
 2.  Выполните следующую команду. Укажите полное доменное имя домена, который следует подготовить. Указывать полное доменное имя для домена, в котором выполняется команда, не требуется.
-    
+    ```powershell
         Setup.exe /PrepareDomain:<FQDN of the domain you want to prepare> /IAcceptExchangeServerLicenseTerms
-
+	```
 3.  Повторите действия для каждого домена Active Directory, в котором будет установлен сервер Exchange или где будут расположены серверы с поддержкой почты.
 
 ## Как проверить, что все получилось?

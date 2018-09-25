@@ -63,12 +63,12 @@ _**Последнее изменение раздела:** 2012-10-02_
 
 
 В этом примере создается назначение делегирования роли, позволяющее членам группы ролей «Senior Admins» назначать роль получателей почты любому уполномоченному роли в организации Exchange.
-
+```powershell
     New-ManagementRoleAssignment -Role "Mail Recipients" -SecurityGroup "Senior Admins" -Name "Mail Recipients_Senior Admin - Delegate" -Delegating
-
+```
 В этом примере создается назначение делегирования роли, позволяющее членам группы ролей «Senior Admins» назначать роль получателей почты только пользователям в подразделении «Sales/Users OU» в домене contoso.com.
-
+```powershell
     New-ManagementRoleAssignment -Role "Mail Recipients" -SecurityGroup "Senior Admins" -Name "Mail Recipients_Senior Admins - Delegate" -RecipientOrganizationalUnitScope contoso.com/sales/users -Delegating
-
+```
 Подробные сведения о синтаксисе и параметрах см. в разделе [New-ManagementRoleAssignment](https://technet.microsoft.com/ru-ru/library/dd335193\(v=exchg.150\)).
 

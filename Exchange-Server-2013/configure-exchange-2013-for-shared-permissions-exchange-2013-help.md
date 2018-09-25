@@ -78,23 +78,23 @@ _**Последнее изменение раздела:** 2015-04-07_
 Чтобы настроить разрешения общего доступа в группе ролей Управление организацией, выполните следующие действия с помощью учетной записи, которая имеет разрешения на делегирование назначений для роли создания получателей почты и роли создания и членства в группе безопасности.
 
 1.  Добавьте в группу ролей Управление организацией назначения роли делегирования для ролей "Создание получателей почты" и "Создание и членство в группе безопасности" с помощью следующих команд:
-    
+    ```powershell
         New-ManagementRoleAssignment -Role "Mail Recipient Creation" -SecurityGroup "Organization Management" -Delegating
         New-ManagementRoleAssignment -Role "Security Group Creation and Membership" -SecurityGroup "Organization Management" -Delegating
-    
+    ```
     > [!NOTE]  
     > Группе ролей (в этой процедуре — группа ролей &quot;Администраторы Active Directory&quot;), имеющей назначения роли делегирования для ролей &quot;Создание получателей почты&quot; и &quot;Создание и членство в группе безопасности&quot;, необходимо назначить роль &quot;Управление ролями&quot; для запуска командлета <strong>New-ManagementRoleAssignment</strong>. Уполномоченный роли, имеющий разрешение на делегирование роли &quot;Управление ролями&quot;, должен назначить эту роль группе ролей &quot;Администраторы Active Directory&quot;.
 
 
 2.  Добавьте в группы ролей Управление организацией и Управление получателями назначения обычной роли для роли "Создание получателей почты" с помощью следующих команд:
-    
+    ```powershell
         New-ManagementRoleAssignment -Role "Mail Recipient Creation" -SecurityGroup "Organization Management"
         New-ManagementRoleAssignment -Role "Security Group Creation and Membership" -SecurityGroup "Recipient Management"
-
+    ```
 3.  Добавьте группе ролей Управление организацией назначение обычной роли для роли создания и членства в группе безопасности с помощью следующей команды.
-    
+    ```powershell
         New-ManagementRoleAssignment -Role "Security Group Creation and Membership" -SecurityGroup "Organization Management"
-
+    ```
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [New-ManagementRoleAssignment](https://technet.microsoft.com/ru-ru/library/dd335193\(v=exchg.150\)).
 
 ## Удаление разрешений, предоставленных администраторам Active Directory (необязательно)
@@ -112,9 +112,9 @@ _**Последнее изменение раздела:** 2015-04-07_
         Get-ManagementRoleAssignment -Role "Mail Recipient Creation" | Where { $_.RoleAssigneeName -EQ "Active Directory Administrators" } | Remove-ManagementRoleAssignment -WhatIf
 
 2.  Удалите назначения обычных ролей и ролей делегирования, которые назначают роль создания и членства в группе безопасности группе ролей или универсальной группе безопасности, содержащей в качестве участников администраторов Active Directory, с помощью следующей команды. В этой команде группа ролей "Администраторы Active Directory" используется в качестве примера. Параметр *WhatIf* позволяет просмотреть назначения ролей, которые будут удалены. Удалите параметр *WhatIf* и выполните эту команду повторно, чтобы удалить назначения ролей.
-    
+    ```powershell
         Get-ManagementRoleAssignment -Role "Security Group Creation and Membership" | Where { $_.RoleAssigneeName -EQ "Active Directory Administrators" } | Remove-ManagementRoleAssignment -WhatIf
-
+    ```
 3.  Необязательно. При необходимости удалить все разрешения Exchange, предоставленные администраторам Active Directory, можно удалить группу ролей или универсальную группу безопасности, участниками которой они являются. Дополнительные сведения об удалении группы ролей см. в разделе [Управление группами ролей](manage-role-groups-exchange-2013-help.md).
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделах [Get-ManagementRoleAssignment](https://technet.microsoft.com/ru-ru/library/dd351024\(v=exchg.150\)) или [Remove-ManagementRoleAssignment](https://technet.microsoft.com/ru-ru/library/dd351205\(v=exchg.150\)).
@@ -134,15 +134,15 @@ _**Последнее изменение раздела:** 2015-04-07_
 1.  Чтобы выключить разделенные разрешения Active Directory, в командной консоли Windows выполните следующую команду с установочного носителя Exchange 2013.
     
     ```powershell
-setup.exe /PrepareAD /ActiveDirectorySplitPermissions:false
-```
+        setup.exe /PrepareAD /ActiveDirectorySplitPermissions:false
+    ```
 
 2.  В командной консоли Exchange выполните следующие команды, чтобы добавить назначения обычной роли между ролями "Создание получателей почты" и "Создание и членство в группе безопасности" и группами ролей Управление организацией и Управление получателями.
-    
+    ```powershell
         New-ManagementRoleAssignment "Mail Recipient Creation_Organization Management" -Role "Mail Recipient Creation" -SecurityGroup "Organization Management"
         New-ManagementRoleAssignment "Security Group Creation and Membership_Org Management" -Role "Security Group Creation and Membership" -SecurityGroup "Organization Management"
         New-ManagementRoleAssignment "Mail Recipient Creation_Recipient Management" -Role "Mail Recipient Creation" -SecurityGroup "Recipient Management"
-
+    ```
 3.  Перезагрузите серверы Exchange 2013 в организации.
     
     > [!NOTE]  

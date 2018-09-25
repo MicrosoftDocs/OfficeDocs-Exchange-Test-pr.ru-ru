@@ -108,10 +108,10 @@ Set-ExchangeServer ExServer01 -ProductKey aaaaa-aaaaa-aaaaa-aaaaa-aaaaa
 1.  Откройте командную консоль.
 
 2.  Чтобы проверить состояние лицензии для определенного сервера Exchange, выполните следующую команду.
-    
+    ```powershell
         Get-ExchangeServer ExServer01 | Format-Table Edition,*Trial*
-
+	```
 3.  Необязательно: чтобы посмотреть состояние лицензии всех серверов Exchange в организации, выполните следующую команду.
-    
+    ```powershell
         Get-ExchangeServer | Format-Table Name, Edition, *Trial* -Auto
-
+	```

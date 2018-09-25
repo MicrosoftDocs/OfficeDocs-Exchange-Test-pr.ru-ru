@@ -192,7 +192,7 @@ katerina@contoso.com<br />
 
 
 Например, в этом заявлении об отказе в формате HTML используется подпись, тег `IMG` и встроенные CSS.
-
+```csss
     <div style="font-size:9pt;  font-family: 'Calibri',sans-serif;">
     %%displayname%%</br>
     %%title%%</br>
@@ -206,7 +206,7 @@ katerina@contoso.com<br />
     <p style="font-size:8pt; line-height:10pt; font-family: 'Cambria','times roman',serif;">This message contains confidential information and is intended only for the individual(s) addressed in the message. If you are not the named addressee, you should not disseminate, distribute, or copy this e-mail. If you are not the intended recipient, you are notified that disclosing, distributing, or copying this e-mail is strictly prohibited.  </p>
     <span style="padding-top:10px; font-weight:bold; color:#CC0000; font-size:10pt; font-family: 'Calibri',Arial,sans-serif; "><a href="http://www.fabrikam.com">Fabrikam, Inc. </a></span></br></br>
     </div>
-
+```
 ## Резервные варианты, если не удается добавить заявление об отказе
 
 Некоторые сообщения, например зашифрованные, запрещают Exchange изменять содержимое исходного сообщения. Вы можете управлять способом обработки таких сообщений. Вы можете указать либо "завернуть" сообщение, которое невозможно изменить, в конверт нового сообщения с текстом заявления об отказе, либо отклонить это сообщение, если в него не удается добавить заявление об отказе, или же не прикреплять к нему заявление об отказе.

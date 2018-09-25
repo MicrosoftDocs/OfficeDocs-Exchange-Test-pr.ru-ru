@@ -32,8 +32,8 @@ _**Последнее изменение раздела:** 2014-12-03_
 2.  Запустите следующую команду для установки необходимого компонента Windows.
     
     ```powershell
-Install-WindowsFeature RSAT-Clustering-CmdInterface
-```
+	Install-WindowsFeature RSAT-Clustering-CmdInterface
+	```
 
 Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: [Exchange Server](https://go.microsoft.com/fwlink/p/?linkid=60612), [Exchange Online](https://go.microsoft.com/fwlink/p/?linkid=267542) или [Exchange Online Protection](https://go.microsoft.com/fwlink/p/?linkid=285351).
 

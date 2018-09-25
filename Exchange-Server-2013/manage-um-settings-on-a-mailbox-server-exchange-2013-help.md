@@ -52,13 +52,13 @@ Set-UMService -Identity MyMailboxServer -DialPlans $null
 ```
 
 В этом примере показано, как добавить сервер почтовых ящиков `MyMailboxServer` в абонентскую группу SIP этой системы с именем `MySIPDialPlanName`, а также установить максимальное число входящих голосовых вызовов.
-
+```powershell
     Set-UMService -Identity MyMailboxServer -DialPlans MySIPDialPlanName -MaxCalls 150 
-
+```
 В этом примере показано, как установить двойной режим запуска для сервера почтовых ящиков `MyUMServer`.
-
+```powershell
     Set-UMService -Identity MyMailboxServer -DialPlans MySIPDialPlanName -UMStartUpMode -Dual 
-
+```
 ## Использование командной консоли для просмотра свойств сервера почтовых ящиков
 
 В этом примере отображается список всех серверов почтовых ящиков.

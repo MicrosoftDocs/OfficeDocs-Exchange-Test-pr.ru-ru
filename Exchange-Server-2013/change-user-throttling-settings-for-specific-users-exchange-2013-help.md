@@ -53,16 +53,15 @@ Set-ThrottlingPolicyAssociation -Identity tonysmith -ThrottlingPolicy ITStaffPol
 
 Командлет **Set-ThrottlingPolicyAssociation** не нужно использовать для связывания пользователя с политикой. Другим способом связать пользователя tonysmith с политикой регулирования ITStaffPolicy являются следующие команды.
 
-```
+
 ```powershell
 $b = Get-ThrottlingPolicy ITStaffPolicy
 ```
-```
-```
+
 ```powershell
 Set-Mailbox -Identity tonysmith -ThrottlingPolicy $b
 ```
-```   
+ 
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделах [New-ThrottlingPolicy](https://technet.microsoft.com/ru-ru/library/dd351045\(v=exchg.150\)) и [Set-ThrottlingPolicyAssociation](https://technet.microsoft.com/ru-ru/library/ff459231\(v=exchg.150\)).
 
@@ -73,24 +72,24 @@ Set-Mailbox -Identity tonysmith -ThrottlingPolicy $b
 1.  Выполните следующую команду.
     
     ```powershell
-Get-ThrottlingPolicy | Format-List
-```
+	Get-ThrottlingPolicy | Format-List
+	```
 
 2.  Убедитесь, что созданная регулярная политика регулирования отображается в столбце с объектом GlobalThrottlingPolicy.
 
 3.  Выполните следующую команду.
     
     ```powershell
-Get-ThrottlingPolicy | Format-List
-```
+	Get-ThrottlingPolicy | Format-List
+	```
 
 4.  Убедитесь, что свойства новой регулярной политики соответствуют ранее настроенным значениям.
 
 5.  Выполните следующую команду.
     
     ```powershell
-Get-ThrottlingPolicyAssociation
-```
+	Get-ThrottlingPolicyAssociation
+	```
 
 6.  Убедитесь, что новая регулярная политика связана с нужными пользователями.
 

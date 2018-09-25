@@ -60,13 +60,13 @@ _**Последнее изменение раздела:** 2015-04-07_
 Дополнительные сведения о фильтрах областей управления см. в разделе [Общие сведения о фильтрах области ролей управления](understanding-management-role-scope-filters-exchange-2013-help.md).
 
 Чтобы создать область фильтра ограничения домена с базовым подразделением, используйте следующий синтаксис.
-
+```powershell
     New-ManagementScope -Name <scope name> -RecipientRestrictionFilter <filter query> [-RecipientRoot <OU>]
-
+```
 В этом примере создается область, содержащая все почтовые ящики в подразделении contoso.com/Sales.
-
+```powershell
     New-ManagementScope -Name "Mailboxes in Sales OU" -RecipientRestrictionFilter { RecipientType -eq 'UserMailbox' } -RecipientRoot "contoso.com/Sales OU"
-
+```
 > [!NOTE]  
 > Если нужно применить фильтр ко всей неявной области чтения роли управления, а не только внутри конкретного подразделения, можно опустить параметр <em>RecipientRoot</em>.
 
@@ -86,9 +86,9 @@ New-ManagementScope -Name <scope name> -ServerRestrictionFilter <filter query>
 ```
 
 В данном примере создается область, включающая все серверы в пределах сайта Active Directory "CN=Redmond,CN=Sites,CN=Configuration,DC=contoso,DC=com" (Active Directory).
-
+```powershell
     New-ManagementScope -Name "Servers in Seattle AD site" -ServerRestrictionFilter { ServerSite -eq 'CN=Redmond,CN=Sites,CN=Configuration,DC=contoso,DC=com' }
-
+```
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [New-ManagementScope](https://technet.microsoft.com/ru-ru/library/dd335137\(v=exchg.150\)).
 
 ## Область конфигурации списка серверов
@@ -126,9 +126,9 @@ New-ManagementScope -Name <scope name> -DatabaseRestrictionFilter <filter query>
 ```
 
 В этом примере создается область, включающая в себя все базы данных, содержащие строку Executive в свойстве **Name**.
-
+```powershell
     New-ManagementScope -Name "Executive Databases" -DatabaseRestrictionFilter { Name -Like '*Executive*' }
-
+```
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [New-ManagementScope](https://technet.microsoft.com/ru-ru/library/dd335137\(v=exchg.150\)).
 
 ## Область настройки списка баз данных
@@ -162,13 +162,13 @@ New-ManagementScope -Name "Primary databases" -DatabaseList "Database 1", "Datab
 
 
 В этом примере создается монопольная область на основе фильтра получателей, соответствующая любому пользователю из отдела Executives.
-
+```powershell
     New-ManagementScope "Executive Users Exclusive Scope" -RecipientRestrictionFilter { Department -Eq "Executives" } -Exclusive
-
+```
 При создании монопольной области необходимо по умолчанию подтвердить создание монопольной области и осведомленность о влиянии монопольной области на существующие назначения неисключительных ролей. Если требуется отключить предупреждения, можно использовать переключатель *Force*. В этом примере создается та же область, что и в предыдущем примере, но без предупреждения.
-
+```powershell
     New-ManagementScope "Executive Users Exclusive Scope" -RecipientRestrictionFilter { Department -Eq "Executives" } -Exclusive -Force
-
+```
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [New-ManagementScope](https://technet.microsoft.com/ru-ru/library/dd335137\(v=exchg.150\)).
 
 ## Шаг 2. Добавление или изменение назначения роли управления

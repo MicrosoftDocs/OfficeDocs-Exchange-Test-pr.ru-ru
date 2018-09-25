@@ -66,9 +66,9 @@ _**Последнее изменение раздела:** 2013-04-16_
   - Настраивается служба доступа SIP для Lync Server.
 
 <!-- end list -->
-
+```powershell
     Set-UMService -Identity MyMailboxServer -DialPlans MySIPDialPlan, MySIPDialPlan2 -IPAddressFamily Any -MaxCallsAllowed 50 -SipAccessService northamerica.lyncpoolna.contoso.com
-
+```
 ## Добавление сервера клиентского доступа в абонентскую группу с универсальным кодом ресурса SIP с помощью Центра администрирования Exchange
 
 1.  В Центре администрирования Exchange перейдите к разделу **Серверы** \> **Серверы**.
@@ -90,6 +90,6 @@ Set-UMCallRouterSettings -DialPlans MySIPDialPlan -Server MyClientAccessServer -
 ```
 
 В этом примере сервер клиентского доступа с именем `MyClientAccessServer` добавляется в две абонентские группы SIP с именами `MySIPDialPlan` и `MySIPDialPlan2`; кроме того, серверу разрешается использовать адреса IPv4 и IPv6.
-
+```powershell
     Set-UMCallRouterSettings -DialPlans MySIPDialPlan, MySIPDialPlan2 -IPAddressFamily Any -Server MyClientAccessServer
-
+```

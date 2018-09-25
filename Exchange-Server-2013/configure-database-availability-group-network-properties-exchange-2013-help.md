@@ -64,8 +64,8 @@ Set-DatabaseAvailabilityGroupNetwork -Subnets 10.0.0.0/8 -Identity DAG1\MapiDagN
   - Выполните в командной консоли приведенную ниже команду, чтобы просмотреть параметры настройки для сети DAG и убедиться, что сеть была настроена успешно.
     
     ```powershell
-Get-DatabaseAvailabilityGroupNetwork <DAGNetworkName> | Format-List
-```
+	Get-DatabaseAvailabilityGroupNetwork <DAGNetworkName> | Format-List
+	```
 
 ## Дополнительные сведения
 

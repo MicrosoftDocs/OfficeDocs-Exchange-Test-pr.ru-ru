@@ -60,26 +60,26 @@ _**Последнее изменение раздела:** 2016-06-02_
 1.  Задайте автоматический запуск службы Microsoft Exchange IMAP4.
     
     ```powershell
-Set-service msExchangeIMAP4 -startuptype automatic
-```
+	Set-service msExchangeIMAP4 -startuptype automatic
+	```
 
 2.  Запустите службу Microsoft Exchange IMAP4.
     
     ```powershell
-Start-service msExchangeIMAP4
-```
+	Start-service msExchangeIMAP4
+	```
 
 3.  Задайте автоматический запуск службы Microsoft Exchange IMAP4 Backend.
     
     ```powershell
-Set-service msExchangeIMAP4BE -startuptype automatic
-```
+	Set-service msExchangeIMAP4BE -startuptype automatic
+	```
 
 4.  Запустите службу Microsoft Exchange IMAP4 Backend.
     
     ```powershell
-Start-service msExchangeIMAP4BE
-```
+	Start-service msExchangeIMAP4BE
+	```
 
 ## Как проверить, что все получилось?
 

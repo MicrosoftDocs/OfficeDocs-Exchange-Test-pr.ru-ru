@@ -74,8 +74,8 @@ iisreset
 1.  Выполните в командной консоли следующую команду.
     
     ```powershell
-Get-PopSettings | format-list
-```
+    Get-PopSettings | format-list
+    ```
 
 2.  Убедитесь, что свойство *ExternalConnectionSettings* задано.
 
@@ -84,8 +84,8 @@ Get-PopSettings | format-list
 1.  Выполните в командной консоли следующую команду.
     
     ```powershell
-Get-ImapSettings | format-list
-```
+    Get-ImapSettings | format-list
+    ```
 
 2.  Убедитесь, что свойство *ExternalConnectionSettings* задано.
 
@@ -94,9 +94,9 @@ Get-ImapSettings | format-list
 Для выполнения этих процедур необходимы соответствующие разрешения. Сведения о необходимых разрешениях см. в статье Запись «Соединители получения» в разделе [Разрешения потока обработки почты](mail-flow-permissions-exchange-2013-help.md).
 
 В этом примере разрешается просмотр параметров внутренних и внешних SMTP-серверов для конечных пользователей в Outlook Web App.
-
+```powershell
     Get-ReceiveConnector "*Client Frontend*" | Set-ReceiveConnector -Fqdn Server.Contoso.com -AdvertiseClientSettings $true 
-
+```
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Set-ReceiveConnector](https://technet.microsoft.com/ru-ru/library/bb125140\(v=exchg.150\)).
 
 ## Как проверить, что все получилось?
@@ -106,8 +106,8 @@ Get-ImapSettings | format-list
 1.  Выполните в командной консоли следующую команду.
     
     ```powershell
-Get-ReceiveConnector | format-list
-```
+    Get-ReceiveConnector | format-list
+    ```
 
 2.  Если свойство *AdvertiseClientSettings* равно `true`, пользователи смогут просматривать настройки SMTP-сервера в Outlook Web App. Если свойство *AdvertiseClientSettings* равно `false`, пользователи не смогут просматривать настройки SMTP-сервера в Outlook Web App.
 

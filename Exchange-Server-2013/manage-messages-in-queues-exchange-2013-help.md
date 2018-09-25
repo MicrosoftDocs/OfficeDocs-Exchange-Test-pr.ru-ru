@@ -56,9 +56,9 @@ _**Последнее изменение раздела:** 2014-05-07_
 ## Использовать командную консоль для удаления сообщений
 
 Чтобы удалить сообщения из очередей, введите команду в следующем формате.
-
+```powershell
     Remove-Message <-Identity MessageIdentity | -Filter {MessageFilter}> -WithNDR <$true | $false>
-
+```
 В этом примере из очереди удаляются сообщения с темой "Win Big" без отправки отчета о недоставке.
 
 ```powershell
@@ -112,9 +112,9 @@ Resume-Message <-Identity MessageIdentity | -Filter {MessageFilter}>
 ```
 
 В данном примере возобновляется передача всех сообщений от всех отправителей в домене Contoso.com.
-
+```powershell
     Resume-Message -Filter {FromAddress -eq "*contoso.com"}
-
+```
 В данном примере возобновляется передача сообщения с идентификатором сообщения 3 в недоступной очереди на сервере Hub01.
 
 ```powershell
@@ -158,9 +158,9 @@ Suspend-Message <-Identity MessageIdentity | -Filter {MessageFilter}>
 ```
 
 В следующем примере производится приостановка всех сообщений в очередях от любых отправителей в домене Contoso.com.
-
+```powershell
     Suspend-Message -Filter {FromAddress -eq "*contoso.com"}
-
+```
 В этом примере производится приостановка сообщения с идентификатором 3 в очереди недоставленных сообщений на сервере с именем Mailbox01.
 
 ```powershell

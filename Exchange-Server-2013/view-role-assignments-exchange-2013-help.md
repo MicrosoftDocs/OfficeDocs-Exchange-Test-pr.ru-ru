@@ -46,9 +46,9 @@ _**Последнее изменение раздела:** 2012-10-03_
 ## Просмотр списка всех назначений ролей
 
 Можно просмотреть список всех назначений ролей, настроенных в организации, выполнив командлет **Get-ManagementRoleAssignment**. При необходимости получить список назначений ролей, соответствующих указанному частичному строковому значению, используются подстановочные знаки (\*). В этом примере возвращается список всех назначений ролей, начинающихся со строки "Tier 1".
-
+```powershell
     Get-ManagementRoleAssignment "Tier 1*"
-
+```
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Get-ManagementRoleAssignment](https://technet.microsoft.com/ru-ru/library/dd351024\(v=exchg.150\)).
 
 ## Просмотр сведений о назначении определенных ролей
@@ -104,9 +104,9 @@ Get-ManagementRoleAssignment -Role "Mail Recipients"
 ## Просмотр списка назначений ролей, использующих определенную предварительно заданную область
 
 Для просмотра списка назначений ролей, использующих определенную предварительно заданную область, используется следующий синтаксис.
-
+```powershell
     Get-ManagementRoleAssignment -RecipientWriteScope < MyGAL | MyDistributionGroups | Organization | Self | CustomRecipientScope | ExecutiveRecipientScope >
-
+```
 В этом примере возвращаются все назначения ролей, использующие предопределенную область "Организация".
 
 ```powershell
@@ -124,9 +124,9 @@ Get-ManagementRoleAssignment -RecipientOrganizationalUnitScope <OU>
 ```
 
 В этом примере возвращаются все назначения ролей, ограниченные подразделением North America\\Engineering\\Users в домене contoso.com.
-
+```powershell
     Get-ManagementRoleAssignment -RecipientOrganizationalUnitScope "contoso.com/North America/Engineering/Users"
-
+```
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Get-ManagementRoleAssignment](https://technet.microsoft.com/ru-ru/library/dd351024\(v=exchg.150\)).
 
 ## Просмотр списка назначений, использующих определенную настраиваемую область
@@ -190,9 +190,9 @@ Get-ManagementRoleAssignment -WritableRecipient "Brian"
 ```
 
 Параметры *WritableRecipient* и *WritableServer* можно использовать с другими параметрами, такими как *RoleAssignee* и *GetEffectiveUsers* для уточнения запроса и расширения групп ролей или универсальных групп безопасности. В этом примере возвращаются все пользователи, которые могут изменять сервер EX02, и которым назначена группа ролей управления сервером.
-
+```powershell
     Get-ManagementRoleAssignment -WritableServer EX02 -RoleAssignee "Server Management" -GetEffectiveUsers
-
+```
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Get-ManagementRoleAssignment](https://technet.microsoft.com/ru-ru/library/dd351024\(v=exchg.150\)).
 
 ## Просмотр пользователей, которые получают разрешения посредством назначений через группу ролей или универсальную группу безопасности

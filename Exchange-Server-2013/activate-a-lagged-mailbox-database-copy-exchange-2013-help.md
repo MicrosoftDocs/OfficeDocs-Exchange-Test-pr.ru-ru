@@ -50,9 +50,9 @@ _**Последнее изменение раздела:** 2014-01-28_
 
 
 1.  В этом примере с помощью командлета [Suspend-MailboxDatabaseCopy](https://technet.microsoft.com/ru-ru/library/dd351074\(v=exchg.150\)) приостанавливается репликация для активируемой изолированной копии.
-    
+    ```powershell
         Suspend-MailboxDatabaseCopy DB1\EX3 -SuspendComment "Activate lagged copy of DB1 on Server EX3" -Confirm:$false
-
+    ```
 2.  При необходимости (для сохранения изолированной копии) сделайте копию копии базы данных и файлов ее журнала.
     
     > [!NOTE]  
@@ -66,8 +66,8 @@ _**Последнее изменение раздела:** 2014-01-28_
 5.  В этом примере для выполнения операции восстановления используется программа Eseutil.
     
     ```powershell
-Eseutil.exe /r eXX /a
-```
+    Eseutil.exe /r eXX /a
+    ```
     
     > [!NOTE]  
 	> В предыдущем примере e<em>XX</em> — это префикс создания журнала для базы данных (например, E00, E01, E02 и т. д.).
@@ -81,8 +81,8 @@ Eseutil.exe /r eXX /a
 7.  В этом примере после завершения восстановления возобновляется репликация для базы данных, которая использовалась в процессе восстановления.
     
     ```powershell
-Resume-MailboxDatabaseCopy DB1\EX3
-```
+    Resume-MailboxDatabaseCopy DB1\EX3
+    ```
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделах [Suspend-MailboxDatabaseCopy](https://technet.microsoft.com/ru-ru/library/dd351074\(v=exchg.150\)) или [Resume-MailboxDatabaseCopy](https://technet.microsoft.com/ru-ru/library/dd335220\(v=exchg.150\)).
 
@@ -91,9 +91,9 @@ Resume-MailboxDatabaseCopy DB1\EX3
 1.  При необходимости (для сохранения изолированной копии) сделайте копию копии базы данных и файлов ее журнала.
     
     1.  В этом примере с помощью командлета [Suspend-MailboxDatabaseCopy](https://technet.microsoft.com/ru-ru/library/dd351074\(v=exchg.150\)) приостанавливается репликация для активируемой изолированной копии.
-        
+        ```powershell
             Suspend-MailboxDatabaseCopy DB1\EX3 -SuspendComment "Activate lagged copy of DB1 on Server EX3" -Confirm:$false
-    
+        ```
     2.  При необходимости (для сохранения изолированной копии) сделайте копию копии базы данных и файлов ее журнала.
         
         > [!NOTE]  
@@ -103,17 +103,17 @@ Resume-MailboxDatabaseCopy DB1\EX3
 2.  В этом примере с помощью командлета [Move-ActiveMailboxDatabase](https://technet.microsoft.com/ru-ru/library/dd298068\(v=exchg.150\)) с параметром *SkipLagChecks* активируется изолированная копия базы данных почтовых ящиков.
     
     ```powershell
-Move-ActiveMailboxDatabase DB1 -ActivateOnServer EX3 -SkipLagChecks
-```
+    Move-ActiveMailboxDatabase DB1 -ActivateOnServer EX3 -SkipLagChecks
+    ```
 
 ## Использование командной консоли для активации изолированной копии базы данных почтовых ящиков с помощью восстановления SafetyNet
 
 1.  При необходимости (для сохранения отстающей копии) сделайте с помощью службы теневого копирования томов (VSS) файловый (без учета Exchange) снимок томов, содержащий копию базы данных и файлы ее журналов.
     
     1.  В этом примере с помощью командлета [Suspend-MailboxDatabaseCopy](https://technet.microsoft.com/ru-ru/library/dd351074\(v=exchg.150\)) приостанавливается репликация для активируемой изолированной копии.
-        
+        ```powershell
             Suspend-MailboxDatabaseCopy DB1\EX3 -SuspendComment "Activate lagged copy of DB1 on Server EX3" -Confirm:$false
-    
+        ```
     2.  При необходимости (для сохранения изолированной копии) сделайте копию копии базы данных и файлов ее журнала.
         
         > [!NOTE]  
@@ -123,17 +123,17 @@ Move-ActiveMailboxDatabase DB1 -ActivateOnServer EX3 -SkipLagChecks
 2.  Определите необходимые журналы для изолированной копии базы данных, выполнив поиск значения "Log Required:" в выходных данных заголовка базы данных ESEUTIL
     
     ```powershell
-Eseutil /mh <DBPath> | findstr /c:"Log Required"
-```
+    Eseutil /mh <DBPath> | findstr /c:"Log Required"
+    ```
     
     Запишите шестнадцатеричные числа в скобках. Первое число — это самый низкий необходимый номер версии (называемый LowGeneration), а второе число — самый высокий необходимый номер (называемый HighGeneration). Переместите все версии файлов журнала, порядковые номера которых превышают значение HighGeneration, в отдельную папку, чтобы не преобразовывать их в базу данных.
 
 3.  На сервере размещения активной копии базы данных удалите файлы журнала для изолированной копии, которая активируется с активной копии, или остановите работу службы репликации Microsoft Exchange.
 
 4.  Выполните переключение базы данных и активируйте изолированную копию. В этом примере описана процедура активации базы данных с помощью командлета [Move-ActiveMailboxDatabase](https://technet.microsoft.com/ru-ru/library/dd298068\(v=exchg.150\)) с несколькими параметрами.
-    
+    ```powershell
         Move-ActiveMailboxDatabase DB1 -ActivateOnServer EX3 -MountDialOverride BestEffort -SkipActiveCopyChecks -SkipClientExperienceChecks -SkipHealthChecks -SkipLagChecks
-
+    ```
 5.  На данный момент база данных подключится автоматически и запросит повторную доставку отсутствующих сообщений из SafetyNet.
 
 ## Как проверить, что все получилось?
@@ -145,6 +145,6 @@ Eseutil /mh <DBPath> | findstr /c:"Log Required"
   - Для отображения сведений о состоянии копии базы данных запустите в консоли следующую команду:
     
     ```powershell
-Get-MailboxDatabaseCopyStatus <DatabaseCopyName> | Format-List
-```
+    Get-MailboxDatabaseCopyStatus <DatabaseCopyName> | Format-List
+    ```
 

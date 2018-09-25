@@ -129,8 +129,8 @@ Set-PopSettings -Identity CAS01 -MessageRetrievalMimeFormat TextOnly
 1.  Выполните в командной консоли следующую команду.
     
     ```powershell
-Get-PopSettings | format-list
-```
+	Get-PopSettings | format-list
+	```
 
 2.  Проверьте правильность параметра *MessageRetrievalMimeFormat*.
 
@@ -228,8 +228,8 @@ Set-ImapSettings -Identity CAS01 -MessageRetrievalMimeFormat TextOnly
 1.  Выполните в командной консоли следующую команду.
     
     ```powershell
-Get-ImapSettings | format-list
-```
+	Get-ImapSettings | format-list
+	```
 
 2.  Проверьте правильность параметра *MessageRetrievalMimeFormat*.
 
@@ -299,8 +299,8 @@ Set-CASMailbox -Identity USER01 -PopMessagesRetrievalMimeFormat TextOnly
 1.  Выполните в командной консоли следующую команду.
     
     ```powershell
-Get-CAS Mailbox <identity> | format-list
-```
+	Get-CAS Mailbox <identity> | format-list
+	```
 
 2.  Проверьте правильность значения параметра *PopMessagesRetrievalMimeFormat*.
 
@@ -370,8 +370,8 @@ Set-CASMailbox -Identity USER01 -ImapMessagesRetrievalMimeFormat TextOnly
 1.  Выполните в командной консоли следующую команду.
     
     ```powershell
-Get-CAS Mailbox <identity> | format-list
-```
+	Get-CAS Mailbox <identity> | format-list
+	```
 
 2.  Проверьте правильность значения параметра *ImapMessagesRetrievalMimeFormat*.
 

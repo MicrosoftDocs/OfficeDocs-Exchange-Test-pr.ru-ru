@@ -61,14 +61,14 @@ _**Последнее изменение раздела:** 2013-02-21_
 
 Выполните следующие команды:
 
-```
+```powershell
     $reqfile = New-ExchangeCertificate -GenerateRequest -SubjectName "C=US,o=Contoso,cn=contosotocert" -DomainName "contoso.com" -PrivateKeyExportable $true
 ```
-```
+
 ```powershell
 $reqfile | out-file c:\certreq.txt
 ```
-```
+
 
 ## Как проверить, что все получилось?
 
