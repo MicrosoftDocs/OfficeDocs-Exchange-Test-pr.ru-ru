@@ -100,10 +100,10 @@ _**Последнее изменение раздела:** 2017-01-23_
   - **Учетные данные для проверки подлинности на промежуточном узле**: учетные данные для учетной записи пользователя во внутреннем домене. Сначала необходимо сохранить имя пользователя и пароль во временной переменной, поскольку командлет **New-SendConnector** не принимает учетные данные пользователей в формате обычного текста.
 
 Чтобы создать соединитель отправки, настроенный на отправку сообщений в организацию Exchange, выполните следующие команды.
-
+```powershell
     $MailboxCredentials = Get-Credential
     New-SendConnector -Name "To Internal Org" -Usage Internal -AddressSpaces *.contoso.com -DNSRoutingEnabled $false -SmartHosts mbxserver01.contoso.com,mbxserver02.contoso.com -SmartHostAuthMechanism BasicAuthRequireTLS -AuthenticationCredential $MailboxCredentials
-
+```
 Подробные сведения о синтаксисе и параметрах см. в разделе [New-SendConnector](https://technet.microsoft.com/ru-ru/library/aa998936\(v=exchg.150\)).
 
 ## Шаг 3. Изменение соединителя получения по умолчанию для получения сообщений только из Интернета
@@ -115,9 +115,9 @@ _**Последнее изменение раздела:** 2017-01-23_
   - Изменить привязки сети для получения сообщений только через сетевой адаптер, доступный в Интернете. Например: 10.1.1.1 и стандартное значение для порта SMTP TCP, равное 25.
 
 Чтобы настроить соединитель получения по умолчанию только на получение сообщений из Интернета, выполните следующую команду.
-
+```powershell
     Set-ReceiveConnector "Default internal Receive connector Edge01" -Name "From Internet" -Bindings 10.1.1.1:25
-
+```
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Set-ReceiveConnector](https://technet.microsoft.com/ru-ru/library/bb125140\(v=exchg.150\)).
 
 ## Шаг 4. Создание соединителя получения, настроенного на прием сообщений только из организации Exchange
@@ -135,18 +135,18 @@ _**Последнее изменение раздела:** 2017-01-23_
   - **Способы проверки подлинности**: TLS, обычная проверка подлинности, обычная проверка подлинности с использованием TLS и проверка подлинности Exchange Server.
 
 Чтобы создать соединитель получения, настроенный на получение сообщений в организацию Exchange, выполните следующую команду.
-
+```powershell
     New-ReceiveConnector -Name "From Internal Org" -Usage Internal -AuthMechanism TLS,BasicAuth,BasicAuthRequireTLS,ExchangeServer -Bindings 10.1.1.2:25 -RemoteIPRanges 192.168.5.10,192.168.5.20
-
+```
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [New-ReceiveConnector](https://technet.microsoft.com/ru-ru/library/bb125139\(v=exchg.150\)).
 
 ## Как проверить, что эти шаги выполнены?
 
 Чтобы убедиться в успешности настройки необходимых соединителей отправки и получения, выполните следующие команды на пограничном транспортном сервере и проверьте соответствие отображаемых значений выбранным вами.
-
+```powershell
     Get-SendConnector | Format-List Name,Usage,AddressSpaces,SourceTransportServers,DSNRoutingEnabled,SmartHosts,SmartHostAuthMechanism
     Get-ReceiveConnector | Format-List Name,Usage,AuthMechanism,Bindings,RemoteIPRanges
-
+```
 ## Процедуры сервера почтовых ящиков
 
 Для работы серверов почтовых ящиков в вашей организации требуется, чтобы соединитель отправки был настроен на отправку сообщений на пограничный транспортный сервер для ретрансляции в Интернет.
@@ -174,15 +174,15 @@ _**Последнее изменение раздела:** 2017-01-23_
   - **Учетные данные для проверки подлинности на промежуточном узле**: учетные данные для учетной записи пользователя на пограничном транспортном сервере. Сначала необходимо сохранить имя пользователя и пароль во временной переменной, поскольку командлет **New-SendConnector** не принимает учетные данные пользователей в формате обычного текста.
 
 Чтобы создать соединитель отправки, настроенный на отправку сообщений на пограничный транспортный сервер, выполните следующие команды.
-
+```powershell
     $EdgeCredentials = Get-Credential
     New-SendConnector -Name "To Edge" -Usage Internal -AddressSpaces * -DNSRoutingEnabled $false -SmartHosts edge01.contoso.com -SourceTransportServers mbxserver01.contoso.com,mbxserver02.contoso.com -SmartHostAuthMechanism BasicAuthRequireTLS -AuthenticationCredential $EdgeCredentials
-
+```
 Подробные сведения о синтаксисе и параметрах см. в разделе [New-SendConnector](https://technet.microsoft.com/ru-ru/library/aa998936\(v=exchg.150\)).
 
 ## Как проверить, что шаг выполнен?
 
 Чтобы убедиться в успешном создании соединителя отправки, настроенного на отправку исходящих сообщений на пограничный транспортный сервер, выполните следующую команду на сервере почтовых ящиков и проверьте соответствие отображаемых значений выбранным вами.
-
+```powershell
     Get-SendConnector | Format-List Name,Usage,AddressSpaces,DSNRoutingEnabled,SmartHosts,SourceTransportServers,SmartHostAuthMechanism
-
+```

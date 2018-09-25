@@ -84,28 +84,28 @@ _**Последнее изменение раздела:** 2016-08-22_
       - В командной строке введите следующую команду и нажмите клавишу ВВОД:
         
         ```powershell
-appcmd set config "Default Web Site/owa" /section:access /sslFlags:None /commit:APPHOST
-```
+		appcmd set config "Default Web Site/owa" /section:access /sslFlags:None /commit:APPHOST
+		```
 
   - **Шаг 2.** Необходимо перезапустить соответствующий пул приложений и службы IIS с помощью одного из следующих способов:
     
       - Использование командной строки. Нажмите кнопку **Пуск**, выберите пункт **Выполнить**, введите **cmd** и нажмите клавишу ВВОД. В окне командной строки введите следующую команду и нажмите клавишу ВВОД:
         
         ```powershell
-appcmd Recycle AppPool MSExchangeOWAAppPool
-```
+		appcmd Recycle AppPool MSExchangeOWAAppPool
+		```
     
       - Введите следующую команду Windows PowerShell и нажмите клавишу ВВОД:
         
         ```powershell
-IIS:\>Restart-WebAppPool MSExchangeOWAAppPool
-```
+		IIS:\>Restart-WebAppPool MSExchangeOWAAppPool
+		```
     
       - Использование командной строки. Нажмите кнопку **Пуск**, выберите пункт **Выполнить**, введите **cmd** и нажмите клавишу ВВОД. В окне командной строки введите следующую команду и нажмите клавишу ВВОД:
         
         ```powershell
-iisreset /noforce
-```
+		iisreset /noforce
+		```
     
       - Использование диспетчера служб IIS. В диспетчере служб IIS в области **действий** щелкните **Перезапустить**.
 
@@ -122,8 +122,8 @@ iisreset /noforce
       - В командной строке введите следующую команду и нажмите клавишу ВВОД:
         
         ```powershell
-appcmd set config "Default Web Site/ecp" /section:access /sslFlags:None /commit:APPHOST
-```
+		appcmd set config "Default Web Site/ecp" /section:access /sslFlags:None /commit:APPHOST
+		```
         
 
   - **Шаг 2.** Необходимо перезапустить соответствующий пул приложений и службы IIS с помощью одного из следующих способов:
@@ -131,20 +131,20 @@ appcmd set config "Default Web Site/ecp" /section:access /sslFlags:None /commit:
       - Использование командной строки. Нажмите кнопку **Пуск**, выберите пункт **Выполнить**, введите **cmd** и нажмите клавишу ВВОД. В окне командной строки введите следующую команду и нажмите клавишу ВВОД:
         
         ```powershell
-appcmd Recycle AppPool MSExchangeECPAppPool
-```
+		appcmd Recycle AppPool MSExchangeECPAppPool
+		```
     
       - Введите следующую команду Windows PowerShell и нажмите клавишу ВВОД:
         
         ```powershell
-IIS:\>Restart-WebAppPool MSExchangeECPAppPool
-```
+		IIS:\>Restart-WebAppPool MSExchangeECPAppPool
+		```
     
       - Использование командной строки. Нажмите кнопку **Пуск**, выберите пункт **Выполнить**, введите **cmd** и нажмите клавишу ВВОД. В окне командной строки введите следующую команду и нажмите клавишу ВВОД:
         
         ```powershell
-iisreset /noforce
-```
+		iisreset /noforce
+		```
     
       - Использование диспетчера служб IIS. В диспетчере служб IIS в области **действий** щелкните **Перезапустить**.
 
@@ -159,17 +159,17 @@ iisreset /noforce
       - В EAC откройте раздел **Серверы**, выберите имя сервера клиентского доступа, а затем нажмите кнопку **Изменить**. В окне **Exchange Server** щелкните **Outlook Anywhere** и в поле **Укажите имя внешнего узла (например, contoso.com), с помощью которого пользователи будут подключаться к вашей организации** введите имя внешнего узла. Убедитесь, что флажок **Разрешить разгрузку SSL** установлен, и нажмите кнопку **Сохранить**.
     
       - В командной консоли Exchange нажмите **Пуск** и в меню **Пуск** щелкните **Командная консоль Exchange**. В открывшемся окне введите следующую команду и нажмите клавишу ВВОД:
-        
+        ```powershell
             Set-OutlookAnywhere -Identity ClientAccessServer1\Rpc* -Externalhostname ClientAccessServer1.contoso.com -ExternalClientsRequireSsl:$True -ExternalClientAuthenticationMethod Basic
-
+		```
   - **Шаг 2**. По умолчанию разгрузка SSL включена. Но вы можете использовать EAC или командную консоль Exchange, если разгрузка SSL была отключена и вам требуется ее включить:
     
       - В EAC откройте раздел **Серверы**, выберите имя сервера клиентского доступа, а затем нажмите кнопку **Изменить**. В окне **Exchange Sever** щелкните **Outlook Anywhere**, установите флажок **Разрешить разгрузку SSL** и нажмите кнопку **Сохранить**.
     
       - В командной консоли введите следующую команду и нажмите клавишу ВВОД:
-        
+        ```powershell
             Set-OutlookAnywhere -Identity ClientAccessServer1\Rpc* -SSLOffloading $true
-
+		```
   - **Шаг 3.** По умолчанию параметр **Требовать SSL** не выбран для виртуального каталога **Rpc**, но если вы хотите убедиться, что SSL отключен, можно воспользоваться диспетчером IIS.
     
       - В диспетчере служб IIS разверните узел **Сайты** \> **Веб-сайт по умолчанию** и выберите виртуальный каталог **Rpc**. В области результатов в разделе **IIS** дважды щелкните пункт **Параметры SSL**. В области результатов **Параметры SSL** убедитесь, что флажок **Требовать SSL** снят, и нажмите кнопку **Применить** в области **действий**.
@@ -179,20 +179,20 @@ iisreset /noforce
       - Использование командной строки. Нажмите кнопку **Пуск**, выберите пункт **Выполнить**, введите **cmd** и нажмите клавишу ВВОД. В окне командной строки введите следующую команду и нажмите клавишу ВВОД:
         
         ```powershell
-appcmd Recycle AppPool MSExchangeRpcProxyFrontEndAppPool
-```
+		appcmd Recycle AppPool MSExchangeRpcProxyFrontEndAppPool
+		```
     
       - Введите следующую команду Windows PowerShell и нажмите клавишу ВВОД:
         
         ```powershell
-IIS:\>Restart-WebAppPool MSExchangeRpcProxyFrontEndAppPool
-```
+		IIS:\>Restart-WebAppPool MSExchangeRpcProxyFrontEndAppPool
+		```
     
       - Использование командной строки. Нажмите кнопку **Пуск**, выберите пункт **Выполнить**, введите **cmd** и нажмите клавишу ВВОД. В окне командной строки введите следующую команду и нажмите клавишу ВВОД:
         
         ```powershell
-iisreset /noforce
-```
+		iisreset /noforce
+		```
     
       - Использование диспетчера служб IIS. В диспетчере служб IIS в области **действий** щелкните **Перезапустить**.
 
@@ -213,28 +213,28 @@ iisreset /noforce
       - В командной строке введите следующую команду и нажмите клавишу ВВОД:
         
         ```powershell
-appcmd set config "Default Web Site/OAB" /section:access /sslFlags:None /commit:APPHOST
-```
+		appcmd set config "Default Web Site/OAB" /section:access /sslFlags:None /commit:APPHOST
+		```
 
   - **Шаг 2.** Необходимо перезапустить соответствующий пул приложений и службы IIS с помощью одного из следующих способов:
     
       - Использование командной строки. Нажмите кнопку **Пуск**, выберите пункт **Выполнить**, введите **cmd** и нажмите клавишу ВВОД. В окне командной строки введите следующую команду и нажмите клавишу ВВОД:
         
         ```powershell
-appcmd Recycle AppPool MSExchangeOABAppPool
-```
+		appcmd Recycle AppPool MSExchangeOABAppPool
+		```
     
       - Введите следующую команду Windows PowerShell и нажмите клавишу ВВОД:
         
         ```powershell
-IIS:\>Restart-WebAppPool MSExchangeOABAppPool
-```
+		IIS:\>Restart-WebAppPool MSExchangeOABAppPool
+		```
     
       - Использование командной строки. Нажмите кнопку **Пуск**, выберите пункт **Выполнить**, введите **cmd** и нажмите клавишу ВВОД. В окне командной строки введите следующую команду и нажмите клавишу ВВОД:
         
         ```powershell
-iisreset /noforce
-```
+		iisreset /noforce
+		```
     
       - Использование диспетчера служб IIS. В диспетчере служб IIS в области **действий** щелкните **Перезапустить**.
 
@@ -249,28 +249,28 @@ iisreset /noforce
       - В диспетчере служб IIS разверните узел **Сайты** \> **Веб-сайт по умолчанию** и выберите виртуальный каталог **Microsoft-Server-ActiveSync**. В области результатов в разделе **IIS** дважды щелкните пункт **Параметры SSL**. В области результатов **Параметры SSL** снимите флажок **Требовать SSL** и нажмите кнопку **Применить** в области **действий**.
     
       - В командной строке введите следующую команду и нажмите клавишу ВВОД:
-        
+        ```powershell
             appcmd set config "Default Web Site/MSExchangeSyncAppPool" /section:access /sslFlags:None /commit:APPHOST
-
+		```
   - **Шаг 2.** Необходимо перезапустить соответствующий пул приложений и службы IIS с помощью одного из следующих способов:
     
       - Использование командной строки. Нажмите кнопку **Пуск**, выберите пункт **Выполнить**, введите **cmd** и нажмите клавишу ВВОД. В окне командной строки введите следующую команду и нажмите клавишу ВВОД:
         
         ```powershell
-appcmd Recycle AppPool MSExchangeSyncAppPool
-```
+		appcmd Recycle AppPool MSExchangeSyncAppPool
+		```
     
       - Введите следующую команду Windows PowerShell и нажмите клавишу ВВОД:
         
         ```powershell
-IIS:\>Restart-WebAppPool MSExchangeSyncAppPool
-```
+		IIS:\>Restart-WebAppPool MSExchangeSyncAppPool
+		```
     
       - Использование командной строки. Нажмите кнопку **Пуск**, выберите пункт **Выполнить**, введите **cmd** и нажмите клавишу ВВОД. В окне командной строки введите следующую команду и нажмите клавишу ВВОД:
         
         ```powershell
-iisreset /noforce
-```
+		iisreset /noforce
+		```
     
       - Использование диспетчера служб IIS. В диспетчере служб IIS в области **действий** щелкните **Перезапустить**.
 
@@ -287,28 +287,28 @@ iisreset /noforce
       - В командной строке введите следующую команду и нажмите клавишу ВВОД:
         
         ```powershell
-appcmd set config "Default Web Site/EWS" /section:access /sslFlags:None /commit:APPHOST
-```
+		appcmd set config "Default Web Site/EWS" /section:access /sslFlags:None /commit:APPHOST
+		```
 
   - **Шаг 2.** Необходимо перезапустить соответствующий пул приложений и службы IIS с помощью одного из следующих способов:
     
       - Использование командной строки. Нажмите кнопку **Пуск**, выберите пункт **Выполнить**, введите **cmd** и нажмите клавишу ВВОД. В окне командной строки введите следующую команду и нажмите клавишу ВВОД:
         
         ```powershell
-appcmd Recycle AppPool MSExchangeServicesAppPool
-```
+		appcmd Recycle AppPool MSExchangeServicesAppPool
+		```
     
       - Введите следующую команду Windows PowerShell и нажмите клавишу ВВОД:
         
         ```powershell
-IIS:\>Restart-WebAppPool MSExchangeServicesAppPool
-```
+		IIS:\>Restart-WebAppPool MSExchangeServicesAppPool
+		```
     
       - Использование командной строки. Нажмите кнопку **Пуск**, выберите пункт **Выполнить**, введите **cmd** и нажмите клавишу ВВОД. В окне командной строки введите следующую команду и нажмите клавишу ВВОД:
         
         ```powershell
-iisreset /noforce
-```
+		iisreset /noforce
+		```
     
       - Использование диспетчера служб IIS. В диспетчере служб IIS в области **действий** щелкните **Перезапустить**.
 
@@ -325,28 +325,28 @@ iisreset /noforce
       - В командной строке введите следующую команду и нажмите клавишу ВВОД:
         
         ```powershell
-appcmd set config "Default Web Site/autodiscover" /section:access /sslFlags:None /commit:APPHOST
-```
+		appcmd set config "Default Web Site/autodiscover" /section:access /sslFlags:None /commit:APPHOST
+		```
 
   - **Шаг 2.** Необходимо перезапустить соответствующий пул приложений и службы IIS с помощью одного из следующих способов:
     
       - Использование командной строки. Нажмите кнопку **Пуск**, выберите пункт **Выполнить**, введите **cmd** и нажмите клавишу ВВОД. В окне командной строки введите следующую команду и нажмите клавишу ВВОД:
         
         ```powershell
-appcmd Recycle AppPool MSExchangeAutodiscoverAppPool
-```
+		appcmd Recycle AppPool MSExchangeAutodiscoverAppPool
+		```
     
       - Введите следующую команду Windows PowerShell и нажмите клавишу ВВОД:
         
         ```powershell
-IIS:\>Restart-WebAppPool MSExchangeAutodiscoverAppPool
-```
+		IIS:\>Restart-WebAppPool MSExchangeAutodiscoverAppPool
+		```
     
       - Использование командной строки. Нажмите кнопку **Пуск**, выберите пункт **Выполнить**, введите **cmd** и нажмите клавишу ВВОД. В окне командной строки введите следующую команду и нажмите клавишу ВВОД:
         
         ```powershell
-iisreset /noforce
-```
+		iisreset /noforce
+		```
     
       - Использование диспетчера служб IIS. В диспетчере служб IIS в области **действий** щелкните **Перезапустить**.
 
@@ -373,28 +373,28 @@ iisreset /noforce
       - В командной строке введите следующую команду и нажмите клавишу ВВОД:
         
         ```powershell
-appcmd set config "Default Web Site/MAPI" /section:access /sslFlags:None /commit:APPHOST
-```
+		appcmd set config "Default Web Site/MAPI" /section:access /sslFlags:None /commit:APPHOST
+		```
 
   - **Шаг 2.** Необходимо перезапустить соответствующий пул приложений и службы IIS с помощью одного из следующих способов:
     
       - Использование командной строки. Нажмите кнопку **Пуск**, выберите пункт **Выполнить**, введите **cmd** и нажмите клавишу ВВОД. В окне командной строки введите следующую команду и нажмите клавишу ВВОД:
         
         ```powershell
-appcmd Recycle AppPool MSExchangeMapiFrontEndAppPool
-```
-    
+		appcmd Recycle AppPool MSExchangeMapiFrontEndAppPool
+		```
+			
       - Введите следующую команду Windows PowerShell и нажмите клавишу ВВОД:
         
         ```powershell
-IIS:\>Restart-WebAppPool MSExchangeMapiFrontEndAppPool
-```
+		IIS:\>Restart-WebAppPool MSExchangeMapiFrontEndAppPool
+		```
     
       - Использование командной строки. Нажмите кнопку **Пуск**, выберите пункт **Выполнить**, введите **cmd** и нажмите клавишу ВВОД. В окне командной строки введите следующую команду и нажмите клавишу ВВОД:
         
         ```powershell
-iisreset /noforce
-```
+		iisreset /noforce
+		```
     
       - Использование диспетчера служб IIS. В диспетчере служб IIS в области **действий** щелкните **Перезапустить**.
 
@@ -409,7 +409,7 @@ iisreset /noforce
 
 
 **Использование Set-WebConfigurationProperty**
-
+```powershell
     Set-OutlookAnywhere -Identity MyServer\Rpc* -Externalhostname MyServer.mail.contoso.com -ExternalClientsRequireSsl $True -ExternalClientAuthenticationMethod Basic
     Set-OutlookAnywhere -Identity MyServer\Rpc* -SSLOffloading $true
     Set-WebConfigurationProperty -Filter //security/access -name sslflags -Value "None" -PSPath IIS:  -Location "Default Web Site/OWA"
@@ -419,6 +419,7 @@ iisreset /noforce
     Set-WebConfigurationProperty -Filter //security/access -name sslflags -Value "None" -PSPath IIS: -Location "Default Web Site/Microsoft-Server-ActiveSync"
     Set-WebConfigurationProperty -Filter //security/access -name sslflags -Value "None" -PSPath IIS: -Location "Default Web Site/OAB"
     Set-WebConfigurationProperty -Filter //security/access -name sslflags -Value "None" -PSPath IIS: -Location "Default Web Site/MAPI"
+```
 ```powershell
 iisreset /noforce
 ```
@@ -428,7 +429,7 @@ iisreset /noforce
 > [!NOTE]  
 > Там, где используется командлет <strong>Set-OutlookAnywhere</strong>, замените &quot;MyServer&quot; на имена ваших серверов клиентского доступа.
 
-
+```powershell
     Set-OutlookAnywhere -Identity MyServer\Rpc* -Externalhostname MyServer.mail.contoso.com -ExternalClientsRequireSsl $True -ExternalClientAuthenticationMethod Basic
     Set-OutlookAnywhere -Identity MyServer\Rpc* -SSLOffloading $true
     &$env:systemroot\system32\inetsrv\appcmd set config "Default Web Site/owa" /section:access /sslFlags:None /commit:APPHOST
@@ -438,6 +439,7 @@ iisreset /noforce
     &$env:systemroot\system32\inetsrv\appcmd set config "Default Web Site/Microsoft-Server-ActiveSync" /section:access /sslFlags:None /commit:APPHOST
     &$env:systemroot\system32\inetsrv\appcmd set config "Default Web Site/OAB" /section:access /sslFlags:None /commit:APPHOST
     &$env:systemroot\system32\inetsrv\appcmd set config "Default Web Site/MAPI" /section:access /sslFlags:None /commit:APPHOST
+```	
 ```powershell
 iisreset /noforce
 ```

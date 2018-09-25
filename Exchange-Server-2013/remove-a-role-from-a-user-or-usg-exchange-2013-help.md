@@ -50,10 +50,10 @@ Remove-ManagementRoleAssignment "Tier 2 Help Desk Assignment"
 ```
 
 Если имя назначения роли не известно, используйте следующий синтаксис.
-
+```powershell
     Get-ManagementRoleAssignment -RoleAssignee <user or USG> -Role <role name> -Delegating <$true | $false> | Remove-ManagementRoleAssignment 
-
+```
 Например, если необходимо удалить назначение обычной роли получателей почты у пользователя davids, используйте следующую команду.
-
+```powershell
     Get-ManagementRoleAssignment -RoleAssignee davids -Role "Mail Recipients" -Delegating $false | Remove-ManagementRoleAssignment
-
+```

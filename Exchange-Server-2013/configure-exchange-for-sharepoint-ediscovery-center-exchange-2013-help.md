@@ -44,18 +44,18 @@ Microsoft Exchange Server 2013 включает в себя компоненты
 ## Действие 1. Настройка проверки подлинности между серверами для Exchange 2013 на сервере SharePoint Server 2013
 
 Выполните следующую команду, чтобы указать Exchange 2013 как надежный поставщик маркеров безопасности в SharePoint 2013.
-
+```powershell
     New-SPTrustedSecurityTokenIssuer -Name Exchange -MetadataEndPoint https://<Exchange Server Name or FQDN>/autodiscover/metadata/json/1
-
+```
 ## Действие 2. Настройка межсерверной проверки подлинности для SharePoint 2013 на сервере Exchange 2013
 
 Выполните этот шаг на сервере Exchange 2013. Для выполнения этих процедур необходимы соответствующие разрешения. Сведения о необходимых разрешениях см. в статье Запись "Партнерские приложения – конфигурация" в разделе [Разрешения на общий доступ и совместную работу](sharing-and-collaboration-permissions-exchange-2013-help.md).
 
 Выполните эту команду, чтобы настроить партнерское приложение SharePoint.
-
+```powershell
     cd c:\'Program Files'\Microsoft\'Exchange Server'\V15\Scripts
     .\Configure-EnterprisePartnerApplication.ps1 -AuthMetadataUrl <path to SharePoint AuthMetadataUrl> -ApplicationType SharePoint
-
+```
 ## Действие 3. Добавление авторизованных пользователей в группу ролей "Управление обнаружением"
 
 Добавьте пользователей, которым необходимо выполнять поиск для обнаружения электронных данных в SharePoint 2013, в группу ролей управления обнаружением в Exchange 2013. Дополнительные сведения см. в разделе [Назначение разрешений обнаружения электронных данных в Exchange](https://docs.microsoft.com/ru-ru/exchange/security-and-compliance/in-place-ediscovery/assign-ediscovery-permissions).

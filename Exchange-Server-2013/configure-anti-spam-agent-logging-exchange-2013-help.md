@@ -39,7 +39,9 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 Выполните следующую команду:
 
-    Set-TransportService <ServerIdentity> -AgentLogEnabled <$true | $false> -AgentLogMaxAge <dd.hh:mm:ss> -AgentLogMaxDirectorySize <Size> -AgentLogMaxFileSize <Size> -AgentLogPath <LocalFilePath>
+```powershell
+Set-TransportService <ServerIdentity> -AgentLogEnabled <$true | $false> -AgentLogMaxAge <dd.hh:mm:ss> -AgentLogMaxDirectorySize <Size> -AgentLogMaxFileSize <Size> -AgentLogPath <LocalFilePath>
+```
 
 В этом примере показана установка следующих параметров журнала агентов на сервере почтовых ящиков с именем Mailbox01.
 
@@ -53,7 +55,9 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 <!-- end list -->
 
-    Set-TransportService Mailbox01 -AgentLogPath "D:\Anti-Spam Agent Log" -AgentLogMaxFileSize 20MB -AgentLogMaxDirectorySize 400MB -AgentLogMaxAge 14.00:00:00
+```powershell
+Set-TransportService Mailbox01 -AgentLogPath "D:\Anti-Spam Agent Log" -AgentLogMaxFileSize 20MB -AgentLogMaxDirectorySize 400MB -AgentLogMaxAge 14.00:00:00
+```
 
 > [!NOTE]  
 > <ul><li><p>Если для параметра <em>AgentLogPath</em> установлено значение <code>$null</code>, ведение журнала агентов эффективно отключено. Однако, если установить для параметра <em>AgentLogPath</em> значение <code>$null</code>, когда для параметра <em>AgentLogEnabled</em> установлено значение <code>$true</code>, будут создаваться ошибки журнала событий. Предпочитаемый метод отключения ведения журнала агентов — установить для параметра <em>AgentLogEnabled</em> значение <code>$false</code>.</p></li>
@@ -69,7 +73,8 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 1.  В командной консоли выполните следующую команду:
     
-        Get-TransportService <ServerIdentity> | Format-List AgentLog*
-
+    ```powershell
+    Get-TransportService <ServerIdentity> | Format-List AgentLog*
+    ```
 2.  Убедитесь, что отображаются значения, которые вы настроили.
 

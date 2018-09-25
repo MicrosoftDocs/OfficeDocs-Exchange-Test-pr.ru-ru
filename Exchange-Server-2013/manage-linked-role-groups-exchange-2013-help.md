@@ -62,13 +62,13 @@ _**Последнее изменение раздела:** 2012-10-09_
 1.  Сохраните учетные данные внешнего леса Active Directory в переменной.
     
     ```powershell
-$ForeignCredential = Get-Credential
-```
+	$ForeignCredential = Get-Credential
+	```
 
 2.  Создайте связанную группу ролей, используя следующую синтаксическую конструкцию.
-    
+    ```powershell
         New-RoleGroup <role group name> -LinkedForeignGroup <name of foreign USG> -LinkedDomainController <FQDN of foreign Active Directory domain controller> -LinkedCredential $ForeignCredential -Roles <role1, role2, role3...>
-
+	```
 3.  Добавьте или удалите участников внешней универсальной группы безопасности с помощью средства «Пользователи и компьютеры Active Directory» на компьютере во внешнем лесу Active Directory.
 
 В данном примере выполняется следующее:
@@ -86,8 +86,9 @@ $ForeignCredential = Get-Credential
 ```powershell
 $ForeignCredential = Get-Credential
 ```
+```powershell
     New-RoleGroup "Compliance Role Group" -LinkedForeignGroup "Compliance Administrators" -LinkedDomainController DC01.users.contoso.com -LinkedCredential $ForeignCredential -Roles "Transport Rules", "Journaling"
-
+```
 ## Использование командной консоли для создания связанной группы ролей с настраиваемой областью управления
 
 Можно создавать связанные группы ролей с настраиваемыми областями управления получателями, настраиваемыми областями управления конфигурацией или обоих видов. Чтобы создать связанную группу ролей и назначить для этой группы роли управления с настраиваемыми областями, выполните следующие действия:
@@ -95,13 +96,13 @@ $ForeignCredential = Get-Credential
 1.  Сохраните учетные данные внешнего леса Active Directory в переменной.
     
     ```powershell
-$ForeignCredential = Get-Credential
-```
+	$ForeignCredential = Get-Credential
+	```
 
 2.  Создайте связанную группу ролей, используя следующую синтаксическую конструкцию.
-    
+    ```powershell
         New-RoleGroup <role group name> -LinkedForeignGroup <name of foreign USG> -LinkedDomainController <FQDN of foreign Active Directory domain controller> -CustomConfigWriteScope <name of configuration scope> -CustomRecipientWriteScope <name of recipient scope> -LinkedCredential $ForeignCredential -Roles <role1, role2, role3...>
-
+	```
 3.  Добавьте или удалите участников внешней универсальной группы безопасности с помощью средства «Пользователи и компьютеры Active Directory» на компьютере во внешнем лесу Active Directory.
 
 В данном примере выполняется следующее:
@@ -130,13 +131,13 @@ $ForeignCredential = Get-Credential
 1.  Сохраните учетные данные внешнего леса Active Directory в переменной.
     
     ```powershell
-$ForeignCredential = Get-Credential
-```
+	$ForeignCredential = Get-Credential
+	```
 
 2.  Создайте связанную группу ролей, используя следующую синтаксическую конструкцию.
-    
+    ```powershell
         New-RoleGroup <role group name> -LinkedForeignGroup <name of foreign USG> -LinkedDomainController <FQDN of foreign Active Directory domain controller> -LinkedCredential $ForeignCredential -RecipientOrganizationalUnitScope <OU name> -Roles <role1, role2, role3...>
-
+	```
 3.  Добавьте или удалите участников внешней универсальной группы безопасности с помощью средства «Пользователи и компьютеры Active Directory» на компьютере во внешнем лесу Active Directory.
 
 В данном примере выполняется следующее:
@@ -154,8 +155,9 @@ $ForeignCredential = Get-Credential
 ```powershell
 $ForeignCredential = Get-Credential
 ```
+```powershell
     New-RoleGroup "Executives Compliance Role Group" -LinkedForeignGroup "Executives Compliance Administrators" -LinkedDomainController DC01.users.contoso.com -LinkedCredential $ForeignCredential -RecipientOrganizationalUnitScope "Executives OU" -Roles "Transport Rules", "Journaling"
-
+```
 Дополнительные сведения об областях управления см. в разделе [Общие сведения об областях ролей управления](understanding-management-role-scopes-exchange-2013-help.md).
 
 ## Изменение внешней универсальной группы безопасности в связанной группой ролей
@@ -167,13 +169,13 @@ $ForeignCredential = Get-Credential
 1.  Сохраните учетные данные внешнего леса Active Directory в переменной.
     
     ```powershell
-$ForeignCredential = Get-Credential
-```
+	$ForeignCredential = Get-Credential
+	```
 
 2.  Изменение внешней универсальной группы безопасности на существующий связанная группа ролей, используя следующий синтаксис.
-    
+    ```powershell
         Set-RoleGroup <role group name> -LinkedForeignGroup <name of foreign USG> -LinkedDomainController <FQDN of foreign Active Directory domain controller> -LinkedCredential $ForeignCredential 
-
+	```
 В данном примере выполняется следующее:
 
   - Извлекаются учетные данные внешнего леса Active Directory с именем users.contoso.com. Эти данные используются для подключения к контроллеру домена DC01.users.contoso.com во внешнем лесу.
@@ -185,5 +187,6 @@ $ForeignCredential = Get-Credential
 ```powershell
 $ForeignCredential = Get-Credential
 ```
+```powershell
     Set-RoleGroup "Compliance Role Group" -LinkedForeignGroup "Regulatory Compliance Officers" -LinkedDomainController DC01.users.contoso.com -LinkedCredential $ForeignCredential
-
+```

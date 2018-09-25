@@ -269,9 +269,9 @@ Cd $env:ExchangeInstallPath\Scripts
 ```
 
 Чтобы запустить папку сценариев, введите команду в следующем формате:
-
+```powershell
     .\Get-AntiSpamFilteringReport.ps1 -report <ReportValue> [<OptionalParameters>]
-
+```
 Для получения сведений об использовании сценария, выполните следующую команду:
 
 ```powershell

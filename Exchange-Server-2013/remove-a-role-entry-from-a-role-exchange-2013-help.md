@@ -60,17 +60,17 @@ Remove-ManagementRoleEntry "Seattle Server Administrators\Enable-MailUser"
 При удалении нескольких записей ролей из роли отменяются возможности доступа пользователей, назначенных для этой роли, к соответствующим командлетам или сценариям.
 
 Чтобы удалить несколько записей ролей из роли, необходимо получить список записей ролей с помощью командлета **Get-ManagementRoleEntry** cmdlet. Затем необходимо передать выходные данные в командлет **Remove-ManagementRoleEntry**. В командлете **Get-ManagementRoleEntry** можно использовать подстановочные знаки для выбора нескольких записей ролей. Рекомендуется использовать параметр *WhatIf* для проверки удаления только необходимых записей ролей. Используйте следующий синтаксис.
-
+```powershell
     Get-ManagementRoleEntry <management role>\<role entry with wildcard character> | Remove-ManagementRoleEntry -WhatIf
-
+```
 В следующем примере удаляются все записи ролей, которые содержат слово journal из роли Seattle Server Administrators.
-
+```powershell
     Get-ManagementRoleEntry "Seattle Server Administrators\*Journal*" | Remove-ManagementRoleEntry -WhatIf
-
+```
 При выполнении команды с параметром *WhatIf* командлет возвращает список всех записей ролей, которые будут удалены. Если список соответствует поставленной задаче, следует снова выполнить команду без параметра *WhatIf* для удаления записей ролей.
-
+```powershell
     Get-ManagementRoleEntry "Seattle Server Administrators\*Journal*" | Remove-ManagementRoleEntry
-
+```
 Дополнительные сведения о синтаксисе и параметрах см. в разделах [Get-ManagementRoleEntry](https://technet.microsoft.com/ru-ru/library/dd335210\(v=exchg.150\)) и [Remove-ManagementRoleEntry](https://technet.microsoft.com/ru-ru/library/dd351187\(v=exchg.150\)).
 
 ## Удаление параметров из записи роли в роли
@@ -78,12 +78,12 @@ Remove-ManagementRoleEntry "Seattle Server Administrators\Enable-MailUser"
 При удалении параметров из записи роли в роли эти параметры перестают быть доступными пользователям, назначенным для этой роли.
 
 Используйте следующий синтаксис для удаления параметров из записи роли.
-
+```powershell
     Set-ManagementRoleEntry <management role>\<role entry> -Parameters <parameter 1>,<parameter 2...> -RemoveParameter
-
+```
 В этом примере удаляются параметры *MaxSafeSenders*, *MaxSendSize*, *SecondaryAddress* и*UseDatabaseQuotaDefaults* из записи роли **Set-Mailbox** в роли Seattle Server Administrators.
-
+```powershell
     Set-ManagementRoleEntry "Seattle Server Administrators\Set-Mailbox" -Parameters MaxSafeSenders,MaxSendSize,SecondaryAddress,UseDatabaseQuotaDefaults -RemoveParameter
-
+```
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Set-ManagementRoleEntry](https://technet.microsoft.com/ru-ru/library/dd351162\(v=exchg.150\)).
 

@@ -80,9 +80,9 @@ _**Последнее изменение раздела:** 2015-04-08_
 ## Изменение конфигурации служб AD LDS на пограничном транспортном сервере
 
 В этом примере порт LDAP, который используют службы AD LDS, изменяется на порт 5000. Амперсанд (&) входит в синтаксис команды.
-
+```powershell
     & $env:ExchangeInstallPath\Scripts\ConfigureAdam.ps1 -LdapPort:5000
-
+```
 В этом примере в конфигурацию служб AD LDS вносятся приведенные ниже изменения. Амперсанд (&) входит в синтаксис команды. Обратите внимание, что между каждым параметром и его значением используется двоеточие (:):
 
   - Изменение порта LDAP на 5000
@@ -94,6 +94,6 @@ _**Последнее изменение раздела:** 2015-04-08_
   - Изменение пути к данным на D:\\Exchange Server\\Data\\ADLDS
 
 <!-- end list -->
-
+```powershell
     & $env:ExchangeInstallPath\Scripts\ConfigureAdam.ps1 -LdapPort:5000 -SslPort:5001 -LogPath:"D:\Exchange Server\Data\ADLDS" -DataPath:"D:\Exchange Server\Data\ADLDS"
-
+```

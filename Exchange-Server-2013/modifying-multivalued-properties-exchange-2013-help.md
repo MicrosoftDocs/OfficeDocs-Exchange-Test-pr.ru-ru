@@ -106,10 +106,10 @@ Set-RecipientFilterConfig -BlockedRecipients @{Remove="david@adatum.com"}
 ```
 
 Можно использовать и более сложные комбинации, такие как одновременное добавление и удаление значений для свойства. Для этого вставьте точку с запятой (`;`) между действиями `Add` и `Remove`. Например:
-
+```powershell
     Set-RecipientFilterConfig -BlockedRecipients @{Add="carter@contoso.com", "sam@northwindtraders.com", "brian@adatum.com"; Remove="john@contoso.com"}
-
+```
 Если мы используем команду `Get-RecipientFilterConfig | Format-List BlockedRecipients` еще раз, мы увидим, что адреса электронной почты для пользователей Carter, Sam и Brian были добавлены, а адрес для пользователя John был удален.
-
+```powershell
     BlockedRecipients : {brian@adatum.com, sam@northwindtraders.com, carter@contoso.com, chris@contoso.com, kim@northwindtraders.com}
-
+```

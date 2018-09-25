@@ -72,26 +72,26 @@ _**Последнее изменение раздела:** 2018-04-16_
 1.  Для удаления пограничной подписки с пограничного транспортного сервера используйте приведенный ниже синтаксис.
     
     ```powershell
-Remove-EdgeSubscription <EdgeTransportServerIdentity>
-```
+	Remove-EdgeSubscription <EdgeTransportServerIdentity>
+	```
     
     Например, чтобы удалить пограничную подписку с пограничного транспортного сервера Edge01, выполните указанную ниже команду.
     
     ```powershell
-Remove-EdgeSubscription Edge01
-```
+	Remove-EdgeSubscription Edge01
+	```
 
 2.  Для удаления пограничной подписки с сервера почтовых ящиков используйте приведенный ниже синтаксис.
     
     ```powershell
-Remove-EdgeSubscription <MailboxServerIdentity>
-```
+	Remove-EdgeSubscription <MailboxServerIdentity>
+	```
     
     Например, чтобы удалить пограничную подписку с сервера почтовых ящиков Mailbox01, выполните указанную ниже команду.
     
     ```powershell
-Remove-EdgeSubscription Mailbox01
-```
+	Remove-EdgeSubscription Mailbox01
+	```
 
 Пограничную подписку понадобится удалить в указанных ниже случаях.
 
@@ -146,9 +146,9 @@ Remove-EdgeSubscription Mailbox01
 При синхронизации EdgeSync вручную сбрасывается расписание синхронизации EdgeSync. Время следующей автоматической синхронизации зависит от того, когда вы запустили синхронизацию вручную.
 
 Чтобы вручную запустить EdgeSync, используйте приведенный ниже синтаксис.
-
+```powershell
     Start-EdgeSynchronization [-Server <MailboxServerIdentity>] [-TargetServer <EdgeTransportServerIdentity> [-ForceFullSync]
-
+```
 В примере ниже показано, как запустить синхронизацию EdgeSync со следующими параметрами:
 
   - Синхронизация запускается с сервера почтовых ящиков Exchange 2013 с именем Mailbox01.

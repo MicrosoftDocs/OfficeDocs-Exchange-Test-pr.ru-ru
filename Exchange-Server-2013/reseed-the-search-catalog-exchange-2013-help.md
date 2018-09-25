@@ -92,16 +92,13 @@ Update-MailboxDatabaseCopy -Identity DB1\MBX1 -SourceServer MBX2 -CatalogOnly
 
 1.  Чтобы остановить службу поиска Microsoft Exchange и службу контроллера узлов поиска Microsoft Exchange, выполните приведенные ниже команды.
     
-    ```
-```powershell
-Stop-Service MSExchangeFastSearch
-```
-    ```
-    ```
-```powershell
-Stop-Service HostControllerService
-```
-    ```
+	```powershell
+	Stop-Service MSExchangeFastSearch
+	```
+	```powershell
+	Stop-Service HostControllerService
+	```
+
 
 2.  Удалите, переместите или переименуйте папку, которая содержит каталог индексов контента Exchange. Она называется `%ExchangeInstallPath\Mailbox\<name of mailbox database>_Catalog\<GUID>12.1.Single`. Например, можно переименовать папку `C:\Program Files\Microsoft\Exchange Server\V15\Mailbox\Mailbox Database 0657134726_Catalog\F0627A72-9F1D-494A-839A-D7C915C279DB12.1.Single_OLD`.
     
@@ -111,16 +108,13 @@ Stop-Service HostControllerService
 
 3.  Чтобы перезапустить службу поиска Microsoft Exchange и службу контроллера узлов поиска Microsoft Exchange, выполните приведенные ниже команды.
     
-    ```
-```powershell
-Start-Service MSExchangeFastSearch
-```
-    ```
-    ```
-```powershell
-Start-Service HostControllerService
-```
-    ```
+	```powershell
+	Start-Service MSExchangeFastSearch
+	```
+	```powershell
+	Start-Service HostControllerService
+	```
+
     
     После их перезапуска служба поиска Exchange перестроит каталог индексов контента.
 
@@ -128,7 +122,7 @@ Start-Service HostControllerService
 
 Повторное заполнение каталога индексов контента службой поиска Exchange может занять некоторое время. Чтобы отобразить состояние процесса повторного заполнения, выполните приведенную ниже команду.
 
-  ```
+  ```powershell
   Get-MailboxDatabaseCopyStatus | FL Name,*Index*
   ```
 

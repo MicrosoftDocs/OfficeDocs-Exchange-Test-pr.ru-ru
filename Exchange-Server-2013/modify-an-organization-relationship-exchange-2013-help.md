@@ -84,21 +84,21 @@ _**Последнее изменение раздела:** 2015-01-01_
 ## Использование командной консоли для изменения организационной связи
 
   - Этот пример добавляет доменное имя service.contoso.com для связи организации Contoso.
-    
+    ```powershell
         $domains = (Get-OrganizationRelationship Contoso).DomainNames
         $domains += 'service.contoso.com'
         Set-OrganizationRelationship -Identity Contoso -DomainNames $domains
-
+	```
   - В этом примере отключается организационная связь Contoso.
     
     ```powershell
-Set-OrganizationRelationship -Identity Contoso -Enabled $false
-```
+	Set-OrganizationRelationship -Identity Contoso -Enabled $false
+	```
 
   - В этом примере включается доступ к сведениям календаря о доступности для связи организации WoodgroveBank, а для уровня доступа устанавливается значение `AvailabilityOnly` (сведения календаря о доступности только по времени).
-    
+    ```powershell
         Set-OrganizationRelationship -Identity Contoso -FreeBusyAccessEnabled $true -FreeBusyAccessLevel AvailabilityOnly
-
+	```
 Дополнительные сведения о синтаксисе и параметрах см. в разделах [Get-OrganizationRelationship](https://technet.microsoft.com/ru-ru/library/ee332343\(v=exchg.150\)) и [Set-OrganizationRelationship](https://technet.microsoft.com/ru-ru/library/ee332326\(v=exchg.150\)).
 
 ## Как проверить, что все получилось?

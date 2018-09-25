@@ -116,9 +116,9 @@ _**Последнее изменение раздела:** 2015-03-09_
 Дополнительные сведения об учетных записях ESRA и их использовании для защиты процесса синхронизации EdgeSync см. в разделе [Учетные данные пограничной подписки](edge-subscription-credentials-exchange-2013-help.md).
 
 В этом примере выполняется подписка пограничного транспортного сервера на указанный сайт и автоматически создается соединитель отправки в Интернет и соединитель отправки с пограничного транспортного сервера на серверы почтовых ящиков.
-
+```powershell
     New-EdgeSubscription -FileData ([byte[]]$(Get-Content -Path "C:\EdgeSubscriptionInfo.xml" -Encoding Byte -ReadCount 0)) -CreateInternetSendConnector $true -CreateInboundSendConnector $true -Site "Default-First-Site-Name" 
-
+```
 > [!NOTE]  
 > Для параметров <em>CreateInternetSendConnector</em> и <em>CreateInboundSendConnector</em> устанавливаются значения по умолчанию <code>$true</code>. Они приведены здесь только для примера.
 

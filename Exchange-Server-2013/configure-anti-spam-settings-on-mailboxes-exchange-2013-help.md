@@ -60,29 +60,29 @@ Set-Mailbox "Jeff Phillips" -AntispamBypassEnabled $true -SCLJunkEnabled $true -
 Чтобы проверить успешность настройки функций защиты от нежелательной почты для отдельного почтового ящика, выполните следующие действия:
 
 1.  Выполните следующую команду:
-    
+    ```powershell
         Get-Mailbox <MailboxIdentity> | Format-List SCL*,Bypass*,*SenderAuth*
-
+	```
 2.  Убедитесь, что отображается значение, которое вы настроили.
 
 ## Использование командной консоли для настройки функций защиты от нежелательной почты для почтовых ящиков
 
 Чтобы настроить все параметры защиты от нежелательной почты для почтового ящика, используйте следующий синтаксис.
-
+```powershell
     Get-Mailbox [<Filter>]| Set-Mailbox <Anti-Spam Settings>
-
+```
 В этом примере выполняется установка значения 7 в качестве порогового уровня вероятности нежелательной почты для перемещения в карантин для всех почтовых ящиков контейнера "Пользователи" в домене Contoso.com.
-
+```powershell
     Get-Mailbox -OrganizationalUnit Contoso.com/Users | Set-Mailbox -SCLQuarantineEnabled $true -SCLQuarantineThreshold 7
-
+```
 ## Как проверить, что все получилось?
 
 Чтобы проверить успешность настройки функций защиты от нежелательной почты для нескольких почтовых ящиков, выполните следующие действия:
 
 1.  Выполните следующую команду:
-    
+    ```powershell
         Get-Mailbox [<Filter>] | Format-List Name,SCL*,*SenderAuth*
-
+	```
 2.  Убедитесь, что отображаются значения, которые вы настроили.
 
 ## Использование командной консоли для настройки порогов нежелательной почты для всех почтовых ящиков в организации
@@ -106,8 +106,8 @@ Set-OrganizationConfig -SCLJunkThreshold 5
 1.  Выполните следующую команду:
     
     ```powershell
-Get-OrganizationConfig | Format-List SCLJunkThreshold
-```
+	Get-OrganizationConfig | Format-List SCLJunkThreshold
+	```
 
 2.  Убедитесь, что отображается значение, которое вы настроили.
 

@@ -47,29 +47,23 @@ _**Последнее изменение раздела:** 2013-12-02_
 
 Выполните одну из следующих команд для просмотра настроек работоспособности и сведений об исправности на сервере Exchange 2013.
 
-```
 ```powershell
 Get-HealthReport -Identity <ServerName>
 ```
-```
-```
+```powershell
     Get-ServerHealth -Identity <ServerName> | Format-Table Server,CurrentHealthSetState,Name,HealthSetName,AlertValue,HealthGroupName -Auto
 ```
 
 Выполните одну из следующих команд для просмотра настроек работоспособности на сервере или в группе доступности базы данных Exchange 2013.
 
-```
 ```powershell
 Get-ExchangeServer | Get-HealthReport -RollupGroup
 ```
 
-```
-```
 ```powershell
 Get-ExchangeServer | Get-HealthReport -RollupGroup -HealthSetName <HealthSet>
 ```
-```
-```
+```powershell
     (Get-DatabaseAvailabiltyGroup <DAGName>).Servers | Get-HealthReport -RollupGroup
 ```
 
@@ -92,9 +86,9 @@ Get-HealthReport -Server <ServerName>
 ## Использование командной консоли для просмотра зондов, мониторов и ответчиков для настроек работоспособности
 
 Выполните следующую команду для просмотра зондов, мониторов и ответчиков, связанных с настройками работоспособности на сервере Exchange 2013.
-
+```powershell
     Get-MonitoringItemIdentity -Server <ServerName> -Identity <HealthSetName> | Format-Table Identity,ItemType,Name -Auto
-
+```
 ## Просмотр списка мониторов и их текущего состояния
 
 Состояние мониторов определяется на основе состояния «худших» мониторов в настройках работоспособности. Вы можете просмотреть сведения о настройках работоспособности, чтобы узнать, какие мониторы исправны, а какие нет.
@@ -102,6 +96,6 @@ Get-HealthReport -Server <ServerName>
 ## Использование командной консоли для просмотра списка мониторов и их текущего состояния
 
 Выполните следующую команду для просмотра списка мониторов и их текущего состояния на сервере Exchange 2013.
-
+```powershell
     Get-ServerHealth -HealthSet <HealthSetName> -Server <ServerName> | Format-Table Name, AlertValue -Auto
-
+```

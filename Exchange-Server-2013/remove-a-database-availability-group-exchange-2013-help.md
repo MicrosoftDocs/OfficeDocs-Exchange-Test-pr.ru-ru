@@ -62,8 +62,8 @@ Remove-DatabaseAvailabilityGroup -Identity DAG1
   - В командной консоли выполните следующую команду, чтобы узнать, существует ли эта группа:
     
     ```powershell
-Get-DatabaseAvailabilityGroup <DAGName>
-```
+    Get-DatabaseAvailabilityGroup <DAGName>
+    ```
     
     Если группа успешно удалена, команда выше приведет к отображению сообщения об ошибке, которое указывает, что не удается найти объект.
 

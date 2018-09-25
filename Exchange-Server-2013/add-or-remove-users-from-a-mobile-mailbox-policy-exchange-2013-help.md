@@ -63,8 +63,9 @@ _**Последнее изменение раздела:** 2015-07-16_
 
 1.  В консоли Shell выполните следующую команду:
     
-        Get-CASMailbox -Identity tony@contoso.com -ActiveSyncMailboxPolicy "Sales" 
-
+    ```powershell
+    Get-CASMailbox -Identity tony@contoso.com -ActiveSyncMailboxPolicy "Sales" 
+    ```    
 ## Как проверить, что все получилось?
 
 Чтобы убедиться в том, что изменения в политику почтовых ящиков мобильного устройства были успешно внесены, выполните одно из перечисленных ниже действий.
@@ -73,8 +74,9 @@ _**Последнее изменение раздела:** 2015-07-16_
 
 2.  В консоли Shell выполните следующую команду:
     
-        Get-CASMailbox -Identity tony@contoso.com 
-
+    ```powershell
+    Get-CASMailbox -Identity tony@contoso.com 
+    ```    
 ## Изменение политики почтовых ящиков для мобильных устройств, в то же время несколько пользователей
 
 Если требуется изменить политики почтовых ящиков для мобильных устройств, в то же время несколько пользователей, можно использовать функции массового редактирования в EAC или использование командной консоли для изменения политики почтовых ящиков для мобильных устройств для получения отфильтрованного набора пользователей.
@@ -99,9 +101,11 @@ _**Последнее изменение раздела:** 2015-07-16_
 
 1.  В консоли Shell выполните следующую команду:
     
-        Get-Mailbox | where { $_.CustomAttribute1 -match "Manager"
-         } | Set-CASMailbox -activesyncmailboxpolicy(Get-ActiveSyncMailboxPolicy "Contoso").Identity
-    
+    ```
+    Get-Mailbox | where { $_.CustomAttribute1 -match "Manager"
+     } | Set-CASMailbox -activesyncmailboxpolicy(Get-ActiveSyncMailboxPolicy "Contoso").Identity
+    ```
+
     > [!NOTE]  
     > Атрибутом <code>CustomAttribute1</code> можно заменить любое из свойств объекта <strong>Get-Mailbox</strong>. Чтобы просмотреть полный список, введите: <code>Get-Mailbox username |fl</code>.
 
@@ -115,6 +119,6 @@ _**Последнее изменение раздела:** 2015-07-16_
 2.  В консоли Shell выполните следующую команду:
     
     ```powershell
-Get-CASMailbox -Identity tony@contoso.com
-```
+    Get-CASMailbox -Identity tony@contoso.com
+    ```
 

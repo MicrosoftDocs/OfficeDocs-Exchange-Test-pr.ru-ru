@@ -98,13 +98,13 @@ Set-ManagementRoleAssignment "John's Assignment" - RecipientRelativeWriteScope M
 Можно изменить область фильтра получателей, которая уже применена к назначению роли, или указать новую область. При добавлении области фильтра получателей ранее определенные области получателей удаляются из назначения роли.
 
 Чтобы указать новую область фильтра получателей или заменить существующую, используйте следующую синтаксическую конструкцию.
-
+```powershell
     Set-ManagementRoleAssignment <assignment name> -CustomRecipientWriteScope <role scope name>
-
+```
 В этом примере выполняется добавление или изменение области фильтра получателей на "Получатели в Редмонде".
-
+```powershell
     Set-ManagementRoleAssignment "Redmond Recipient Administrators Assignment" -CustomRecipientWriteScope "Redmond Recipients"
-
+```
 Чтобы сохранить используемую область фильтра получателей, которая применена к назначению роли, и изменить фильтр получателей, используемый для проверки соответствия объектов получателей, необходимо изменить фильтр получателей самой области. Дополнительные сведения об изменении областей см. в разделе [Изменение области роли](change-a-role-scope-exchange-2013-help.md).
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Set-ManagementRoleAssignment](https://technet.microsoft.com/ru-ru/library/dd335173\(v=exchg.150\)).
@@ -120,9 +120,9 @@ Set-ManagementRoleAssignment <assignment name> -CustomConfigWriteScope <role sco
 ```
 
 В этом примере выполняется добавление или изменение области конфигурации на "Серверы Редмонда".
-
+```powershell
     Set-ManagementRoleAssignment "Redmond Administrators Assignment" -CustomConfigWriteScope "Redmond Servers"
-
+```
 Чтобы сохранить используемую область конфигурации, которая применена к назначению роли, и изменить фильтр сервера или список серверов в области, необходимо изменить саму область конфигурации. Дополнительные сведения об изменении областей см. в разделе [Изменение области роли](change-a-role-scope-exchange-2013-help.md).
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Set-ManagementRoleAssignment](https://technet.microsoft.com/ru-ru/library/dd335173\(v=exchg.150\)).
@@ -158,9 +158,9 @@ Set-ManagementRoleAssignment <assignment name> -RecipientOrganizationalUnitScope
 ```
 
 В этом примере выполняется добавление подразделения Engineering\\Users в домен contoso.com в назначение роли службы технической поддержки.
-
+```powershell
     Set-ManagementRoleAssignment "Engineering Help Desk" -RecipientOrganizationalUnitScope contoso.com/Engineering/Users
-
+```
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Set-ManagementRoleAssignment](https://technet.microsoft.com/ru-ru/library/dd335173\(v=exchg.150\)).
 
 ## Использование командной консоли для изменения исключительной области получателей или области конфигурации
@@ -174,8 +174,8 @@ Set-ManagementRoleAssignment <assignment name> -RecipientOrganizationalUnitScope
 Как и в случае со стандартными областями получателей и конфигурации, при добавлении или изменении исключительной области выполняется замена ранее определенных областей получателей или конфигурации.
 
 В этом примере выполняется изменение исключительной области записи получателей.
-
+```powershell
     Set-ManagementRoleAssignment "Exclusive Executive Users" -ExclusiveRecipientWriteScope "Exclusive Executives"
-
+```
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Set-ManagementRoleAssignment](https://technet.microsoft.com/ru-ru/library/dd335173\(v=exchg.150\)).
 

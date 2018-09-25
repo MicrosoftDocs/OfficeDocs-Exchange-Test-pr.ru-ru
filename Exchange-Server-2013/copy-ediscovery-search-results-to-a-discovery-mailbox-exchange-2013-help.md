@@ -80,19 +80,19 @@ Start-MailboxSearch "Fabrikam Investigation"
 ```
 
 Если вы использовали переключатель *EstimateOnly*, чтобы получить оценку результатов поиска, то вам необходимо удалить переключатель перед копированием результатов поиска. Вам также нужно указать почтовый ящик найденных сообщений для копирования результатов поиска. Например, вы создали оценочный поиск с помощью следующей команды:
-
+```powershell
     New-MailboxSearch "FY13 Q2 Financial Results" -StartDate "04/01/2013" -EndDate "06/30/2013" -SourceMailboxes "DG-Finance" -SearchQuery '"Financial" AND "Fabrikam"' -EstimateOnly -IncludeUnsearchableItems
-
+```
 Чтобы скопировать результаты поиска в почтовый ящик найденных сообщений, вам пришлось бы выполнить такие команды:
 
-```
+```powershell
     Set-MailboxSearch "FY13 Q2 Financial Results" -EstimateOnly $false -TargetMailbox "Discovery Search Mailbox"
 ```
-```
+
 ```powershell
 Start-MailboxSearch "FY13 Q2 Financial Results"
 ```
-```
+
 
 ## Дополнительные сведения о копировании результатов поиска
 

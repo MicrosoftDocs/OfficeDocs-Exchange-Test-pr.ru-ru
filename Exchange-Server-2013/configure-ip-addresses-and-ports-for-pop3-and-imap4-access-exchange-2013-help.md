@@ -90,8 +90,8 @@ Set-PopSettings -UnencryptedOrTLSBindings IPaddress:Port
 1.  Выполните в командной консоли следующую команду.
     
     ```powershell
-Get-PopSettings | format-list
-```
+    Get-PopSettings | format-list
+    ```
 
 2.  Убедитесь, что параметры *UnencryptedOrTLSBindings* и *SSLBindings* указаны правильно.
 
@@ -131,7 +131,9 @@ Set-ImapSettings -SSLBindings: IPaddress:Port
 
 Чтобы задать IP-адрес и порт для связи с Exchange по протоколу IMAP4 без шифрования или с шифрованием TLS, выполните следующую команду.
 
-    Set-ImapSettings -UnencryptedOrTLSBindings IPaddress:Port 
+```powershell
+Set-ImapSettings -UnencryptedOrTLSBindings IPaddress:Port 
+```
 
 После установки IP-адреса и порта для протокола IMAP4 необходимо перезапустить службу IMAP4, чтобы изменения вступили в силу. Дополнительные сведения о перезапуске службы IMAP4 приведены в разделе [Запуск и остановка служб IMAP4](start-and-stop-the-imap4-services-exchange-2013-help.md).
 
@@ -144,8 +146,8 @@ Set-ImapSettings -SSLBindings: IPaddress:Port
 1.  Выполните в командной консоли следующую команду.
     
     ```powershell
-Get-ImapSettings | format-list
-```
+    Get-ImapSettings | format-list
+    ```
 
 2.  Убедитесь, что параметры *UnencryptedOrTLSBindings* и *SSLBindings* указаны правильно.
 

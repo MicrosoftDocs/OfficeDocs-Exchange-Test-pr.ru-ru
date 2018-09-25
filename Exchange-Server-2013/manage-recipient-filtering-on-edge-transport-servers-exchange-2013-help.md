@@ -36,8 +36,8 @@ _**Последнее изменение раздела:** 2015-04-08_
   - Параметр *AddressBookEnabled* командлета **Set-AcceptedDomain** позволяет включить или отключить фильтрацию получателей для получателей в обслуживаемом домене. По умолчанию фильтрация получателей включена для уполномоченных доменов и отключена для доменов внутренней и внешней ретрансляции. Чтобы просмотреть состояние параметра *AddressBookEnabled* для обслуживаемых доменов в своей организации, выполните следующую команду.
     
     ```powershell
-Get-AcceptedDomain | Format-List Name,AddressBookEnabled
-```
+	Get-AcceptedDomain | Format-List Name,AddressBookEnabled
+	```
 
   - Если отключить фильтрацию получателей с помощью описанной в данном разделе процедуры, функция фильтрации получателей будет отключена, но соответствующий агент фильтра получателей будет оставаться включенным.
 
@@ -74,8 +74,8 @@ Set-RecipientFilterConfig -Enabled $true
 1.  Выполните следующую команду:
     
     ```powershell
-Get-RecipientFilterConfig | Format-List Enabled
-```
+	Get-RecipientFilterConfig | Format-List Enabled
+	```
 
 2.  Убедитесь, что отображается значение, которое вы настроили.
 
@@ -100,8 +100,8 @@ Set-RecipientFilterConfig -BlockListEnabled $true
 1.  Выполните следующую команду:
     
     ```powershell
-Get-RecipientFilterConfig | Format-List BlockListEnabled
-```
+	Get-RecipientFilterConfig | Format-List BlockListEnabled
+	```
 
 2.  Убедитесь, что отображается значение, которое вы настроили.
 
@@ -120,13 +120,13 @@ Set-RecipientFilterConfig -BlockedRecipients mark@contoso.com,kim@contoso.com
 ```
 
 Чтобы добавить или удалить записи, не изменив существующие значения, выполните следующую команду:
-
+```powershell
     Set-RecipientFilterConfig -BlockedRecipients @{Add="<recipient1>","<recipient2>"...; Remove="<recipient1>","<recipient2>"...}
-
+```
 В данном примере адрес chris@contoso.com добавляется в список получателей, а адрес michelle@contoso.com удаляется из списка получателей в списке заблокированных получателей.
-
+```powershell
     Set-RecipientFilterConfig -BlockedRecipients @{Add="chris@contoso.com"; Remove="michelle@contoso.com"}
-
+```
 ## Как проверить, что все получилось?
 
 Чтобы убедиться в успешной настройке списка заблокированных получателей, выполните указанное ниже.
@@ -134,8 +134,8 @@ Set-RecipientFilterConfig -BlockedRecipients mark@contoso.com,kim@contoso.com
 1.  Выполните следующую команду:
     
     ```powershell
-Get-RecipientFilterConfig | Format-List BlockedRecipients
-```
+	Get-RecipientFilterConfig | Format-List BlockedRecipients
+	```
 
 2.  Убедитесь, что отображаются значения, которые вы настроили.
 
@@ -160,8 +160,8 @@ Set-RecipientFilterConfig -RecipientValidationEnabled $true
 1.  Выполните следующую команду:
     
     ```powershell
-Get-RecipientFilterConfig | Format-List RecipientValidationEnabled
-```
+	Get-RecipientFilterConfig | Format-List RecipientValidationEnabled
+	```
 
 2.  Убедитесь, что отображается значение, которое вы настроили.
 

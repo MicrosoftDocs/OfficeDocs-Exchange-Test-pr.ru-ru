@@ -78,14 +78,14 @@ _**Последнее изменение раздела:** 2015-01-01_
 1.  Этот пример удаляет домен service.contoso.com из доверия федерации.
     
     ```powershell
-Remove-FederatedDomain -DomainName service.contoso.com
-```
+	Remove-FederatedDomain -DomainName service.contoso.com
+	```
 
 2.  В этом примере домен marketing.contoso.com добавляется к доверию федерации.
     
     ```powershell
-Add-FederatedDomain -DomainName marketing.contoso.com
-```
+	Add-FederatedDomain -DomainName marketing.contoso.com
+	```
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделах [Remove-FederatedDomain](https://technet.microsoft.com/ru-ru/library/dd298128\(v=exchg.150\)) и [Add-FederatedDomain](https://technet.microsoft.com/ru-ru/library/dd351208\(v=exchg.150\)).
 
@@ -96,38 +96,38 @@ Add-FederatedDomain -DomainName marketing.contoso.com
     Этот пример отображает федеративный OrgID организации Exchange и связанные сведения, в том числе федеративные домены и состояние.
     
     ```powershell
-Get-FederatedOrganizationIdentifier
-```
+	Get-FederatedOrganizationIdentifier
+	```
 
 2.  **Просмотр сертификатов доверия федерации**
     
     В этом примере показаны предыдущий, текущий и следующий сертификаты, используемые доверием федерации "Проверка подлинности Azure AD".
-    
+    ```powershell
         Get-FederationTrust "Azure AD authentication" | Select Org*certificate
-
+	```
 3.  **Проверка состояния сертификатов федерации**
     
     В этом примере показано состояние сертификатов федерации на всех серверах почтовых ящиков и клиентского доступа в организации.
     
     ```powershell
-Test-FederationTrustCertificate
-```
+	Test-FederationTrustCertificate
+	```
 
 4.  **Настройка доверия федерации для использования сертификата в качестве следующего сертификата**
     
     В этом примере настраивается использование доверием федерации "Проверка подлинности Azure AD" сертификата с отпечатком в качестве следующего сертификата. После развертывания сертификата на всех серверах Exchange в организации можно настроить использование этого сертификата в качестве текущего сертификата с помощью переключателя *PublishCertificate*.
     
     ```powershell
-Set-FederationTrust "Azure AD authentication" -Thumbprint AC00F35CBA8359953F4126E0984B5CCAFA2F4F17
-```
+	Set-FederationTrust "Azure AD authentication" -Thumbprint AC00F35CBA8359953F4126E0984B5CCAFA2F4F17
+	```
 
 5.  **Настройка использования доверием федерации следующего сертификата в качестве текущего сертификата**
     
     В этом примере для доверия федерации "Проверка подлинности Azure AD" настраивается использование следующего сертификата в качестве текущего сертификата, который затем публикуется в системе проверки подлинности Azure AD.
     
     ```powershell
-Set-FederationTrust "Azure AD authentication" -PublishFederationCertificate
-```
+	Set-FederationTrust "Azure AD authentication" -PublishFederationCertificate
+	```
     
     > [!CAUTION]  
     > Прежде чем настраивать для доверия федерации использование следующего сертификата в качестве текущего сертификата федерации, убедитесь, что этот сертификат развернут на всех серверах Exchange в организации. Используйте командлет <a href="https://technet.microsoft.com/ru-ru/library/dd335228(v=exchg.150)">Test-FederationTrustCertificate</a> для проверки состояния развертывания сертификата.
@@ -138,8 +138,8 @@ Set-FederationTrust "Azure AD authentication" -PublishFederationCertificate
     В этом примере обновляются метаданные федерации и сертификат из системы проверки подлинности Azure AD для доверия федерации "Проверка подлинности Azure AD".
     
     ```powershell
-Set-FederationTrust "Azure AD authentication" -RefreshMetadata
-```
+	Set-FederationTrust "Azure AD authentication" -RefreshMetadata
+	```
 
 Подробные сведения о синтаксисе и параметрах см. в следующих разделах:
 
@@ -160,14 +160,14 @@ Set-FederationTrust "Azure AD authentication" -RefreshMetadata
 1.  Чтобы проверить сведения о доверии федерации, выполните следующую команду командной консоли Exchange.
     
     ```powershell
-Get-FederationTrust | format-list
-```
+	Get-FederationTrust | format-list
+	```
 
 2.  Чтобы убедиться, что сведения о федерации можно извлечь из организации, выполните следующую команду командной консоли Exchange. Например, проверьте, возвращаются ли домены sales.contoso.com и marketing.contoso.com в параметре *DomainNames*.
     
     ```powershell
-Get-FederationInformation -DomainName <your primary sharing domain>
-```
+	Get-FederationInformation -DomainName <your primary sharing domain>
+	```
 
 > [!TIP]  
 > Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.

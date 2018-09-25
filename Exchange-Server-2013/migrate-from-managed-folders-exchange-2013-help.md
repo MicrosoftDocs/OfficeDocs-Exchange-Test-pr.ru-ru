@@ -250,7 +250,7 @@ _**Последнее изменение раздела:** 2015-04-07_
 **Создание тегов хранения на основе управляемых папок**
 
 В этом примере создаются теги хранения на основе соответствующих параметров управляемого содержимого, используемых в политике почтовых ящиков управляемых папок Contoso.
-
+```powershell
     New-RetentionPolicyTag Corp-DeletedItems -ManagedFolderToUpgrade Corp-DeletedItems
     New-RetentionPolicyTag Corp-SentItems -ManagedFolderToUpgrade Corp-SentItems
     New-RetentionPolicyTag Corp-JunkMail -ManagedFolderToUpgrade Corp-JunkMail
@@ -258,7 +258,7 @@ _**Последнее изменение раздела:** 2015-04-07_
     New-RetentionPolicyTag 30Days -ManagedFolderToUpgrade 30Days
     New-RetentionPolicyTag 5Years -ManagedFolderToUpgrade 5Years
     New-RetentionPolicyTag NeverExpire -ManagedFolderToUpgrade NeverExpire
-
+```
 Подробные сведения о синтаксисе и параметрах см. в разделе [New-RetentionPolicyTag](https://technet.microsoft.com/ru-ru/library/dd335226\(v=exchg.150\)).
 
 **Создание тегов хранения вручную**
@@ -268,7 +268,7 @@ _**Последнее изменение раздела:** 2015-04-07_
 
 
 В этом примере создаются теги хранения на основе управляемых папок и соответствующих параметров управляемого содержимого, используемых в политике почтовых ящиков управляемых папок Contoso. Параметры хранения указываются вручную без использования параметра *ManagedFolderToUpgrade*.
-
+```powershell
     New-RetentionPolicyTag Corp-DeletedItems -Type DeletedItems -RetentionEnabled $true -AgeLimitForRetention 30 -RetentionAction DeleteAndAllowRecovery
     New-RetentionPolicyTag Corp-SentItems -Type SentItems -RetentionEnabled $true -AgeLimitforRetention 1825 -RetentionAction MoveToDeletedItems
     New-RetentionPolicyTag Corp-JunkMail -Type JunkMail -RetentionEnabled $true -AgeLimitforRetention 30 -RetentionAction PermanentlyDelete
@@ -276,7 +276,7 @@ _**Последнее изменение раздела:** 2015-04-07_
     New-RetentionPolicyTag 30Days -Type Personal -RetentionEnabled $true -AgeLimitForRetention 30 -RetentionAction MoveToDeletedItems
     New-RetentionPolicyTag 5Years -Type Personal -RetentionEnabled $true -AgeLimitForRetention 1825 -RetentionAction MoveToDeletedItems
     New-RetentionPolicyTag NeverExpire -Type Personal -RetentionEnabled $false
-
+```
 Подробные сведения о синтаксисе и параметрах см. в разделе [New-RetentionPolicyTag](https://technet.microsoft.com/ru-ru/library/dd335226\(v=exchg.150\)).
 
 ## Действие 2. Создание политики хранения
@@ -288,9 +288,9 @@ _**Последнее изменение раздела:** 2015-04-07_
 
 
 В этом примере создается политика хранения RP-Corp и новые созданные теги связываются с ней.
-
+```powershell
     New-RetentionPolicy RP-Corp -RetentionPolicyTagLinks Corp-DeletedItems,Corp-SentItems,Corp-JunkMail,Corp-EntireMailbox,30Days,NeverExpire
-
+```
 Подробные сведения о синтаксисе и параметрах см. в разделе [New-RetentionPolicy](https://technet.microsoft.com/ru-ru/library/dd297970\(v=exchg.150\)).
 
 ## Действие 3. Удаление политики почтовых ящиков управляемых папок из ящиков пользователя
@@ -326,14 +326,14 @@ Set-Mailbox -Identity Kwok -RetentionPolicy RP-Corp
   - Создайте отчет обо всех почтовых ящиках пользователей и политиках хранения, примененных к ним.
     
     Эта команда получает политику хранения, примененную ко всем почтовым ящикам в организации, а также их состояние приостановки хранения.
-    
+    ```powershell
         Get-Mailbox -ResultSize unlimited -Filter {Name -NotLike "DiscoverySearch*�?} | Format-Table Name,RetentionPolicy,RetentionHoldEnabled -Auto
-
+    ```
   - После того как помощник по работе с управляемыми папками обработал почтовый ящик с политикой хранения, выполните командлет [Get-RetentionPolicyTag](https://technet.microsoft.com/ru-ru/library/dd298009\(v=exchg.150\)), чтобы получить теги хранения, настроенные в почтовом ящике пользователя.
     
     Эта команда получает теги хранения, примененные к почтовому ящику Анастасии Лебедевой.
     
     ```powershell
-Get-RetentionPolicyTag -Mailbox astewart
-```
+    Get-RetentionPolicyTag -Mailbox astewart
+    ```
 

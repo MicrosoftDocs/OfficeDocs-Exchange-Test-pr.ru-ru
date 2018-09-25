@@ -62,8 +62,8 @@ Set-SenderIDConfig -Enabled $true
 1.  Выполните следующую команду:
     
     ```powershell
-Get-SenderIDConfig | Format-List Enabled
-```
+	Get-SenderIDConfig | Format-List Enabled
+	```
 
 2.  Убедитесь, что отображается значение, которое вы настроили.
 
@@ -88,8 +88,8 @@ Set-SenderIDConfig -SpoofedDomainAction Reject
 1.  Выполните следующую команду:
     
     ```powershell
-Get-SenderIDConfig | Format-List SpoofedDomainAction
-```
+	Get-SenderIDConfig | Format-List SpoofedDomainAction
+	```
 
 2.  Убедитесь, что отображается значение, которое вы настроили.
 
@@ -116,25 +116,25 @@ Set-SenderIDConfig -TempErrorAction StampStatus
 1.  Выполните следующую команду:
     
     ```powershell
-Get-SenderIDConfig | Format-List TempErrorAction
-```
+	Get-SenderIDConfig | Format-List TempErrorAction
+	```
 
 2.  Убедитесь, что отображается значение, которое вы настроили.
 
 ## Использование командной консоли для настройки исключений в доменах отправителя и получателя
 
 Чтобы заменить существующие значения, выполните следующую команду:
-
+```powershell
     Set-SenderIDConfig -BypassedRecipients <recipient1,recipient2...> -BypassedSenderDomains <domain1,domain2...>
-
+```
 Этот пример настраивает идентификацию отправителей на обход проверки кода отправителя для сообщений, отправленных на адресу kim@contoso.com и john@contoso.com, а также на обход проверки кода отправителя для сообщений, отправленных из домена fabrikam.com.
-
+```powershell
     Set-SenderIDConfig -BypassedRecipients kim@contoso.com,john@contoso.com -BypassedSenderDomains fabrikam.com
-
+````
 Чтобы добавить или удалить записи, не изменив существующие значения, выполните следующую команду:
-
+```powershell
     Set-SenderIDConfig -BypassedRecipients @{Add="<recipient1>","<recipient2>"...; Remove="<recipient1>","<recipient2>"...} -BypassedSenderDomains @{Add="<domain1>","<domain2>"...; Remove="<domain1>","<domain2>"...}
-
+``
 Этот пример настраивает агент идентификации отправителя с использованием следующей информации:
 
   - Добавить chris@contoso.com и michelle@contoso.com в список текущих получателей, обходящих проверку кода отправителя.
@@ -142,9 +142,9 @@ Get-SenderIDConfig | Format-List TempErrorAction
   - Удалить tailspintoys.com из списка существующих доменов, обходящих проверку кода отправителя.
 
 <!-- end list -->
-
+```powershell
     Set-SenderIDConfig -BypassedRecipients @{Add="chris@contoso.com","michelle@contoso.com"} -BypassedSenderDomains @{Remove="tailspintoys.com"}
-
+```
 ## Как проверить, что все получилось?
 
 Чтобы проверить успешность настройки исключения доменов получателей и отправителей, выполните следующие действия.
@@ -152,8 +152,8 @@ Get-SenderIDConfig | Format-List TempErrorAction
 1.  Выполните следующую команду:
     
     ```powershell
-Get-SenderIDConfig | Format-List BypassedRecipients,BypassedSenderDomains
-```
+	Get-SenderIDConfig | Format-List BypassedRecipients,BypassedSenderDomains
+	```
 
 2.  Убедитесь, что отображаются значения, которые вы настроили.
 

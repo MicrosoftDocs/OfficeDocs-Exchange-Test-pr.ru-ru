@@ -44,69 +44,69 @@ _**Последнее изменение раздела:** 2015-11-30_
 ## Использование Командная консоль Exchange для создания локальных переопределений
 
 Чтобы создать локальное переопределение на определенный срок, используйте следующий синтаксис.
-
+```powershell
     Add-ServerMonitoringOverride -Server <ServerName> -Identity <HealthSetName>\<MonitoringItemName>[\<TargetResource>] -ItemType <Probe | Monitor | Responder | Maintenance> -PropertyName <PropertyName> -PropertyValue <Value> -Duration <dd.hh:mm:ss>
-
+```
 Чтобы создать локальное переопределение для определенной версии Exchange, используйте следующий синтаксис.
-
+```powershell
     Add-ServerMonitoringOverride -Server <ServerName> -Identity <HealthSetName>\<MonitoringItemName>[\<TargetResource>] -ItemType <Probe | Monitor | Responder | Maintenance> -PropertyName <PropertyName> -PropertyValue <Value> -Version <15.01.xxxx.xxx>
-
+```
 > [!NOTE]  
 > При создании переопределения значения в параметре <em>Identity</em> вводятся с учетом регистра.
 
 
 В этом примере добавляется локальное переопределение, которое отключает ответчик `ActiveDirectoryConnectivityConfigDCServerReboot` на сервере EXCH03 на 20 дней.
-
+```powershell
     Add-ServerMonitoringOverride -Server EXCH03 -Identity "AD\ActiveDirectoryConnectivityConfigDCServerReboot" -ItemType Responder -PropertyName Enabled -PropertyValue 0 -Duration 20.00:00:00
-
+```
 ## Как проверить, что все получилось?
 
 Чтобы проверить, создано ли локальное переопределение, просмотрите список локальных переопределений с помощью командлета **Get-ServerMonitoringOverride**:
-
+```powershell
     Get-ServerMonitoringOverride  -Server <ServerIdentity> | Format-List
-
+```
 Переопределение должно появиться в списке.
 
 ## Использование Командная консоль Exchange для удаления локальных переопределений
 
 Чтобы удалить локальное переопределение, используйте следующий синтаксис.
-
+```powershell
     Remove-ServerMonitoringOverride -Server <ServerName> -Identity <HealthSetName>\<MonitoringItemName>[\<TargetResource>] -ItemType <ExistingItemTypeValue> -PropertyName <PropertytoRemove>
-
+```
 В этом примере удаляется имеющееся локальное переопределение ответчика `ActiveDirectoryConnectivityConfigDCServerReboot` в группе работоспособности Exchange с сервера EXCH01.
-
+```powershell
     Remove-ServerMonitoringOverride -Server EXCH01 -Identity Exchange\ActiveDirectoryConnectivityConfigDCServerReboot -ItemType Responder -PropertyName Enabled
-
+```
 ## Как проверить, что все получилось?
 
 Чтобы проверить, удалено ли локальное переопределение, просмотрите список локальных переопределений с помощью командлета **Get-ServerMonitoringOverride**:
-
+```powershell
     Get-ServerMonitoringOverride  -Server <ServerIdentity> | Format-List
-
+```
 Переопределения не должно быть в списке.
 
 ## Использование Командная консоль Exchange для создания глобальных переопределений
 
 Чтобы создать глобальное переопределение на определенный срок, используйте следующий синтаксис.
-
+```powershell
     Add-GlobalMonitoringOverride -Identity <HealthSetName>\<MonitoringItemName>[\<TargetResource>] -ItemType <Probe | Monitor | Responder | Maintenance> -PropertyName <PropertytoOverride> -PropertyValue <NewPropertyValue> -Duration <dd.hh:mm:ss>
-
+```
 Чтобы создать глобальное переопределение для определенной версии Exchange, используйте следующий синтаксис.
-
+```powershell
     Add-GlobalMonitoringOverride -Identity <HealthSetName>\<MonitoringItemName>[\<TargetResource>] -ItemType <Probe | Monitor | Responder | Maintenance> -PropertyName <PropertytoOverride> -PropertyValue <NewPropertyValue> -ApplyVersion <15.01.xxxx.xxx>
-
+```
 > [!NOTE]  
 > При создании переопределения значения в параметре <em>Identity</em> вводятся с учетом регистра.
 
 
 В этом примере добавляется глобальное переопределение, которое отключает пробу `OnPremisesInboundProxy` на 30 дней.
-
+```powershell
     Add-GlobalMonitoringOverride -Identity "FrontendTransport\OnPremisesInboundProxy" -ItemType Probe -PropertyName Enabled -PropertyValue 0 -Duration 30.00:00:00
-
+```
 В этом примере добавляется глобальное переопределение, которое отключает ответчик `StorageLogicalDriveSpaceEscalate` для всех серверов с Exchange версии 15.01.0225.042.
-
+```powershell
     Add-GlobalMonitoringOverride -Identity "MailboxSpace\StorageLogicalDriveSpaceEscalate" -PropertyName Enabled -PropertyValue 0 -ItemType Responder -ApplyVersion "15.01.0225.042"
-
+```
 ## Как проверить, что все получилось?
 
 Чтобы проверить, было ли глобальное переопределение успешно создано, выполните командлет **Get-GlobalMonitoringOverride** для просмотра списка глобальных переопределений:
@@ -120,13 +120,13 @@ Get-GlobalMonitoringOverride
 ## Использование Командная консоль Exchange для удаления глобальных переопределений
 
 Чтобы удалить глобальное переопределение, используйте следующий синтаксис.
-
+```powershell
     Remove-GlobalMonitoringOverride -Identity <HealthSetName>\<MonitoringItemName>[\<TargetResource>] -ItemType <ExistingItemTypeValue> -PropertyName <OverriddenProperty>
-
+```
 В этом примере удаляется имеющееся глобальное переопределение свойства `ExtensionAttributes` пробы `OnPremisesInboundProxy` в группе работоспособности `FrontEndTransport`.
-
+```powershell
     Remove-GlobalMonitoringOverride -Identity FrontEndTransport\OnPremisesInboundProxy -ItemType Probe -PropertyName ExtensionAttributes
-
+```
 ## Как проверить, что все получилось?
 
 Чтобы проверить, было ли глобальное переопределение успешно удалено, выполните командлет **Get-GlobalMonitoringOverride** для просмотра списка глобальных переопределений:

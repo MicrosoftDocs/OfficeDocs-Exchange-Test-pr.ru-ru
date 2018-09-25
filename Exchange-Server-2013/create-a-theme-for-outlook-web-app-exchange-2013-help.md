@@ -159,21 +159,21 @@ _**Последнее изменение раздела:** 2016-12-09_
 ## Использование командной консоли для установки темы по умолчанию для приложения Outlook Web App
 
 В этом примере устанавливается тема по умолчанию для Outlook Web App, в которой используется имя сервера `fourthcoffee`, имя виртуального каталога `owa` и имя веб-сайта `default web site`, а сама тема расположена в папке `Custom`.
-
+```powershell
     set-owavirtualdirectory -identity "fourthcoffee\owa (default web site)" -defaulttheme Custom 
-
+```
 Подробные сведения о синтаксисе и параметрах см. в разделе [Set-OwaVirtualDirectory](https://technet.microsoft.com/ru-ru/library/bb123515\(v=exchg.150\)).
 
 ## Отключение возможности выбора темы для Outlook Web App с помощью командной консоли
 
 В этом примере отключается выбор темы для Outlook Web App, в которой используется имя сервера `fourthcoffee`, имя виртуального каталога `owa` и имя веб-сайта `default web site`.
-
+```powershell
     set-owavirtualdirectory -identity "fourthcoffee\owa (default web site)" -themeselectionenabled $false 
-
+```
 Также можно выполнить обе команды одновременно, как показано в следующем примере:
-
+```powershell
     set-owavirtualdirectory -identity "fourthcoffee\owa (default web site)" -defaulttheme Custom -themeselectionenabled $false
-
+```
 Подробные сведения о синтаксисе и параметрах см. в разделе [Set-OwaVirtualDirectory](https://technet.microsoft.com/ru-ru/library/bb123515\(v=exchg.150\)).
 
 ## Действие 6. Выполните команду iisreset/noforce, чтобы сохранить изменения.

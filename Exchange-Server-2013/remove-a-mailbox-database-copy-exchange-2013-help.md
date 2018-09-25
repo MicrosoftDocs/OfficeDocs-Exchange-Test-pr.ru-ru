@@ -72,8 +72,8 @@ Remove-MailboxDatabaseCopy -Identity DB1\MBX1 -Confirm:$False
   - Выполните в командной консоли Exchange следующую команду, чтобы проверить, удалена ли копия:
     
     ```powershell
-Get-MailboxDatabase <DatabaseName> | Format-List DatabaseCopies
-```
+      Get-MailboxDatabase <DatabaseName> | Format-List DatabaseCopies
+      ```
     
     Удаленная пассивная копия больше не отображается.
 

@@ -98,8 +98,8 @@ Move-ActiveMailboxDatabase DB5 MBX6 -SkipClientExperienceChecks
   - Для отображения сведений о состоянии копии базы данных запустите в консоли следующую команду:
     
     ```powershell
-Get-MailboxDatabaseCopyStatus <DatabaseCopyName> | Format-List
-```
+	Get-MailboxDatabaseCopyStatus <DatabaseCopyName> | Format-List
+	```
 
 ## Дополнительные сведения
 

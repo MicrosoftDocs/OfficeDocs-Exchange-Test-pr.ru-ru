@@ -58,28 +58,28 @@ _**Последнее изменение раздела:** 2013-03-13_
 1.  Чтобы запустить службу Microsoft Exchange POP3, на компьютере, на котором работает роль сервера клиентского доступа, в командной консоли выполните следующую команду.
     
     ```powershell
-Start-service MSExchangePOP3
-```
+	Start-service MSExchangePOP3
+	```
 
 2.  Чтобы запустить внутреннюю службу Microsoft Exchange POP3, на компьютере, на котором работает роль сервера почтовых ящиков, в командной консоли выполните следующую команду.
     
     ```powershell
-Start-service MSExchangePOP3BE
-```
+	Start-service MSExchangePOP3BE
+	```
 
 Остановка служб POP3.
 
 1.  Чтобы остановить службу Microsoft Exchange POP3, на компьютере, на котором работает роль сервера клиентского доступа, в командной консоли выполните следующую команду.
     
     ```powershell
-Stop-service MSExchangePOP3
-```
+	Stop-service MSExchangePOP3
+	```
 
 2.  Чтобы остановить внутреннюю службу Microsoft Exchange POP3, на компьютере, на котором работает роль сервера почтовых ящиков, в командной консоли выполните следующую команду.
     
     ```powershell
-Stop-service MSExchangePOP3BE
-```
+	Stop-service MSExchangePOP3BE
+	```
 
 ## Использование команды net start для запуска или остановки служб POP3
 
@@ -88,28 +88,28 @@ Stop-service MSExchangePOP3BE
 1.  Чтобы запустить службу Microsoft Exchange POP3, на компьютере, на котором работает роль сервера клиентского доступа, в командной строке выполните следующую команду.
     
     ```powershell
-Net Start msExchangePOP3
-```
+	Net Start msExchangePOP3
+	```
 
 2.  Чтобы запустить внутреннюю службу Microsoft Exchange POP3, на компьютере, на котором работает роль сервера почтовых ящиков, в командной строке выполните следующую команду.
     
     ```powershell
-Net Start msExchangePOP3BE
-```
+	Net Start msExchangePOP3BE
+	```
 
 Остановка служб POP3.
 
 1.  Чтобы остановить службу Microsoft Exchange POP3, на компьютере, на котором работает роль сервера клиентского доступа, в командной строке выполните следующую команду.
     
     ```powershell
-Net Stop MSExchangePOP3
-```
+	Net Stop MSExchangePOP3
+	```
 
 2.  Чтобы остановить внутреннюю службу Microsoft Exchange POP3, на компьютере, на котором работает роль сервера почтовых ящиков, в командной строке выполните следующую команду.
     
     ```powershell
-Net Stop MSExchangePOP3BE
-```
+	Net Stop MSExchangePOP3BE
+	```
 
 ## Как проверить, что все получилось?
 

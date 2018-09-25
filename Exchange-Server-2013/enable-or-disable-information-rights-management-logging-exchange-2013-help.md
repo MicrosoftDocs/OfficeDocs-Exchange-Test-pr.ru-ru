@@ -73,5 +73,6 @@ Set-TransportService -Identity EXCH01 -IRMLogEnabled $false
 
 В этом примере извлекаются все свойства ведения журнала IRM на сервере EXCH01.
 
-    Get-TransportService -Identity EXCH01 | Format-List IRMLog*
-
+```powershell
+Get-TransportService -Identity EXCH01 | Format-List IRMLog*
+```

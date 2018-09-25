@@ -92,8 +92,8 @@ _**Последнее изменение раздела:** 2018-03-26_
 4.  Для клиента Office 365 должна быть включена функция миграции **PAW**. Чтобы проверить, включена ли она, выполните следующую команду в Exchange Online PowerShell:
     
     ```powershell
-Get-MigrationConfig
-```
+	Get-MigrationConfig
+	```
     
     Если в разделе **Features** указана функция **PAW**, то она включена и можно переходить к этапу 3 — *Создание CSV-файла*.
     
@@ -110,15 +110,15 @@ CSV-файл должен содержать следующие столбцы:
   - **TargetGroupMailbox**. SMTP-адрес целевой группы в Office 365. Вы можете выполнить приведенную ниже команду, чтобы просмотреть основной SMTP-адрес.
     
     ```powershell
-Get-UnifiedGroup <alias of the group> | Format-Table PrimarySmtpAddress
-```
+	Get-UnifiedGroup <alias of the group> | Format-Table PrimarySmtpAddress
+	```
 
 Пример CSV-файла:
-
+```powershell
     "FolderPath","TargetGroupMailbox"
     "\Sales","sales@contoso.onmicrosoft.com"
     "\Sales\EMEA","emeasales@contoso.onmicrosoft.com"
-
+```
 Обратите внимание, что папку почты и папку календаря можно объединить в одну группу в Office 365. Однако другие сценарии объединения нескольких общедоступных папок в одну группу не поддерживаются в одном пакете миграции. Чтобы сопоставить несколько общедоступных папок с одной группой Office 365, последовательно, один за другим, запустите разные пакеты миграции. Каждый пакет миграции может содержать до 500 записей.
 
 Одна общедоступная папка должна переноситься только в одну группу при обработке одного пакета миграции.
@@ -132,20 +132,20 @@ Get-UnifiedGroup <alias of the group> | Format-Table PrimarySmtpAddress
 2.  В Exchange Online PowerShell используйте сведения, полученные на этапе 1, для выполнения приведенных ниже команд. Для переменных в этих командах используются значения, полученные на этапе 1.
     
     1.  Передайте учетные данные пользователя с правами администратора в среде Exchange 2013 в переменную `$Source_Credential`. При отправке запроса на миграцию в Exchange Online вы будете использовать эти учетные данные для доступа к серверам Exchange 2013, чтобы скопировать содержимое в Exchange Online.
-        
+        ```powershell
             $Source_Credential = Get-Credential
             <source_domain>\<PublicFolder_Administrator_Account>
-    
+		```
     2.  Используя сведения о прокси-сервере MRS из среды Exchange 2013, записанные на этапе 1, передайте это значение в переменную `$Source_RemoteServer`.
         
         ```powershell
-$Source_RemoteServer = "<MRS proxy endpoint>"
-```
+		$Source_RemoteServer = "<MRS proxy endpoint>"
+		```
 
 3.  В Exchange Online PowerShell выполните следующую команду, чтобы создать конечную точку миграции:
-    
+    ```powershell
         $PfEndpoint = New-MigrationEndpoint -PublicFolderToUnifiedGroup -Name PFToGroupEndpoint -RemoteServer $Source_RemoteServer -Credentials $Source_Credential
-
+	```
 4.  Выполните приведенную ниже команду, чтобы создать пакет миграции из общедоступной папки в группу Office 365. В этой команде:
     
       - **CSVData** — это CSV-файл, созданный на этапе 3, *Создание CSV-файла*. Обязательно укажите полный путь к этому файлу. Если по той или иной причине файл был перемещен, обязательно проверьте и используйте новое расположение.
@@ -157,14 +157,14 @@ $Source_RemoteServer = "<MRS proxy endpoint>"
       - **PublicFolderToUnifiedGroup** — параметр, указывающий, что это пакет миграции из общедоступных папок в группы Office 365.
     
     <!-- end list -->
-    
+    ```powershell
         New-MigrationBatch -Name PublicFolderToGroupMigration -CSVData (Get-Content <path to .csv file> -Encoding Byte) -PublicFolderToUnifiedGroup -SourceEndpoint $PfEndpoint.Identity [-NotificationEmails <email addresses for migration notifications>] [-AutoStart]
-
+	```
 5.  Запустите миграцию, выполнив приведенную ниже команду в Exchange Online PowerShell. Обратите внимание, что это необходимо, только если параметр `-AutoStart` не использовался при создании пакета на этапе 4.
     
     ```powershell
-Start-MigrationBatch PublicFolderToGroupMigration
-```
+	Start-MigrationBatch PublicFolderToGroupMigration
+	```
 
 Пакетные миграции необходимо создавать с помощью командлета `New-MigrationBatch` в Exchange Online PowerShell, но просматривать ход выполнения миграции и управлять им можно в Центре администрирования Exchange. Вы также можете просматривать ход выполнения миграции с помощью командлетов [Get-MigrationBatch](https://technet.microsoft.com/ru-ru/library/jj219164\(v=exchg.150\)) и [Get-MigrationUser](https://technet.microsoft.com/ru-ru/library/jj218702\(v=exchg.150\)). Командлет `New-MigrationBatch` инициирует пользователя миграции для каждого почтового ящика группы Office 365, и вы можете просматривать состояние этих запросов на странице миграции почтовых ящиков.
 
@@ -193,9 +193,9 @@ Start-MigrationBatch PublicFolderToGroupMigration
   - **Credential** — имя пользователя и пароль для Exchange Online.
 
 <!-- end list -->
-
+```powershell
     .\AddMembersToGroups.ps1 -MappingCsv <path to .csv file> -BackupDir <path to backup directory> -ArePublicFoldersOnPremises $true -Credential (Get-Credential)
-
+```
 После добавления в группу Office 365 пользователи могут начинать использовать ее.
 
 ## Этап 6. Блокировка общедоступных папок (требуется их простой)
@@ -217,9 +217,9 @@ Start-MigrationBatch PublicFolderToGroupMigration
   - **Credential** — имя пользователя и пароль для Exchange Online.
 
 <!-- end list -->
-
+```powershell
     .\LockAndSavePublicFolderProperties.ps1 -MappingCsv <path to .csv file> -BackupDir <path to backup directory> -ArePublicFoldersOnPremises $true -Credential (Get-Credential)
-
+```
 ## Этап 7. Завершение миграции из общедоступных папок в "Группы Office 365"
 
 После того как вы сделаете общедоступные папки доступными только для чтения, вам нужно будет снова выполнить миграцию. Это необходимо для окончательного добавочного копирования данных. Перед повторным запуском миграции вам нужно будет удалить существующий пакет. Это можно сделать с помощью следующей команды:
@@ -237,9 +237,9 @@ Remove-MigrationBatch <name of migration batch>
   - **AutoStart** — необязательный параметр, при использовании которого пакет миграции запускается сразу же после его создания.
 
 <!-- end list -->
-
+```powershell
     New-MigrationBatch -Name PublicFolderToGroupMigration -CSVData (Get-Content <path to .csv file> -Encoding Byte) -PublicFolderToUnifiedGroup -SourceEndpoint $PfEndpoint.Identity [-NotificationEmails <email addresses for migration notifications>] [-AutoStart]
-
+```
 После создания нового пакета запустите миграцию, выполнив приведенную ниже команду в Exchange Online PowerShell. Обратите внимание, что это необходимо, только если параметр `-AutoStart` не использовался в предыдущей команде.
 
 ```powershell
@@ -421,9 +421,9 @@ Start-MigrationBatch PublicFolderToGroupMigration
   - **Credential** — имя пользователя и пароль для Exchange Online.
 
 <!-- end list -->
-
+```powershell
     .\UnlockAndRestorePublicFolderProperties.ps1 -BackupDir <path to backup directory> -ArePublicFoldersOnPremises $true -Credential (Get-Credential)
-
+```
 Учтите, что все элементы, добавленные в группу Office 365, и результаты всех операций редактирования, выполненных в группах, не копируются обратно в общедоступные папки. Следовательно, если во время использования групп были добавлены новые данные, они будут потеряны.
 
 Обратите внимание на то, что невозможно восстановить только некоторые из общедоступных папок. Должны быть восстановлены все перенесенные общедоступные папки.

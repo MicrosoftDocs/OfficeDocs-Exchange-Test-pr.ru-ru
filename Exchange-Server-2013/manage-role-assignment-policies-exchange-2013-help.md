@@ -62,9 +62,9 @@ New-RoleAssignmentPolicy <assignment policy name> -Roles <roles to assign>
 ```
 
 В этом примере создается явная политика назначения Limited Mailbox Configuration, а затем ей назначаются роли `MyBaseOptions`, `MyAddressInformation` и `MyDisplayName`.
-
+```powershell
     New-RoleAssignmentPolicy "Limited Mailbox Configuration" -Roles MyBaseOptions, MyAddressInformation, MyDisplayName
-
+```
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [New-RoleAssignmentPolicy](https://technet.microsoft.com/ru-ru/library/dd638101\(v=exchg.150\)).
 
 ## Использование командной консоли для создания политики назначения по умолчанию
@@ -76,9 +76,9 @@ New-RoleAssignmentPolicy <assignment policy name> -Roles <roles to assign> -IsDe
 ```
 
 В этом примере создается политика назначения по умолчанию Limited Mailbox Configuration, а затем ей назначаются роли `MyBaseOptions`, `MyAddressInformation` и `MyDisplayName`.
-
+```powershell
     New-RoleAssignmentPolicy "Limited Mailbox Configuration" -Roles MyBaseOptions, MyAddressInformation, MyDisplayName -IsDefault
-
+```
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [New-RoleAssignmentPolicy](https://technet.microsoft.com/ru-ru/library/dd638101\(v=exchg.150\)).
 
 ## Удаление политики назначения
@@ -266,13 +266,13 @@ Set-RoleAssignmentPolicy "Vancouver End Users" -IsDefault
 ## Использование командной консоли для добавления роли политики назначения
 
 Чтобы создать назначение роли управления между ролью и политикой назначения, используйте следующую синтаксическую конструкцию.
-
+```powershell
     New-ManagementRoleAssignment -Name <role assignment name> -Role <role name> -Policy <assignment policy name>
-
+```
 В этом примере создается назначение ролей «Пользователи в Сиэтле — Голосовая почта» между ролью Моя\_голосовая\_почта и политикой назначения «Пользователи в Сиэтле».
-
+```powershell
     New-ManagementRoleAssignment -Name "Seattle Users - Voicemail" -Role MyVoicemail -Policy "Seattle Users"
-
+```
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [New-ManagementRoleAssignment](https://technet.microsoft.com/ru-ru/library/dd335193\(v=exchg.150\)).
 
 ## Удаление роли из политики назначения
@@ -298,12 +298,12 @@ Set-RoleAssignmentPolicy "Vancouver End Users" -IsDefault
 В этой процедуре используется конвейеризация. Дополнительные сведения о конвейерном режиме см. в разделе [Конвейеризация](https://technet.microsoft.com/ru-ru/library/aa998260\(v=exchg.150\)).
 
 Чтобы удалить роль из политики назначения, используйте следующий синтаксис.
-
+```powershell
     Get-ManagementRoleAssignment -RoleAssignee <assignment policy name> -Role <role name> | Remove-ManagementRoleAssignment
-
+```
 В этом примере описывается удаление роли управления MyVoicemail, разрешающей пользователям управлять параметрами своей голосовой почты, из политики назначения Seattle Users.
-
+```powershell
     Get-ManagementRoleAssignment -RoleAssignee "Seattle Users" -Role MyVoicemail | Remove-ManagementRoleAssignment
-
+```
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Remove-ManagementRoleAssignment](https://technet.microsoft.com/ru-ru/library/dd351205\(v=exchg.150\)).
 

@@ -94,18 +94,18 @@ _**Последнее изменение раздела:** 2012-10-08_
 1.  Сохраните группу ролей, которую необходимо копировать, в переменной с помощью следующей синтаксической конструкции:
     
     ```powershell
-$RoleGroup = Get-RoleGroup <name of role group to copy>
-```
+	$RoleGroup = Get-RoleGroup <name of role group to copy>
+	```
 
 2.  Создайте новую группу ролей, добавьте в нее членов и укажите пользователей, которые могут делегировать новую группу ролей другим пользователям, с помощью следующего синтаксиса.
-    
+    ```powershell
         New-RoleGroup <name of new role group> -Roles $RoleGroup.Roles -Members <member1, member2, member3...> -ManagedBy <user1, user2, user3...>
-
+	```
 Например, следующие команды копируют группу ролей «Organization Management» и присваивают новой группе ролей имя «Limited Organization Management». В группу добавляются члены Isabelle, Carter и Lukas и назначаются пользователи, которые могут делегировать группу ролей: Jenny и Katie.
-
+```powershell
     $RoleGroup = Get-RoleGroup "Organization Management"
     New-RoleGroup "Limited Organization Management" -Roles $RoleGroup.Roles -Members Isabelle, Carter, Lukas -ManagedBy Jenny, Katie
-
+```
 После создания группы ролей в нее можно добавлять роли или удалять роли из нее, изменять область назначений ролей и т. д.
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделах [Get-RoleGroup](https://technet.microsoft.com/ru-ru/library/dd638115\(v=exchg.150\)) и [New-RoleGroup](https://technet.microsoft.com/ru-ru/library/dd638181\(v=exchg.150\)).
@@ -115,18 +115,18 @@ $RoleGroup = Get-RoleGroup <name of role group to copy>
 1.  Сохраните группу ролей, которую необходимо копировать, в переменной с помощью следующей синтаксической конструкции:
     
     ```powershell
-$RoleGroup = Get-RoleGroup <name of role group to copy>
-```
+	$RoleGroup = Get-RoleGroup <name of role group to copy>
+	```
 
 2.  Создайте новую группу ролей с настраиваемой областью с помощью следующей синтаксической конструкции:
-    
+    ```powershell
         New-RoleGroup <name of new role group> -Roles $RoleGroup.Roles -CustomRecipientWriteScope <recipient scope name> -CustomConfigWriteScope <configuraiton scope name>
-
+	```
 Например, следующие команды копируют группу ролей «Organization Management» и создают новую группу ролей с именем «Vancouver Organization Management» с областью получателей «Vancouver Users» и областью конфигурации «Vancouver Servers».
-
+```powershell
     $RoleGroup = Get-RoleGroup "Organization Management"
     New-RoleGroup "Vancouver Organization Management" -Roles $RoleGroup.Roles -CustomRecipientWriteScope "Vancouver Users" -CustomConfigWriteScope "Vancouver Servers"
-
+```
 Добавить членов в группу ролей можно также при ее создании с помощью параметра *Members*, как показано в подразделе Использование командной консоли для копирования группы ролей без области действия этого раздела. Дополнительные сведения об областях управления см. в разделе [Общие сведения об областях ролей управления](understanding-management-role-scopes-exchange-2013-help.md).
 
 После создания группы ролей в нее можно добавлять роли или удалять роли из нее, изменять область назначений ролей и выполнять другие задачи.
@@ -138,18 +138,18 @@ $RoleGroup = Get-RoleGroup <name of role group to copy>
 1.  Сохраните группу ролей, которую необходимо копировать, в переменной с помощью следующей синтаксической конструкции:
     
     ```powershell
-$RoleGroup = Get-RoleGroup <name of role group to copy>
-```
+	$RoleGroup = Get-RoleGroup <name of role group to copy>
+	```
 
 2.  Создайте новую группу ролей с настраиваемой областью с помощью следующей синтаксической конструкции:
-    
+    ```powershell
         New-RoleGroup <name of new role group> -Roles $RoleGroup.Roles -RecipientOrganizationalUnitScope <OU name>
-
+	```
 Например, следующие команды копируют группу ролей «Recipient Management» и создают новую группу ролей с именем «Toronto Recipient Management», которая позволяет управлять только пользователями в подразделении «Toronto Users».
-
+```powershell
     $RoleGroup = Get-RoleGroup "Recipient Management"
     New-RoleGroup "Toronto Recipient Management" -Roles $RoleGroup.Roles -RecipientOrganizationalUnitScope "contoso.com/Toronto Users"
-
+```
 Добавить членов в группу ролей можно также при ее создании с помощью параметра *Members*, как показано в подразделе Использование командной консоли для копирования группы ролей без области действия этого раздела. Дополнительные сведения об областях управления см. в разделе [Общие сведения об областях ролей управления](understanding-management-role-scopes-exchange-2013-help.md).
 
 После создания группы ролей в нее можно добавлять роли или удалять роли из нее, изменять область назначений ролей и т. д.
@@ -239,13 +239,13 @@ New-ManagementRoleAssignment -SecurityGroup "Seattle Compliance" -Role "Transpor
 Дополнительные сведения о назначениях ролей см. в разделе [Общие сведения о назначениях ролей управления](understanding-management-role-assignments-exchange-2013-help.md).
 
 Используйте следующий синтаксис для назначения группе ролей роли с предварительно определенной областью. Если имя назначения роли не задано, оно создается автоматически.
-
+```powershell
     New-ManagementRoleAssignment -SecurityGroup <role group name> -Role <role name> -RecipientRelativeWriteScope < MyGAL | MyDistributionGroups | Organization | Self >
-
+```
 В этом примере роль Message Tracking назначается группе ролей Enterprise Support, затем применяется предварительно определенная область Organization.
-
+```powershell
     New-ManagementRoleAssignment -SecurityGroup "Enterprise Support" -Role "Message Tracking" -RecipientRelativeWriteScope Organization
-
+```
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [New-ManagementRoleAssignment](https://technet.microsoft.com/ru-ru/library/dd335193\(v=exchg.150\)).
 
 ## Создание назначения роли с областью, основанной на фильтре получателей, с помощью командной консоли
@@ -261,13 +261,13 @@ New-ManagementRoleAssignment -SecurityGroup "Seattle Compliance" -Role "Transpor
   - [Общие сведения об областях ролей управления](understanding-management-role-scopes-exchange-2013-help.md)
 
 Используйте следующий синтаксис для назначения роли группе ролей с областью, основанной на фильтре получателей. Если имя назначения роли не задано, оно создается автоматически.
-
+```powershell
     New-ManagementRoleAssignment -SecurityGroup <role group name> -Role <role name> -CustomRecipientWriteScope <role scope name>
-
+```
 В этом примере роль Message Tracking назначается группе ролей Seattle Recipient Admins, затем применяется область Seattle Recipients.
-
+```powershell
     New-ManagementRoleAssignment -SecurityGroup "Seattle Recipient Admins" -Role "Message Tracking" -CustomRecipientWriteScope "Seattle Recipients"
-
+```
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [New-ManagementRoleAssignment](https://technet.microsoft.com/ru-ru/library/dd335193\(v=exchg.150\)).
 
 ## Создание назначения роли с областью конфигурации с помощью командной консоли
@@ -283,13 +283,13 @@ New-ManagementRoleAssignment -SecurityGroup "Seattle Compliance" -Role "Transpor
   - [Общие сведения об областях ролей управления](understanding-management-role-scopes-exchange-2013-help.md)
 
 Используйте следующий синтаксис для назначения группе ролей роли с областью конфигурации. Если имя назначения роли не задано, оно создается автоматически.
-
+```powershell
     New-ManagementRoleAssignment -SecurityGroup <role group name> -Role <role name> -CustomConfigWriteScope <role scope name>
-
+```
 В этом примере роль Databases назначается группе ролей Seattle Server Admins, затем применяется область Seattle Servers.
-
+```powershell
     New-ManagementRoleAssignment -SecurityGroup "Seattle Server Admins" -Role "Databases" -CustomConfigWriteScope "Seattle Servers"
-
+```
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [New-ManagementRoleAssignment](https://technet.microsoft.com/ru-ru/library/dd335193\(v=exchg.150\)).
 
 ## Создание назначения роли с областью подразделений с помощью командной консоли
@@ -303,13 +303,13 @@ New-ManagementRoleAssignment -SecurityGroup "Seattle Compliance" -Role "Transpor
   - [Общие сведения об областях ролей управления](understanding-management-role-scopes-exchange-2013-help.md)
 
 Используйте приведенную ниже команду для назначения роли группе ролей и ограничения области записи роли определенным подразделением. Если имя назначения роли не задано, оно создается автоматически.
-
+```powershell
     New-ManagementRoleAssignment -SecurityGroup <role group name> -Role <role name> -RecipientOrganizationalUnitScope <OU>
-
+```
 В этом примере роль Mail Recipients назначается группе ролей Seattle Recipient Admins, затем область действия этого назначения сужается до подразделения Sales\\Users в домене Contoso.com.
-
+```powershell
     New-ManagementRoleAssignment -SecurityGroup "Seattle Recipient Admins" -Role "Mail Recipients" -RecipientOrganizationalUnitScope contoso.com/sales/users
-
+```
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [New-ManagementRoleAssignment](https://technet.microsoft.com/ru-ru/library/dd335193\(v=exchg.150\)).
 
 ## Как проверить, что все получилось?
@@ -352,13 +352,13 @@ New-ManagementRoleAssignment -SecurityGroup "Seattle Compliance" -Role "Transpor
 В этой процедуре используется конвейеризация. Дополнительные сведения о конвейерном режиме см. в разделе [Конвейеризация](https://technet.microsoft.com/ru-ru/library/aa998260\(v=exchg.150\)).
 
 Для удаления роли из группы ролей используйте следующий синтаксис.
-
+```powershell
     Get-ManagementRoleAssignment -RoleAssignee <role group name> -Role <role name> -Delegating <$true | $false> | Remove-ManagementRoleAssignment
-
+```
 В этом примере роль групп рассылки, позволяющая администраторам управлять группами рассылки, удаляется из группы ролей Seattle Recipient Administrators. Поскольку необходимо удалить назначение роли, предоставляющее разрешения на управление группами рассылки, для параметра *Delegating* установлено значение `$False`, возвращающее только назначения обычных ролей.
-
+```powershell
     Get-ManagementRoleAssignment -RoleAssignee "Seattle Recipient Administrators" -Role "Distribution Groups" -Delegating $false | Remove-ManagementRoleAssignment
-
+```
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Remove-ManagementRoleAssignment](https://technet.microsoft.com/ru-ru/library/dd351205\(v=exchg.150\)).
 
 ## Как проверить, что все получилось?
@@ -416,13 +416,13 @@ Exchange 2013 включает в себя области, которые при
   - [Параметры WhatIf, Confirm и ValidateOnly](whatif-confirm-and-validateonly-switches-exchange-2013-help.md)
 
 Чтобы установить область для всех назначений ролей в группе ролей одновременно, используйте следующую синтаксическую конструкцию.
-
+```powershell
     Get-ManagementRoleAssignment -RoleAssignee <name of role group> | Set-ManagementRoleAssignment -CustomRecipientWriteScope <recipient scope name> -CustomConfigWriteScope <configuration scope name> -RecipientRelativeScopeWriteScope < MyDistributionGroups | Organization | Self> -ExclusiveRecipientWriteScope <exclusive recipient scope name> -ExclusiveConfigWriteScope <exclusive configuration scope name> -RecipientOrganizationalUnitScope <organizational unit>
-
+```
 Можно использовать только те параметры, которые требуются для настройки необходимой области. Например, чтобы изменить область получателя для всех назначений ролей в группе ролей «Управление получателями продаж» на «Сотрудники прямых продаж», используйте следующую команду.
-
+```powershell
     Get-ManagementRoleAssignment -RoleAssignee "Sales Recipient Management" | Set-ManagementRoleAssignment -CustomRecipientWriteScope "Direct Sales Employees"
-
+```
 > [!NOTE]  
 > Чтобы проверить, что изменены только необходимые назначения ролей, можно использовать параметр <em>WhatIf</em>. Запустите предыдущую команду с параметром <em>WhatIf</em>, чтобы проверить результаты, а затем удалите параметр <em>WhatIf</em>, чтобы применить изменения.
 
@@ -448,19 +448,19 @@ Exchange 2013 включает в себя области, которые при
 1.  Чтобы найти имена всех назначений ролей группы ролей, используйте следующую команду. При передаче по конвейеру назначений ролей управления в командлет **Format-List** отображается полное имя назначения.
     
     ```powershell
-Get-ManagementRoleAssignment -RoleAssignee <role group name> | Format-List Name
-```
+	Get-ManagementRoleAssignment -RoleAssignee <role group name> | Format-List Name
+	```
 
 2.  Поиск имени назначения роли, которое необходимо изменить. Используйте имя назначения роли на следующем шаге.
 
 3.  Чтобы задать область отдельного назначения, используйте следующую синтаксическую конструкцию.
-    
+    ```powershell
         Set-ManagementRoleAssignment <role assignment name> -CustomRecipientWriteScope <recipient scope name> -CustomConfigWriteScope <configuration scope name> -RecipientRelativeScopeWriteScope < MyDistributionGroups | Organization | Self> -ExclusiveRecipientWriteScope <exclusive recipient scope name> -ExclusiveConfigWriteScope <exclusive configuration scope name> -RecipientOrganizationalUnitScope <organizational unit>
-
+	```
 Можно использовать только те параметры, которые требуются для настройки необходимой области. Например, чтобы изменить область получателя для назначения роли «Управление получателями почты/продаж» на «Все сотрудники продаж», используйте следующую команду.
-
+```powershell
     Set-ManagementRoleAssignment "Mail Recipients_Sales Recipient Management" -CustomRecipientWriteScope "All Sales Employees"
-
+```
 Дополнительные сведения об изменении назначений ролей управления см. в разделе [Изменение назначения роли](change-a-role-assignment-exchange-2013-help.md).
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Set-ManagementRoleAssignment](https://technet.microsoft.com/ru-ru/library/dd335173\(v=exchg.150\)).
@@ -478,9 +478,9 @@ Get-ManagementRoleAssignment -RoleAssignee <role group name> | Format-List Name
   - Если с целью настройки области для группы ролей использовалась командная консоль, выполните следующие действия.
     
     1.  Выполните в командной консоли следующую команду.
-        
+        ```powershell
             Get-ManagementRoleAssignment -RoleAssignee <role group name> | Format-Table *WriteScope
-    
+		```
     2.  Убедитесь, что область записи для назначений ролей была изменена на указанную область.
 
 ## Добавление или удаление делегата группы ролей
@@ -503,13 +503,13 @@ Get-ManagementRoleAssignment -RoleAssignee <role group name> | Format-List Name
 1.  Сохраните группу ролей в переменной с помощью следующей команды.
     
     ```powershell
-$RoleGroup = Get-RoleGroup <role group name>
-```
+	$RoleGroup = Get-RoleGroup <role group name>
+	```
 
 2.  Добавьте делегата в группу ролей, сохраненную в переменной, используя следующую команду.
-    
+    ```powershell
         $RoleGroup.ManagedBy += (Get-User <user to add>).Identity
-    
+    ```
     > [!NOTE]  
     > При необходимости добавить универсальную группу безопасности используйте командлет <strong>Get-Group</strong>.
 
@@ -519,15 +519,15 @@ $RoleGroup = Get-RoleGroup <role group name>
 4.  Примените новый список делегатов для текущей группы ролей с помощью следующей команды.
     
     ```powershell
-Set-RoleGroup <role group name> -ManagedBy $RoleGroup.ManagedBy
-```
+	Set-RoleGroup <role group name> -ManagedBy $RoleGroup.ManagedBy
+	```
 
 В этом примере в качестве делегата в группу ролей Управление организацией добавляется пользователь Сергей Озеров.
-
+```powershell
     $RoleGroup = Get-RoleGroup "Organization Management"
     $RoleGroup.ManagedBy += (Get-User "David Strome").Identity
     Set-RoleGroup "Organization Management" -ManagedBy $RoleGroup.ManagedBy
-
+```
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Set-RoleGroup](https://technet.microsoft.com/ru-ru/library/dd638182\(v=exchg.150\)).
 
 ## Использование командной консоли для удаления делегата из группы ролей
@@ -537,13 +537,13 @@ Set-RoleGroup <role group name> -ManagedBy $RoleGroup.ManagedBy
 1.  Сохраните группу ролей в переменной с помощью следующей команды.
     
     ```powershell
-$RoleGroup = Get-RoleGroup <role group name>
-```
+	$RoleGroup = Get-RoleGroup <role group name>
+	```
 
 2.  Удалите делегата из группы ролей, сохраненной в переменной, используя следующую команду.
-    
+    ```powershell
         $RoleGroup.ManagedBy -= (Get-User <user to remove>).Identity
-    
+	```
     > [!NOTE]  
     > При необходимости удалить универсальную группу безопасности используйте командлет <strong>Get-Group</strong>.
 
@@ -553,15 +553,15 @@ $RoleGroup = Get-RoleGroup <role group name>
 4.  Примените новый список делегатов для текущей группы ролей с помощью следующей команды.
     
     ```powershell
-Set-RoleGroup <role group name> -ManagedBy $RoleGroup.ManagedBy
-```
+	Set-RoleGroup <role group name> -ManagedBy $RoleGroup.ManagedBy
+	```
 
 В этом примере в качестве делегата из группы ролей Управление организацией удаляется пользователь Сергей Озеров.
-
+```powershell
     $RoleGroup = Get-RoleGroup "Organization Management"
     $RoleGroup.ManagedBy -= (Get-User "David Strome").Identity
     Set-RoleGroup "Organization Management" -ManagedBy $RoleGroup.ManagedBy
-
+```
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Set-RoleGroup](https://technet.microsoft.com/ru-ru/library/dd638182\(v=exchg.150\)).
 
 ## Как проверить, что все получилось?
@@ -571,8 +571,8 @@ Set-RoleGroup <role group name> -ManagedBy $RoleGroup.ManagedBy
 1.  В консоли Shell выполните следующую команду.
     
     ```powershell
-Get-RoleGroup <role group name> | Format-List ManagedBy
-```
+	Get-RoleGroup <role group name> | Format-List ManagedBy
+	```
 
 2.  Убедитесь, что в состав перечисленных в свойстве *ManagedBy* делегатов входят только делегаты, которые могут управлять группой ролей.
 

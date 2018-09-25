@@ -78,13 +78,13 @@ _**Последнее изменение раздела:** 2015-04-07_
   - Запрашивающая организация получает от целевой организации время занятости, тему и сведения о расположении.
 
 <!-- end list -->
-
+```powershell
     New-OrganizationRelationship -Name "Contoso" -DomainNames "contoso.com","northamerica.contoso.com","europe.contoso.com" -FreeBusyAccessEnabled $true -FreeBusyAccessLevel LimitedDetails
-
+```
 В этом примере выполняется попытка автоматического обнаружения сведений о конфигурации во внешней организации Contoso.com с помощью доменных имен, предоставленных в командлете **Get-FederationInformation**. Если этот метод используется для создания организационного отношения, следует убедиться в том, что идентификатор организации создан с помощью командлета **Set-FederatedOrganizationIdentifier**.
-
+```powershell
     Get-FederationInformation -DomainName Contoso.com | New-OrganizationRelationship -Name "Contoso" -FreeBusyAccessEnabled $true -FreeBusyAccessLevel -LimitedDetails
-
+```
 Дополнительные сведения о синтаксисе и параметрах см. в разделах [Get-FederationInformation](https://technet.microsoft.com/ru-ru/library/dd351221\(v=exchg.150\)) и [New-OrganizationRelationship](https://technet.microsoft.com/ru-ru/library/ee332357\(v=exchg.150\)).
 
 В этом примере создается организационное отношение с организацией Fourth Coffee. В примере предоставляются параметры подключения к внешней организации Exchange. Применимо следующее:
@@ -100,9 +100,9 @@ _**Последнее изменение раздела:** 2015-04-07_
   - Запрашивающая организация получает сведения о занятости по времени.
 
 <!-- end list -->
-
+```powershell
     New-OrganizationRelationship -Name "Fourth Coffee" -DomainNames "fourthcoffee.com" -FreeBusyAccessEnabled $true -FreeBusyAccessLevel -AvailabilityOnly -TargetAutodiscoverEpr "https://mail.fourthcoffee.com/autodiscover/autodiscover.svc/wssecurity" -TargetApplicationUri "mail.fourthcoffee.com"
-
+```
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [New-OrganizationRelationship](https://technet.microsoft.com/ru-ru/library/ee332357\(v=exchg.150\)).
 
 ## Как проверить, что все получилось?

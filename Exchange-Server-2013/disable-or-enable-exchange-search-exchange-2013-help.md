@@ -49,13 +49,13 @@ _**Последнее изменение раздела:** 2014-05-07_
 
 
 С помощью этой команды можно отключить службу поиска Exchange для базы данных почтовых ящиков EXCH01.
-
+```powershell
     Set-MailboxDatabase "Mailbox Database (EXCH01)" -IndexEnabled $false
-
+```
 С помощью этой команды можно включить службу поиска Exchange для базы данных почтовых ящиков EXCH01.
-
+```powershell
     Set-MailboxDatabase "Mailbox Database (EXCH01)" -IndexEnabled $true
-
+```
 Подробные сведения о синтаксисе и параметрах см. в разделе [Set-MailboxDatabase](https://technet.microsoft.com/ru-ru/library/bb123971\(v=exchg.150\)).
 
 ## Отключение и включение службы поиска Exchange для сервера почтовых ящиков
@@ -84,26 +84,20 @@ _**Последнее изменение раздела:** 2014-05-07_
 
 Выполните следующие команды, чтобы остановить и отключить службу поиска Microsoft Exchange.
 
-```
 ```powershell
 Stop-Service MSExchangeFastSearch
-```
-```
 ```
 ```powershell
 Set-Service MSExchangeFastSearch -StartupType Disabled
 ```
-````
+
 
 Выполните следующие команды для настройки автоматического запуска службы поиска Exchange и последующего запуска службы.
 
-```
 ```powershell
 Set-Service MSExchangeFastSearch -StartupType Automatic
-```
-```
 ```
 ```powershell
 Start-Service MSExchangeFastSearch
 ```
-```
+

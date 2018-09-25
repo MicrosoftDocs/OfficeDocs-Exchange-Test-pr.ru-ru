@@ -108,8 +108,8 @@ _**Последнее изменение раздела:** 2015-04-07_
   - В этом примере создается политика общего доступа Contoso для внешнего федеративного домена contoso.com. С помощью этой политики пользователи в домене contoso.com могут просматривать подробные данные календаря о доступности. По умолчанию эта политика включена.
     
     ```powershell
-New-SharingPolicy -Name "Contoso" -Domains contoso.com: CalendarSharingFreeBusyDetail
-```
+	New-SharingPolicy -Name "Contoso" -Domains contoso.com: CalendarSharingFreeBusyDetail
+	```
 
   - В этом примере создается политика общего доступа ContosoWoodgrove для двух разных федеративных доменов (contoso.com и woodgrovebank.com) с разными действиями по общему доступу, настроенными для каждого домена. Политика отключена.
     
@@ -120,17 +120,17 @@ New-SharingPolicy -Name "Contoso" -Domains contoso.com: CalendarSharingFreeBusyD
     1.  Настройте URL-адрес веб-прокси для MAIL01.
         
         ```powershell
-Set-ExchangeServer -Identity "Mail01" -InternetWebProxy "<Webproxy URL>"
-```
+		Set-ExchangeServer -Identity "Mail01" -InternetWebProxy "<Webproxy URL>"
+		```
     
     2.  Включите публикацию виртуального каталога на CAS01.
-        
+        ```powershell
             Set-OwaVirtualDirectory -Identity "CAS01" -ExternalURL "<URL for CAS01>" -CalendarPublishingEnabled $true
-    
+		```
     3.  Создайте общую политику «Anonymous» и настройте ограниченный общий доступ к сведениям о календаре.
-        
+        ```powershell
             New-SharingPolicy -Name "Anonymous" -Domains 'Anonymous: CalendarSharingFreeBusySimple' -Enabled $true
-
+		```
 Подробные сведения о синтаксисе и параметрах см. в следующих разделах:
 
   - [New-SharingPolicy](https://technet.microsoft.com/ru-ru/library/dd298186\(v=exchg.150\))
