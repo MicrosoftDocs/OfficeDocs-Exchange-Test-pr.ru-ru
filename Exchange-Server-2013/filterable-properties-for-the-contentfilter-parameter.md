@@ -1,4 +1,4 @@
-﻿---
+---
 title: 'Фильтруемые свойства для параметра -ContentFilter: Exchange 2013 Help'
 TOCTitle: Фильтруемые свойства для параметра -ContentFilter
 ms:assetid: cf504a59-1938-489c-bb48-b27b2ac3234e
@@ -47,14 +47,14 @@ _**Последнее изменение раздела:** 2015-09-10_
 <td><p>Это свойство возвращает все сообщения, у которых в любом из индексированных свойств содержится определенная строка. Например, это свойство можно использовать, когда требуется экспортировать все сообщения, для которых имя Ayla задано в качестве получателя, отправителя или упомянуто в тексте сообщения.</p></td>
 <td><p>Строка</p>
 <p>Подстановочный знак</p></td>
-<td>```powershell-ContentFilter {All -like &#39;*Ayla*&#39;}```</td>
+<td>```powershell-ContentFilter {All -like '*Ayla*'}```</td>
 </tr>
 <tr class="even">
 <td><p>Attachment</p></td>
 <td><p>Данное свойство возвращает сообщения, для которых заданная строка входит в состав содержимого вложения или имени файла вложения.</p></td>
 <td><p>Строка</p>
 <p>Подстановочный знак</p></td>
-<td>```powershell-ContentFilter {Attachment -like &#39;*.jpg&#39;}```</td>
+<td>```powershell-ContentFilter {Attachment -like '*.jpg'}```</td>
 </tr>
 <tr class="odd">
 <td><p>BCC</p></td>
@@ -64,7 +64,7 @@ _**Последнее изменение раздела:** 2015-09-10_
 <p>SMTP-адрес</p>
 <p>LegacyDN</p>
 <p>Подстановочный знак</p></td>
-<td>```powershell-ContentFilter {(BCC -eq &#39;ayla@contoso.com&#39;) -or (BCC -eq &#39;tony@contoso.com&#39;)}```</td>
+<td>```powershell-ContentFilter {(BCC -eq 'ayla@contoso.com') -or (BCC -eq 'tony@contoso.com')}```</td>
 </tr>
 <tr class="even">
 <td><p>Body</p></td>
@@ -74,7 +74,7 @@ _**Последнее изменение раздела:** 2015-09-10_
 <td>
 
 ```powershell
--ContentFilter {Body -like &#39;*prospectus*&#39;}
+-ContentFilter {Body -like '*prospectus*'}
 ```
 
 </td>
@@ -87,7 +87,7 @@ _**Последнее изменение раздела:** 2015-09-10_
 <td>
 
 ```powershell
--ContentFilter {Category -like &#39;*Blue*&#39;}
+-ContentFilter {Category -like '*Blue*'}
 ```
 
 </td>
@@ -103,7 +103,7 @@ _**Последнее изменение раздела:** 2015-09-10_
 <td>
 
 ```powershell
--ContentFilter {(CC -eq &#39;ayla@contoso.com&#39;) -or (CC -eq &#39;tony@contoso.com&#39;)}
+-ContentFilter {(CC -eq 'ayla@contoso.com') -or (CC -eq 'tony@contoso.com')}
 ```
 
 </td>
@@ -115,7 +115,7 @@ _**Последнее изменение раздела:** 2015-09-10_
 <td>
 
 ```powershell
--ContentFilter {Expires -lt &#39;01/01/2013&#39;}
+-ContentFilter {Expires -lt '01/01/2013'}
 ```
 
 </td>
@@ -142,7 +142,7 @@ _**Последнее изменение раздела:** 2015-09-10_
 <td>
 
 ```powershell
--ContentFilter {Importance -eq &#39;high&#39;}
+-ContentFilter {Importance -eq 'high'}
 ```
 
 ```powershell
@@ -195,11 +195,11 @@ _**Последнее изменение раздела:** 2015-09-10_
 <td>
 
 ```powershell
--ContentFilter {MessageKind -eq &#39;Calendar&#39;}
+-ContentFilter {MessageKind -eq 'Calendar'}
 ```
 
 ```powershell
--ContentFilter {MessageKind -ne &#39;Email&#39;}
+-ContentFilter {MessageKind -ne 'Email'}
 ```
 
 </td>
@@ -211,10 +211,11 @@ _**Последнее изменение раздела:** 2015-09-10_
 <td>
 
 ```powershell
--ContentFilter {MessageLocale -ne &#39;en-US&#39;}
+-ContentFilter {MessageLocale -ne 'en-US'}
 ```
+
 ```powershell
--ContentFilter {MessageLocale -eq &#39;tr-TR&#39;}
+-ContentFilter {MessageLocale -eq 'tr-TR'}
 ```
 
 </td>
@@ -230,7 +231,7 @@ _**Последнее изменение раздела:** 2015-09-10_
 <td>
 
 ```powershell
--ContentFilter {(Participants -eq &#39;ayla@contoso.com&#39;) -or (Participants -eq &#39;tony@contoso.com&#39;)}
+-ContentFilter {(Participants -eq 'ayla@contoso.com') -or (Participants -eq 'tony@contoso.com')}
 ```
 
 </td>
@@ -244,7 +245,7 @@ _**Последнее изменение раздела:** 2015-09-10_
 <td>
 
 ```powershell
--ContentFilter {PolicyTag -ne &#39;00000000-0000-0000-0000-000000000000&#39;}
+-ContentFilter {PolicyTag -ne '00000000-0000-0000-0000-000000000000'}
 ```
 
 </td>
@@ -256,10 +257,11 @@ _**Последнее изменение раздела:** 2015-09-10_
 <td>
 
 ```powershell
--ContentFilter {Received -lt &#39;01/01/2013 9:00&#39;}
+-ContentFilter {Received -lt '01/01/2013 9:00'}
 ```
+
 ```powershell
--ContentFilter {(Received -lt &#39;01/01/2013&#39;) -and (Received -gt &#39;01/01/2012&#39;)}
+-ContentFilter {(Received -lt '01/01/2013') -and (Received -gt '01/01/2012')}
 ```
 
 </td>
@@ -275,7 +277,7 @@ _**Последнее изменение раздела:** 2015-09-10_
 <td>
 
 ```powershell
-ContentFilter {Sender -eq &#39;tony&#39;}
+ContentFilter {Sender -eq 'tony'}
 ```
 
 </td>
@@ -287,10 +289,11 @@ ContentFilter {Sender -eq &#39;tony&#39;}
 <td>
 
 ```powershell
--ContentFilter {Sent -lt &#39;01/01/2013 9:00&#39;}
+-ContentFilter {Sent -lt '01/01/2013 9:00'}
 ```
+
 ```powershell
--ContentFilter {(Sent -lt &#39;01/01/2013&#39;) -and (Sent -gt &#39;01/01/2012&#39;)}
+-ContentFilter {(Sent -lt '01/01/2013') -and (Sent -gt '01/01/2012')}
 ```
 
 </td>
@@ -304,7 +307,7 @@ ContentFilter {Sender -eq &#39;tony&#39;}
 <td>
 
 ```powershell
--ContentFilter {Size -gt &#39;10KB&#39;}
+-ContentFilter {Size -gt '10KB'}
 ```
 
 </td>
@@ -317,7 +320,7 @@ ContentFilter {Sender -eq &#39;tony&#39;}
 <td>
 
 ```powershell
--ContentFilter {Subject -like &#39;*meeting*&#39;}
+-ContentFilter {Subject -like '*meeting*'}
 ```
 
 </td>
@@ -333,7 +336,7 @@ ContentFilter {Sender -eq &#39;tony&#39;}
 <td>
 
 ```powershell
--ContentFilter {To -eq &#39;aylakol&#39;}
+-ContentFilter {To -eq 'aylakol'}
 ```
 
 </td>
