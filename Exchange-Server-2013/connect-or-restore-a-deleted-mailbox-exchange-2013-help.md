@@ -47,8 +47,10 @@ _**Последнее изменение раздела:** 2015-05-04_
 
   - Выполните следующую команду, чтобы проверить, что удаленный ящик, который требуется подключить к учетной записи пользователя, существует в базе данных почтовых ящиков и не удален с возможностью восстановления.
     
-        Get-MailboxDatabase | Get-MailboxStatistics | Where { $_.DisplayName -eq "<display name>" } | fl DisplayName,Database,DisconnectReason
-    
+    ```powershell
+    Get-MailboxDatabase | Get-MailboxStatistics | Where { $_.DisplayName -eq "<display name>" } | fl DisplayName,Database,DisconnectReason
+    ```
+
     Удаленный почтовый ящик должен существовать в базе данных почтовых ящиков, а значение свойства *DisconnectReason* должно быть равно `Disabled`. Если почтовый ящик был удален из базы данных, команда не даст никаких результатов.
 
   - Сочетания клавиш для процедур, описанных в этой статье, приведены в статье [Сочетания клавиш в Центре администрирования Exchange](keyboard-shortcuts-in-the-exchange-admin-center-exchange-online-protection-help.md).
@@ -95,7 +97,9 @@ _**Последнее изменение раздела:** 2015-05-04_
 
 В данном примере подключается почтовый ящик пользователя. Параметр *Identity* задает отображаемое имя удаленного почтового ящика в базе данных почтовых ящиков с именем MBXDB01. В параметре *User* указывается учетная запись пользователя в Active Directory, к которой подключается почтовый ящик.
 
-    Connect-Mailbox -Identity "Paul Cannon" -Database MBXDB01 -User "Robin Wood" -Alias robinw
+```powershell
+Connect-Mailbox -Identity "Paul Cannon" -Database MBXDB01 -User "Robin Wood" -Alias robinw
+```
 
 > [!NOTE]  
 > К тому же, можно использовать значения свойств <code>LegacyDN</code> или <code>MailboxGuid</code> для идентификации удаленного почтового ящика.
@@ -103,19 +107,26 @@ _**Последнее изменение раздела:** 2015-05-04_
 
 В данном примере подключается связанный почтовый ящик. В параметре *Identity* указывается удаленный почтовый ящик в базе данных почтовых ящиков с именем MBXDB02. В параметре *LinkedMasterAccount* указывается учетная запись пользователя Active Directory в лесу учетных записей, к которой необходимо подключить почтовый ящик. Параметр *LinkedDomainController* указывает контроллер домена в лесу учетных записей.
 
-    Connect-Mailbox -Identity "Temp User" -Database MBXDB02 -LinkedDomainController FabrikamDC01 -LinkedMasterAccount danpark@fabrikam.com -Alias dpark
+```powershell
+Connect-Mailbox -Identity "Temp User" -Database MBXDB02 -LinkedDomainController FabrikamDC01 -LinkedMasterAccount danpark@fabrikam.com -Alias dpark
+```
 
 В данном примере подключается почтовый ящик помещения.
 
-    Connect-Mailbox -Identity "rm2121" -Database "MBXResourceDB" -User "Conference Room 2121" -Alias ConfRm2121 -Room
+```powershell
+Connect-Mailbox -Identity "rm2121" -Database "MBXResourceDB" -User "Conference Room 2121" -Alias ConfRm2121 -Room
+```
 
 В данном примере подключается почтовый ящик оборудования.
 
-    Connect-Mailbox -Identity "MotorPool01" -Database "MBXResourceDB" -User "Van01 (12 passengers)" -Alias van01 -Equipment
-
+```powershell
+Connect-Mailbox -Identity "MotorPool01" -Database "MBXResourceDB" -User "Van01 (12 passengers)" -Alias van01 -Equipment
+```
 В данном примере подключается общий почтовый ящик.
 
-    Connect-Mailbox -Identity "Printer Support" -Database MBXDB01 -User "Corp Printer Support" -Alias corpprint -Shared
+```powershell
+Connect-Mailbox -Identity "Printer Support" -Database MBXDB01 -User "Corp Printer Support" -Alias corpprint -Shared
+```
 
 > [!NOTE]  
 > К тому же, можно использовать значения <code>LegacyDN</code> или <code>MailboxGuid</code> для идентификации удаленного почтового ящика.
@@ -133,7 +144,9 @@ _**Последнее изменение раздела:** 2015-05-04_
 
   - В консоли Shell выполните следующую команду:
     
-        Get-User <identity>
+    ```powershell
+    Get-User <identity>
+    ```
     
     Значение **UserMailbox** свойства *RecipientType* указывает, что учетная запись и почтовый ящик пользователя связаны. Для проверки того, что почтовый ящик подключен, можно запустить командлет **Get-Mailbox \<identity\>**.
 
@@ -151,15 +164,21 @@ _**Последнее изменение раздела:** 2015-05-04_
 
 Для создания запроса на восстановление почтового ящика нужно использовать отображаемое имя, различающееся имя прежней версии (DN) или идентификатор GUID из удаленного почтового ящика. Используйте командлет **Get-MailboxStatistics**, чтобы вывести значения свойств `DisplayName`, `MailboxGuid` и `LegacyDN` удаленного почтового ящика, который необходимо восстановить. Например, выполните следующую команду, чтобы вернуть эти сведения для всех отключенных и удаленных почтовых ящиков в организации.
 
-    Get-MailboxDatabase | Get-MailboxStatistics | Where {$_.DisconnectReason -eq "Disabled"} | fl DisplayName,MailboxGuid,LegacyDN,Database
+```powershell
+Get-MailboxDatabase | Get-MailboxStatistics | Where {$_.DisconnectReason -eq "Disabled"} | fl DisplayName,MailboxGuid,LegacyDN,Database
+```
 
 В этом примере выполняется восстановление удаленного почтового ящика, который обозначен параметром *SourceStoreMailbox* и расположен в базе данных почтовых ящиков MBXDB01, в целевом почтовом ящике Debra Garcia. Используется параметр *AllowLegacyDNMismatch*, чтобы исходный почтовый ящик мог быть восстановлен в другом почтовом ящике с другим устаревшим различающимся именем.
 
-    New-MailboxRestoreRequest -SourceStoreMailbox e4890ee7-79a2-4f94-9569-91e61eac372b -SourceDatabase MBXDB01 -TargetMailbox "Debra Garcia" -AllowLegacyDNMismatch
+```powershell
+New-MailboxRestoreRequest -SourceStoreMailbox e4890ee7-79a2-4f94-9569-91e61eac372b -SourceDatabase MBXDB01 -TargetMailbox "Debra Garcia" -AllowLegacyDNMismatch
+```
 
 В этом примере выполняется восстановление удаленного архивного почтового ящика Pilar Pinilla в текущем архивном почтовом ящике. Параметр *AllowLegacyDNMismatch* не обязателен, так как основной почтовый ящик и его соответствующий архивный почтовый ящик имеют одинаковое устаревшее различающееся имя.
 
-    New-MailboxRestoreRequest -SourceStoreMailbox "Personal Archive - Pilar Pinilla" -SourceDatabase "MDB01" -TargetMailbox pilarp@contoso.com -TargetIsArchive
+```powershell
+New-MailboxRestoreRequest -SourceStoreMailbox "Personal Archive - Pilar Pinilla" -SourceDatabase "MDB01" -TargetMailbox pilarp@contoso.com -TargetIsArchive
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [New-MailboxRestoreRequest](https://technet.microsoft.com/ru-ru/library/ff829875\(v=exchg.150\)).
 
@@ -171,7 +190,9 @@ _**Последнее изменение раздела:** 2015-05-04_
 
 1.  Получите лес Active Directory и полное доменное имя контроллера домена Active Directory, выполнив следующий командлет:
     
-        Get-OrganizationConfig | fl OriginatingServer
+    ```powershell
+    Get-OrganizationConfig | fl OriginatingServer
+    ```
 
 2.  Используя данные, полученные на шаге 1, выполните в контейнере удаленных объектов в Active Directory поиск идентификатора GUID почтового ящика общих папок и идентификатора GUID или имени базы данных почтовых ящиков, в которой хранился почтовый ящик.
     
@@ -183,23 +204,29 @@ _**Последнее изменение раздела:** 2015-05-04_
 
 1.  Создайте объект Active Directory, выполнив следующие команды (возможно, появится ввести соответствующие учетные данные):
     
-        New-MailUser <mailUserName> -ExternalEmailAddress <emailAddress> 
+    ```powershell
+    New-MailUser <mailUserName> -ExternalEmailAddress <emailAddress> 
         
-        Get-MailUser <mailUserName> | Disable-MailUser
+    Get-MailUser <mailUserName> | Disable-MailUser
+    ```
     
     Где `<mailUserName>`, `<emailAddress>` и `<mailUserName>` — это выбранные вами значения. На следующем шаге необходимо использовать то же значение `<mailUserName>`.
 
 2.  Подключите удаленный почтовый ящик общих папок к объекту Active Directory, который вы только что создали, выполнив следующую команду:
     
-        Connect-Mailbox -Identity <public folder mailbox GUID> -Database <database name or GUID> -User <mailUserName>
-    
+    ```powershell
+    Connect-Mailbox -Identity <public folder mailbox GUID> -Database <database name or GUID> -User <mailUserName>
+    ```
+
     > [!NOTE]  
     > Параметр <code>Identity</code> указывает объект почтового ящика в базе данных Exchange, который следует подключить к объекту пользователя Active Directory. В примере выше указан идентификатор GUID почтового ящика общих папок, но можно также использовать отображаемое имя или значение LegacyExchangeDN.
 
 
 3.  Выполните команду `Update-StoreMailboxState` в почтовом ящике общих папок на основе примера ниже:
     
-        Update-StoreMailboxState -Identity <public folder mailbox GUID> -Database <database name or GUID>
+    ```powershell
+    Update-StoreMailboxState -Identity <public folder mailbox GUID> -Database <database name or GUID>
+    ```
     
     Как показано в шаге 2, параметр `Identity` принимает значения GUID, отображаемое имя или LegacyExchangeDN почтового ящика общих папок.
 

@@ -67,7 +67,9 @@ _**Последнее изменение раздела:** 2015-01-14_
 
 В этом примере возвращаются сведения о фиктивной политике DLP с именем Employee Numbers. Команда передается конвейерным образом командлету **Format-List** для отображения подробных сведений о конфигурации указанной политики DLP.
 
-    Get-DlpPolicy "Employee Numbers" | Format-List
+```powershell
+Get-DlpPolicy "Employee Numbers" | Format-List
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Get-DlpPolicy](https://technet.microsoft.com/ru-ru/library/jj215752\(v=exchg.150\)).
 
@@ -97,7 +99,9 @@ _**Последнее изменение раздела:** 2015-01-14_
 
 С помощью командной консоли Exchange можно указать действие и уровень уведомления политики. В этом примере настраивается режим для фиктивной политики DLP с именем Employee Numbers таким образом, что действия не являются принудительными, а сообщения уведомления не отображаются.
 
-    Set-DlpPolicy "Employee Numbers" -Mode Audit
+```powershell
+Set-DlpPolicy "Employee Numbers" -Mode Audit
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Set-DlpPolicy](https://technet.microsoft.com/ru-ru/library/jj215778\(v=exchg.150\)).
 
@@ -117,7 +121,9 @@ _**Последнее изменение раздела:** 2015-01-14_
 
 В этом примере удаляется фиктивная политика DLP с именем Employee Numbers.
 
-    Remove-DlpPolicy "Employee Numbers"
+```powershell
+Remove-DlpPolicy "Employee Numbers"
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Remove-DlpPolicy](https://technet.microsoft.com/ru-ru/library/jj215677\(v=exchg.150\)).
 

@@ -68,12 +68,12 @@ _**Последнее изменение раздела:** 2012-10-12_
 ## Использование командной консоли для создания списка адресов
 
 В этом примере создается список адресов MyAddressList с использованием параметра *RecipientFilter*, а также включаются получатели, являющиеся пользователями почтовых ящиков, у которых для параметра `StateOrProvince` заданы значения `Washington` или `Oregon`:
-
+```powershell
     New-AddressList -Name MyAddressList -RecipientFilter {((RecipientType -eq 'UserMailbox') -and ((StateOrProvince -eq 'Washington') -or (StateOrProvince -eq 'Oregon')))}
-
+```
 В этом примере создается дочерний список адресов «Building 34 Meeting Rooms» в родительском контейнере «All Rooms» с использованием встроенных условий.
-
+```powershell
     New-AddressList -Name "Building 34 Meeting Rooms" -Container "\All Rooms" -IncludedRecipients Resources -ConditionalCustomAttribute1 "Building 34"
-
+```
 Подробные сведения о синтаксисе и параметрах см. в разделе [New-AddressList](https://technet.microsoft.com/ru-ru/library/aa996912\(v=exchg.150\)).
 

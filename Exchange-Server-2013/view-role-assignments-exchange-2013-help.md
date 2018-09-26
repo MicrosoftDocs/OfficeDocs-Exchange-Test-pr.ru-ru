@@ -46,20 +46,24 @@ _**Последнее изменение раздела:** 2012-10-03_
 ## Просмотр списка всех назначений ролей
 
 Можно просмотреть список всех назначений ролей, настроенных в организации, выполнив командлет **Get-ManagementRoleAssignment**. При необходимости получить список назначений ролей, соответствующих указанному частичному строковому значению, используются подстановочные знаки (\*). В этом примере возвращается список всех назначений ролей, начинающихся со строки "Tier 1".
-
+```powershell
     Get-ManagementRoleAssignment "Tier 1*"
-
+```
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Get-ManagementRoleAssignment](https://technet.microsoft.com/ru-ru/library/dd351024\(v=exchg.150\)).
 
 ## Просмотр сведений о назначении определенных ролей
 
 Подробные сведения о назначении ролей можно просмотреть путем конвейерной передачи результатов командлета **Get-ManagementRoleAssignment** в командлет **Format-List**. Используйте следующий синтаксис.
 
-    Get-ManagementRoleAssignment <assignment name> | Format-List
+```powershell
+Get-ManagementRoleAssignment <assignment name> | Format-List
+```
 
 В этом примере возвращаются подробные сведения о назначении роли службы поддержки.
 
-    Get-ManagementRoleAssignment "Help Desk Assignment" | Format-List
+```powershell
+Get-ManagementRoleAssignment "Help Desk Assignment" | Format-List
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Get-ManagementRoleAssignment](https://technet.microsoft.com/ru-ru/library/dd351024\(v=exchg.150\)).
 
@@ -67,11 +71,15 @@ _**Последнее изменение раздела:** 2012-10-03_
 
 Для просмотра списка назначений ролей, связанных с группой ролей управления, ролью, политикой назначения роли или с пользователем или универсальной группой безопасности (USG), используется следующий синтаксис.
 
-    Get-ManagementRoleAssignment -RoleAssignee <role assignee name>
+```powershell
+Get-ManagementRoleAssignment -RoleAssignee <role assignee name>
+```
 
 В этом примере возвращаются все назначения ролей, связанные с группой ролей управления сервером.
 
-    Get-ManagementRoleAssignment -RoleAssignee "Server Management"
+```powershell
+Get-ManagementRoleAssignment -RoleAssignee "Server Management"
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Get-ManagementRoleAssignment](https://technet.microsoft.com/ru-ru/library/dd351024\(v=exchg.150\)).
 
@@ -81,23 +89,29 @@ _**Последнее изменение раздела:** 2012-10-03_
 
 Для просмотра списка назначений ролей, связанных с определенной ролью, используется следующий синтаксис.
 
-    Get-ManagementRoleAssignment -Role <role name>
+```powershell
+Get-ManagementRoleAssignment -Role <role name>
+```
 
 В этом примере возвращаются все назначения ролей, связанные с ролью получателей почты.
 
-    Get-ManagementRoleAssignment -Role "Mail Recipients"
+```powershell
+Get-ManagementRoleAssignment -Role "Mail Recipients"
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Get-ManagementRoleAssignment](https://technet.microsoft.com/ru-ru/library/dd351024\(v=exchg.150\)).
 
 ## Просмотр списка назначений ролей, использующих определенную предварительно заданную область
 
 Для просмотра списка назначений ролей, использующих определенную предварительно заданную область, используется следующий синтаксис.
-
+```powershell
     Get-ManagementRoleAssignment -RecipientWriteScope < MyGAL | MyDistributionGroups | Organization | Self | CustomRecipientScope | ExecutiveRecipientScope >
-
+```
 В этом примере возвращаются все назначения ролей, использующие предопределенную область "Организация".
 
-    Get-ManagementRoleAssignment -RecipientWriteScope Organization
+```powershell
+Get-ManagementRoleAssignment -RecipientWriteScope Organization
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Get-ManagementRoleAssignment](https://technet.microsoft.com/ru-ru/library/dd351024\(v=exchg.150\)).
 
@@ -105,12 +119,14 @@ _**Последнее изменение раздела:** 2012-10-03_
 
 Для просмотра списка назначений ролей, ограниченных определенным подразделением организации, используется следующий синтаксис.
 
-    Get-ManagementRoleAssignment -RecipientOrganizationalUnitScope <OU>
+```powershell
+Get-ManagementRoleAssignment -RecipientOrganizationalUnitScope <OU>
+```
 
 В этом примере возвращаются все назначения ролей, ограниченные подразделением North America\\Engineering\\Users в домене contoso.com.
-
+```powershell
     Get-ManagementRoleAssignment -RecipientOrganizationalUnitScope "contoso.com/North America/Engineering/Users"
-
+```
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Get-ManagementRoleAssignment](https://technet.microsoft.com/ru-ru/library/dd351024\(v=exchg.150\)).
 
 ## Просмотр списка назначений, использующих определенную настраиваемую область
@@ -129,11 +145,15 @@ _**Последнее изменение раздела:** 2012-10-03_
 
 В этом примере возвращаются все назначения ролей, использующие область получателей Ванкувера.
 
-    Get-ManagementRoleAssignment -CustomRecipientWriteScope "Vancouver Recipients"
+```powershell
+Get-ManagementRoleAssignment -CustomRecipientWriteScope "Vancouver Recipients"
+```
 
 В этом примере возвращаются все назначения ролей, использующие исключительную область конфигурации "Сайт Active Directory в Сиэтле".
 
-    Get-ManagementRoleAssignment -ExclusiveConfigWriteScope "Seattle AD Site"
+```powershell
+Get-ManagementRoleAssignment -ExclusiveConfigWriteScope "Seattle AD Site"
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Get-ManagementRoleAssignment](https://technet.microsoft.com/ru-ru/library/dd351024\(v=exchg.150\)).
 
@@ -141,15 +161,21 @@ _**Последнее изменение раздела:** 2012-10-03_
 
 Для просмотра списка исключительных или стандартных назначений ролей используется следующий синтаксис.
 
-    Get-ManagementRoleAssignment -Exclusive < $True | $False >
+```powershell
+Get-ManagementRoleAssignment -Exclusive < $True | $False >
+```
 
 Например, для просмотра списка исключительных областей выполните следующую команду:
 
-    Get-ManagementRoleAssignment -Exclusive $True
+```powershell
+Get-ManagementRoleAssignment -Exclusive $True
+```
 
 В этом примере возвращается список стандартных областей без каких-либо исключительных областей.
 
-    Get-ManagementRoleAssignment -Exclusive $False
+```powershell
+Get-ManagementRoleAssignment -Exclusive $False
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Get-ManagementRoleAssignment](https://technet.microsoft.com/ru-ru/library/dd351024\(v=exchg.150\)).
 
@@ -159,23 +185,29 @@ _**Последнее изменение раздела:** 2012-10-03_
 
 В этом примере возвращается список назначений ролей, которые могут изменить получателя Владимир.
 
-    Get-ManagementRoleAssignment -WritableRecipient "Brian"
+```powershell
+Get-ManagementRoleAssignment -WritableRecipient "Brian"
+```
 
 Параметры *WritableRecipient* и *WritableServer* можно использовать с другими параметрами, такими как *RoleAssignee* и *GetEffectiveUsers* для уточнения запроса и расширения групп ролей или универсальных групп безопасности. В этом примере возвращаются все пользователи, которые могут изменять сервер EX02, и которым назначена группа ролей управления сервером.
-
+```powershell
     Get-ManagementRoleAssignment -WritableServer EX02 -RoleAssignee "Server Management" -GetEffectiveUsers
-
+```
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Get-ManagementRoleAssignment](https://technet.microsoft.com/ru-ru/library/dd351024\(v=exchg.150\)).
 
 ## Просмотр пользователей, которые получают разрешения посредством назначений через группу ролей или универсальную группу безопасности
 
 Для просмотра списка пользователей, получающих разрешения посредством назначения ролей, используется следующий синтаксис.
 
-    Get-ManagementRoleAssignment <assignment name> -GetEffectiveUsers
+```powershell
+Get-ManagementRoleAssignment <assignment name> -GetEffectiveUsers
+```
 
 В этом примере возвращается список пользователей, которым назначена роль службы поддержки.
 
-    Get-ManagementRoleAssignment "Help Desk Assignment" -GetEffectiveUsers
+```powershell
+Get-ManagementRoleAssignment "Help Desk Assignment" -GetEffectiveUsers
+```
 
 Параметр *GetEffectiveUsers* можно использовать с несколькими другими параметрами командлета **Get-ManagementRoleAssignment** для расширения групп ролей и универсальных групп безопасности, которым назначены эти роли. Пример использования параметра *GetEffectiveUsers* совместно с другими параметрами см. в подразделе "Просмотр пользователей, которые могут изменять определенного получателя или сервер" данного раздела.
 
@@ -185,11 +217,15 @@ _**Последнее изменение раздела:** 2012-10-03_
 
 Для просмотра списка включенных или отключенных назначений ролей используется следующий синтаксис.
 
-    Get-ManagementRoleAssignment -Enabled < $True | $False >
+```powershell
+Get-ManagementRoleAssignment -Enabled < $True | $False >
+```
 
 В этом примере возвращается список отключенных назначений ролей.
 
-    Get-ManagementRoleAssignment -Enabled $False
+```powershell
+Get-ManagementRoleAssignment -Enabled $False
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Get-ManagementRoleAssignment](https://technet.microsoft.com/ru-ru/library/dd351024\(v=exchg.150\)).
 

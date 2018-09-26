@@ -41,17 +41,21 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 Установить специальную стоимость Exchange для связи сайтов Active Directory можно, выполнив следующую команду:
 
-``` 
+```powershell
  Set-AdSiteLink <ADSiteLinkIdentity> -ExchangeCost <Integer | $null>
 ```
 
 В этом примере показано, как для IP-связи сайтов, названной IPSiteLinkAB, установить значение специальной стоимости Exchange равное 10.
 
-    Set-AdSiteLink IPSiteLinkAB -ExchangeCost 10
+```powershell
+Set-AdSiteLink IPSiteLinkAB -ExchangeCost 10
+```
 
 В этом примере показано, как удалить значение стоимости Exchange для IP-связи сайтов, названной IPSiteLinkAB.
 
-    Set-AdSiteLink IPSiteLinkAB -ExchangeCost $null
+```powershell
+Set-AdSiteLink IPSiteLinkAB -ExchangeCost $null
+```
 
 ## Как проверить, что все получилось?
 
@@ -59,7 +63,9 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 1.  Выполните следующую команду:
     
-        Get-AdSiteLink | Format-List Name,ExchangeCost
+    ```powershell
+    Get-AdSiteLink | Format-List Name,ExchangeCost
+    ```
 
 2.  Убедитесь, что стоимость Exchange настроена для связи сайтов Active Directory.
 
@@ -69,15 +75,21 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 Чтобы настроить сайт Active Directory в качестве концентратора, выполните команду:
 
-    Set-AdSite <ADSiteIdentity> -HubSiteEnabled $true
+```powershell
+Set-AdSite <ADSiteIdentity> -HubSiteEnabled $true
+```
 
 В этом примере показано, как настроить сайт Active Directory (в примере Site A) в качестве концентратора.
 
-    Set-AdSite "Site A" -HubSiteEnabled $true
+```powershell
+Set-AdSite "Site A" -HubSiteEnabled $true
+```
 
 В этом примере показано, как удалить атрибут концентратора с сайта Active Directory (в примере Site B).
 
-    Set-AdSite "Site B" -HubSiteEnabled $false
+```powershell
+Set-AdSite "Site B" -HubSiteEnabled $false
+```
 
 ## Как проверить, что все получилось?
 
@@ -85,7 +97,9 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 1.  Выполните следующую команду:
     
-        Get-AdSite | Format-List Name,HubSiteEnabled
+    ```powershell
+    Get-AdSite | Format-List Name,HubSiteEnabled
+    ```
 
 2.  Убедитесь, что значение параметра *HubSiteEnabled* для сайта Active Directory равно `True`.
 

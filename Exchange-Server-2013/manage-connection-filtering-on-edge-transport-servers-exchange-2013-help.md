@@ -51,21 +51,29 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 Чтобы отключить фильтрацию подключений, выполните следующую команду:
 
-    Disable-TransportAgent "Connection Filtering Agent"
+```powershell
+Disable-TransportAgent "Connection Filtering Agent"
+```
 
 Чтобы включить фильтрацию подключений, выполните следующую команду:
 
-    Enable-TransportAgent "Connection Filtering Agent"
+```powershell
+Enable-TransportAgent "Connection Filtering Agent"
+```
 
 Чтобы изменение вступило в силу, перезапустите службу транспорта Microsoft Exchange, выполнив следующую команду.
 
-    Restart-Service MSExchangeTransport
+```powershell
+Restart-Service MSExchangeTransport
+```
 
 ## Как проверить, что все получилось?
 
 Чтобы подтвердить, что фильтрация подключений успешно включена или отключена, выполните следующую команду и убедитесь, что отображается заданное вами значение.
 
-    Get-TransportAgent "Connection Filtering Agent" | Format-List Enabled
+```powershell
+Get-TransportAgent "Connection Filtering Agent" | Format-List Enabled
+```
 
 ## Процедуры для черного списка IP-адресов
 
@@ -77,29 +85,39 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 Для просмотра конфигурации черного списка IP-адресов выполните следующую команду:
 
+```powershell
     Get-IPBlockListConfig | Format-List *Enabled,*Response
+```
 
 ## Использование командной консоли для включения или отключения черного списка IP-адресов
 
 Чтобы отключить список блокировок IP-адресов, выполните следующую команду:
 
-    Set-IPBlockListConfig -Enabled $false
+```powershell
+Set-IPBlockListConfig -Enabled $false
+```
 
 Чтобы включить список блокировок IP-адресов, выполните следующую команду:
 
-    Set-IPBlockListConfig -Enabled $true
+```powershell
+Set-IPBlockListConfig -Enabled $true
+```
 
 ## Как проверить, что все получилось?
 
 Чтобы подтвердить, что список блокировок IP-адресов успешно включен или отключен, выполните следующую команду и убедитесь, что отображается заданное вами значение.
 
-    Get-IPBlockListConfig | Format-List Enabled
+```powershell
+Get-IPBlockListConfig | Format-List Enabled
+```
 
 ## Использование командной консоли для настройки черного списка IP-адресов
 
 Для настройки черного списка IP-адресов используется указанный ниже синтаксис.
 
+```powershell
     Set-IPBlockListConfig [-ExternalMailEnabled <$true | $false>] [-InternalMailEnabled <$true | $false> -MachineEntryRejectionResponse "<Custom response text>"] [-StaticEntryRejectionResponse "<Custom response text>"]
+```
 
 В этом примере список блокировок IP-адресов настраивается со следующими параметрами:
 
@@ -111,29 +129,39 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 <!-- end list -->
 
+```powershell
     Set-IPBlockListConfig -InternalMailEnabled $true -MachineEntryRejectionResponse "Connection from IP address {0} was rejected by sender reputation." -StaticEntryRejectionResponse "Connection from IP address {0} was rejected by connection filtering."
+```
 
 ## Как проверить, что все получилось?
 
 Чтобы подтвердить, что список блокировок IP-адресов успешно настроен, выполните следующую команду и убедитесь, что отображаются заданные вами значения.
 
+```powershell
     Get-IPBlockListConfig | Format-List *MailEnabled,*Response
+```
 
 ## Просмотр записей черного списка IP-адресов с помощью командной консоли
 
 Чтобы просмотреть все записи черного списка IP-адресов, выполните следующую команду:
 
-    Get-IPBlockListEntry
+```powershell
+Get-IPBlockListEntry
+```
 
 Обратите внимание, что каждая запись черного списка определяется целочисленным значением. Этот идентификатор назначается по возрастанию при добавлении записей в черный и список разрешений IP-адресов.
 
 Чтобы просмотреть конкретную запись черного списка IP-адресов, используйте приведенный ниже синтаксис.
 
-    Get-IPBlockListEntry <-Identity IdentityInteger | -IPAddress IPAddress>
+```powershell
+Get-IPBlockListEntry <-Identity IdentityInteger | -IPAddress IPAddress>
+```
 
 Например, чтобы просмотреть запись, содержащую IP-адрес 192.168.1.13, выполните следующую команду:
 
-    Get-IPBlockListEntry -IPAddress 192.168.1.13
+```powershell
+Get-IPBlockListEntry -IPAddress 192.168.1.13
+```
 
 > [!NOTE]  
 > При использовании параметра <em>IPAddress</em> полученная запись черного списка IP-адресов может содержать отдельный IP-адрес, диапазон IP-адресов или IP-адрес CIDR. Для использования параметра <em>Identity</em> необходимо указать целое значение, назначенное записи черного списка IP-адресов.
@@ -143,37 +171,51 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 Для добавления записей черного списка IP-адресов используется указанный ниже синтаксис.
 
+```powershell
     Add-IPBlockListEntry <-IPAddress IPAddress | -IPRange IP range or CIDR IP> [-ExpirationTime <DateTime>] [-comment "<Descriptive Comment>"]
+```
 
 Следующий пример добавляет запись черного списка IP-адресов для диапазона 192.168.1.10–192.168.1.15 и настраивает срок действия этой записи (4 июля 2014 г., 15:00).
 
-    Add-IPBlockListEntry -IPRange 192.168.1.10-192.168.1.15 -ExpirationTime "7/4/2014 15:00"
+```powershell
+Add-IPBlockListEntry -IPRange 192.168.1.10-192.168.1.15 -ExpirationTime "7/4/2014 15:00"
+```
 
 ## Как проверить, что все получилось?
 
 Чтобы подтвердить, что запись успешно добавлена в список блокировок IP-адресов, выполните следующую команду и убедитесь, что отображается новая запись.
 
-    Get-IPBlockListEntry
+```powershell
+Get-IPBlockListEntry
+```
 
 ## Удаление записей черного списка IP-адресов с помощью командной консоли
 
 Для удаления записей черного списка IP-адресов используется указанный ниже синтаксис.
 
-    Remove-IPBlockListEntry <IdentityInteger>
+```powershell
+Remove-IPBlockListEntry <IdentityInteger>
+```
 
 Следующий пример удаляет запись черного списка IP-адресов, значение *Identity* которой равно 3.
 
-    Remove-IPBlockListEntry 3
+```powershell
+Remove-IPBlockListEntry 3
+```
 
 Следующий пример удаляет запись черного списка IP-адресов, которая содержит адрес 192.168.1.12, без использования значения *Identity*. Обратите внимание, что запись черного списка может представлять отдельный IP-адрес или диапазон IP-адресов.
 
-    Get-IPBlockListEntry -IPAddress 192.168.1.12 | Remove-IPBlockListEntry
+```powershell
+Get-IPBlockListEntry -IPAddress 192.168.1.12 | Remove-IPBlockListEntry
+```
 
 ## Как проверить, что все получилось?
 
 Чтобы подтвердить, что запись успешно удалена из черного списка IP-адресов, выполните следующую команду и убедитесь, что соответствующей записи нет.
 
-    Get-IPBlockListEntry
+```powershell
+Get-IPBlockListEntry
+```
 
 ## Процедуры поставщиков черного списка IP-адресов
 
@@ -185,29 +227,39 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 Чтобы просмотреть, как фильтрация подключений использует всех поставщиков черного списка IP-адресов, выполните следующую команду:
 
+```powershell
     Get-IPBlockListProvidersConfig | Format-List *Enabled,Bypassed*
+```
 
 ## Использование командной консоли для включения или отключения всех поставщиков черного списка IP-адресов
 
 Чтобы отключить всех поставщиков черного списка IP-адресов, выполните следующую команду:
 
-    Set-IPBlockListProvidersConfig -Enabled $false
+```powershell
+Set-IPBlockListProvidersConfig -Enabled $false
+```
 
 Чтобы включить всех поставщиков черного списка IP-адресов, выполните следующую команду:
 
-    Set-IPBlockListProvidersConfig -Enabled $true
+```powershell
+Set-IPBlockListProvidersConfig -Enabled $true
+```
 
 ## Как проверить, что все получилось?
 
 Чтобы подтвердить, что все поставщики черного списка IP-адресов успешно включены или отключены, выполните следующую команду и убедитесь, что отображается заданное вами значение.
 
-    Get-IPBlockListProvidersConfig | Format-List Enabled
+```powershell
+Get-IPBlockListProvidersConfig | Format-List Enabled
+```
 
 ## Использование командной консоли для настройки всех поставщиков черного списка IP-адресов
 
 Чтобы настроить способ использования всех поставщиков черного списка IP-адресов при фильтрации подключений, используйте следующий синтаксис:
 
+```powershell
     Set-IPBlockListProvidersConfig [-BypassedRecipients <recipient1,recipient2...>] [-ExternalMailEnabled <$true | $false>] [-InternalMailEnabled <$true | $false>]
+```
 
 В следующем примере все поставщики черного списка IP-адресов настраиваются со следующими параметрами:
 
@@ -217,7 +269,9 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 <!-- end list -->
 
+```powershell
     Set-IPBlockListProvidersConfig -BypassedRecipients chris@fabrikam.com,michelle@fabrikam.com -InternalMailEnabled $true
+```
 
 Дополнительные сведения см. в разделе [Set-IPBlockListProvidersConfig](https://technet.microsoft.com/ru-ru/library/aa998543\(v=exchg.150\)).
 
@@ -225,27 +279,37 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 Чтобы подтвердить, что все поставщики черного списка IP-адресов успешно настроены, выполните следующую команду и убедитесь, что отображаются заданные вами значения.
 
+```powershell
     Get-IPBlockListProvidersConfig | Format-List *MailEnabled,Bypassed*
+```
 
 ## Просмотр поставщиков черного списка IP-адресов с помощью командной консоли
 
 Для просмотра сводного списка всех поставщиков черного списка IP-адресов выполните следующую команду:
 
-    Get-IPBlockListProvider
+```powershell
+Get-IPBlockListProvider
+```
 
 Чтобы просмотреть сведения об определенном поставщике, используйте следующий синтаксис.
 
-    Get-IPBlockListProvider <IPBlockListProviderIdentity>
+```powershell
+Get-IPBlockListProvider <IPBlockListProviderIdentity>
+```
 
 Следующий пример отображает сведения о поставщике с именем "Contoso IP Block List Provider".
 
+```powershell
     Get-IPBlockListProvider "Contoso IP Block List Provider" | Format-List Name,Enabled,Priority,LookupDomain,*Match,*Response
+```
 
 ## Добавление поставщика черного списка IP-адресов с помощью командной консоли
 
 Для добавления поставщика черного списка IP-адресов используется указанный ниже синтаксис.
 
+```powershell
     Add-IPBlockListProvider -Name "<Descriptive Name>" -LookupDomain <FQDN> [-Priority <Integer>] [-Enabled <$true | $false>] [-AnyMatch <$true | $false>] [-BitmaskMatch <IPAddress>] [-IPAddressesMatch <IPAddressStatusCode1,IPAddressStatusCode2...>] [-RejectionResponse "<Custom Text>"]
+```
 
 Этот пример создает поставщика черного списка IP-адресов с именем "Contoso IP Block List Provider" с использованием следующих параметров:
 
@@ -255,7 +319,9 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 <!-- end list -->
 
+```powershell
     Add-IPBlockListProvider -Name "Contoso IP Block List Provider" -LookupDomain rbl.contoso.com -BitmaskMatch 127.0.0.1
+```
 
 > [!NOTE]  
 > При добавлении нового поставщика черного списка IP-адресов он по умолчанию включен (значение <em>Enabled</em> равно <code>$true</code>), а значение приоритета увеличивается на 1 (значение <em>Priority</em> для первой записи равно 1).
@@ -267,27 +333,37 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 Чтобы подтвердить, что поставщик черного списка IP-адресов успешно добавлен, выполните следующую команду и убедитесь, что отображается добавленный поставщик.
 
-    Get-IPBlockListProvider
+```powershell
+Get-IPBlockListProvider
+```
 
 ## Использование командной консоли для включения или отключения поставщика черного списка IP-адресов
 
 Чтобы включить или отключить определенного поставщика черного списка IP-адресов, используйте приведенный ниже синтаксис.
 
-    Set-IPBlockListProvider <IPBlockListProviderIdentity> -Enabled <$true | $false>
+```powershell
+Set-IPBlockListProvider <IPBlockListProviderIdentity> -Enabled <$true | $false>
+```
 
 Следующий пример отключает поставщика с именем "Contoso IP Block List Provider".
 
-    Set-IPBlockListProvider "Contoso IP Block List Provider" -Enabled $false
+```powershell
+Set-IPBlockListProvider "Contoso IP Block List Provider" -Enabled $false
+```
 
 Следующий пример включает поставщика с именем "Contoso IP Block List Provider".
 
-    Set-IPBlockListProvider "Contoso IP Block List Provider" -Enabled $true
+```powershell
+Set-IPBlockListProvider "Contoso IP Block List Provider" -Enabled $true
+```
 
 ## Как проверить, что все получилось?
 
 Чтобы подтвердить, что поставщик черного списка IP-адресов успешно включен или отключен, выполните следующую команду и убедитесь, что отображается заданное вами значение.
 
-    Get-IPBlockListProvider <IPBlockListProviderIdentity> | Format-List Enabled
+```powershell
+Get-IPBlockListProvider <IPBlockListProviderIdentity> | Format-List Enabled
+```
 
 ## Настройка поставщика черного списка IP-адресов с помощью командной консоли
 
@@ -295,11 +371,15 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 Для настройки существующего поставщика черного списка IP-адресов используется указанный ниже синтаксис.
 
+```powershell
     Set-IPBlockListProvider <IPBlockListProviderIdentity> -Name "<Descriptive Name>" -LookupDomain <FQDN> [-Priority <Integer>] [-AnyMatch <$true | $false>] [-BitmaskMatch <IPAddress>] [-IPAddressesMatch <IPAddressStatusCode1,IPAddressStatusCode2...>] [-RejectionResponse "<Custom Text>"]
+```
 
 Например, чтобы добавить код состояния IP-адреса 127.0.0.1 в список существующих кодов состояния для поставщика с именем "Contoso IP Block List Provider", выполните следующую команду:
 
-    Set-IPBlockListProvider "Contoso IP Block List Provider" -IPAddressesMatch @{Add="127.0.0.1"}
+```powershell
+Set-IPBlockListProvider "Contoso IP Block List Provider" -IPAddressesMatch @{Add="127.0.0.1"}
+```
 
 Дополнительные сведения см. в разделе [Set-IPBlockListProvider](https://technet.microsoft.com/ru-ru/library/bb124979\(v=exchg.150\)).
 
@@ -307,33 +387,45 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 Чтобы подтвердить, что поставщик черного списка IP-адресов успешно настроен, выполните следующую команду и убедитесь, что отображаются заданные вами значения.
 
-    Get-IPBlockListProvider <IPBlockListProviderIdentity> | Format-List
+```powershell
+Get-IPBlockListProvider <IPBlockListProviderIdentity> | Format-List
+```
 
 ## Тестирование поставщика черного списка IP-адресов с помощью командной консоли
 
 Для тестирования поставщика черного списка IP-адресов используется указанный ниже синтаксис.
 
-    Test-IPBlockListProvider <IPBlockListProviderIdentity> -IPAddress <IPAddressToTest>
+```powershell
+Test-IPBlockListProvider <IPBlockListProviderIdentity> -IPAddress <IPAddressToTest>
+```
 
 Следующий пример проверяет поставщика с именем "Contoso IP Block List Provider", используя IP-адрес 192.168.1.1.
 
-    Test-IPBlockListProvider "Contoso IP Block List Provider" -IPAddress 192.168.1.1
+```powershell
+Test-IPBlockListProvider "Contoso IP Block List Provider" -IPAddress 192.168.1.1
+```
 
 ## Удаление поставщика черного списка IP-адресов с помощью командной консоли
 
 Для удаления поставщика черного списка IP-адресов используется указанный ниже синтаксис.
 
-    Remove-IPBlockListProvider <IPBlockListProviderIdentity>
+```powershell
+Remove-IPBlockListProvider <IPBlockListProviderIdentity>
+```
 
 Следующий пример удаляет поставщика черного списка IP-адресов с именем "Contoso IP Block List Provider".
 
-    Remove-IPBlockListProvider "Contoso IP Block list Provider"
+```powershell
+Remove-IPBlockListProvider "Contoso IP Block list Provider"
+```
 
 ## Как проверить, что все получилось?
 
 Чтобы подтвердить, что поставщик черного списка IP-адресов успешно удален, выполните следующую команду и убедитесь, что соответствующего поставщика нет.
 
-    Get-IPBlockListProvider
+```powershell
+Get-IPBlockListProvider
+```
 
 ## Процедуры для белого списка IP-адресов
 
@@ -345,55 +437,75 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 Для просмотра конфигурации белого списка IP-адресов выполните следующую команду:
 
+```powershell
     Get-IPAllowListConfig | Format-List *Enabled
+```
 
 ## Использование командной консоли для включения или отключения белого списка IP-адресов
 
 Чтобы отключить список разрешений IP-адресов, выполните следующую команду:
 
-    Set-IPAllowListConfig -Enabled $false
+```powershell
+Set-IPAllowListConfig -Enabled $false
+```
 
 Чтобы включить список разрешений IP-адресов, выполните следующую команду:
 
-    Set-IPAllowListConfig -Enabled $true
+```powershell
+Set-IPAllowListConfig -Enabled $true
+```
 
 ## Как проверить, что все получилось?
 
 Чтобы подтвердить, что список разрешений IP-адресов успешно включен или отключен, выполните следующую команду и убедитесь, что отображается заданное вами значение.
 
-    Get-IPAllowListConfig | Format-List Enabled
+```powershell
+Get-IPAllowListConfig | Format-List *Enabled
+```
 
 ## Использование командной консоли для настройки белого списка IP-адресов
 
 Для настройки белого списка IP-адресов используется указанный ниже синтаксис.
 
+```powershell
     Set-IPAllowListConfig [-ExternalMailEnabled <$true | $false>] [-InternalMailEnabled <$true | $false>
+```
 
 Этот пример настраивает список разрешений IP-адресов для фильтрации входящих подключений от внутренних и внешних почтовых серверов. По умолчанию фильтруются только подключения от внешних почтовых серверов (для параметра *ExternalMailEnabled* задано значение `$true`, а для параметра *InternalMailEnabled* — значение `$false`). Подключения от внешних партнеров с проверкой подлинности и без нее считаются внешними.
 
-    Set-IPAllowListConfig -InternalMailEnabled $true
+```powershell
+Set-IPAllowListConfig -InternalMailEnabled $true
+```
 
 ## Как проверить, что все получилось?
 
 Чтобы подтвердить, что список разрешений IP-адресов успешно настроен, выполните следующую команду и убедитесь, что отображаются заданные вами значения.
 
+```powershell
     Get-IPAllowListConfig | Format-List *MailEnabled
+```
 
 ## Просмотр записей белого списка IP-адресов с помощью командной консоли
 
 Чтобы просмотреть все записи белого списка IP-адресов, выполните следующую команду:
 
-    Get-IPAllowListEntry
+```powershell
+Get-IPAllowListEntry
+```
 
 Обратите внимание, что каждая запись белого списка определяется целочисленным значением. Этот идентификатор назначается по возрастанию при добавлении записей в черный и список разрешений IP-адресов.
 
 Чтобы просмотреть конкретную запись белого списка IP-адресов, используйте приведенный ниже синтаксис.
 
-    Get-IPAllowListEntry <-Identity IdentityInteger | -IPAddress IPAddress>
+```powershell
+Get-IPAllowListEntry <-Identity IdentityInteger | -IPAddress IPAddress>
+```
 
 Например, чтобы просмотреть запись, содержащую IP-адрес 192.168.1.13, выполните следующую команду:
 
-    Get-IPAllowListEntry -IPAddress 192.168.1.13
+```powershell
+Get-IPAllowListEntry -IPAddress 192.168.1.13
+```
 
 > [!NOTE]  
 > При использовании параметра <em>IPAddress</em> полученная запись белого списка IP-адресов может содержать отдельный IP-адрес, диапазон IP-адресов или IP-адрес CIDR. Для использования параметра <em>Identity</em> необходимо указать целое значение, назначенное записи белого списка IP-адресов.
@@ -403,37 +515,51 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 Для добавления записей белого списка IP-адресов используется указанный ниже синтаксис.
 
+```powershell
     Add-IPAllowListEntry <-IPAddress IPAddress | -IPRange IP range or CIDR IP> [-ExpirationTime <DateTime>] [-Comment "<Descriptive Comment>"]
+```
 
 Этот пример добавляет запись белого списка IP-адресов для диапазона 192.168.1.10–192.168.1.15 и настраивает срок действия этой записи (4 июля 2014 г., 15:00).
 
-    Add-IPAllowListEntry -IPRange 192.168.1.10-192.168.1.15 -ExpirationTime "7/4/2014 15:00"
+```powershell
+Add-IPAllowListEntry -IPRange 192.168.1.10-192.168.1.15 -ExpirationTime "7/4/2014 15:00"
+```
 
 ## Как проверить, что все получилось?
 
 Чтобы подтвердить, что запись успешно добавлена в список разрешений IP-адресов, выполните следующую команду и убедитесь, что отображается новая запись.
 
-    Get-IPAllowListEntry
+```powershell
+Get-IPAllowListEntry
+```
 
 ## Удаление записей белого списка IP-адресов с помощью командной консоли
 
 Для удаления записей белого списка IP-адресов используется указанный ниже синтаксис.
 
-    Remove-IPAllowListEntry <IdentityInteger>
+```powershell
+Remove-IPAllowListEntry <IdentityInteger>
+```
 
 Следующий пример удаляет запись белого списка IP-адресов, значение *Identity* которой равно 3.
 
-    Remove-IPAllowListEntry 3
+```powershell
+Remove-IPAllowListEntry 3
+```
 
 Этот пример удаляет запись белого списка IP-адресов, которая содержит адрес 192.168.1.12, без использования значения *Identity*. Обратите внимание, что запись белого списка может представлять отдельный IP-адрес или диапазон IP-адресов.
 
-    Get-IPAllowListEntry -IPAddress 192.168.1.12 | Remove-IPAllowListEntry
+```powershell
+Get-IPAllowListEntry -IPAddress 192.168.1.12 | Remove-IPAllowListEntry
+```
 
 ## Как проверить, что все получилось?
 
 Чтобы подтвердить, что запись успешно удалена из белого списка IP-адресов, выполните следующую команду и убедитесь, что соответствующей записи нет.
 
-    Get-IPAllowListEntry
+```powershell
+Get-IPAllowListEntry
+```
 
 ## Процедуры поставщиков белого списка IP-адресов
 
@@ -445,33 +571,45 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 Чтобы просмотреть, как фильтрация подключений использует всех поставщиков белого списка IP-адресов, выполните следующую команду:
 
+```powershell
     Get-IPAllowListProvidersConfig | Format-List *Enabled
+```
 
 ## Использование командной консоли для включения или отключения всех поставщиков белого списка IP-адресов
 
 Чтобы отключить всех поставщиков белого списка IP-адресов, выполните следующую команду:
 
-    Set-IPAllowListProvidersConfig -Enabled $false
+```powershell
+Set-IPAllowListProvidersConfig -Enabled $false
+```
 
 Чтобы включить всех поставщиков белого списка IP-адресов, выполните следующую команду:
 
-    Set-IPAllowListProvidersConfig -Enabled $true
+```powershell
+Set-IPAllowListProvidersConfig -Enabled $true
+```
 
 ## Как проверить, что все получилось?
 
 Чтобы подтвердить, что все поставщики белого списка IP-адресов успешно включены или отключены, выполните следующую команду и убедитесь, что отображается заданное вами значение.
 
-    Get-IPAllowListProvidersConfig | Format-List Enabled
+```powershell
+Get-IPAllowListProvidersConfig | Format-List Enabled
+```
 
 ## Использование командной консоли для настройки всех поставщиков белого списка IP-адресов
 
 Чтобы настроить способ использования всех поставщиков белого списка IP-адресов при фильтрации подключений, используйте следующий синтаксис:
 
+```powershell
     Set-IPAllowListProvidersConfig [-ExternalMailEnabled <$true | $false>] [-InternalMailEnabled <$true | $false>]
+```
 
 Этот пример настраивает всех поставщиков белого списка IP-адресов для фильтрации входящих подключений от внутренних и внешних почтовых серверов. По умолчанию фильтруются только подключения от внешних почтовых серверов (для параметра *ExternalMailEnabled* задано значение `$true`, а для параметра *InternalMailEnabled* — значение `$false`). Подключения от внешних партнеров с проверкой подлинности и без нее считаются внешними.
 
-    Set-IPAllowListProvidersConfig -InternalMailEnabled $true
+```powershell
+Set-IPAllowListProvidersConfig -InternalMailEnabled $true
+```
 
 Дополнительные сведения см. в разделе [Set-IPBlockListProvidersConfig](https://technet.microsoft.com/ru-ru/library/aa998543\(v=exchg.150\)).
 
@@ -479,27 +617,37 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 Чтобы подтвердить, что все поставщики белого списка IP-адресов успешно настроены, выполните следующую команду и убедитесь, что отображаются заданные вами значения.
 
+```powershell
     Get-IPAllowListProvidersConfig | Format-List *MailEnabled
+```
 
 ## Просмотр поставщиков белого списка IP-адресов с помощью командной консоли
 
 Для просмотра сводного списка всех поставщиков белого списка IP-адресов выполните следующую команду:
 
-    Get-IPAllowListProvider
+```powershell
+Get-IPAllowListProvider
+```
 
 Чтобы просмотреть сведения об определенном поставщике, используйте следующий синтаксис.
 
-    Get-IPAllowListProvider <IPAllowListProviderIdentity>
+```powershell
+Get-IPAllowListProvider <IPAllowListProviderIdentity>
+```
 
 Этот пример отображает сведения о поставщике с именем "Contoso IP Allow List Provider".
 
+```powershell
     Get-IPAllowListProvider "Contoso IP Allow List Provider" | Format-List Name,Enabled,Priority,LookupDomain,*Match
+```
 
 ## Добавление поставщика белого списка IP-адресов с помощью командной консоли
 
 Для добавления поставщика белого списка IP-адресов используется указанный ниже синтаксис.
 
+```powershell
     Add-IPAllowListProvider -Name "<Descriptive Name>" -LookupDomain <FQDN> [-Priority <Integer>] [-Enabled <$true | $false>] [-AnyMatch <$true | $false>] [-BitmaskMatch <IPAddress>] [-IPAddressesMatch <IPAddressStatusCode1,IPAddressStatusCode2...>]
+```
 
 Этот пример создает поставщика белого списка IP-адресов с именем "Contoso IP Allow List Provider" с использованием следующих параметров:
 
@@ -509,7 +657,9 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 <!-- end list -->
 
+```powershell
     Add-IPAllowListProvider -Name "Contoso IP Allow List Provider" -LookupDomain allow.contoso.com -BitmaskMatch 127.0.0.1
+```
 
 > [!NOTE]  
 > При добавлении нового поставщика белого списка IP-адресов он по умолчанию включен (значение <em>Enabled</em> равно <code>$true</code>), а значение приоритета увеличивается на 1 (значение <em>Priority</em> для первой записи равно 1).
@@ -521,27 +671,37 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 Чтобы подтвердить, что поставщик белого списка IP-адресов успешно добавлен, выполните следующую команду и убедитесь, что отображается добавленный поставщик.
 
-    Get-IPAllowListProvider
+```powershell
+Get-IPAllowListProvider
+```
 
 ## Использование командной консоли для включения или отключения поставщика белого списка IP-адресов
 
 Чтобы включить или отключить определенного поставщика белого списка IP-адресов, используйте приведенный ниже синтаксис.
 
-    Set-IPAllowListProvider <IPAllowListProviderIdentity> -Enabled <$true | $false>
+```powershell
+Set-IPAllowListProvider <IPAllowListProviderIdentity> -Enabled <$true | $false>
+```
 
 Следующий пример отключает поставщика с именем "Contoso IP Allow List Provider".
 
-    Set-IPAllowListProvider "Contoso IP Allow List Provider" -Enabled $false
+```powershell
+Set-IPAllowListProvider "Contoso IP Allow List Provider" -Enabled $false
+```
 
 Следующий пример включает поставщика с именем "Contoso IP Allow List Provider".
 
-    Set-IPAllowListProvider "Contoso IP Allow List Provider" -Enabled $true
+```powershell
+Set-IPAllowListProvider "Contoso IP Allow List Provider" -Enabled $true
+```
 
 ## Как проверить, что все получилось?
 
 Чтобы подтвердить, что поставщик белого списка IP-адресов успешно включен или отключен, выполните следующую команду и убедитесь, что отображается заданное вами значение.
 
-    Get-IPAllowListProvider <IPAllowListProviderIdentity> | Format-List Enabled
+```powershell
+Get-IPAllowListProvider <IPAllowListProviderIdentity> | Format-List Enabled
+```
 
 ## Настройка поставщика белого списка IP-адресов с помощью командной консоли
 
@@ -549,11 +709,15 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 Для настройки существующего поставщика белого списка IP-адресов используется указанный ниже синтаксис.
 
+```powershell
     Set-IPAllowListProvider <IPAllowListProviderIdentity> -Name "<Descriptive Name>" -LookupDomain <FQDN> [-Priority <Integer>] [-AnyMatch <$true | $false>] [-BitmaskMatch <IPAddress>] [-IPAddressesMatch <IPAddressStatusCode1,IPAddressStatusCode2...>]
+```
 
 Например, чтобы добавить код состояния IP-адреса 127.0.0.1 в список существующих кодов состояния для поставщика с именем "Contoso IP Allow List Provider", выполните следующую команду:
 
-    Set-IPAllowListProvider "Contoso IP Allow List Provider" -IPAddressesMatch @{Add="127.0.0.1"}
+```powershell
+Set-IPAllowListProvider "Contoso IP Allow List Provider" -IPAddressesMatch @{Add="127.0.0.1"}
+```
 
 Дополнительные сведения см. в разделе [Set-IPBlockListProvider](https://technet.microsoft.com/ru-ru/library/bb124979\(v=exchg.150\)).
 
@@ -561,31 +725,43 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 Чтобы подтвердить, что поставщик белого списка IP-адресов успешно настроен, выполните следующую команду и убедитесь, что отображаются заданные вами значения.
 
-    Get-IPAllowListProvider <IPAllowListProviderIdentity> | Format-List
+```powershell
+Get-IPAllowListProvider <IPAllowListProviderIdentity> | Format-List
+```
 
 ## Тестирование поставщика белого списка IP-адресов с помощью командной консоли
 
 Для тестирования поставщика белого списка IP-адресов используется указанный ниже синтаксис.
 
-    Test-IPAllowListProvider <IPAllowListProviderIdentity> -IPAddress <IPAddressToTest>
+```powershell
+Test-IPAllowListProvider <IPAllowListProviderIdentity> -IPAddress <IPAddressToTest>
+```
 
 Следующий пример проверяет поставщика с именем "Contoso IP Allow List Provider", используя IP-адрес 192.168.1.1.
 
-    Test-IPAllowListProvider "Contoso IP Allow List Provider" -IPAddress 192.168.1.1
+```powershell
+Test-IPAllowListProvider "Contoso IP Allow List Provider" -IPAddress 192.168.1.1
+```
 
 ## Удаление поставщика белого списка IP-адресов с помощью командной консоли
 
 Для удаления поставщика белого списка IP-адресов используется указанный ниже синтаксис.
 
-    Remove-IPAllowListProvider <IPAllowListProviderIdentity>
+```powershell
+Remove-IPAllowListProvider <IPAllowListProviderIdentity>
+```
 
 Следующий пример удаляет поставщика белого списка IP-адресов с именем "Contoso IP Allow List Provider".
 
-    Remove-IPAllowListProvider "Contoso IP Allow List Provider"
+```powershell
+Remove-IPAllowListProvider "Contoso IP Allow List Provider"
+```
 
 ## Как проверить, что все получилось?
 
 Чтобы подтвердить, что поставщик белого списка IP-адресов успешно удален, выполните следующую команду и убедитесь, что соответствующего поставщика нет.
 
-    Get-IPAllowListProvider
+```powershell
+Get-IPAllowListProvider
+```
 

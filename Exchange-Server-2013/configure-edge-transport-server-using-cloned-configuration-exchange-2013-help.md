@@ -55,11 +55,15 @@ _**Последнее изменение раздела:** 2015-04-13_
 
 2.  Чтобы экспортировать данные конфигурации исходного сервера в файл на исходном сервере, используйте приведенный ниже синтаксис.
     
-        ./ExportEdgeConfig.ps1 -CloneConfigData:"<configuration file>"
+    ```powershell
+	./ExportEdgeConfig.ps1 -CloneConfigData:"<configuration file>"
+	```
     
     Например, чтобы экспортировать данные конфигурации исходного сервера в файл C:\\CloneConfigData.xml, выполните приведенную ниже команду.
     
-        ./ExportEdgeConfig.ps1 -CloneConfigData:"C:\CloneConfigData.xml"
+    ```powershell
+	./ExportEdgeConfig.ps1 -CloneConfigData:"C:\CloneConfigData.xml"
+	```
 
 ## Как проверить, что шаг выполнен?
 
@@ -72,13 +76,13 @@ _**Последнее изменение раздела:** 2015-04-13_
 2.  Скопируйте сценарий ImportEdgeConfig.ps1 в корневую папку своего профиля пользователя на целевом сервере.
 
 3.  Чтобы проверить файл конфигурации и использовать результаты для создания файла ответов на целевом сервере, используйте приведенный ниже синтаксис.
-    
+    ```powershell
         ./ImportEdgeConfig.ps1 -CloneConfigData:"<configuration file>" -IsImport $false -CloneConfigAnswer:"<answer file>"
-    
+    ```
     Например, чтобы проверить файл конфигурации C:\\CloneConfigData.xml и создать файл ответов C:\\CloneConfigAnswer.xml, выполните приведенную ниже команду.
-    
+    ```powershell
         ./ImportEdgeConfig.ps1 -CloneConfigData:"C:\CloneConfigData.xml" -IsImport $false -CloneConfigAnswer:"C:\CloneConfigAnswer.xml"
-
+	```
 4.  Откройте файл ответов и измените любые параметры, недопустимые для целевого сервера. Если изменения не требуются, файл ответов будет пустым. Сохраните сделанные изменения.
 
 ## Как проверить, что шаг выполнен?
@@ -88,13 +92,13 @@ _**Последнее изменение раздела:** 2015-04-13_
 ## Шаг 3. Импорт файла конфигурации на целевой сервер
 
 Чтобы импортировать файл конфигурации на целевой сервер, используйте приведенный ниже синтаксис.
-
+```powershell
     ./ImportEdgeConfig.ps1 -CloneConfigData:"<Configuration file>" -IsImport $true -CloneConfigAnswer:"<answer file>"
-
+```
 Например, чтобы импортировать файл конфигурации C:\\CloneConfigData.xml с помощью файла ответов C:\\CloneConfigAnswer.xml, выполните приведенную ниже команду.
-
+```powershell
     ./ImportEdgeConfig.ps1 -CloneConfigData:"C:\CloneConfigData.xml" -IsImport $true -CloneConfigAnswer:"C:\CloneConfigAnswer.xml"
-
+```
 ## Как проверить, что шаг выполнен?
 
 Вы успешно импортировали файл конфигурации на целевой сервер, если отобразится подтверждение "Импорт данных пограничной конфигурации успешно завершен".

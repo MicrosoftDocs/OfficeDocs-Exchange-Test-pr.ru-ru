@@ -51,5 +51,7 @@ _**Последнее изменение раздела:** 2013-02-23_
 
 В этом примере показано, как установить значение 50 для количества входящих голосовых вызовов, вызовов голосового доступа к Outlook и передачи факсов, которое может принять сервер почтовых ящиков с именем `MyMailboxServer1`.
 
-    Set-UMService -Identity MyMailboxServer1 -MaxCallsAllowed 50
+```powershell
+Set-UMService -Identity MyMailboxServer1 -MaxCallsAllowed 50
+```
 

@@ -51,7 +51,9 @@ _**Последнее изменение раздела:** 2015-01-04_
 
 В этом примере удаляется доверие федерации.
 
-    Remove-FederationTrust
+```powershell
+Remove-FederationTrust
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Remove-FederationTrust](https://technet.microsoft.com/ru-ru/library/dd351153\(v=exchg.150\)).
 
@@ -63,7 +65,9 @@ _**Последнее изменение раздела:** 2015-01-04_
 
   - В командной консоли выполните следующую команду, чтобы убедиться, что сведения доверия федерации не возвращаются для организации Exchange.
     
-        Get-FederationTrust
+    ```powershell
+	Get-FederationTrust
+	```
     
     Дополнительные сведения о синтаксисе и параметрах см. в разделе [Get-FederationTrust](https://technet.microsoft.com/ru-ru/library/dd351262\(v=exchg.150\)).
 

@@ -32,9 +32,9 @@ _**Последнее изменение раздела:** 2017-02-28_
   - В этой статье используется командная консоль Exchange. Сведения о том, как открыть командную консоль Exchange в локальной организации Exchange, см. в статье [Открытие командной консоли Exchange](https://technet.microsoft.com/ru-ru/library/dd638134\(v=exchg.150\)).
 
   - Чтобы узнать, истек ли срок действия сертификата федерации, выполните следующую команду в командной консоли Exchange:
-    
+    ```powershell
         Get-ExchangeCertificate -Thumbprint (Get-FederationTrust).OrgCertificate.Thumbprint | Format-Table -Auto Thumbprint,NotAfter
-
+	```
   - Сочетания клавиш для процедур, описанных в этой статье, приведены в статье [Сочетания клавиш в Центре администрирования Exchange](keyboard-shortcuts-in-the-exchange-admin-center-exchange-online-protection-help.md).
 
 > [!WARNING]  
@@ -49,7 +49,9 @@ _**Последнее изменение раздела:** 2017-02-28_
 
 Выполните следующую команду в командной консоли Exchange, чтобы создать сертификат федерации:
 
+```powershell
     $SKI = [System.Guid]::NewGuid().ToString("N"); New-ExchangeCertificate -DomainName 'Federation' -FriendlyName "Exchange Delegation Federation" -Services Federation -SubjectKeyIdentifier $SKI -PrivateKeyExportable $true
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [New-ExchangeCertificate](https://technet.microsoft.com/ru-ru/library/aa998327\(v=exchg.150\)).
 
@@ -64,12 +66,14 @@ _**Последнее изменение раздела:** 2017-02-28_
 ## Шаг 2. Настройка нового сертификата как сертификата федерации
 
 Чтобы настроить новый сертификат как сертификат федерации с помощью командной консоли Exchange, используйте следующий синтаксис:
-
+```powershell
     Set-FederationTrust -Identity "Microsoft Federation Gateway" -Thumbprint <Thumbprint> -RefreshMetaData
-
+```
 В этом примере используется значение отпечатка сертификата `6A99CED2E4F2B5BE96C5D17D662D217EF58B8F73` из шага 1.
 
+```powershell
     Set-FederationTrust -Identity "Microsoft Federation Gateway" -Thumbprint 6A99CED2E4F2B5BE96C5D17D662D217EF58B8F73 -RefreshMetaData
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в статье [Set-FederationTrust](https://technet.microsoft.com/ru-ru/library/dd298034\(v=exchg.150\)).
 
@@ -81,11 +85,15 @@ _**Последнее изменение раздела:** 2017-02-28_
 
 1.  Найдите нужные значения для необходимых TXT-записей, выполнив следующую команду в командной консоли Exchange:
     
-        Get-FederatedDomainProof -DomainName <Domain> | Format-List Thumbprint,Proof
+    ```powershell
+	Get-FederatedDomainProof -DomainName <Domain> | Format-List Thumbprint,Proof
+	```
     
     Например, если федеративным является домен contoso.com, выполните следующую команду:
     
-        Get-FederatedDomainProof -DomainName contoso.com | Format-List Thumbprint,Proof
+    ```powershell
+	Get-FederatedDomainProof -DomainName contoso.com | Format-List Thumbprint,Proof
+	```
     
     Команда возвращает такие сведения:
     
@@ -106,16 +114,18 @@ _**Последнее изменение раздела:** 2017-02-28_
 Exchange автоматически распространяет новый сертификат федерации по всем серверам.
 
 Чтобы проверить распространение нового сертификата федерации с помощью командной консоли Exchange, выполните следующую команду:
-
+```powershell
     $Servers = Get-ExchangeServer; $Servers | foreach {Get-ExchangeCertificate -Server $_ | Where {$_.Services -match 'Federation'}} | Format-List Identity,Thumbprint,Services,Subject
-
+```
 **Примечание.** В Exchange 2010 командлет **Test-FederationCertificate** возвращает имена серверов. В Exchange 2013 или более поздней версии командлет не возвращает имена серверов.
 
 ## Шаг 5. Активация нового сертификата федерации
 
 Чтобы активировать новый сертификат федерации с помощью командной консоли Exchange, выполните следующую команду:
 
-    Set-FederationTrust -Identity "Microsoft Federation Gateway" -PublishFederationCertificate
+```powershell
+Set-FederationTrust -Identity "Microsoft Federation Gateway" -PublishFederationCertificate
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в статье [Set-FederationTrust](https://technet.microsoft.com/ru-ru/library/dd298034\(v=exchg.150\)).
 
@@ -127,7 +137,9 @@ Exchange автоматически распространяет новый се
 
   - В Командная консоль Exchange выполните указанную ниже команду, чтобы убедиться, что используется новый сертификат.
     
+    ```powershell
         Get-FederationTrust | Format-List *priv*
+    ```
     
       - Свойство **OrgPrivCertificate** должно содержать отпечаток нового сертификата федерации.
     
@@ -135,7 +147,9 @@ Exchange автоматически распространяет новый се
 
   - В Командная консоль Exchange замените *\<user's email address\>* на адрес электронной почты пользователя в организации и выполните следующую команду, чтобы убедиться, что доверие федерации работает:
     
-        Test-FederationTrust -UserIdentity <user's email address>
+    ```powershell
+	Test-FederationTrust -UserIdentity <user's email address>
+	```
 
 ## Замена сертификата федерации с истекшим сроком действия
 
@@ -143,21 +157,29 @@ Exchange автоматически распространяет новый се
 
 1.  Если у вас несколько федеративных доменов, основной общий домен необходимо удалить в последнюю очередь. Чтобы определить основной общий домен и все федеративные домены с помощью командной консоли Exchange, выполните следующую команду:
     
-        Get-FederatedOrganizationIdentifier | Format-List AccountNamespace,Domains
+    ```powershell
+	Get-FederatedOrganizationIdentifier | Format-List AccountNamespace,Domains
+	```
     
     Значение свойства **AccountNamespace** содержит основной общий домен в формате `FYDIBOHF25SPDLT<primary shared domain>`. Например, в значении `FYDIBOHF25SPDLT.contoso.com` contoso.com — основной общий домен.
 
 2.  Удалите все федеративные домены, кроме общего основного домена, выполнив следующую команду в командной консоли Exchange:
     
-        Remove-FederatedDomain -DomainName <domain> -Force
+    ```powershell
+	Remove-FederatedDomain -DomainName <domain> -Force
+	```
 
 3.  После этого удалите общий основной домен, выполнив следующую команду в командной консоли Exchange:
     
-        Remove-FederatedDomain -DomainName <domain> -Force
+    ```powershell
+	Remove-FederatedDomain -DomainName <domain> -Force
+	```
 
 4.  Удалите доверие федерации, выполнив следующую команду в командной консоли Exchange:
     
-        Remove-FederationTrust "Microsoft Federation Gateway"
+    ```powershell
+	Remove-FederationTrust "Microsoft Federation Gateway"
+	```
 
 5.  Создайте доверие федерации заново. Инструкции см. в статье [Создание доверия федерации](https://technet.microsoft.com/ru-ru/library/dd335198\(v=exchg.150\)).
 

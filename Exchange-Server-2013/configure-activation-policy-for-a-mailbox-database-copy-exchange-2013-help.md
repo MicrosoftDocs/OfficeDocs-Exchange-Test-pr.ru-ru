@@ -37,15 +37,11 @@ _**Последнее изменение раздела:** 2012-11-02_
 
 ## Настройка EAC использовать политики активации для копии базы данных почтовых ящиков
 
-1.  
-    
-    В Центре администрирования Exchange последовательно выберите пункты **Серверы** \> **Базы данных**.
+1.  В Центре администрирования Exchange последовательно выберите пункты **Серверы** \> **Базы данных**.
 
 2.  Выберите базу данных, которую нужно настроить.
 
-3.  
-    
-    В области сведений в разделе **Копии базы данных** найдите копию базы данных, которую необходимо настроить, и выберите пункт **Приостановить**.
+3.  В области сведений в разделе **Копии базы данных** найдите копию базы данных, которую необходимо настроить, и выберите пункт **Приостановить**.
 
 4.  При необходимости добавьте комментарий и установите флажок **Эту копию можно активировать только вручную**.
 
@@ -55,11 +51,15 @@ _**Последнее изменение раздела:** 2012-11-02_
 
 В этом примере показано, как заблокировать активацию копии базы данных DB1 на сервере MBX2.
 
-    Suspend-MailboxDatabaseCopy -Identity DB1\MBX2 -ActivationOnly
+```powershell
+Suspend-MailboxDatabaseCopy -Identity DB1\MBX2 -ActivationOnly
+```
 
 В этом примере показано, как возобновить активацию копии базы данных DB1 на сервере MBX2.
 
-    Resume-MailboxDatabaseCopy -Identity DB1\MBX2
+```powershell
+Resume-MailboxDatabaseCopy -Identity DB1\MBX2
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделах [Suspend-MailboxDatabaseCopy](https://technet.microsoft.com/ru-ru/library/dd351074\(v=exchg.150\)) или [Resume-MailboxDatabaseCopy](https://technet.microsoft.com/ru-ru/library/dd335220\(v=exchg.150\)).
 
@@ -67,15 +67,21 @@ _**Последнее изменение раздела:** 2012-11-02_
 
 В данном примере выполняется настройка копии баз данных на сервере, как заблокированные для активации MBX2.
 
-    Set-MailboxServer -Identity MBX2 -DatabaseCopyAutoActivationPolicy Blocked
+```powershell
+Set-MailboxServer -Identity MBX2 -DatabaseCopyAutoActivationPolicy Blocked
+```
 
 В данном примере выполняется настройка копии баз данных на сервере-заблокирован по MBX3 как нехватки активации сайта.
 
-    Set-MailboxServer -Identity MBX3 -DatabaseCopyAutoActivationPolicy IntrasiteOnly
+```powershell
+Set-MailboxServer -Identity MBX3 -DatabaseCopyAutoActivationPolicy IntrasiteOnly
+```
 
 В данном примере выполняется настройка копии баз данных на сервере, как открытый для активации MBX4.
 
-    Set-MailboxServer -Identity MBX4 -DatabaseCopyAutoActivationPolicy Unrestricted
+```powershell
+Set-MailboxServer -Identity MBX4 -DatabaseCopyAutoActivationPolicy Unrestricted
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделах [Suspend-MailboxDatabaseCopy](https://technet.microsoft.com/ru-ru/library/dd351074\(v=exchg.150\)), [Resume-MailboxDatabaseCopy](https://technet.microsoft.com/ru-ru/library/dd335220\(v=exchg.150\)) и [Set-MailboxServer](https://technet.microsoft.com/ru-ru/library/aa998651\(v=exchg.150\)).
 
@@ -85,9 +91,13 @@ _**Последнее изменение раздела:** 2012-11-02_
 
   - В командной консоли Exchange, выполните следующую команду, чтобы проверить параметры активации копии базы данных почтовых ящиков.
     
-        Get-MailboxDatabaseCopyStatus <DatabaseCopyName> | Format-List ActivationSuspended
+    ```powershell
+    Get-MailboxDatabaseCopyStatus <DatabaseCopyName> | Format-List ActivationSuspended
+    ```
 
   - В командной консоли выполните следующую команду, чтобы проверить параметры активации для члена группы обеспечения доступности баз данных.
     
-        Get-MailboxServer <ServerName> | Format-List DatabaseCopyAutoActivationPolicy
+    ```powershell
+    Get-MailboxServer <ServerName> | Format-List DatabaseCopyAutoActivationPolicy
+    ```
 

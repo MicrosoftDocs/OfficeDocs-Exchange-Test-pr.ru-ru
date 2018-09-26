@@ -552,7 +552,7 @@ _**Последнее изменение раздела:** 2016-12-09_
 Не вызвавшее событий сообщение, отправленное между двумя пользователями, создает несколько записей в журнале отслеживания сообщений. Результаты можно просмотреть с помощью командлета **Get-MessageTrackingLog**. Подробнее см. в разделе [Поиск в журналах отслеживания сообщений](search-message-tracking-logs-exchange-2013-help.md).
 
 Это краткий пример записей журнала отслеживания сообщений, который создается, когда пользователь pavel@contoso.com успешно отправляет тестовое сообщение пользователю victor@contoso.com. У обоих пользователей есть почтовые ящики на одном и том же сервере.
-
+```powershell
     EventId    Source      Sender            Recipients             MessageSubject
     -------    ------      ------            ----------             --------------
     NOTIFYMAPI STOREDRIVER                   {}
@@ -563,7 +563,7 @@ _**Последнее изменение раздела:** 2016-12-09_
     AGENTINFO  AGENT       chris@contoso.com {michelle@contoso.com} test
     SEND       SMTP        chris@contoso.com {michelle@contoso.com} test
     DELIVER    STOREDRIVER chris@contoso.com {michelle@contoso.com} test
-
+```
 В начало
 
 ## Журнал отслеживания сообщений и вопросы безопасности

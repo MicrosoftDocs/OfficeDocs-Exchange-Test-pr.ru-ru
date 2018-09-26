@@ -41,27 +41,35 @@ _**Последнее изменение раздела:** 2014-12-16_
 
 1.  В командной строке на сервере почтовых ящиков или пограничном транспортном сервере откройте файл EdgeTransport.exe.config в Блокноте, выполнив следующую команду:
     
-        Notepad %ExchangeInstallPath%Bin\EdgeTransport.exe.config
+    ```powershell
+    Notepad %ExchangeInstallPath%Bin\EdgeTransport.exe.config
+    ```
 
 2.  В разделе `<appSettings>` найдите следующие ключи.
     
-        <add key="QueueGlitchRetryCount" value="<Integer>" />
-        <add key="QueueGlitchRetryInterval" value="<hh:mm:ss>" />
-        <add key="MailboxDeliveryQueueRetryInterval" value="<hh:mm:ss>" />
-        <add key="MaxIdleTimeBeforeResubmit" value="<hh:mm:ss>" />
-    
+    ```powershell
+    <add key="QueueGlitchRetryCount" value="<Integer>" />
+    <add key="QueueGlitchRetryInterval" value="<hh:mm:ss>" />
+    <add key="MailboxDeliveryQueueRetryInterval" value="<hh:mm:ss>" />
+    <add key="MaxIdleTimeBeforeResubmit" value="<hh:mm:ss>" />
+    ```
+
     В этом примере изменяется значение количества повторных попыток очереди при сбое на 6, интервал повторных попыток очереди при сбое на 30 секунд, интервал между повторными попытками для очереди доставки в почтовые ящики на 3 минуты, а максимальное время простоя перед интервалами повторной передачи — на 6 часов.
     
-        <add key="QueueGlitchRetryCount" value="6" />
-        <add key="QueueGlitchRetryInterval" value="00:00:30" />
-        <add key="MailboxDeliveryQueueRetryInterval" value="00:03:00" />
-        <add key="MaxIdleTimeBeforeResubmit" value="6:00:00" />
+    ```powershell
+    <add key="QueueGlitchRetryCount" value="6" />
+    <add key="QueueGlitchRetryInterval" value="00:00:30" />
+    <add key="MailboxDeliveryQueueRetryInterval" value="00:03:00" />
+    <add key="MaxIdleTimeBeforeResubmit" value="6:00:00" />
+    ```
 
 3.  Закончив, сохраните и закройте файл EdgeTransport.exe.config.
 
 4.  Перезапустите службу транспорта Microsoft Exchange, выполнив следующую команду:
     
-        net stop MSExchangeTransport && net start MSExchangeTransport
+    ```powershell
+    net stop MSExchangeTransport && net start MSExchangeTransport
+    ```
 
 ## Настроить количество повторных попыток при временной ошибке, интервал повторной попытки при временной ошибке и интервал повторной попытки при ошибке исходящего подключения
 
@@ -83,7 +91,9 @@ _**Последнее изменение раздела:** 2014-12-16_
 
 Для настройки количества повторных попыток при временной ошибке, интервала повторной попытки при временной ошибке и интервала повторной попытки при ошибке исходящего подключения в транспортной службе на сервере почтовых ящиков или пограничном транспортном сервере введите команду в следующем формате.
 
-    Set-TransportService <ServerIdentity> -TransientFailureRetryCount <Integer> -TransientFailureRetryInterval <hh:mm:ss> -OutboundConnectionFailureRetryInterval <dd.hh:mm:ss>
+```powershell
+Set-TransportService <ServerIdentity> -TransientFailureRetryCount <Integer> -TransientFailureRetryInterval <hh:mm:ss> -OutboundConnectionFailureRetryInterval <dd.hh:mm:ss>
+```
 
 В этом примере изменяются следующие значения на сервере почтовых ящиков с именем Mailbox01: на пограничном транспортном сервере Exchange01.
 
@@ -95,7 +105,9 @@ _**Последнее изменение раздела:** 2014-12-16_
 
 <!-- end list -->
 
-    Set-TransportService Mailbox01 -TransientFailureRetryCount 8 -TransientFailureRetryInterval 00:01:00 -OutboundConnectionFailureRetryInterval 00:45:00
+```powershell
+Set-TransportService Mailbox01 -TransientFailureRetryCount 8 -TransientFailureRetryInterval 00:01:00 -OutboundConnectionFailureRetryInterval 00:45:00
+```
 
 > [!NOTE]  
 > Параметры <em>TransientFailureRetryCount</em> и <em>TransientFailureRetryInterval</em> также доступны в командлете <strong>Set-FrontEndTransportService</strong> для внешней службы транспорта на серверах клиентского доступа.
@@ -115,7 +127,9 @@ _**Последнее изменение раздела:** 2014-12-16_
 
 Для настройки количества повторных попыток при временной ошибке, интервала повторной попытки при временной ошибке и интервала повторной попытки при ошибке исходящего подключения в транспортной службе на сервере почтовых ящиков или пограничном транспортном сервере введите команду в следующем формате.
 
-    Set-TransportService <ServerIdentity> -TransientFailureRetryCount <Integer> -TransientFailureRetryInterval <hh:mm:ss> -OutboundConnectionFailureRetryInterval <dd.hh:mm:ss>
+```powershell
+Set-TransportService <ServerIdentity> -TransientFailureRetryCount <Integer> -TransientFailureRetryInterval <hh:mm:ss> -OutboundConnectionFailureRetryInterval <dd.hh:mm:ss>
+```
 
 В этом примере изменяются следующие значения на сервере почтовых ящиков с именем Mailbox01: на пограничном транспортном сервере Exchange01.
 
@@ -127,7 +141,9 @@ _**Последнее изменение раздела:** 2014-12-16_
 
 <!-- end list -->
 
-    Set-TransportService Mailbox01 -TransientFailureRetryCount 8 -TransientFailureRetryInterval 00:01:00 -OutboundConnectionFailureRetryInterval 00:45:00
+```powershell
+Set-TransportService Mailbox01 -TransientFailureRetryCount 8 -TransientFailureRetryInterval 00:01:00 -OutboundConnectionFailureRetryInterval 00:45:00
+```
 
 > [!NOTE]  
 > Параметры <em>TransientFailureRetryCount</em> и <em>TransientFailureRetryInterval</em> также доступны в командлете <strong>Set-FrontEndTransportService</strong> для внешней службы транспорта на серверах клиентского доступа.
@@ -139,11 +155,15 @@ _**Последнее изменение раздела:** 2014-12-16_
 
 Для настройки интервала повторной отправки сообщения введите команду в следующем формате.
 
-    Set-TransportService <ServerIdentity> -MessageRetryInterval <dd.hh:mm:ss>
+```powershell
+Set-TransportService <ServerIdentity> -MessageRetryInterval <dd.hh:mm:ss>
+```
 
 В этом примере интервал повторной отправки сообщения на сервере почтовых ящиков с именем Mailbox01 меняется на значение 20 минут.
 
-    Set-TransportService Mailbox01 -MessageRetryInterval 00:20:00
+```powershell
+Set-TransportService Mailbox01 -MessageRetryInterval 00:20:00
+```
 
 ## Настроить время ожидания для уведомления о состоянии задержанной доставки
 
@@ -165,25 +185,35 @@ _**Последнее изменение раздела:** 2014-12-16_
 
 Для настройки интервала повторной отправки сообщения введите команду в следующем формате.
 
-    Set-TransportService <ServerIdentity> -DelayNotificationTimeout <dd.hh:mm:ss>
+```powershell
+Set-TransportService <ServerIdentity> -DelayNotificationTimeout <dd.hh:mm:ss>
+```
 
 В этом примере интервал ожидания уведомления о состоянии задержанной доставки на сервере почтовых ящиков с именем Mailbox01 меняется на значение 6 минут.
 
-    Set-TransportService Mailbox01 -DelayNotificationTimeout 06:00:00
+```powershell
+Set-TransportService Mailbox01 -DelayNotificationTimeout 06:00:00
+```
 
 ## Использовать командную консоль для включения или отключения отправки уведомлений о состоянии задержанной доставки для внешних или внутренних отправителей сообщений
 
 Для настройки уведомлений о состоянии задержанной доставки введите команду в следующем формате.
 
-    Set-TransportConfig -ExternalDelayDSNEnabled <$true | $false> -InternalDelayDSNEnabled <$true |$false>
+```powershell
+Set-TransportConfig -ExternalDelayDSNEnabled <$true | $false> -InternalDelayDSNEnabled <$true |$false>
+```
 
 В этом примере запрещается отправка уведомлений о состоянии задержанной доставки внешним отправителям.
 
-    Set-TransportConfig -ExternalDelayDSNEnabled $false
+```powershell
+Set-TransportConfig -ExternalDelayDSNEnabled $false
+```
 
 В этом примере запрещается отправка уведомлений о состоянии задержанной доставки внутренним отправителям.
 
-    Set-TransportConfig -InternalDelayDSNEnabled $false
+```powershell
+Set-TransportConfig -InternalDelayDSNEnabled $false
+```
 
 ## Настроить интервал срока действия сообщений
 
@@ -199,9 +229,13 @@ _**Последнее изменение раздела:** 2014-12-16_
 
 Чтобы настроить интервал срока действия сообщения введите команду в следующем формате.
 
-    Set-TransportService <ServerIdentity> -MessageExpirationTimeout <dd.hh:mm:ss>
+```powershell
+Set-TransportService <ServerIdentity> -MessageExpirationTimeout <dd.hh:mm:ss>
+```
 
 В этом примере на сервере Exchange с именем Mailbox01 интервал срока действия сообщения меняется на 4 дня.
 
-    Set-TransportService Mailbox01 -MessageExpirationTimeout 4.00:00:00
+```powershell
+Set-TransportService Mailbox01 -MessageExpirationTimeout 4.00:00:00
+```
 

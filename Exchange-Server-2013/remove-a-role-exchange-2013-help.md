@@ -43,11 +43,15 @@ _**Последнее изменение раздела:** 2012-10-03_
 
 Чтобы удалить роль без дочерних ролей, используйте следующую синтаксическую конструкцию.
 
-    Remove-ManagementRole <role name>
+```powershell
+Remove-ManagementRole <role name>
+```
 
 В этом примере показано, как удалить роль администраторов сервера в Сиэтле.
 
-    Remove-ManagementRole "Seattle Server Administrators"
+```powershell
+Remove-ManagementRole "Seattle Server Administrators"
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Remove-ManagementRole](https://technet.microsoft.com/ru-ru/library/dd351170\(v=exchg.150\)).
 
@@ -61,13 +65,17 @@ _**Последнее изменение раздела:** 2012-10-03_
 
 Чтобы убедиться, что будут удалены только те роли, которые необходимо удалить, используйте с командой параметр *WhatIf*, позволяющий проверить ее правильность. Используйте следующий синтаксис.
 
-    Remove-ManagementRole <role name> -Recurse -WhatIf
+```powershell
+Remove-ManagementRole <role name> -Recurse -WhatIf
+```
 
 При использовании параметра *WhatIf* команда выполняется без фиксации каких-либо изменений и при этом сообщается о тех ролях, которые были бы удалены. Дополнительные сведения о параметре *WhatIf* см. в разделе [Параметры WhatIf, Confirm и ValidateOnly](whatif-confirm-and-validateonly-switches-exchange-2013-help.md).
 
 После подтверждения правильности выбора ролей, которые необходимо удалить, выполните ту же команду без параметра *WhatIf*. В этом примере показано, как удалить роль администраторов в Лондоне и всех ее дочерних ролей.
 
-    Remove-ManagementRole "London Administrators" -Recurse
+```powershell
+Remove-ManagementRole "London Administrators" -Recurse
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Remove-ManagementRole](https://technet.microsoft.com/ru-ru/library/dd351170\(v=exchg.150\)).
 
@@ -75,7 +83,9 @@ _**Последнее изменение раздела:** 2012-10-03_
 
 Чтобы удалить роль управления с незаданной областью, можно использовать процедуры, которые описаны в этом разделе в подразделах Удаление роли управления без дочерних ролей и Удаление роли управления с дочерними ролями. Единственное отличие заключается в том, что при удалении роли с незаданной областью при запуске команды необходимо задать параметр *UnScopedTopLevel*. В этом примере показано, как удалить роль с незаданной областью и все ее дочерние роли.
 
-    Remove-ManagementRole "Custom IT Scripts" -Recurse -UnScopedTopLevel
+```powershell
+Remove-ManagementRole "Custom IT Scripts" -Recurse -UnScopedTopLevel
+```
 
 При удалении других ролей необходимо использовать параметр *WhatIf*, чтобы проверить правильность выбора ролей для удаления.
 

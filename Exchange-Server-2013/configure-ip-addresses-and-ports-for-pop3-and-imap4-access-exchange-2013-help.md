@@ -69,11 +69,15 @@ _**Последнее изменение раздела:** 2012-11-28_
 
 Чтобы задать IP-адрес и порт для связи с Exchange по протоколу POP3 с SSL, выполните следующую команду.
 
-    Set-PopSettings -SSLBindings: IPaddress:Port
+```powershell
+Set-PopSettings -SSLBindings: IPaddress:Port
+```
 
 Чтобы задать IP-адрес и порт для связи с Exchange по протоколу POP3 без шифрования или с шифрованием TLS, выполните следующую команду.
 
-    Set-PopSettings -UnencryptedOrTLSBindings IPaddress:Port
+```powershell
+Set-PopSettings -UnencryptedOrTLSBindings IPaddress:Port
+```
 
 После установки IP-адреса и порта для протокола POP3 необходимо перезапустить службу POP3, чтобы изменения вступили в силу. Дополнительные сведения о перезапуске службы POP3 см. в разделе [Запуск и остановка служб POP3](start-and-stop-the-pop3-services-exchange-2013-help.md).
 
@@ -85,7 +89,9 @@ _**Последнее изменение раздела:** 2012-11-28_
 
 1.  Выполните в командной консоли следующую команду.
     
-        Get-PopSettings | format-list
+    ```powershell
+    Get-PopSettings | format-list
+    ```
 
 2.  Убедитесь, что параметры *UnencryptedOrTLSBindings* и *SSLBindings* указаны правильно.
 
@@ -119,11 +125,15 @@ _**Последнее изменение раздела:** 2012-11-28_
 
 Чтобы задать IP-адрес и порт для связи с Exchange по протоколу IMAP4, выполните следующую команду.
 
-    Set-ImapSettings -SSLBindings: IPaddress:Port
+```powershell
+Set-ImapSettings -SSLBindings: IPaddress:Port
+```
 
 Чтобы задать IP-адрес и порт для связи с Exchange по протоколу IMAP4 без шифрования или с шифрованием TLS, выполните следующую команду.
 
-    Set-ImapSettings -UnencryptedOrTLSBindings IPaddress:Port 
+```powershell
+Set-ImapSettings -UnencryptedOrTLSBindings IPaddress:Port 
+```
 
 После установки IP-адреса и порта для протокола IMAP4 необходимо перезапустить службу IMAP4, чтобы изменения вступили в силу. Дополнительные сведения о перезапуске службы IMAP4 приведены в разделе [Запуск и остановка служб IMAP4](start-and-stop-the-imap4-services-exchange-2013-help.md).
 
@@ -135,7 +145,9 @@ _**Последнее изменение раздела:** 2012-11-28_
 
 1.  Выполните в командной консоли следующую команду.
     
-        Get-ImapSettings | format-list
+    ```powershell
+    Get-ImapSettings | format-list
+    ```
 
 2.  Убедитесь, что параметры *UnencryptedOrTLSBindings* и *SSLBindings* указаны правильно.
 

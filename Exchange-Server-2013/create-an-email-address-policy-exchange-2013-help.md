@@ -149,8 +149,8 @@ _**Последнее изменение раздела:** 2012-12-10_
 ## Создание политики адресов электронной почты с помощью командной консоли
 
 В этом примере создается политика адресов электронной почты, которая включает пользователей почтовых ящиков в юго-восточных представительствах, электронные адреса которых содержат их фамилии и первые две буквы имени.
-
+```powershell
     New-EmailAddressPolicy -Name "southeast offices" -IncludedRecipients MailboxUsers -ConditionalStateorProvince "Georgia","Alabama","Louisiana" -EnabledEmailAddressTemplates "SMTP:%s%2g@southeast.contoso.com"
-
+```
 Дополнительные сведения о синтаксисе и параметрах см. в статье [New-EmailAddressPolicy](https://technet.microsoft.com/ru-ru/library/aa996800\(v=exchg.150\)).
 

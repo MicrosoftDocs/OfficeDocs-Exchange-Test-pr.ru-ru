@@ -59,31 +59,37 @@ _**Последнее изменение раздела:** 2014-12-16_
 
 1.  В окне командной строки откройте файл EdgeTransport.exe.config в Блокноте, выполнив следующую команду:
     
-        Notepad %ExchangeInstallPath%Bin\EdgeTransport.exe.config
+    ```powershell
+	Notepad %ExchangeInstallPath%Bin\EdgeTransport.exe.config
+	```
 
 2.  Добавьте один или оба следующих ключа в раздел `<appSettings>`.
-    
+    ```powershell
         <add key="QueueLoggingThreshold" value="<integer>" />
         <add key="QueueLoggingInterval" value="<hh:mm:ss>" />
-    
+    ```
     Например, чтобы задать для параметра **QueueLoggingThreshold** значение 1, а для **QueueLoggingInterval** — 30 секунд, используйте следующие значения:
-    
+    ```powershell
         <add key="QueueLoggingThreshold" value="1" />
         <add key="QueueLoggingInterval" value="00:00:30" />
-
+	```
 3.  Закончив, сохраните и закройте файл EdgeTransport.exe.config.
 
 4.  Перезапустите службу транспорта Microsoft Exchange, выполнив следующую команду:
-    
+    ```powershell
         net stop MSExchangeTransport && net start MSExchangeTransport
-
+	```
 5.  Чтобы изменить значение параметра *QueueDiagnosticsAggregationInterval* в командной консоли Exchange, используйте следующий синтаксис:
     
-        Set-TransportConfig -QueueDiagnosticsAggregationInterval <hh:mm:ss>
+    ```powershell
+	Set-TransportConfig -QueueDiagnosticsAggregationInterval <hh:mm:ss>
+	```
     
     Например, чтобы изменить значение на 30 секунд, выполните следующую команду:
     
-        Set-TransportConfig -QueueDiagnosticsAggregationInterval 00:00:30
+    ```powershell
+	Set-TransportConfig -QueueDiagnosticsAggregationInterval 00:00:30
+	```
 
 ## Как проверить, что все получилось?
 
@@ -92,6 +98,6 @@ _**Последнее изменение раздела:** 2014-12-16_
 1.  Проверьте значения ключей **QueueLoggingThreshold** и **QueueLoggingInterval** в файле EdgeTransport.exe.config. Если ключи отсутствуют, используются значения по умолчанию.
 
 2.  Проверьте значение параметра *QueueDiagnosticsAggregationInterval*, выполнив следующую команду:
-    
+    ```powershell
         Get-TransportConfig | Format-List *queue*
-
+	```

@@ -178,8 +178,10 @@ _**Последнее изменение раздела:** 2017-05-10_
     
     Например, чтобы настроить виртуальный каталог MAPI по умолчанию на локальном сервере Exchange путем задания для внутреннего URL-адреса значения https://contoso.com/mapi, а также установить метод проверки подлинности `Negotiate`, выполните приведенную ниже команду.
     
+    ```powershell
         Set-MapiVirtualDirectory -Identity "Contoso\mapi (Default Web Site)" -InternalUrl https://Contoso.com/mapi -IISAuthenticationMethods Negotiate
-
+    ```
+    
 2.  **Конфигурация сертификата**. Цифровой сертификат, который используется в среде Exchange, должен включать те же значения *InternalURL* и *ExternalURL*, которые определены в виртуальном каталоге MAPI. Дополнительные сведения об управлении сертификатами Exchange 2013 см. в разделе [Цифровые сертификаты и протокол SSL](digital-certificates-and-ssl-exchange-2013-help.md). Убедитесь, что сертификат Exchange является доверенным на клиентской рабочей станции Outlook. Также убедитесь в отсутствии ошибок сертификата, особенно если вы получаете доступ к URL-адресам, настроенным в виртуальном каталоге MAPI.
 
 3.  **Обновление правил сервера**. Убедитесь, что ваши подсистемы балансировки нагрузки, обратные прокси-серверы и брандмауэры разрешают доступ к виртуальному каталогу протокола MAPI через HTTP.
@@ -188,7 +190,9 @@ _**Последнее изменение раздела:** 2017-05-10_
     
     Выполните приведенную ниже команду.
     
-        Set-OrganizationConfig -MapiHttpEnabled $true
+    ```powershell
+	Set-OrganizationConfig -MapiHttpEnabled $true
+	```
 
 ## Проверка подключений MAPI через HTTP
 
@@ -196,14 +200,16 @@ _**Последнее изменение раздела:** 2017-05-10_
 
 В примере ниже проверяется подключение MAPI через HTTP от сервера Exchange с именем ContosoMail.
 
-    Test-OutlookConnectivity -RunFromServerId ContosoMail -ProbeIdentity OutlookMapiHttpSelfTestProbe
+```powershell
+Test-OutlookConnectivity -RunFromServerId ContosoMail -ProbeIdentity OutlookMapiHttpSelfTestProbe
+```
 
 При успешной проверке возвращаются результаты, похожие на приведенный ниже пример.
-
+```powershell
     MonitorIdentity                                          StartTime              EndTime                Result      Error     Exception
     ---------------                                          ---------              -------                ------      -----     ---------
     OutlookMapiHttp.Protocol\OutlookMapiHttpSelfTestProbe    2/14/2014 7:15:00 AM   2/14/2014 7:15:10 AM   Succeeded
-
+```
 Дополнительные сведения см. в разделе [Test-OutlookConnectivity](https://technet.microsoft.com/ru-ru/library/dd638082\(v=exchg.150\)).
 
 Журналы действий MAPI через HTTP находятся в указанных ниже папках.

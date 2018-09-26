@@ -43,7 +43,9 @@ _**Последнее изменение раздела:** 2012-10-12_
 
 В этом примере выполняется активация управления правами на доступ к данным для внутренних сообщений организации Exchange.
 
-    Set-IRMConfiguration -InternalLicensingEnabled $true
+```powershell
+Set-IRMConfiguration -InternalLicensingEnabled $true
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Set-IRMConfiguration](https://technet.microsoft.com/ru-ru/library/dd979792\(v=exchg.150\)).
 
@@ -51,7 +53,9 @@ _**Последнее изменение раздела:** 2012-10-12_
 
 В этом примере выполняется отключение управления правами на доступ к данным для внутренних сообщений в организации Exchange.
 
-    Set-IRMConfiguration -InternalLicensingEnabled $false
+```powershell
+Set-IRMConfiguration -InternalLicensingEnabled $false
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Set-IRMConfiguration](https://technet.microsoft.com/ru-ru/library/dd979792\(v=exchg.150\)).
 

@@ -64,7 +64,9 @@ _**Последнее изменение раздела:** 2016-08-22_
 
 В данном примере показана настройка URL-адреса веб-прокси на сервере почтовых ящиков MAIL01.
 
-    Set-ExchangeServer -Identity "MAIL01" -InternetWebProxy "<Webproxy URL>"
+```powershell
+Set-ExchangeServer -Identity "MAIL01" -InternetWebProxy "<Webproxy URL>"
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Set-ExchangeServer](https://technet.microsoft.com/ru-ru/library/bb123716\(v=exchg.150\)).
 
@@ -72,7 +74,9 @@ _**Последнее изменение раздела:** 2016-08-22_
 
 Чтобы убедиться, что URL-адрес веб-прокси успешно настроен, выполните следующую команду в консоли и проверьте параметр *InternetWebProxy*.
 
-    Get-ExchangeServer | format-list
+```powershell
+Get-ExchangeServer | format-list
+```
 
 ## Действие 2. Использование командной консоли для включения виртуального каталога публикации
 
@@ -81,9 +85,9 @@ _**Последнее изменение раздела:** 2016-08-22_
 
 
 В данном примере показано включение виртуального каталога публикации на сервере клиентского доступа CAS01.
-
+```powershell
     Set-OwaVirtualDirectory -Identity "CAS01\owa (Default Web Site)" -ExternalUrl "<URL for CAS01>" -CalendarEnabled $true
-
+```
 Где идентификатор `CAS01\owa (Default Web Site)` — это имя сервера и виртуальный каталог Outlook Web App.
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Set-OwaVirtualDirectory](https://technet.microsoft.com/ru-ru/library/bb123515\(v=exchg.150\)).
@@ -92,7 +96,9 @@ _**Последнее изменение раздела:** 2016-08-22_
 
 Чтобы убедиться, что публикация виртуального каталога успешно включена, выполните следующую команду в консоли и проверьте параметр *ExternalURL*.
 
-    Get-OwaVirtualDirectory | format-list
+```powershell
+Get-OwaVirtualDirectory | format-list
+```
 
 ## Действие 3. Создание или настройка политики общего доступа специально для публикации календарей в Интернете
 
@@ -134,15 +140,21 @@ _**Последнее изменение раздела:** 2016-08-22_
 
 В данном примере показано создание политики общего доступа для публикации интернет-календарей и настройка этой политики для обеспечения общего доступа только к данным о доступности. Политика включена.
 
+```powershell
     New-SharingPolicy -Name "Internet" -Domains 'Anonymous: CalendarSharingFreeBusySimple' -Enabled $true
+```
 
 В данном примере показано добавление политики общего доступа для почтового ящика пользователя.
 
-    Set-Mailbox -Identity <user name> -SharingPolicy "Internet"
+```powershell
+Set-Mailbox -Identity <user name> -SharingPolicy "Internet"
+```
 
 В данном примере показано добавление политики общего доступа для подразделения.
 
-    Set-Mailbox -OrganizationalUnit <OU name> -SharingPolicy "Internet"
+```powershell
+Set-Mailbox -OrganizationalUnit <OU name> -SharingPolicy "Internet"
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделах [New-SharingPolicy](https://technet.microsoft.com/ru-ru/library/dd298186\(v=exchg.150\)) и [Set-Mailbox](https://technet.microsoft.com/ru-ru/library/bb123981\(v=exchg.150\)).
 
@@ -150,7 +162,9 @@ _**Последнее изменение раздела:** 2016-08-22_
 
 Чтобы получить другое подтверждение успешного создания политики общего доступа, в командной консоли выполните следующую команду и просмотрите информацию о политике общего доступа.
 
-    Get-SharingPolicy <policy name> | format-list
+```powershell
+Get-SharingPolicy <policy name> | format-list
+```
 
 ## Вариант 2. Настройка политики общего доступа для публикации календарей в Интернете
 
@@ -182,7 +196,9 @@ _**Последнее изменение раздела:** 2016-08-22_
 
 В этом примере изменяется политика общего доступа по умолчанию, а также проводится настройка политики для общего доступа только к сведениям о доступности. Политика включена.
 
+```powershell
     Set-SharingPolicy -Name "Default Sharing Policy" -Domains 'Anonymous: CalendarSharingFreeBusySimple' -Enabled $true
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Set-Mailbox](https://technet.microsoft.com/ru-ru/library/bb123981\(v=exchg.150\)).
 
@@ -190,5 +206,7 @@ _**Последнее изменение раздела:** 2016-08-22_
 
 Чтобы получить другое подтверждение успешного изменения политики общего доступа по умолчанию, в командной консоли выполните следующую команду и просмотрите информацию о политике общего доступа.
 
-    Get-SharingPolicy <policy name> | format-list
+```powershell
+Get-SharingPolicy <policy name> | format-list
+```
 

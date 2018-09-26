@@ -38,10 +38,10 @@ _**Последнее изменение раздела:** 2012-11-27_
 ## Использование командной консоли для включения ведения журнала для протоколов POP3 или IMAP4
 
 В этом примере выполняется включение ведения журнала для протоколов IMAP4 или POP3 на сервере клиентского доступа CAS01.
-
+```powershell
     Set-ImapSettings -Server "CAS01" -ProtocolLogEnabled $true
     Set-PopSettings -Server "CAS01" -ProtocolLogEnabled $true
-
+```
 > [!NOTE]  
 > После изменения параметров ведения журнала протокола для POP3 или IMAP4 необходимо перезапустить используемые службы: POP3 или IMAP4. Дополнительные сведения о перезапуске служб POP3 и IMAP4 см. в разделах <a href="start-and-stop-the-pop3-services-exchange-2013-help.md">Запуск и остановка служб POP3</a> и <a href="start-and-stop-the-imap4-services-exchange-2013-help.md">Запуск и остановка служб IMAP4</a>.
 
@@ -51,10 +51,10 @@ _**Последнее изменение раздела:** 2012-11-27_
 ## Использование командной консоли Exchange для отключения ведения журнала для протоколов POP3 или IMAP4
 
 В этом примере выполняется отключение ведения журнала для протоколов IMAP4 или POP3 на сервере клиентского доступа CAS01.
-
+```powershell
     Set-ImapSettings -Server "CAS01" -protocolLogEnabled $false
     Set-PopSettings -Server "CAS01" -protocolLogEnabled $false
-
+```
 > [!NOTE]  
 > После изменения параметров ведения журнала протокола для POP3 или IMAP4 необходимо перезапустить используемые службы: POP3 или IMAP4. Дополнительные сведения о перезапуске служб POP3 и IMAP4 см. в разделах <a href="start-and-stop-the-pop3-services-exchange-2013-help.md">Запуск и остановка служб POP3</a> и <a href="start-and-stop-the-imap4-services-exchange-2013-help.md">Запуск и остановка служб IMAP4</a>.
 
@@ -67,7 +67,9 @@ _**Последнее изменение раздела:** 2012-11-27_
 
   - *LogFileLocation*   Этот параметр указывает расположение файлов журнала протокола POP3 или IMAP4. По умолчанию файлы журнала протокола POP3 расположены в каталоге C:\\Program Files\\Microsoft\\Exchange Server\\V15\\Logging\\Pop3. В этом примере выполняется включение ведения журнала для протокола POP3 на сервере клиентского доступа CAS01. В нем также задается каталог журнала протокола POP3: C:\\Pop3Logging.
     
-        Set-PopSettings -Server "CAS01" -ProtocolLogEnabled $true -LogFileLocation "C:\Pop3Logging"
+    ```powershell
+	Set-PopSettings -Server "CAS01" -ProtocolLogEnabled $true -LogFileLocation "C:\Pop3Logging"
+	```
 
   - *LogFileRollOverSettings*   Этот параметр определяет, как часто в ходе ведения журнала протокола POP3 или IMAP4 создаются новые файлы журналов. По умолчанию новый файл журнала создается каждый день. Возможные значения:
     
@@ -81,17 +83,23 @@ _**Последнее изменение раздела:** 2012-11-27_
     
     Этот параметр применяется, только если параметр *LogPerFileSizeQuota* имеет нулевое значение. В этом примере параметры ведения журнала для протокола POP3 на сервере клиентского доступа CAS01 изменяются таким образом, чтобы новый файл журнала создавался каждый час.
     
-        Set-PopSettings -Server "CAS01" -LogPerFileSizeQuota 0 -LogFileRollOverSettings Hourly
+    ```powershell
+	Set-PopSettings -Server "CAS01" -LogPerFileSizeQuota 0 -LogFileRollOverSettings Hourly
+	```
 
   - *LogPerFileSizeQuota*   Этот параметр указывает максимальный размер файла журнала протокола POP3 или IMAP4 в байтах. По умолчанию для этого параметра установлено нулевое значение. Если значение равно нулю, то новые файлы журнала протокола создаются с частотой, заданной параметром *LogFileRollOverSettings*.
     
     В этом примере параметры ведения журнала для протокола POP3 на сервере клиентского доступа CAS01 изменяются таким образом, чтобы новый файл журнала создавался при достижении предыдущим файлом размера 2 МБ.
     
-        Set-PopSettings -Server "CAS01" -LogPerFileSizeQuota 2000000
+    ```powershell
+	Set-PopSettings -Server "CAS01" -LogPerFileSizeQuota 2000000
+	```
     
     В этом примере параметры ведения журнала для протокола POP3 на сервере клиентского доступа CAS01 изменяются таким образом, чтобы использовался тот же файл журнала независимо от его размера и даты создания.
     
-        Set-PopSettings -Server "CAS01" -LogPerFileSizeQuota unlimited
+    ```powershell
+	Set-PopSettings -Server "CAS01" -LogPerFileSizeQuota unlimited
+	```
 
 > [!NOTE]  
 > После изменения параметров ведения журнала протокола для POP3 или IMAP4 необходимо перезапустить используемые службы: POP3 или IMAP4. Дополнительные сведения о перезапуске служб POP3 и IMAP4 см. в разделах <a href="start-and-stop-the-pop3-services-exchange-2013-help.md">Запуск и остановка служб POP3</a> и <a href="start-and-stop-the-imap4-services-exchange-2013-help.md">Запуск и остановка служб IMAP4</a>.
@@ -103,11 +111,15 @@ _**Последнее изменение раздела:** 2012-11-27_
 
 Выполните следующую команду в командной консоли, чтобы проверить параметры ведения журнала протокола POP3. Если ведение журнала протокола POP3 включено, для параметра *ProtocolLogEnabled* устанавливается значение `True`. Если ведение журнала протокола POP3 отключено, устанавливается значение `False`. Также можно убедиться в правильности значений параметров *LogFileLocation*, *LogPerFileSizeQuota* и *LogFileRollOverSettings*.
 
-    Get-PopSettings | format-list
+```powershell
+Get-PopSettings | format-list
+```
 
 Выполните следующую команду в командной консоли, чтобы проверить параметры ведения журнала протокола IMAP4. Если ведение журнала протокола IMAP4 включено, для параметра *ProtocolLogEnabled* устанавливается значение `True`. Если ведение журнала протокола IMAP4 отключено, устанавливается значение `False`. Также можно убедиться в правильности значений параметров *LogFileLocation*, *LogPerFileSizeQuota* и *LogFileRollOverSettings*.
 
-    Get-ImapSettings | format-list
+```powershell
+Get-ImapSettings | format-list
+```
 
 ## Дополнительные сведения
 

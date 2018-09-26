@@ -47,11 +47,15 @@ _**Последнее изменение раздела:** 2013-02-19_
 
 Чтобы настроить транспортную службу на сервере почтовых ящиков для использования упрощенной проверки подлинности на сервере Exchange, выполните следующую команду.
 
-    Set-TransportService <ServerIdentity> -UseDowngradedExchangeServerAuth $true
+```powershell
+Set-TransportService <ServerIdentity> -UseDowngradedExchangeServerAuth $true
+```
 
 В этом примере показано, как изменить параметры для сервера с именем Mailbox01.
 
-    Set-TransportService Mailbox01 -UseDowngradedExchangeServerAuth $true
+```powershell
+Set-TransportService Mailbox01 -UseDowngradedExchangeServerAuth $true
+```
 
 ## Действие 2. Создание выделенного соединителя получения на сервере почтовых ящиков для целевого сайта Active Directory
 
@@ -72,9 +76,9 @@ _**Последнее изменение раздела:** 2013-02-19_
 ## Использование командной консоли для создания соединителя получения
 
 Чтобы создать соединитель получения на сервере почтовых ящиков, выполните следующую команду.
-
+```powershell
     New-ReceiveConnector -Name <Name> -Server <ServerIdentity> -RemoteIPRanges <IPAddressRange> -Internal
-
+```
 В этом примере показано, как создать соединитель получения с именем WAN на сервере с именем Mailbox01 со следующими параметрами.
 
   - Параметр *RemoteIPRanges* имеет значение 10.0.2.0/24. Этот диапазон IP-адресов должен соответствовать удаленному сайту Active Directory, с которого создаваемый соединитель получения будет получать незашифрованные подключения. Если на удаленном сайте имеется несколько IP-подсетей, можно ввести их все, разделяя запятыми.
@@ -83,39 +87,53 @@ _**Последнее изменение раздела:** 2013-02-19_
 
 <!-- end list -->
 
-    New-ReceiveConnector -Name WAN -Server Hub01 -RemoteIPRanges 10.0.2.0/24 -Internal
+```powershell
+New-ReceiveConnector -Name WAN -Server Hub01 -RemoteIPRanges 10.0.2.0/24 -Internal
+```
 
 ## Действие 3. Отключение протокола TLS на выделенном соединителе получения с помощью командной консоли
 
 Чтобы отключить протокол TLS на соединителе получения, выполните следующую команду.
 
-    Set-ReceiveConnector <ReceiveConnectorIdentity> -SuppressXAnonymousTLS $true
+```powershell
+Set-ReceiveConnector <ReceiveConnectorIdentity> -SuppressXAnonymousTLS $true
+```
 
 В этом примере показано, как отключить протокол TLS на соединителе получения с именем WAN на сервере почтовых ящиков с именем Mailbox01.
 
-    Set-ReceiveConnector Mailbox01\WAN -SuppressXAnonymousTLS $true
+```powershell
+Set-ReceiveConnector Mailbox01\WAN -SuppressXAnonymousTLS $true
+```
 
 ## Действие 4. Настройка сайтов Active Directory в качестве узловых сайтов с помощью командной консоли
 
 Чтобы настроить сайт Active Directory в качестве узлового сайта, выполните следующую команду.
 
-    Set-AdSite <ADSiteIdentity> -HubSiteEnabled $true
+```powershell
+Set-AdSite <ADSiteIdentity> -HubSiteEnabled $true
+```
 
 Необходимо выполнить эту процедуру один раз для каждого сайта Active Directory, имеющего серверы почтовых ящиков, обрабатывающие незашифрованный трафик.
 
 В этом примере показано, как настроить сайт Active Directory с именем Сайт центрального офиса 1 в качестве узлового сайта.
 
-    Set-AdSite "Central Office Site 1" -HubSiteEnabled $true
+```powershell
+Set-AdSite "Central Office Site 1" -HubSiteEnabled $true
+```
 
 ## Действие 5. Использование командной консоли для настройки пути маршрутизации по принципу наименьших затрат через подключение к глобальной сети
 
 В зависимости от того, как в Active Directory настроены затраты связей IP-сайтов, этот шаг может и не понадобиться. Необходимо проверить, что сетевое соединение с развернутыми устройствами WOC находится в пути маршрутизации с наименьшими затратами. Чтобы просмотреть затраты связей сайта Active Directory и затраты связей сайта, относящегося к Exchange, выполните следующую команду.
 
-    Get-AdSiteLink
+```powershell
+Get-AdSiteLink
+```
 
 Если сетевое соединение с развернутыми устройствами WOC не находится в пути маршрутизации с наименьшими затратами, необходимо определенной связи IP-сайта назначить затраты, относящиеся к Exchange, чтобы маршрутизация сообщений выполнялась правильно. Дополнительные сведения об этой проблеме см. в статье "Настройка затрат связей сайта Active Directory, относящегося к Exchange" в разделе [Сценарий. Настройка Exchange для поддержки контроллеров оптимизации глобальной сети](scenario-configure-exchange-to-support-wan-optimization-controllers-exchange-2013-help.md).
 
 В этом примере показано, как задать значение затрат, относящихся к Exchange, равное 15 для связи IP-сайта с именем Филиал 2 — Филиал 1.
 
-    Set-AdSiteLink "Branch Office 2-Branch Office 1" -ExchangeCost 15
+```powershell
+Set-AdSiteLink "Branch Office 2-Branch Office 1" -ExchangeCost 15
+```
 

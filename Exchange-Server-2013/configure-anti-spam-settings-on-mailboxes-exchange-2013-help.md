@@ -47,11 +47,15 @@ _**Последнее изменение раздела:** 2016-11-17_
 
 Чтобы настроить все параметры защиты от нежелательной почты для почтового ящика, используйте следующий синтаксис.
 
-    Set-Mailbox <MailboxIdentity> -AntispamBypassEnabled <$true | $false> -RequireSenderAuthenticationEnabled <$true | $false> -SCLDeleteEnabled <$true | $false | $null> -SCLDeleteThreshold <0-9 | $null> -SCLJunkEnabled <$true | $false | $null > -SCLJunkThreshold <0-9 | $null> -SCLQuarantineEnabled <$true | $false | $null > -SCLQuarantineThreshold <0-9 | $null> -SCLRejectEnabled <$true | $false | $null > -SCLRejectThreshold <0-9 | $null>
+```powershell
+Set-Mailbox <MailboxIdentity> -AntispamBypassEnabled <$true | $false> -RequireSenderAuthenticationEnabled <$true | $false> -SCLDeleteEnabled <$true | $false | $null> -SCLDeleteThreshold <0-9 | $null> -SCLJunkEnabled <$true | $false | $null > -SCLJunkThreshold <0-9 | $null> -SCLQuarantineEnabled <$true | $false | $null > -SCLQuarantineThreshold <0-9 | $null> -SCLRejectEnabled <$true | $false | $null > -SCLRejectThreshold <0-9 | $null>
+```
 
 В этом примере в почтовом ящике пользователя с именем Jeff Phillips настраивается обход фильтров защиты от нежелательной почты и включается пересылка почтовых сообщений с порогом вероятности нежелательной почты не менее 5 из папки нежелательной почты в Microsoft Outlook.
 
-    Set-Mailbox "Jeff Phillips" -AntispamBypassEnabled $true -SCLJunkEnabled $true -SCLJunkThreshold 4
+```powershell
+Set-Mailbox "Jeff Phillips" -AntispamBypassEnabled $true -SCLJunkEnabled $true -SCLJunkThreshold 4
+```
 
 ## Как проверить, что все получилось?
 
@@ -59,7 +63,9 @@ _**Последнее изменение раздела:** 2016-11-17_
 
 1.  Выполните следующую команду:
     
-        Get-Mailbox <MailboxIdentity> | Format-List SCL*,Bypass*,*SenderAuth*
+    ```powershell
+    Get-Mailbox <MailboxIdentity> | Format-List SCL*,Bypass*,*SenderAuth*
+    ```
 
 2.  Убедитесь, что отображается значение, которое вы настроили.
 
@@ -67,11 +73,15 @@ _**Последнее изменение раздела:** 2016-11-17_
 
 Чтобы настроить все параметры защиты от нежелательной почты для почтового ящика, используйте следующий синтаксис.
 
-    Get-Mailbox [<Filter>]| Set-Mailbox <Anti-Spam Settings>
+```powershell
+Get-Mailbox [<Filter>]| Set-Mailbox <Anti-Spam Settings>
+```
 
 В этом примере выполняется установка значения 7 в качестве порогового уровня вероятности нежелательной почты для перемещения в карантин для всех почтовых ящиков контейнера "Пользователи" в домене Contoso.com.
 
-    Get-Mailbox -OrganizationalUnit Contoso.com/Users | Set-Mailbox -SCLQuarantineEnabled $true -SCLQuarantineThreshold 7
+```powershell
+Get-Mailbox -OrganizationalUnit Contoso.com/Users | Set-Mailbox -SCLQuarantineEnabled $true -SCLQuarantineThreshold 7
+```
 
 ## Как проверить, что все получилось?
 
@@ -79,7 +89,9 @@ _**Последнее изменение раздела:** 2016-11-17_
 
 1.  Выполните следующую команду:
     
-        Get-Mailbox [<Filter>] | Format-List Name,SCL*,*SenderAuth*
+    ```powershell
+    Get-Mailbox [<Filter>] | Format-List Name,SCL*,*SenderAuth*
+    ```
 
 2.  Убедитесь, что отображаются значения, которые вы настроили.
 
@@ -87,11 +99,15 @@ _**Последнее изменение раздела:** 2016-11-17_
 
 Выполните следующую команду:
 
-    Set-OrganizationConfig -SCLJunkThreshold <Integer>
+```powershell
+Set-OrganizationConfig -SCLJunkThreshold <Integer>
+```
 
 В этом примере выполняется установка порогового значения нежелательной почты, равного 5, для всей организации.
 
-    Set-OrganizationConfig -SCLJunkThreshold 5
+```powershell
+Set-OrganizationConfig -SCLJunkThreshold 5
+```
 
 ## Как проверить, что все получилось?
 
@@ -99,7 +115,9 @@ _**Последнее изменение раздела:** 2016-11-17_
 
 1.  Выполните следующую команду:
     
-        Get-OrganizationConfig | Format-List SCLJunkThreshold
+    ```powershell
+    Get-OrganizationConfig | Format-List SCLJunkThreshold
+    ```
 
 2.  Убедитесь, что отображается значение, которое вы настроили.
 

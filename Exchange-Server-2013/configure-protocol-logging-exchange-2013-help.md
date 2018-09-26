@@ -86,12 +86,14 @@ _**Последнее изменение раздела:** 2013-03-15_
 ## Включение или выключение ведения журнала протокола для соединителей отправки и получения с помощью командной консоли
 
 Чтобы включить или выключить ведение журнала протокола для соединителей отправки и получения, выполните следующую команду.
-
+```powershell
     <Set-SendConnector |Set-ReceiveConnector> <ConnectorIdentity> -ProtocolLoggingLevel <Verbose | None>
-
+```
 В этом примере показано, как включить ведение журнала протокола для соединителя получения с именем "Connection from Contoso.com".
 
-    Set-ReceiveConnector "Connection from Contoso.com" -ProtocolLoggingLevel Verbose
+```powershell
+Set-ReceiveConnector "Connection from Contoso.com" -ProtocolLoggingLevel Verbose
+```
 
 ## Как проверить, что все получилось?
 
@@ -99,56 +101,64 @@ _**Последнее изменение раздела:** 2013-03-15_
 
 1.  В командной консоли выполните следующую команду:
     
-        <Get-SendConnector |Get-ReceiveConnector> | Format-List Name,ProtocolLoggingLevel
+    ```command line
+	<Get-SendConnector |Get-ReceiveConnector> | Format-List Name,ProtocolLoggingLevel
+	```
 
 2.  Убедитесь, что отображаются значения, которые вы настроили.
 
 ## Включение или выключение ведения журнала протокола для внутриорганизационного соединителя отправки с помощью командной консоли
 
 Чтобы включить или выключить ведение журнала протокола для неявного и невидимого внутриорганизационного соединителя отправки, расположенного в транспортной службе сервера почтовых ящиков и в транспортной службе переднего плана на сервере клиентского доступа, выполните следующую команду.
-
+```powershell
     <Set-TransportService | Set-FrontEndTransportService> -IntraOrgConnectorProtocolLoggingLevel <Verbose | None>
-
+```
 В этом примере показано, как включить ведение журнала протокола для внутриорганизационного соединителя отправки в транспортной службе на сервере почтовых ящиков с именем Mailbox01.
 
-    Set-TransportService Mailbox01 -IntraOrgConnectorProtocolLoggingLevel Verbose
+```powershell
+Set-TransportService Mailbox01 -IntraOrgConnectorProtocolLoggingLevel Verbose
+```
 
 ## Как проверить, что все получилось?
 
 Чтобы убедиться, что вы успешно включили или выключили ведение журнала протокола для внутриорганизационного соединителя отправки, выполните следующие действия.
 
 1.  В командной консоли выполните следующую команду:
-    
+    ```powershell
         <Get-TransportService | Get-FrontEndTransportService> <ServerIdentity> | Format-List IntraOrgConnectorProtocolLoggingLevel
-
+	```
 2.  Убедитесь, что отображается значение, которое вы настроили.
 
 ## Включение или выключение ведения журнала протокола для соединителя отправки доставки в почтовые ящики с помощью командной консоли
 
 Чтобы включить или выключить ведение журнала протокола для неявного и невидимого соединителя отправки электронной почты, расположенного в транспортной службе почтовых ящиков на сервере почтовых ящиков, выполните следующую команду.
 
-    Set-MailboxTransportService -MailboxDeliveryConnectorProtocolLoggingLevel <Verbose | None>
+```powershell
+Set-MailboxTransportService -MailboxDeliveryConnectorProtocolLoggingLevel <Verbose | None>
+```
 
 В этом примере показано, как включить ведение журнала протокола для соединителя получения доставки в почтовые ящики в транспортной службе почтовых ящиков на сервере почтовых ящиков с именем Mailbox01.
 
-    Set-MailboxTransportService Mailbox01 -MailboxDeliveryConnectorProtocolLoggingLevel Verbose
+```powershell
+Set-MailboxTransportService Mailbox01 -MailboxDeliveryConnectorProtocolLoggingLevel Verbose
+```
 
 ## Как проверить, что все получилось?
 
 Чтобы убедиться, что ведение журнала протокола для соединителя доставки в почтовые ящики включено или выключено успешно, выполните следующие действия.
 
 1.  В командной консоли выполните следующую команду:
-    
+    ```powershell
         Get-MailboxTransportService <ServerIdentity> | Format-List MailboxDeliveryConnectorProtocolLoggingLevel
-
+	```
 2.  Убедитесь, что отображается значение, которое вы настроили.
 
 ## Настройка параметров ведения журнала протокола с помощью командной консоли
 
 Чтобы настроить параметры ведения журнала протокола, выполните следующую команду.
-
+```powershell
     <Set-TransportService | Set-MailboxTransportService | Set-FrontEndTransportService> <ServerIdentity> -ReceiveProtocolLogPath <LocalFilePath> -SendProtocolLogPath <LocalFilePath> -ReceiveProtocolLogMaxFileSize <Size> -SendProtocolLogMaxFileSize <Size> -ReceiveProtocolLogMaxDirectorySize <Size> -SendProtocolLogMaxDirectorySize <Size> -ReceiveProtocolLogMaxAge <dd.hh:mm:ss> -SendProtocolLogMaxAge <dd.hh:mm:ss>
-
+```
 В этом примере показано, как установить следующие параметры журнала протокола в транспортной службе на сервере почтовых ящиков с именем Mailbox01.
 
   -  Местоположение всех журналов протокола соединителя получения установлено на значение D:\\Hub Receive SMTP Log, а местоположение журналов протокола соединителя отправки — на значение D:\\Hub Send SMTP Log. Обратите внимание, что если папка не существует, она будет создана.
@@ -160,9 +170,9 @@ _**Последнее изменение раздела:** 2013-03-15_
   -  Максимальный срок хранения файла журнала протокола соединителей получения и отправки установлен на 45 дней.
 
 <!-- end list -->
-
+```powershell
     Set-TransportService Mailbox01 -ReceiveProtocolLogPath "D:\Hub Receive SMTP Log" -SendProtocolLogPath "D:\Hub Send SMTP Log" -ReceiveProtocolLogMaxFileSize 20MB -SendProtocolLogMaxFileSize 20MB -ReceiveProtocolLogMaxDirectorySize 400MB -SendProtocolLogMaxDirectorySize 400MB -ReceiveProtocolLogMaxAge 45.00:00:00 -SendProtocolLogMaxAge 45.00:00:00
-
+```
 > [!NOTE]  
 > <ul><li><p>Чтобы настроить параметры журнала протокола в транспортной службе почтовых ящиков на сервере почтовых ящиков, используйте командлет <strong>Set-MailboxTransportService</strong>. Чтобы настроить параметры журнала протокола в транспортной службе переднего плана на сервере клиентского доступа, используйте командлет <strong>Set-FrontEndTransportService</strong>.</p></li>
 > <li><p>Если для параметра <em>SendProtocolLogPath</em> или <em>ReceiveProtocolLogPath</em> задано значение <code>$null</code>, то ведение журнала протокола будет отключено для всех соединителей отправки и получения на сервере. Однако установка значения <code>$null</code> для любого из этих параметров при включенном ведении журнала протокола для любых соединителей сервера, в том числе внутриорганизационного соединителя отправки или соединителя отправки доставки в почтовые ящики, приводит к выдаче ошибок журнала событий.</p></li>
@@ -175,8 +185,8 @@ _**Последнее изменение раздела:** 2013-03-15_
 Чтобы убедиться, что параметры журнала протокола настроены правильно, выполните следующие действия.
 
 1.  В командной консоли выполните следующую команду:
-    
+    ```powershell
         <Get-TransportService | Get-MailboxTransportService | Get-FrontEndTransportService> <ServerIdentity> | Format-List SendConnectorProtocolLog*,ReceiveConnectorProtocolLog*
-
+	```
 2.  Убедитесь, что отображаются значения, которые вы настроили.
 

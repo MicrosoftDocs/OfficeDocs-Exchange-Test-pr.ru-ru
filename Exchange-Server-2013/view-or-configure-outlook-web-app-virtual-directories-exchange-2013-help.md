@@ -123,7 +123,9 @@ _**Последнее изменение раздела:** 2013-08-12_
 
 В данном примере включается проверка подлинности на основе форм для виртуального каталога Outlook Web App по умолчанию на сервере Contoso.
 
+```powershell
     set-OwaVirtualDirectory -Identity "Contoso\owa (default web site)" -FormsAuthentication $true
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Set-OwaVirtualDirectory](https://technet.microsoft.com/ru-ru/library/bb123515\(v=exchg.150\)).
 
@@ -131,19 +133,27 @@ _**Последнее изменение раздела:** 2013-08-12_
 
 Данный пример позволяет просматривать свойства для всех виртуальных каталогов Outlook Web App всех веб-сайтов IIS (Internet Information Services) на всех компьютерах с установленной ролью сервера клиентского доступа в Exchange.
 
-    Get-OWAVirtualDirectory
+```powershell
+Get-OWAVirtualDirectory
+```
 
 Данный пример позволяет просмотреть свойства виртуального каталога Outlook Web App на веб-сайте IIS по умолчанию на локальном сервере Exchange.
 
+```powershell
     Get-OWAVirtualDirectory -identity "<Exchange Server Name>\owa (default web site)"
+```
 
 Данный пример позволяет просмотреть свойства всех виртуальных каталогов Outlook Web App на веб-сайте IIS на определенном сервере Exchange.
 
-    Get-OWAVirtualDirectory -server <Exchange Server Name>
+```powershell
+Get-OWAVirtualDirectory -server <Exchange Server Name>
+```
 
 Этот пример позволяет просмотреть значения свойств для всех виртуальных каталогов Outlook Web App всех веб-сайтов IIS на всех серверах клиентского доступа в организации Exchange.
 
-    Get-OWAVirtualDirectory | format-list
+```powershell
+Get-OWAVirtualDirectory | format-list
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Get-OwaVirtualDirectory](https://technet.microsoft.com/ru-ru/library/aa998588\(v=exchg.150\)).
 

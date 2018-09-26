@@ -69,7 +69,9 @@ Multiple namespaces
 
 Для настройки задержки перед возвращением ошибки SMTP `550 5.1.1 User unknown` следует значение интервала задержки нежелательной почты с помощью параметра *TarpitInterval* командлета **Set-ReceiveConnector**. Синтаксис:
 
-    Set-ReceiveConnector <Receive Connector> -TarpitInterval <00:00:00 to 00:10:00>
+```powershell
+Set-ReceiveConnector <Receive Connector> -TarpitInterval <00:00:00 to 00:10:00>
+```
 
 Значение по умолчанию равно `00:00:05` или 5 секундам. Имя соединителя получения на пограничном транспортном сервере по умолчанию — `Default internal receive connector <server name>`.
 

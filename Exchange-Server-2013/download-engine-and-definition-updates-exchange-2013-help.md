@@ -38,17 +38,17 @@ _**Последнее изменение раздела:** 2015-04-08_
 ## Использование командной консоли для ручной загрузки обновления ядра и определений
 
 Чтобы загрузить обновления ядра и определений, выполните следующую команду:
-
+```powershell
     & $env:ExchangeInstallPath\Scripts\Update-MalwareFilteringServer.ps1 -Identity <FQDN of server>
-
+```
 В этом примере вручную загружается обновление ядра и определений на сервере с именем mailbox01.contoso.com:
-
+```powershell
     & $env:ExchangeInstallPath\Scripts\Update-MalwareFilteringServer.ps1 -Identity mailbox01.contoso.com
-
+```
 При необходимости можно указать параметр –EngineUpdatePath, который позволяет загружать обновления из других источников, кроме выбранного по умолчанию http://forefrontdl.microsoft.com/server/scanengineupdate. Это может быть HTTP-адрес или UNC-путь; если указан последний, затем сетевой службе понадобится доступ к пути. В этом примере вручную загружается обновление ядра и определений из локального каталога на сервер с именем mailbox01.contoso.com:
-
+```powershell
     & $env:ExchangeInstallPath\Scripts\Update-MalwareFilteringServer.ps1 -Identity mailbox01.contoso.com -EngineUpdatePath \\Server\sharename
-
+```
 ## Как проверить, что все получилось?
 
 Чтобы убедиться, что обновления успешно загружены, необходимые открыть окно просмотра событий и просмотреть журнал событий. Рекомендуется использовать фильтрацию событий FIPFS, как описано в следующей процедуре.

@@ -95,11 +95,15 @@ _**Последнее изменение раздела:** 2018-01-17_
 
 1.  При отсутствии какого-либо почтового ящика арбитража запустите следующую команду:
     
-        .\Setup /preparead /IAcceptExchangeServerLicenseTerms
+    ```powershell
+    .\Setup /preparead /IAcceptExchangeServerLicenseTerms
+    ```
 
 2.  В командной консоли Exchange запустите следующую команду:
     
-        Enable-Mailbox -Arbitration -Identity "FederatedEmail.4c1f4d8b-8179-4148-93bf-00a95fa1e042"
+    ```powershell
+    Enable-Mailbox -Arbitration -Identity "FederatedEmail.4c1f4d8b-8179-4148-93bf-00a95fa1e042"
+    ```
 
 ## Повторное создание почтового ящика помощника по утверждению Microsoft Exchange
 
@@ -107,11 +111,15 @@ _**Последнее изменение раздела:** 2018-01-17_
 
 1.  При отсутствии какого-либо почтового ящика арбитража запустите следующую команду:
     
-        .\Setup /preparead /IAcceptExchangeServerLicenseTerms
+    ```powershell
+    .\Setup /preparead /IAcceptExchangeServerLicenseTerms
+    ```
 
 2.  В командной консоли Exchange запустите следующую команду:
     
-        Get-User | Where-Object {$_.Name -like "SystemMailbox{1f05a927-7709-4e35-9dbe-d0f608fb781a}"} | Enable-Mailbox -Arbitration
+    ```powershell
+    Get-User | Where-Object {$_.Name -like "SystemMailbox{1f05a927-7709-4e35-9dbe-d0f608fb781a}"} | Enable-Mailbox -Arbitration
+    ```
 
 ## Как повторно создать почтовый ящик миграции в Microsoft Exchange
 
@@ -119,15 +127,21 @@ _**Последнее изменение раздела:** 2018-01-17_
 
 1.  При отсутствии какого-либо почтового ящика арбитража запустите следующую команду:
     
-        .\Setup /preparead /IAcceptExchangeServerLicenseTerms
+    ```powershell
+    .\Setup /preparead /IAcceptExchangeServerLicenseTerms
+    ```
 
 2.  В командной консоли Exchange запустите следующую команду:
     
-        Enable-Mailbox -Arbitration -Identity "Migration.8f3e7716-2011-43e4-96b1-aba62d229136"
+    ```powershell
+    Enable-Mailbox -Arbitration -Identity "Migration.8f3e7716-2011-43e4-96b1-aba62d229136"
+    ```
 
 3.  В командной консоли Exchange задайте параметр "Имеющиеся возможности" (msExchCapabilityIdentifiers), запустив следующую команду:
     
-        Set-Mailbox "Migration.8f3e7716-2011-43e4-96b1-aba62d229136" -Arbitration -Management:$True -Force
+    ```powershell
+    Set-Mailbox "Migration.8f3e7716-2011-43e4-96b1-aba62d229136" -Arbitration -Management:$True -Force
+    ```
 
 ## Как повторно создать системный почтовый ящик обнаружения в Microsoft Exchange
 
@@ -135,7 +149,9 @@ _**Последнее изменение раздела:** 2018-01-17_
 
 1.  Выполните следующую команду:
     
-        .\Setup /preparead /IAcceptExchangeServerLicenseTerms
+    ```powershell
+    .\Setup /preparead /IAcceptExchangeServerLicenseTerms
+    ```
 
 ## Как повторно создать почтовый ящик организации для автономных адресных книг в Microsoft Exchange
 
@@ -143,25 +159,35 @@ _**Последнее изменение раздела:** 2018-01-17_
 
 1.  При отсутствии какого-либо почтового ящика арбитража запустите следующую команду:
     
-        .\Setup /preparead /IAcceptExchangeServerLicenseTerms
+    ```powershell
+    .\Setup /preparead /IAcceptExchangeServerLicenseTerms
+    ```
 
 2.  В командной консоли Exchange запустите следующую команду:
     
-        Enable-Mailbox -Arbitration -Identity "SystemMailbox{bb558c35-97f1-4cb9-8ff7-d53741dc928c}"
+    ```powershell
+    Enable-Mailbox -Arbitration -Identity "SystemMailbox{bb558c35-97f1-4cb9-8ff7-d53741dc928c}"
+    ```
 
 3.  В командной консоли Exchange задайте параметр "Имеющиеся возможности" (msExchCapabilityIdentifiers), запустив следующую команду:
     
-        Get-Mailbox "SystemMailbox{bb558c35-97f1-4cb9-8ff7-d53741dc928c}" -Arbitration | Set-Mailbox -Arbitration -UMGrammar:$True -OABGen:$True -GMGen:$True -ClientExtensions:$True -MessageTracking:$True -PstProvider:$True -MaxSendSize 1GB -Force
+    ```powershell
+    Get-Mailbox "SystemMailbox{bb558c35-97f1-4cb9-8ff7-d53741dc928c}" -Arbitration | Set-Mailbox -Arbitration -UMGrammar:$True -OABGen:$True -GMGen:$True -ClientExtensions:$True -MessageTracking:$True -PstProvider:$True -MaxSendSize 1GB -Force
+    ```
 
 Если вы выполнили команду `$OABMBX = Get-Mailbox "SystemMailbox{bb558c35-97f1-4cb9-8ff7-d53741dc928c}" -Arbitration (Get-ADUser $OABMBX.SamAccountName -Properties *).msExchCapabilityIdentifiers`, то после завершения увидите отсутствие 46, 47 и 51. Чтобы снова добавить все возможности, выполните следующую команду:
 
-    Set-ADUser $OABMBX.SamAccountName -Add @{"msExchCapabilityIdentifiers"="40","42","43","44","47","51","52","46"}
+```powershell
+Set-ADUser $OABMBX.SamAccountName -Add @{"msExchCapabilityIdentifiers"="40","42","43","44","47","51","52","46"}
+```
 
 ## Как проверить, все ли работает?
 
 Чтобы убедиться в том, что вы повторно создали почтовый ящик арбитража, используйте командлет **Get-Mailbox** с параметром *Arbitration* для извлечения списка системных почтовых ящиков.
 
-    Get-Mailbox -Arbitration | Format-Table Name, DisplayName
+```powershell
+Get-Mailbox -Arbitration | Format-Table Name, DisplayName
+```
 
 Просмотрите результаты выполнения команды, чтобы убедиться в том, что необходимый системный почтовый ящик был создан. Для этого вы можете использовать имя или отображаемое имя из таблицы выше.
 

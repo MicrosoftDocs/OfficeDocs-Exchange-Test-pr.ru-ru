@@ -43,18 +43,22 @@ _**Последнее изменение раздела:** 2014-12-16_
 
 1.  В окне командной строки откройте файл MSExchangeMailboxAssistants.exe.config в Блокноте, выполнив следующую команду:
     
-        Notepad %ExchangeInstallPath%Bin\MSExchangeMailboxAssistants.exe.config
+    ```powershell
+	Notepad %ExchangeInstallPath%Bin\MSExchangeMailboxAssistants.exe.config
+	```
 
 2.  Найдите ключ *\</appsettings\>* в конце файла, и вставьте следующий ключ перед ключом *\</appsettings\>*:
     
-        <add key="IncludeSafeDomains" value="true" />
+    ```command line
+	<add key="IncludeSafeDomains" value="true" />
+	```
 
 3.  Закончив, сохраните и закройте файл MSExchangeMailboxAssistants.exe.config.
 
 4.  Перезапустите службу помощника по обслуживанию почтовых ящиков Microsoft Exchange, выполнив следующую команду:
-    
+    ```powershell
         net stop MSExchangeMailboxAssistants && net start MSExchangeMailboxAssistants
-
+	```
 ## Как проверить, что все получилось?
 
 Чтобы убедиться, что вы успешно настроили фильтрацию содержимого для использования сведений о надежных доменах, сделайте следующее:

@@ -49,7 +49,9 @@ _**Последнее изменение раздела:** 2012-10-12_
 
 В этом примере выполняется восстановление шаблона сведений для контактов на английском языке (США):
 
-    Restore-DetailsTemplate -Identity "en-US\Contact"
+```powershell
+Restore-DetailsTemplate -Identity "en-US\Contact"
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Restore-DetailsTemplate](https://technet.microsoft.com/ru-ru/library/bb125188\(v=exchg.150\)).
 

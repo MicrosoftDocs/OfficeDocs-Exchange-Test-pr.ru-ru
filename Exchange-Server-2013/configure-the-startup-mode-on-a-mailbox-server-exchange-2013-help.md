@@ -63,9 +63,13 @@ _**Последнее изменение раздела:** 2013-02-15_
 
 В этом примере устанавливается двойной режим запуска для сервера почтовых ящиков с именем `MyUMServer1`.
 
-    Set-UMService -Identity MyUMServer1 -UMStartUpMode Dual
+```powershell
+Set-UMService -Identity MyUMServer1 -UMStartUpMode Dual
+```
 
 В этом примере устанавливается режим TLS запуска для сервера почтовых ящиков с именем `MyUMServer1`.
 
-    Set-UMService -Identity MyUMServer1 -UMStartUpMode TLS
+```powershell
+Set-UMService -Identity MyUMServer1 -UMStartUpMode TLS
+```
 

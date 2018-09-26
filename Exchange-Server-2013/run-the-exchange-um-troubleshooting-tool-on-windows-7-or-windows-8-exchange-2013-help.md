@@ -68,22 +68,26 @@ _**Последнее изменение раздела:** 2016-12-09_
 2.  Нажмите правой кнопкой мыши **Windows PowerShell** и во всплывающем меню выберите пункт **Запуск от имени администратора**.
 
 3.  В командной строке Windows PowerShell перейдите к папке, в которую установлено средство устранения неполадок единой системы обмена сообщениями, и запустите следующую команду.
-    
+    ```powershell
         C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -psconsolefile .\Microsoft.Exchange.UM.TroubleshootingToolsnapin.psc1 -noexit -command ". '.\Microsoft.Exchange.UM.TroubleshootingTool.ps1' "
-
+	```
 4.  При запуске средства устранения неполадок единой системы обмена сообщениями в Windows Vista, Windows 7 или Windows 8 в командной строке Windows PowerShell выполните следующую команду:
     
-        Set-ExecutionPolicy RemoteSigned
+    ```powershell
+	Set-ExecutionPolicy RemoteSigned
+	```
 
 5.  в меню **Пуск** откройте **Средство устранения неполадок единой системы обмена сообщениями Microsoft Exchange 2010**.
 
 6.  В окне **Средство устранения неполадок единой системы обмена сообщениями Microsoft Exchange 2010** в командной строке введите следующую команду и нажмите клавишу ВВОД.
     
-        $cred=Get-Credential
+    ```powershell
+	$cred=Get-Credential
+	```
 
 7.  В окне **Запрос учетных данных Windows PowerShell** введите домен\\имя\_пользователя и пароль, а затем нажмите кнопку **ОК**.
 
 8.  В окне **Средство устранения неполадок единой системы обмена сообщениями Microsoft Exchange 2010** укажите обязательные параметры командлета для проверки потока вызовов. Например:
-    
+    ```powershell
         Test-ExchangeUMCallFlow -Mode SIPClient -CallingParty tonysmith@contoso.com - CalledParty jamiestark@contoso.com NextHop ocsfe.contoso.com -Credential $cred
-
+	```

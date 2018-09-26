@@ -64,9 +64,9 @@ _**Последнее изменение раздела:** 2013-12-18_
 ## Использование командной консоли для экспорта сертификата
 
 В этом примере сертификат с отпечатком A36DE2B9B62980A717EBD0C3052F5F0B08FBFFCC экспортируется в файл после запроса имени пользователя и пароля.
-
+```powershell
     $file = Export-ExchangeCertificate -Thumbprint A36DE2B9B62980A717EBD0C3052F5F0B08FBFFCC -BinaryEncoded:$true -Password (Get-Credential).password
-
+```
 В данном примере выполняется следующее:
 
 1.  Командлет **Get-ExchangeCertificate** используется для поиска сертификата, который необходимо экспортировать.
@@ -77,12 +77,13 @@ _**Последнее изменение раздела:** 2013-12-18_
 
 <!-- end list -->
 
-```
+```powershell
     $file = Get-ExchangeCertificate -DomainName umcorp.northwindtraders.com | Export-ExchangeCertificate -BinaryEncoded:$true -Password (Get-Credential).password
 ```
+```powershell
+Set-Content -Path "d:\umcerts\selfsigned.pfx" -Value $file.FileData =Encoding Byte
 ```
-    Set-Content -Path "d:\umcerts\selfsigned.pfx" -Value $file.FileData =Encoding Byte
-```
+
 
 ## Использование Центра администрирования Exchange для импорта сертификата
 
@@ -95,6 +96,6 @@ _**Последнее изменение раздела:** 2013-12-18_
 ## Использование командной консоли для импорта сертификата
 
 В этом примере после ввода имени пользователя и пароля импортируется сертификат из файла сертификата d:\\certificates\\exchange\\SelfSignedUMCert.pfx.
-
+```powershell
     Import-ExchangeCertificate -FileData ([Byte[]]$(Get-Content -Path d:\certificates\exchange\SelfSignedUMCert.pfx -Encoding Byte -ReadCount 0)) -Password:(Get-Credential).password
-
+```

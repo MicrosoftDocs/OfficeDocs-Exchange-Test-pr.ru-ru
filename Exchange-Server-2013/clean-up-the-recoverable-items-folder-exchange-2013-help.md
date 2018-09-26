@@ -54,9 +54,9 @@ _**Последнее изменение раздела:** 2015-09-30_
 ## Использование командной консоли для удаления элементов из папки "Элементы с возможностью восстановления" в почтовых ящиках, для которых не включалось хранение или восстановление отдельных элементов
 
 В этом примере выполняется окончательное удаление элементов из папки "Элементы с возможностью восстановления" почтового ящика пользователя Gurinder Singh, а также копирование элементов в папку GurinderSingh-RecoverableItems в почтовом ящике поиска на обнаружение (почтовый ящик обнаружения, созданный программой установки Exchange).
-
+```powershell
     Search-Mailbox -Identity "Gurinder Singh" -SearchDumpsterOnly -TargetMailbox "Discovery Search Mailbox" -TargetFolder "GurinderSingh-RecoverableItems" -DeleteContent
-
+```
 > [!NOTE]  
 > Чтобы удалить элементы из почтового ящика без их копирования в другой почтовый ящик, используйте предыдущую команду без параметров <em>TargetMailbox</em> и <em>TargetFolder</em>.
 
@@ -91,32 +91,36 @@ _**Последнее изменение раздела:** 2015-09-30_
     
     > [!NOTE]  
     > Если для параметра <em>UseDatabaseQuotaDefaults</em> установлено значение <code>$true</code>, то предыдущие параметры квоты не применяются. Соответствующие параметры квоты, настроенные в базе данных почтовых ящиков, применяются даже в том случае, если заполнены параметры отдельных почтовых ящиков.
-    
+    ```powershell
         Get-Mailbox "Gurinder Singh" | Format-List RecoverableItemsQuota, RecoverableItemsWarningQuota, ProhibitSendQuota, ProhibitSendReceiveQuota, UseDatabaseQuotaDefaults, RetainDeletedItemsFor, UseDatabaseRetentionDefaults
-
+    ```
 2.  Получите параметры доступа к почтовому ящику. Обязательно запишите их значения для последующей настройки.
-    
+    ```powershell
         Get-CASMailbox "Gurinder Singh" | Format-List EwsEnabled, ActiveSyncEnabled, MAPIEnabled, OWAEnabled, ImapEnabled, PopEnabled
-
+    ```
 3.  Получите текущий размер папки элементов для восстановления. Запишите размер, чтобы можно было поднять квоты на шаге 6.
-    
+    ```powershell
         Get-MailboxFolderStatistics "Gurinder Singh" -FolderScope RecoverableItems | Format-List Name,FolderAndSubfolderSize
-
+    ```
 4.  Получите текущую конфигурацию рабочего цикла помощника для управляемых папок. Обязательно запишите эти значения для последующей настройки.
     
-        Get-MailboxServer "My Mailbox Server" | Format-List Name,ManagedFolderWorkCycle
+    ```powershell
+    Get-MailboxServer "My Mailbox Server" | Format-List Name,ManagedFolderWorkCycle
+    ```
 
 5.  Отключите клиентский доступ к почтовому ящику, чтобы обеспечить невозможность внесения изменений в данные почтового ящика на время данной процедуры.
-    
+    ```powershell
         Set-CASMailbox "Gurinder Singh" -EwsEnabled $false -ActiveSyncEnabled $false -MAPIEnabled $false -OWAEnabled $false -ImapEnabled $false -PopEnabled $false
-
+    ```
 6.  Чтобы запретить удаление элементов из папки «Элементы для восстановления», увеличьте для этой папки стандартную квоту и квоту предупреждения, а для периода хранения удаленных элементов установите значение, которое превышает текущий размер пользовательской папки элементов для восстановления. Это особенно важно для сохранения сообщений из почтовых ящиков, к которым применено хранение для судебного разбирательства или хранение на месте. Рекомендуется увеличить значения этих параметров вдвое.
-    
+    ```powershell
         Set-Mailbox "Gurinder Singh" -RecoverableItemsQuota 50Gb -RecoverableItemsWarningQuota 50Gb -RetainDeletedItemsFor 3650 -ProhibitSendQuota 50Gb -ProhibitSendRecieveQuota 50Gb -UseDatabaseQuotaDefaults $false -UseDatabaseRetentionDefaults $false
-
+    ```
 7.  Отключите помощник для управляемых папок на сервере почтовых ящиков.
     
-        Set-MailboxServer MyMailboxServer -ManagedFolderWorkCycle $null
+    ```powershell
+    Set-MailboxServer MyMailboxServer -ManagedFolderWorkCycle $null
+    ```
     
     > [!IMPORTANT]  
     > Если почтовый ящик находится в базе данных почтовых ящиков в группе обеспечения доступности баз данных (DAG), то необходимо отключить помощник для управляемых папок для каждого члена группы DAG, в котором размещается копия этой базы данных. Если база данных переходит на другой сервер при сбое, то это предотвращает удаление данных почтовых ящиков помощником для управляемых папок на этом сервере.
@@ -124,27 +128,31 @@ _**Последнее изменение раздела:** 2015-09-30_
 
 8.  Отключите функцию восстановления отдельных элементов и снимите почтовый ящик с хранения для судебного разбирательства.
     
-        Set-Mailbox "Gurinder Singh" -SingleItemRecoveryEnabled $false -LitigationHoldEnabled $false
+    ```powershell
+    Set-Mailbox "Gurinder Singh" -SingleItemRecoveryEnabled $false -LitigationHoldEnabled $false
+    ```
     
     > [!IMPORTANT]  
     > Когда команда запущена, включение восстановления отдельных элементов или хранения для судебного разбирательства может занять до одного часа. Переходить к следующему шагу рекомендуется только после завершения этого этапа.
 
 
 9.  Скопируйте элементы из папки элементов для восстановления в папку почтового ящика поиска на обнаружение и удалите содержимое исходного почтового ящика.
-    
+    ```powershell
         Search-Mailbox -Identity "Gurinder Singh" -SearchDumpsterOnly -TargetMailbox "Discovery Search Mailbox" -TargetFolder "GurinderSingh-RecoverableItems" -DeleteContent
-    
+    ```
     Если требуется удалить только сообщения, соответствующие определенным условиям, то для их задания используется параметр *SearchQuery*. В этом примере выполняется удаление строки «Your bank statement» в поле **Тема**.
-    
+    ```powershell
         Search-Mailbox -Identity "Gurinder Singh" -SearchQuery "Subject:'Your bank statement'" -SearchDumpsterOnly -TargetMailbox "Discovery Search Mailbox" -TargetFolder "GurinderSingh-RecoverableItems" -DeleteContent
-    
+    ```
     > [!NOTE]  
     > Копировать элементы в почтовый ящик поиска на обнаружение не требуется. Сообщения можно копировать в любой почтовый ящик. Тем не менее, чтобы запретить доступ к потенциально конфиденциальным данным почтовых ящиков, рекомендуется копировать сообщения в тот почтовый ящик, доступ к которому имеют только авторизованные диспетчеры записей. По умолчанию круг пользователей, имеющих доступ к почтовому ящику поиска на обнаружение по умолчанию, ограничен членами группы ролей управления обнаружением. Дополнительные сведения см. в разделе <a href="https://docs.microsoft.com/ru-ru/exchange/security-and-compliance/in-place-ediscovery/in-place-ediscovery">Обнаружение электронных данных на месте</a>.
 
 
 10. Если к этому почтовому ящику ранее применялось хранение для судебного разбирательства или восстановление отдельных элементов, снова включите эти функции.
     
-        Set-Mailbox "Gurinder Singh" -SingleItemRecoveryEnabled $true -LitigationHoldEnabled $true
+    ```powershell
+    Set-Mailbox "Gurinder Singh" -SingleItemRecoveryEnabled $true -LitigationHoldEnabled $true
+    ```
     
     > [!IMPORTANT]  
     > Когда команда запущена, включение восстановления отдельных элементов или хранения для судебного разбирательства может занять до одного часа. Включать помощник для управляемых папок и разрешать клиентский доступ (шаги 11 и 12) рекомендуется только после завершения этого этапа.
@@ -167,17 +175,19 @@ _**Последнее изменение раздела:** 2015-09-30_
       - *UseDatabaseRetentionDefaults*
     
     В этом примере выполняется снятие почтового ящика с судебного удержания, для периода хранения удаленных элементов устанавливается значение 14 дней, а для квоты "Элементы с возможностью восстановления" настраивается использование того же значения, что и для базы данных почтовых ящиков. Если на шаге 1 были записаны другие значения, необходимо использовать предыдущие параметры для задания каждого значения, а для параметра *UseDatabaseQuotaDefaults* установить значение `$false`. Если для параметров *RetainDeletedItemsForand UseDatabaseRetentionDefaults* ранее были заданы другие значения, то им также необходимо вернуть значения, записанные на шаге 1.
-    
+    ```powershell
         Set-Mailbox "Gurinder Singh" -RetentionHoldEnabled $false -RetainDeletedItemsFor 14 -RecoverableItemsQuota unlimited -UseDatabaseQuotaDefaults $true
-
+    ```
 12. Включите помощник для управляемых папок путем установки для рабочего цикла значения из шага 4. В этом примере рабочему циклу присваивается значение, равное одному дню.
     
-        Set-MailboxServer MyMailboxServer -ManagedFolderWorkCycle 1
+    ```powershell
+    Set-MailboxServer MyMailboxServer -ManagedFolderWorkCycle 1
+    ```
 
 13. Включите клиентский доступ.
-    
+    ```powershell
         Set-CASMailbox -ActiveSyncEnabled $true -EwsEnabled $true -MAPIEnabled $true -OWAEnabled $true -ImapEnabled $true -PopEnabled $true
-
+    ```
 Подробные сведения о синтаксисе и параметрах см. в следующих разделах:
 
   - [Get-Mailbox](https://technet.microsoft.com/ru-ru/library/bb123685\(v=exchg.150\))
@@ -201,6 +211,6 @@ _**Последнее изменение раздела:** 2015-09-30_
 Чтобы убедиться в том, что папка элементов для восстановления почтового ящика успешно очищена, используйте командлет [Get-MailboxFolderStatistics](https://technet.microsoft.com/ru-ru/library/aa996762\(v=exchg.150\)), чтобы проверить размер этой папки.
 
 В этом примере возвращается значение, указывающее размер этой папки и ее вложенных папок, а также число элементов в папке и каждой вложенной папке.
-
+```powershell
     Get-MailboxFolderStatistics -Identity "Gurinder Singh" -FolderScope RecoverableItems | Format-Table Name,FolderAndSubfolderSize,ItemsInFolderAndSubfolders -Auto
-
+```

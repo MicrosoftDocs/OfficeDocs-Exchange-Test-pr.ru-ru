@@ -41,11 +41,15 @@ _**Последнее изменение раздела:** 2013-02-19_
 
 1.  Выполните следующую команду, чтобы убедиться, что агент фильтра содержимого установлен и включен на сервере Exchange Server:
     
-        Get-TransportAgent "Content Filter Agent"
+    ```powershell
+	Get-TransportAgent "Content Filter Agent"
+	```
 
 2.  Выполните следующую команду, чтобы убедиться, что фильтрация содержимого включена.
     
-        Get-ContentFilterConfig | Format-List Enabled
+    ```powershell
+	Get-ContentFilterConfig | Format-List Enabled
+	```
 
 Дополнительные сведения см. в статье [Управление фильтрацией содержимого](manage-content-filtering-exchange-2013-help.md).
 
@@ -71,11 +75,15 @@ _**Последнее изменение раздела:** 2013-02-19_
 
 Выполните следующую команду:
 
-    Set-ContentFilterConfig -QuarantineMailbox <SmtpAddress>
+```powershell
+Set-ContentFilterConfig -QuarantineMailbox <SmtpAddress>
+```
 
 В этом примере выполняется отправка всех сообщений, превышающих пороговое значение карантина для нежелательной почты, по адресу spamQ@contoso.com.
 
-    Set-ContentFilterConfig -QuarantineMailbox spamQ@contoso.com
+```powershell
+Set-ContentFilterConfig -QuarantineMailbox spamQ@contoso.com
+```
 
 ## Как проверить, что шаг выполнен?
 
@@ -83,7 +91,9 @@ _**Последнее изменение раздела:** 2013-02-19_
 
 1.  Выполните следующую команду:
     
-        Get-ContentFilterConfig | Format-List QuarantineMailbox
+    ```powershell
+	Get-ContentFilterConfig | Format-List QuarantineMailbox
+	```
 
 2.  Убедитесь, что отображается значение, которое вы настроили.
 

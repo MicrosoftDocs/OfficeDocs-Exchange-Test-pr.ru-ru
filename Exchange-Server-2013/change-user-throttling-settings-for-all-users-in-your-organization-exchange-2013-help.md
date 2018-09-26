@@ -41,7 +41,9 @@ _**Последнее изменение раздела:** 2014-08-05_
 
 В этом примере создается политика, которая применяется ко всем пользователям организации. Любые пропущенные параметры наследуют значения из политики регулирования по умолчанию (GlobalThrottlingPolicy).
 
-    New-ThrottlingPolicy -Name AllUsersEWSPolicy EwsMaxConcurrency 4 -ThrottlingPolicyScope Organization
+```powershell
+New-ThrottlingPolicy -Name AllUsersEWSPolicy EwsMaxConcurrency 4 -ThrottlingPolicyScope Organization
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [New-ThrottlingPolicy](https://technet.microsoft.com/ru-ru/library/dd351045\(v=exchg.150\)).
 
@@ -51,13 +53,17 @@ _**Последнее изменение раздела:** 2014-08-05_
 
 1.  Выполните следующую команду.
     
-        Get-ThrottlingPolicy | Format-List
+    ```powershell
+	Get-ThrottlingPolicy | Format-List
+	```
 
 2.  Убедитесь, что созданная политика регулирования организации отображается в столбце с объектом GlobalThrottlingPolicy.
 
 3.  Выполните следующую команду.
     
-        Get-ThrottlingPolicy | Format-List
+    ```powershell
+	Get-ThrottlingPolicy | Format-List
+	```
 
 4.  Убедитесь, что свойства новой политики организации соответствуют ранее настроенным значениям.
 

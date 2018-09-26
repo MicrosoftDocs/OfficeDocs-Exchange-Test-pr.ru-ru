@@ -51,7 +51,9 @@ _**Последнее изменение раздела:** 2012-10-12_
 
 В этом примере показано включение журнала IRM на сервере почтовых ящиков.
 
-    Set-TransportService -Identity EXCH01 -IRMLogEnabled $true
+```powershell
+Set-TransportService -Identity EXCH01 -IRMLogEnabled $true
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Set-TransportService](https://technet.microsoft.com/ru-ru/library/jj215682\(v=exchg.150\)).
 
@@ -59,7 +61,9 @@ _**Последнее изменение раздела:** 2012-10-12_
 
 В этом примере отключается ведение журнала IRM на сервере почтовых ящиков.
 
-    Set-TransportService -Identity EXCH01 -IRMLogEnabled $false
+```powershell
+Set-TransportService -Identity EXCH01 -IRMLogEnabled $false
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Set-TransportService](https://technet.microsoft.com/ru-ru/library/jj215682\(v=exchg.150\)).
 
@@ -69,5 +73,6 @@ _**Последнее изменение раздела:** 2012-10-12_
 
 В этом примере извлекаются все свойства ведения журнала IRM на сервере EXCH01.
 
-    Get-TransportService -Identity EXCH01 | Format-List IRMLog*
-
+```powershell
+Get-TransportService -Identity EXCH01 | Format-List IRMLog*
+```

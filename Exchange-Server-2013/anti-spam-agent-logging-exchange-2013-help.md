@@ -264,15 +264,19 @@ _**Последнее изменение раздела:** 2015-03-09_
 
 Сценарий **Get-AntiSpamFilteringReport.ps1** расположен в `%ExchangeInstallPath%Scripts`. Вам необходимо запустить сценарий в командной консоли из папки "Сценарии". Чтобы изменить расположение в командной консоли на папку сценариев, выполните следующую команду:
 
-    Cd $env:ExchangeInstallPath\Scripts
+```powershell
+Cd $env:ExchangeInstallPath\Scripts
+```
 
 Чтобы запустить папку сценариев, введите команду в следующем формате:
-
+```powershell
     .\Get-AntiSpamFilteringReport.ps1 -report <ReportValue> [<OptionalParameters>]
-
+```
 Для получения сведений об использовании сценария, выполните следующую команду:
 
-    Get-Help -Detailed .\Get-AntiSpamFilteringReport.ps1
+```powershell
+Get-Help -Detailed .\Get-AntiSpamFilteringReport.ps1
+```
 
 В начало
 

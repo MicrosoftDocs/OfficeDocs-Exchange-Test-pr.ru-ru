@@ -66,10 +66,12 @@ _**Последнее изменение раздела:** 2016-12-09_
     
     Выходные данные команды выглядят следующим образом:
     
-        fabrikam.com mx preference=10, mail exchanger = mail1.fabrikam.com
-        fabrikam.com mx preference=20, mail exchanger = mail2.fabrikam.com
-        mail1.fabrikam.com internet address = 192.168.1.10
-        mail2 fabrikam.com internet address = 192.168.1.20
+    ```powershell
+    fabrikam.com mx preference=10, mail exchanger = mail1.fabrikam.com
+    fabrikam.com mx preference=20, mail exchanger = mail2.fabrikam.com
+    mail1.fabrikam.com internet address = 192.168.1.10
+    mail2 fabrikam.com internet address = 192.168.1.20
+    ```
     
     В качестве SMTP-сервера назначения можно использовать любые имена узлов или IP-адреса, связанные с MX-записями. Меньшее значение приоритета означает более предпочтительный SMTP-сервер. В целях балансировки нагрузки и отказоустойчивости можно использовать несколько MX-записей и различные значения приоритета.
 
@@ -98,7 +100,11 @@ _**Последнее изменение раздела:** 2016-12-09_
 > [!NOTE]  
 > <ul><li><p>Команды клиента Telnet вводятся без учета регистра. Команды SMTP набраны заглавными буквами для большей ясности.</p></li>
 > <li><p>После подключения к SMTP-серверу назначения в сеансе Telnet нельзя использовать клавишу BACKSPACE. Если при вводе команды SMTP допущена ошибка, следует нажать клавишу ВВОД и повторно ввести команду. Неизвестные команды SMTP или синтаксические ошибки приведут к появлению сообщения об ошибке следующего вида:</p>
-> <pre><code>500 5.3.3 Unrecognized command</code></pre></li></ul>
+> 
+> ```powershell
+> 500 5.3.3 Unrecognized command
+> ```
+> </li></ul>
 
 
 1.  В командной строке введите **telnet** и нажмите клавишу ВВОД. Эта команда открывает сеанс Telnet.
@@ -117,7 +123,9 @@ _**Последнее изменение раздела:** 2016-12-09_
 
 8.  Введите **DATA** и нажмите клавишу ВВОД. Появится отклик, подобный приведенному ниже:
     
-        354 Start mail input; end with <CLRF>.<CLRF>
+    ```powershell
+    354 Start mail input; end with <CLRF>.<CLRF>
+    ```
 
 9.  Введите **Subject: Test from Contoso** и нажмите клавишу ВВОД.
 
@@ -127,11 +135,15 @@ _**Последнее изменение раздела:** 2016-12-09_
 
 12. Нажмите клавишу ВВОД, введите точку ( **.** ) и нажмите клавишу ВВОД. Появится отклик, подобный приведенному ниже:
     
-        250 2.6.0 <GUID> Queued mail for delivery
+    ```powershell
+    250 2.6.0 <GUID> Queued mail for delivery
+    ```
 
 13. Чтобы отключиться от конечного сервера SMTP, введите **QUIT** и нажмите клавишу ВВОД. Появится отклик, подобный приведенному ниже:
     
-        221 2.0.0 Service closing transmission channel
+    ```powershell
+    221 2.0.0 Service closing transmission channel
+    ```
 
 14. Чтобы закрыть сеанс Telnet, введите **quit** и нажмите клавишу ВВОД.
 

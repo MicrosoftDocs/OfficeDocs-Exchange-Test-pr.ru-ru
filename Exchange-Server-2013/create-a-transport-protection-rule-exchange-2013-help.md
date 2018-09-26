@@ -70,7 +70,9 @@ _**Последнее изменение раздела:** 2016-12-09_
 
   - Чтобы создать правило защиты транспорта, в развертывании AD RMS должны быть существующие шаблоны RMS. В этом примере показано, как получить доступные шаблоны из кластера AD RMS.
     
-        Get-RMSTemplate | format-list
+    ```powershell
+	Get-RMSTemplate | format-list
+	```
     
     Дополнительные сведения о синтаксисе и параметрах см. в разделе [Get-RMSTemplate](https://technet.microsoft.com/ru-ru/library/dd297960\(v=exchg.150\)).
 
@@ -78,9 +80,9 @@ _**Последнее изменение раздела:** 2016-12-09_
     
     > [!NOTE]  
     > В этом примере используется предикат <code>SubjectContainsWords</code>. Вы можете использовать любое сочетание предикатов правил транспорта для формирования условий и исключений правила. Дополнительные сведения о доступных предикатах см. в разделе <a href="mail-flow-rule-conditions-and-exceptions-predicates-in-exchange-2013-exchange-2013-help.md">Условия правил транспорта (предикаты)</a>.
-    
+    ```powershell
         New-TransportRule -Name "Protect-BusinessCriticalProject" -SubjectContainsWords "Business Critical" -ApplyRightsProtectionTemplate "Do Not Forward"
-    
+    ```
     Дополнительные сведения о синтаксисе и параметрах см. в разделе [New-TransportRule](https://technet.microsoft.com/ru-ru/library/bb125138\(v=exchg.150\)).
 
 ## Как проверить, что все получилось?

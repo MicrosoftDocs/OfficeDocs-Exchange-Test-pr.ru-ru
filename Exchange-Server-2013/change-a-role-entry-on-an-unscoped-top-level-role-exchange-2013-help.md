@@ -59,11 +59,15 @@ _**Последнее изменение раздела:** 2012-10-03_
 
 Чтобы добавить параметры к записи роли, используйте следующий синтаксис.
 
-    Set-ManagementRoleEntry <role name>\<script or non-Exchange cmdlet> -Parameters <parameter 1>, <parameter 2>, <parameter...> -AddParameter -UnscopedTopLevel
+```powershell
+Set-ManagementRoleEntry <role name>\<script or non-Exchange cmdlet> -Parameters <parameter 1>, <parameter 2>, <parameter...> -AddParameter -UnscopedTopLevel
+```
 
 В этом примере добавляются параметры *EmailAddress* и *City* в сценарий **CreateUsers.ps1** для роли администраторов получателей с незаданной областью.
 
-    Set-ManagementRoleEntry "Recipient Administrators\CreateUsers.ps1" -Parameters EmailAddress, City -AddParameter -UnscopedTopLevel
+```powershell
+Set-ManagementRoleEntry "Recipient Administrators\CreateUsers.ps1" -Parameters EmailAddress, City -AddParameter -UnscopedTopLevel
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Set-ManagementRoleEntry](https://technet.microsoft.com/ru-ru/library/dd351162\(v=exchg.150\)).
 
@@ -83,11 +87,15 @@ _**Последнее изменение раздела:** 2012-10-03_
 
 Чтобы удалить параметры из записи роли, используйте следующий синтаксис.
 
-    Set-ManagementRoleEntry <role name>\<script or non-Exchange cmdlet> -Parameters <parameter 1>, <parameter 2>, <parameter...> -RemoveParameter -UnscopedTopLevel
+```powershell
+Set-ManagementRoleEntry <role name>\<script or non-Exchange cmdlet> -Parameters <parameter 1>, <parameter 2>, <parameter...> -RemoveParameter -UnscopedTopLevel
+```
 
 В этом примере удаляются параметры *Delay*, *Force* и *Credential* из командлета **Start-Widget**, не относящегося к Exchange, в роли администраторов сервера 1 уровня.
 
-    Set-ManagementRoleEntry "Tier 1 Server Administrators\Start-Widget" -Parameters Delay, Force, Credential -RemoveParameter -UnscopedTopLevel
+```powershell
+Set-ManagementRoleEntry "Tier 1 Server Administrators\Start-Widget" -Parameters Delay, Force, Credential -RemoveParameter -UnscopedTopLevel
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Set-ManagementRoleEntry](https://technet.microsoft.com/ru-ru/library/dd351162\(v=exchg.150\)).
 
@@ -109,11 +117,15 @@ _**Последнее изменение раздела:** 2012-10-03_
 
 Чтобы удалить все параметры из записи роли, используйте следующий синтаксис.
 
-    Set-ManagementRoleEntry <role name>\<script or non-Exchange cmdlet> -Parameters $Null -UnscopedTopLevel
+```powershell
+Set-ManagementRoleEntry <role name>\<script or non-Exchange cmdlet> -Parameters $Null -UnscopedTopLevel
+```
 
 В этом примере удаляются все параметры из сценария FindMailboxesOverQuota.ps1 для роли администраторов получателей.
 
-    Set-ManagementRoleEntry "Recipient Administrators\FindMailboxesOverQuota.ps1" -Parameters $Null -UnscopedTopLevel
+```powershell
+Set-ManagementRoleEntry "Recipient Administrators\FindMailboxesOverQuota.ps1" -Parameters $Null -UnscopedTopLevel
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Set-ManagementRoleEntry](https://technet.microsoft.com/ru-ru/library/dd351162\(v=exchg.150\)).
 
@@ -131,11 +143,15 @@ _**Последнее изменение раздела:** 2012-10-03_
 
 Чтобы указать определенный набор параметров, используйте следующий синтаксис.
 
-    Set-ManagementRoleEntry <role name>\<script or non-Exchange cmdlet> -Parameters <parameter 1>, <parameter 2>, <parameter...> -UnscopedTopLevel
+```powershell
+Set-ManagementRoleEntry <role name>\<script or non-Exchange cmdlet> -Parameters <parameter 1>, <parameter 2>, <parameter...> -UnscopedTopLevel
+```
 
 В этом примере добавляются параметры *Alias*, *DisplayName*, *WidgetConfig* и *Enabled* в командлет **Set-Widget** в роли администраторов получателей электронной почты в Сиэтле.
 
-    Set-ManagementRoleEntry "Seattle Mail Recipient Admins\Set-UMMailbox" -Parameters Alias, DisplayName, WidgetConfig, Enabled -UnscopedTopLevel
+```powershell
+Set-ManagementRoleEntry "Seattle Mail Recipient Admins\Set-UMMailbox" -Parameters Alias, DisplayName, WidgetConfig, Enabled -UnscopedTopLevel
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Set-ManagementRoleEntry](https://technet.microsoft.com/ru-ru/library/dd351162\(v=exchg.150\)).
 

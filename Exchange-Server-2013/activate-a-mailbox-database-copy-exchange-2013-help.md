@@ -49,31 +49,45 @@ _**Последнее изменение раздела:** 2012-11-01_
 
 В этом примере активируется и подключается копия базы данных DB4 на MBX3 как новая активная база данных почтовых ящиков. При использовании этой команды DB4 становится новой активной базой данных почтовых ящиков, и при этом не переопределяются настройки дозвона для подключения базы данных на MBX3.
 
-    Move-ActiveMailboxDatabase DB4 -ActivateOnServer MBX3 -MountDialOverride:None
+```powershell
+Move-ActiveMailboxDatabase DB4 -ActivateOnServer MBX3 -MountDialOverride:None
+```
 
 В данном примере выполняется переключение базы данных DB2 на почтовый сервер MBX1. После завершения команды на сервере MBX1 будет храниться активная копия DB2. Так как значение параметра *MountDialOverride* равно `None`, сервер MBX1 подключает базу данных с помощью собственных параметров автоподключения базы данных.
 
-    Move-ActiveMailboxDatabase DB2 -ActivateOnServer MBX1 -MountDialOverride:None
+```powershell
+Move-ActiveMailboxDatabase DB2 -ActivateOnServer MBX1 -MountDialOverride:None
+```
 
 В данном примере выполняется переключение базы данных DB1 на почтовый сервер MBX3. После выполнения команды на сервере MBX3 будет храниться активная копия DB1. Так как значение параметра *MountDialOverride* равно `Good Availability`, сервер MBX3 подключает базу данных с помощью параметра автоподключения базы данных *GoodAvailability*.
 
-    Move-ActiveMailboxDatabase DB1 -ActivateOnServer MBX3 -MountDialOverride:GoodAvailability
+```powershell
+Move-ActiveMailboxDatabase DB1 -ActivateOnServer MBX3 -MountDialOverride:GoodAvailability
+```
 
 В данном примере выполняется переключение базы данных DB3 на почтовый сервер MBX4. После выполнения команды на сервере MBX4 будет храниться активная копия DB3. Так как значение параметра *MountDialOverride* не указано, сервер MBX4 подключает базу данных с помощью параметра автодозвона для подключения базы данных *Lossless*.
 
-    Move-ActiveMailboxDatabase DB3 -ActivateOnServer MBX4
+```powershell
+Move-ActiveMailboxDatabase DB3 -ActivateOnServer MBX4
+```
 
 В этом примере выполняется переключение сервера на почтовый сервер MBX1. Все активные копии базы данных почтовых ящиков на сервере MBX1 будут активированы на одном или нескольких других почтовых серверах с работоспособными копиями активных баз данных на сервере MBX1.
 
-    Move-ActiveMailboxDatabase -Server MBX1
+```powershell
+Move-ActiveMailboxDatabase -Server MBX1
+```
 
 В данном примере выполняется переключение базы данных DB4 на почтовый сервер MBX5. В этом примере копия базы данных на сервере MBX5 имеет значение очереди преобразования больше 6. В результате необходимо указать параметр *SkipLagChecks*, чтобы активировать копию базы данных на сервере MBX5.
 
-    Move-ActiveMailboxDatabase DB4 MBX5 -SkipLagChecks
+```powershell
+Move-ActiveMailboxDatabase DB4 MBX5 -SkipLagChecks
+```
 
 В данном примере выполняется переключение базы данных DB5 на почтовый сервер MBX6. Этом примере копия базы данных на сервере MBX6 имеет значение *ContentIndexState* или «Сбой». В результате необходимо указать параметр *SkipClientExperienceChecks*, чтобы активировать копию базы данных на сервере MBX6.
 
-    Move-ActiveMailboxDatabase DB5 MBX6 -SkipClientExperienceChecks
+```powershell
+Move-ActiveMailboxDatabase DB5 MBX6 -SkipClientExperienceChecks
+```
 
 ## Как проверить, что все получилось?
 
@@ -83,7 +97,9 @@ _**Последнее изменение раздела:** 2012-11-01_
 
   - Для отображения сведений о состоянии копии базы данных запустите в консоли следующую команду:
     
-        Get-MailboxDatabaseCopyStatus <DatabaseCopyName> | Format-List
+    ```powershell
+	Get-MailboxDatabaseCopyStatus <DatabaseCopyName> | Format-List
+	```
 
 ## Дополнительные сведения
 

@@ -49,11 +49,15 @@ _**Последнее изменение раздела:** 2012-10-03_
 
 Чтобы изменить имя области, используйте следующую синтаксическую конструкцию.
 
-    Set-ManagementScope <current scope name> -Name <new scope name>
+```powershell
+Set-ManagementScope <current scope name> -Name <new scope name>
+```
 
 В этом примере показано изменение имени области Seattle Servers (Серверы в Сиэтле) на Seattle Exchange Servers (Серверы Exchange в Сиэтле).
 
-    Set-ManagementScope "Seattle Servers" -Name "Seattle Exchange Servers"
+```powershell
+Set-ManagementScope "Seattle Servers" -Name "Seattle Exchange Servers"
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Set-ManagementScope](https://technet.microsoft.com/ru-ru/library/dd297996\(v=exchg.150\)).
 
@@ -61,11 +65,15 @@ _**Последнее изменение раздела:** 2012-10-03_
 
 Для изменения фильтра получателей в области используйте следующую синтаксическую конструкцию.
 
-    Set-ManagementScope <scope name> -RecipientRestrictionFilter { <new recipient filter> }
+```powershell
+Set-ManagementScope <scope name> -RecipientRestrictionFilter { <new recipient filter> }
+```
 
 В этом примере показано изменение фильтра получателей для соответствия всем объектам получателей, в которых для свойства **Company** установлено значение Contoso.
 
-    Set-ManagementScope "Company Scope" -RecipientRestrictionFilter { Company -eq 'contoso' }
+```powershell
+Set-ManagementScope "Company Scope" -RecipientRestrictionFilter { Company -eq 'contoso' }
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Set-ManagementScope](https://technet.microsoft.com/ru-ru/library/dd297996\(v=exchg.150\)).
 
@@ -75,11 +83,15 @@ _**Последнее изменение раздела:** 2012-10-03_
 
 Чтобы изменить корень подразделения, используйте следующую синтаксическую конструкцию.
 
-    Set-ManagementScope <scope name> -RecipientRoot <OU>
+```powershell
+Set-ManagementScope <scope name> -RecipientRoot <OU>
+```
 
 В данном примере изменяется корень подразделения на пользователей подразделения "Северная Америка/офис продаж" в домене contoso.com.
 
-    Set-ManagementScope "Sales Users" -RecipientRoot "contoso.com/North America/Sales"
+```powershell
+Set-ManagementScope "Sales Users" -RecipientRoot "contoso.com/North America/Sales"
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Set-ManagementScope](https://technet.microsoft.com/ru-ru/library/dd297996\(v=exchg.150\)).
 
@@ -87,11 +99,15 @@ _**Последнее изменение раздела:** 2012-10-03_
 
 Чтобы изменить фильтр серверов в области, используйте следующую синтаксическую конструкцию.
 
-    Set-ManagementScope <scope name> -ServerRestrictionFilter { <new server filter> }
+```powershell
+Set-ManagementScope <scope name> -ServerRestrictionFilter { <new server filter> }
+```
 
 В этом примере фильтр сервера изменяется для поиска всех объектов серверов, на которых свойство **ServerSite** равно "CN=Redmond,CN=Sites,CN=Configuration,DC=contoso,DC=com".
 
-    Set-ManagementScope "Company Scope" -ServerRestrictionFilter { ServerSite -eq 'CN=Redmond,CN=Sites,CN=Configuration,DC=contoso,DC=com' }
+```powershell
+Set-ManagementScope "Company Scope" -ServerRestrictionFilter { ServerSite -eq 'CN=Redmond,CN=Sites,CN=Configuration,DC=contoso,DC=com' }
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Set-ManagementScope](https://technet.microsoft.com/ru-ru/library/dd297996\(v=exchg.150\)).
 
@@ -113,11 +129,15 @@ _**Последнее изменение раздела:** 2012-10-03_
 
 Чтобы изменить фильтр баз данных в области, используйте следующую синтаксическую конструкцию.
 
-    Set-ManagementScope <scope name> -DatabaseRestrictionFilter { <new database filter> }
+```powershell
+Set-ManagementScope <scope name> -DatabaseRestrictionFilter { <new database filter> }
+```
 
 В этом примере показано изменение фильтра баз данных для соответствия всем объектам баз данных, в которых свойство **Name** содержит строку Executive.
 
-    Set-ManagementScope "Database Executive Scope" -DatabaseRestrictionFilter { Name -Like "*Executive*" }
+```powershell
+Set-ManagementScope "Database Executive Scope" -DatabaseRestrictionFilter { Name -Like "*Executive*" }
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Set-ManagementScope](https://technet.microsoft.com/ru-ru/library/dd297996\(v=exchg.150\)).
 

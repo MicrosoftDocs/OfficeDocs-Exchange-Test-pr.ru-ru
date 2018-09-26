@@ -44,30 +44,34 @@ _**Последнее изменение раздела:** 2015-04-08_
 ## Настройка потока почты Интернета через подписанный пограничный транспортный сервер
 
 1.  На пограничном транспортном сервере создайте файл пограничной подписки, используя следующий синтаксис.
-    
+    ```powershell
         New-EdgeSubscription -FileName <FileName>.xml [-Force]
-    
+    ```
     В этом примере создается файл пограничной подписки с именем EdgeSubscriptionInfo.xml в папке C:\\My Documents. Параметр *Force* отклоняет запросы на подтверждение отключения команд и предупреждения о перезаписи данных конфигурации на пограничном транспортном сервере.
     
-        New-EdgeSubscription -FileName "C:\My Documents\EdgeSubscriptionInfo.xml" -Force
+    ```powershell
+    New-EdgeSubscription -FileName "C:\My Documents\EdgeSubscriptionInfo.xml" -Force
+    ```
 
 2.  Скопируйте созданный файл пограничной подписки на сервер почтовых ящиков на сайте Active Directory, на который будет подписан пограничный транспортный сервер.
 
 3.  На сервере почтовых ящиков используйте следующий синтаксис, чтобы импортировать файл пограничной подписки.
-    
+    ```powershell
         New-EdgeSubscription -FileData ([byte[]]$(Get-Content -Path "<FileName>.xml" -Encoding Byte -ReadCount 0)) -Site <SiteName>
-    
+    ```
     В этом примере файл пограничной подписки с именем EdgeSubscriptionInfo.xml импортируется с папки D:\\Data и пограничный транспортный сервер подписывается на сайт Active Directory с именем "Default-First-Site-Name".
-    
+    ```powershell
         New-EdgeSubscription -FileData ([byte[]]$(Get-Content -Path "D:\Data\EdgeSubscriptionInfo.xml" -Encoding Byte -ReadCount 0)) -Site "Default-First-Site-Name"
-    
+    ```
     > [!NOTE]  
     > Чтобы предотвратить автоматическое создание одного или обоих соединителей отправки, используйте параметры <em>CreateInternetSendConnector</em> или <em>CreateInboundSendConnector</em>. Дополнительные сведения см. в разделе <a href="edge-subscriptions-exchange-2013-help.md">Пограничные подписки</a>.
 
 
 4.  На сервере почтовых ящиков запустите следующую команду, чтобы начать первую синхронизацию EdgeSync.
     
-        Start-EdgeSynchronization
+    ```powershell
+    Start-EdgeSynchronization
+    ```
 
 5.  По завершении настоятельно рекомендуется удалить файл пограничной подписки с пограничного транспортного сервера и с сервера почтовых ящиков. Файл пограничной подписки содержит сведения об учетных данных, используемых в процессе взаимодействия LDAP.
 

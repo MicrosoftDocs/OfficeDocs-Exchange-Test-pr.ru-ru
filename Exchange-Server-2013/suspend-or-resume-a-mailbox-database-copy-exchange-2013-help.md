@@ -63,21 +63,29 @@ _**Последнее изменение раздела:** 2012-11-02_
 
 В этом примере приостанавливается непрерывная репликация копии базы данных DB1, размещенной на сервере MBX1. Кроме того, было указано необязательное примечание.
 
-    Suspend-MailboxDatabaseCopy -Identity DB1\MBX1 -SuspendComment "Maintenance on MBX1" -Confirm:$False
+```powershell
+Suspend-MailboxDatabaseCopy -Identity DB1\MBX1 -SuspendComment "Maintenance on MBX1" -Confirm:$False
+```
 
 В этом примере приостанавливается непрерывная репликация копии базы данных DB2, размещенной на сервере MBX2.
 
-    Suspend-MailboxDatabaseCopy -Identity DB2\MBX2 -ActivationOnly -Confirm:$False
+```powershell
+Suspend-MailboxDatabaseCopy -Identity DB2\MBX2 -ActivationOnly -Confirm:$False
+```
 
 ## Использование командной консоли для возобновления копии базы данных почтовых ящиков
 
 В этом примере восстанавливается копия базы данных DB1 на сервере MBX1.
 
-    Resume-MailboxDatabaseCopy -Identity DB1\MBX1
+```powershell
+Resume-MailboxDatabaseCopy -Identity DB1\MBX1
+```
 
 В этом примере возобновляется работа копии базы данных DB2 на сервере MBX2 только для репликации.
 
-    Resume-MailboxDatabaseCopy -Identity DB2\MBX2 -ReplicationOnly
+```powershell
+Resume-MailboxDatabaseCopy -Identity DB2\MBX2 -ReplicationOnly
+```
 
 ## Как проверить, что все получилось?
 
@@ -87,5 +95,7 @@ _**Последнее изменение раздела:** 2012-11-02_
 
   - Для отображения сведений о состоянии копии базы данных запустите в консоли следующую команду:
     
-        Get-MailboxDatabaseCopyStatus <DatabaseCopyName> | Format-List
+    ```powershell
+	Get-MailboxDatabaseCopyStatus <DatabaseCopyName> | Format-List
+	```
 

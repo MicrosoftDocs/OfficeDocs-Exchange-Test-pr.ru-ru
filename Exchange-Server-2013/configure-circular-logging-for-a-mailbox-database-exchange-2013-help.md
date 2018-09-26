@@ -49,11 +49,15 @@ _**Последнее изменение раздела:** 2014-06-24_
 
 В этом примере включается циклическое ведение журнала для базы данных DB1.
 
-    Set-MailboxDatabase DB1 -CircularLoggingEnabled $True
+```powershell
+Set-MailboxDatabase DB1 -CircularLoggingEnabled $True
+```
 
 В этом примере выключается циклическое ведение журнала для базы данных DB1.
 
-    Set-MailboxDatabase DB1 -CircularLoggingEnabled $False
+```powershell
+Set-MailboxDatabase DB1 -CircularLoggingEnabled $False
+```
 
 Сведения о других параметрах базы данных почтовых ящиков, которые можно настроить, см. в разделе [Set-MailboxDatabase](https://technet.microsoft.com/ru-ru/library/bb123971\(v=exchg.150\)).
 

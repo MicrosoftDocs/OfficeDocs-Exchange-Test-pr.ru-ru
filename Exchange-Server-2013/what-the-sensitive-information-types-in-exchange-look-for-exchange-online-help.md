@@ -58,13 +58,18 @@ _**Последнее изменение раздела:** 2018-05-03_
 <li><p>функция <code>Func_aba_routing</code> находит содержимое, которое соответствует шаблону;</p></li>
 <li><p>находится ключевое слово из <code>Keyword_ABA_Routing</code>.</p></li>
 </ul>
-<pre><code>&lt;!-- ABA Routing Number --&gt;
+
+```Command&nbsp;Line
+&lt;!-- ABA Routing Number --&gt;
 &lt;Entity id=&quot;cb353f78-2b72-4c3c-8827-92ebe4f69fdf&quot; patternsProximity=&quot;300&quot; recommendedConfidence=&quot;75&quot;&gt;
       &lt;Pattern confidenceLevel=&quot;75&quot;&gt;
         &lt;IdMatch idRef=&quot;Func_aba_routing&quot; /&gt;
         &lt;Match idRef=&quot;Keyword_ABA_Routing&quot; /&gt;
       &lt;/Pattern&gt;
- &lt;/Entity&gt;</code></pre></td>
+ &lt;/Entity&gt;
+```
+
+</td>
 </tr>
 <tr class="odd">
 <td><p>Ключевые слова</p></td>
@@ -143,13 +148,19 @@ _**Последнее изменение раздела:** 2018-05-03_
 <li><p>регулярное выражение <code>Regex_argentina_national_id</code> находит содержимое, которое соответствует шаблону;</p></li>
 <li><p>находится ключевое слово из <code>Keyword_argentina_national_id</code>.</p></li>
 </ul>
-<pre><code>&lt;!-- Argentina National Identity (DNI) Number --&gt;
-&lt;Entity id=&quot;eefbb00e-8282-433c-8620-8f1da3bffdb2&quot; recommendedConfidence=&quot;75&quot; patternsProximity=&quot;300&quot;&gt;
-   &lt;Pattern confidenceLevel=&quot;75&quot;&gt;
-      &lt;IdMatch idRef=&quot;Regex_argentina_national_id&quot;/&gt;
-      &lt;Match idRef=&quot;Keyword_argentina_national_id&quot;/&gt;
-  &lt;/Pattern&gt;
-&lt;/Entity&gt;</code></pre></td>
+
+
+```Command&nbsp;Line
+<!-- Argentina National Identity (DNI) Number -->
+<Entity id="eefbb00e-8282-433c-8620-8f1da3bffdb2" recommendedConfidence="75" patternsProximity="300">
+   <Pattern confidenceLevel="75">
+      <IdMatch idRef="Regex_argentina_national_id"/>
+      <Match idRef="Keyword_argentina_national_id"/>
+  </Pattern>
+</Entity>
+```
+
+</td>
 </tr>
 <tr class="odd">
 <td><p>Ключевые слова</p></td>
@@ -225,18 +236,24 @@ _**Последнее изменение раздела:** 2018-05-03_
 <li><p>регулярное выражение <code>Regex_australia_bank_account_number</code> находит содержимое, которое соответствует шаблону;</p></li>
 <li><p>находится ключевое слово из <code>Keyword_australia_bank_account_number</code>.</p></li>
 </ul>
-<pre><code>&lt;!-- Australia Bank Account Number --&gt;
-&lt;Entity id=&quot;74a54de9-2a30-4aa0-a8aa-3d9327fc07c7&quot; patternsProximity=&quot;300&quot; recommendedConfidence=&quot;75&quot;&gt;
-  &lt;Pattern confidenceLevel=&quot;85&quot;&gt;
-        &lt;IdMatch idRef=&quot;Regex_australia_bank_account_number&quot; /&gt;
-        &lt;Match idRef=&quot;Keyword_australia_bank_account_number&quot; /&gt;
-        &lt;Match idRef=&quot;Regex_australia_bank_account_number_bsb&quot; /&gt;
-  &lt;/Pattern&gt;
-  &lt;Pattern confidenceLevel=&quot;75&quot;&gt;
-        &lt;IdMatch idRef=&quot;Regex_australia_bank_account_number&quot; /&gt;
-        &lt;Match idRef=&quot;Keyword_australia_bank_account_number&quot; /&gt;
-  &lt;/Pattern&gt;
- &lt;/Entity&gt;</code></pre></td>
+
+
+```Command&nbsp;Line
+<!-- Australia Bank Account Number -->
+<Entity id="74a54de9-2a30-4aa0-a8aa-3d9327fc07c7" patternsProximity="300" recommendedConfidence="75">
+  <Pattern confidenceLevel="85">
+        <IdMatch idRef="Regex_australia_bank_account_number" />
+        <Match idRef="Keyword_australia_bank_account_number" />
+        <Match idRef="Regex_australia_bank_account_number_bsb" />
+  </Pattern>
+  <Pattern confidenceLevel="75">
+        <IdMatch idRef="Regex_australia_bank_account_number" />
+        <Match idRef="Keyword_australia_bank_account_number" />
+  </Pattern>
+ </Entity>
+```
+
+</td>
 </tr>
 <tr class="odd">
 <td><p>Ключевые слова</p></td>
@@ -315,16 +332,22 @@ _**Последнее изменение раздела:** 2018-05-03_
 <li><p>находится ключевое слово из <code>Keyword_australia_drivers_license_number</code>;</p></li>
 <li><p>ни одно ключевое слово из <code>Keyword_australia_drivers_license_number_exclusions</code> не находится.</p></li>
 </ul>
-<pre><code>&lt;!-- Australia Drivers License Number --&gt;
-&lt;Entity id=&quot;1cbbc8f5-9216-4392-9eb5-5ac2298d1356&quot; patternsProximity=&quot;300&quot; recommendedConfidence=&quot;75&quot;&gt;
-   &lt;Pattern confidenceLevel=&quot;75&quot;&gt;
-        &lt;IdMatch idRef=&quot;Regex_australia_drivers_license_number&quot; /&gt;
-        &lt;Match idRef=&quot;Keyword_australia_drivers_license_number&quot; /&gt;
-        &lt;Any minMatches=&quot;0&quot; maxMatches=&quot;0&quot;&gt;
-          &lt;Match idRef=&quot;Keyword_australia_drivers_license_number_exclusions&quot; /&gt;
-        &lt;/Any&gt;
-  &lt;/Pattern&gt;
-&lt;/Entity&gt;</code></pre></td>
+
+
+```Command&nbsp;Line
+<!-- Australia Drivers License Number -->
+<Entity id="1cbbc8f5-9216-4392-9eb5-5ac2298d1356" patternsProximity="300" recommendedConfidence="75">
+   <Pattern confidenceLevel="75">
+        <IdMatch idRef="Regex_australia_drivers_license_number" />
+        <Match idRef="Keyword_australia_drivers_license_number" />
+        <Any minMatches="0" maxMatches="0">
+          <Match idRef="Keyword_australia_drivers_license_number_exclusions" />
+        </Any>
+  </Pattern>
+</Entity>
+```
+
+</td>
 </tr>
 <tr class="odd">
 <td><p>Ключевые слова</p></td>
@@ -490,21 +513,27 @@ _**Последнее изменение раздела:** 2018-05-03_
 <li><p>функция <code>Func_australian_medical_account_number</code> находит содержимое, которое соответствует шаблону;</p></li>
 <li><p>контрольная сумма проходит проверку.</p></li>
 </ul>
-<pre><code>  &lt;!-- Australia Medical Account Number --&gt;
-&lt;Entity id=&quot;104a99a0-3d3b-4542-a40d-ab0b9e1efe63&quot; recommendedConfidence=&quot;85&quot; patternsProximity=&quot;300&quot;&gt;
-    &lt;Pattern confidenceLevel=&quot;95&quot;&gt;
-     &lt;IdMatch idRef=&quot;Func_australian_medical_account_number&quot;/&gt;
-     &lt;Any minMatches=&quot;1&quot;&gt;
-     &lt;Match idRef=&quot;Keyword_Australia_Medical_Account_Number&quot;/&gt;
-     &lt;/Any&gt;
-  &lt;/Pattern&gt;
-&lt;Pattern confidenceLevel=&quot;85&quot;&gt;
-     &lt;IdMatch idRef=&quot;Func_australian_medical_account_number&quot;/&gt;
-     &lt;Any minMatches=&quot;0&quot; maxMatches=&quot;0&quot;&gt;
-  &lt;Match idRef=&quot;Keyword_Australia_Medical_Account_Number&quot;/&gt;
-     &lt;/Any&gt;
-  &lt;/Pattern&gt;
-&lt;/Entity&gt;</code></pre></td>
+
+
+```Command&nbsp;Line
+  <!-- Australia Medical Account Number -->
+<Entity id="104a99a0-3d3b-4542-a40d-ab0b9e1efe63" recommendedConfidence="85" patternsProximity="300">
+    <Pattern confidenceLevel="95">
+     <IdMatch idRef="Func_australian_medical_account_number"/>
+     <Any minMatches="1">
+     <Match idRef="Keyword_Australia_Medical_Account_Number"/>
+     </Any>
+  </Pattern>
+<Pattern confidenceLevel="85">
+     <IdMatch idRef="Func_australian_medical_account_number"/>
+     <Any minMatches="0" maxMatches="0">
+  <Match idRef="Keyword_Australia_Medical_Account_Number"/>
+     </Any>
+  </Pattern>
+</Entity>
+```
+
+</td>
 </tr>
 <tr class="odd">
 <td><p>Ключевые слова</p></td>
@@ -568,16 +597,22 @@ _**Последнее изменение раздела:** 2018-05-03_
 <li><p>регулярное выражение <code>Regex_australia_passport_number</code> находит содержимое, которое соответствует шаблону;</p></li>
 <li><p>находится ключевое слово из <code>Keyword_passport</code> или <code>Keyword_australia_passport_number</code>.</p></li>
 </ul>
-<pre><code>&lt;!-- Australia Passport Number --&gt;
-&lt;Entity id=&quot;29869db6-602d-4853-ab93-3484f905df50&quot; patternsProximity=&quot;300&quot; recommendedConfidence=&quot;75&quot;&gt;
-  &lt;Pattern confidenceLevel=&quot;75&quot;&gt;
-        &lt;IdMatch idRef=&quot;Regex_australia_passport_number&quot; /&gt;
-        &lt;Any minMatches=&quot;1&quot;&gt;
-          &lt;Match idRef=&quot;Keyword_passport&quot; /&gt;
-          &lt;Match idRef=&quot;Keyword_australia_passport_number&quot; /&gt;
-        &lt;/Any&gt;
-   &lt;/Pattern&gt;
-&lt;/Entity&gt;</code></pre></td>
+
+
+```Command&nbsp;Line
+<!-- Australia Passport Number -->
+<Entity id="29869db6-602d-4853-ab93-3484f905df50" patternsProximity="300" recommendedConfidence="75">
+  <Pattern confidenceLevel="75">
+        <IdMatch idRef="Regex_australia_passport_number" />
+        <Any minMatches="1">
+          <Match idRef="Keyword_passport" />
+          <Match idRef="Keyword_australia_passport_number" />
+        </Any>
+   </Pattern>
+</Entity>
+```
+
+</td>
 </tr>
 <tr class="odd">
 <td><p>Ключевые слова</p></td>
@@ -679,25 +714,31 @@ _**Последнее изменение раздела:** 2018-05-03_
 <li><p>ни одно ключевое слово из <code>Keyword_Australia_Tax_File_Number</code> или <code>Keyword_number_exclusions</code> не найдено;</p></li>
 <li><p>контрольная сумма проходит проверку.</p></li>
 </ul>
-<pre><code>    &lt;!-- Australia Tax File Number --&gt;
-&lt;Entity id=&quot;e29bc95f-ff70-4a37-aa01-04d17360a4c5&quot; patternsProximity=&quot;300&quot; recommendedConfidence=&quot;85&quot;&gt;
-    &lt;Pattern confidenceLevel=&quot;95&quot;&gt;
-        &lt;IdMatch idRef=&quot;Func_australian_tax_file_number&quot; /&gt;
-        &lt;Any minMatches=&quot;1&quot;&gt;
-          &lt;Match idRef=&quot;Keyword_Australia_Tax_File_Number&quot; /&gt;
-        &lt;/Any&gt;
-        &lt;Any minMatches=&quot;0&quot; maxMatches=&quot;0&quot;&gt;
-          &lt;Match idRef=&quot;Keyword_number_exclusions&quot; /&gt;
-        &lt;/Any&gt;
-  &lt;/Pattern&gt;
-  &lt;Pattern confidenceLevel=&quot;85&quot;&gt;
-        &lt;IdMatch idRef=&quot;Func_australian_tax_file_number&quot; /&gt;
-        &lt;Any minMatches=&quot;0&quot; maxMatches=&quot;0&quot;&gt;
-          &lt;Match idRef=&quot;Keyword_Australia_Tax_File_Number&quot; /&gt;
-          &lt;Match idRef=&quot;Keyword_number_exclusions&quot; /&gt;
-        &lt;/Any&gt;
-  &lt;/Pattern&gt;
-&lt;/Entity&gt;</code></pre></td>
+
+
+```Command&nbsp;Line
+    <!-- Australia Tax File Number -->
+<Entity id="e29bc95f-ff70-4a37-aa01-04d17360a4c5" patternsProximity="300" recommendedConfidence="85">
+    <Pattern confidenceLevel="95">
+        <IdMatch idRef="Func_australian_tax_file_number" />
+        <Any minMatches="1">
+          <Match idRef="Keyword_Australia_Tax_File_Number" />
+        </Any>
+        <Any minMatches="0" maxMatches="0">
+          <Match idRef="Keyword_number_exclusions" />
+        </Any>
+  </Pattern>
+  <Pattern confidenceLevel="85">
+        <IdMatch idRef="Func_australian_tax_file_number" />
+        <Any minMatches="0" maxMatches="0">
+          <Match idRef="Keyword_Australia_Tax_File_Number" />
+          <Match idRef="Keyword_number_exclusions" />
+        </Any>
+  </Pattern>
+</Entity>
+```
+
+</td>
 </tr>
 <tr class="odd">
 <td><p>Ключевые слова</p></td>
@@ -800,13 +841,19 @@ _**Последнее изменение раздела:** 2018-05-03_
 <li><p>находится ключевое слово из <code>Keyword_belgium_national_number</code>;</p></li>
 <li><p>Контрольная сумма проходит проверку.</p></li>
 </ul>
-<pre><code>&lt;!-- Belgium National Number --&gt;
-  &lt;Entity id=&quot;fb969c9e-0fd1-4b18-8091-a2123c5e6a54&quot; recommendedConfidence=&quot;75&quot; patternsProximity=&quot;300&quot;&gt;
-   &lt;Pattern confidenceLevel=&quot;75&quot;&gt;
-     &lt;IdMatch idRef=&quot;Func_belgium_national_number&quot;/&gt;
-     &lt;Match idRef=&quot;Keyword_belgium_national_number&quot;/&gt;
-  &lt;/Pattern&gt;
-&lt;/Entity&gt;</code></pre></td>
+
+
+```Command&nbsp;Line
+<!-- Belgium National Number -->
+  <Entity id="fb969c9e-0fd1-4b18-8091-a2123c5e6a54" recommendedConfidence="75" patternsProximity="300">
+   <Pattern confidenceLevel="75">
+     <IdMatch idRef="Func_belgium_national_number"/>
+     <Match idRef="Keyword_belgium_national_number"/>
+  </Pattern>
+</Entity>
+```
+
+</td>
 </tr>
 <tr class="odd">
 <td><p>Ключевые слова</p></td>
@@ -899,16 +946,22 @@ _**Последнее изменение раздела:** 2018-05-03_
 <li><p>функция <code>Func_brazil_cnpj</code> находит содержимое, которое соответствует шаблону;</p></li>
 <li><p>контрольная сумма проходит проверку.</p></li>
 </ul>
-<pre><code>&lt;!-- Brazil Legal Entity Number (CNPJ) --&gt;
-&lt;Entity id=&quot;9b58b5cd-5e90-4df6-b34f-1ebcc88ceae4&quot; recommendedConfidence=&quot;85&quot; patternsProximity=&quot;300&quot;&gt;
-   &lt;Pattern confidenceLevel=&quot;85&quot;&gt;
-     &lt;IdMatch idRef=&quot;Func_brazil_cnpj&quot;/&gt;
-     &lt;Match idRef=&quot;Keyword_brazil_cnpj&quot;/&gt;
-  &lt;/Pattern&gt;
-  &lt;Pattern confidenceLevel=&quot;75&quot;&gt;
-     &lt;IdMatch idRef=&quot;Func_brazil_cnpj&quot;/&gt;
-  &lt;/Pattern&gt;
-&lt;/Entity&gt;</code></pre></td>
+
+
+```Command&nbsp;Line
+<!-- Brazil Legal Entity Number (CNPJ) -->
+<Entity id="9b58b5cd-5e90-4df6-b34f-1ebcc88ceae4" recommendedConfidence="85" patternsProximity="300">
+   <Pattern confidenceLevel="85">
+     <IdMatch idRef="Func_brazil_cnpj"/>
+     <Match idRef="Keyword_brazil_cnpj"/>
+  </Pattern>
+  <Pattern confidenceLevel="75">
+     <IdMatch idRef="Func_brazil_cnpj"/>
+  </Pattern>
+</Entity>
+```
+
+</td>
 </tr>
 <tr class="odd">
 <td><p>Ключевые слова</p></td>
@@ -1001,16 +1054,22 @@ _**Последнее изменение раздела:** 2018-05-03_
 <li><p>функция <code>Func_brazil_cpf</code> находит содержимое, которое соответствует шаблону;</p></li>
 <li><p>контрольная сумма проходит проверку.</p></li>
 </ul>
-<pre><code>&lt;!-- Brazil CPF Number --&gt;
-&lt;Entity id=&quot;78e09124-f2c3-4656-b32a-c1a132cd2711&quot; recommendedConfidence=&quot;85&quot; patternsProximity=&quot;300&quot;&gt;
-  &lt;Pattern confidenceLevel=&quot;85&quot;&gt;
-     &lt;IdMatch idRef=&quot;Func_brazil_cpf&quot;/&gt;
-     &lt;Match idRef=&quot;Keyword_brazil_cpf&quot;/&gt;
-  &lt;/Pattern&gt;
-  &lt;Pattern confidenceLevel=&quot;75&quot;&gt;
-     &lt;IdMatch idRef=&quot;Func_brazil_cpf&quot;/&gt;
-  &lt;/Pattern&gt;
-&lt;/Entity&gt;</code></pre></td>
+
+
+```Command&nbsp;Line
+<!-- Brazil CPF Number -->
+<Entity id="78e09124-f2c3-4656-b32a-c1a132cd2711" recommendedConfidence="85" patternsProximity="300">
+  <Pattern confidenceLevel="85">
+     <IdMatch idRef="Func_brazil_cpf"/>
+     <Match idRef="Keyword_brazil_cpf"/>
+  </Pattern>
+  <Pattern confidenceLevel="75">
+     <IdMatch idRef="Func_brazil_cpf"/>
+  </Pattern>
+</Entity>
+```
+
+</td>
 </tr>
 <tr class="odd">
 <td><p>Ключевые слова</p></td>
@@ -1104,16 +1163,22 @@ _**Последнее изменение раздела:** 2018-05-03_
 <li><p>функция <code>Func_brazil_rg</code> находит содержимое, которое соответствует шаблону;</p></li>
 <li><p>контрольная сумма проходит проверку.</p></li>
 </ul>
-<pre><code>&lt;!-- Brazil National ID Card (RG) --&gt;
-&lt;Entity id=&quot;486de900-db70-41b3-a886-abdf25af119c&quot; recommendedConfidence=&quot;85&quot; patternsProximity=&quot;300&quot;&gt;
-  &lt;Pattern confidenceLevel=&quot;85&quot;&gt;
-     &lt;IdMatch idRef=&quot;Func_brazil_rg&quot;/&gt;
-     &lt;Match idRef=&quot;Keyword_brazil_rg&quot;/&gt;
-  &lt;/Pattern&gt;
-  &lt;Pattern confidenceLevel=&quot;75&quot;&gt;
-     &lt;IdMatch idRef=&quot;Func_brazil_rg&quot;/&gt;
-  &lt;/Pattern&gt;
-&lt;/Entity&gt;</code></pre></td>
+
+
+```Command&nbsp;Line
+<!-- Brazil National ID Card (RG) -->
+<Entity id="486de900-db70-41b3-a886-abdf25af119c" recommendedConfidence="85" patternsProximity="300">
+  <Pattern confidenceLevel="85">
+     <IdMatch idRef="Func_brazil_rg"/>
+     <Match idRef="Keyword_brazil_rg"/>
+  </Pattern>
+  <Pattern confidenceLevel="75">
+     <IdMatch idRef="Func_brazil_rg"/>
+  </Pattern>
+</Entity>
+```
+
+</td>
 </tr>
 <tr class="odd">
 <td><p>Ключевые слова</p></td>
@@ -1192,18 +1257,24 @@ _**Последнее изменение раздела:** 2018-05-03_
 <li><p>регулярное выражение <code>Regex_canada_bank_account_number</code> находит содержимое, которое соответствует шаблону;</p></li>
 <li><p>находится ключевое слово из <code>Keyword_canada_bank_account_number</code>.</p></li>
 </ul>
-<pre><code>&lt;!-- Canada Bank Account Number --&gt;
-&lt;Entity id=&quot;552e814c-cb50-4d94-bbaa-bb1d1ffb34de&quot; patternsProximity=&quot;300&quot; recommendedConfidence=&quot;75&quot;&gt;
-  &lt;Pattern confidenceLevel=&quot;85&quot;&gt;
-        &lt;IdMatch idRef=&quot;Regex_canada_bank_account_number&quot; /&gt;
-        &lt;Match idRef=&quot;Keyword_canada_bank_account_number&quot; /&gt;
-        &lt;Match idRef=&quot;Regex_canada_bank_account_transit_number&quot; /&gt;
-   &lt;/Pattern&gt;
-   &lt;Pattern confidenceLevel=&quot;75&quot;&gt;
-        &lt;IdMatch idRef=&quot;Regex_canada_bank_account_number&quot; /&gt;
-        &lt;Match idRef=&quot;Keyword_canada_bank_account_number&quot; /&gt;
-   &lt;/Pattern&gt;
-&lt;/Entity&gt;</code></pre></td>
+
+
+```Command&nbsp;Line
+<!-- Canada Bank Account Number -->
+<Entity id="552e814c-cb50-4d94-bbaa-bb1d1ffb34de" patternsProximity="300" recommendedConfidence="75">
+  <Pattern confidenceLevel="85">
+        <IdMatch idRef="Regex_canada_bank_account_number" />
+        <Match idRef="Keyword_canada_bank_account_number" />
+        <Match idRef="Regex_canada_bank_account_transit_number" />
+   </Pattern>
+   <Pattern confidenceLevel="75">
+        <IdMatch idRef="Regex_canada_bank_account_number" />
+        <Match idRef="Keyword_canada_bank_account_number" />
+   </Pattern>
+</Entity>
+```
+
+</td>
 </tr>
 <tr class="odd">
 <td><p>Ключевые слова</p></td>
@@ -1280,59 +1351,65 @@ _**Последнее изменение раздела:** 2018-05-03_
 <li><p>находится ключевое слово из <code>Keyword_[province_name]_drivers_license_name</code>;</p></li>
 <li><p>находится ключевое слово из <code>Keyword_canada_drivers_license</code>.</p></li>
 </ul>
-<pre><code>&lt;!-- Canada Driver&#39;s License Number --&gt;
-    &lt;Entity id=&quot;37186abb-8e48-4800-ad3c-e3d1610b3db0&quot; patternsProximity=&quot;300&quot; recommendedConfidence=&quot;75&quot;&gt;
-      &lt;Pattern confidenceLevel=&quot;75&quot;&gt;
-        &lt;IdMatch idRef=&quot;Func_alberta_drivers_license_number&quot; /&gt;
-        &lt;Match idRef=&quot;Keyword_alberta_drivers_license_name&quot; /&gt;
-        &lt;Match idRef=&quot;Keyword_canada_drivers_license&quot; /&gt;
-      &lt;/Pattern&gt;
-      &lt;Pattern confidenceLevel=&quot;75&quot;&gt;
-        &lt;IdMatch idRef=&quot;Func_british_columbia_drivers_license_number&quot; /&gt;
-        &lt;Match idRef=&quot;Keyword_british_columbia_drivers_license_name&quot; /&gt;
-        &lt;Match idRef=&quot;Keyword_canada_drivers_license&quot; /&gt;
-      &lt;/Pattern&gt;
-      &lt;Pattern confidenceLevel=&quot;75&quot;&gt;
-        &lt;IdMatch idRef=&quot;Func_manitoba_drivers_license_number&quot; /&gt;
-        &lt;Match idRef=&quot;Keyword_manitoba_drivers_license_name&quot; /&gt;
-        &lt;Match idRef=&quot;Keyword_canada_drivers_license&quot; /&gt;
-      &lt;/Pattern&gt;
-      &lt;Pattern confidenceLevel=&quot;75&quot;&gt;
-        &lt;IdMatch idRef=&quot;Func_new_brunswick_drivers_license_number&quot; /&gt;
-        &lt;Match idRef=&quot;Keyword_new_brunswick_drivers_license_name&quot; /&gt;
-        &lt;Match idRef=&quot;Keyword_canada_drivers_license&quot; /&gt;
-      &lt;/Pattern&gt;
-      &lt;Pattern confidenceLevel=&quot;75&quot;&gt;
-        &lt;IdMatch idRef=&quot;Func_newfoundland_labrador_drivers_license_number&quot; /&gt;
-        &lt;Match idRef=&quot;Keyword_newfoundland_labrador_drivers_license_name&quot; /&gt;
-        &lt;Match idRef=&quot;Keyword_canada_drivers_license&quot; /&gt;
-      &lt;/Pattern&gt;
-      &lt;Pattern confidenceLevel=&quot;75&quot;&gt;
-        &lt;IdMatch idRef=&quot;Func_nova_scotia_drivers_license_number&quot; /&gt;
-        &lt;Match idRef=&quot;Keyword_nova_scotia_drivers_license_name&quot; /&gt;
-        &lt;Match idRef=&quot;Keyword_canada_drivers_license&quot; /&gt;
-      &lt;/Pattern&gt;
-      &lt;Pattern confidenceLevel=&quot;75&quot;&gt;
-        &lt;IdMatch idRef=&quot;Func_ontario_drivers_license_number&quot; /&gt;
-        &lt;Match idRef=&quot;Keyword_ontario_drivers_license_name&quot; /&gt;
-        &lt;Match idRef=&quot;Keyword_canada_drivers_license&quot; /&gt;
-      &lt;/Pattern&gt;
-      &lt;Pattern confidenceLevel=&quot;75&quot;&gt;
-        &lt;IdMatch idRef=&quot;Func_prince_edward_island_drivers_license_number&quot; /&gt;
-        &lt;Match idRef=&quot;Keyword_prince_edward_island_drivers_license_name&quot; /&gt;
-        &lt;Match idRef=&quot;Keyword_canada_drivers_license&quot; /&gt;
-      &lt;/Pattern&gt;
-      &lt;Pattern confidenceLevel=&quot;75&quot;&gt;
-        &lt;IdMatch idRef=&quot;Func_quebec_drivers_license_number&quot; /&gt;
-        &lt;Match idRef=&quot;Keyword_quebec_drivers_license_name&quot; /&gt;
-        &lt;Match idRef=&quot;Keyword_canada_drivers_license&quot; /&gt;
-      &lt;/Pattern&gt;
-      &lt;Pattern confidenceLevel=&quot;75&quot;&gt;
-        &lt;IdMatch idRef=&quot;Func_saskatchewan_drivers_license_number&quot; /&gt;
-        &lt;Match idRef=&quot;Keyword_saskatchewan_drivers_license_name&quot; /&gt;
-        &lt;Match idRef=&quot;Keyword_canada_drivers_license&quot; /&gt;
-      &lt;/Pattern&gt;
-    &lt;/Entity&gt;</code></pre></td>
+
+
+```Command&nbsp;Line
+<!-- Canada Driver's License Number -->
+    <Entity id="37186abb-8e48-4800-ad3c-e3d1610b3db0" patternsProximity="300" recommendedConfidence="75">
+      <Pattern confidenceLevel="75">
+        <IdMatch idRef="Func_alberta_drivers_license_number" />
+        <Match idRef="Keyword_alberta_drivers_license_name" />
+        <Match idRef="Keyword_canada_drivers_license" />
+      </Pattern>
+      <Pattern confidenceLevel="75">
+        <IdMatch idRef="Func_british_columbia_drivers_license_number" />
+        <Match idRef="Keyword_british_columbia_drivers_license_name" />
+        <Match idRef="Keyword_canada_drivers_license" />
+      </Pattern>
+      <Pattern confidenceLevel="75">
+        <IdMatch idRef="Func_manitoba_drivers_license_number" />
+        <Match idRef="Keyword_manitoba_drivers_license_name" />
+        <Match idRef="Keyword_canada_drivers_license" />
+      </Pattern>
+      <Pattern confidenceLevel="75">
+        <IdMatch idRef="Func_new_brunswick_drivers_license_number" />
+        <Match idRef="Keyword_new_brunswick_drivers_license_name" />
+        <Match idRef="Keyword_canada_drivers_license" />
+      </Pattern>
+      <Pattern confidenceLevel="75">
+        <IdMatch idRef="Func_newfoundland_labrador_drivers_license_number" />
+        <Match idRef="Keyword_newfoundland_labrador_drivers_license_name" />
+        <Match idRef="Keyword_canada_drivers_license" />
+      </Pattern>
+      <Pattern confidenceLevel="75">
+        <IdMatch idRef="Func_nova_scotia_drivers_license_number" />
+        <Match idRef="Keyword_nova_scotia_drivers_license_name" />
+        <Match idRef="Keyword_canada_drivers_license" />
+      </Pattern>
+      <Pattern confidenceLevel="75">
+        <IdMatch idRef="Func_ontario_drivers_license_number" />
+        <Match idRef="Keyword_ontario_drivers_license_name" />
+        <Match idRef="Keyword_canada_drivers_license" />
+      </Pattern>
+      <Pattern confidenceLevel="75">
+        <IdMatch idRef="Func_prince_edward_island_drivers_license_number" />
+        <Match idRef="Keyword_prince_edward_island_drivers_license_name" />
+        <Match idRef="Keyword_canada_drivers_license" />
+      </Pattern>
+      <Pattern confidenceLevel="75">
+        <IdMatch idRef="Func_quebec_drivers_license_number" />
+        <Match idRef="Keyword_quebec_drivers_license_name" />
+        <Match idRef="Keyword_canada_drivers_license" />
+      </Pattern>
+      <Pattern confidenceLevel="75">
+        <IdMatch idRef="Func_saskatchewan_drivers_license_number" />
+        <Match idRef="Keyword_saskatchewan_drivers_license_name" />
+        <Match idRef="Keyword_canada_drivers_license" />
+      </Pattern>
+    </Entity>
+```
+
+</td>
 </tr>
 <tr class="odd">
 <td><p>Ключевые слова</p></td>
@@ -1521,15 +1598,21 @@ _**Последнее изменение раздела:** 2018-05-03_
 <li><p>регулярное выражение <code>Regex_canada_health_service_number</code> находит содержимое, которое соответствует шаблону;</p></li>
 <li><p>находится ключевое слово из <code>Keyword_canada_health_service_number</code>.</p></li>
 </ul>
-<pre><code>&lt;!-- Canada Health Service Number --&gt;
-&lt;Entity id=&quot;59c0bf39-7fab-482c-af25-00faa4384c94&quot; patternsProximity=&quot;300&quot; recommendedConfidence=&quot;75&quot;&gt;
-  &lt;Pattern confidenceLevel=&quot;75&quot;&gt;
-        &lt;IdMatch idRef=&quot;Regex_canada_health_service_number&quot; /&gt;
-        &lt;Any minMatches=&quot;1&quot;&gt;
-          &lt;Match idRef=&quot;Keyword_canada_health_service_number&quot; /&gt;
-        &lt;/Any&gt;
-  &lt;/Pattern&gt;
-&lt;/Entity&gt;</code></pre></td>
+
+
+```Command&nbsp;Line
+<!-- Canada Health Service Number -->
+<Entity id="59c0bf39-7fab-482c-af25-00faa4384c94" patternsProximity="300" recommendedConfidence="75">
+  <Pattern confidenceLevel="75">
+        <IdMatch idRef="Regex_canada_health_service_number" />
+        <Any minMatches="1">
+          <Match idRef="Keyword_canada_health_service_number" />
+        </Any>
+  </Pattern>
+</Entity>
+```
+
+</td>
 </tr>
 <tr class="odd">
 <td><p>Ключевые слова</p></td>
@@ -1593,16 +1676,22 @@ _**Последнее изменение раздела:** 2018-05-03_
 <li><p>регулярное выражение <code>Regex_canada_passport_number</code> находит содержимое, которое соответствует шаблону;</p></li>
 <li><p>находится ключевое слово из <code>Keyword_canada_passport_number</code> или <code>Keyword_passport</code>.</p></li>
 </ul>
-<pre><code> &lt;!-- Canada Passport Number --&gt;
-&lt;Entity id=&quot;14d0db8b-498a-43ed-9fca-f6097ae687eb&quot; patternsProximity=&quot;300&quot; recommendedConfidence=&quot;75&quot;&gt;
-  &lt;Pattern confidenceLevel=&quot;75&quot;&gt;
-        &lt;IdMatch idRef=&quot;Regex_canada_passport_number&quot; /&gt;
-        &lt;Any minMatches=&quot;1&quot;&gt;
-          &lt;Match idRef=&quot;Keyword_canada_passport_number&quot; /&gt;
-          &lt;Match idRef=&quot;Keyword_passport&quot; /&gt;
-        &lt;/Any&gt;
-  &lt;/Pattern&gt;
-&lt;/Entity&gt;</code></pre></td>
+
+
+```Command&nbsp;Line
+ <!-- Canada Passport Number -->
+<Entity id="14d0db8b-498a-43ed-9fca-f6097ae687eb" patternsProximity="300" recommendedConfidence="75">
+  <Pattern confidenceLevel="75">
+        <IdMatch idRef="Regex_canada_passport_number" />
+        <Any minMatches="1">
+          <Match idRef="Keyword_canada_passport_number" />
+          <Match idRef="Keyword_passport" />
+        </Any>
+  </Pattern>
+</Entity>
+```
+
+</td>
 </tr>
 <tr class="odd">
 <td><p>Ключевые слова</p></td>
@@ -1685,16 +1774,22 @@ _**Последнее изменение раздела:** 2018-05-03_
 <li><p>регулярное выражение <code>Regex_canada_phin</code> находит содержимое, которое соответствует шаблону;</p></li>
 <li><p>находятся по меньшей мере два ключевых слова из <code>Keyword_canada_phin</code> или <code>Keyword_canada_provinces</code>.</p></li>
 </ul>
-<pre><code>&lt;!-- Canada PHIN --&gt;
-&lt;Entity id=&quot;722e12ac-c89a-4ec8-a1b7-fea3469f89db&quot; patternsProximity=&quot;300&quot; recommendedConfidence=&quot;75&quot;&gt;
-  &lt;Pattern confidenceLevel=&quot;75&quot;&gt;
-        &lt;IdMatch idRef=&quot;Regex_canada_phin&quot; /&gt;
-        &lt;Any minMatches=&quot;2&quot;&gt;
-          &lt;Match idRef=&quot;Keyword_canada_phin&quot; /&gt;
-          &lt;Match idRef=&quot;Keyword_canada_provinces&quot; /&gt;
-        &lt;/Any&gt;
-  &lt;/Pattern&gt;
-&lt;/Entity&gt;</code></pre></td>
+
+
+```Command&nbsp;Line
+<!-- Canada PHIN -->
+<Entity id="722e12ac-c89a-4ec8-a1b7-fea3469f89db" patternsProximity="300" recommendedConfidence="75">
+  <Pattern confidenceLevel="75">
+        <IdMatch idRef="Regex_canada_phin" />
+        <Any minMatches="2">
+          <Match idRef="Keyword_canada_phin" />
+          <Match idRef="Keyword_canada_provinces" />
+        </Any>
+  </Pattern>
+</Entity>
+```
+
+</td>
 </tr>
 <tr class="odd">
 <td><p>Ключевые слова</p></td>
@@ -1803,21 +1898,27 @@ _**Последнее изменение раздела:** 2018-05-03_
 <li><p>найдено ключевое слово из <code>Keyword_sin</code>;</p></li>
 <li><p>Контрольная сумма проходит проверку.</p></li>
 </ul>
-<pre><code>&lt;!-- Canada Social Insurance Number --&gt;
-&lt;Entity id=&quot;a2f29c85-ecb8-4514-a610-364790c0773e&quot; patternsProximity=&quot;300&quot; recommendedConfidence=&quot;75&quot;&gt;
-  &lt;Pattern confidenceLevel=&quot;85&quot;&gt;
-        &lt;IdMatch idRef=&quot;Func_canadian_sin&quot; /&gt;
-        &lt;Any minMatches=&quot;2&quot;&gt;
-          &lt;Match idRef=&quot;Keyword_sin&quot; /&gt;
-          &lt;Match idRef=&quot;Keyword_sin_collaborative&quot; /&gt;
-          &lt;Match idRef=&quot;Func_eu_date&quot; /&gt;
-        &lt;/Any&gt;
-  &lt;/Pattern&gt;
-  &lt;Pattern confidenceLevel=&quot;75&quot;&gt;
-        &lt;IdMatch idRef=&quot;Func_unformatted_canadian_sin&quot; /&gt;
-        &lt;Match idRef=&quot;Keyword_sin&quot; /&gt;
-  &lt;/Pattern&gt;
-&lt;/Entity&gt;</code></pre></td>
+
+
+```Command&nbsp;Line
+<!-- Canada Social Insurance Number -->
+<Entity id="a2f29c85-ecb8-4514-a610-364790c0773e" patternsProximity="300" recommendedConfidence="75">
+  <Pattern confidenceLevel="85">
+        <IdMatch idRef="Func_canadian_sin" />
+        <Any minMatches="2">
+          <Match idRef="Keyword_sin" />
+          <Match idRef="Keyword_sin_collaborative" />
+          <Match idRef="Func_eu_date" />
+        </Any>
+  </Pattern>
+  <Pattern confidenceLevel="75">
+        <IdMatch idRef="Func_unformatted_canadian_sin" />
+        <Match idRef="Keyword_sin" />
+  </Pattern>
+</Entity>
+```
+
+</td>
 </tr>
 <tr class="odd">
 <td><p>Ключевые слова</p></td>
@@ -1910,16 +2011,22 @@ _**Последнее изменение раздела:** 2018-05-03_
 <li><p>функция <code>Func_chile_id_card</code> находит содержимое, которое соответствует шаблону;</p></li>
 <li><p>контрольная сумма проходит проверку.</p></li>
 </ul>
-<pre><code>&lt;!-- Chile Identity Card Number --&gt;
-&lt;Entity id=&quot;4e979794-49a0-407e-a0b9-2c536937b925&quot; recommendedConfidence=&quot;85&quot; patternsProximity=&quot;300&quot;&gt;
-  &lt;Pattern confidenceLevel=&quot;85&quot;&gt;
-     &lt;IdMatch idRef=&quot;Func_chile_id_card&quot;/&gt;
-     &lt;Match idRef=&quot;Keyword_chile_id_card&quot;/&gt;
-  &lt;/Pattern&gt;
-  &lt;Pattern confidenceLevel=&quot;75&quot;&gt;
-     &lt;IdMatch idRef=&quot;Func_chile_id_card&quot;/&gt;
-  &lt;/Pattern&gt;
-&lt;/Entity&gt;</code></pre></td>
+
+
+```Command&nbsp;Line
+<!-- Chile Identity Card Number -->
+<Entity id="4e979794-49a0-407e-a0b9-2c536937b925" recommendedConfidence="85" patternsProximity="300">
+  <Pattern confidenceLevel="85">
+     <IdMatch idRef="Func_chile_id_card"/>
+     <Match idRef="Keyword_chile_id_card"/>
+  </Pattern>
+  <Pattern confidenceLevel="75">
+     <IdMatch idRef="Func_chile_id_card"/>
+  </Pattern>
+</Entity>
+```
+
+</td>
 </tr>
 <tr class="odd">
 <td><p>Ключевые слова</p></td>
@@ -1998,16 +2105,22 @@ _**Последнее изменение раздела:** 2018-05-03_
 <li><p>функция <code>Func_china_resident_id</code> находит содержимое, которое соответствует шаблону;</p></li>
 <li><p>контрольная сумма проходит проверку.</p></li>
 </ul>
-<pre><code>&lt;!-- China Resident Identity Card (PRC) Number --&gt;
-&lt;Entity id=&quot;c92daa86-2d16-4871-901f-816b3f554fc1&quot; recommendedConfidence=&quot;85&quot; patternsProximity=&quot;300&quot;&gt;
-  &lt;Pattern confidenceLevel=&quot;85&quot;&gt;
-     &lt;IdMatch idRef=&quot;Func_china_resident_id&quot;/&gt;
-     &lt;Match idRef=&quot;Keyword_china_resident_id&quot;/&gt;
-  &lt;/Pattern&gt;
-  &lt;Pattern confidenceLevel=&quot;75&quot;&gt;
-     &lt;IdMatch idRef=&quot;Func_china_resident_id&quot;/&gt;
-  &lt;/Pattern&gt;
-&lt;/Entity&gt;</code></pre></td>
+
+
+```Command&nbsp;Line
+<!-- China Resident Identity Card (PRC) Number -->
+<Entity id="c92daa86-2d16-4871-901f-816b3f554fc1" recommendedConfidence="85" patternsProximity="300">
+  <Pattern confidenceLevel="85">
+     <IdMatch idRef="Func_china_resident_id"/>
+     <Match idRef="Keyword_china_resident_id"/>
+  </Pattern>
+  <Pattern confidenceLevel="75">
+     <IdMatch idRef="Func_china_resident_id"/>
+  </Pattern>
+</Entity>
+```
+
+</td>
 </tr>
 <tr class="odd">
 <td><p>Ключевые слова</p></td>
@@ -2083,20 +2196,26 @@ _**Последнее изменение раздела:** 2018-05-03_
 <li><p>функция <code>Func_credit_card</code> находит содержимое, которое соответствует шаблону;</p></li>
 <li><p>контрольная сумма проходит проверку.</p></li>
 </ul>
-<pre><code>&lt;!-- Credit Card Number --&gt;
-&lt;Entity id=&quot;50842eb7-edc8-4019-85dd-5a5c1f2bb085&quot; patternsProximity=&quot;300&quot; recommendedConfidence=&quot;85&quot;&gt;
-  &lt;Pattern confidenceLevel=&quot;85&quot;&gt;
-        &lt;IdMatch idRef=&quot;Func_credit_card&quot; /&gt;
-        &lt;Any minMatches=&quot;1&quot;&gt;
-          &lt;Match idRef=&quot;Keyword_cc_verification&quot; /&gt;
-          &lt;Match idRef=&quot;Keyword_cc_name&quot; /&gt;
-          &lt;Match idRef=&quot;Func_expiration_date&quot; /&gt;
-        &lt;/Any&gt;
-  &lt;/Pattern&gt;
-  &lt;Pattern confidenceLevel=&quot;65&quot;&gt;
-        &lt;IdMatch idRef=&quot;Func_credit_card&quot; /&gt;
-  &lt;/Pattern&gt;
-&lt;/Entity&gt;</code></pre></td>
+
+
+```Command&nbsp;Line
+<!-- Credit Card Number -->
+<Entity id="50842eb7-edc8-4019-85dd-5a5c1f2bb085" patternsProximity="300" recommendedConfidence="85">
+  <Pattern confidenceLevel="85">
+        <IdMatch idRef="Func_credit_card" />
+        <Any minMatches="1">
+          <Match idRef="Keyword_cc_verification" />
+          <Match idRef="Keyword_cc_name" />
+          <Match idRef="Func_expiration_date" />
+        </Any>
+  </Pattern>
+  <Pattern confidenceLevel="65">
+        <IdMatch idRef="Func_credit_card" />
+  </Pattern>
+</Entity>
+```
+
+</td>
 </tr>
 <tr class="odd">
 <td><p>Ключевые слова</p></td>
@@ -2344,13 +2463,19 @@ _**Последнее изменение раздела:** 2018-05-03_
 <li><p>функция <code>Func_croatia_id_card</code> находит содержимое, которое соответствует шаблону;</p></li>
 <li><p>находится ключевое слово из <code>Keyword_croatia_id_card</code>.</p></li>
 </ul>
-<pre><code>&lt;!--Croatia Identity Card Number--&gt;
-&lt;Entity id=&quot;ff12f884-c20a-4189-b185-34c8e7258d47&quot; recommendedConfidence=&quot;75&quot; patternsProximity=&quot;300&quot;&gt;
-  &lt;Pattern confidenceLevel=&quot;75&quot;&gt;
-     &lt;IdMatch idRef=&quot;Func_croatia_id_card&quot;/&gt;
-     &lt;Match idRef=&quot;Keyword_croatia_id_card&quot;/&gt;
-  &lt;/Pattern&gt;
-&lt;/Entity&gt;</code></pre></td>
+
+
+```Command&nbsp;Line
+<!--Croatia Identity Card Number-->
+<Entity id="ff12f884-c20a-4189-b185-34c8e7258d47" recommendedConfidence="75" patternsProximity="300">
+  <Pattern confidenceLevel="75">
+     <IdMatch idRef="Func_croatia_id_card"/>
+     <Match idRef="Keyword_croatia_id_card"/>
+  </Pattern>
+</Entity>
+```
+
+</td>
 </tr>
 <tr class="odd">
 <td><p>Ключевые слова</p></td>
@@ -2417,16 +2542,22 @@ _**Последнее изменение раздела:** 2018-05-03_
 <li><p>функция <code>Func_croatia_oib_number</code> находит содержимое, которое соответствует шаблону;</p></li>
 <li><p>контрольная сумма проходит проверку.</p></li>
 </ul>
-<pre><code>&lt;!-- Croatia Personal Identification (OIB) Number --&gt;
-&lt;Entity id=&quot;31983b6d-db95-4eb2-a630-b44bd091968d&quot; recommendedConfidence=&quot;85&quot; patternsProximity=&quot;300&quot;&gt;
-  &lt;Pattern confidenceLevel=&quot;85&quot;&gt;
-     &lt;IdMatch idRef=&quot;Func_croatia_oib_number&quot;/&gt;
-     &lt;Match idRef=&quot;Keyword_croatia_oib_number&quot;/&gt;
-  &lt;/Pattern&gt;
-  &lt;Pattern confidenceLevel=&quot;75&quot;&gt;
-     &lt;IdMatch idRef=&quot;Func_croatia_oib_number&quot;/&gt;
-  &lt;/Pattern&gt;
-&lt;/Entity&gt;</code></pre></td>
+
+
+```Command&nbsp;Line
+<!-- Croatia Personal Identification (OIB) Number -->
+<Entity id="31983b6d-db95-4eb2-a630-b44bd091968d" recommendedConfidence="85" patternsProximity="300">
+  <Pattern confidenceLevel="85">
+     <IdMatch idRef="Func_croatia_oib_number"/>
+     <Match idRef="Keyword_croatia_oib_number"/>
+  </Pattern>
+  <Pattern confidenceLevel="75">
+     <IdMatch idRef="Func_croatia_oib_number"/>
+  </Pattern>
+</Entity>
+```
+
+</td>
 </tr>
 <tr class="odd">
 <td><p>Ключевые слова</p></td>
@@ -2490,13 +2621,19 @@ _**Последнее изменение раздела:** 2018-05-03_
 <li><p>находится ключевое слово из <code>Keyword_czech_id_card</code>;</p></li>
 <li><p>Контрольная сумма проходит проверку.</p></li>
 </ul>
-<pre><code>&lt;!-- Czech National Identity Card Number --&gt;
-&lt;Entity id=&quot;60c0725a-4eb6-455b-9dda-05d8a7396497&quot; recommendedConfidence=&quot;85&quot; patternsProximity=&quot;300&quot;&gt;
-  &lt;Pattern confidenceLevel=&quot;85&quot;&gt;
-     &lt;IdMatch idRef=&quot;Func_czech_id_card&quot;/&gt;
-     &lt;Match idRef=&quot;Keyword_czech_id_card&quot;/&gt;
-  &lt;/Pattern&gt;
-&lt;/Entity&gt;</code></pre></td>
+
+
+```Command&nbsp;Line
+<!-- Czech National Identity Card Number -->
+<Entity id="60c0725a-4eb6-455b-9dda-05d8a7396497" recommendedConfidence="85" patternsProximity="300">
+  <Pattern confidenceLevel="85">
+     <IdMatch idRef="Func_czech_id_card"/>
+     <Match idRef="Keyword_czech_id_card"/>
+  </Pattern>
+</Entity>
+```
+
+</td>
 </tr>
 <tr class="odd">
 <td><p>Ключевые слова</p></td>
@@ -2559,13 +2696,19 @@ _**Последнее изменение раздела:** 2018-05-03_
 <li><p>находится ключевое слово из <code>Keyword_denmark_id</code>;</p></li>
 <li><p>Контрольная сумма проходит проверку.</p></li>
 </ul>
-<pre><code>&lt;!-- Denmark Personal Identification Number --&gt;
-&lt;Entity id=&quot;6c4f2fef-56e1-4c00-8093-88d7a01cf460&quot; recommendedConfidence=&quot;75&quot; patternsProximity=&quot;300&quot;&gt;
-  &lt;Pattern confidenceLevel=&quot;75&quot;&gt;
-     &lt;IdMatch idRef=&quot;Regex_denmark_id&quot;/&gt;
-     &lt;Match idRef=&quot;Keyword_denmark_id&quot;/&gt;
-  &lt;/Pattern&gt;
-&lt;/Entity&gt;</code></pre></td>
+
+
+```Command&nbsp;Line
+<!-- Denmark Personal Identification Number -->
+<Entity id="6c4f2fef-56e1-4c00-8093-88d7a01cf460" recommendedConfidence="75" patternsProximity="300">
+  <Pattern confidenceLevel="75">
+     <IdMatch idRef="Regex_denmark_id"/>
+     <Match idRef="Keyword_denmark_id"/>
+  </Pattern>
+</Entity>
+```
+
+</td>
 </tr>
 <tr class="odd">
 <td><p>Ключевые слова</p></td>
@@ -2629,12 +2772,18 @@ _**Последнее изменение раздела:** 2018-05-03_
 <li><p>функция <code>Func_dea_number</code> находит содержимое, которое соответствует шаблону;</p></li>
 <li><p>контрольная сумма проходит проверку.</p></li>
 </ul>
-<pre><code>&lt;!-- DEA Number --&gt;
-&lt;Entity id=&quot;9a5445ad-406e-43eb-8bd7-cac17ab6d0e4&quot; recommendedConfidence=&quot;85&quot; patternsProximity=&quot;300&quot;&gt;
-  &lt;Pattern confidenceLevel=&quot;85&quot;&gt;
-     &lt;IdMatch idRef=&quot;Func_dea_number&quot;/&gt;
-  &lt;/Pattern&gt;
-&lt;/Entity&gt;</code></pre></td>
+
+
+```Command&nbsp;Line
+<!-- DEA Number -->
+<Entity id="9a5445ad-406e-43eb-8bd7-cac17ab6d0e4" recommendedConfidence="85" patternsProximity="300">
+  <Pattern confidenceLevel="85">
+     <IdMatch idRef="Func_dea_number"/>
+  </Pattern>
+</Entity>
+```
+
+</td>
 </tr>
 <tr class="odd">
 <td><p>Ключевые слова</p></td>
@@ -2680,19 +2829,25 @@ _**Последнее изменение раздела:** 2018-05-03_
 </ul></li>
 <li><p>Контрольная сумма проходит проверку.</p></li>
 </ul>
-<pre><code>    &lt;!-- EU Debit Card Number --&gt;
-    &lt;Entity id=&quot;0e9b3178-9678-47dd-a509-37222ca96b42&quot; patternsProximity=&quot;300&quot; recommendedConfidence=&quot;85&quot;&gt;
-      &lt;Pattern confidenceLevel=&quot;85&quot;&gt;
-        &lt;IdMatch idRef=&quot;Func_eu_debit_card&quot; /&gt;
-        &lt;Any minMatches=&quot;1&quot;&gt;
-          &lt;Match idRef=&quot;Keyword_eu_debit_card&quot; /&gt;
-          &lt;Match idRef=&quot;Keyword_card_terms_dict&quot; /&gt;
-          &lt;Match idRef=&quot;Keyword_card_security_terms_dict&quot; /&gt;
-          &lt;Match idRef=&quot;Keyword_card_expiration_terms_dict&quot; /&gt;
-          &lt;Match idRef=&quot;Func_expiration_date&quot; /&gt;
-        &lt;/Any&gt;
-      &lt;/Pattern&gt;
-    &lt;/Entity&gt;</code></pre></td>
+
+
+```Command&nbsp;Line
+    <!-- EU Debit Card Number -->
+    <Entity id="0e9b3178-9678-47dd-a509-37222ca96b42" patternsProximity="300" recommendedConfidence="85">
+      <Pattern confidenceLevel="85">
+        <IdMatch idRef="Func_eu_debit_card" />
+        <Any minMatches="1">
+          <Match idRef="Keyword_eu_debit_card" />
+          <Match idRef="Keyword_card_terms_dict" />
+          <Match idRef="Keyword_card_security_terms_dict" />
+          <Match idRef="Keyword_card_expiration_terms_dict" />
+          <Match idRef="Func_expiration_date" />
+        </Any>
+      </Pattern>
+    </Entity>
+```
+
+</td>
 </tr>
 <tr class="odd">
 <td><p>Ключевые слова</p></td>
@@ -3056,13 +3211,19 @@ _**Последнее изменение раздела:** 2018-05-03_
 <li><p>находится ключевое слово из <code>Keyword_finnish_national_id</code>;</p></li>
 <li><p>Контрольная сумма проходит проверку.</p></li>
 </ul>
-<pre><code>&lt;!-- Finnish National ID--&gt;
-&lt;Entity id=&quot;338FD995-4CB5-4F87-AD35-79BD1DD926C1&quot; patternsProximity=&quot;300&quot; recommendedConfidence=&quot;85&quot;&gt;
-  &lt;Pattern confidenceLevel=&quot;85&quot;&gt;
-          &lt;IdMatch idRef=&quot;Func_finnish_national_id&quot; /&gt;
-          &lt;Match idRef=&quot;Keyword_finnish_national_id&quot; /&gt;
-  &lt;/Pattern&gt;
-&lt;/Entity&gt;</code></pre></td>
+
+
+```Command&nbsp;Line
+<!-- Finnish National ID-->
+<Entity id="338FD995-4CB5-4F87-AD35-79BD1DD926C1" patternsProximity="300" recommendedConfidence="85">
+  <Pattern confidenceLevel="85">
+          <IdMatch idRef="Func_finnish_national_id" />
+          <Match idRef="Keyword_finnish_national_id" />
+  </Pattern>
+</Entity>
+```
+
+</td>
 </tr>
 <tr class="odd">
 <td><p>Ключевые слова</p></td>
@@ -3125,13 +3286,19 @@ _**Последнее изменение раздела:** 2018-05-03_
 <li><p>регулярное выражение <code>Regex_finland_passport_number</code> находит содержимое, которое соответствует шаблону;</p></li>
 <li><p>находится ключевое слово из <code>Keyword_finland_passport_number</code>.</p></li>
 </ul>
-<pre><code>&lt;!-- Finland Passport Number --&gt;
-&lt;Entity id=&quot;d1685ac3-1d3a-40f8-8198-32ef5669c7a5&quot; recommendedConfidence=&quot;75&quot; patternsProximity=&quot;300&quot;&gt;
-  &lt;Pattern confidenceLevel=&quot;75&quot;&gt;
-     &lt;IdMatch idRef=&quot;Regex_finland_passport_number&quot;/&gt;
-     &lt;Match idRef=&quot;Keyword_finland_passport_number&quot;/&gt;
-  &lt;/Pattern&gt;
-&lt;/Entity&gt;</code></pre></td>
+
+
+```Command&nbsp;Line
+<!-- Finland Passport Number -->
+<Entity id="d1685ac3-1d3a-40f8-8198-32ef5669c7a5" recommendedConfidence="75" patternsProximity="300">
+  <Pattern confidenceLevel="75">
+     <IdMatch idRef="Regex_finland_passport_number"/>
+     <Match idRef="Keyword_finland_passport_number"/>
+  </Pattern>
+</Entity>
+```
+
+</td>
 </tr>
 <tr class="odd">
 <td><p>Ключевые слова</p></td>
@@ -3192,16 +3359,22 @@ _**Последнее изменение раздела:** 2018-05-03_
 <li><p>функция <code>Func_eu_date</code> находит дату в правильном формате.</p></li>
 </ul></li>
 </ul>
-<pre><code>&lt;!-- France Driver&#39;s License Number --&gt;
-&lt;Entity id=&quot;18e55a36-a01b-4b0f-943d-dc10282a1824&quot; patternsProximity=&quot;300&quot; recommendedConfidence=&quot;75&quot;&gt;
-  &lt;Pattern confidenceLevel=&quot;75&quot;&gt;
-        &lt;IdMatch idRef=&quot;Func_french_drivers_license&quot; /&gt;
-        &lt;Any minMatches=&quot;1&quot;&gt;
-          &lt;Match idRef=&quot;Keyword_french_drivers_license&quot; /&gt;
-          &lt;Match idRef=&quot;Func_eu_date&quot; /&gt;
-        &lt;/Any&gt;
-  &lt;/Pattern&gt;
-&lt;/Entity&gt;</code></pre></td>
+
+
+```Command&nbsp;Line
+<!-- France Driver's License Number -->
+<Entity id="18e55a36-a01b-4b0f-943d-dc10282a1824" patternsProximity="300" recommendedConfidence="75">
+  <Pattern confidenceLevel="75">
+        <IdMatch idRef="Func_french_drivers_license" />
+        <Any minMatches="1">
+          <Match idRef="Keyword_french_drivers_license" />
+          <Match idRef="Func_eu_date" />
+        </Any>
+  </Pattern>
+</Entity>
+```
+
+</td>
 </tr>
 <tr class="odd">
 <td><p>Ключевые слова</p></td>
@@ -3264,12 +3437,18 @@ _**Последнее изменение раздела:** 2018-05-03_
 <ul>
 <li><p>регулярное выражение <code>Regex_france_cni</code> находит содержимое, которое соответствует шаблону.</p></li>
 </ul>
-<pre><code>&lt;!-- France CNI --&gt;
-&lt;Entity id=&quot;f741ac74-1bc0-4665-b69b-f0c7f927c0c4&quot; patternsProximity=&quot;300&quot; recommendedConfidence=&quot;65&quot;&gt;
-  &lt;Pattern confidenceLevel=&quot;65&quot;&gt;
-        &lt;IdMatch idRef=&quot;Regex_france_cni&quot; /&gt;
-  &lt;/Pattern&gt;
-&lt;/Entity&gt;</code></pre></td>
+
+
+```Command&nbsp;Line
+<!-- France CNI -->
+<Entity id="f741ac74-1bc0-4665-b69b-f0c7f927c0c4" patternsProximity="300" recommendedConfidence="65">
+  <Pattern confidenceLevel="65">
+        <IdMatch idRef="Regex_france_cni" />
+  </Pattern>
+</Entity>
+```
+
+</td>
 </tr>
 <tr class="odd">
 <td><p>Ключевые слова</p></td>
@@ -3312,13 +3491,19 @@ _**Последнее изменение раздела:** 2018-05-03_
 <li><p>функция <code>Func_fr_passport</code> находит содержимое, которое соответствует шаблону;</p></li>
 <li><p>находится ключевое слово из <code>Keyword_passport</code>.</p></li>
 </ul>
-<pre><code>&lt;!-- France Passport Number --&gt;
-&lt;Entity id=&quot;3008b884-8c8c-4cd8-a289-99f34fc7ff5d&quot; patternsProximity=&quot;300&quot; recommendedConfidence=&quot;75&quot;&gt;
-  &lt;Pattern confidenceLevel=&quot;75&quot;&gt;
-        &lt;IdMatch idRef=&quot;Func_fr_passport&quot; /&gt;
-        &lt;Match idRef=&quot;Keyword_passport&quot; /&gt;
-  &lt;/Pattern&gt;
-&lt;/Entity&gt;</code></pre></td>
+
+
+```Command&nbsp;Line
+<!-- France Passport Number -->
+<Entity id="3008b884-8c8c-4cd8-a289-99f34fc7ff5d" patternsProximity="300" recommendedConfidence="75">
+  <Pattern confidenceLevel="75">
+        <IdMatch idRef="Func_fr_passport" />
+        <Match idRef="Keyword_passport" />
+  </Pattern>
+</Entity>
+```
+
+</td>
 </tr>
 <tr class="odd">
 <td><p>Ключевые слова</p></td>
@@ -3402,23 +3587,29 @@ _**Последнее изменение раздела:** 2018-05-03_
 <li><p>ни одно ключевое слово из <code>Keyword_fr_insee</code> не находится;</p></li>
 <li><p>контрольная сумма проходит проверку.</p></li>
 </ul>
-<pre><code>&lt;!-- France INSEE --&gt;
-&lt;Entity id=&quot;71f62b97-efe0-4aa1-aa49-e14de253619d&quot; patternsProximity=&quot;300&quot; recommendedConfidence=&quot;85&quot;&gt;
-  &lt;Pattern confidenceLevel=&quot;95&quot;&gt;
-        &lt;IdMatch idRef=&quot;Func_french_insee&quot; /&gt;
-        &lt;Match idRef=&quot;Func_fr_insee&quot; /&gt;
-        &lt;Any minMatches=&quot;1&quot;&gt;
-          &lt;Match idRef=&quot;Keyword_fr_insee&quot; /&gt;
-        &lt;/Any&gt;
-  &lt;/Pattern&gt;
-  &lt;Pattern confidenceLevel=&quot;85&quot;&gt;
-        &lt;IdMatch idRef=&quot;Func_french_insee&quot; /&gt;
-        &lt;Match idRef=&quot;Func_fr_insee&quot; /&gt;
-        &lt;Any minMatches=&quot;0&quot; maxMatches=&quot;0&quot;&gt;
-          &lt;Match idRef=&quot;Keyword_fr_insee&quot; /&gt;
-        &lt;/Any&gt;
-  &lt;/Pattern&gt;
-&lt;/Entity&gt;</code></pre></td>
+
+
+```Command&nbsp;Line
+<!-- France INSEE -->
+<Entity id="71f62b97-efe0-4aa1-aa49-e14de253619d" patternsProximity="300" recommendedConfidence="85">
+  <Pattern confidenceLevel="95">
+        <IdMatch idRef="Func_french_insee" />
+        <Match idRef="Func_fr_insee" />
+        <Any minMatches="1">
+          <Match idRef="Keyword_fr_insee" />
+        </Any>
+  </Pattern>
+  <Pattern confidenceLevel="85">
+        <IdMatch idRef="Func_french_insee" />
+        <Match idRef="Func_fr_insee" />
+        <Any minMatches="0" maxMatches="0">
+          <Match idRef="Keyword_fr_insee" />
+        </Any>
+  </Pattern>
+</Entity>
+```
+
+</td>
 </tr>
 <tr class="odd">
 <td><p>Ключевые слова</p></td>
@@ -3507,17 +3698,23 @@ _**Последнее изменение раздела:** 2018-05-03_
 </ul></li>
 <li><p>Контрольная сумма проходит проверку.</p></li>
 </ul>
-<pre><code>&lt;!-- German Driver&#39;s License Number --&gt;
-&lt;Entity id=&quot;91da9335-1edb-45b7-a95f-5fe41a16c63c&quot; patternsProximity=&quot;300&quot; recommendedConfidence=&quot;75&quot;&gt;
-  &lt;Pattern confidenceLevel=&quot;75&quot;&gt;
-        &lt;IdMatch idRef=&quot;Func_german_drivers_license&quot; /&gt;
-        &lt;Any minMatches=&quot;1&quot;&gt;
-          &lt;Match idRef=&quot;Keyword_german_drivers_license_number&quot; /&gt;
-          &lt;Match idRef=&quot;Keyword_german_drivers_license_collaborative&quot; /&gt;
-          &lt;Match idRef=&quot;Keyword_german_drivers_license&quot; /&gt;
-        &lt;/Any&gt;
-  &lt;/Pattern&gt;
-&lt;/Entity&gt;</code></pre></td>
+
+
+```Command&nbsp;Line
+<!-- German Driver's License Number -->
+<Entity id="91da9335-1edb-45b7-a95f-5fe41a16c63c" patternsProximity="300" recommendedConfidence="75">
+  <Pattern confidenceLevel="75">
+        <IdMatch idRef="Func_german_drivers_license" />
+        <Any minMatches="1">
+          <Match idRef="Keyword_german_drivers_license_number" />
+          <Match idRef="Keyword_german_drivers_license_collaborative" />
+          <Match idRef="Keyword_german_drivers_license" />
+        </Any>
+  </Pattern>
+</Entity>
+```
+
+</td>
 </tr>
 <tr class="odd">
 <td><p>Ключевые слова</p></td>
@@ -3684,13 +3881,19 @@ _**Последнее изменение раздела:** 2018-05-03_
 <li><p>регулярное выражение <code>Regex_germany_id_card</code> находит содержимое, которое соответствует шаблону;</p></li>
 <li><p>находится ключевое слово из <code>Keyword_germany_id_card</code>.</p></li>
 </ul>
-<pre><code>&lt;!-- Germany Identity Card Number --&gt;
-&lt;Entity id=&quot;e577372f-c42e-47a0-9d85-bebed1c237d4&quot; recommendedConfidence=&quot;65&quot; patternsProximity=&quot;300&quot;&gt;
-  &lt;Pattern confidenceLevel=&quot;65&quot;&gt;
-     &lt;IdMatch idRef=&quot;Regex_germany_id_card&quot;/&gt;
-     &lt;Match idRef=&quot;Keyword_germany_id_card&quot;/&gt;
-  &lt;/Pattern&gt;
-&lt;/Entity&gt;</code></pre></td>
+
+
+```Command&nbsp;Line
+<!-- Germany Identity Card Number -->
+<Entity id="e577372f-c42e-47a0-9d85-bebed1c237d4" recommendedConfidence="65" patternsProximity="300">
+  <Pattern confidenceLevel="65">
+     <IdMatch idRef="Regex_germany_id_card"/>
+     <Match idRef="Keyword_germany_id_card"/>
+  </Pattern>
+</Entity>
+```
+
+</td>
 </tr>
 <tr class="odd">
 <td><p>Ключевые слова</p></td>
@@ -3765,29 +3968,35 @@ _**Последнее изменение раздела:** 2018-05-03_
 <li><p>находится любое ключевое слово из пяти соответствующих списков;</p></li>
 <li><p>контрольная сумма проходит проверку.</p></li>
 </ul>
-<pre><code>&lt;!-- German Passport Number --&gt;
-&lt;Entity id=&quot;2e3da144-d42b-47ed-b123-fbf78604e52c&quot; patternsProximity=&quot;300&quot; recommendedConfidence=&quot;75&quot;&gt;
-  &lt;Pattern confidenceLevel=&quot;85&quot;&gt;
-        &lt;IdMatch idRef=&quot;Func_german_passport&quot; /&gt;
-        &lt;Any minMatches=&quot;1&quot;&gt;
-          &lt;Match idRef=&quot;Keyword_german_passport&quot; /&gt;
-          &lt;Match idRef=&quot;Keyword_german_passport_collaborative&quot; /&gt;
-          &lt;Match idRef=&quot;Keyword_german_passport_number&quot; /&gt;
-          &lt;Match idRef=&quot;Keyword_german_passport1&quot; /&gt;
-          &lt;Match idRef=&quot;Keyword_german_passport2&quot; /&gt;
-        &lt;/Any&gt;
-  &lt;/Pattern&gt;
-  &lt;Pattern confidenceLevel=&quot;75&quot;&gt;
-        &lt;IdMatch idRef=&quot;Func_german_passport_data&quot; /&gt;
-        &lt;Any minMatches=&quot;1&quot;&gt;
-          &lt;Match idRef=&quot;Keyword_german_passport&quot; /&gt;
-          &lt;Match idRef=&quot;Keyword_german_passport_collaborative&quot; /&gt;
-          &lt;Match idRef=&quot;Keyword_german_passport_number&quot; /&gt;
-          &lt;Match idRef=&quot;Keyword_german_passport1&quot; /&gt;
-          &lt;Match idRef=&quot;Keyword_german_passport2&quot; /&gt;
-        &lt;/Any&gt;
-  &lt;/Pattern&gt;
-&lt;/Entity&gt;</code></pre></td>
+
+
+```Command&nbsp;Line
+<!-- German Passport Number -->
+<Entity id="2e3da144-d42b-47ed-b123-fbf78604e52c" patternsProximity="300" recommendedConfidence="75">
+  <Pattern confidenceLevel="85">
+        <IdMatch idRef="Func_german_passport" />
+        <Any minMatches="1">
+          <Match idRef="Keyword_german_passport" />
+          <Match idRef="Keyword_german_passport_collaborative" />
+          <Match idRef="Keyword_german_passport_number" />
+          <Match idRef="Keyword_german_passport1" />
+          <Match idRef="Keyword_german_passport2" />
+        </Any>
+  </Pattern>
+  <Pattern confidenceLevel="75">
+        <IdMatch idRef="Func_german_passport_data" />
+        <Any minMatches="1">
+          <Match idRef="Keyword_german_passport" />
+          <Match idRef="Keyword_german_passport_collaborative" />
+          <Match idRef="Keyword_german_passport_number" />
+          <Match idRef="Keyword_german_passport1" />
+          <Match idRef="Keyword_german_passport2" />
+        </Any>
+  </Pattern>
+</Entity>
+```
+
+</td>
 </tr>
 <tr class="odd">
 <td><p>Ключевые слова</p></td>
@@ -3876,13 +4085,19 @@ _**Последнее изменение раздела:** 2018-05-03_
 <li><p>регулярное выражение <code>Regex_greece_id_card</code> находит содержимое, которое соответствует шаблону;</p></li>
 <li><p>находится ключевое слово из <code>Keyword_greece_id_card</code>.</p></li>
 </ul>
-<pre><code>&lt;!-- Greece National ID Card --&gt;
-&lt;Entity id=&quot;82568215-1da1-46d3-874a-d2294d81b5ac&quot; recommendedConfidence=&quot;85&quot; patternsProximity=&quot;300&quot;&gt;
-  &lt;Pattern confidenceLevel=&quot;85&quot;&gt;
-     &lt;IdMatch idRef=&quot;Regex_greece_id_card&quot;/&gt;
-     &lt;Match idRef=&quot;Keyword_greece_id_card&quot;/&gt;
-  &lt;/Pattern&gt;
-&lt;/Entity&gt;</code></pre></td>
+
+
+```Command&nbsp;Line
+<!-- Greece National ID Card -->
+<Entity id="82568215-1da1-46d3-874a-d2294d81b5ac" recommendedConfidence="85" patternsProximity="300">
+  <Pattern confidenceLevel="85">
+     <IdMatch idRef="Regex_greece_id_card"/>
+     <Match idRef="Keyword_greece_id_card"/>
+  </Pattern>
+</Entity>
+```
+
+</td>
 </tr>
 <tr class="odd">
 <td><p>Ключевые слова</p></td>
@@ -3952,16 +4167,22 @@ _**Последнее изменение раздела:** 2018-05-03_
 <li><p>функция <code>Func_hong_kong_id_card</code> находит содержимое, которое соответствует шаблону;</p></li>
 <li><p>контрольная сумма проходит проверку.</p></li>
 </ul>
-<pre><code>&lt;!-- Hong Kong Identity Card (HKID) number --&gt;
-&lt;Entity id=&quot;e63c28a7-ad29-4c17-a41a-3d2a0b70fd9c&quot; recommendedConfidence=&quot;75&quot; patternsProximity=&quot;300&quot;&gt;
-  &lt;Pattern confidenceLevel=&quot;75&quot;&gt;
-     &lt;IdMatch idRef=&quot;Func_hong_kong_id_card&quot;/&gt;
-     &lt;Match idRef=&quot;Keyword_hong_kong_id_card&quot;/&gt;
-  &lt;/Pattern&gt;
-  &lt;Pattern confidenceLevel=&quot;65&quot;&gt;
-     &lt;IdMatch idRef=&quot;Func_hong_kong_id_card&quot;/&gt;
-  &lt;/Pattern&gt;
-&lt;/Entity&gt;</code></pre></td>
+
+
+```Command&nbsp;Line
+<!-- Hong Kong Identity Card (HKID) number -->
+<Entity id="e63c28a7-ad29-4c17-a41a-3d2a0b70fd9c" recommendedConfidence="75" patternsProximity="300">
+  <Pattern confidenceLevel="75">
+     <IdMatch idRef="Func_hong_kong_id_card"/>
+     <Match idRef="Keyword_hong_kong_id_card"/>
+  </Pattern>
+  <Pattern confidenceLevel="65">
+     <IdMatch idRef="Func_hong_kong_id_card"/>
+  </Pattern>
+</Entity>
+```
+
+</td>
 </tr>
 <tr class="odd">
 <td><p>Ключевые слова</p></td>
@@ -4027,13 +4248,19 @@ _**Последнее изменение раздела:** 2018-05-03_
 <li><p>находится ключевое слово из <code>Keyword_india_permanent_account_number</code>;</p></li>
 <li><p>Контрольная сумма проходит проверку.</p></li>
 </ul>
-<pre><code>&lt;!-- India Permanent Account Number --&gt;
-&lt;Entity id=&quot;2602bfee-9bb0-47a5-a7a6-2bf3053e2804&quot; recommendedConfidence=&quot;85&quot; patternsProximity=&quot;300&quot;&gt;
-  &lt;Pattern confidenceLevel=&quot;85&quot;&gt;
-     &lt;IdMatch idRef=&quot;Regex_india_permanent_account_number&quot;/&gt;
-     &lt;Match idRef=&quot;Keyword_india_permanent_account_number&quot;/&gt;
-  &lt;/Pattern&gt;
-&lt;/Entity&gt;</code></pre></td>
+
+
+```Command&nbsp;Line
+<!-- India Permanent Account Number -->
+<Entity id="2602bfee-9bb0-47a5-a7a6-2bf3053e2804" recommendedConfidence="85" patternsProximity="300">
+  <Pattern confidenceLevel="85">
+     <IdMatch idRef="Regex_india_permanent_account_number"/>
+     <Match idRef="Keyword_india_permanent_account_number"/>
+  </Pattern>
+</Entity>
+```
+
+</td>
 </tr>
 <tr class="odd">
 <td><p>Ключевые слова</p></td>
@@ -4103,16 +4330,22 @@ _**Последнее изменение раздела:** 2018-05-03_
 <li><p>функция <code>Func_india_aadhaar</code> находит содержимое, которое соответствует шаблону;</p></li>
 <li><p>контрольная сумма проходит проверку.</p></li>
 </ul>
-<pre><code>&lt;!-- India Unique Identification (Aadhaar) number --&gt;
-&lt;Entity id=&quot;1ca46b29-76f5-4f46-9383-cfa15e91048f&quot; recommendedConfidence=&quot;85&quot; patternsProximity=&quot;300&quot;&gt;
-  &lt;Pattern confidenceLevel=&quot;85&quot;&gt;
-     &lt;IdMatch idRef=&quot;Func_india_aadhaar&quot;/&gt;
-     &lt;Match idRef=&quot;Keyword_india_aadhar&quot;/&gt;
-  &lt;/Pattern&gt;
-  &lt;Pattern confidenceLevel=&quot;75&quot;&gt;
-     &lt;IdMatch idRef=&quot;Func_india_aadhaar&quot;/&gt;
-  &lt;/Pattern&gt;
-&lt;/Entity&gt;</code></pre></td>
+
+
+```Command&nbsp;Line
+<!-- India Unique Identification (Aadhaar) number -->
+<Entity id="1ca46b29-76f5-4f46-9383-cfa15e91048f" recommendedConfidence="85" patternsProximity="300">
+  <Pattern confidenceLevel="85">
+     <IdMatch idRef="Func_india_aadhaar"/>
+     <Match idRef="Keyword_india_aadhar"/>
+  </Pattern>
+  <Pattern confidenceLevel="75">
+     <IdMatch idRef="Func_india_aadhaar"/>
+  </Pattern>
+</Entity>
+```
+
+</td>
 </tr>
 <tr class="odd">
 <td><p>Ключевые слова</p></td>
@@ -4185,16 +4418,22 @@ _**Последнее изменение раздела:** 2018-05-03_
 <ul>
 <li><p>регулярное выражение <code>Regex_indonesia_id_card</code> находит содержимое, которое соответствует шаблону;</p></li>
 </ul>
-<pre><code>&lt;!-- Indonesia Identity Card (KTP) Number --&gt;
-&lt;Entity id=&quot;da68fdb0-f383-4981-8c86-82689d3b7d55&quot; recommendedConfidence=&quot;85&quot; patternsProximity=&quot;300&quot;&gt;
-  &lt;Pattern confidenceLevel=&quot;85&quot;&gt;
-     &lt;IdMatch idRef=&quot;Regex_indonesia_id_card&quot;/&gt;
-     &lt;Match idRef=&quot;Keyword_indonesia_id_card&quot;/&gt;
-  &lt;/Pattern&gt;
-  &lt;Pattern confidenceLevel=&quot;75&quot;&gt;
-     &lt;IdMatch idRef=&quot;Regex_indonesia_id_card&quot;/&gt;
-  &lt;/Pattern&gt;
-&lt;/Entity&gt;</code></pre></td>
+
+
+```Command&nbsp;Line
+<!-- Indonesia Identity Card (KTP) Number -->
+<Entity id="da68fdb0-f383-4981-8c86-82689d3b7d55" recommendedConfidence="85" patternsProximity="300">
+  <Pattern confidenceLevel="85">
+     <IdMatch idRef="Regex_indonesia_id_card"/>
+     <Match idRef="Keyword_indonesia_id_card"/>
+  </Pattern>
+  <Pattern confidenceLevel="75">
+     <IdMatch idRef="Regex_indonesia_id_card"/>
+  </Pattern>
+</Entity>
+```
+
+</td>
 </tr>
 <tr class="odd">
 <td><p>Ключевые слова</p></td>
@@ -4263,11 +4502,17 @@ _**Последнее изменение раздела:** 2018-05-03_
 <li><p>функция <code>Func_iban</code> находит содержимое, которое соответствует шаблону;</p></li>
 <li><p>контрольная сумма проходит проверку.</p></li>
 </ul>
-<pre><code>&lt;Entity id=&quot;e7dc4711-11b7-4cb0-b88b-2c394a771f0e&quot; patternsProximity=&quot;300&quot; recommendedConfidence=&quot;85&quot;&gt;
-  &lt;Pattern confidenceLevel=&quot;85&quot;&gt;
-        &lt;IdMatch idRef=&quot;Func_iban&quot; /&gt;
-  &lt;/Pattern&gt;
-&lt;/Entity&gt;</code></pre></td>
+
+
+```Command&nbsp;Line
+<Entity id="e7dc4711-11b7-4cb0-b88b-2c394a771f0e" patternsProximity="300" recommendedConfidence="85">
+  <Pattern confidenceLevel="85">
+        <IdMatch idRef="Func_iban" />
+  </Pattern>
+</Entity>
+```
+
+</td>
 </tr>
 <tr class="odd">
 <td><p>Ключевые слова</p></td>
@@ -4322,27 +4567,33 @@ _**Последнее изменение раздела:** 2018-05-03_
 <li><p>регулярное выражение <code>Regex_ipv6_address</code> находит содержимое, которое соответствует шаблону;</p></li>
 <li><p>ни одно ключевое слово из <code>Keyword_ipaddress</code> не находится.</p></li>
 </ul>
-<pre><code>    &lt;!-- IP Address --&gt;
-    &lt;Entity id=&quot;1daa4ad5-e2dd-4ca4-a788-54722c09efb2&quot; patternsProximity=&quot;300&quot; recommendedConfidence=&quot;85&quot;&gt;
-      &lt;Pattern confidenceLevel=&quot;85&quot;&gt;
-        &lt;IdMatch idRef=&quot;Regex_ipv6_address&quot; /&gt;
-        &lt;Any minMatches=&quot;0&quot; maxMatches=&quot;0&quot;&gt;
-          &lt;Match idRef=&quot;Keyword_ipaddress&quot; /&gt;
-        &lt;/Any&gt;
-      &lt;/Pattern&gt;
-      &lt;Pattern confidenceLevel=&quot;95&quot;&gt;
-        &lt;IdMatch idRef=&quot;Regex_ipv4_address&quot; /&gt;
-        &lt;Any minMatches=&quot;1&quot;&gt;
-          &lt;Match idRef=&quot;Keyword_ipaddress&quot; /&gt;
-        &lt;/Any&gt;
-      &lt;/Pattern&gt;
-      &lt;Pattern confidenceLevel=&quot;95&quot;&gt;
-        &lt;IdMatch idRef=&quot;Regex_ipv6_address&quot; /&gt;
-        &lt;Any minMatches=&quot;1&quot;&gt;
-          &lt;Match idRef=&quot;Keyword_ipaddress&quot; /&gt;
-        &lt;/Any&gt;
-      &lt;/Pattern&gt;
-    &lt;/Entity&gt;</code></pre></td>
+
+
+```Command&nbsp;Line
+    <!-- IP Address -->
+    <Entity id="1daa4ad5-e2dd-4ca4-a788-54722c09efb2" patternsProximity="300" recommendedConfidence="85">
+      <Pattern confidenceLevel="85">
+        <IdMatch idRef="Regex_ipv6_address" />
+        <Any minMatches="0" maxMatches="0">
+          <Match idRef="Keyword_ipaddress" />
+        </Any>
+      </Pattern>
+      <Pattern confidenceLevel="95">
+        <IdMatch idRef="Regex_ipv4_address" />
+        <Any minMatches="1">
+          <Match idRef="Keyword_ipaddress" />
+        </Any>
+      </Pattern>
+      <Pattern confidenceLevel="95">
+        <IdMatch idRef="Regex_ipv6_address" />
+        <Any minMatches="1">
+          <Match idRef="Keyword_ipaddress" />
+        </Any>
+      </Pattern>
+    </Entity>
+```
+
+</td>
 </tr>
 <tr class="odd">
 <td><p>Ключевые слова</p></td>
@@ -4431,19 +4682,25 @@ _**Последнее изменение раздела:** 2018-05-03_
 <li><p>функция <code>Func_ireland_pps</code> находит содержимое, которое соответствует шаблону;</p></li>
 <li><p>контрольная сумма проходит проверку.</p></li>
 </ul>
-<pre><code>&lt;!-- Ireland Personal Public Service (PPS) Number --&gt;
-&lt;Entity id=&quot;1cdb674d-c19a-4fcf-9f4b-7f56cc87345a&quot; recommendedConfidence=&quot;85&quot; patternsProximity=&quot;300&quot;&gt;
-  &lt;Pattern confidenceLevel=&quot;85&quot;&gt;
-     &lt;IdMatch idRef=&quot;Func_ireland_pps&quot;/&gt;
-     &lt;Any minMatches=&quot;1&quot;&gt;
-  &lt;Match idRef=&quot;Keyword_ireland_pps&quot;/&gt;
-  &lt;Match idRef=&quot;Func_eu_date&quot;/&gt;
-     &lt;/Any&gt;
-  &lt;/Pattern&gt;
-  &lt;Pattern confidenceLevel=&quot;65&quot;&gt;
-     &lt;IdMatch idRef=&quot;Func_ireland_pps&quot;/&gt;
-  &lt;/Pattern&gt;
-&lt;/Entity&gt;</code></pre></td>
+
+
+```Command&nbsp;Line
+<!-- Ireland Personal Public Service (PPS) Number -->
+<Entity id="1cdb674d-c19a-4fcf-9f4b-7f56cc87345a" recommendedConfidence="85" patternsProximity="300">
+  <Pattern confidenceLevel="85">
+     <IdMatch idRef="Func_ireland_pps"/>
+     <Any minMatches="1">
+  <Match idRef="Keyword_ireland_pps"/>
+  <Match idRef="Func_eu_date"/>
+     </Any>
+  </Pattern>
+  <Pattern confidenceLevel="65">
+     <IdMatch idRef="Func_ireland_pps"/>
+  </Pattern>
+</Entity>
+```
+
+</td>
 </tr>
 <tr class="odd">
 <td><p>Ключевые слова</p></td>
@@ -4520,15 +4777,21 @@ _**Последнее изменение раздела:** 2018-05-03_
 <li><p>регулярное выражение <code>Regex_israel_bank_account_number</code> находит содержимое, которое соответствует шаблону;</p></li>
 <li><p>находится ключевое слово из <code>Keyword_israel_bank_account_number</code>.</p></li>
 </ul>
-<pre><code>&lt;!-- Israel Bank Account Number --&gt;
-&lt;Entity id=&quot;7d08b2ff-a0b9-437f-957c-aeddbf9b2b25&quot; patternsProximity=&quot;300&quot; recommendedConfidence=&quot;75&quot;&gt;
-    &lt;Pattern confidenceLevel=&quot;75&quot;&gt;
-        &lt;IdMatch idRef=&quot;Regex_israel_bank_account_number&quot; /&gt;
-        &lt;Any minMatches=&quot;1&quot;&gt;
-          &lt;Match idRef=&quot;Keyword_israel_bank_account_number&quot; /&gt;
-        &lt;/Any&gt;
-    &lt;/Pattern&gt;
-&lt;/Entity&gt;</code></pre></td>
+
+
+```Command&nbsp;Line
+<!-- Israel Bank Account Number -->
+<Entity id="7d08b2ff-a0b9-437f-957c-aeddbf9b2b25" patternsProximity="300" recommendedConfidence="75">
+    <Pattern confidenceLevel="75">
+        <IdMatch idRef="Regex_israel_bank_account_number" />
+        <Any minMatches="1">
+          <Match idRef="Keyword_israel_bank_account_number" />
+        </Any>
+    </Pattern>
+</Entity>
+```
+
+</td>
 </tr>
 <tr class="odd">
 <td><p>Ключевые слова</p></td>
@@ -4588,15 +4851,21 @@ _**Последнее изменение раздела:** 2018-05-03_
 <li><p>находится ключевое слово из <code>Keyword_Israel_National_ID</code>;</p></li>
 <li><p>Контрольная сумма проходит проверку.</p></li>
 </ul>
-<pre><code>&lt;!-- Israel National ID Number --&gt;
-&lt;Entity id=&quot;e05881f5-1db1-418c-89aa-a3ac5c5277ee&quot; patternsProximity=&quot;300&quot; recommendedConfidence=&quot;75&quot;&gt;
-    &lt;Pattern confidenceLevel=&quot;75&quot;&gt;
-        &lt;IdMatch idRef=&quot;Func_israeli_national_id_number&quot; /&gt;
-        &lt;Any minMatches=&quot;1&quot;&gt;
-          &lt;Match idRef=&quot;Keyword_Israel_National_ID&quot; /&gt;
-        &lt;/Any&gt;
-    &lt;/Pattern&gt;
-&lt;/Entity&gt;</code></pre></td>
+
+
+```Command&nbsp;Line
+<!-- Israel National ID Number -->
+<Entity id="e05881f5-1db1-418c-89aa-a3ac5c5277ee" patternsProximity="300" recommendedConfidence="75">
+    <Pattern confidenceLevel="75">
+        <IdMatch idRef="Func_israeli_national_id_number" />
+        <Any minMatches="1">
+          <Match idRef="Keyword_Israel_National_ID" />
+        </Any>
+    </Pattern>
+</Entity>
+```
+
+</td>
 </tr>
 <tr class="odd">
 <td><p>Ключевые слова</p></td>
@@ -4659,15 +4928,21 @@ _**Последнее изменение раздела:** 2018-05-03_
 <li><p>регулярное выражение <code>Regex_italy_drivers_license_number</code> находит содержимое, которое соответствует шаблону;</p></li>
 <li><p>находится ключевое слово из <code>Keyword_italy_drivers_license_number</code>.</p></li>
 </ul>
-<pre><code>&lt;!-- Italy Driver&#39;s license Number --&gt;
-&lt;Entity id=&quot;97d6244f-9157-41bd-8e0c-9d669a5c4d71&quot; patternsProximity=&quot;300&quot; recommendedConfidence=&quot;75&quot;&gt;
-    &lt;Pattern confidenceLevel=&quot;75&quot;&gt;
-        &lt;IdMatch idRef=&quot;Regex_italy_drivers_license_number&quot; /&gt;
-        &lt;Any minMatches=&quot;1&quot;&gt;
-          &lt;Match idRef=&quot;Keyword_italy_drivers_license_number&quot; /&gt;
-        &lt;/Any&gt;
-    &lt;/Pattern&gt;
-&lt;/Entity&gt;</code></pre></td>
+
+
+```Command&nbsp;Line
+<!-- Italy Driver's license Number -->
+<Entity id="97d6244f-9157-41bd-8e0c-9d669a5c4d71" patternsProximity="300" recommendedConfidence="75">
+    <Pattern confidenceLevel="75">
+        <IdMatch idRef="Regex_italy_drivers_license_number" />
+        <Any minMatches="1">
+          <Match idRef="Keyword_italy_drivers_license_number" />
+        </Any>
+    </Pattern>
+</Entity>
+```
+
+</td>
 </tr>
 <tr class="odd">
 <td><p>Ключевые слова</p></td>
@@ -4743,23 +5018,29 @@ _**Последнее изменение раздела:** 2018-05-03_
 <li><p>функция <code>Func_jp_bank_account</code> находит содержимое, которое соответствует шаблону;</p></li>
 <li><p>находится ключевое слово из <code>Keyword_jp_bank_account</code>.</p></li>
 </ul>
-<pre><code>&lt;!-- Japan Bank Account Number --&gt;
-&lt;Entity id=&quot;d354f95b-96ee-4b80-80bc-4377312b55bc&quot; patternsProximity=&quot;300&quot; recommendedConfidence=&quot;75&quot;&gt;
-  &lt;Version minEngineVersion=&quot;15.01.0131.000&quot;&gt;
-    &lt;Pattern confidenceLevel=&quot;85&quot;&gt;
-          &lt;IdMatch idRef=&quot;Func_jp_bank_account&quot; /&gt;
-          &lt;Match idRef=&quot;Keyword_jp_bank_account&quot; /&gt;
-          &lt;Any minMatches=&quot;1&quot;&gt;
-            &lt;Match idRef=&quot;Func_jp_bank_account_branch_code&quot; /&gt;
-            &lt;Match idRef=&quot;Keyword_jp_bank_branch_code&quot; /&gt;
-          &lt;/Any&gt;
-      &lt;/Pattern&gt;
-  &lt;/Version&gt;    
-     &lt;Pattern confidenceLevel=&quot;75&quot;&gt;
-        &lt;IdMatch idRef=&quot;Func_jp_bank_account&quot; /&gt;
-        &lt;Match idRef=&quot;Keyword_jp_bank_account&quot; /&gt;
-    &lt;/Pattern&gt;
-&lt;/Entity&gt;</code></pre></td>
+
+
+```Command&nbsp;Line
+<!-- Japan Bank Account Number -->
+<Entity id="d354f95b-96ee-4b80-80bc-4377312b55bc" patternsProximity="300" recommendedConfidence="75">
+  <Version minEngineVersion="15.01.0131.000">
+    <Pattern confidenceLevel="85">
+          <IdMatch idRef="Func_jp_bank_account" />
+          <Match idRef="Keyword_jp_bank_account" />
+          <Any minMatches="1">
+            <Match idRef="Func_jp_bank_account_branch_code" />
+            <Match idRef="Keyword_jp_bank_branch_code" />
+          </Any>
+      </Pattern>
+  </Version>    
+     <Pattern confidenceLevel="75">
+        <IdMatch idRef="Func_jp_bank_account" />
+        <Match idRef="Keyword_jp_bank_account" />
+    </Pattern>
+</Entity>
+```
+
+</td>
 </tr>
 <tr class="odd">
 <td><p>Ключевые слова</p></td>
@@ -4874,13 +5155,19 @@ _**Последнее изменение раздела:** 2018-05-03_
 <li><p>функция <code>Func_jp_drivers_license_number</code> находит содержимое, которое соответствует шаблону;</p></li>
 <li><p>находится ключевое слово из <code>Keyword_jp_drivers_license_number</code>.</p></li>
 </ul>
-<pre><code>&lt;!-- Japan Driver&#39;s License Number --&gt;
-&lt;Entity id=&quot;c6011143-d087-451c-8313-7f6d4aed2270&quot; patternsProximity=&quot;300&quot; recommendedConfidence=&quot;75&quot;&gt;
-    &lt;Pattern confidenceLevel=&quot;75&quot;&gt;
-        &lt;IdMatch idRef=&quot;Func_jp_drivers_license_number&quot; /&gt;
-        &lt;Match idRef =&quot;Keyword_jp_drivers_license_number&quot; /&gt;
-    &lt;/Pattern&gt;
-&lt;/Entity&gt;</code></pre></td>
+
+
+```Command&nbsp;Line
+<!-- Japan Driver's License Number -->
+<Entity id="c6011143-d087-451c-8313-7f6d4aed2270" patternsProximity="300" recommendedConfidence="75">
+    <Pattern confidenceLevel="75">
+        <IdMatch idRef="Func_jp_drivers_license_number" />
+        <Match idRef ="Keyword_jp_drivers_license_number" />
+    </Pattern>
+</Entity>
+```
+
+</td>
 </tr>
 <tr class="odd">
 <td><p>Ключевые слова</p></td>
@@ -4964,13 +5251,19 @@ _**Последнее изменение раздела:** 2018-05-03_
 <li><p>функция <code>Func_jp_passport</code> находит содержимое, которое соответствует шаблону;</p></li>
 <li><p>находится ключевое слово из <code>Keyword_jp_passport</code>.</p></li>
 </ul>
-<pre><code>&lt;!-- Japan Passport Number --&gt;
-&lt;Entity id=&quot;75177310-1a09-4613-bf6d-833aae3743f8&quot; patternsProximity=&quot;300&quot; recommendedConfidence=&quot;75&quot;&gt;
-    &lt;Pattern confidenceLevel=&quot;75&quot;&gt;
-        &lt;IdMatch idRef=&quot;Func_jp_passport&quot; /&gt;
-        &lt;Match idRef=&quot;Keyword_jp_passport&quot; /&gt;
-    &lt;/Pattern&gt;
-&lt;/Entity&gt;</code></pre></td>
+
+
+```Command&nbsp;Line
+<!-- Japan Passport Number -->
+<Entity id="75177310-1a09-4613-bf6d-833aae3743f8" patternsProximity="300" recommendedConfidence="75">
+    <Pattern confidenceLevel="75">
+        <IdMatch idRef="Func_jp_passport" />
+        <Match idRef="Keyword_jp_passport" />
+    </Pattern>
+</Entity>
+```
+
+</td>
 </tr>
 <tr class="odd">
 <td><p>Ключевые слова</p></td>
@@ -5029,13 +5322,19 @@ _**Последнее изменение раздела:** 2018-05-03_
 <li><p>функция <code>Func_jp_resident_registration_number</code> находит содержимое, которое соответствует шаблону;</p></li>
 <li><p>находится ключевое слово из <code>Keyword_jp_resident_registration_number</code>.</p></li>
 </ul>
-<pre><code>&lt;!-- Japan Resident Registration Number --&gt;
-&lt;Entity id=&quot;01c1209b-6389-4faf-a5f8-3f7e13899652&quot; patternsProximity=&quot;300&quot; recommendedConfidence=&quot;75&quot;&gt;
-    &lt;Pattern confidenceLevel=&quot;75&quot;&gt;
-        &lt;IdMatch idRef=&quot;Func_jp_resident_registration_number&quot; /&gt;
-        &lt;Match idRef =&quot;Keyword_jp_resident_registration_number&quot; /&gt;
-    &lt;/Pattern&gt;
-&lt;/Entity&gt;</code></pre></td>
+
+
+```Command&nbsp;Line
+<!-- Japan Resident Registration Number -->
+<Entity id="01c1209b-6389-4faf-a5f8-3f7e13899652" patternsProximity="300" recommendedConfidence="75">
+    <Pattern confidenceLevel="75">
+        <IdMatch idRef="Func_jp_resident_registration_number" />
+        <Match idRef ="Keyword_jp_resident_registration_number" />
+    </Pattern>
+</Entity>
+```
+
+</td>
 </tr>
 <tr class="odd">
 <td><p>Ключевые слова</p></td>
@@ -5113,17 +5412,23 @@ _**Последнее изменение раздела:** 2018-05-03_
 <li><p>функция <code>Func_jp_sin_pre_1997</code> находит содержимое, которое соответствует шаблону;</p></li>
 <li><p>находится ключевое слово из <code>Keyword_jp_sin</code>.</p></li>
 </ul>
-<pre><code>&lt;!-- Japan Social Insurance Number --&gt;
-&lt;Entity id=&quot;c840e719-0896-45bb-84fd-1ed5c95e45ff&quot; patternsProximity=&quot;300&quot; recommendedConfidence=&quot;75&quot;&gt;
-    &lt;Pattern confidenceLevel=&quot;85&quot;&gt;
-        &lt;IdMatch idRef=&quot;Func_jp_sin&quot; /&gt;
-        &lt;Match idRef=&quot;Keyword_jp_sin&quot; /&gt;
-    &lt;/Pattern&gt;
-    &lt;Pattern confidenceLevel=&quot;75&quot;&gt;
-        &lt;IdMatch idRef=&quot;Func_jp_sin_pre_1997&quot; /&gt;
-        &lt;Match idRef=&quot;Keyword_jp_sin&quot; /&gt;
-    &lt;/Pattern&gt;
-&lt;/Entity&gt;</code></pre></td>
+
+
+```Command&nbsp;Line
+<!-- Japan Social Insurance Number -->
+<Entity id="c840e719-0896-45bb-84fd-1ed5c95e45ff" patternsProximity="300" recommendedConfidence="75">
+    <Pattern confidenceLevel="85">
+        <IdMatch idRef="Func_jp_sin" />
+        <Match idRef="Keyword_jp_sin" />
+    </Pattern>
+    <Pattern confidenceLevel="75">
+        <IdMatch idRef="Func_jp_sin_pre_1997" />
+        <Match idRef="Keyword_jp_sin" />
+    </Pattern>
+</Entity>
+```
+
+</td>
 </tr>
 <tr class="odd">
 <td><p>Ключевые слова</p></td>
@@ -5191,14 +5496,20 @@ _**Последнее изменение раздела:** 2018-05-03_
 <li><p>регулярное выражение <code>Regex_malaysia_id_card_number</code> находит содержимое, которое соответствует шаблону;</p></li>
 <li><p>находится ключевое слово из <code>Keyword_malaysia_id_card_number</code>.</p></li>
 </ul>
-<pre><code>&lt;!-- Malaysia ID Card Number --&gt;
-&lt;/Entity&gt;
-      &lt;Entity id=&quot;7f0e921c-9677-435b-aba2-bb8f1013c749&quot; patternsProximity=&quot;300&quot; recommendedConfidence=&quot;85&quot;&gt;
-        &lt;Pattern confidenceLevel=&quot;85&quot;&gt;
-            &lt;IdMatch idRef=&quot;Regex_malaysia_id_card_number&quot; /&gt;
-            &lt;Match idRef=&quot;Keyword_malaysia_id_card_number&quot; /&gt;
-        &lt;/Pattern&gt;
-&lt;/Entity&gt;</code></pre></td>
+
+
+```Command&nbsp;Line
+<!-- Malaysia ID Card Number -->
+</Entity>
+      <Entity id="7f0e921c-9677-435b-aba2-bb8f1013c749" patternsProximity="300" recommendedConfidence="85">
+        <Pattern confidenceLevel="85">
+            <IdMatch idRef="Regex_malaysia_id_card_number" />
+            <Match idRef="Keyword_malaysia_id_card_number" />
+        </Pattern>
+</Entity>
+```
+
+</td>
 </tr>
 <tr class="odd">
 <td><p>Ключевые слова</p></td>
@@ -5269,14 +5580,20 @@ _**Последнее изменение раздела:** 2018-05-03_
 <li><p>функция <code>Func_eu_date2</code> находит дату в правильном формате.</p></li>
 <li><p>Контрольная сумма проходит проверку.</p></li>
 </ul>
-<pre><code>&lt;!-- Netherlands Citizen&#39;s Service (BSN) Number --&gt;
-&lt;Entity id=&quot;c5f54253-ef7e-44f6-a578-440ed67e946d&quot; patternsProximity=&quot;300&quot; recommendedConfidence=&quot;85&quot;&gt;
-  &lt;Pattern confidenceLevel=&quot;85&quot;&gt;
-       &lt;IdMatch idRef=&quot;Func_netherlands_bsn&quot; /&gt; 
-       &lt;Match idRef=&quot;Keyword_netherlands_bsn&quot; /&gt; 
-       &lt;Match idRef=&quot;Func_eu_date2&quot; /&gt; 
-  &lt;/Pattern&gt;
-&lt;/Entity&gt;</code></pre></td>
+
+
+```Command&nbsp;Line
+<!-- Netherlands Citizen's Service (BSN) Number -->
+<Entity id="c5f54253-ef7e-44f6-a578-440ed67e946d" patternsProximity="300" recommendedConfidence="85">
+  <Pattern confidenceLevel="85">
+       <IdMatch idRef="Func_netherlands_bsn" /> 
+       <Match idRef="Keyword_netherlands_bsn" /> 
+       <Match idRef="Func_eu_date2" /> 
+  </Pattern>
+</Entity>
+```
+
+</td>
 </tr>
 <tr class="odd">
 <td><p>Ключевые слова</p></td>
@@ -5338,15 +5655,21 @@ _**Последнее изменение раздела:** 2018-05-03_
 <li><p>находится ключевое слово из <code>Keyword_nz_terms</code>;</p></li>
 <li><p>Контрольная сумма проходит проверку.</p></li>
 </ul>
-<pre><code>&lt;!-- New Zealand Health Number --&gt;
-&lt;Entity id=&quot;2b71c1c8-d14e-4430-82dc-fd1ed6bf05c7&quot; patternsProximity=&quot;300&quot; recommendedConfidence=&quot;85&quot;&gt;
-    &lt;Pattern confidenceLevel=&quot;85&quot;&gt;
-        &lt;IdMatch idRef=&quot;Func_new_zealand_ministry_of_health_number&quot; /&gt;
-        &lt;Any minMatches=&quot;1&quot;&gt;
-          &lt;Match idRef=&quot;Keyword_nz_terms&quot; /&gt;
-        &lt;/Any&gt;
-    &lt;/Pattern&gt;
-&lt;/Entity&gt;</code></pre></td>
+
+
+```Command&nbsp;Line
+<!-- New Zealand Health Number -->
+<Entity id="2b71c1c8-d14e-4430-82dc-fd1ed6bf05c7" patternsProximity="300" recommendedConfidence="85">
+    <Pattern confidenceLevel="85">
+        <IdMatch idRef="Func_new_zealand_ministry_of_health_number" />
+        <Any minMatches="1">
+          <Match idRef="Keyword_nz_terms" />
+        </Any>
+    </Pattern>
+</Entity>
+```
+
+</td>
 </tr>
 <tr class="odd">
 <td><p>Ключевые слова</p></td>
@@ -5416,16 +5739,22 @@ _**Последнее изменение раздела:** 2018-05-03_
 <li><p>функция <code>Func_norway_id_numbe</code> находит содержимое, которое соответствует шаблону;</p></li>
 <li><p>контрольная сумма проходит проверку.</p></li>
 </ul>
-<pre><code>&lt;!-- Norway Identification Number --&gt;
-&lt;Entity id=&quot;d4c8a798-e9f2-4bd3-9652-500d24080fc3&quot; recommendedConfidence=&quot;85&quot; patternsProximity=&quot;300&quot;&gt;
-  &lt;Pattern confidenceLevel=&quot;85&quot;&gt;
-     &lt;IdMatch idRef=&quot;Func_norway_id_number&quot;/&gt;
-     &lt;Match idRef=&quot;Keyword_norway_id_number&quot;/&gt;
-  &lt;/Pattern&gt;
-  &lt;Pattern confidenceLevel=&quot;75&quot;&gt;
-     &lt;IdMatch idRef=&quot;Func_norway_id_number&quot;/&gt;
-  &lt;/Pattern&gt;
-&lt;/Entity&gt;</code></pre></td>
+
+
+```Command&nbsp;Line
+<!-- Norway Identification Number -->
+<Entity id="d4c8a798-e9f2-4bd3-9652-500d24080fc3" recommendedConfidence="85" patternsProximity="300">
+  <Pattern confidenceLevel="85">
+     <IdMatch idRef="Func_norway_id_number"/>
+     <Match idRef="Keyword_norway_id_number"/>
+  </Pattern>
+  <Pattern confidenceLevel="75">
+     <IdMatch idRef="Func_norway_id_number"/>
+  </Pattern>
+</Entity>
+```
+
+</td>
 </tr>
 <tr class="odd">
 <td><p>Ключевые слова</p></td>
@@ -5493,13 +5822,19 @@ _**Последнее изменение раздела:** 2018-05-03_
 <li><p>регулярное выражение <code>Regex_philippines_unified_id</code> находит содержимое, которое соответствует шаблону;</p></li>
 <li><p>находится ключевое слово из <code>Keyword_philippines_id</code>.</p></li>
 </ul>
-<pre><code>&lt;!-- Philippines Unified Multi-Purpose ID number --&gt;
-&lt;Entity id=&quot;019b39dd-8c25-4765-91a3-d9c6baf3c3b3&quot; recommendedConfidence=&quot;75&quot; patternsProximity=&quot;300&quot;&gt;
-  &lt;Pattern confidenceLevel=&quot;75&quot;&gt;
-     &lt;IdMatch idRef=&quot;Regex_philippines_unified_id&quot;/&gt;
-     &lt;Match idRef=&quot;Keyword_philippines_id&quot;/&gt;
-  &lt;/Pattern&gt;
-&lt;/Entity&gt;</code></pre></td>
+
+
+```Command&nbsp;Line
+<!-- Philippines Unified Multi-Purpose ID number -->
+<Entity id="019b39dd-8c25-4765-91a3-d9c6baf3c3b3" recommendedConfidence="75" patternsProximity="300">
+  <Pattern confidenceLevel="75">
+     <IdMatch idRef="Regex_philippines_unified_id"/>
+     <Match idRef="Keyword_philippines_id"/>
+  </Pattern>
+</Entity>
+```
+
+</td>
 </tr>
 <tr class="odd">
 <td><p>Ключевые слова</p></td>
@@ -5559,13 +5894,19 @@ _**Последнее изменение раздела:** 2018-05-03_
 <li><p>находится ключевое слово из <code>Keyword_polish_national_id_passport_number</code>;</p></li>
 <li><p>Контрольная сумма проходит проверку.</p></li>
 </ul>
-<pre><code>&lt;!-- Poland Identity Card--&gt;
-&lt;Entity id=&quot;25E64989-ED5D-40CA-A939-6C14183BB7BF&quot; patternsProximity=&quot;300&quot; recommendedConfidence=&quot;85&quot;&gt;
-      &lt;Pattern confidenceLevel=&quot;85&quot;&gt;
-          &lt;IdMatch idRef=&quot;Func_polish_national_id&quot; /&gt;
-          &lt;Match idRef=&quot;Keyword_polish_national_id_passport_number&quot; /&gt;
-      &lt;/Pattern&gt;
-&lt;/Entity&gt;</code></pre></td>
+
+
+```Command&nbsp;Line
+<!-- Poland Identity Card-->
+<Entity id="25E64989-ED5D-40CA-A939-6C14183BB7BF" patternsProximity="300" recommendedConfidence="85">
+      <Pattern confidenceLevel="85">
+          <IdMatch idRef="Func_polish_national_id" />
+          <Match idRef="Keyword_polish_national_id_passport_number" />
+      </Pattern>
+</Entity>
+```
+
+</td>
 </tr>
 <tr class="odd">
 <td><p>Ключевые слова</p></td>
@@ -5624,13 +5965,19 @@ _**Последнее изменение раздела:** 2018-05-03_
 <li><p>находится ключевое слово из <code>Keyword_pesel_identification_number</code>;</p></li>
 <li><p>Контрольная сумма проходит проверку.</p></li>
 </ul>
-<pre><code>&lt;!-- Poland National ID (PESEL) --&gt;      
-&lt;Entity id=&quot;E3AAF206-4297-412F-9E06-BA8487E22456&quot; patternsProximity=&quot;300&quot; recommendedConfidence=&quot;85&quot;&gt;
-      &lt;Pattern confidenceLevel=&quot;85&quot;&gt;
-          &lt;IdMatch idRef=&quot;Func_pesel_identification_number&quot; /&gt;
-          &lt;Match idRef=&quot;Keyword_pesel_identification_number&quot; /&gt;
-      &lt;/Pattern&gt;
-&lt;/Entity&gt;</code></pre></td>
+
+
+```Command&nbsp;Line
+<!-- Poland National ID (PESEL) -->      
+<Entity id="E3AAF206-4297-412F-9E06-BA8487E22456" patternsProximity="300" recommendedConfidence="85">
+      <Pattern confidenceLevel="85">
+          <IdMatch idRef="Func_pesel_identification_number" />
+          <Match idRef="Keyword_pesel_identification_number" />
+      </Pattern>
+</Entity>
+```
+
+</td>
 </tr>
 <tr class="odd">
 <td><p>Ключевые слова</p></td>
@@ -5688,14 +6035,20 @@ _**Последнее изменение раздела:** 2018-05-03_
 <li><p>находится ключевое слово из <code>Keyword_polish_national_id_passport_number</code>;</p></li>
 <li><p>Контрольная сумма проходит проверку.</p></li>
 </ul>
-<pre><code>&lt;!-- Poland Passport Number --&gt;
-&lt;Entity id=&quot;03937FB5-D2B6-4487-B61F-0F8BFF7C3517&quot; patternsProximity=&quot;300&quot; recommendedConfidence=&quot;85&quot;&gt;
-      &lt;Pattern confidenceLevel=&quot;85&quot;&gt;
-          &lt;IdMatch idRef=&quot;Func_polish_passport_number&quot; /&gt;
-          &lt;Match idRef=&quot;Keyword_polish_national_id_passport_number&quot; /&gt;
-      &lt;/Pattern&gt;
-&lt;/Entity&gt;
-&lt;/Version&gt;</code></pre></td>
+
+
+```Command&nbsp;Line
+<!-- Poland Passport Number -->
+<Entity id="03937FB5-D2B6-4487-B61F-0F8BFF7C3517" patternsProximity="300" recommendedConfidence="85">
+      <Pattern confidenceLevel="85">
+          <IdMatch idRef="Func_polish_passport_number" />
+          <Match idRef="Keyword_polish_national_id_passport_number" />
+      </Pattern>
+</Entity>
+</Version>
+```
+
+</td>
 </tr>
 <tr class="odd">
 <td><p>Ключевые слова</p></td>
@@ -5753,13 +6106,19 @@ _**Последнее изменение раздела:** 2018-05-03_
 <li><p>регулярное выражение <code>Regex_portugal_citizen_card</code> находит содержимое, которое соответствует шаблону;</p></li>
 <li><p>находится ключевое слово из <code>Keyword_portugal_citizen_card</code>.</p></li>
 </ul>
-<pre><code>&lt;!-- Portugal Citizen Card Number --&gt;
-&lt;Entity id=&quot;91a7ece2-add4-4986-9a15-c84544d81ecd&quot; recommendedConfidence=&quot;85&quot; patternsProximity=&quot;300&quot;&gt;
-  &lt;Pattern confidenceLevel=&quot;85&quot;&gt;
-     &lt;IdMatch idRef=&quot;Regex_portugal_citizen_card&quot;/&gt;
-     &lt;Match idRef=&quot;Keyword_portugal_citizen_card&quot;/&gt;
-  &lt;/Pattern&gt;
-&lt;/Entity&gt;</code></pre></td>
+
+
+```Command&nbsp;Line
+<!-- Portugal Citizen Card Number -->
+<Entity id="91a7ece2-add4-4986-9a15-c84544d81ecd" recommendedConfidence="85" patternsProximity="300">
+  <Pattern confidenceLevel="85">
+     <IdMatch idRef="Regex_portugal_citizen_card"/>
+     <Match idRef="Keyword_portugal_citizen_card"/>
+  </Pattern>
+</Entity>
+```
+
+</td>
 </tr>
 <tr class="odd">
 <td><p>Ключевые слова</p></td>
@@ -5819,15 +6178,21 @@ _**Последнее изменение раздела:** 2018-05-03_
 <li><p>регулярное выражение <code>Regex_saudi_arabia_national_id</code> находит содержимое, которое соответствует шаблону;</p></li>
 <li><p>находится ключевое слово из <code>Keyword_saudi_arabia_national_id</code>.</p></li>
 </ul>
-<pre><code>&lt;!-- Saudi Arabia National ID --&gt;
-&lt;Entity id=&quot;8c5a0ba8-404a-41a3-8871-746aa21ee6c0&quot; patternsProximity=&quot;300&quot; recommendedConfidence=&quot;75&quot;&gt;
-    &lt;Pattern confidenceLevel=&quot;75&quot;&gt;
-        &lt;IdMatch idRef=&quot;Regex_saudi_arabia_national_id&quot; /&gt;
-        &lt;Any minMatches=&quot;1&quot;&gt;
-          &lt;Match idRef=&quot;Keyword_saudi_arabia_national_id&quot; /&gt;
-        &lt;/Any&gt;
-    &lt;/Pattern&gt;
-&lt;/Entity&gt;</code></pre></td>
+
+
+```Command&nbsp;Line
+<!-- Saudi Arabia National ID -->
+<Entity id="8c5a0ba8-404a-41a3-8871-746aa21ee6c0" patternsProximity="300" recommendedConfidence="75">
+    <Pattern confidenceLevel="75">
+        <IdMatch idRef="Regex_saudi_arabia_national_id" />
+        <Any minMatches="1">
+          <Match idRef="Keyword_saudi_arabia_national_id" />
+        </Any>
+    </Pattern>
+</Entity>
+```
+
+</td>
 </tr>
 <tr class="odd">
 <td><p>Ключевые слова</p></td>
@@ -5897,16 +6262,22 @@ _**Последнее изменение раздела:** 2018-05-03_
 <li><p>регулярное выражение <code>Regex_singapore_nric</code> находит содержимое, которое соответствует шаблону;</p></li>
 <li><p>контрольная сумма проходит проверку.</p></li>
 </ul>
-<pre><code>&lt;!-- Singapore National Registration Identity Card (NRIC) Number --&gt;
-&lt;Entity id=&quot;cead390a-dd83-4856-9751-fb6dc98c34da&quot; recommendedConfidence=&quot;75&quot; patternsProximity=&quot;300&quot;&gt;
-  &lt;Pattern confidenceLevel=&quot;85&quot;&gt;
-     &lt;IdMatch idRef=&quot;Regex_singapore_nric&quot;/&gt;
-     &lt;Match idRef=&quot;Keyword_singapore_nric&quot;/&gt;
-  &lt;/Pattern&gt;
-  &lt;Pattern confidenceLevel=&quot;75&quot;&gt;
-     &lt;IdMatch idRef=&quot;Regex_singapore_nric&quot;/&gt;
-  &lt;/Pattern&gt;
-&lt;/Entity&gt;</code></pre></td>
+
+
+```Command&nbsp;Line
+<!-- Singapore National Registration Identity Card (NRIC) Number -->
+<Entity id="cead390a-dd83-4856-9751-fb6dc98c34da" recommendedConfidence="75" patternsProximity="300">
+  <Pattern confidenceLevel="85">
+     <IdMatch idRef="Regex_singapore_nric"/>
+     <Match idRef="Keyword_singapore_nric"/>
+  </Pattern>
+  <Pattern confidenceLevel="75">
+     <IdMatch idRef="Regex_singapore_nric"/>
+  </Pattern>
+</Entity>
+```
+
+</td>
 </tr>
 <tr class="odd">
 <td><p>Ключевые слова</p></td>
@@ -5977,13 +6348,19 @@ _**Последнее изменение раздела:** 2018-05-03_
 <li><p>находится ключевое слово из <code>Keyword_south_africa_identification_number</code>;</p></li>
 <li><p>Контрольная сумма проходит проверку.</p></li>
 </ul>
-<pre><code>&lt;!-- South Africa Identification Number --&gt;
-&lt;Entity id=&quot;e2adf7cb-8ea6-4048-a2ed-d89eb65f2780&quot; recommendedConfidence=&quot;85&quot; patternsProximity=&quot;300&quot;&gt;
-  &lt;Pattern confidenceLevel=&quot;85&quot;&gt;
-     &lt;IdMatch idRef=&quot;Func_south_africa_identification_number&quot;/&gt;
-     &lt;Match idRef=&quot;Keyword_south_africa_identification_number&quot;/&gt;
-  &lt;/Pattern&gt;
-&lt;/Entity&gt;</code></pre></td>
+
+
+```Command&nbsp;Line
+<!-- South Africa Identification Number -->
+<Entity id="e2adf7cb-8ea6-4048-a2ed-d89eb65f2780" recommendedConfidence="85" patternsProximity="300">
+  <Pattern confidenceLevel="85">
+     <IdMatch idRef="Func_south_africa_identification_number"/>
+     <Match idRef="Keyword_south_africa_identification_number"/>
+  </Pattern>
+</Entity>
+```
+
+</td>
 </tr>
 <tr class="odd">
 <td><p>Ключевые слова</p></td>
@@ -6055,16 +6432,22 @@ _**Последнее изменение раздела:** 2018-05-03_
 <li><p>функция <code>Func_south_korea_resident_number</code> находит содержимое, которое соответствует шаблону;</p></li>
 <li><p>контрольная сумма проходит проверку.</p></li>
 </ul>
-<pre><code>&lt;!-- South Korea Resident Registration Number --&gt;
-&lt;Entity id=&quot;5b802e18-ba80-44c4-bc83-bf2ad36ae36a&quot; recommendedConfidence=&quot;85&quot; patternsProximity=&quot;300&quot;&gt;
-  &lt;Pattern confidenceLevel=&quot;85&quot;&gt;
-     &lt;IdMatch idRef=&quot;Func_south_korea_resident_number&quot;/&gt;
-     &lt;Match idRef=&quot;Keyword_south_korea_resident_number&quot;/&gt;
-  &lt;/Pattern&gt;
-  &lt;Pattern confidenceLevel=&quot;75&quot;&gt;
-     &lt;IdMatch idRef=&quot;Func_south_korea_resident_number&quot;/&gt;
-  &lt;/Pattern&gt;
-&lt;/Entity&gt;</code></pre></td>
+
+
+```Command&nbsp;Line
+<!-- South Korea Resident Registration Number -->
+<Entity id="5b802e18-ba80-44c4-bc83-bf2ad36ae36a" recommendedConfidence="85" patternsProximity="300">
+  <Pattern confidenceLevel="85">
+     <IdMatch idRef="Func_south_korea_resident_number"/>
+     <Match idRef="Keyword_south_korea_resident_number"/>
+  </Pattern>
+  <Pattern confidenceLevel="75">
+     <IdMatch idRef="Func_south_korea_resident_number"/>
+  </Pattern>
+</Entity>
+```
+
+</td>
 </tr>
 <tr class="odd">
 <td><p>Ключевые слова</p></td>
@@ -6131,12 +6514,18 @@ _**Последнее изменение раздела:** 2018-05-03_
 <li><p>функция <code>Func_spanish_social_security_number</code> находит содержимое, которое соответствует шаблону;</p></li>
 <li><p>контрольная сумма проходит проверку.</p></li>
 </ul>
-<pre><code>&lt;!-- Spain SSN --&gt;
-&lt;Entity id=&quot;5df987c0-8eae-4bce-ace7-b316347f3070&quot; patternsProximity=&quot;300&quot; recommendedConfidence=&quot;85&quot;&gt;
-    &lt;Pattern confidenceLevel=&quot;85&quot;&gt;
-        &lt;IdMatch idRef=&quot;Func_spanish_social_security_number&quot; /&gt;
-    &lt;/Pattern&gt;
-&lt;/Entity&gt;</code></pre></td>
+
+
+```Command&nbsp;Line
+<!-- Spain SSN -->
+<Entity id="5df987c0-8eae-4bce-ace7-b316347f3070" patternsProximity="300" recommendedConfidence="85">
+    <Pattern confidenceLevel="85">
+        <IdMatch idRef="Func_spanish_social_security_number" />
+    </Pattern>
+</Entity>
+```
+
+</td>
 </tr>
 <tr class="odd">
 <td><p>Ключевые слова</p></td>
@@ -6180,12 +6569,18 @@ _**Последнее изменение раздела:** 2018-05-03_
 <li><p>функция <code>Func_swedish_national_identifier</code> находит содержимое, которое соответствует шаблону;</p></li>
 <li><p>контрольная сумма проходит проверку.</p></li>
 </ul>
-<pre><code>&lt;!-- Sweden National ID --&gt;
-&lt;Entity id=&quot;f69aaf40-79be-4fac-8f05-fd1910d272c8&quot; patternsProximity=&quot;300&quot; recommendedConfidence=&quot;85&quot;&gt;
-    &lt;Pattern confidenceLevel=&quot;85&quot;&gt;
-        &lt;IdMatch idRef=&quot;Func_swedish_national_identifier&quot; /&gt;
-    &lt;/Pattern&gt;
-&lt;/Entity&gt;</code></pre></td>
+
+
+```Command&nbsp;Line
+<!-- Sweden National ID -->
+<Entity id="f69aaf40-79be-4fac-8f05-fd1910d272c8" patternsProximity="300" recommendedConfidence="85">
+    <Pattern confidenceLevel="85">
+        <IdMatch idRef="Func_swedish_national_identifier" />
+    </Pattern>
+</Entity>
+```
+
+</td>
 </tr>
 <tr class="odd">
 <td><p>Ключевые слова</p></td>
@@ -6227,16 +6622,22 @@ _**Последнее изменение раздела:** 2018-05-03_
 <li><p>найдено ключевое слово из <code>Keyword_sweden_passport</code>.</p></li>
 </ul></li>
 </ul>
-<pre><code>&lt;!-- Sweden Passport Number --&gt;
-&lt;Entity id=&quot;ba4e7456-55a9-4d89-9140-c33673553526&quot; patternsProximity=&quot;300&quot; recommendedConfidence=&quot;75&quot;&gt;
-    &lt;Pattern confidenceLevel=&quot;75&quot;&gt;
-        &lt;IdMatch idRef=&quot;Regex_sweden_passport_number&quot; /&gt;
-        &lt;Any minMatches=&quot;1&quot;&gt;
-          &lt;Match idRef=&quot;Keyword_passport&quot; /&gt;
-          &lt;Match idRef=&quot;Keyword_sweden_passport&quot; /&gt;
-        &lt;/Any&gt;
-    &lt;/Pattern&gt;
-&lt;/Entity&gt;</code></pre></td>
+
+
+```Command&nbsp;Line
+<!-- Sweden Passport Number -->
+<Entity id="ba4e7456-55a9-4d89-9140-c33673553526" patternsProximity="300" recommendedConfidence="75">
+    <Pattern confidenceLevel="75">
+        <IdMatch idRef="Regex_sweden_passport_number" />
+        <Any minMatches="1">
+          <Match idRef="Keyword_passport" />
+          <Match idRef="Keyword_sweden_passport" />
+        </Any>
+    </Pattern>
+</Entity>
+```
+
+</td>
 </tr>
 <tr class="odd">
 <td><p>Ключевые слова</p></td>
@@ -6330,12 +6731,18 @@ _**Последнее изменение раздела:** 2018-05-03_
 <li><p>регулярное выражение <code>Regex_swift</code> находит содержимое, которое соответствует шаблону;</p></li>
 <li><p>находится ключевое слово из <code>Keyword_swift</code>.</p></li>
 </ul>
-<pre><code>&lt;Entity id=&quot;cb2ab58c-9cb8-4c81-baf8-a4e106791df4&quot; patternsProximity=&quot;300&quot; recommendedConfidence=&quot;75&quot;&gt;
-&lt;Pattern confidenceLevel=&quot;75&quot;&gt;
-        &lt;IdMatch idRef=&quot;Regex_swift&quot; /&gt;
-        &lt;Match idRef=&quot;Keyword_swift&quot; /&gt;
-    &lt;/Pattern&gt;
-&lt;/Entity&gt;</code></pre></td>
+
+
+```Command&nbsp;Line
+<Entity id="cb2ab58c-9cb8-4c81-baf8-a4e106791df4" patternsProximity="300" recommendedConfidence="75">
+<Pattern confidenceLevel="75">
+        <IdMatch idRef="Regex_swift" />
+        <Match idRef="Keyword_swift" />
+    </Pattern>
+</Entity>
+```
+
+</td>
 </tr>
 <tr class="odd">
 <td><p>Ключевые слова</p></td>
@@ -6427,13 +6834,19 @@ _**Последнее изменение раздела:** 2018-05-03_
 <li><p>находится ключевое слово из <code>Keyword_taiwanese_national_id</code>;</p></li>
 <li><p>Контрольная сумма проходит проверку.</p></li>
 </ul>
-<pre><code>&lt;!-- Taiwanese National ID --&gt;
-&lt;Entity id=&quot;4C7BFC34-8DD1-421D-8FB7-6C6182C2AF03&quot; patternsProximity=&quot;300&quot; recommendedConfidence=&quot;85&quot;&gt;
-      &lt;Pattern confidenceLevel=&quot;85&quot;&gt;
-          &lt;IdMatch idRef=&quot;Func_taiwanese_national_id&quot; /&gt;
-          &lt;Match idRef=&quot;Keyword_taiwanese_national_id&quot; /&gt;
-      &lt;/Pattern&gt;
-&lt;/Entity&gt;</code></pre></td>
+
+
+```Command&nbsp;Line
+<!-- Taiwanese National ID -->
+<Entity id="4C7BFC34-8DD1-421D-8FB7-6C6182C2AF03" patternsProximity="300" recommendedConfidence="85">
+      <Pattern confidenceLevel="85">
+          <IdMatch idRef="Func_taiwanese_national_id" />
+          <Match idRef="Keyword_taiwanese_national_id" />
+      </Pattern>
+</Entity>
+```
+
+</td>
 </tr>
 <tr class="odd">
 <td><p>Ключевые слова</p></td>
@@ -6519,13 +6932,19 @@ _**Последнее изменение раздела:** 2018-05-03_
 <li><p>регулярное выражение <code>Regex_taiwan_passport</code> находит содержимое, которое соответствует шаблону;</p></li>
 <li><p>находится ключевое слово из <code>Keyword_taiwan_passport</code>.</p></li>
 </ul>
-<pre><code>&lt;!-- Taiwan Passport Number --&gt;
-&lt;Entity id=&quot;e7251cb4-4c2c-41df-963e-924eb3dae04a&quot; recommendedConfidence=&quot;75&quot; patternsProximity=&quot;300&quot;&gt;
-  &lt;Pattern confidenceLevel=&quot;75&quot;&gt;
-     &lt;IdMatch idRef=&quot;Regex_taiwan_passport&quot;/&gt;
-     &lt;Match idRef=&quot;Keyword_taiwan_passport&quot;/&gt;
-  &lt;/Pattern&gt;
-&lt;/Entity&gt;</code></pre></td>
+
+
+```Command&nbsp;Line
+<!-- Taiwan Passport Number -->
+<Entity id="e7251cb4-4c2c-41df-963e-924eb3dae04a" recommendedConfidence="75" patternsProximity="300">
+  <Pattern confidenceLevel="75">
+     <IdMatch idRef="Regex_taiwan_passport"/>
+     <Match idRef="Keyword_taiwan_passport"/>
+  </Pattern>
+</Entity>
+```
+
+</td>
 </tr>
 <tr class="odd">
 <td><p>Ключевые слова</p></td>
@@ -6592,13 +7011,19 @@ _**Последнее изменение раздела:** 2018-05-03_
 <li><p>регулярное выражение <code>Regex_taiwan_resident_certificate</code> находит содержимое, которое соответствует шаблону;</p></li>
 <li><p>находится ключевое слово из <code>Keyword_taiwan_resident_certificate</code>.</p></li>
 </ul>
-<pre><code>&lt;!-- Taiwan Resident Certificate (ARC/TARC) --&gt;
-&lt;Entity id=&quot;48269fec-05ea-46ea-b326-f5623a58c6e9&quot; recommendedConfidence=&quot;75&quot; patternsProximity=&quot;300&quot;&gt;
-  &lt;Pattern confidenceLevel=&quot;75&quot;&gt;
-     &lt;IdMatch idRef=&quot;Regex_taiwan_resident_certificate&quot;/&gt;
-     &lt;Match idRef=&quot;Keyword_taiwan_resident_certificate&quot;/&gt;
-  &lt;/Pattern&gt;
-&lt;/Entity&gt;</code></pre></td>
+
+
+```Command&nbsp;Line
+<!-- Taiwan Resident Certificate (ARC/TARC) -->
+<Entity id="48269fec-05ea-46ea-b326-f5623a58c6e9" recommendedConfidence="75" patternsProximity="300">
+  <Pattern confidenceLevel="75">
+     <IdMatch idRef="Regex_taiwan_resident_certificate"/>
+     <Match idRef="Keyword_taiwan_resident_certificate"/>
+  </Pattern>
+</Entity>
+```
+
+</td>
 </tr>
 <tr class="odd">
 <td><p>Ключевые слова</p></td>
@@ -6672,13 +7097,19 @@ _**Последнее изменение раздела:** 2018-05-03_
 <li><p>находится ключевое слово из <code>Keyword_uk_drivers_license</code>;</p></li>
 <li><p>Контрольная сумма проходит проверку.</p></li>
 </ul>
-<pre><code>&lt;!-- U.K. Driver&#39;s License Number --&gt;
-&lt;Entity id=&quot;f93de4be-d94c-40df-a8be-461738047551&quot; patternsProximity=&quot;300&quot; recommendedConfidence=&quot;75&quot;&gt;
-    &lt;Pattern confidenceLevel=&quot;75&quot;&gt;
-        &lt;IdMatch idRef=&quot;Func_uk_drivers_license&quot; /&gt;
-        &lt;Match idRef=&quot;Keyword_uk_drivers_license&quot; /&gt;
-    &lt;/Pattern&gt;
-&lt;/Entity&gt;</code></pre></td>
+
+
+```Command&nbsp;Line
+<!-- U.K. Driver's License Number -->
+<Entity id="f93de4be-d94c-40df-a8be-461738047551" patternsProximity="300" recommendedConfidence="75">
+    <Pattern confidenceLevel="75">
+        <IdMatch idRef="Func_uk_drivers_license" />
+        <Match idRef="Keyword_uk_drivers_license" />
+    </Pattern>
+</Entity>
+```
+
+</td>
 </tr>
 <tr class="odd">
 <td><p>Ключевые слова</p></td>
@@ -6748,15 +7179,21 @@ _**Последнее изменение раздела:** 2018-05-03_
 <li><p>регулярное выражение <code>Regex_uk_electoral</code> находит содержимое, которое соответствует шаблону;</p></li>
 <li><p>находится ключевое слово из <code>Keyword_uk_electoral</code>.</p></li>
 </ul>
-<pre><code>&lt;!-- U.K. Electoral Number --&gt;
-&lt;Entity id=&quot;a3eea206-dc0c-4f06-9e22-aa1be3059963&quot; patternsProximity=&quot;300&quot; recommendedConfidence=&quot;75&quot;&gt;
-    &lt;Pattern confidenceLevel=&quot;75&quot;&gt;
-        &lt;IdMatch idRef=&quot;Regex_uk_electoral&quot; /&gt;
-        &lt;Any minMatches=&quot;1&quot;&gt;
-          &lt;Match idRef=&quot;Keyword_uk_electoral&quot; /&gt;
-        &lt;/Any&gt;
-    &lt;/Pattern&gt;
-&lt;/Entity&gt;</code></pre></td>
+
+
+```Command&nbsp;Line
+<!-- U.K. Electoral Number -->
+<Entity id="a3eea206-dc0c-4f06-9e22-aa1be3059963" patternsProximity="300" recommendedConfidence="75">
+    <Pattern confidenceLevel="75">
+        <IdMatch idRef="Regex_uk_electoral" />
+        <Any minMatches="1">
+          <Match idRef="Keyword_uk_electoral" />
+        </Any>
+    </Pattern>
+</Entity>
+```
+
+</td>
 </tr>
 <tr class="odd">
 <td><p>Ключевые слова</p></td>
@@ -6828,17 +7265,23 @@ _**Последнее изменение раздела:** 2018-05-03_
 </ul></li>
 <li><p>Контрольная сумма проходит проверку.</p></li>
 </ul>
-<pre><code>&lt;!-- U.K. NHS Number --&gt;
-&lt;Entity id=&quot;3192014e-2a16-44e9-aa69-4b20375c9a78&quot; patternsProximity=&quot;300&quot; recommendedConfidence=&quot;85&quot;&gt;
-    &lt;Pattern confidenceLevel=&quot;85&quot;&gt;
-        &lt;IdMatch idRef=&quot;Func_uk_nhs_number&quot; /&gt;
-        &lt;Any minMatches=&quot;1&quot;&gt;
-          &lt;Match idRef=&quot;Keyword_uk_nhs_number&quot; /&gt;
-          &lt;Match idRef=&quot;Keyword_uk_nhs_number1&quot; /&gt;
-          &lt;Match idRef=&quot;Keyword_uk_nhs_number_dob&quot; /&gt;
-        &lt;/Any&gt;
-    &lt;/Pattern&gt;
-&lt;/Entity&gt;</code></pre></td>
+
+
+```Command&nbsp;Line
+<!-- U.K. NHS Number -->
+<Entity id="3192014e-2a16-44e9-aa69-4b20375c9a78" patternsProximity="300" recommendedConfidence="85">
+    <Pattern confidenceLevel="85">
+        <IdMatch idRef="Func_uk_nhs_number" />
+        <Any minMatches="1">
+          <Match idRef="Keyword_uk_nhs_number" />
+          <Match idRef="Keyword_uk_nhs_number1" />
+          <Match idRef="Keyword_uk_nhs_number_dob" />
+        </Any>
+    </Pattern>
+</Entity>
+```
+
+</td>
 </tr>
 <tr class="odd">
 <td><p>Ключевые слова</p></td>
@@ -6935,21 +7378,27 @@ _**Последнее изменение раздела:** 2018-05-03_
 <li><p>функция <code>Func_uk_nino</code> находит содержимое, которое соответствует шаблону;</p></li>
 <li><p>ни одно ключевое слово из <code>Keyword_uk_nino</code> не находится.</p></li>
 </ul>
-<pre><code>&lt;!-- U.K. NINO --&gt;
-&lt;Entity id=&quot;16c07343-c26f-49d2-a987-3daf717e94cc&quot; patternsProximity=&quot;300&quot; recommendedConfidence=&quot;75&quot;&gt;
-    &lt;Pattern confidenceLevel=&quot;85&quot;&gt;
-        &lt;IdMatch idRef=&quot;Func_uk_nino&quot; /&gt;
-        &lt;Any minMatches=&quot;1&quot;&gt;
-          &lt;Match idRef=&quot;Keyword_uk_nino&quot; /&gt;
-        &lt;/Any&gt;
-    &lt;/Pattern&gt;    
-     &lt;Pattern confidenceLevel=&quot;75&quot;&gt;
-        &lt;IdMatch idRef=&quot;Func_uk_nino&quot; /&gt;
-        &lt;Any minMatches=&quot;0&quot; maxMatches=&quot;0&quot;&gt;
-          &lt;Match idRef=&quot;Keyword_uk_nino&quot; /&gt;
-        &lt;/Any&gt;
-    &lt;/Pattern&gt;
-&lt;/Entity&gt;</code></pre></td>
+
+
+```Command&nbsp;Line
+<!-- U.K. NINO -->
+<Entity id="16c07343-c26f-49d2-a987-3daf717e94cc" patternsProximity="300" recommendedConfidence="75">
+    <Pattern confidenceLevel="85">
+        <IdMatch idRef="Func_uk_nino" />
+        <Any minMatches="1">
+          <Match idRef="Keyword_uk_nino" />
+        </Any>
+    </Pattern>    
+     <Pattern confidenceLevel="75">
+        <IdMatch idRef="Func_uk_nino" />
+        <Any minMatches="0" maxMatches="0">
+          <Match idRef="Keyword_uk_nino" />
+        </Any>
+    </Pattern>
+</Entity>
+```
+
+</td>
 </tr>
 <tr class="odd">
 <td><p>Ключевые слова</p></td>
@@ -7016,12 +7465,18 @@ _**Последнее изменение раздела:** 2018-05-03_
 <li><p>функция <code>Func_usa_uk_passport</code> находит содержимое, которое соответствует шаблону;</p></li>
 <li><p>находится ключевое слово из <code>Keyword_passport</code>.</p></li>
 </ul>
-<pre><code>&lt;Entity id=&quot;178ec42a-18b4-47cc-85c7-d62c92fd67f8&quot; patternsProximity=&quot;300&quot; recommendedConfidence=&quot;75&quot;&gt;
-    &lt;Pattern confidenceLevel=&quot;75&quot;&gt;
-        &lt;IdMatch idRef=&quot;Func_usa_uk_passport&quot; /&gt;
-        &lt;Match idRef=&quot;Keyword_passport&quot; /&gt;
-    &lt;/Pattern&gt;
-&lt;/Entity&gt;</code></pre></td>
+
+
+```Command&nbsp;Line
+<Entity id="178ec42a-18b4-47cc-85c7-d62c92fd67f8" patternsProximity="300" recommendedConfidence="75">
+    <Pattern confidenceLevel="75">
+        <IdMatch idRef="Func_usa_uk_passport" />
+        <Match idRef="Keyword_passport" />
+    </Pattern>
+</Entity>
+```
+
+</td>
 </tr>
 <tr class="odd">
 <td><p>Ключевые слова</p></td>
@@ -7094,13 +7549,19 @@ _**Последнее изменение раздела:** 2018-05-03_
 <li><p>регулярное выражение <code>Regex_usa_bank_account_number</code> находит содержимое, которое соответствует шаблону;</p></li>
 <li><p>находится ключевое слово из <code>Keyword_usa_Bank_Account</code>.</p></li>
 </ul>
-<pre><code>&lt;!-- U.S. Bank Account Number --&gt;
-&lt;Entity id=&quot;a2ce32a8-f935-4bb6-8e96-2a5157672e2c&quot; patternsProximity=&quot;300&quot; recommendedConfidence=&quot;75&quot;&gt;
-    &lt;Pattern confidenceLevel=&quot;75&quot;&gt;
-        &lt;IdMatch idRef=&quot;Regex_usa_bank_account_number&quot; /&gt;
-        &lt;Match idRef=&quot;Keyword_usa_Bank_Account&quot; /&gt;
-    &lt;/Pattern&gt;
-&lt;/Entity&gt;</code></pre></td>
+
+
+```Command&nbsp;Line
+<!-- U.S. Bank Account Number -->
+<Entity id="a2ce32a8-f935-4bb6-8e96-2a5157672e2c" patternsProximity="300" recommendedConfidence="75">
+    <Pattern confidenceLevel="75">
+        <IdMatch idRef="Regex_usa_bank_account_number" />
+        <Match idRef="Keyword_usa_Bank_Account" />
+    </Pattern>
+</Entity>
+```
+
+</td>
 </tr>
 <tr class="odd">
 <td><p>Ключевые слова</p></td>
@@ -7194,19 +7655,25 @@ _**Последнее изменение раздела:** 2018-05-03_
 <li><p>находится ключевое слово из <code>Keyword_us_drivers_license_abbreviations</code>;</p></li>
 <li><p>ни одно ключевое слово из <code>Keyword_us_drivers_license</code> не находится.</p></li>
 </ul>
-<pre><code>    &lt;Pattern confidenceLevel=&quot;75&quot;&gt;
-        &lt;IdMatch idRef=&quot;Func_new_york_drivers_license_number&quot; /&gt;
-        &lt;Match idRef=&quot;Keyword_new_york_drivers_license_name&quot; /&gt;
-        &lt;Match idRef=&quot;Keyword_us_drivers_license&quot; /&gt;
-    &lt;/Pattern&gt;
-    &lt;Pattern confidenceLevel=&quot;65&quot;&gt;
-        &lt;IdMatch idRef=&quot;Func_new_york_drivers_license_number&quot; /&gt;
-        &lt;Match idRef=&quot;Keyword_new_york_drivers_license_name&quot; /&gt;
-        &lt;Match idRef=&quot;Keyword_us_drivers_license_abbreviations&quot; /&gt;
-        &lt;Any minMatches=&quot;0&quot; maxMatches=&quot;0&quot;&gt;
-          &lt;Match idRef=&quot;Keyword_us_drivers_license&quot; /&gt;
-        &lt;/Any&gt;
-    &lt;/Pattern&gt;</code></pre></td>
+
+
+```Command&nbsp;Line
+    <Pattern confidenceLevel="75">
+        <IdMatch idRef="Func_new_york_drivers_license_number" />
+        <Match idRef="Keyword_new_york_drivers_license_name" />
+        <Match idRef="Keyword_us_drivers_license" />
+    </Pattern>
+    <Pattern confidenceLevel="65">
+        <IdMatch idRef="Func_new_york_drivers_license_number" />
+        <Match idRef="Keyword_new_york_drivers_license_name" />
+        <Match idRef="Keyword_us_drivers_license_abbreviations" />
+        <Any minMatches="0" maxMatches="0">
+          <Match idRef="Keyword_us_drivers_license" />
+        </Any>
+    </Pattern>
+```
+
+</td>
 </tr>
 <tr class="odd">
 <td><p>Ключевые слова</p></td>
@@ -7393,27 +7860,33 @@ _**Последнее изменение раздела:** 2018-05-03_
 <li><p>функция <code>Func_us_date</code> находит дату в правильном формате.</p></li>
 </ul></li>
 </ul>
-<pre><code>&lt;!-- U.S. Individual Taxpayer Identification Number (ITIN) --&gt;
-&lt;Entity id=&quot;e55e2a32-f92d-4985-a35d-a0b269eb687b&quot; patternsProximity=&quot;300&quot; recommendedConfidence=&quot;75&quot;&gt;
-    &lt;Pattern confidenceLevel=&quot;85&quot;&gt;
-        &lt;IdMatch idRef=&quot;Func_formatted_itin&quot; /&gt;
-        &lt;Any minMatches=&quot;1&quot;&gt;
-          &lt;Match idRef=&quot;Keyword_itin&quot; /&gt;
-          &lt;Match idRef=&quot;Func_us_address&quot; /&gt;
-          &lt;Match idRef=&quot;Func_us_date&quot; /&gt;
-          &lt;Match idRef=&quot;Keyword_itin_collaborative&quot; /&gt;
-        &lt;/Any&gt;
-    &lt;/Pattern&gt;
-    &lt;Pattern confidenceLevel=&quot;75&quot;&gt;
-        &lt;IdMatch idRef=&quot;Func_unformatted_itin&quot; /&gt;
-        &lt;Match idRef=&quot;Keyword_itin&quot; /&gt;
-        &lt;Any minMatches=&quot;1&quot;&gt;
-          &lt;Match idRef=&quot;Keyword_itin_collaborative&quot; /&gt;
-          &lt;Match idRef=&quot;Func_us_address&quot; /&gt;
-          &lt;Match idRef=&quot;Func_us_date&quot; /&gt;
-        &lt;/Any&gt;
-    &lt;/Pattern&gt;
-&lt;/Entity&gt;</code></pre></td>
+
+
+```Command&nbsp;Line
+<!-- U.S. Individual Taxpayer Identification Number (ITIN) -->
+<Entity id="e55e2a32-f92d-4985-a35d-a0b269eb687b" patternsProximity="300" recommendedConfidence="75">
+    <Pattern confidenceLevel="85">
+        <IdMatch idRef="Func_formatted_itin" />
+        <Any minMatches="1">
+          <Match idRef="Keyword_itin" />
+          <Match idRef="Func_us_address" />
+          <Match idRef="Func_us_date" />
+          <Match idRef="Keyword_itin_collaborative" />
+        </Any>
+    </Pattern>
+    <Pattern confidenceLevel="75">
+        <IdMatch idRef="Func_unformatted_itin" />
+        <Match idRef="Keyword_itin" />
+        <Any minMatches="1">
+          <Match idRef="Keyword_itin_collaborative" />
+          <Match idRef="Func_us_address" />
+          <Match idRef="Func_us_date" />
+        </Any>
+    </Pattern>
+</Entity>
+```
+
+</td>
 </tr>
 <tr class="odd">
 <td><p>Ключевые слова</p></td>
@@ -7518,31 +7991,37 @@ _**Последнее изменение раздела:** 2018-05-03_
 <li><p>Находится ключевое слово из <code>Keyword_ssn</code>.</p></li>
 <li><p>Функция <code>Func_unformatted_ssn</code> не находит содержимое, которое соответствует шаблону.</p></li>
 </ul>
-<pre><code> &lt;!-- U.S. Social Security Number (SSN) --&gt;
-    &lt;Entity id=&quot;a44669fe-0d48-453d-a9b1-2cc83f2cba77&quot; patternsProximity=&quot;300&quot; recommendedConfidence=&quot;75&quot;&gt;
-      &lt;Pattern confidenceLevel=&quot;85&quot;&gt;
-        &lt;IdMatch idRef=&quot;Func_ssn&quot; /&gt;
-        &lt;Match idRef=&quot;Keyword_ssn&quot; /&gt;
-      &lt;/Pattern&gt;
-      &lt;Pattern confidenceLevel=&quot;75&quot;&gt;
-        &lt;IdMatch idRef=&quot;Func_unformatted_ssn&quot; /&gt;
-        &lt;Match idRef=&quot;Keyword_ssn&quot; /&gt;
-      &lt;/Pattern&gt;
-      &lt;Pattern confidenceLevel=&quot;65&quot;&gt;
-        &lt;IdMatch idRef=&quot;Func_randomized_formatted_ssn&quot; /&gt;
-        &lt;Match idRef=&quot;Keyword_ssn&quot; /&gt;
-        &lt;Any minMatches=&quot;0&quot; maxMatches=&quot;0&quot;&gt;
-          &lt;Match idRef=&quot;Func_ssn&quot; /&gt;
-        &lt;/Any&gt;
-      &lt;/Pattern&gt;
-      &lt;Pattern confidenceLevel=&quot;55&quot;&gt;
-        &lt;IdMatch idRef=&quot;Func_randomized_unformatted_ssn&quot; /&gt;
-        &lt;Match idRef=&quot;Keyword_ssn&quot; /&gt;
-        &lt;Any minMatches=&quot;0&quot; maxMatches=&quot;0&quot;&gt;
-          &lt;Match idRef=&quot;Func_unformatted_ssn&quot; /&gt;
-        &lt;/Any&gt;
-      &lt;/Pattern&gt;
-    &lt;/Entity&gt;</code></pre></td>
+
+
+```Command&nbsp;Line
+ <!-- U.S. Social Security Number (SSN) -->
+    <Entity id="a44669fe-0d48-453d-a9b1-2cc83f2cba77" patternsProximity="300" recommendedConfidence="75">
+      <Pattern confidenceLevel="85">
+        <IdMatch idRef="Func_ssn" />
+        <Match idRef="Keyword_ssn" />
+      </Pattern>
+      <Pattern confidenceLevel="75">
+        <IdMatch idRef="Func_unformatted_ssn" />
+        <Match idRef="Keyword_ssn" />
+      </Pattern>
+      <Pattern confidenceLevel="65">
+        <IdMatch idRef="Func_randomized_formatted_ssn" />
+        <Match idRef="Keyword_ssn" />
+        <Any minMatches="0" maxMatches="0">
+          <Match idRef="Func_ssn" />
+        </Any>
+      </Pattern>
+      <Pattern confidenceLevel="55">
+        <IdMatch idRef="Func_randomized_unformatted_ssn" />
+        <Match idRef="Keyword_ssn" />
+        <Any minMatches="0" maxMatches="0">
+          <Match idRef="Func_unformatted_ssn" />
+        </Any>
+      </Pattern>
+    </Entity>
+```
+
+</td>
 </tr>
 <tr class="odd">
 <td><p>Ключевые слова</p></td>

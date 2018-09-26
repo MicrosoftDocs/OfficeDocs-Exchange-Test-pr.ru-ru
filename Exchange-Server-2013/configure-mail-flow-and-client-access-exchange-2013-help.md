@@ -317,10 +317,12 @@ _**Последнее изменение раздела:** 2016-12-09_
 
 2.  Сохраните имя узла сервера клиентского доступа в переменной, которая будет использоваться в следующем шаге. Например, Ex2013CAS.
     
-        $HostName = "Ex2013CAS"
+    ```powershell
+	$HostName = "Ex2013CAS"
+	```
 
 3.  Выполните следующие команды в консоли для настройки внутренних URL-адресов таким образом, чтобы они совпадали с внешним URL-адресом виртуального каталога.
-    
+    ```powershell
         Set-EcpVirtualDirectory "$HostName\ECP (Default Web Site)" -InternalUrl ((Get-EcpVirtualDirectory "$HostName\ECP (Default Web Site)").ExternalUrl)
         
         Set-WebServicesVirtualDirectory "$HostName\EWS (Default Web Site)" -InternalUrl ((get-WebServicesVirtualDirectory "$HostName\EWS (Default Web Site)").ExternalUrl)
@@ -332,11 +334,11 @@ _**Последнее изменение раздела:** 2016-12-09_
         Set-OwaVirtualDirectory "$HostName\OWA (Default Web Site)" -InternalUrl ((Get-OwaVirtualDirectory "$HostName\OWA (Default Web Site)").ExternalUrl)
         
         Set-PowerShellVirtualDirectory "$HostName\PowerShell (Default Web Site)" -InternalUrl ((Get-PowerShellVirtualDirectory "$HostName\PowerShell (Default Web Site)").ExternalUrl)
-
+	```
 4.  Не выходите из командной консоли. Настройте там автономную адресную книгу так, чтобы служба автообнаружения могла выбрать нужный виртуальный каталог для ее распространения. Для этого выполните приведенные ниже команды.
-    
+    ```powershell
         Get-OfflineAddressBook | Set-OfflineAddressBook -GlobalWebDistributionEnabled $True -VirtualDirectories $Null
-
+	```
 После настройки внутреннего URL-адреса в виртуальных каталогах сервера клиентского доступа необходимо настроить частные записи DNS для Outlook Web App и других возможностей подключения. В зависимости от конфигурации нужно будет настроить частные DNS-записи так, чтобы они указывали на внутренний или внешний IP-адрес либо полное доменное имя сервера клиентского доступа. Ниже приведены примеры рекомендуемых DNS-записей, которые необходимо создать для подключения внутренних клиентов.
 
 
@@ -455,9 +457,9 @@ _**Последнее изменение раздела:** 2016-12-09_
 
 
 8.  И, наконец, нам необходимо открыть командную консоль и настроить автономную адресную книгу, чтобы разрешить автообнаружению выбирать правильный виртуальный каталог для распространения автономной адресной книги. Чтобы сделать это, выполните указанные ниже команды.
-    
+    ```powershell
         Get-OfflineAddressBook | Set-OfflineAddressBook -GlobalWebDistributionEnabled $True -VirtualDirectories $Null
-
+	```
 После настройки внутреннего URL-адреса в виртуальных каталогах сервера клиентского доступа необходимо настроить частные записи DNS для Outlook Web App и других возможностей подключения. В зависимости от конфигурации нужно будет настроить частные DNS-записи так, чтобы они указывали на внутренний или внешний IP-адрес либо полное доменное имя сервера клиентского доступа. Ниже приведен пример рекомендуемой DNS-записи, которую следует создать для подключения внутренних клиентов, если внутренние URL-адреса виртуального каталога настроены для использования internal.contoso.com.
 
 

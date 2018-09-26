@@ -45,7 +45,9 @@ _**Последнее изменение раздела:** 2013-05-17_
 
 По умолчанию в журналах аудита создается запись для каждого выполняемого командлета. Если ведение журнала аудита включено впервые и необходимо, чтобы это действие выполнялось далее, список аудита командлетов изменять не требуется. Если были указаны командлеты для аудита, но теперь необходимо выполнить аудит всех командлетов, это можно сделать с помощью подстановочного знака "звездочка" (\*) с параметром *AdminAuditLogCmdlets* командлета **Set-AdminAuditLogConfig**, как показано в следующей команде:
 
+```powershell
     Set-AdminAuditLogConfig -AdminAuditLogCmdlets *
+```
 
 Можно указать командлеты для аудита, задав список командлетов с помощью параметра *AdminAuditLogCmdlets*. В списке командлетов для аудита можно указать определенные командлеты, командлеты с подстановочным знаком "звездочка" (\*) или и те и другие. Записи в списке разделяются запятыми. Допустимы следующие значения:
 
@@ -59,7 +61,9 @@ _**Последнее изменение раздела:** 2013-05-17_
 
 В этом примере выполняется аудит командлетов, указанных в предыдущем списке.
 
+```powershell
     Set-AdminAuditLogConfig -AdminAuditLogCmdlets New-Mailbox, *TransportRule, *Management*, Set-Transport*
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Set-AdminAuditLogConfig](https://technet.microsoft.com/ru-ru/library/dd298169\(v=exchg.150\)).
 
@@ -67,7 +71,9 @@ _**Последнее изменение раздела:** 2013-05-17_
 
 По умолчанию в журналах аудита создается запись для каждого выполняемого командлета, независимо от указанных параметров. Если ведение журнала аудита включено впервые и необходимо, чтобы это действие выполнялось далее, список аудита параметров изменять не требуется. Если были указаны параметры для аудита, но теперь необходимо выполнить аудит всех параметров, это можно сделать с помощью подстановочного знака "звездочка" (\*) с параметром *AdminAuditLogParameters* командлета **Set-AdminAuditLogConfig**, как показано в следующей команде:
 
+```powershell
     Set-AdminAuditLogConfig -AdminAuditLogParameters *
+```
 
 Параметры для аудита можно указать с помощью параметра *AdminAuditLogParameters*. В списке параметров для аудита можно указать отдельные параметры, параметры с подстановочным знаком "звездочка" (\*) или и те и другие. Записи в списке разделяются запятыми. Допустимы следующие значения:
 
@@ -85,7 +91,9 @@ _**Последнее изменение раздела:** 2013-05-17_
 
 В этом примере выполняется аудит параметров, указанных в предыдущем списке.
 
+```powershell
     Set-AdminAuditLogConfig -AdminAuditLogParameters Database, *Address*, Custom*, *Region
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Set-AdminAuditLogConfig](https://technet.microsoft.com/ru-ru/library/dd298169\(v=exchg.150\)).
 
@@ -111,7 +119,9 @@ _**Последнее изменение раздела:** 2013-05-17_
 
 В этом примере указывается время хранения, равное двум годам и шести месяцам.
 
-    Set-AdminAuditLogConfig -AdminAuditLogAgeLimit 913.00:00:00
+```powershell
+Set-AdminAuditLogConfig -AdminAuditLogAgeLimit 913.00:00:00
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Set-AdminAuditLogConfig](https://technet.microsoft.com/ru-ru/library/dd298169\(v=exchg.150\)).
 
@@ -121,11 +131,15 @@ _**Последнее изменение раздела:** 2013-05-17_
 
 Эта команда включает ведение журнала командлетов **Test**.
 
-    Set-AdminAuditLogConfig -TestCmdletLoggingEnabled $True
+```powershell
+Set-AdminAuditLogConfig -TestCmdletLoggingEnabled $True
+```
 
 Эта команда отключает ведение журнала командлетов **Test**.
 
-    Set-AdminAuditLogConfig -TestCmdletLoggingEnabled $False
+```powershell
+Set-AdminAuditLogConfig -TestCmdletLoggingEnabled $False
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Set-AdminAuditLogConfig](https://technet.microsoft.com/ru-ru/library/dd298169\(v=exchg.150\)).
 
@@ -133,17 +147,23 @@ _**Последнее изменение раздела:** 2013-05-17_
 
 Чтобы отключить ведение журнала аудита администратора, используйте следующую команду.
 
-    Set-AdminAuditLogConfig -AdminAuditLogEnabled $False
+```powershell
+Set-AdminAuditLogConfig -AdminAuditLogEnabled $False
+```
 
 ## Включение ведения журнала аудита администратора
 
 Чтобы включить ведение журнала аудита администратора, используйте следующую команду.
 
-    Set-AdminAuditLogConfig -AdminAuditLogEnabled $True
+```powershell
+Set-AdminAuditLogConfig -AdminAuditLogEnabled $True
+```
 
 ## Просмотр параметров ведения журнала аудита администратора
 
 Чтобы просмотреть параметры ведения журнала аудита администратора, настроенного в организации, используйте следующую команду.
 
-    Get-AdminAuditLogConfig
+```powershell
+Get-AdminAuditLogConfig
+```
 

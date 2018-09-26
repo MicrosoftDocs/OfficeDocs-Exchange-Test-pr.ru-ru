@@ -41,11 +41,15 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 Чтобы отключить фильтрацию контента, выполните следующую команду:
 
-    Set-ContentFilterConfig -Enabled $false
+```powershell
+Set-ContentFilterConfig -Enabled $false
+```
 
 Чтобы включить фильтрацию содержимого, выполните следующую команду:
 
-    Set-ContentFilterConfig -Enabled $true
+```powershell
+Set-ContentFilterConfig -Enabled $true
+```
 
 > [!NOTE]  
 > При отключении фильтрации контента, соответствующий агент фильтрации все еще включен. Чтобы выключить агент фильтрации контента, выполните следующую команду: <code>Disable-TransportAgent &quot;Content Filter Agent&quot;</code>.
@@ -57,7 +61,9 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 1.  Выполните следующую команду:
     
-        Get-ContentFilterConfig | Format-List Enabled
+    ```powershell
+    Get-ContentFilterConfig | Format-List Enabled
+    ```
 
 2.  Проверьте значение отображаемого свойства *Enabled*.
 
@@ -67,11 +73,15 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 Чтобы отключить фильтрацию контента для внешних сообщений, выполните следующую команду:
 
-    Set-ContentFilterConfig -ExternalMailEnabled $false
+```powershell
+Set-ContentFilterConfig -ExternalMailEnabled $false
+```
 
 Чтобы включить фильтрацию контента для внешних сообщений, выполните следующую команду:
 
-    Set-ContentFilterConfig -ExternalMailEnabled $true
+```powershell
+Set-ContentFilterConfig -ExternalMailEnabled $true
+```
 
 ## Как проверить, что все получилось?
 
@@ -79,7 +89,9 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 1.  Выполните следующую команду:
     
-        Get-ContentFilterConfig | Format-List ExternalMailEnabled
+    ```powershell
+    Get-ContentFilterConfig | Format-List ExternalMailEnabled
+    ```
 
 2.  Проверьте значение отображаемого свойства *ExternalMailEnabled*.
 
@@ -89,11 +101,15 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 Чтобы включить фильтрацию контента для внутренних сообщений, выполните следующую команду:
 
-    Set-ContentFilterConfig -InternalMailEnabled $true
+```powershell
+Set-ContentFilterConfig -InternalMailEnabled $true
+```
 
 Чтобы выключить фильтрацию контента для внутренних сообщений, выполните следующую команду:
 
-    Set-ContentFilterConfig -InternalMailEnabled $false
+```powershell
+Set-ContentFilterConfig -InternalMailEnabled $false
+```
 
 ## Как проверить, что все получилось?
 
@@ -101,16 +117,18 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 1.  Выполните следующую команду:
     
-        Get-ContentFilterConfig | Format-List InternalMailEnabled
+    ```powershell
+    Get-ContentFilterConfig | Format-List InternalMailEnabled
+    ```
 
 2.  Проверьте значение отображаемого свойства *InternalMailEnabled*.
 
 ## Использование командной консоли, чтобы настроить исключения для получателей и отправителей
 
 Чтобы заменить существующие значения, выполните следующую команду:
-
+```powershell
     Set-ContentFilterConfig -BypassedRecipients <recipient1,recipient2...> -BypassedSenders <sender1,sender2...> -BypassedSenderDomains <domain1,domain2...>
-
+```
 В этом примере настраиваются следующие исключения для фильтрации контента:
 
   - Получатели laura@contoso.com и julia@contoso.com не проверяются при фильтрации контента.
@@ -120,13 +138,13 @@ _**Последнее изменение раздела:** 2015-04-08_
   - Все отправители из домена nwtraders.com и дочерних доменов не проверяются при фильтрации контента.
 
 <!-- end list -->
-
+```powershell
     Set-ContentFilterConfig -BypassedRecipients laura@contoso.com,julia@contoso.com -BypassedSenders steve@fabrikam.com,cindy@fabrikam.com -BypassedSenderDomains *.nwtraders.com
-
+```
 Чтобы добавить или удалить записи, не изменив существующие значения, выполните следующую команду:
-
+```powershell
     Set-ContentFilterConfig -BypassedRecipients @{Add="<recipient1>","<recipient2>"...; Remove="<recipient1>","<recipient2>"...} -BypassedSenders @{Add="<sender1>","<sender2>"...; Remove="<sender1>","<sender2>"...} -BypassedSenderDomains @{Add="<domain1>","<domain2>"...; Remove="<domain1>","<domain2>"...}
-
+```
 В этом примере настраиваются следующие исключения в фильтрации контента:
 
   - Добавить tiffany@contoso.com и chris@contoso.com в список текущих получателей, которые не проверяются при фильтрации контента.
@@ -138,40 +156,48 @@ _**Последнее изменение раздела:** 2015-04-08_
   - Удалить домен woodgrovebank.com и все его дочерние домены из списка текущих доменов, отправители из которых не проверяются при фильтрации контента.
 
 <!-- end list -->
-
+```powershell
     Set-ContentFilterConfig -BypassedRecipients @{Add="tiffany@contoso.com","chris@contoso.com"} -BypassedSenders @{Add="joe@fabrikam.com","michelle@fabrikam.com"} -BypassedSenderDomains @{Add="blueyonderairlines.com"; Remove="*.woodgrovebank.com"}
-
+```
 ## Как проверить, что все получилось?
 
 Чтобы проверить успешность настройки исключения получателей и отправителей, выполните следующие действия.
 
 1.  Выполните следующую команду:
-    
+    ```powershell
         Get-ContentFilterConfig | Format-List Bypassed*
-
+    ```
 2.  Убедитесь, что отображаемые значения соответствуют заданным параметрам.
 
 ## Использование командной консоли для настройки разрешенных и блокированных фраз
 
 Чтобы добавить разрешенные и заблокированные слова и фразы, выполните следующую команду:
-
+```powershell
     Add-ContentFilterPhrase -Influence GoodWord -Phrase <Phrase> -Influence BadWord -Phrase <Phrase>
-
+```
 Этот пример разрешает все сообщения, которые содержат фразу "отзыв клиента".
 
-    Add-ContentFilterPhrase -Influence GoodWord -Phrase "customer feedback"
+```powershell
+Add-ContentFilterPhrase -Influence GoodWord -Phrase "customer feedback"
+```
 
 В этом примере блокирует все сообщения, которые содержат фразу "подсказка по акциям".
 
-    Add-ContentFilterPhrase -Influence BadWord -Phrase "stock tip"
+```powershell
+Add-ContentFilterPhrase -Influence BadWord -Phrase "stock tip"
+```
 
 Чтобы удалить разрешенные или заблокированные фразы, выполните следующую команду:
 
-    Remove-ContentFilterPhrase -Phrase <Phrase>
+```powershell
+Remove-ContentFilterPhrase -Phrase <Phrase>
+```
 
 В этом примере удаляется фраза "подсказка по акциям":
 
-    Remove-ContentFilterPhrase -Phrase "stock tip"
+```powershell
+Remove-ContentFilterPhrase -Phrase "stock tip"
+```
 
 ## Как проверить, что все получилось?
 
@@ -179,16 +205,18 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 1.  Выполните следующую команду:
     
-        Get-ContentFilterPhrase | Format-List Influence,Phrase
+    ```powershell
+    Get-ContentFilterPhrase | Format-List Influence,Phrase
+    ```
 
 2.  Убедитесь, что отображаемые значения соответствуют заданным параметрам.
 
 ## Использование командной консоли для настройки порогов вероятности нежелательной почты
 
 Чтобы настроить пороговые значения и действия вероятности нежелательной почты, выполните приведенную ниже команду.
-
+```powershell
     Set-ContentFilterConfig -SCLDeleteEnabled <$true | $false> -SCLDeleteThreshold <Value> -SCLRejectEnabled <$true | $false> -SCLRejectThreshold <Value> -SCLQuarantineEnabled <$true | $false> -SCLQuarantineThreshold <Value>
-
+```
 > [!NOTE]  
 > Действие &quot;Удалить&quot; имеет более высокий приоритет по сравнению с действием &quot;Отклонить&quot;, а действие &quot;Отклонить&quot; — более высокий приоритет по сравнению с действием &quot;Поместить на карантин&quot;. Таким образом, пороговое значение вероятности нежелательной почты для действия &quot;Удалить&quot; должно превышать пороговое значение вероятности нежелательной почты действия &quot;Отклонить&quot;, которое, в свою очередь, должно превышать пороговое значение вероятности нежелательной почты действия &quot;Поместить на карантин&quot;. Только действие &quot;Отклонить&quot; включено по умолчанию, его пороговое значение SCL по умолчанию равно 7.
 
@@ -202,17 +230,17 @@ _**Последнее изменение раздела:** 2015-04-08_
   - Действие "Поместить на карантин" включено, задано соответствующее пороговое значение SCL 7.
 
 <!-- end list -->
-
+```powershell
     Set-ContentFilterConfig -SCLDeleteEnabled $true -SCLDeleteThreshold 9 -SCLRejectEnabled $true -SCLRejectThreshold 8 -SCLQuarantineEnabled $true -SCLQuarantineThreshold 7
-
+```
 ## Как проверить, что все получилось?
 
 Чтобы убедиться, что вы успешно настроили пороговые значения SCL, выполните следующие действия.
 
 1.  Выполните следующую команду:
-    
+    ```powershell
         Get-ContentFilterConfig | Format-List SCL*
-
+    ```
 2.  Убедитесь, что отображаемые значения соответствуют заданным параметрам.
 
 ## Использование командной консоли для настройки ответа об отклонении
@@ -221,20 +249,22 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 Чтобы задать пользовательский ответ при отклонении, выполните следующую команду:
 
-    Set-ContentFilterConfig -RejectionResponse "<Custom Text>"
+```powershell
+Set-ContentFilterConfig -RejectionResponse "<Custom Text>"
+```
 
 В этом примере для агента фильтрации контента настраивается отправка настроенного ответа об отклонении.
-
+```powershell
     Set-ContentFilterConfig -RejectionResponse "Your message was rejected because it appears to be SPAM."
-
+```
 ## Как проверить, что все получилось?
 
 Чтобы убедиться, что вы успешно настроили ответ при отклонении, выполните следующие действия.
 
 1.  Выполните следующую команду:
-    
+    ```powershell
         Get-ContentFilterConfig | Format-List *Reject*
-
+    ```
 2.  Убедитесь, что отображаемые значения соответствуют заданным параметрам.
 
 ## Использование командной консоли для включения или отключения добавления штемпелей Outlook
@@ -243,11 +273,15 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 Чтобы отключить проверку почтового штемпеля Outlook, выполните следующую команду:
 
-    Set-ContentFilterConfig -OutlookEmailPostmarkValidationEnabled $false
+```powershell
+Set-ContentFilterConfig -OutlookEmailPostmarkValidationEnabled $false
+```
 
 Чтобы включить проверку почтового штемпеля Outlook, выполните следующую команду:
 
-    Set-ContentFilterConfig -OutlookEmailPostmarkValidationEnabled $true
+```powershell
+Set-ContentFilterConfig -OutlookEmailPostmarkValidationEnabled $true
+```
 
 ## Как проверить, что все получилось?
 
@@ -255,7 +289,9 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 1.  Выполните следующую команду:
     
-        Get-ContentFilterConfig | Format-List OutlookEmailPostmarkValidationEnabled
+    ```powershell
+    Get-ContentFilterConfig | Format-List OutlookEmailPostmarkValidationEnabled
+    ```
 
 2.  Сравните показанное значение с заданным вами значением.
 

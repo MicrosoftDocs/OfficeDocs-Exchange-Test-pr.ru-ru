@@ -33,19 +33,27 @@ _**Последнее изменение раздела:** 2015-03-09_
 
 Изменение многозначных свойств несколько отличается от изменения свойств, принимающих только одно значение. Чтобы изменить свойство, принимающее только одно значение, можно присвоить значение непосредственно ему, как в следующей команде.
 
-    Set-TransportConfig -MaxSendSize 12MB
+```powershell
+Set-TransportConfig -MaxSendSize 12MB
+```
 
 При использовании этой команды сохраненное значение переписывается, чтобы придать новое значение свойству **MaxSendSize**. Это несложно для свойств, принимающих только одно значение. Однако при работе с многозначными свойствами возникают трудности. Предположим, что свойство **BlockedRecipients** объекта **RecipientFilterConfig** настроено так, чтобы принимать три значения, перечисленные в предыдущем разделе. При запуске команды `Get-RecipientFilterConfig | Format-List BlockedRecipients` отображается следующее:
 
-    BlockedRecipients : {david@adatum.com, kim@northwindtraders.com, john@contoso.com}
+```powershell
+BlockedRecipients : {david@adatum.com, kim@northwindtraders.com, john@contoso.com}
+```
 
 Теперь предположим, что получен запрос на добавление нового адреса SMTP в заблокированный список пользователей. Для добавления нового адреса SMTP запускаем следующую команду:
 
-    Set-RecipientFilterConfig -BlockedRecipients chris@contoso.com
+```powershell
+Set-RecipientFilterConfig -BlockedRecipients chris@contoso.com
+```
 
 При повторном выполнении команды `Get-RecipientFilterConfig | Format-List BlockedRecipients` отобразится следующее:
 
-    BlockedRecipients : {chris@contoso.com}
+```powershell
+BlockedRecipients : {chris@contoso.com}
+```
 
 Это не то, что ожидалось. Требовалось добавить новый адрес SMTP в существующий список блокированных получателей, но вместо этого существующий список блокированных получателей был заменен новым адресом SMTP. Этот непредусмотренный результат показывает, что изменение многозначного свойства отличается от изменения свойства, принимающего только одно значение. При изменении многозначного свойства необходимо убедиться в том, что значение добавляется или удаляется, не перезаписывая весь список значений. В следующем разделе показано, как именно это сделать.
 
@@ -69,11 +77,23 @@ _**Последнее изменение раздела:** 2015-03-09_
 <tbody>
 <tr class="odd">
 <td><p>Добавление одного или нескольких значений ко многозначному свойству</p></td>
-<td><pre><code>@{Add=&quot;&lt;value1&gt;&quot;, &quot;&lt;value2&gt;&quot;, &quot;&lt;value3&gt;&quot;}</code></pre></td>
+<td>
+
+```powershell
+@{Add="<value1>", "<value2>", "<value3>"}
+```
+
+</td>
 </tr>
 <tr class="even">
 <td><p>Удаление одного или нескольких значений из многозначного свойства</p></td>
-<td><pre><code>@{Remove=&quot;&lt;value1&gt;&quot;, &quot;&lt;value2&gt;&quot;, &quot;&lt;value3&gt;&quot;}</code></pre></td>
+<td>
+
+```powershell
+@{Remove="<value1>", "<value2>", "<value3>"}
+```
+
+</td>
 </tr>
 </tbody>
 </table>
@@ -81,21 +101,27 @@ _**Последнее изменение раздела:** 2015-03-09_
 
 Синтаксис, который вы выбираете из таблицы синтаксиса многозначных свойств, указывается в виде значения параметра в командлете. Например, следующая команда добавляет несколько значений в многозначное свойство:
 
-    Set-ExampleCmdlet -Parameter @{Add="Red", "Blue", "Green"}
+```powershell
+Set-ExampleCmdlet -Parameter @{Add="Red", "Blue", "Green"}
+```
 
 Когда вы используете данный синтаксис, указываемые значения добавляются в список значений, уже присутствующих в свойстве, или удаляются из него. Используя приведенный выше пример **BlockedRecipients**, мы можем добавить chris@contoso.com без перезаписи остальных значений в данном свойстве с помощью следующей команды:
 
-    Set-RecipientFilterConfig -BlockedRecipients @{Add="chris@contoso.com"}
+```powershell
+Set-RecipientFilterConfig -BlockedRecipients @{Add="chris@contoso.com"}
+```
 
 Если бы вы хотели удалить david@adatum.com из списка значений, команда имела бы следующий вид:
 
-    Set-RecipientFilterConfig -BlockedRecipients @{Remove="david@adatum.com"}
+```powershell
+Set-RecipientFilterConfig -BlockedRecipients @{Remove="david@adatum.com"}
+```
 
 Можно использовать и более сложные комбинации, такие как одновременное добавление и удаление значений для свойства. Для этого вставьте точку с запятой (`;`) между действиями `Add` и `Remove`. Например:
-
+```powershell
     Set-RecipientFilterConfig -BlockedRecipients @{Add="carter@contoso.com", "sam@northwindtraders.com", "brian@adatum.com"; Remove="john@contoso.com"}
-
+```
 Если мы используем команду `Get-RecipientFilterConfig | Format-List BlockedRecipients` еще раз, мы увидим, что адреса электронной почты для пользователей Carter, Sam и Brian были добавлены, а адрес для пользователя John был удален.
-
+```powershell
     BlockedRecipients : {brian@adatum.com, sam@northwindtraders.com, carter@contoso.com, chris@contoso.com, kim@northwindtraders.com}
-
+```

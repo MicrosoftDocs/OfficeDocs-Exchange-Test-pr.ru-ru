@@ -59,19 +59,27 @@ _**Последнее изменение раздела:** 2017-03-28_
 
 1.  Задайте автоматический запуск службы Microsoft Exchange POP3.
     
+    ```powershell
         Set-service msExchangePOP3 -startuptype automatic
+    ```
 
 2.  Запустите службу Microsoft Exchange POP3.
     
+    ```powershell
         Start-service msExchangePOP3
+    ```
 
 3.  Задайте автоматический запуск фоновой службы Microsoft Exchange POP3.
     
+    ```powershell
         Set-service msExchangePOP3BE -startuptype automatic
+    ```
 
 4.  Запустите фоновую службу Microsoft Exchange POP3.
     
+    ```powershell
         Start-service msExchangePOP3BE
+    ```
 
 ## Как проверить, что все получилось?
 

@@ -45,15 +45,21 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 Чтобы отключить фильтрацию вложений, выполните приведенную ниже команду.
 
-    Disable-TransportAgent "Attachment Filtering Agent"
+```powershell
+Disable-TransportAgent "Attachment Filtering Agent"
+```
 
 Чтобы включить фильтрацию вложений, выполните приведенную ниже команду.
 
-    Enable-TransportAgent "Attachment Filtering Agent"
+```powershell
+Enable-TransportAgent "Attachment Filtering Agent"
+```
 
 После включения или отключения фильтрации вложений перезапустите службу транспорта Microsoft Exchange, выполнив указанную ниже команду.
 
-    Restart-Service MSExchangeTransport
+```powershell
+Restart-Service MSExchangeTransport
+```
 
 ## Как проверить, что все получилось?
 
@@ -61,7 +67,9 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 1.  Выполните приведенную ниже команду.
     
-        Get-TransportAgent "Attachment Filtering Agent"
+    ```powershell
+    Get-TransportAgent "Attachment Filtering Agent"
+    ```
 
 2.  Если для параметра **Enabled** установлено значение `True`, фильтрация вложений включена. Если для этого параметра задано значение `False`, фильтрация вложений отключена.
 
@@ -69,41 +77,59 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 Записи фильтрации вложений определяют вложения в сообщения, которые не должны попадать в организацию. Чтобы просмотреть записи фильтрации вложений, используемые агентом фильтрации вложений, выполните приведенную ниже команду.
 
-    Get-AttachmentFilterEntry | Format-Table
+```powershell
+Get-AttachmentFilterEntry | Format-Table
+```
 
 Чтобы просмотреть конкретную запись типа контента MIME, используйте приведенный ниже синтаксис.
 
-    Get-AttachmentFilteringEntry ContentType:<MIMEContentType>
+```powershell
+Get-AttachmentFilteringEntry ContentType:<MIMEContentType>
+```
 
 Например, чтобы просмотреть запись типа контента для изображений в формате JPEG, выполните приведенную ниже команду.
 
-    Get-AttachmentFilteringEntry ContentType:image/jpeg
+```powershell
+Get-AttachmentFilteringEntry ContentType:image/jpeg
+```
 
 Чтобы просмотреть определенную запись имени или расширения файла, используйте приведенный ниже синтаксис.
 
-    Get-AttachmentFilteringEntry FileName:<FileName or FileNameExtension>
+```powershell
+Get-AttachmentFilteringEntry FileName:<FileName or FileNameExtension>
+```
 
 Например, чтобы просмотреть запись расширения имени файла для вложений в формате JPEG, выполните приведенную ниже команду.
 
-    Get-AttachmentFilteringEntry FileName:*.jpg
+```powershell
+Get-AttachmentFilteringEntry FileName:*.jpg
+```
 
 ## Использование командной консоли для добавления записей фильтрации вложений
 
 Чтобы добавить запись фильтрации вложений, которая фильтрует вложения по типу контента MIME, используйте приведенный ниже синтаксис.
 
-    Add-AttachmentFilterEntry -Name <MIMEContentType> -Type ContentType
+```powershell
+Add-AttachmentFilterEntry -Name <MIMEContentType> -Type ContentType
+```
 
 В примере ниже добавляется запись типа контента MIME, которая фильтрует изображения в формате JPEG.
 
-    Add-AttachmentFilterEntry -Name image/jpeg -Type ContentType
+```powershell
+Add-AttachmentFilterEntry -Name image/jpeg -Type ContentType
+```
 
 Чтобы добавить запись фильтрации вложений, которая фильтрует вложения по имени или расширению файла, используйте приведенный ниже синтаксис.
 
-    Add-AttachmentFilterEntry -Name <FileName or FileNameExtension> -Type FileName
+```powershell
+Add-AttachmentFilterEntry -Name <FileName or FileNameExtension> -Type FileName
+```
 
 В примере ниже выполняется фильтрация вложений с расширением имени JPG-файла.
 
-    Add-AttachmentFilterEntry -Name *.jpg -Type FileName
+```powershell
+Add-AttachmentFilterEntry -Name *.jpg -Type FileName
+```
 
 ## Как проверить, что все получилось?
 
@@ -111,7 +137,9 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 1.  Выполните приведенную ниже команду, чтобы убедиться в наличии записи фильтрации.
     
-        Get-AttachmentFilterEntry | Format-Table
+    ```powershell
+    Get-AttachmentFilterEntry | Format-Table
+    ```
 
 2.  Отправьте тестовое сообщения с вложением запрещенного типа из внешнего почтового ящика внутреннему получателю и убедитесь, что сообщение отклонено, очищено от вложения или удалено.
 
@@ -119,19 +147,27 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 Чтобы удалить запись фильтрации вложений, которая фильтрует вложения по типу контента MIME, используйте приведенный ниже синтаксис.
 
-    Remove-AttachmentFilterEntry ContentType:<ContentType>
+```powershell
+Remove-AttachmentFilterEntry ContentType:<ContentType>
+```
 
 В примере ниже удаляется запись типа контента MIME для изображений в формате JPEG.
 
-    Remove-AttachmentFilterEntry ContentType:image/jpeg
+```powershell
+Remove-AttachmentFilterEntry ContentType:image/jpeg
+```
 
 Чтобы удалить запись фильтрации вложений, которая фильтрует вложения по имени или расширению файла, используйте приведенный ниже синтаксис.
 
-    Remove-AttachmentFilterEntry FileName:<FileName or FileNameExtension>
+```powershell
+Remove-AttachmentFilterEntry FileName:<FileName or FileNameExtension>
+```
 
 В примере ниже удаляется запись имени файла для расширения имени JPG-файла.
 
-    Remove-AttachmentFilterEntry FileName:*.jpg
+```powershell
+Remove-AttachmentFilterEntry FileName:*.jpg
+```
 
 ## Как проверить, что все получилось?
 
@@ -139,7 +175,9 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 1.  Убедитесь, что запись фильтрации удалена, выполнив приведенную ниже команду.
     
-        Get-AttachmentFilterEntry | Format-Table
+    ```powershell
+    Get-AttachmentFilterEntry | Format-Table
+    ```
 
 2.  Отправьте тестовое сообщения с вложением разрешенного типа из внешнего почтового ящика внутреннему получателю и убедитесь, что сообщение с вложением успешно доставлено.
 
@@ -147,13 +185,17 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 Чтобы просмотреть действие фильтрации вложений, выполняемое в случае обнаружения в сообщении запрещенного вложения, выполните приведенную ниже команду.
 
-    Get-AttachmentFilterListConfig
+```powershell
+Get-AttachmentFilterListConfig
+```
 
 ## Использование командной консоли для настройки действия фильтрации вложений
 
 Чтобы настроить действие фильтрации вложений, выполняемое в случае обнаружения в сообщении запрещенного вложения, используйте приведенный ниже синтаксис.
 
-    Set-AttachmentFilterListConfig [-Action <Reject | Strip | SilentDelete>] [-RejectResponse "<Message text>"] [-AdminMessage "<Replacement file text>"] [-ExceptionConnectors <ConnectorGUID>]
+```powershell
+Set-AttachmentFilterListConfig [-Action <Reject | Strip | SilentDelete>] [-RejectResponse "<Message text>"] [-AdminMessage "<Replacement file text>"] [-ExceptionConnectors <ConnectorGUID>]
+```
 
 В этом примере в конфигурацию фильтрации вложений вносятся приведенные ниже изменения.
 
@@ -163,7 +205,9 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 <!-- end list -->
 
-    Set-AttachmentFilterListConfig -Action Reject -RejectResponse "This message contains a prohibited attachment. Your message can't be delivered. Please resend the message without the attachment."
+```powershell
+Set-AttachmentFilterListConfig -Action Reject -RejectResponse "This message contains a prohibited attachment. Your message can't be delivered. Please resend the message without the attachment."
+```
 
 Дополнительные сведения см. в статье [Set-AttachmentFilterListConfig](https://technet.microsoft.com/ru-ru/library/bb123483\(v=exchg.150\)).
 

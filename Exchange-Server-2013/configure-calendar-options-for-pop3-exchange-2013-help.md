@@ -37,19 +37,27 @@ _**Последнее изменение раздела:** 2012-11-27_
 
 В этом примере показано, как включить для пользователей POP3 использование стандартного способа обмена данными календаря — iCalendar.
 
-    Set-PopSettings -Identity CAS01 -CalendarItemRetrievalOption iCalendar
+```powershell
+Set-PopSettings -Identity CAS01 -CalendarItemRetrievalOption iCalendar
+```
 
 В этом примере пользователи POP3 могут получать доступ к данным календаря с внутреннего сервера.
 
-    Set-PopSettings -Identity CAS01 -CalendarItemRetrievalOption IntranetUrl 
+```powershell
+Set-PopSettings -Identity CAS01 -CalendarItemRetrievalOption IntranetUrl 
+```
 
 В этом примере пользователи POP3 могут получать доступ к внутренним данным календаря из Интернета или с внешнего сервера.
 
-    Set-PopSettings -CalendarItemRetrievalOption InternetUrl
+```powershell
+Set-PopSettings -CalendarItemRetrievalOption InternetUrl
+```
 
 В этом примере пользователи POP3 могут получать доступ к данным календаря по прямому URL-адресу Outlook Web App. Если используется `Custom`, необходимо указать URL-адрес Outlook Web App с помощью параметра *OWAServerUrl*.
 
-    Set-PopSettings -CalendarItemRetrievalOption Custom -OwaServerUrl "https://OwaServer01"
+```powershell
+Set-PopSettings -CalendarItemRetrievalOption Custom -OwaServerUrl "https://OwaServer01"
+```
 
 После указания параметров календаря для службы POP3 необходимо перезапустить службу POP3. Дополнительные сведения о перезапуске службы POP3 см. в разделе [Запуск и остановка служб POP3](start-and-stop-the-pop3-services-exchange-2013-help.md).
 
@@ -61,7 +69,9 @@ _**Последнее изменение раздела:** 2012-11-27_
 
 Выполните в командной консоли следующую команду.
 
-    Get-PopSettings | format-list
+```powershell
+Get-PopSettings | format-list
+```
 
 Убедитесь, что параметры календаря указаны правильно.
 

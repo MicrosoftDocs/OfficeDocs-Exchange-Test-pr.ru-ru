@@ -42,9 +42,9 @@ _**Последнее изменение раздела:** 2012-11-13_
     Для локальных организаций Exchange можно также проверить эти данные в оснастке "Active Directory — пользователи и компьютеры".
 
   - Выполните следующую команду, чтобы проверить, что отключенный ящик, который требуется подключить к учетной записи пользователя, существует в базе данных почтовых ящиков и не удален с возможностью восстановления.
-    
+    ```powershell
         Get-MailboxDatabase | Get-MailboxStatistics | Where { $_.DisplayName -eq "<display name>" } | fl DisplayName,Database,DisconnectReason
-    
+    ```
     Для подключения отключенного почтового ящика он должен находиться в базе данных почтовых ящиков, а значение свойства *DisconnectReason* должно равняться `Disabled`. Если почтовый ящик был удален из базы данных, команда не даст никаких результатов.
 
   - Сочетания клавиш для процедур, описанных в этой статье, приведены в статье [Сочетания клавиш в Центре администрирования Exchange](keyboard-shortcuts-in-the-exchange-admin-center-exchange-online-protection-help.md).
@@ -81,16 +81,18 @@ _**Последнее изменение раздела:** 2012-11-13_
 
 В данном примере подключается почтовый ящик пользователя. Параметр *Identity* задает отключенный почтовый ящик в базе данных Exchange. В параметре *User* указывается учетная запись пользователя в Active Directory, к которой заново подключается почтовый ящик.
 
-    Connect-Mailbox -Identity "Jeffrey Zeng" -Database MBXDB01 -User "Jeffrey Zeng"
+```powershell
+Connect-Mailbox -Identity "Jeffrey Zeng" -Database MBXDB01 -User "Jeffrey Zeng"
+```
 
 В данном примере подключается связанный почтовый ящик. Параметр *Identity* задает отключенный почтовый ящик в базе данных Exchange. В параметре *LinkedMasterAccount* указывается учетная запись пользователя Active Directory в лесу учетных записей, к которой необходимо заново подключить почтовый ящик. В параметре *Alias* указывается псевдоним, который является частью адреса электронной почты слева от символа (@), для заново подключенного почтового ящика.
-
+```powershell
     Connect-Mailbox -Identity "Kai Axford" -Database MBXDB02 -LinkedDomainController FabrikamDC01 -LinkedMasterAccount kai.axford@fabrikam.com -Alias kaia
-
+```
 В данном примере подключается общий почтовый ящик.
-
+```powershell
     Connect-Mailbox -Identity "Corporate Shared Mailbox" -Database "Mailbox Database 03" -User "Corporate Shared Mailbox" -Alias corpshared -Shared
-
+```
 > [!NOTE]  
 > Если не включать параметр <em>Alias</em> при запуске командлета <strong>Connect-Mailbox</strong>, то значение в параметре <em>User</em> или <em>LinkedMasterAccount</em> используется для создания псевдонима адреса электронной почты для заново подключаемого почтового ящика.
 
@@ -107,7 +109,9 @@ _**Последнее изменение раздела:** 2012-11-13_
 
   - В консоли Shell выполните следующую команду:
     
-        Get-User <identity>
+    ```powershell
+	Get-User <identity>
+	```
     
     Значение **UserMailbox** свойства *RecipientType* указывает, что учетная запись и почтовый ящик пользователя связаны. Для проверки того, что почтовый ящик существует, можно запустить командлет **Get-Mailbox**.
 

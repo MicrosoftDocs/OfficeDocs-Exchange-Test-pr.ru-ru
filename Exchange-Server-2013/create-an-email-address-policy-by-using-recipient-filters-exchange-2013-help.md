@@ -45,11 +45,13 @@ _**Последнее изменение раздела:** 2012-10-16_
 
 Чтобы создать политику адресов электронной почты с помощью фильтров получателей, используйте следующую синтаксическую конструкцию.
 
-    New-EmailAddressPolicy -Name <String> -RecipientFilter <String>
+```powershell
+New-EmailAddressPolicy -Name <String> -RecipientFilter <String>
+```
 
 В этом примере создается политика адресов электронной почты, применяемая ко всем сотрудникам, и при которой локальная часть адреса электронной почты включает первые две буквы имени и полную фамилию.
-
+```powershell
     New-EmailAddressPolicy -Name 'Execs' -EnabledEmailAddressTemplates 'SMTP:%2g%s@contoso.com' -RecipientFilter {((RecipientType -eq 'UserMailbox') -and (Title -like 'executive'))}
-
+```
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [New-EmailAddressPolicy](https://technet.microsoft.com/ru-ru/library/aa996800\(v=exchg.150\)).
 

@@ -39,9 +39,13 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 В этом примере отключаются сообщения об отсутствии на работе для удаленного домена с именем Contoso.
 
-    Set-RemoteDomain Contoso -AllowedOOFType None
+```powershell
+Set-RemoteDomain Contoso -AllowedOOFType None
+```
 
 В этом примере разрешается прием только внешних сообщений об отсутствии на работе.
 
-    Set-RemoteDomain Contoso -AllowedOOFType External
+```powershell
+Set-RemoteDomain Contoso -AllowedOOFType External
+```
 

@@ -71,11 +71,15 @@ _**Последнее изменение раздела:** 2016-06-15_
 
 Чтобы создать уполномоченный домен, введите команду в следующем формате.
 
-    New-AcceptedDomain -Name "<Unique Name>" -DomainName <SMTP domain> -DomainType Authoritative
+```powershell
+New-AcceptedDomain -Name "<Unique Name>" -DomainName <SMTP domain> -DomainType Authoritative
+```
 
 Например, чтобы создать уполномоченный домен с именем отправки "Дочерняя компания Fourth Coffee" для домена fourthcoffee.com, выполните следующую команду:
 
-    New-AcceptedDomain -Name "Fourth Coffee subsidiary" -DomainName fourthcoffee.com -DomainType Authoritative
+```powershell
+New-AcceptedDomain -Name "Fourth Coffee subsidiary" -DomainName fourthcoffee.com -DomainType Authoritative
+```
 
 ## Как проверить, что шаг выполнен?
 
@@ -117,11 +121,15 @@ _**Последнее изменение раздела:** 2016-06-15_
 
 Чтобы изменить существующий основной адрес электронной почты и сохранить старый в качестве дополнительного, выполните указанные ниже действия.
 
-    Set-EmailAddressPolicy <EmailAddressPolicyIdentity> -EnabledEmailAddressTemplates SMTP:<NewPrimaryEmailAddress>,smtp:<OldPrimaryEmailAddress>
+```powershell
+Set-EmailAddressPolicy <EmailAddressPolicyIdentity> -EnabledEmailAddressTemplates SMTP:<NewPrimaryEmailAddress>,smtp:<OldPrimaryEmailAddress>
+```
 
 Предположим, что политика адресов электронной почты использует формат адресов *useralias*`@contoso.com`. Этот пример изменяет домен основного (обратного) адреса в политике с именем "Default Policy" на `@fourthcoffee.com` и сохраняет старый адрес в домене `@contoso.com` как дополнительный.
 
-    Set-EmailAddressPolicy "Default Policy" -EnabledEmailAddressTemplates SMTP:@fourthcoffee.com,smtp:@contoso.com
+```powershell
+Set-EmailAddressPolicy "Default Policy" -EnabledEmailAddressTemplates SMTP:@fourthcoffee.com,smtp:@contoso.com
+```
 
 > [!NOTE]  
 > Квалификатор <code>SMTP</code>, заданный прописными буквами, указывает основной (обратный) адрес. Квалификатор <code>smtp</code>, заданный строчными буквами, указывает дополнительный (прокси) адрес.
@@ -129,11 +137,15 @@ _**Последнее изменение раздела:** 2016-06-15_
 
 Чтобы применить обновленную политику адресов электронной почты к получателям, введите команду в следующем формате.
 
-    Update-EmailAddressPolicy <EamilAddressPolicyIdentity>
+```powershell
+Update-EmailAddressPolicy <EamilAddressPolicyIdentity>
+```
 
 Например, чтобы применить обновленную политику с именем "Default Policy", выполните следующую команду:
 
-    Update-EmailAddressPolicy "Default Policy"
+```powershell
+Update-EmailAddressPolicy "Default Policy"
+```
 
 ## Замена существующего основного адреса электронной почты для фильтрованного набора получателей
 
@@ -174,8 +186,10 @@ _**Последнее изменение раздела:** 2016-06-15_
 6.  Нажмите кнопку **Предварительный просмотр получателей для политики**, чтобы увидеть получателей, к которым будет применяться эта политика.
 
 7.  
-    
-    Нажмите кнопку **Сохранить**, чтобы сохранить изменения и создать политику.
+
+```powershell    
+Нажмите кнопку **Сохранить**, чтобы сохранить изменения и создать политику.
+```
 
 8.  Вы получите предупреждение о том, что политика адресов электронной почты не будет применяться, пока она не будет обновлена. После создания выделите ее, а затем щелкните **Применить** в области сведений.
 
@@ -183,15 +197,21 @@ _**Последнее изменение раздела:** 2016-06-15_
 
 Чтобы заменить существующий основной адрес электронной почты для фильтрованного набора получателей, выполните следующую команду:
 
-    New-EmailAddressPolicy -Name <Policy Name> -Priority <Integer> -IncludedRecipients <RecipientTypes> <Conditional Recipient Properties> -EnabledEmailAddressTemplates SMTP:@<NewPrimaryEmailAddress>
+```powershell
+New-EmailAddressPolicy -Name <Policy Name> -Priority <Integer> -IncludedRecipients <RecipientTypes> <Conditional Recipient Properties> -EnabledEmailAddressTemplates SMTP:@<NewPrimaryEmailAddress>
+```
 
 В этом примере создается политика адресов электронной почты "Fourth Coffee Recipients", затем она назначается пользователям почтовых ящиков в отделе Fourth Coffee и ей присваивается самый высокий приоритет, чтобы она применялась первой. Обратите внимание, что старый основной адрес для этих получателей не сохраняется, поэтому они не смогут получать почту на него.
 
-    New-EmailAddressPolicy -Name "Fourth Coffee Recipients" -Priority 1 -IncludedRecipients MailboxUsers -ConditionalDepartment "Fourth Coffee" -EnabledEmailAddressTemplates SMTP:@fourthcoffee.com
+```powershell
+New-EmailAddressPolicy -Name "Fourth Coffee Recipients" -Priority 1 -IncludedRecipients MailboxUsers -ConditionalDepartment "Fourth Coffee" -EnabledEmailAddressTemplates SMTP:@fourthcoffee.com
+```
 
 Чтобы применить новую политику адресов электронной почты к заданным получателям, выполните следующую команду:
 
-    Update-EmailAddressPolicy "Fourth Coffee Recipients"
+```powershell
+Update-EmailAddressPolicy "Fourth Coffee Recipients"
+```
 
 ## Как проверить, что шаг выполнен?
 

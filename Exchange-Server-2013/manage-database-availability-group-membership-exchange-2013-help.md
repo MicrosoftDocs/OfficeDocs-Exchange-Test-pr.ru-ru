@@ -61,15 +61,21 @@ _**Последнее изменение раздела:** 2014-08-13_
 
 В данном примере показано добавление сервера почтовых ящиков MBX1 в группу обеспечения доступности баз данных DAG1.
 
-    Add-DatabaseAvailabilityGroupServer -Identity DAG1 -MailboxServer MBX1
+```powershell
+Add-DatabaseAvailabilityGroupServer -Identity DAG1 -MailboxServer MBX1
+```
 
 В данном примере показано удаление сервера почтовых ящиков MBX1 из группы обеспечения доступности баз данных DAG1. Перед выполнением этой команды убедитесь, что на сервере почтовых ящиков не осталось реплицированных баз данных.
 
-    Remove-DatabaseAvailabilityGroupServer -Identity DAG1 -MailboxServer MBX1
+```powershell
+Remove-DatabaseAvailabilityGroupServer -Identity DAG1 -MailboxServer MBX1
+```
 
 В этом примере показано удаление параметров конфигурации сервера почтовых ящиков с именем MBX4 из группы обеспечения доступности баз данных DAG2. Сервер MBX4 продолжительное время будет находиться в автономном режиме, поэтому в течение этого времени его настройки будут удалены из группы обеспечения доступности баз данных, чтобы иметь возможность установить кворум с оставшимися в оперативном режиме членами данной группы.
 
-    Remove-DatabaseAvailabilityGroupServer -Identity DAG2 -MailboxServer MBX4 -ConfigurationOnly
+```powershell
+Remove-DatabaseAvailabilityGroupServer -Identity DAG2 -MailboxServer MBX4 -ConfigurationOnly
+```
 
 ## Как проверить, что все получилось?
 
@@ -79,7 +85,9 @@ _**Последнее изменение раздела:** 2014-08-13_
 
   - В командной консоли выполните приведенную ниже команду, чтобы отобразить сведения о членстве в группе обеспечения доступности баз данных.
     
-        Get-DatabaseAvailabilityGroup <DAGName> | Format-List Servers
+    ```powershell
+    Get-DatabaseAvailabilityGroup <DAGName> | Format-List Servers
+    ```
 
 ## Дополнительные сведения
 

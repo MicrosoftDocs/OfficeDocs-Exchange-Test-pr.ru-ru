@@ -51,11 +51,15 @@ _**Последнее изменение раздела:** 2014-06-23_
 
 В этом примере выполняется переключение сервера MBX1. Система автоматически выбирает наиболее подходящий сервер почтовых ящиков для каждой активной базы данных сервера MBX1.
 
-    Move-ActiveMailboxDatabase -Server MBX1
+```powershell
+Move-ActiveMailboxDatabase -Server MBX1
+```
 
 В этом примере выполняется переключение сервера почтовых ящиков MBX4. После завершения выполнения команды сервер MBX5 размещает активную копию баз данных, которые были ранее активны на сервере MBX4.
 
-    Move-ActiveMailboxDatabase -Server MBX4 -ActivateOnServer MBX5
+```powershell
+Move-ActiveMailboxDatabase -Server MBX4 -ActivateOnServer MBX5
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Move-ActiveMailboxDatabase](https://technet.microsoft.com/ru-ru/library/dd298068\(v=exchg.150\)).
 

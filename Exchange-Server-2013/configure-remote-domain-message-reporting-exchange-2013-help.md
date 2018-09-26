@@ -39,9 +39,13 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 В этом примере отключаются отчеты о доставке, отправляемые в удаленный домен Contoso. Этот параметр по умолчанию включен.
 
-    Set-RemoteDomain Contoso -DeliveryReportEnabled $false
+```powershell
+Set-RemoteDomain Contoso -DeliveryReportEnabled $false
+```
 
 В этом примере отключаются отчеты о недоставке, отправляемые в удаленный домен. Этот параметр по умолчанию включен.
 
-    Set-RemoteDomain Contoso -NDREnabled $false
+```powershell
+Set-RemoteDomain Contoso -NDREnabled $false
+```
 

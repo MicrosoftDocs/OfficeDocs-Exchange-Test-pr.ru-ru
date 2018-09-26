@@ -59,11 +59,15 @@ _**Последнее изменение раздела:** 2012-11-28_
 
 В этом примере устанавливается предельное время ожидания подключения для простаивающих соединений, прошедших проверку подлинности.
 
-    Set -PopSettings -Identity CAS01 -AuthenticatedConnectionTimeout TimeValue
+```powershell
+Set -PopSettings -Identity CAS01 -AuthenticatedConnectionTimeout TimeValue
+```
 
 В этом примере устанавливается предельное время ожидания подключения для простаивающих соединений, не прошедших проверку подлинности.
 
-    Set -PopSettings -Identity CAS01 -PreAuthenticatedConnectionTimeout TimeValue
+```powershell
+Set -PopSettings -Identity CAS01 -PreAuthenticatedConnectionTimeout TimeValue
+```
 
 После установки предельного времени ожидания подключения для протокола POP3 необходимо перезапустить службы POP3, чтобы изменения вступили в силу. Дополнительные сведения о перезапуске служб POP3 см. в разделе [Запуск и остановка служб POP3](start-and-stop-the-pop3-services-exchange-2013-help.md).
 
@@ -87,7 +91,9 @@ _**Последнее изменение раздела:** 2012-11-28_
 
 1.  Выполните в командной консоли следующую команду.
     
-        Get-PopSettings | format-list
+    ```powershell
+    Get-PopSettings | format-list
+    ```
 
 2.  Убедитесь, что параметры указаны правильно.
 

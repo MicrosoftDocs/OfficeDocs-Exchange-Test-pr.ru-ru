@@ -50,10 +50,10 @@ _**Последнее изменение раздела:** 2012-11-18_
 ## Использование командной консоли для разрешения или запрета на ответ на вызовы на сервере почтовых ящиков
 
 В этом примере серверу почтовых ящиков `UMMBXr-05x.contoso.com` предоставляется разрешение на ответ на входящие голосовые вызовы, факсимильные сообщения, вызовы автосекретаря и голосового доступа к Outlook из шлюзов VoIP, IP-УАТС, УАТС с поддержкой протокола SIP и пограничных контроллеров сеансов (SBC), а также на запись изменений в реестр на сервере UMMBX-05x.
-
+```powershell
     Set-ServerComponentState -Component UnifiedMessaging -Identity UMMBX-05x.contoso.com -Requester Maintenance -State Active -LocalOnly
-
+```
 В этом примере серверу почтовых ящиков `UMMBX-05x.contoso.com` запрещается отвечать на входящие голосовые вызовы, факсимильные сообщения, вызовы автосекретаря и голосового доступа к Outlook из шлюзов VoIP, IP-УАТС, УАТС с поддержкой протокола SIP и пограничных контроллеров сеансов (SBC). Серверу разрешается записывать изменения только в службу Active Directory.
-
+```powershell
     Set-ServerComponentState -Component UnifiedMessaging -Identity UMMBX-05x.contoso.com -Requester Maintenance -State Inactive -RemoteOnly
-
+```

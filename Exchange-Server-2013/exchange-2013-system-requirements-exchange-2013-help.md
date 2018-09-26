@@ -279,7 +279,11 @@ Exchange 2013 поддерживает гибридные развертыван
 <ul>
 <li><p><strong>Windows Server 2008 R2</strong>. Переустановить Windows Server и выбрать параметр <strong>Полная установка</strong>.</p></li>
 <li><p><strong>Windows Server 2012 R2</strong> или <strong>Windows Server 2012</strong>. Преобразовать сервер, работающий в режиме Windows Server Core, в полную установку, выполнив указанную ниже команду.</p>
-<pre><code>Install-WindowsFeature Server-Gui-Mgmt-Infra, Server-Gui-Shell -Restart</code></pre></li>
+
+```powershell
+Install-WindowsFeature Server-Gui-Mgmt-Infra, Server-Gui-Shell -Restart
+```
+</li>
 </ul>
 
 

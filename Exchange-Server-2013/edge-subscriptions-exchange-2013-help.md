@@ -116,16 +116,18 @@ _**Последнее изменение раздела:** 2015-03-09_
 Дополнительные сведения об учетных записях ESRA и их использовании для защиты процесса синхронизации EdgeSync см. в разделе [Учетные данные пограничной подписки](edge-subscription-credentials-exchange-2013-help.md).
 
 В этом примере выполняется подписка пограничного транспортного сервера на указанный сайт и автоматически создается соединитель отправки в Интернет и соединитель отправки с пограничного транспортного сервера на серверы почтовых ящиков.
-
+```powershell
     New-EdgeSubscription -FileData ([byte[]]$(Get-Content -Path "C:\EdgeSubscriptionInfo.xml" -Encoding Byte -ReadCount 0)) -CreateInternetSendConnector $true -CreateInboundSendConnector $true -Site "Default-First-Site-Name" 
-
+```
 > [!NOTE]  
 > Для параметров <em>CreateInternetSendConnector</em> и <em>CreateInboundSendConnector</em> устанавливаются значения по умолчанию <code>$true</code>. Они приведены здесь только для примера.
 
 
 В этом примере показан экспорт файла пограничной подписки.
 
-    New-EdgeSubscription -FileName "C:\EdgeSubscriptionInfo.xml"
+```powershell
+New-EdgeSubscription -FileName "C:\EdgeSubscriptionInfo.xml"
+```
 
 > [!NOTE]  
 > При выполнении командлета <strong>New-EdgeSubscription</strong> на пограничном транспортном сервере появляется запрос на подтверждение отключения команд и перезаписи конфигурации на пограничном транспортном сервере. Чтобы данный запрос не требовал подтверждения, необходимо использовать параметр <em>Force</em>. Этот параметр полезен при использовании командлета <strong>New-EdgeSubscription</strong> в сценарии. Параметр <em>Force</em> также используется для перезаписи существующего файла, имя которого совпадает с именем файла, создаваемого в процессе повторной подписки пограничного транспортного сервера.

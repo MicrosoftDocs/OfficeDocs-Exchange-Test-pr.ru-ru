@@ -43,11 +43,15 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 Чтобы отключить фильтрацию отправителей, выполните следующую команду:
 
-    Set-SenderFilterConfig -Enabled $false
+```powershell
+Set-SenderFilterConfig -Enabled $false
+```
 
 Чтобы включить фильтрацию отправителей, выполните следующую команду:
 
-    Set-SenderFilterConfig -Enabled $true
+```powershell
+Set-SenderFilterConfig -Enabled $true
+```
 
 > [!NOTE]  
 > Когда фильтрация отправителей отключена, базовый агент фильтрации отправителей остается включенным. Чтобы отключить агент фильтрации отправителей, выполните следующую команду: <code>Disable-TransportAgent &quot;Sender Filter Agent&quot;</code>.
@@ -59,24 +63,26 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 1.  Выполните следующую команду:
     
-        Get-SenderFilterConfig | Format-List Enabled
+    ```powershell
+	Get-SenderFilterConfig | Format-List Enabled
+	```
 
 2.  Убедитесь, что отображается значение, которое вы настроили.
 
 ## Использование командной консоли для настройки заблокированных отправителей и доменов
 
 Чтобы заменить существующие значения, выполните следующую команду:
-
+```powershell
     Set-SenderFilterConfig -BlockedSenders <sender1,sender2...> -BlockedDomains <domain1,domain2...> -BlockedDomainsAndSubdomains <domain1,domain2...>
-
+```
 В данном примере представлена настройка агента фильтрации отправителей для блокировки сообщений с адресов inna@contoso.com и sergey@contoso.com, сообщений с домена fabrikam.com, а также сообщений с домена northwindtraders.com и всех его поддоменов.
-
+```powershell
     Set-SenderFilterConfig -BlockedSenders kim@contoso.com,john@contoso.com -BlockedDomains fabrikam.com -BlockedDomainsAndSubdomains northwindtraders.com
-
+```
 Чтобы добавить или удалить записи, не изменив существующие значения, выполните следующую команду:
-
+```powershell
     Set-SenderFilterConfig -BlockedSenders @{Add="<sender1>","<sender2>"...; Remove="<sender1>","<sender2>"...} -BlockedDomains @{Add="<domain1>","<domain2>"...; Remove="<domain1>","<domain2>"...} -BlockedDomainsAndSubdomains @{Add="<domain1>","<domain2>"...; Remove="<domain1>","<domain2>"...}
-
+```
 В данном примере представлена настройка агента фильтрации отправителей, при которой указываются следующие сведения.
 
   - Добавьте alexey@contoso.com и darya@contoso.com в список существующих заблокированных отправителей.
@@ -86,16 +92,18 @@ _**Последнее изменение раздела:** 2015-04-08_
   - Добавьте blueyonderairlines.com в список существующих заблокированных доменов и поддоменов отправителей.
 
 <!-- end list -->
-
+```powershell
     Set-SenderFilterConfig -BlockedSenders @{Add="chris@contoso.com","michelle@contoso.com"} -BlockedDomains @{Remove="tailspintoys.com"} -BlockedDomainsAndSubdomains @{Add="blueyonderairlines.com"}
-
+```
 ## Как проверить, что все получилось?
 
 Чтобы убедиться в успешной настройке блокировки отправителей, выполните следующие действия.
 
 1.  Выполните следующую команду:
     
-        Get-SenderFilterConfig | Format-List BlockedSenders,BlockedDomains,BlockedDomainsAndSubdomains
+    ```powershell
+	Get-SenderFilterConfig | Format-List BlockedSenders,BlockedDomains,BlockedDomainsAndSubdomains
+	```
 
 2.  Убедитесь, что отображаются значения, которые вы настроили.
 
@@ -103,11 +111,15 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 Чтобы включить или отключить блокировку сообщений, отправители которых не указаны, выполните следующую команду:
 
-    Set-SenderFilterConfig -BlankSenderBlockingenabled <$true | $false>
+```powershell
+Set-SenderFilterConfig -BlankSenderBlockingenabled <$true | $false>
+```
 
 В данном примере представлена настройка агента фильтрации отправителей таким образом, чтобы блокировать сообщения, в которых отправитель не указан в SMTP-команде MAIL FROM:
 
-    Set-SenderFilterConfig -BlankSenderBlockingEnabled $true
+```powershell
+Set-SenderFilterConfig -BlankSenderBlockingEnabled $true
+```
 
 ## Как проверить, что все получилось?
 
@@ -115,7 +127,9 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 1.  Выполните следующую команду:
     
-        Get-SenderFilterConfig | Format-List BlankSenderBlockingEnabled
+    ```powershell
+	Get-SenderFilterConfig | Format-List BlankSenderBlockingEnabled
+	```
 
 2.  Убедитесь, что отображается значение, которое вы настроили.
 

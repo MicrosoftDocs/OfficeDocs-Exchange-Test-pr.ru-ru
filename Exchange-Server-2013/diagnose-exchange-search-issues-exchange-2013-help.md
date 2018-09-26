@@ -55,8 +55,10 @@ _**Последнее изменение раздела:** 2016-12-09_
 
 2.  **Проверка конфигурации базы данных почтовых ящиков**   Присвоено ли параметру *IndexEnabled* значение True для базы данных почтовых ящиков пользователя? Если да, перейдите к шагу 3. Если нет, выполните следующую команду в командной консоли Exchange, чтобы убедиться, что для отметки *IndexEnabled* установлено значение True.
     
-        Get-MailboxDatabase | Format-Table Name,IndexEnabled
-    
+    ```powershell
+	Get-MailboxDatabase | Format-Table Name,IndexEnabled
+	```
+		
     Подробные сведения о синтаксисе и параметрах см. в разделе [Get-MailboxDatabase](https://technet.microsoft.com/ru-ru/library/bb124924\(v=exchg.150\)).
 
 3.  **Проверьте состояние обхода базы данных почтовых ящиков**. Выполнен ли обход базы данных Exchange? Если да, перейдите к действию 4. Если нет, используйте монитор стабильности и производительности, чтобы проверить счетчик **Программа-обходчик: осталось почтовых ящиков** объекта производительности **Индексы поиска MSExchange**. Выполните следующие шаги.
@@ -82,14 +84,16 @@ _**Последнее изменение раздела:** 2016-12-09_
     Сведения об использовании монитора производительности см. в разделе [Пошаговое руководство по отслеживанию производительности и стабильности в Windows Server 2008](https://go.microsoft.com/fwlink/p/?linkid=178005)
 
 4.  **Проверка работоспособности индексирования копии базы данных**   Работоспособен ли индекс содержимого? Используйте командлет **Get-MailboxDatabaseCopyStatus** для проверки работоспособности индексирования содержимого для копии базы данных.
-    
+    ```powershell
         Get-MailboxDatabaseCopyStatus -Server $env:ComputerName | Format-Table Name,Status,ContentIndex* -Auto
-    
+    ```
     Дополнительные сведения о синтаксисе и параметрах см. в разделе [Get-MailboxDatabaseCopyStatus](https://technet.microsoft.com/ru-ru/library/dd298044\(v=exchg.150\)).
 
 5.  **Запуск командлета Test-ExchangeSearch**   Если база данных почтовых ящиков уже отсканирована, можно запустить командлет **Test-ExchangeSearch** для базы данных почтовых ящиков или для определенного почтового ящика.
     
-        Test-ExchangeSearch -Identity AlanBrewer@contoso.com
+    ```powershell
+	Test-ExchangeSearch -Identity AlanBrewer@contoso.com
+	```
     
     Дополнительные сведения о синтаксисе и параметрах см. в разделе [Test-ExchangeSearch](https://technet.microsoft.com/ru-ru/library/bb124733\(v=exchg.150\)).
 

@@ -62,12 +62,14 @@ _**Последнее изменение раздела:** 2013-07-02_
 ## Использование командной консоли для включения конечной точки прокси-сервера MRS
 
 Следующая команда включает конечную точку прокси-сервера MRS на сервере клиентского доступа EXCH-SRV-01.
-
+```powershell
     Set-WebServicesVirtualDirectory -Identity "EXCH-SRV-01\EWS (Default Web Site)" -MRSProxyEnabled $true
-
+```
 Следующая команда включает конечную точку прокси-сервера на всех серверах клиентского доступа в организации Exchange.
 
-    Get-WebServicesVirtualDirectory | Set-WebServicesVirtualDirectory -MRSProxyEnabled $true
+```powershell
+Get-WebServicesVirtualDirectory | Set-WebServicesVirtualDirectory -MRSProxyEnabled $true
+```
 
 > [!IMPORTANT]  
 > Как было сказано ранее, конечную точку прокси-сервера MRS нужно включить на каждом сервере клиентского доступа в организации. Выполните предыдущую команду после добавления нового сервера клиентского доступа.
@@ -87,7 +89,9 @@ _**Последнее изменение раздела:** 2013-07-02_
 
 Выполните в командной консоли следующую команду:
 
-    Get-WebServicesVirtualDirectory | FL Identity,MRSProxyEnabled
+```powershell
+Get-WebServicesVirtualDirectory | FL Identity,MRSProxyEnabled
+```
 
 Убедитесь, что для параметра *MRSProxyEnabled* задано значение `True`.
 
@@ -95,10 +99,10 @@ _**Последнее изменение раздела:** 2013-07-02_
 
 Следующий пример проверяет подключение к серверу в лесу corp.contoso.com.
 
+```powershell
+$Credentials = Get-Credential
 ```
-    $Credentials = Get-Credential
-```
-```
+```powershell
     Test-MigrationServerAvailability -ExchangeRemoteMove -Autodiscover -EmailAddress administrator@corp.contoso.com -Credentials $Credentials
 ```
 Для успешного выполнения этой команды должна быть включена конечная точка прокси-сервера MRS.

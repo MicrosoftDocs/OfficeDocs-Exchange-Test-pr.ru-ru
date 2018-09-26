@@ -57,9 +57,11 @@ _**Последнее изменение раздела:** 2013-02-14_
 
 В этом примере в командной консоли из политики хранения Corp-Users удаляется тег хранения Delete - 3 Days.
 
+```powershell
     $tags = (Get-RetentionPolicy "Corp-Users").RetentionPolicyTagLinks
     $tags -= "Deleted Items - 3 Days"
     Set-RetentionPolicy "Corp-Users" -RetentionPolicyTagLinks $tags
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделах [Get-RetentionPolicy](https://technet.microsoft.com/ru-ru/library/dd298086\(v=exchg.150\)) и [Set-RetentionPolicy](https://technet.microsoft.com/ru-ru/library/dd335196\(v=exchg.150\)).
 
@@ -71,15 +73,19 @@ _**Последнее изменение раздела:** 2013-02-14_
 
 В этом примере командной консоли удаляется политика хранения из почтового ящика jpeoples.
 
-    Set-Mailbox jpeoples -RetentionPolicy $null.
+```powershell
+Set-Mailbox jpeoples -RetentionPolicy $null.
+```
 
 В этом примере командной консоли удаляется политика хранения из всех почтовых ящиков организации Exchange.
-
+```powershell
     Get-Mailbox -ResultSize unlimited -Filter {RetentionPolicy -ne $null} | Set-Mailbox -RetentionPolicy $null
+```
 
 В этом примере командной консоли удаляется политика хранения Corp-Finance из свойств всех пользователей почтовых ящиков, у которых применялась эта политика.
-
+```powershell
     Get-Mailbox -ResultSize unlimited -Filter {RetentionPolicy -eq "Corp-Finance"} | Set-Mailbox -RetentionPolicy $null
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделах [Set-Mailbox](https://technet.microsoft.com/ru-ru/library/bb123981\(v=exchg.150\)) и [Get-Mailbox](https://technet.microsoft.com/ru-ru/library/bb123685\(v=exchg.150\)).
 
@@ -100,16 +106,20 @@ _**Последнее изменение раздела:** 2013-02-14_
 
 
 В этом примере показано, как удалить из организации Exchange все теги удаления, кроме тега "Никогда не удалять", который используется в политике ArbitrationMailbox, созданной программой установки Exchange.
-
+```powershell
     Get-RetentionPolicyTag | ? {$_.RetentionAction -ne "MoveToArchive" -and $_.Name -ne "Never Delete"} | Remove-RetentionPolicyTag
+```
 
 В этом примере показано, как удалить все теги хранения, кроме "Никогда не удалять".
-
+```powershell
     Get-RetentionPolicyTag | ? {$_.Name -ne "Never Delete"} | Remove-RetentionPolicyTag
+```
 
 Эта команда удаляет политику хранения Corp-Users из организации Exchange.
 
-    Remove-RetentionPolicy Corp-Users
+```powershell
+Remove-RetentionPolicy Corp-Users
+```
 
 Подробные сведения о синтаксисе и параметрах см. в таких разделах:
 

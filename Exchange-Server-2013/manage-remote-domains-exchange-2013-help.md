@@ -45,16 +45,20 @@ _**Последнее изменение раздела:** 2015-04-13_
 
 Чтобы создать новую запись удаленного домена, введите команду в следующем формате.
 
-    New-RemoteDomain -Name <Descriptive Name> -DomainName <SMTP address space>
+```powershell
+New-RemoteDomain -Name <Descriptive Name> -DomainName <SMTP address space>
+```
 
 В этом примере показано, как создать запись удаленного домена для сообщений, отправляемых на домен contoso.com.
 
-    New-RemoteDomain -Name Contoso -DomainName contoso.com
+```powershell
+New-RemoteDomain -Name Contoso -DomainName contoso.com
+```
 
 В этом примере показано, как создать запись удаленного домена для сообщений, отправляемых на домен fabrikam.com и на все его поддомены.
-
+```powershell
     New-RemoteDomain -Name Fabrikam -DomainName *.fabrikam.com
-
+```
 ## Как проверить, что все получилось?
 
 Чтобы убедиться, что вы успешно создали удаленный домен, сделайте следующее.
@@ -79,11 +83,15 @@ _**Последнее изменение раздела:** 2015-04-13_
 
 Чтобы удалить запись удаленного домена, введите команду в следующем формате.
 
-    Remove-RemoteDomain <RemoteDomainName>
+```powershell
+Remove-RemoteDomain <RemoteDomainName>
+```
 
 В этом примере показано, как удалить запись удаленного домена с именем Contoso.
 
-    Remove-RemoteDomain Contoso
+```powershell
+Remove-RemoteDomain Contoso
+```
 
 ## Как проверить, что все получилось?
 

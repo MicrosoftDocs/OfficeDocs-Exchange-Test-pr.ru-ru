@@ -47,29 +47,31 @@ _**Последнее изменение раздела:** 2015-01-22_
 
 В данном примере показано получение статистики о папке "Элементы для восстановления" для почтового ящика Soumya Singhi и отображаются выходные данные в стандартном списке.
 
-    Get-MailboxFolderStatistics -Identity "Soumya Singhi" -FolderScope RecoverableItems | Format-List
+```powershell
+Get-MailboxFolderStatistics -Identity "Soumya Singhi" -FolderScope RecoverableItems | Format-List
+```
 
 В данном примере показано получение статистики о папке "Элементы для восстановления" для почтового ящика Soumya Singhi и отображение имени, пути к папке, количества элементов в папке и размера папки в формате таблицы.
-
+```powershell
     Get-MailboxFolderStatistics -Identity "Soumya Singhi" -FolderScope RecoverableItems | Format-Table Name,FolderPath,ItemsInFolder,FolderAndSubfolderSize
-
+```
 Подробные сведения о синтаксисе и параметрах см. в разделе [Get-MailboxFolderStatistics](https://technet.microsoft.com/ru-ru/library/aa996762\(v=exchg.150\)).
 
 ## Получение статистики по папке "Элементы с возможностью восстановления" для всех почтовых ящиков, к которым применено хранение для судебного разбирательства
 
 В данном примере показывается получение списка всех почтовых ящиков, к которым применено хранение для судебного разбирательства, и получение статистики по папке "Элементы с возможностью восстановления" с вложенными в нее папками для каждого почтового ящика. Свойства **Идентификатор** (идентификатор папки почтового ящика) и **FolderAndSubfolderSize** отображаются в формате таблицы.
-
+```powershell
     Get-Mailbox -ResultSize Unlimited -Filter {LitigationHoldEnabled -eq $true} | Get-MailboxFolderStatistics | Format-Table Identity,FolderAndSubfolderSize
-
+```
 Дополнительные сведения о синтаксисе и параметрах см. в разделах [Get-Mailbox](https://technet.microsoft.com/ru-ru/library/bb123685\(v=exchg.150\)) и [Get-MailboxFolderStatistics](https://technet.microsoft.com/ru-ru/library/aa996762\(v=exchg.150\)).
 
 ## Получение квоты для папки "Элементы с возможностью восстановления"
 
 В этом примере показана квота и квота предупреждения для папки "Элементы с возможностью восстановления" почтового ящика пользователя. В нем также описано получение сведений о том, задано ли для этого почтового ящика хранение на месте или хранение для судебного разбирательства.
-
+```powershell
     Get-Mailbox -Identity <identity of mailbox> | Format-List RecoverableItems*,LitigationHoldEnabled,InPlaceHolds
-
+```
 В этом примере показана квота и квота предупреждения для папки "Элементы с возможностью восстановления" для всех почтовых ящиков пользователей в организации. В примере также описано получение сведений о хранении.
-
+```powershell
     Get-Mailbox -ResultSize Unlimited -Filter {RecipientTypeDetails -eq "UserMailbox"} | Format-List Name,RecoverableItems*,LitigationHoldEnabled,InPlaceHolds
-
+```

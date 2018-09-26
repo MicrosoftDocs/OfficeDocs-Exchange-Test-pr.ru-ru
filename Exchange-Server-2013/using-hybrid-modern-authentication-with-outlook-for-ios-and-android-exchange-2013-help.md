@@ -171,7 +171,9 @@ _**Последнее изменение раздела:** 2018-04-19_
 
 1.  Вы можете применить встроенные в Exchange правила доступа с мобильных устройств и запретить всем мобильным устройствам подключаться, выполнив следующую команду в командной консоли Exchange:
     
+    ```powershell
         Set-ActiveSyncOrganizationSettings -DefaultAccessLevel Block
+    ```
 
 2.  Вы можете использовать локальную политику условного доступа в Intune после установки локального соединителя Exchange. Дополнительные сведения см. в статье [Создание политики условного доступа к локальной организации Exchange и устаревшей версии выделенной среды Exchange Online](https://docs.microsoft.com/intune/conditional-access-exchange-create#configure-exchange-on-premises-access).
 
@@ -210,14 +212,18 @@ _**Последнее изменение раздела:** 2018-04-19_
 Если вы уже включили гибридную современную проверку подлинности для поддержки других версий Outlook (в том числе Outlook для Mac) для локальных пользователей, как описано в статье [Как настроить локальный сервер Exchange Server на использование гибридной современной проверки подлинности](https://support.office.com/article/how-to-configure-exchange-server-on-premises-to-use-hybrid-modern-authentication-cef3044d-d4cb-4586-8e82-ee97bd3b14ad?), то осталось выполнить лишь несколько действий:
 
 1.  Создайте правило, разрешающее устройствам доступ к Exchange, чтобы среда Exchange Online могла подключаться к локальной среде по протоколу ActiveSync:
-    
+
+    ```powershell
         If ((Get-ActiveSyncOrganizationSettings).DefaultAccessLevel -ne "Allow") {New-ActiveSyncDeviceAccessRule -Characteristic DeviceType -QueryString "OutlookService" -AccessLevel Allow}
+    ```
     
     Обратите внимание на то, что управлять устройствами через локальный Центр администрирования Exchange невозможно. Для управления мобильными устройствами требуется Intune.
 
 2.  Создайте правило доступа к Exchange с устройств, которое запрещает пользователям подключаться к локальной среде при помощи приложений Outlook для iOS и Android с обычной проверкой подлинности по протоколу Exchange ActiveSync:
-    
+
+    ```powershell
         New-ActiveSyncDeviceAccessRule -Characteristic DeviceModel -QueryString "Outlook for iOS and Android" -AccessLevel Block
+    ```
     
     > [!NOTE]  
     > После создания этого правила пользователи, применяющие Outlook для iOS и Android с обычной проверкой подлинности, будут блокироваться.
@@ -345,7 +351,7 @@ _**Последнее изменение раздела:** 2018-04-19_
 
 **Ответ.** Да. Пользователь может обойти AutoDetect в любой момент и вручную настроить соединение, используя обычную проверку подлинности по протоколу Exchange ActiveSync. Чтобы гарантировать, что пользователь не устанавливает соединение с локальной средой при помощи механизма, не поддерживающего политики условного доступа с использованием Azure Active Directory и политики защиты приложений с использованием Intune, локальный администратор Exchange должен настроить правило доступа к устройствам Exchange, которое блокирует подключение ActiveSync. Для этого в командной консоли Exchange введите следующую команду:
 
-``` 
+```powershell
  New-ActiveSyncDeviceAccessRule -Characteristic DeviceModel -QueryString "Outlook for iOS and Android" -AccessLevel Block
 ```
 

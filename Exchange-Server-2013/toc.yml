@@ -665,31 +665,31 @@
       - name: Управление архивами на месте в Exchange 2013
         href: manage-in-place-archives-in-exchange-2013-exchange-2013-help.md
       - name: Изменение политик архивации
-        href: modify-archive-policies-exchange-2013-help.md
+        href: https://docs.microsoft.com/ru-ru/exchange/security-and-compliance/modify-archive-policies
       - name: Настройка квот архивации на месте (локально)
         href: configure-archive-quotas-for-an-in-place-archive-in-exchange-2013-exchange-2013-help.md
       - name: Архивация бесед Lync и содержимого собраний в Exchange
-        href: archive-lync-conversations-and-meeting-content-to-exchange-exchange-2013-help.md
+        href: https://docs.microsoft.com/ru-ru/Office365/SecurityCompliance/eop/exchange-online-protection-overview
       - name: Использование проверки подлинности OAuth для поддержки архивации в гибридном развертывании Exchange
         href: using-oauth-authentication-to-support-archiving-in-an-exchange-hybrid-deployment-exchange-2013-help.md
     - name: Хранение на месте и хранение для судебного разбирательства
-      href: in-place-hold-and-litigation-hold-exchange-2013-help.md
+      href: https://docs.microsoft.com/ru-ru/exchange/security-and-compliance/in-place-and-litigation-holds
       items:
       - name: Создание или удаление инцидента хранения на месте
-        href: create-or-remove-an-in-place-hold-exchange-2013-help.md
+        href: https://docs.microsoft.com/ru-ru/exchange/security-and-compliance/create-or-remove-in-place-holds
       - name: Перевод почтового ящика в режим хранения для судебного разбирательства
-        href: place-a-mailbox-on-litigation-hold-exchange-2013-help.md
+        href: https://docs.microsoft.com/ru-ru/office365/SecurityCompliance/place-a-mailbox-on-litigation-hold
       - name: Применение функции хранения ко всем почтовым ящикам
-        href: place-all-mailboxes-on-hold-exchange-2013-help.md
+        href: https://docs.microsoft.com/ru-ru/office365/securitycompliance/change-the-hold-duration-for-an-inactive-mailbox
       - name: Сохранение скрытых копий и получателей расширенной группы рассылки для обнаружения электронных данных
-        href: preserve-bcc-and-expanded-distribution-group-recipients-for-ediscovery-exchange-2013-help.md
+        href: https://docs.microsoft.com/ru-ru/office365/SecurityCompliance/preserve-bcc-and-expanded-distribution-group-recipients-for-ediscovery
     - name: Обнаружение электронных данных на месте
       href: https://docs.microsoft.com/ru-ru/exchange/security-and-compliance/in-place-ediscovery/in-place-ediscovery
       items:
       - name: Назначение разрешений обнаружения электронных данных в Exchange
         href: https://docs.microsoft.com/ru-ru/exchange/security-and-compliance/in-place-ediscovery/assign-ediscovery-permissions
       - name: Создание поискового запроса на локальное обнаружение электронных данных
-        href: create-an-in-place-ediscovery-search-exchange-2013-help.md
+        href: https://docs.microsoft.com/ru-ru/exchange/security-and-compliance/in-place-ediscovery/create-in-place-ediscovery-search
       - name: Копирование результатов поиска с обнаружением электронных данных в почтовый ящик обнаружения
         href: copy-ediscovery-search-results-to-a-discovery-mailbox-exchange-2013-help.md
       - name: Экспорт результатов поиска при обнаружении электронных данных в PST-файл
@@ -699,17 +699,17 @@
       - name: Создание почтового ящика обнаружения
         href: https://docs.microsoft.com/ru-ru/exchange/security-and-compliance/in-place-ediscovery/create-a-discovery-mailbox
       - name: Запуск и остановка поиска с обнаружением электронных данных на месте
-        href: start-or-stop-an-in-place-ediscovery-search-exchange-2013-help.md
+        href: https://docs.microsoft.com/ru-ru/office365/securitycompliance/use-content-search-in-ediscovery
       - name: Изменение обнаружения электронных данных на месте
-        href: modify-an-in-place-ediscovery-search-exchange-2013-help.md
+        href: https://docs.microsoft.com/ru-ru/office365/securitycompliance/search-for-ediscovery-activities-in-the-audit-log
       - name: Создание настраиваемой области управления для обнаружения электронных данных на месте
         href: https://docs.microsoft.com/ru-ru/exchange/security-and-compliance/in-place-ediscovery/create-custom-management-scope
       - name: Удаление поиска с обнаружением электронных данных на месте
-        href: remove-an-in-place-ediscovery-search-exchange-2013-help.md
+        href: https://docs.microsoft.com/ru-ru/SharePoint/governance/create-and-run-queries-in-the-ediscovery-center
       - name: Поиск и удаление сообщений (справка администратора)
-        href: search-for-and-delete-messages-admin-help-exchange-2013-help.md
+        href: https://docs.microsoft.com/ru-ru/office365/SecurityCompliance/search-for-and-delete-messagesadmin-help
       - name: Уменьшение размера почтового ящика обнаружения в Exchange
-        href: reduce-the-size-of-a-discovery-mailbox-in-exchange-exchange-2013-help.md
+        href: https://docs.microsoft.com/ru-ru/exchange/security-and-compliance/in-place-ediscovery/reduce-discovery-mailbox-size
       - name: Удаление и воссоздание почтового ящика найденных сообщений по умолчанию в Exchange
         href: https://docs.microsoft.com/ru-ru/exchange/security-and-compliance/in-place-ediscovery/delete-and-re-create-default-discovery-mailbox
       - name: Re-create the Discovery system mailbox
@@ -726,10 +726,10 @@
       - name: Записями сообщений в терминология управления в Exchange 2013
         href: messaging-records-management-terminology-in-exchange-2013-exchange-2013-help.md
       - name: Теги хранения и политики хранения
-        href: retention-tags-and-retention-policies-exchange-2013-help.md
+        href: https://docs.microsoft.com/ru-ru/exchange/security-and-compliance/messaging-records-management/retention-tags-and-policies
         items:
         - name: Политика хранения по умолчанию
-          href: default-retention-policy-in-exchange-online-and-exchange-server-exchange-2013-help.md
+          href: https://docs.microsoft.com/ru-ru/exchange/security-and-compliance/messaging-records-management/default-retention-policy
         - name: Папки по умолчанию, которые поддерживают теги политики хранения
           href: https://docs.microsoft.com/ru-ru/exchange/security-and-compliance/messaging-records-management/default-folders
         - name: Порядок вычисления срока хранения
@@ -737,18 +737,18 @@
         - name: 'Контрольный список: Развертывание политик хранения'
           href: checklist-deploying-retention-policies-exchange-2013-help.md
         - name: Процедуры управления записями сообщений
-          href: messaging-records-management-procedures-exchange-2013-help.md
+          href: https://docs.microsoft.com/ru-ru/office365/securitycompliance/inactive-mailboxes-in-office-365
           items:
           - name: Создание политики хранения
             href: https://docs.microsoft.com/ru-ru/exchange/security-and-compliance/messaging-records-management/create-a-retention-policy
           - name: Добавление и удаление тегов хранения для политики хранения
-            href: add-retention-tags-to-or-remove-retention-tags-from-a-retention-policy-exchange-2013-help.md
+            href: https://docs.microsoft.com/ru-ru/exchange/security-and-compliance/messaging-records-management/add-or-remove-retention-tags
           - name: Применение политики хранения к почтовым ящикам
             href: https://docs.microsoft.com/ru-ru/exchange/security-and-compliance/messaging-records-management/apply-retention-policy
           - name: Настройка помощника для управляемых папок
             href: configure-the-managed-folder-assistant-exchange-2013-help.md
           - name: Включение временного сохранения для почтового ящика
-            href: place-a-mailbox-on-retention-hold-exchange-2013-help.md
+            href: https://docs.microsoft.com/ru-ru/exchange/security-and-compliance/messaging-records-management/mailbox-retention-hold
           - name: Экспорт и импорт тегов хранения
             href: export-and-import-retention-tags-exchange-2013-help.md
           - name: Настройка блокирования клиентов Outlook
@@ -756,21 +756,21 @@
           - name: Перенос из управляемых папок
             href: migrate-from-managed-folders-exchange-2013-help.md
           - name: Отключение или приостановка функции управления записями сообщений
-            href: turn-off-or-suspend-https://docs.microsoft.com/ru-ru/exchange/security-and-compliance/messaging-records-management/messaging-records-management
+            href: turn-off-or-suspend-messaging-records-management-exchange-2013-help.md
       - name: Мониторинг системы обмена сообщениями управления записями
-        href: monitoring-https://docs.microsoft.com/ru-ru/exchange/security-and-compliance/messaging-records-management/messaging-records-management
+        href: monitoring-messaging-records-management-exchange-2013-help.md
         items:
         - name: Счетчики производительности представления для системы управления записями обмена сообщениями
-          href: view-performance-counters-for-https://docs.microsoft.com/ru-ru/exchange/security-and-compliance/messaging-records-management/messaging-records-management
+          href: view-performance-counters-for-messaging-records-management-exchange-2013-help.md
         - name: Счетчики производительности для управления записями сообщений
-          href: performance-counters-for-https://docs.microsoft.com/ru-ru/exchange/security-and-compliance/messaging-records-management/messaging-records-management
+          href: performance-counters-for-messaging-records-management-exchange-2013-help.md
         - name: Ошибки и события управления записями сообщений
           href: messaging-records-management-errors-and-events-exchange-2013-help.md
     - name: Ведение журнала
       href: journaling-exchange-2013-help.md
       items:
       - name: Ведение журнала
-        href: manage-journaling-exchange-2013-help.md
+        href: https://docs.microsoft.com/ru-ru/exchange/security-and-compliance/journaling/manage-journaling
       - name: Включение или отключение ведения журнала голосовой почты и уведомлений о пропущенных звонках
         href: disable-or-enable-journaling-of-voice-mail-and-missed-call-notifications-exchange-2013-help.md
     - name: Правила потока обработки почты (правила транспорта)
@@ -781,11 +781,11 @@
       - name: Действия правил обработки почтового потока
         href: mail-flow-rule-actions-in-exchange-2013-exchange-2013-help.md
       - name: Рекомендации по настройке правил обработки почтового потока
-        href: best-practices-for-configuring-mail-flow-rules-exchange-2013-help.md
+        href: https://docs.microsoft.com/ru-ru/exchange/security-and-compliance/mail-flow-rules/configuration-best-practices
       - name: Использование правил транспорта для проверки вложений сообщений
         href: use-transport-rules-to-inspect-message-attachments-exchange-2013-help.md
       - name: Распространенные сценарии блокирования вложений
-        href: common-attachment-blocking-scenarios-for-mail-flow-rules-exchange-2013-help.md
+        href: https://docs.microsoft.com/ru-ru/exchange/security-and-compliance/mail-flow-rules/common-attachment-blocking-scenarios
       - name: Заявления об отказе, подписи, верхние или нижние колонтитулы на уровне организации
         href: organization-wide-disclaimers-signatures-footers-or-headers-exchange-online-help.md
       - name: Процедуры правил обработки почтового потока и транспорта
@@ -796,9 +796,9 @@
         - name: Тестирование правила обработки почтового потока
           href: https://docs.microsoft.com/ru-ru/exchange/security-and-compliance/mail-flow-rules/test-mail-flow-rules
         - name: Использование правил обработки почтового потока для обхода папки "Несрочные"
-          href: use-mail-flow-rules-so-messages-can-bypass-clutter-exchange-2013-help.md
+          href: https://docs.microsoft.com/ru-ru/exchange/security-and-compliance/mail-flow-rules/use-rules-to-bypass-clutter
         - name: Использование правил обработки почтового потока для маршрутизации электронной почты с учетом списка слов, фраз или шаблонов
-          href: use-mail-flow-rules-to-route-email-based-on-a-list-of-words-phrases-or-patterns-exchange-2013-help.md
+          href: https://docs.microsoft.com/ru-ru/exchange/security-and-compliance/mail-flow-rules/use-rules-to-route-email
         - name: Регистрация фильтров IFilter из пакета фильтров с помощью Exchange 2013
           href: register-filter-pack-ifilters-with-exchange-2013-exchange-2013-help.md
       - name: Управление утверждением сообщений
@@ -807,51 +807,51 @@
         - name: Распространенные сценарии утверждения сообщений
           href: https://docs.microsoft.com/ru-ru/exchange/security-and-compliance/mail-flow-rules/common-message-approval-scenarios
         - name: Управление утверждением сообщений и устранение неполадок
-          href: manage-and-troubleshoot-message-approval-exchange-2013-help.md
+          href: https://docs.microsoft.com/ru-ru/exchange/security-and-compliance/mail-flow-rules/ttroubleshoot-message-approval
     - name: Защита от потери данных
       href: https://docs.microsoft.com/ru-ru/exchange/security-and-compliance/data-loss-prevention/data-loss-prevention
       items:
       - name: Применение правил защиты от потери данных для оценки сообщений
-        href: how-dlp-rules-are-applied-to-evaluate-messages-exchange-2013-help.md
+        href: https://docs.microsoft.com/ru-ru/exchange/security-and-compliance/data-loss-prevention/dlp-rule-application
       - name: Интеграция правил конфиденциальной информации с правилами транспорта
         href: https://docs.microsoft.com/ru-ru/exchange/security-and-compliance/data-loss-prevention/integrate-sensitive-information-rules
       - name: Что позволяют искать типы конфиденциальной информации
         href: what-the-sensitive-information-types-in-exchange-look-for-exchange-online-help.md
       - name: Шаблоны политики DLP
-        href: dlp-policy-templates-exchange-2013-help.md
+        href: https://docs.microsoft.com/ru-ru/office365/securitycompliance/what-the-dlp-policy-templates-include
         items:
         - name: Шаблоны политики защиты от потери данных в Exchange
           href: https://docs.microsoft.com/ru-ru/exchange/security-and-compliance/data-loss-prevention/dlp-policy-templates
         - name: Шаблоны политики от партнеров Майкрософт
-          href: policy-templates-from-microsoft-partners-exchange-2013-help.md
+          href: https://docs.microsoft.com/ru-ru/office365/securitycompliance/eop/exchange-online-protection-overview
       - name: Процедуры защиты от потери данных
         href: dlp-procedures-exchange-2013-help.md
         items:
         - name: Управление политиками защиты от потери данных
-          href: manage-dlp-policies-exchange-2013-help.md
+          href: https://docs.microsoft.com/ru-ru/office365/securitycompliance/data-loss-prevention-policies
         - name: Создание политики защиты от потери данных на основе шаблона
           href: https://docs.microsoft.com/ru-ru/exchange/security-and-compliance/data-loss-prevention/create-dlp-policy-from-template
         - name: Создание настраиваемой политики DLP
           href: https://docs.microsoft.com/ru-ru/exchange/security-and-compliance/data-loss-prevention/create-custom-dlp-policy
         - name: Импорт настраиваемого шаблона политики защиты от потери данных из файла
-          href: import-a-custom-dlp-policy-template-from-a-file-exchange-2013-help.md
+          href: https://docs.microsoft.com/ru-ru/office365/securitycompliance/create-a-dlp-policy-from-a-template
         - name: Просмотр отчетов об обнаружении политик защиты от потери данных
           href: view-dlp-policy-detection-reports-exchange-2013-help.md
         - name: Создание отчетов об инцидентах для обнаружений политики DLP
           href: create-incident-reports-for-dlp-policy-detections-exchange-2013-help.md
         - name: Определение собственных шаблонов DLP и типов сведений
-          href: define-your-own-dlp-templates-and-information-types-exchange-2013-help.md
+          href: https://docs.microsoft.com/ru-ru/office365/securitycompliance/create-a-dlp-policy-from-a-template
           items:
           - name: Разработка файлов шаблонов политики DLP
-            href: xml-rule-schema-and-rule-structure-guide-for-dlp-policy-files.md
+            href: https://docs.microsoft.com/ru-ru/office365/securitycompliance/create-a-dlp-policy-from-a-template
           - name: Разработка пакетов правил конфиденциальной информации
-            href: technical-description-of-xml-schema-for-dlp-rule-packages.md
+            href: https://docs.microsoft.com/ru-ru/Office365/SecurityCompliance/eop/exchange-online-protection-overview
           - name: Соответствующие методы и приемы для пакетов правил
-            href: technical-description-of-xsd-rule-matching-for-dlp-rule-packages.md
+            href: https://docs.microsoft.com/ru-ru/office365/securitycompliance/eop/exchange-online-protection-overview
           - name: Настройка встроенных типов конфиденциальных сведений DLP
-            href: customize-the-built-in-dlp-sensitive-information-types-exchange-2013-help.md
+            href: https://docs.microsoft.com/ru-ru/office365/securitycompliance/customize-a-built-in-sensitive-information-type
           - name: Экспорт типов конфиденциальных сведений DLP из Exchange
-            href: export-dlp-sensitive-information-types-from-exchange-2013-exchange-2013-help.md
+            href: https://docs.microsoft.com/ru-ru/office365/securitycompliance/eop/exchange-online-protection-overview
       - name: Советы политик
         href: https://docs.microsoft.com/ru-ru/exchange/security-and-compliance/data-loss-prevention/policy-tips
         items:
@@ -895,7 +895,7 @@
         - name: Включение и отключение расшифровки транспорта
           href: enable-or-disable-transport-decryption-exchange-2013-help.md
         - name: Настройка управления правами на доступ к данным для поиска Exchange и обнаружения электронных данных на месте
-          href: configure-irm-for-exchange-search-and-https://docs.microsoft.com/ru-ru/exchange/security-and-compliance/in-place-ediscovery/in-place-ediscovery
+          href: configure-irm-for-exchange-search-and-in-place-ediscovery-exchange-2013-help.md
         - name: Включение и отключение расшифровки отчета журнала
           href: enable-or-disable-journal-report-decryption-exchange-2013-help.md
         - name: Включение и отключение управления правами на доступ к данным на серверах клиентского доступа
@@ -903,14 +903,14 @@
         - name: Включение и отключение ведения журнала управления правами на доступ к данным
           href: enable-or-disable-information-rights-management-logging-exchange-2013-help.md
     - name: S/MIME для подписи и шифрования сообщений
-      href: s-mime-for-message-signing-and-encryption-exchange-2013-help.md
+      href: https://docs.microsoft.com/ru-ru/office365/SecurityCompliance/s-mime-for-message-signing-and-encryption
       items:
       - name: Настройка параметров S/MIME для Outlook Web App
-        href: configure-s-mime-settings-for-outlook-web-app-exchange-2013-help.md
+        href: https://docs.microsoft.com/ru-ru/office365/SecurityCompliance/configure-s-mime-settings-for-outlook-web-app
       - name: Настройка коллекции виртуальных сертификатов для проверки S/MIME
-        href: set-up-virtual-certificate-collection-to-validate-s-mime-exchange-2013-help.md
+        href: https://docs.microsoft.com/ru-ru/office365/SecurityCompliance/set-up-virtual-certificate-collection-to-validate-s-mime
       - name: Отправка и получение электронной почты, подписанной и зашифрованной с помощью S/MIME
-        href: send-and-receive-s-mime-signed-and-encrypted-email-exchange-2013-help.md
+        href: https://docs.microsoft.com/ru-ru/office365/SecurityCompliance/send-and-receive-s-mime-signed-and-encrypted-email
     - name: Ведение журнала аудита почтового ящика
       href: mailbox-audit-logging-exchange-2013-help.md
       items:
@@ -940,11 +940,11 @@
       - name: Запуск отчета об обращениях к почтовым ящикам от пользователей, не являющихся их владельцами
         href: https://docs.microsoft.com/ru-ru/exchange/security-and-compliance/exchange-auditing-reports/non-owner-mailbox-access-report
       - name: Запуск отчета судебного удержания отдельного почтового ящика
-        href: run-a-per-mailbox-litigation-hold-report-exchange-2013-help.md
+        href: https://docs.microsoft.com/ru-ru/exchange/security-and-compliance/exchange-auditing-reports/per-mailbox-litigation-hold-report
       - name: Поиск изменений группы ролей или журналов аудита администраторов
-        href: search-the-role-group-changes-or-administrator-audit-logs-exchange-2013-help.md
+        href: https://docs.microsoft.com/ru-ru/exchange/security-and-compliance/exchange-auditing-reports/search-role-group-changes
       - name: Просмотр журнала аудита администратора
-        href: view-the-administrator-audit-log-exchange-2013-help.md
+        href: https://docs.microsoft.com/ru-ru/exchange/security-and-compliance/exchange-auditing-reports/view-administrator-audit-log
   - name: Защита от нежелательной почты и вредоносных программ
     href: anti-spam-and-anti-malware-protection-exchange-2013-help.md
     items:
@@ -1264,7 +1264,7 @@
       href: https://docs.microsoft.com/ru-ru/exchange/recipients-in-exchange-online/manage-user-mailboxes/manage-user-mailboxes
       items:
       - name: Добавление и удаление адресов электронной почты для почтового ящика
-        href: add-or-remove-email-addresses-for-a-mailbox-exchange-2013-help.md
+        href: https://docs.microsoft.com/ru-ru/exchange/recipients-in-exchange-online/manage-user-mailboxes/add-or-remove-email-addresses
       - name: Настройка переадресации электронной почты для почтового ящика
         href: https://docs.microsoft.com/ru-ru/exchange/recipients-in-exchange-online/manage-user-mailboxes/configure-email-forwarding
       - name: Настройка ограничений доставки сообщений для почтового ящика
@@ -1274,7 +1274,7 @@
       - name: Настройка квот хранилища для почтового ящика
         href: configure-storage-quotas-for-a-mailbox-exchange-2013-help.md
       - name: Преобразование почтового ящика
-        href: convert-a-mailbox-exchange-2013-help.md
+        href: https://docs.microsoft.com/ru-ru/exchange/recipients-in-exchange-online/manage-user-mailboxes/convert-a-mailbox
       - name: Включение или отключение Exchange ActiveSync для почтового ящика
         href: https://docs.microsoft.com/ru-ru/exchange/recipients-in-exchange-online/manage-user-mailboxes/enable-or-disable-exchange-activesync
       - name: Включение и отключение MAPI для почтового ящика
@@ -1291,16 +1291,16 @@
       - name: Создание политики именования групп рассылки
         href: https://docs.microsoft.com/ru-ru/exchange/recipients-in-exchange-online/manage-distribution-groups/create-group-naming-policy
       - name: Переопределение политики именования групп рассылки
-        href: override-the-distribution-group-naming-policy-exchange-2013-help.md
+        href: https://docs.microsoft.com/ru-ru/exchange/recipients-in-exchange-online/manage-distribution-groups/override-group-naming-policy
     - name: Управление группами безопасности с поддержкой электронной почты
       href: https://docs.microsoft.com/ru-ru/exchange/recipients-in-exchange-online/manage-mail-enabled-security-groups
     - name: Управление динамическими группами рассылки
-      href: manage-dynamic-distribution-groups-exchange-2013-help.md
+      href: https://docs.microsoft.com/ru-ru/exchange/recipients-in-exchange-online/manage-dynamic-distribution-groups/manage-dynamic-distribution-groups
       items:
       - name: Просмотр участников динамической группы рассылки
         href: https://docs.microsoft.com/ru-ru/exchange/recipients-in-exchange-online/manage-dynamic-distribution-groups/view-group-members
     - name: Управление почтовыми контактами
-      href: manage-mail-contacts-exchange-2013-help.md
+      href: https://docs.microsoft.com/ru-ru/exchange/recipients-in-exchange-online/manage-mail-contacts
       items:
       - name: Включение или отключение электронной почты для почтового контакта
         href: enable-or-disable-email-for-a-mail-contact-exchange-2013-help.md
@@ -1310,7 +1310,7 @@
       - name: Включение или отключение электронной почты для пользователя почты
         href: enable-or-disable-email-for-a-mail-user-exchange-2013-help.md
     - name: Создание почтовых ящиков помещений и управление ими
-      href: create-and-manage-room-mailboxes-exchange-2013-help.md
+      href: https://docs.microsoft.com/ru-ru/exchange/recipients-in-exchange-online/manage-room-mailboxes
     - name: Управление почтовыми ящиками оборудования
       href: https://docs.microsoft.com/ru-ru/exchange/recipients-in-exchange-online/manage-equipment-mailboxes
     - name: Отключенные почтовые ящики
@@ -1354,26 +1354,26 @@
       - name: Рекомендации по развертыванию общедоступных папок
         href: considerations-when-deploying-public-folders-exchange-2013-help.md
       - name: Доступ к общедоступным папкам с помощью Outlook 2016 для Mac
-        href: accessing-public-folders-with-outlook-2016-for-mac-exchange-2013-help.md
+        href: https://docs.microsoft.com/ru-ru/exchange/collaboration-exo/public-folders/access-public-folders-with-outlook-2016-for-mac
       - name: Перенос общедоступных папок в группы Office 365
         href: https://docs.microsoft.com/ru-ru/exchange/collaboration-exo/public-folders/migrate-your-public-folders-to-office-365-groups
       - name: Процедуры с общедоступными папками
         href: public-folder-procedures-exchange-2013-help.md
         items:
         - name: Настройка общедоступных папок в новой организации
-          href: set-up-public-folders-in-a-new-organization-exchange-2013-help.md
+          href: https://docs.microsoft.com/ru-ru/exchange/collaboration-exo/public-folders/set-up-public-folders
         - name: Настройка локальных общедоступных папок прежних версий для гибридного развертывания
           href: https://docs.microsoft.com/ru-ru/exchange/collaboration-exo/public-folders/set-up-legacy-hybrid-public-folders
         - name: Настройка общедоступных папок Exchange 2013 для гибридного развертывания
-          href: configure-exchange-2013-public-folders-for-a-hybrid-deployment-exchange-2013-help.md
+          href: https://docs.microsoft.com/ru-ru/exchange/collaboration-exo/public-folders/set-up-modern-hybrid-public-folders
         - name: Настройка общедоступных папок Exchange Online для гибридного развертывания
-          href: configure-exchange-online-public-folders-for-a-hybrid-deployment-exchange-2013-help.md
+          href: https://docs.microsoft.com/ru-ru/exchange/collaboration-exo/public-folders/set-up-exo-hybrid-public-folders
         - name: Настройка устаревших общедоступных папок, почтовые ящики которых размещены на серверах Exchange 2013
           href: configure-legacy-public-folders-where-user-mailboxes-are-on-exchange-2013-servers-exchange-2013-help.md
         - name: Использование пакетной миграции для переноса общедоступных папок в Exchange 2013 из предыдущих версий
           href: use-batch-migration-to-migrate-public-folders-to-exchange-2013-from-previous-versions-exchange-2013-help.md
         - name: Использование пакетной миграции для переноса устаревших общедоступных папок в Office 365 и Exchange Online
-          href: use-batch-migration-to-migrate-legacy-public-folders-to-office-365-and-exchange-online-exchange-online-help.md
+          href: https://docs.microsoft.com/ru-ru/exchange/collaboration-exo/public-folders/batch-migration-of-legacy-public-folders
         - name: Использование пакетной миграции для переноса общедоступных папок Exchange 2013 в Exchange Online
           href: https://docs.microsoft.com/ru-ru/exchange/collaboration-exo/public-folders/batch-migration-of-exchange-2013-public-folders
           items:
@@ -1384,17 +1384,17 @@
         - name: Использование пакетной миграции для переноса общедоступных папок Exchange 2013 в группы Office 365
           href: use-batch-migration-to-migrate-exchange-2013-public-folders-to-office-365-groups-exchange-2013-help.md
         - name: Создание почтового ящика общедоступных папок
-          href: create-a-public-folder-mailbox-exchange-2013-help.md
+          href: https://docs.microsoft.com/ru-ru/exchange/collaboration-exo/public-folders/create-public-folder-mailbox
         - name: Создание общедоступной папки
           href: https://docs.microsoft.com/ru-ru/exchange/collaboration-exo/public-folders/create-public-folder
         - name: Включение и отключение поддержки почты для общедоступной папки
           href: https://docs.microsoft.com/ru-ru/exchange/collaboration-exo/public-folders/enable-or-disable-mail-for-public-folder
         - name: обновлять иерархию общих папок;
-          href: update-the-public-folder-hierarchy-exchange-2013-help.md
+          href: https://docs.microsoft.com/ru-ru/exchange/collaboration-exo/public-folders/update-public-folder-hierarchy
         - name: Удаление общедоступной папки
           href: https://docs.microsoft.com/ru-ru/exchange/collaboration-exo/public-folders/remove-public-folder
         - name: Использование избранных общих папок в Outlook в Интернете
-          href: use-favorite-public-folders-in-outlook-on-the-web-exchange-2013-help.md
+          href: https://docs.microsoft.com/ru-ru/exchange/collaboration-exo/public-folders/use-favorite-public-folders
         - name: Перемещение почтового ящика общедоступных папок в другую базу данных почтовых ящиков
           href: move-a-public-folder-mailbox-to-a-different-mailbox-database-exchange-2013-help.md
         - name: Перемещение общедоступной папки в другой почтовый ящик общедоступной папки
@@ -1415,18 +1415,18 @@
       href: https://docs.microsoft.com/ru-ru/exchange/address-books/address-book-policies/address-book-policies
       items:
       - name: Сценарий. Развертывание политик адресных книг
-        href: scenario-deploying-https://docs.microsoft.com/ru-ru/exchange/address-books/address-book-policies/address-book-policies
+        href: scenario-deploying-address-book-policies-exchange-2013-help.md
       - name: Процедуры политики адресной книги
         href: address-book-policy-procedures-exchange-2013-help.md
         items:
         - name: Установка и настройка агента маршрутизации политики адресной книги
           href: install-and-configure-the-address-book-policy-routing-agent-exchange-2013-help.md
         - name: Создание политики адресных книг
-          href: create-an-address-book-policy-exchange-2013-help.md
+          href: https://docs.microsoft.com/ru-ru/exchange/address-books/address-book-policies/create-an-address-book-policy
         - name: Назначение политики адресной книги пользователям почты
           href: https://docs.microsoft.com/ru-ru/exchange/address-books/address-book-policies/assign-an-address-book-policy-to-mail-users
         - name: Изменение параметров политики адресной книги
-          href: change-the-settings-of-an-address-book-policy-exchange-2013-help.md
+          href: https://docs.microsoft.com/ru-ru/exchange/address-books/address-book-policies/change-the-settings-of-an-address-book-policy
         - name: Удаление политики адресной книги
           href: https://docs.microsoft.com/ru-ru/exchange/address-books/address-book-policies/remove-an-address-book-policy
     - name: Шаблоны сведений
@@ -1461,17 +1461,17 @@
         - name: Добавление списка адресов и его удаление из автономной адресной книги
           href: https://docs.microsoft.com/ru-ru/exchange/address-books/offline-address-books/add-or-remove-an-address-list
         - name: Изменение автономной адресной книги по умолчанию
-          href: change-the-default-offline-address-book-exchange-2013-help.md
+          href: https://docs.microsoft.com/ru-ru/exchange/address-books/offline-address-books/change-default-offline-address-book
         - name: Подготовка получателей для загрузки автономных адресных книг
-          href: provision-recipients-for-offline-address-book-downloads-exchange-2013-help.md
+          href: https://docs.microsoft.com/ru-ru/exchange/address-books/offline-address-books/provision-recipients
         - name: Удаление автономной адресной книги
           href: https://docs.microsoft.com/ru-ru/exchange/address-books/offline-address-books/remove-offline-address-book
         - name: Обновление автономной адресной книги
-          href: update-an-offline-address-book-exchange-2013-help.md
+          href: https://docs.microsoft.com/ru-ru/exchange/address-books/offline-address-books/update-offline-address-book
         - name: Создание виртуального каталога автономной адресной книги
           href: https://docs.microsoft.com/ru-ru/exchange/address-books/offline-address-books/create-virtual-directory
         - name: Изменение расписания создания автономной адресной книги
-          href: change-the-offline-address-book-generation-schedule-exchange-2013-help.md
+          href: https://docs.microsoft.com/ru-ru/exchange/address-books/offline-address-books/change-address-book-generation-schedule
         - name: Настройка свойств распространения автономной адресной книги
           href: https://docs.microsoft.com/ru-ru/exchange/address-books/offline-address-books/configure-distribution-properties
     - name: Списки адресов
@@ -1485,7 +1485,7 @@
         - name: Обновление списка адресов
           href: update-an-address-list-exchange-2013-help.md
         - name: Создание списка адресов с помощью фильтров получателей
-          href: create-an-address-list-by-using-recipient-filters-exchange-2013-help.md
+          href: https://docs.microsoft.com/ru-ru/exchange/address-books/address-lists/use-recipient-filters-to-create-an-address-list
         - name: Перемещение списка адресов
           href: move-an-address-list-exchange-2013-help.md
         - name: Удаление списка адресов
@@ -1499,7 +1499,7 @@
         - name: Обновление глобального списка адресов
           href: update-a-global-address-list-exchange-2013-help.md
     - name: Иерархические адресные книги
-      href: hierarchical-address-books-exchange-2013-help.md
+      href: https://docs.microsoft.com/ru-ru/exchange/address-books/hierarchical-address-books/hierarchical-address-books
       items:
       - name: Включение и отключение иерархических адресных книг
         href: https://docs.microsoft.com/ru-ru/exchange/address-books/hierarchical-address-books/enable-or-disable-hierarchical-address-books
@@ -1667,7 +1667,7 @@
           - name: Удаление политики почтовых ящиков Outlook Web App с сервера Exchange
             href: https://docs.microsoft.com/ru-ru/exchange/clients-and-mobile-in-exchange-online/outlook-on-the-web/remove-outlook-web-app-mailbox-policy
           - name: Просмотр и настройка свойств политики почтовых ящиков Outlook Web App
-            href: view-or-configure-outlook-web-app-mailbox-policy-properties-exchange-2013-help.md
+            href: https://docs.microsoft.com/ru-ru/exchange/clients-and-mobile-in-exchange-online/outlook-on-the-web/configure-outlook-web-app-mailbox-policy-properties
       - name: Интеграция Outlook Web App с Lync Server
         href: integrate-outlook-web-app-with-lync-server-exchange-2013-help.md
       - name: Просмотр и настройка виртуальных каталогов Outlook Web App
@@ -1685,14 +1685,14 @@
       - name: Использование веб-частей Outlook Web App
         href: using-outlook-web-app-web-parts-exchange-2013-help.md
     - name: MailTips
-      href: mailtips-exchange-2013-help.md
+      href: https://docs.microsoft.com/ru-ru/exchange/clients-and-mobile-in-exchange-online/mailtips/mailtips
       items:
       - name: Включение или отключение подсказок
         href: enable-or-disable-mailtips-exchange-2013-help.md
       - name: Настройка большой аудитории для организации
         href: https://docs.microsoft.com/ru-ru/exchange/clients-and-mobile-in-exchange-online/mailtips/configure-large-audience-size
       - name: Настройка пользовательских подсказок для получателей
-        href: configure-custom-mailtips-for-recipients-exchange-2013-help.md
+        href: https://docs.microsoft.com/ru-ru/exchange/clients-and-mobile-in-exchange-online/mailtips/configure-custom-mailtips
       - name: Подсказки в рамках связей организации
         href: https://docs.microsoft.com/ru-ru/exchange/clients-and-mobile-in-exchange-online/mailtips/mailtips-over-organization-relationships
         items:
@@ -1711,7 +1711,7 @@
       - name: Управление доступом пользователей к приложениям для Outlook
         href: https://docs.microsoft.com/ru-ru/exchange/clients-and-mobile-in-exchange-online/add-ins-for-outlook/manage-user-access-to-add-ins
       - name: Выбор администраторов и пользователей, которые могут устанавливать надстройки для Outlook и управлять ими
-        href: specify-the-administrators-and-users-who-can-install-and-manage-https://docs.microsoft.com/ru-ru/exchange/clients-and-mobile-in-exchange-online/add-ins-for-outlook/add-ins-for-outlook
+        href: https://docs.microsoft.com/ru-ru/exchange/clients-and-mobile-in-exchange-online/add-ins-for-outlook/specify-who-can-install-and-manage-add-ins
     - name: Настройка разгрузки SSL в Exchange 2013
       href: configuring-ssl-offloading-in-exchange-2013-exchange-2013-help.md
   - name: Единая система обмена сообщениями
@@ -1777,7 +1777,7 @@
         - name: Установка языкового пакета единой системы обмена сообщениями
           href: install-a-um-language-pack-exchange-2013-help.md
         - name: Выбрать язык по умолчанию для абонентской группы
-          href: set-the-default-language-on-a-dial-plan-exchange-2013-help.md
+          href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/greetings-announcements-menus-and-prompts/set-dial-plan-default-language
         - name: Выберите язык для автосекретарю.
           href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/greetings-announcements-menus-and-prompts/select-auto-attendant-language
         - name: Удаление языкового пакета единой системы обмена сообщениями
@@ -1811,7 +1811,7 @@
         - name: Сведения о конфигурации для поддерживаемых пограничных контроллеров сеансов
           href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/telephone-system-integration-with-um/configuration-notes-for-session-border-controllers
     - name: Подключиться к телефонной сети вашей системы голосовой почты
-      href: connect-your-voice-mail-system-to-your-telephone-network-exchange-2013-help.md
+      href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/connect-voice-mail-system/connect-voice-mail-system
       items:
       - name: Абонентские группы единой системы обмена сообщениями
         href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/connect-voice-mail-system/um-dial-plans
@@ -1826,7 +1826,7 @@
           - name: Создание абонентской группы единой системы обмена сообщениями
             href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/connect-voice-mail-system/create-um-dial-plan
           - name: Управление абонентской группой единой системы обмена сообщениями
-            href: manage-a-um-dial-plan-exchange-2013-help.md
+            href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/connect-voice-mail-system/manage-um-dial-plan
           - name: Добавьте серверы клиентского доступа и почтовых ящиков для абонентской группы SIP URI
             href: add-mailbox-and-client-access-servers-to-a-sip-uri-dial-plan-exchange-2013-help.md
           - name: Удаление серверов клиентского доступа и почтовых ящиков из абонентской группы SIP URI
@@ -1836,9 +1836,9 @@
           - name: Настройка максимальной длительности звонка
             href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/connect-voice-mail-system/configure-maximum-call-duration
           - name: Настройка Максимальная продолжительность записи
-            href: configure-the-maximum-recording-duration-exchange-2013-help.md
+            href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/connect-voice-mail-system/configure-maximum-recording-duration
           - name: Настройте значение времени ожидания простоя записи
-            href: configure-the-recording-idle-time-out-value-exchange-2013-help.md
+            href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/connect-voice-mail-system/configure-recording-idle-time-out
           - name: Настройка параметра безопасности VoIP
             href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/connect-voice-mail-system/configure-voip-security-setting
           - name: Настройка абонентской группы для пользователей с похожими именами
@@ -1874,11 +1874,11 @@
           href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/connect-voice-mail-system/um-hunt-group-procedures
           items:
           - name: Создание сервисной группы единой системы обмена сообщениями
-            href: create-a-um-hunt-group-exchange-2013-help.md
+            href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/connect-voice-mail-system/create-um-hunt-group
           - name: Просмотр группы слежения единой системы обмена СООБЩЕНИЯМИ
             href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/connect-voice-mail-system/view-um-hunt-group
           - name: Удаление сервисной группы единой системы обмена сообщениями.
-            href: delete-a-um-hunt-group-exchange-2013-help.md
+            href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/connect-voice-mail-system/delete-um-hunt-group
       - name: Службы единой системы обмена сообщениями
         href: um-services-exchange-2013-help.md
         items:
@@ -1914,10 +1914,10 @@
           - name: Задать порт прослушивания TLS на сервере клиентского доступа
             href: set-the-tls-listening-port-on-a-client-access-server-exchange-2013-help.md
     - name: Автоматический ответ и маршрутизация входящих вызовов
-      href: automatically-answer-and-route-incoming-calls-exchange-2013-help.md
+      href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/automatically-answer-and-route-calls/automatically-answer-and-route-calls
       items:
       - name: Интерфейс DTMF
-        href: dtmf-interface-exchange-2013-help.md
+        href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/automatically-answer-and-route-calls/dtmf-interface
       - name: Процедуры автосекретаря единой системы обмена сообщениями
         href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/automatically-answer-and-route-calls/um-auto-attendant-procedures
         items:
@@ -1929,29 +1929,29 @@
           - name: Добавление auto attendant добавочный номер
             href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/automatically-answer-and-route-calls/add-an-auto-attendant-extension-number
           - name: Настройка рабочих часов
-            href: configure-business-hours-exchange-2013-help.md
+            href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/automatically-answer-and-route-calls/configure-business-hours
           - name: Создание расписания праздников
-            href: create-a-holiday-schedule-exchange-2013-help.md
+            href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/automatically-answer-and-route-calls/create-a-holiday-schedule
           - name: Указание названия организации
-            href: enter-a-business-name-exchange-2013-help.md
+            href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/automatically-answer-and-route-calls/enter-a-business-name
           - name: Задайте расположение бизнеса
             href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/automatically-answer-and-route-calls/set-a-business-location
           - name: Настройка часового пояса
             href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/automatically-answer-and-route-calls/configure-the-time-zone
           - name: Включение настраиваемого приветствие для рабочих часов
-            href: enable-a-customized-business-hours-greeting-exchange-2013-help.md
+            href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/automatically-answer-and-route-calls/enable-a-customized-business-hours-greeting
           - name: Включение в строке меню настраиваемых рабочих часов
             href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/automatically-answer-and-route-calls/enable-a-customized-business-hours-menu-prompt
           - name: Включение настраиваемого не - приветствие для рабочих часов
             href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/automatically-answer-and-route-calls/enable-a-customized-non-business-hours-greeting
           - name: Включение настраиваемого приглашения меню в нерабочие часы
-            href: enable-a-customized-non-business-hours-menu-prompt-exchange-2013-help.md
+            href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/automatically-answer-and-route-calls/enable-a-customized-non-business-hours-menu-prompt
           - name: Включение информационного сообщения
             href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/automatically-answer-and-route-calls/enable-an-informational-announcement
           - name: Создание навигации по меню
-            href: create-menu-navigation-exchange-2013-help.md
+            href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/automatically-answer-and-route-calls/create-menu-navigation
           - name: Создание рабочих часов меню переходов
-            href: create-business-hours-navigation-menus-exchange-2013-help.md
+            href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/automatically-answer-and-route-calls/create-business-hours-navigation-menus
           - name: Создание меню переходов в нерабочее время
             href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/automatically-answer-and-route-calls/create-non-business-hours-navigation-menus
         - name: Управление автосекретаря единой системы обмена СООБЩЕНИЯМИ
@@ -1965,7 +1965,7 @@
         - name: Удаление автосекретаря единой системы обмена СООБЩЕНИЯМИ
           href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/automatically-answer-and-route-calls/delete-um-auto-attendant
         - name: Включение и отключение автоматического распознавания речи
-          href: enable-or-disable-automatic-speech-recognition-exchange-2013-help.md
+          href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/automatically-answer-and-route-calls/enable-or-disable-speech-recognition
         - name: Разрешение или запрещение передача вызовов из автосекретаря
           href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/automatically-answer-and-route-calls/enable-or-prevent-transferring-calls
         - name: Включение и отключение отправки голосовых сообщений пользователям
@@ -1975,7 +1975,7 @@
         - name: Настройка группы пользователей, которыми можно связаться
           href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/automatically-answer-and-route-calls/configure-users-that-can-be-contacted
         - name: Настройка автосекретаря для пользователей со схожими именами
-          href: configure-an-auto-attendant-for-users-who-have-similar-names-exchange-2013-help.md
+          href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/automatically-answer-and-route-calls/configure-auto-attendant-for-users-with-similar-names
     - name: Настройка голосовой почты для пользователей
       href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-voice-mail/set-up-voice-mail
       items:
@@ -1990,7 +1990,7 @@
           - name: Управление политикой почтовых ящиков единой системы обмена СООБЩЕНИЯМИ
             href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-voice-mail/manage-um-mailbox-policy
           - name: Удаление политики почтовых ящиков единой системы обмена СООБЩЕНИЯМИ
-            href: delete-a-um-mailbox-policy-exchange-2013-help.md
+            href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-voice-mail/delete-um-mailbox-policy
       - name: Голосовая почта для пользователей
         href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-voice-mail/voice-mail-for-users
         items:
@@ -2006,25 +2006,25 @@
           - name: Назначение политики почтовых ящиков единой системы обмена СООБЩЕНИЯМИ
             href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-voice-mail/assign-um-mailbox-policy
           - name: Изменение абонентской единой системы обмена СООБЩЕНИЯМИ
-            href: change-the-um-dial-plan-exchange-2013-help.md
+            href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-voice-mail/change-um-dial-plan
           - name: Включить вызовы от пользователей, которые не включены единой системы обмена СООБЩЕНИЯМИ
             href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-voice-mail/enable-calls-from-users-who-aren-t-um-enabled
           - name: Отключить вызовы от пользователей, которые не включены единой системы обмена СООБЩЕНИЯМИ
-            href: disable-calls-from-users-who-aren-t-um-enabled-exchange-2013-help.md
+            href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-voice-mail/disable-calls-from-users-who-aren-t-um-enabled
           - name: Звонящий без идентификатора оставить голосовое сообщение
             href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-voice-mail/allow-callers-without-caller-id-to-leave-voice-message
           - name: Включение текста с сообщением электронной почты при получении сообщения голосовой связи
             href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-voice-mail/include-text-with-email-sent-when-voice-message-is-received
           - name: Запретить абонентов без идентификатора за пределами голосовое сообщение
-            href: prevent-callers-without-a-caller-id-from-leaving-a-voice-message-exchange-2013-help.md
+            href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-voice-mail/prevent-callers-without-caller-id-from-leaving-voice-message
           - name: Отключение голосовой почты для пользователя
-            href: disable-voice-mail-for-a-user-exchange-2013-help.md
+            href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-voice-mail/disable-voice-mail
           - name: Изменение SIP-адреса
             href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-voice-mail/change-sip-address
           - name: Изменение добавочного номера
             href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-voice-mail/change-extension-number
           - name: Добавление SIP-адрес
-            href: add-a-sip-address-exchange-2013-help.md
+            href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-voice-mail/add-sip-address
           - name: Удалите адрес SIP
             href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-voice-mail/remove-sip-address
           - name: Добавление добавочный номер
@@ -2041,16 +2041,16 @@
       href: set-up-client-voice-mail-features-exchange-2013-help.md
       items:
       - name: Настройка голосового доступа к Outlook
-        href: setting-up-outlook-voice-access-exchange-2013-help.md
+        href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-client-voice-mail-features/set-up-outlook-voice-access
         items:
         - name: Голосовые команды для доступа к Outlook
           href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-client-voice-mail-features/outlook-voice-access-commands
         - name: Перемещение меню с помощью голосового доступа к Outlook
-          href: navigating-menus-with-outlook-voice-access-exchange-2013-help.md
+          href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-client-voice-mail-features/navigating-menus-with-outlook-voice-access
         - name: Воспроизведение на телефоне
-          href: play-on-phone-exchange-2013-help.md
+          href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-client-voice-mail-features/play-on-phone
         - name: Процедуры голосового доступа к Outlook
-          href: outlook-voice-access-procedures-exchange-2013-help.md
+          href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-client-voice-mail-features/outlook-voice-access-procedures
           items:
           - name: Включение или отключение голосового доступа к Outlook для пользователей
             href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-client-voice-mail-features/enable-or-disable-outlook-voice-access
@@ -2069,11 +2069,11 @@
           - name: Включение настраиваемого приветствия для пользователей голосового доступа к Outlook
             href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-client-voice-mail-features/enable-a-customized-greeting
           - name: Включение или отключение воспроизвести на телефоне для пользователей голосового доступа к Outlook
-            href: enable-or-disable-play-on-phone-for-outlook-voice-access-users-exchange-2013-help.md
+            href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-client-voice-mail-features/enable-or-disable-play-on-phone
           - name: Разрешение или запрет отправки сообщений голосовой почты из голосового доступа к Outlook
             href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-client-voice-mail-features/enable-or-disable-sending-voice-messages
           - name: Разрешение или запрещение передача вызовов из голосового доступа к Outlook
-            href: enable-or-prevent-transferring-calls-from-outlook-voice-access-exchange-2013-help.md
+            href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-client-voice-mail-features/enable-or-prevent-transferring-calls
           - name: Настройка группы пользователей, которые смогут связаться пользователи Outlook Voice Access
             href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-client-voice-mail-features/configure-the-group-of-users-that-outlook-voice-access-users-can-contact
           - name: Настройка основной способ для пользователей голосового доступа к Outlook для поиска
@@ -2081,43 +2081,43 @@
           - name: Настройка дополнительного способа поиска пользователями голосового доступа к Outlook
             href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-client-voice-mail-features/configure-secondary-search-method
           - name: Настройка количества ошибок входа в систему перед отключением пользователей голосового доступа к Outlook
-            href: configure-the-number-of-sign-in-failures-before-outlook-voice-access-users-are-disconnected-exchange-2013-help.md
+            href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-client-voice-mail-features/configure-number-of-sign-in-failures
           - name: Настройте количество ошибок ввода перед пользователи Outlook Voice Access не соединены по сети
-            href: configure-the-number-of-input-failures-before-outlook-voice-access-users-are-disconnected-exchange-2013-help.md
+            href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-client-voice-mail-features/configure-number-of-input-failures
           - name: Настройка ограничений на персональное приветствие для пользователей голосового доступа к Outlook
             href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-client-voice-mail-features/configure-personal-greetings-limit
       - name: Включение переадресации вызовов для пользователей голосовой почты
         href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-client-voice-mail-features/allow-voice-mail-users-to-forward-calls
         items:
         - name: Переадресация звонков процедур
-          href: forwarding-calls-procedures-exchange-2013-help.md
+          href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-client-voice-mail-features/forwarding-calls-procedures
           items:
           - name: Возможность разрешить или запретить пользователю создавать правила автоответчика
             href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-client-voice-mail-features/call-answering-rules
           - name: Разрешить или запретить пользователям в одной политики почтовых ящиков единой системы обмена СООБЩЕНИЯМИ создавать правила ответа на звонок
-            href: allow-or-prevent-users-in-the-same-um-mailbox-policy-from-creating-call-answering-rules-exchange-2013-help.md
+            href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-client-voice-mail-features/call-answering-rules-in-the-same-mailbox-policy
           - name: Создание правила ответа на вызовы
             href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-client-voice-mail-features/create-a-call-answering-rule
           - name: Просмотр правила ответа на вызовы и управление им
             href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-client-voice-mail-features/view-and-manage-a-call-answering-rule
           - name: Включение и отключение правила автоответчика для пользователя
-            href: enable-or-disable-a-call-answering-rule-for-a-user-exchange-2013-help.md
+            href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-client-voice-mail-features/enable-or-disable-a-call-answering-rule-for-a-user
           - name: Удаление правила автоответчика для пользователя
             href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-client-voice-mail-features/remove-a-call-answering-rule-for-a-user
       - name: Разрешить пользователям совершать звонки
-        href: allow-users-to-make-calls-exchange-2013-help.md
+        href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-client-voice-mail-features/allow-users-to-make-calls
         items:
         - name: Телефонные коды, префиксы номеров и форматы номеров
-          href: dial-codes-number-prefixes-and-number-formats-exchange-2013-help.md
+          href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-client-voice-mail-features/dial-codes-number-prefixes-number-formats
         - name: Которое позволяет пользователям выполнять вызовы процедур
-          href: allowing-users-to-make-calls-procedures-exchange-2013-help.md
+          href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-client-voice-mail-features/allow-users-to-make-calls-procedures
           items:
           - name: Включение исходящих вызовов
-            href: enable-outgoing-calls-on-https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/connect-voice-mail-system/um-ip-gateways
+            href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-client-voice-mail-features/enable-outgoing-calls-on-um-ip-gateways
           - name: Отключение исходящих звонков на шлюзы IP единой системы обмена СООБЩЕНИЯМИ
-            href: disable-outgoing-calls-on-https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/connect-voice-mail-system/um-ip-gateways
+            href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-client-voice-mail-features/disable-outgoing-calls-on-um-ip-gateways
           - name: Настройка телефонные коды
-            href: configure-dial-codes-exchange-2013-help.md
+            href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-client-voice-mail-features/configure-dial-codes
           - name: Создание правил набора номера для пользователей
             href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-client-voice-mail-features/create-dialing-rules
           - name: Авторизация вызовов с помощью правил набора номера
@@ -2128,12 +2128,12 @@
             - name: Авторизации вызовов для пользователей в абонентской группы
               href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-client-voice-mail-features/authorize-calls-for-users-in-a-dial-plan
             - name: Авторизовать звонки для группы пользователей
-              href: authorize-calls-for-a-group-of-users-exchange-2013-help.md
+              href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-client-voice-mail-features/authorize-calls-for-a-group-of-users
       - name: Включение функции просмотра записей разговоров голосовой почты для пользователей
-        href: allow-users-to-see-a-voice-mail-transcript-exchange-2013-help.md
+        href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-client-voice-mail-features/allow-users-to-see-a-voice-mail-transcript
         items:
         - name: Помощник просмотра голосовой почты
-          href: voice-mail-preview-advisor-exchange-2013-help.md
+          href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-client-voice-mail-features/voice-mail-preview-advisor
         - name: Голосовой почты Preview процедур
           href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-client-voice-mail-features/voice-mail-preview-procedures
           items:
@@ -2141,7 +2141,7 @@
             href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-client-voice-mail-features/configure-voice-mail-preview-partner-services
             items:
             - name: Установка адреса партнера Предварительный просмотр голосовой почты
-              href: set-the-voice-mail-preview-partner-address-exchange-2013-help.md
+              href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-client-voice-mail-features/set-the-voice-mail-preview-partner-address
             - name: Задать идентификатор партнера Предварительный просмотр голосовой почты
               href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-client-voice-mail-features/set-the-voice-mail-preview-partner-id
             - name: Значение максимального срока партнер Предварительный просмотр голосовой почты
@@ -2151,7 +2151,7 @@
           - name: Включить предварительный просмотр голосовой почты для пользователей
             href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-client-voice-mail-features/enable-voice-mail-preview
           - name: Отключить Предварительный просмотр голосовой почты для пользователей
-            href: disable-voice-mail-preview-for-users-exchange-2013-help.md
+            href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-client-voice-mail-features/disable-voice-mail-preview
       - name: Обеспечение возможности получать факсы для пользователей голосовой почты
         href: enable-voice-mail-users-to-receive-faxes-exchange-2013-help.md
         items:
@@ -2161,12 +2161,12 @@
           href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-client-voice-mail-features/set-up-incoming-faxing
           items:
           - name: Отправка и прием факсов процедур
-            href: faxing-procedures-exchange-2013-help.md
+            href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-client-voice-mail-features/faxing-procedures
             items:
             - name: Установка сервера факсов URI, чтобы разрешить отправка и прием факсов партнера
               href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-client-voice-mail-features/set-the-partner-fax-server-uri-to-allow-faxing
             - name: Включение текста с сообщением электронной почты при получении сообщения факсов
-              href: include-text-with-the-email-message-sent-when-a-fax-message-is-received-exchange-2013-help.md
+              href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-client-voice-mail-features/include-text-with-the-email-sent-when-a-fax-message-is-received
             - name: Разрешить пользователям в той же абонентской прием факсов
               href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-client-voice-mail-features/allow-users-in-the-same-dial-plan-to-receive-faxes
             - name: Запретить пользователям в той же абонентской прием факсов
@@ -2178,7 +2178,7 @@
             - name: Разрешить пользователям принимать факсы
               href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-client-voice-mail-features/enable-a-user-to-receive-faxes
             - name: Запретить пользователям принимать факсы
-              href: prevent-a-user-from-receiving-faxes-exchange-2013-help.md
+              href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-client-voice-mail-features/prevent-a-user-from-receiving-faxes
       - name: Защита голосовой почты
         href: protect-voice-mail-exchange-2013-help.md
         items:
@@ -2197,7 +2197,7 @@
         href: allow-message-waiting-indicator-exchange-2013-help.md
         items:
         - name: Разрешить процедуры индикатор ожидающих сообщений
-          href: allow-message-waiting-indicator-procedures-exchange-2013-help.md
+          href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-client-voice-mail-features/specify-text-to-display-for-clients-that-don-t-support-windows-rights-management
           items:
           - name: Разрешить сообщение ожидание индикатор (ожидающего сообщения) на шлюз IP единой системы обмена СООБЩЕНИЯМИ
             href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-client-voice-mail-features/allow-mwi-on-um-ip-gateway
@@ -2206,7 +2206,7 @@
           - name: Предоставление пользователям сообщение ожидание индикатор (ожидающего сообщения)
             href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-client-voice-mail-features/enable-mwi-for-users
           - name: Отключить сообщение ожидание индикатор (ожидающего сообщения) для пользователей
-            href: disable-message-waiting-indicator-mwi-for-users-exchange-2013-help.md
+            href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-client-voice-mail-features/disable-mwi-for-users
           - name: Включение уведомлений пользователей о пропущенных вызовах
             href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-up-client-voice-mail-features/enable-missed-call-notifications
           - name: Отключение уведомлений о пропущенных звонках для пользователя
@@ -2220,21 +2220,21 @@
         - name: Настраивать политики ПИН голосового доступа к Outlook
           href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-outlook-voice-access-pin-security/set-pin-policies
         - name: Сброс ПИН голосовой почты
-          href: reset-a-voice-mail-pin-exchange-2013-help.md
+          href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-outlook-voice-access-pin-security/reset-a-voice-mail-pin
         - name: Получение сведений о ПИН-коде голосовой почты
-          href: retrieve-voice-mail-pin-information-exchange-2013-help.md
+          href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-outlook-voice-access-pin-security/retrieve-voice-mail-pin-information
         - name: Включение текста с сообщением электронной почты, отправленных после сброса ПИН-код — это
-          href: include-text-with-the-email-message-sent-when-a-pin-is-reset-exchange-2013-help.md
+          href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-outlook-voice-access-pin-security/include-text-in-email-sent-when-pin-is-reset
         - name: Задать минимальную длину ПИН-код голосовой почты
-          href: set-the-minimum-pin-length-for-voice-mail-exchange-2013-help.md
+          href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-outlook-voice-access-pin-security/set-minimum-pin-length
         - name: Задать время жизни ПИН-код голосовой почты
           href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-outlook-voice-access-pin-security/set-pin-lifetime
         - name: Задайте число предыдущих голосовой почты ПИН-коды перезапуска
-          href: set-the-number-of-previous-voice-mail-pins-to-recycle-exchange-2013-help.md
+          href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-outlook-voice-access-pin-security/set-number-of-previous-pins-to-recycle
         - name: Отключить общие шаблоны ПИН-код голосовой почты
           href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-outlook-voice-access-pin-security/disable-common-pin-patterns
         - name: Включить Общие шаблоны ПИН-код голосовой почты
-          href: enable-common-pin-patterns-for-voice-mail-exchange-2013-help.md
+          href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-outlook-voice-access-pin-security/enable-common-pin-patterns
         - name: Задать число ошибок входа до сбросить ПИН-код голосовой почты
           href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/set-outlook-voice-access-pin-security/set-number-of-sign-in-failures-before-pin-reset
         - name: Настройка количества неудачных попыток входа в систему перед блокировкой пользователя голосовой почты
@@ -2248,7 +2248,7 @@
         href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/run-voice-mail-call-reports/um-reports-procedures
         items:
         - name: Просмотрите вызовов голосовой почты в вашей организации
-          href: review-the-voice-mail-calls-in-your-organization-exchange-2013-help.md
+          href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/run-voice-mail-call-reports/review-voice-mail-calls-for-organization
         - name: Просмотрите вызовов голосовой почты для пользователя
           href: https://docs.microsoft.com/ru-ru/exchange/voice-mail-unified-messaging/run-voice-mail-call-reports/review-voice-mail-calls-for-user
         - name: Исследовать качество звука голосовых вызовов в организации

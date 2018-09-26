@@ -55,7 +55,9 @@ _**Последнее изменение раздела:** 2012-11-16_
 > По умолчанию параметр <em>SearchEnabled</em> имеет значение <code>$true</code>. Чтобы отключить индексацию сообщений с защитой IRM, установите для этого параметра значение <code>$false</code>. Отключение индексации сообщений с защитой с помощью службы управления правами на доступ к данным предотвращает их возвращение в результаты поиска, когда пользователи выполняют поиск в своих почтовых ящиках или диспетчеры обнаружения используют функцию обнаружения электронных данных на месте.
 
 
-    Set-IRMConfiguration -SearchEnabled $true
+```powershell
+Set-IRMConfiguration -SearchEnabled $true
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Set-IRMConfiguration](https://technet.microsoft.com/ru-ru/library/dd979792\(v=exchg.150\)).
 
@@ -67,7 +69,9 @@ _**Последнее изменение раздела:** 2012-11-16_
 > По умолчанию параметр <em>EDiscoverySuperUserEnabled</em> имеет значение <code>$true</code>. Чтобы отключить доступ к сообщениям с защитой IRM для членов группы ролей «Управление обнаружением», установите для этого параметра значение <code>$false</code>.
 
 
-    Set-IRMConfiguration -EDiscoverySuperUserEnabled $true
+```powershell
+Set-IRMConfiguration -EDiscoverySuperUserEnabled $true
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Set-IRMConfiguration](https://technet.microsoft.com/ru-ru/library/dd979792\(v=exchg.150\)).
 

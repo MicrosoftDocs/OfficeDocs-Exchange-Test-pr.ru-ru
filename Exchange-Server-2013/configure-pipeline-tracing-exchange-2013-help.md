@@ -45,15 +45,21 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 Чтобы настроить адрес отправителя конвейерной трассировки, введите команду в следующем формате.
 
+```powershell
     <Set-TransportService | Set-MailboxTransportService> <ServerIdentity> -PipelineTracingSenderAddress <SMTPAddress | "<>">
+```
 
 Этот пример настраивает конвейерную трассировку для получения мгновенных снимков всех сообщений, отправленных с адреса chris@contoso.com в службе транспорта на сервере почтовых ящиков Mailbox01.
 
-    Set-TransportService Mailbox01 -PipelineTracingSenderAddress chris@contoso.com
+```powershell
+Set-TransportService Mailbox01 -PipelineTracingSenderAddress chris@contoso.com
+```
 
 В этом примере конвейерная трассировка настраивается для получения мгновенных снимков всех созданных системой сообщений, полученных службой транспорта на сервере почтовых ящиков Mailbox02.
 
-    Set-TransportService Mailbox02 -PipelineTracingSenderAddress "<>"
+```powershell
+Set-TransportService Mailbox02 -PipelineTracingSenderAddress "<>"
+```
 
 > [!CAUTION]  
 > Если настроить конвейерную трассировку для записи всех созданных серверами сообщений в службе транспорта, нагрузка на сервер может сильно возрасти, а свободное место на диске может быстро закончиться. Если включена конвейерная трассировка, всегда следите за объемом свободного дискового пространства.
@@ -64,33 +70,37 @@ _**Последнее изменение раздела:** 2015-04-08_
 Папка конвейерной трассировки по умолчанию не существует, пока вы не включите конвейерную трассировку, а сообщения, соответствующие заданным вами критериям с помощью параметра *PipelineTracingSenderAddress*, не будут проходить через службу транспорта на сервере. В транспортной службе на сервере почтовых ящиков папка по умолчанию размещается по пути `%ExchangeInstallPath%TransportRoles\Logs\Hub\PipelineTracing`. В транспортной службе почтовых ящиков на сервере почтовых ящиков папка по умолчанию размещается по пути `%ExchangeInstallPath%TransportRoles\Logs\Mailbox\PipelineTracing`. Если вы задаете другой путь, он должен указывать на каталог на локальном сервере Exchange.
 
 Чтобы настроить папку конвейерной трассировки, введите команду в следующем формате.
-
+```powershell
     <Set-TransportService | Set-MailboxTransportService> <ServerIdentity> -PipelineTracingPath <LocalFilePath>
-
+```
 В этом примере настраивается папка конвейерной трассировки для службы транспорта на сервере почтовых ящиков Mailbox01, имя папки — D:\\Hub\\Pipeline Tracing.
 
-    Set-TransportService Mailbox01 -PipelineTracingPath "D:\Hub\Pipeline Tracing"
+```powershell
+Set-TransportService Mailbox01 -PipelineTracingPath "D:\Hub\Pipeline Tracing"
+```
 
 ## Действие 3. Использование командной консоли для включения конвейерной трассировки
 
 По умолчанию конвейерная трассировка отключена на всех серверах Exchange. Включая конвейерную трассировку, вы активируете ее в указанной транспортной службе только на заданном сервере Exchange. Перед включением конвейерной трассировки укажите адрес отправителя, как описано в шаге 1.
 
 Для включения конвейерной трассировки введите команду в следующем формате.
-
+```powershell
     <Set-TransportService | Set-MailboxTransportService> <ServerIdentity> -PipelineTracingEnabled $true
-
+```
 В этом примере активируется конвейерная трассировка в службе транспорта на сервере почтовых ящиков с именем Mailbox01.
 
-    Set-TransportService Mailbox01 -PipelineTracingEnabled $true
+```powershell
+Set-TransportService Mailbox01 -PipelineTracingEnabled $true
+```
 
 ## Как проверить, что все получилось?
 
 Чтобы убедиться, что вы успешно настроили конвейерную трассировку, выполните следующие действия:
 
 1.  Выполните следующую команду:
-    
+    ```powershell
         <Get-TransportService | Get-MailboxTransportService> <ServerIdentity> | Format-List PipelineTracing*
-
+	```
 2.  Убедитесь, что отображаются значения, которые вы настроили.
 
 3.  Проверьте папку конвейерной трассировки для службы транспорта или транспортной службы почтовых ящиков и убедитесь, что файлы снимков сообщений создаются в папке.
@@ -100,21 +110,23 @@ _**Последнее изменение раздела:** 2015-04-08_
 Из-за вопросов о месте на диске и безопасности, связанных с конвейерной трассировкой, подобная операция — это временное действие для диагностики или устранения неполадок. Включая конвейерную трассировку, не забывайте отключить ее, завершив ее применение.
 
 Для отключения конвейерной трассировки введите команду в следующем формате.
-
+```powershell
     <Set-TransportService | Set-MailboxTransportService> <ServerIdentity> -PipelineTracingEnabled $false
-
+```
 В этом примере отключается конвейерная трассировка в службе транспорта на сервере почтовых ящиков с именем Mailbox01.
 
-    Set-TransportService Mailbox01 -PipelineTracingEnabled $false
+```powershell
+Set-TransportService Mailbox01 -PipelineTracingEnabled $false
+```
 
 ## Как проверить, что все получилось?
 
 Чтобы убедиться, что вы успешно отключили конвейерную трассировку, выполните следующие действия:
 
 1.  Выполните следующую команду:
-    
+    ```powershell
         <Get-TransportService | Get-MailboxTransportService> <ServerIdentity> | Format-List PipelineTracingEnabled
-
+	```
 2.  По умолчанию параметр *PipelineTracingEnabled* имеет значение $false.
 
 3.  Проверьте папку конвейерной трассировки и убедитесь, что файлы снимков сообщений больше не создаются в папке.

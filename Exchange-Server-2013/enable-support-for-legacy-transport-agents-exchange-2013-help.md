@@ -110,20 +110,26 @@ _**Последнее изменение раздела:** 2015-03-09_
 
 1.  В окне командной строки на сервере Exchange 2013, где требуется настроить поддержу устаревших агентов транспорта, откройте в Блокноте соответствующий файл конфигурации приложения с помощью следующей команды:
     
-        Notepad %ExchangeInstallPath%Bin\<AppConfigFile>
+```powershell
+Notepad %ExchangeInstallPath%Bin\<AppConfigFile>
+```
     
-    Например, чтобы открыть файл EdgeTransport.exe.config на сервере почтовых ящиков, выполните следующую команду:
+Например, чтобы открыть файл EdgeTransport.exe.config на сервере почтовых ящиков, выполните следующую команду:
     
-        Notepad %ExchangeInstallPath%Bin\EdgeTransport.exe.config
+```powershell
+Notepad %ExchangeInstallPath%Bin\EdgeTransport.exe.config
+```
 
 2.  Найдите ключ *\</configuration\>* в конце файла и вставьте следующие ключи перед ключом *\</configuration\>*:
     
-        <startup useLegacyV2RuntimeActivationPolicy="true">
-           <supportedRuntime version="v4.0" />
-           <supportedRuntime version="v3.5" />
-           <supportedRuntime version="v3.0" />
-           <supportedRuntime version="v2.0" />
-        </startup>
+```powershell
+<startup useLegacyV2RuntimeActivationPolicy="true">
+        <supportedRuntime version="v4.0" />
+        <supportedRuntime version="v3.5" />
+        <supportedRuntime version="v3.0" />
+        <supportedRuntime version="v2.0" />
+</startup>
+```
 
 3.  По завершении сохраните и закройте файл конфигурации приложения.
 
@@ -131,11 +137,15 @@ _**Последнее изменение раздела:** 2015-03-09_
 
 5.  Перезапустите связанную службу Windows, выполнив следующую команду:
     
-        net stop <service> && net start <service>
+```powershell
+net stop <service> && net start <service>
+```
     
-    Например, если изменения были внесены в файл EdgeTransport.exe.config, перезапустите службу транспорта Microsoft Exchange, выполнив следующую команду:
+Например, если изменения были внесены в файл EdgeTransport.exe.config, перезапустите службу транспорта Microsoft Exchange, выполнив следующую команду:
     
-        net stop MSExchangeTransport && net start MSExchangeTransport
+```powershell
+net stop MSExchangeTransport && net start MSExchangeTransport
+```
 
 6.  Повторите шаг 5, чтобы перезапустить службы, связанные с остальными измененными файлами конфигурации приложения.
 
@@ -143,5 +153,7 @@ _**Последнее изменение раздела:** 2015-03-09_
 
 Если удалось успешно установить устаревший агент транспорта, значит, все получилось. При попытке установить устаревший агент транспорта без выполнения процедур, описанных в этой статье, возникнет ошибка, например:
 
-    Mixed mode assembly is built against version '<version>' of the runtime and cannot be loaded in the 4.0 runtime without additional configuration information.
+```powershell
+Mixed mode assembly is built against version '<version>' of the runtime and cannot be loaded in the 4.0 runtime without additional configuration information.
+```
 

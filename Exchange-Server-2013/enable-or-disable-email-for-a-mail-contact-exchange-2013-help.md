@@ -57,7 +57,9 @@ _**Последнее изменение раздела:** 2012-12-05_
 
 В этом примере отключается электронная почта для почтового контакта Neil Black.
 
-    Disable-MailContact -Identity "Neil Black"
+```powershell
+Disable-MailContact -Identity "Neil Black"
+```
 
 Подробные сведения о синтаксисе и параметрах см. в разделе [Disable-MailContact](https://technet.microsoft.com/ru-ru/library/aa997465\(v=exchg.150\)).
 
@@ -71,13 +73,17 @@ _**Последнее изменение раздела:** 2012-12-05_
 
 3.  В консоли Shell выполните следующую команду:
     
-        Get-MailContact
+    ```powershell
+	Get-MailContact
+	```
     
     Контакт, для которого вы отключили почту, не возвращается в результатах выполнения командлета, так как он возвращает только контакты с включенной поддержкой почты.
 
 4.  В консоли Shell выполните следующую команду:
     
-        Get-Contact
+    ```powershell
+	Get-Contact
+	```
     
     Контакт, отключенных сообщение для возвращается в результатах выполнения команды поскольку командлет возвращает все контактными объектами Active Directory.
 
@@ -89,18 +95,20 @@ _**Последнее изменение раздела:** 2012-12-05_
 
 В этом примере включается поддержка почты для контакта Rene Valdes. Вы должны предоставить внешний адрес.
 
-    Enable-MailContact -Identity "Rene Valdes" -ExternalEmailAddress renev@tailspintoys.com
+```powershell
+Enable-MailContact -Identity "Rene Valdes" -ExternalEmailAddress renev@tailspintoys.com
+```
 
 ## Использование командной консоли и CSV-файла для включения поддержки почты для нескольких контактов
 
 При включении поддержки почты контактов в массовом порядке сначала следует экспортировать список контактов, для которых не включена поддержка почты, в CSV-файл, а затем добавить в него внешние адреса электронной почты с помощью текстового редактора, такого как Блокнот, или в приложении электронных таблиц, например в Microsoft Excel. После этого с помощью CSV-файла в командной консоли следует включить поддержку почты для контактов, указанных в CSV-файле.
 
 1.  Выполните следующую команду, чтобы экспортировать список существующих контактов с включенной поддержкой почты в файл Contacts.csv на рабочем столе администратора.
-    
+    ```powershell
         Get-Contact | Where { $_.RecipientType -eq "Contact" } | Out-File "C:\Users\Administrator\Desktop\Contacts.csv"
-    
+    ```
     Полученный в результате файл будет иметь примерно следующий вид:
-    
+    ```powershell
         Name
         Walter Harp
         James Alvord
@@ -108,9 +116,9 @@ _**Последнее изменение раздела:** 2012-12-05_
         Susan Burk
         Ian Tien
         ...
-
+	```
 2.  Добавьте заголовок столбца с именем **EmailAddress**, а затем добавьте адрес электронной почты для каждого контакта в файле. Имя и внешний адрес электронной почты для каждого контакта должны быть разделены запятыми. Обновленный файл будет иметь примерно следующий вид:
-    
+    ```powershell
         Name,EmailAddress
         James Alvord,james@contoso.com
         Susan Burk,sburk@tailspintoys.com
@@ -118,11 +126,11 @@ _**Последнее изменение раздела:** 2012-12-05_
         Ian Tien,iant@tailspintoys.com
         Rainer Witt,rainerw@fourthcoffee.com
         ...
-
+	```
 3.  Выполните следующую команду, чтобы использовать данные в CSV-файле для включения поддержки почты у контактов в файле.
-    
+    ```powershell
         Import-CSV C:\Users\Administrator\Desktop\Contacts.csv | ForEach-Object {Enable-MailContact -Identity $_.Name -ExternalEmailAddress $_.EmailAddress}
-    
+    ```
     Результаты команды отображают сведения о новых почтовых контактах.
 
 ## Как проверить, что все получилось?
@@ -137,5 +145,7 @@ _**Последнее изменение раздела:** 2012-12-05_
 
   - В командной консоли Exchange выполните следующую команду для вывода информации о новых почтовых контактах.
     
-        Get-MailContact | Format-Table Name,RecipientTypeDetails,ExternalEmailAddress
+    ```powershell
+	Get-MailContact | Format-Table Name,RecipientTypeDetails,ExternalEmailAddress
+	```
 

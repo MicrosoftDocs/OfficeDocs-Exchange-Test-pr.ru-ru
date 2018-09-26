@@ -81,7 +81,9 @@ _**Последнее изменение раздела:** 2016-12-09_
 > Можно снова выполнить эту команду на том же сервере, чтобы обновить его лицензию Standard Edition до лицензии Enterprise Edition.
 
 
-    Set-ExchangeServer ExServer01 -ProductKey aaaaa-aaaaa-aaaaa-aaaaa-aaaaa
+```powershell
+Set-ExchangeServer ExServer01 -ProductKey aaaaa-aaaaa-aaaaa-aaaaa-aaaaa
+```
 
 Подробные сведения о синтаксисе и параметрах см. в разделе [Set-ExchangeServer](https://technet.microsoft.com/ru-ru/library/bb123716\(v=exchg.150\)).
 
@@ -106,10 +108,10 @@ _**Последнее изменение раздела:** 2016-12-09_
 1.  Откройте командную консоль.
 
 2.  Чтобы проверить состояние лицензии для определенного сервера Exchange, выполните следующую команду.
-    
+    ```powershell
         Get-ExchangeServer ExServer01 | Format-Table Edition,*Trial*
-
+	```
 3.  Необязательно: чтобы посмотреть состояние лицензии всех серверов Exchange в организации, выполните следующую команду.
-    
+    ```powershell
         Get-ExchangeServer | Format-Table Name, Edition, *Trial* -Auto
-
+	```

@@ -32,33 +32,33 @@ _**Последнее изменение раздела:** 2017-07-25_
   - Exchange 2013 предоставляет два набора параметров HTTP-подключения для конфигурации мобильного Outlook, чтобы администраторы могли настроить как внутреннюю, так и внешнюю конечную точку.
     
     Чтобы настроить мобильный Outlook с одним URL-адресом для подключения, укажите имя хоста и требуется ли протокол SSL и authpackage, используя следующую команду в командной консоли Exchange.
-    
+    ```powershell
         Get-OutlookAnywhere | Set-OutlookAnywhere -InternalHostname "internalServer.contoso.com" -InternalClientAuthenticationMethod Ntlm -InternalClientsRequireSsl $true -IISAuthenticationMethods Negotiate,NTLM,Basic
-    
+    ```
     Можно также указать внешне достижимую конечную точку, используя следующую команду в командной консоли Exchange.
-    
+    ```powershell
         Get-OutlookAnywhere | Set-OutlookAnywhere -InternalHostname "internalServer.contoso.com" -InternalClientAuthenticationMethod Ntlm -InternalClientsRequireSsl $true -ExternalHostname "externalServer.company.com" -ExternalClientAuthenticationMethod Basic -ExternalClientsRequireSsl $true -IISAuthenticationMethods Negotiate,NTLM,Basic
-    
+    ```
     > [!TIP]  
     > Хотя Exchange 2013 поддерживает Negotiate для проверки подлинности HTTP мобильного Outlook, это должно использоваться только если на всех серверах в среде запущен Exchange 2013.
 
 
   - Чтобы настроить Exchange ActiveSync, выполните следующую команду.
-    
+    ```powershell
         Set-ActiveSyncVirtualDirectory -Identity "<CAS2013>\Microsoft-Server-ActiveSync (Default Web Site)" -ExternalUrl "https://mail.contoso.com/Microsoft-Server-ActiveSync"
-
+	```
   - Чтобы настроить виртуальный каталог веб-служб Exchange, выполните следующую команду.
-    
+    ```powershell
         Set-WebServicesVirtualDirectory -Identity "<CAS2013>\EWS (Default Web Site)" -ExternalUrl https://mail.contoso.com/EWS/Exchange.asmx
-
+	```
   - Чтобы настроить автономную адресную книгу, выполните следующую команду.
-    
+    ```powershell
         Set-OABVirtualDirectory -Identity "<CAS2013>\OAB (Default Web Site)" -ExternalUrl "https://mail.contoso.com/OAB"
-
+	```
   - Чтобы настроить точку подключения службы, выполните следующую команду.
-    
+    ```powershell
         Set-ClientAccessServer -Identity <CAS2013> -AutoDiscoverServiceInternalURI https://autodiscover.contoso.com/AutoDiscover/AutoDiscover.xml
-
+	```
 ## Обновление с клиентского доступа Exchange 2007 и 2010
 
 Используйте этот раздел при настройке внешнего доступа к протоколам на сервере клиентского доступа Exchange 2013. Выполните команды с командной консоли Exchange при настройке виртуальных каталогов как в разделе выше, а также указанные ниже команды.
@@ -66,25 +66,26 @@ _**Последнее изменение раздела:** 2017-07-25_
 Чтобы настроить виртуальные каталоги для Exchange 2013, потребуется выполнить следующие команды.
 
 1.  Для настройки внешнего URL-адреса для Outlook Web App выполните следующую команду в командной консоли Exchange.
-    
+    ```powershell
         Set-OwaVirtualDirectory "<CAS2013>\OWA (Default Web Site)" -ExternalUrl https://mail.contoso.com/OWA
-    
+    ```
     После настройки виртуального каталога Outlook Web App в командной строке выполните следующие команды.
     
-```
-        Net stop IISAdmin /y
-```
-```    
-        Net start W3SVC
-```
+	```powershell
+	Net stop IISAdmin /y
+	```
+	```powershell
+	Net start W3SVC
+	```
+
 2.  Чтобы настроить внешний доступ к Центру администрирования Exchange, выполните следующую команду в командной консоли Exchange.
-    
+    ```powershell
         Set-EcpVirtualDirectory "<CAS2013>\ECP (Default Web Site)" -ExternalUrl https://mail.contoso.com/ECP -InternalURL https://mail.contoso.com/ECP 
-
+	```
 3.  Чтобы настроить службу доступности, выполните следующую команду в командной консоли Exchange.
-    
+    ```powershell
         Set-WebServicesVirtualDirectory -Identity "<CAS2013>\EWS (Default Web Site)" -ExternalURL https://mail.contoso.com/EWS/Exchange.asmx
-
+	```
 Чтобы проверить, правильно ли настроен внешний URL-адрес для Exchange ActiveSync или Outlook Web App, можно воспользоваться Remote Connectivity Analyzer — бесплатным веб-средством, предоставляемым корпорацией Майкрософт. Remote Connectivity Analyzer вы найдете [здесь](http://go.microsoft.com/fwlink/?linkid=154308).
 
 Проверить, правильно ли настроена проверка подлинности для Exchange ActiveSync или Outlook Web App, можно также с помощью ExRCA.
@@ -96,10 +97,10 @@ _**Последнее изменение раздела:** 2017-07-25_
 Чтобы настроить виртуальные каталоги для Exchange 2007, потребуется выполнить следующие команды.
 
   - Чтобы настроить внешний URL-адрес на виртуальном каталоге Exchange ActiveSync, выполните следующую команду в командной консоли Exchange.
-    
+    ```powershell
         Set-ActiveSyncVirtualDirectory -Identity "<CAS2007>\Microsoft-Server-ActiveSync (Default Web Site)" -ExternalUrl https://mail.contoso.com/Microsoft-Server-ActiveSync
-
+	```
   - Чтобы настроить внешний URL-адрес в виртуальном каталоге Outlook Web App, выполните приведенную ниже команду в командной консоли Exchange.
-    
+    ```powershell
         Set-OwaVirtualDirectory -Identity "<CAS2007>\owa (Default Web Site)" -ExternalUrl https://legacy.contoso.com/owa
-
+	```

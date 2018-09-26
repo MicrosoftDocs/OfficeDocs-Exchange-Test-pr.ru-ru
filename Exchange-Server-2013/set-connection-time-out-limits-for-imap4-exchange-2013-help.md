@@ -59,11 +59,15 @@ _**Последнее изменение раздела:** 2012-11-28_
 
 В этом примере устанавливается предельное время ожидания подключения для простаивающих соединений, прошедших проверку подлинности.
 
-    Set -ImapSettings -Identity CAS01 -AuthenticatedConnectionTimeout TimeValue
+```powershell
+Set -ImapSettings -Identity CAS01 -AuthenticatedConnectionTimeout TimeValue
+```
 
 В этом примере устанавливается предельное время ожидания подключения для простаивающих соединений, не прошедших проверку подлинности.
 
-    Set -ImapSettings -Identity CAS01 -PreAuthenticatedConnectionTimeout TimeValue
+```powershell
+Set -ImapSettings -Identity CAS01 -PreAuthenticatedConnectionTimeout TimeValue
+```
 
 После установки предельного времени ожидания подключения для протокола IMAP4 необходимо перезапустить службы IMAP4, чтобы изменения вступили в силу. Дополнительные сведения о перезапуске служб IMAP4 см. в разделе [Запуск и остановка служб IMAP4](start-and-stop-the-imap4-services-exchange-2013-help.md).
 
@@ -87,7 +91,9 @@ _**Последнее изменение раздела:** 2012-11-28_
 
 1.  Выполните в командной консоли следующую команду.
     
-        Get-ImapSettings | format-list
+    ```powershell
+    Get-ImapSettings | format-list
+    ```
 
 2.  Убедитесь, что параметры указаны правильно.
 

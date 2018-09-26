@@ -93,45 +93,63 @@ _**Последнее изменение раздела:** 2012-11-02_
 
 В данном примере показано, как заполнить копию базы данных с именем DB1 на сервере MBX1.
 
-    Update-MailboxDatabaseCopy -Identity DB1\MBX1
+```powershell
+Update-MailboxDatabaseCopy -Identity DB1\MBX1
+```
 
 В данном примере показано, как заполнить копию базы данных с именем DB1 на сервере MBX1 с использованием сервера MBX2 в качестве исходного сервера почтовых ящиков для заполнения.
 
-    Update-MailboxDatabaseCopy -Identity DB1\MBX1 -SourceServer MBX2
+```powershell
+Update-MailboxDatabaseCopy -Identity DB1\MBX1 -SourceServer MBX2
+```
 
 В данном примере показано, как заполнить копию базы данных с именем DB1 на сервере MBX1 без заполнения каталога индекса содержимого.
 
-    Update-MailboxDatabaseCopy -Identity DB1\MBX1 -DatabaseOnly
+```powershell
+Update-MailboxDatabaseCopy -Identity DB1\MBX1 -DatabaseOnly
+```
 
 В данном примере показано, как заполнить каталог индекса содержимого для копии базы данных с именем DB1 на сервере MBX1 без заполнения файла базы данных.
 
-    Update-MailboxDatabaseCopy -Identity DB1\MBX1 -CatalogOnly
+```powershell
+Update-MailboxDatabaseCopy -Identity DB1\MBX1 -CatalogOnly
+```
 
 ## Копирование автономной базы данных вручную
 
 1.  Если для базы данных включено циклическое ведение журнала, его необходимо отключить перед продолжением работы. Циклическое ведение журнала можно отключить для базы данных почтовых ящиков с помощью командлета [Set-MailboxDatabase](https://technet.microsoft.com/ru-ru/library/bb123971\(v=exchg.150\)), как показано в этом примере.
     
-        Set-MailboxDatabase DB1 -CircularLoggingEnabled $false
+    ```powershell
+    Set-MailboxDatabase DB1 -CircularLoggingEnabled $false
+    ```
 
 2.  Отключите базу данных. Можно использовать командлет [Dismount-Database](https://technet.microsoft.com/ru-ru/library/bb124936\(v=exchg.150\)), как показано в следующем примере.
     
-        Dismount-Database DB1 -Confirm $false
+    ```powershell
+    Dismount-Database DB1 -Confirm $false
+    ```
 
 3.  Вручную скопируйте файлы базы данных (файл самой базы и все файлы журнала) в другое расположение, например на внешний диск или в сетевую папку.
 
 4.  Подключите базу данных. Можно использовать командлет [Mount-Database](https://technet.microsoft.com/ru-ru/library/aa998871\(v=exchg.150\)), как показано в следующем примере.
     
-        Mount-Database DB1
+    ```powershell
+    Mount-Database DB1
+    ```
 
 5.  На сервере, где будет размещаться копия, скопируйте файлы базы данных с внешнего диска или из сетевой папки в тот же путь, что используется для активной копии базы данных. Например, если путь активной копии базы данных — D:\\DB1\\DB1.edb, а путь к файлам журнала — D:\\DB1, то файлы базы данных на сервере, где будет размещаться копия, следует скопировать в каталог D:\\DB1.
 
 6.  Добавьте копию базы данных почтовых ящиков, используя командлет [Add-MailboxDatabaseCopy](https://technet.microsoft.com/ru-ru/library/dd298105\(v=exchg.150\)) с параметром *SeedingPostponed*, как показано в следующем примере.
     
-        Add-MailboxDatabaseCopy -Identity DB1 -MailboxServer MBX3 -SeedingPostponed
+    ```powershell
+    Add-MailboxDatabaseCopy -Identity DB1 -MailboxServer MBX3 -SeedingPostponed
+    ```
 
 7.  Если для базы данных включено циклическое ведение журнала, включите его повторно с помощью командлета [Set-MailboxDatabase](https://technet.microsoft.com/ru-ru/library/bb123971\(v=exchg.150\)), как показано в следующем примере.
     
-        Set-MailboxDatabase DB1 -CircularLoggingEnabled $true
+    ```powershell
+    Set-MailboxDatabase DB1 -CircularLoggingEnabled $true
+    ```
 
 ## Как проверить, что все получилось?
 
@@ -141,7 +159,9 @@ _**Последнее изменение раздела:** 2012-11-02_
 
   - Чтобы убедиться, что копия базы данных почтовых ящиков успешно заполнена и работоспособна, выполните следующую команду в командной консоли:
     
-        Get-MailboxDatabaseCopyStatus <DatabaseCopyName>
+    ```powershell
+    Get-MailboxDatabaseCopyStatus <DatabaseCopyName>
+    ```
     
     Состояние самой копии и индекса содержимого должно быть указано как работоспособное.
 

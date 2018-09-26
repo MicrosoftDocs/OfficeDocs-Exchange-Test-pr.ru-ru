@@ -128,9 +128,9 @@ _**Последнее изменение раздела:** 2013-04-12_
   - Почтовый ящик будет создан в подразделении по умолчанию. Чтобы указать другое подразделение, используйте параметр *OrganizationalUnit*.
 
 <!-- end list -->
-
+```powershell``
     New-Mailbox -Alias pilarp -Name "Pilar Pinilla" -FirstName Pilar -LastName Pinilla -DisplayName "Pilar Pinilla" -UserPrincipalName pilarp@contoso.com -Password (ConvertTo-SecureString -String 'Pa$$word1' -AsPlainText -Force)
-
+`
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [New-Mailbox](https://technet.microsoft.com/ru-ru/library/aa997663\(v=exchg.150\)).
 
 ## Как проверить, что все получилось?
@@ -141,7 +141,9 @@ _**Последнее изменение раздела:** 2013-04-12_
 
   - В командной консоли Exchange выполните следующую команду для вывода информации о новом почтовом ящике пользователя.
     
-        Get-Mailbox <Name> | FL Name,RecipientTypeDetails,PrimarySmtpAddress
+    ```powershell
+	Get-Mailbox <Name> | FL Name,RecipientTypeDetails,PrimarySmtpAddress
+	```
 
 ## Создание почтового ящика для существующего пользователя
 
@@ -189,13 +191,17 @@ _**Последнее изменение раздела:** 2013-04-12_
 
 В этом примере создается почтовый ящик для существующего пользователя в базе данных Exchange UsersMailboxDatabase с именем estherv@contoso.com.
 
-    Enable-Mailbox estherv@contoso.com -Database UsersMailboxDatabase
+```powershell
+Enable-Mailbox estherv@contoso.com -Database UsersMailboxDatabase
+```
 
 Также командлет **Enable-Mailbox** используется для включения поддержки почты для нескольких пользователей. Это делается путем передачи по конвейеру результатов командлета **Get-User** в командлет **Enable-Mailbox**. При выполнении командлета **Get-User** необходимо возвращать только тех пользователей, для которых еще не включена поддержка почты. Для этого необходимо указать значение User с параметром *RecipientTypeDetails*. Также можно ограничить результаты, возвращаемые с помощью параметра *Filter*, чтобы запросить только тех пользователей, которые соответствуют указанным критериям. Затем результаты необходимо передать по конвейеру в командлет **Enable-Mailbox**.
 
 Например, следующая команда включает поддержку почтовых ящиков для пользователей с выключенной поддержкой почты и заданным значением свойства **UserPrincipalName** — это позволяет гарантировать, что системные учетные записи не будут случайно преобразованы в почтовые ящики.
 
-    Get-User -RecipientTypeDetails User -Filter { UserPrincipalName -ne $Null } | Enable-Mailbox
+```powershell
+Get-User -RecipientTypeDetails User -Filter { UserPrincipalName -ne $Null } | Enable-Mailbox
+```
 
 Сведения о синтаксисе и параметрах см. в разделах [Enable-Mailbox](https://technet.microsoft.com/ru-ru/library/aa998251\(v=exchg.150\)) и [Get-User](https://technet.microsoft.com/ru-ru/library/aa996896\(v=exchg.150\)).
 
@@ -209,7 +215,9 @@ _**Последнее изменение раздела:** 2013-04-12_
 
   - В командной консоли Exchange выполните следующую команду, чтобы отобразить данные о новом почтовом ящике.
     
-        Get-Mailbox <Name> | FL Name,RecipientTypeDetails,PrimarySmtpAddress
+    ```powershell
+	Get-Mailbox <Name> | FL Name,RecipientTypeDetails,PrimarySmtpAddress
+	```
     
     Обратите внимание, что значение свойства *RecipientTypeDetails* — `UserMailbox`.
 

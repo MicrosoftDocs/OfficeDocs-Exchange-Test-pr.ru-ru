@@ -41,7 +41,9 @@ _**Последнее изменение раздела:** 2016-12-09_
 
 Выполните следующую команду.
 
+```powershell
     Test-OutlookConnectivity -ProbeIdentity 'OutlookMailboxDeepTestProbe' -MailboxId tony@contoso.com -Hostname contoso.com
+```
 
 > [!NOTE]  
 > Значение параметра <em>OutlookMailboxDeepTestProbe</em> позволяет проверить возможность подключения с сервера почтовых ящиков. Чтобы проверить возможность подключения с сервера клиентского доступа, используйте значение <em>OutlookMailboxCTPProbe</em> для параметра <em>ProbeIdentity</em>.

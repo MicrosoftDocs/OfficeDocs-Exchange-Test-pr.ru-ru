@@ -65,19 +65,27 @@ _**Последнее изменение раздела:** 2012-11-28_
 
 В этом примере устанавливается ограничение числа подключений для сервера.
 
-    Set-ImapSettings -Identity CAS01 -MaxConnections Value
+```powershell
+Set-ImapSettings -Identity CAS01 -MaxConnections Value
+```
 
 В этом примере устанавливается ограничение числа подключений для IP-адреса.
 
-    Set-ImapSettings -Identity CAS01 -MaxConnectionsFromSingleIP Value
+```powershell
+Set-ImapSettings -Identity CAS01 -MaxConnectionsFromSingleIP Value
+```
 
 В этом примере устанавливается ограничение числа подключений для пользователя.
 
-    Set-ImapSettings -MaxConnectionsPerUser Value
+```powershell
+Set-ImapSettings -MaxConnectionsPerUser Value
+```
 
 Этот пример устанавливает максимальный размер команды.
 
-    Set-ImapSettings -MaxCommandSize Value
+```powershell
+Set-ImapSettings -MaxCommandSize Value
+```
 
 После настройки ограничений числа подключений необходимо перезапустить службы IMAP4. Дополнительные сведения о перезапуске служб IMAP4 приведены в разделе [Запуск и остановка служб IMAP4](start-and-stop-the-imap4-services-exchange-2013-help.md).
 
@@ -101,7 +109,9 @@ _**Последнее изменение раздела:** 2012-11-28_
 
 1.  Выполните в командной консоли следующую команду.
     
-        Get-ImapSettings | format-list
+    ```powershell
+	Get-ImapSettings | format-list
+	```
 
 2.  Убедитесь, что параметры указаны правильно.
 

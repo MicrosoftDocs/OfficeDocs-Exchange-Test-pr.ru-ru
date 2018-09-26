@@ -79,9 +79,9 @@ _**Последнее изменение раздела:** 2016-12-09_
 > [!NOTE]  
 > В этом примере предполагается, что вы уже создали группу безопасности MarketingSG и что для нее включена почта. См. статью <a href="https://docs.microsoft.com/ru-ru/exchange/recipients-in-exchange-online/manage-mail-enabled-security-groups">Управление группами безопасности с поддержкой электронной почты</a>.
 
-
+```powershell
     New-Mailbox -Shared -Name "Sales Department" -DisplayName "Sales Department" -Alias Sales | Set-Mailbox -GrantSendOnBehalfTo MarketingSG | Add-MailboxPermission -User MarketingSG -AccessRights FullAccess -InheritanceType All
-
+```
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [New-Mailbox](https://technet.microsoft.com/ru-ru/library/aa997663\(v=exchg.150\)).
 
 ## Какие разрешения следует использовать?

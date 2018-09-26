@@ -57,21 +57,29 @@ _**Последнее изменение раздела:** 2013-02-25_
 
 При поиске записей об определенных событиях в журналах отслеживания сообщений введите команду в следующем формате.
 
-    Get-MessageTrackingLog [-Server <ServerIdentity.] [-ResultSize <Integer> | Unlimited] [-Start <DateTime>] [-End <DateTime>] [-EventId <EventId>] [-InternalMessageId <InternalMessageId>] [-MessageId <MessageId>] [-MessageSubject <Subject>] [-Recipients <RecipientAddress1,RecipientAddress2...>] [-Reference <Reference>] [-Sender <SenderAddress>]
+```powershell
+Get-MessageTrackingLog [-Server <ServerIdentity.] [-ResultSize <Integer> | Unlimited] [-Start <DateTime>] [-End <DateTime>] [-EventId <EventId>] [-InternalMessageId <InternalMessageId>] [-MessageId <MessageId>] [-MessageSubject <Subject>] [-Recipients <RecipientAddress1,RecipientAddress2...>] [-Reference <Reference>] [-Sender <SenderAddress>]
+```
 
 Чтобы просмотреть 1000 последних записей в журнале отслеживания сообщений на сервере, выполните следующую команду.
 
-    Get-MessageTrackingLog
+```powershell
+Get-MessageTrackingLog
+```
 
 В этом примере в журналах отслеживания сообщений на сервере выполняется поиск всех записей, зарегистрированных с 28.03.2013, 08:00, по 28.03.2013, 17:00, для всех событий с меткой **FAIL** для отправителя pat@contoso.com.
 
-    Get-MessageTrackingLog -ResultSize Unlimited -Start "3/28/2013 8:00AM" -End "3/28/2013 5:00PM" -EventId "Fail" -Sender "pat@contoso.com"
+```powershell
+Get-MessageTrackingLog -ResultSize Unlimited -Start "3/28/2013 8:00AM" -End "3/28/2013 5:00PM" -EventId "Fail" -Sender "pat@contoso.com"
+```
 
 ### Использование командной консоли для управления форматом вывода результатов поиска в журналах отслеживания сообщений
 
 Введите команду в следующем формате.
 
-    Get-MessageTrackingLog <SearchFilters> | <Format-Table | Format-List> [<FieldNames>] [<OutputFileOptions>]
+```powershell
+Get-MessageTrackingLog <SearchFilters> | <Format-Table | Format-List> [<FieldNames>] [<OutputFileOptions>]
+```
 
 В этом примере в журналах отслеживания сообщений выполняется поиск со следующими условиями.
 
@@ -85,7 +93,9 @@ _**Последнее изменение раздела:** 2013-02-25_
 
 <!-- end list -->
 
-    Get-MessageTrackingLog -EventId Send | Format-List Send*,Recipient* > "D:\Send Search.txt"
+```powershell
+Get-MessageTrackingLog -EventId Send | Format-List Send*,Recipient* > "D:\Send Search.txt"
+```
 
 ### Использование командной консоли для поиска записей сообщений в журналах отслеживания сообщений на нескольких серверах
 
@@ -93,7 +103,9 @@ _**Последнее изменение раздела:** 2013-02-25_
 
 Для поиска всех записей определенного сообщения в журналах отслеживания сообщений на всех серверах почтовых ящиков введите команду в следующем формате.
 
-    Get-ExchangeServer | where {$_.isHubTransportServer -eq $true -or $_.isMailboxServer -eq $true} | Get-MessageTrackingLog -MessageId <MessageID> | Select-Object <CommaSeparatedFieldNames> | Sort-Object -Property <FieldName>
+```powershell
+Get-ExchangeServer | where {$_.isHubTransportServer -eq $true -or $_.isMailboxServer -eq $true} | Get-MessageTrackingLog -MessageId <MessageID> | Select-Object <CommaSeparatedFieldNames> | Sort-Object -Property <FieldName>
+```
 
 В этом примере в журналах отслеживания сообщений на всех серверах почтовых ящиков Exchange 2013 выполняется поиск со следующими условиями.
 
@@ -105,7 +117,9 @@ _**Последнее изменение раздела:** 2013-02-25_
 
 <!-- end list -->
 
-    Get-ExchangeServer | where {$_.isHubTransportServer -eq $true -or $_.isMailboxServer -eq $true} | Get-MessageTrackingLog -MessageId ba18339e-8151-4ff3-aeea-87ccf5fc9796@mailbox01.contoso.com | Select-Object Timestamp,ServerHostname,ClientHostname,Source,EventId,Recipients | Sort-Object -Property Timestamp
+```powershell
+Get-ExchangeServer | where {$_.isHubTransportServer -eq $true -or $_.isMailboxServer -eq $true} | Get-MessageTrackingLog -MessageId ba18339e-8151-4ff3-aeea-87ccf5fc9796@mailbox01.contoso.com | Select-Object Timestamp,ServerHostname,ClientHostname,Source,EventId,Recipients | Sort-Object -Property Timestamp
+```
 
 ### Использование Центра администрирования Exchange для поиска данных в журналах отслеживания сообщений
 

@@ -55,7 +55,9 @@ _**Последнее изменение раздела:** 2013-04-16_
 
 В этом примере сервер почтовых ящиков с именем `MyMailboxServer` добавляется в абонентскую группу с универсальным кодом ресурса SIP с именем `MySIPDialPlan` и ему запрещается принимать новые вызовы. Также показано переключение из режима запуска в двойной режим, который позволяет серверу почтовых ящиков принимать запросы по протоколам TCP и TLS.
 
+```powershell
     Set-UMService -Identity MyMailboxServer -DialPlans MySIPDialPlan -Status Disabled -UMStartupMode Dual
+```
 
 В этом примере сервер почтовых ящиков с именем `MyMailboxServer` добавляется в две абонентские группы SIP с именами `MySIPDialPlan` и `MySIPDialPlan2`, а также выполняются следующие настройки.
 
@@ -66,9 +68,9 @@ _**Последнее изменение раздела:** 2013-04-16_
   - Настраивается служба доступа SIP для Lync Server.
 
 <!-- end list -->
-
+```powershell
     Set-UMService -Identity MyMailboxServer -DialPlans MySIPDialPlan, MySIPDialPlan2 -IPAddressFamily Any -MaxCallsAllowed 50 -SipAccessService northamerica.lyncpoolna.contoso.com
-
+```
 ## Добавление сервера клиентского доступа в абонентскую группу с универсальным кодом ресурса SIP с помощью Центра администрирования Exchange
 
 1.  В Центре администрирования Exchange перейдите к разделу **Серверы** \> **Серверы**.
@@ -85,9 +87,11 @@ _**Последнее изменение раздела:** 2013-04-16_
 
 В этом примере сервер клиентского доступа с именем `MyClientAccessServer` добавляется в абонентскую группу с универсальным кодом ресурса SIP с именем `MySIPDialPlan`. Также показано переключение из режима запуска в двойной режим, который позволяет серверу клиентского доступа принимать запросы по протоколам TCP и TLS.
 
-    Set-UMCallRouterSettings -DialPlans MySIPDialPlan -Server MyClientAccessServer -UMStartupMode Dual
+```powershell
+Set-UMCallRouterSettings -DialPlans MySIPDialPlan -Server MyClientAccessServer -UMStartupMode Dual
+```
 
 В этом примере сервер клиентского доступа с именем `MyClientAccessServer` добавляется в две абонентские группы SIP с именами `MySIPDialPlan` и `MySIPDialPlan2`; кроме того, серверу разрешается использовать адреса IPv4 и IPv6.
-
+```powershell
     Set-UMCallRouterSettings -DialPlans MySIPDialPlan, MySIPDialPlan2 -IPAddressFamily Any -Server MyClientAccessServer
-
+```

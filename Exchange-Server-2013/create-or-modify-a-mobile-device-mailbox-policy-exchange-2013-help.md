@@ -68,9 +68,9 @@ _**Последнее изменение раздела:** 2012-10-16_
 
 
 1.  В консоли Shell выполните следующую команду:
-    
+    ```powershell
         New-MobileDeviceMailboxPolicy -Name:"Management" -AllowBluetooth:$true -AllowBrowser:$true -AllowCamera:$true -AllowPOPIMAPEmail:$false -PasswordEnabled:$true -AlphanumericPasswordRequired:$true -PasswordRecoveryEnabled:$true -MaxEmailAgeFilter:10 -AllowWiFi:$true -AllowStorageCard:$true -AllowPOPIMAPEmail:$false
-
+    ```
 ## Как проверить, что все получилось?
 
 Чтобы проверить, успешно ли создана политика почтовых ящиков мобильного устройства, выполните одно из указанных ниже действий.
@@ -78,9 +78,9 @@ _**Последнее изменение раздела:** 2012-10-16_
 1.  В Центре администрирования Exchange выберите пункты **Мобильные устройства** \> **Политики почтовых ящиков мобильного устройства** и убедитесь, что новая политика отображена в списке.
 
 2.  В консоли Shell выполните следующую команду:
-    
+    ```powershell
         Get-MobileDeviceMailboxPolicy -Identity <PolicyName> 
-
+    ```
 ## Изменение существующей политики почтовых ящиков мобильного устройства
 
 Для редактирования политики почтовых ящиков мобильного устройства можно использовать Центр администрирования Exchange или командную консоль.
@@ -112,9 +112,9 @@ _**Последнее изменение раздела:** 2012-10-16_
 
 
 1.  В консоли Shell выполните следующую команду:
-    
+    ```powershell
         Set-MobileDeviceMailboxPolicy -Identity:Default -DevicePasswordEnabled:$true -AlphanumericDevicePasswordRequired:$true -PasswordRecoveryEnabled:$true -MaxEmailAgeFilter:ThreeDays -AllowWiFi:$false -AllowStorageCard:$true -AllowPOPIMAPEmail:$false -IsDefault:$true -AllowTextMessaging:$true -Confirm:$true
-
+    ```
 ## Как проверить, что все получилось?
 
 Чтобы убедиться в том, что изменения в политику почтовых ящиков мобильного устройства успешно внесены, выполните одно из указанных ниже действий.
@@ -123,5 +123,7 @@ _**Последнее изменение раздела:** 2012-10-16_
 
 2.  В консоли Shell выполните следующую команду:
     
+    ```powershell
         Get-MobileDeviceMailboxPolicy -Identity <PolicyName>
+    ```
 

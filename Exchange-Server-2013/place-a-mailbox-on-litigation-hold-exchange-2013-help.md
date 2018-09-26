@@ -69,7 +69,9 @@ _**Последнее изменение раздела:** 2016-10-18_
 
 В этом примере к почтовому ящику bsuneja@contoso.com применяется хранение для судебного разбирательства. Элементы в почтовом ящике хранятся в течение неопределенного времени или до отмены хранения.
 
-    Set-Mailbox bsuneja@contoso.com -LitigationHoldEnabled $true
+```powershell
+Set-Mailbox bsuneja@contoso.com -LitigationHoldEnabled $true
+```
 
 > [!NOTE]  
 > Если к почтовому ящику применяется хранение для судебного разбирательства в течение неопределенного времени (без указания длительности), для свойства почтового ящика <em>LitigationHoldDuration</em> задается значение <code>Unlimited</code>.
@@ -79,16 +81,18 @@ _**Последнее изменение раздела:** 2016-10-18_
 
 В этом примере к почтовому ящику bsuneja@contoso.com применяется хранение для судебного разбирательства, а элементы сохраняются в течение 2555 дней (приблизительно 7 лет).
 
-    Set-Mailbox bsuneja@contoso.com -LitigationHoldEnabled $true -LitigationHoldDuration 2555
+```powershell
+Set-Mailbox bsuneja@contoso.com -LitigationHoldEnabled $true -LitigationHoldDuration 2555
+```
 
 ## Использование командной консоли для перевода всех почтовых ящиков в режим хранения для судебного разбирательства в течение указанного времени
 
 В вашей организации может понадобиться сохранить данные всех почтовых ящиков в течение указанного периода времени. Прежде чем перевести все почтовые ящики в организации в режим хранения для судебного разбирательства, попробуйте сделать следующее.
 
 В этом примере все почтовые ящики пользователей в организации переводятся в режим хранения для судебного разбирательства на один год (365 дней).
-
+```powershell
     Get-Mailbox -ResultSize Unlimited -Filter {RecipientTypeDetails -eq "UserMailbox"} | Set-Mailbox -LitigationHoldEnabled $true -LitigationHoldDuration 365
-
+```
 В этом примере используется командлет [Get-Mailbox](https://technet.microsoft.com/ru-ru/library/bb123685\(v=exchg.150\)), чтобы получить все почтовые ящики в организации, указать фильтр получателей для включения всех почтовых ящиков пользователей, а затем передать список почтовых ящиков командлету [Set-Mailbox](https://technet.microsoft.com/ru-ru/library/bb123981\(v=exchg.150\)), который в свою очередь активирует хранение для судебного разбирательства и задает длительность хранения.
 
 Чтобы перевести все почтовые ящики пользователей в режим хранения в течение неопределенного времени, выполните предыдущую команду, не включая параметр *LitigationHoldDuration*.
@@ -99,7 +103,9 @@ _**Последнее изменение раздела:** 2016-10-18_
 
 В этом примере с почтового ящика bsuneja@contoso.com снимается функция хранения для судебного разбирательства.
 
-    Set-Mailbox bsuneja@contoso.com -LitigationHoldEnabled $false
+```powershell
+Set-Mailbox bsuneja@contoso.com -LitigationHoldEnabled $false
+```
 
 В начало
 
@@ -120,13 +126,13 @@ _**Последнее изменение раздела:** 2016-10-18_
     5.  Щелкните **Просмотр сведений**, чтобы проверить, кто и когда перевел почтовый ящик в режим хранения для судебного разбирательства. Вы также можете проверить или изменить значения дополнительных параметров в полях **Длительность хранения для судебного разбирательства (дней)**, **Примечание** и **URL-адрес**.
 
   - В командной консоли выполните одну из следующих команд:
-    
+    ```powershell
         Get-Mailbox <name of mailbox> | FL LitigationHold*
-    
+    ```
     или
-    
+    ```powershell
         Get-Mailbox -ResultSize Unlimited -Filter {RecipientTypeDetails -eq "UserMailbox"} | FL Name,LitigationHold*
-    
+    ```
     Если почтовый ящик переведен в режим хранения для судебного разбирательства на неопределенное время, для свойства почтового ящика *LitigationHoldDuration* задается значение `Unlimited`.
 
 ## Дополнительные сведения
@@ -145,21 +151,24 @@ _**Последнее изменение раздела:** 2016-10-18_
     
     Вот несколько примеров использования командлетов **Get-Mailbox** и **Get-Recipient** для возврата подмножества почтовых ящиков на основе общих свойств пользователей или почтовых ящиков. В этих примерах предполагается, что уже заполнены соответствующие свойства почтовых ящиков (такие как *CustomAttributeN* или *Department*).
     
-```
+    ```powershell
         Get-Mailbox -RecipientTypeDetails UserMailbox -ResultSize unlimited -Filter 'CustomAttribute15 -eq "OneYearLitigationHold"'
-```
-```    
-        Get-Recipient -RecipientTypeDetails UserMailbox -ResultSize unlimited -Filter 'Department -eq "HR"'
-```    
-```
+    ```
+    ```powershell
+    Get-Recipient -RecipientTypeDetails UserMailbox -ResultSize unlimited -Filter 'Department -eq "HR"'
+    ```
+   
+    ```powershell
      Get-Recipient -RecipientTypeDetails UserMailbox -ResultSize unlimited -Filter 'PostalCode -eq "98052"'
-```
-```    
-        Get-Recipient -RecipientTypeDetails UserMailbox -ResultSize unlimited -Filter 'StateOrProvince -eq "WA"'
-```
-```    
-        Get-Mailbox -ResultSize Unlimited -Filter {RecipientTypeDetails -ne "DiscoveryMailbox"}
-```    
+    ```
+    ```powershell   
+    Get-Recipient -RecipientTypeDetails UserMailbox -ResultSize unlimited -Filter 'StateOrProvince -eq "WA"'
+    ```
+   
+    ```powershell
+    Get-Mailbox -ResultSize Unlimited -Filter {RecipientTypeDetails -ne "DiscoveryMailbox"}
+    ```
+   
  Вы можете использовать в фильтре другие свойства почтовых ящиков пользователей, чтобы включить или исключить почтовые ящики. Дополнительные сведения см. в статье [Фильтруемые свойства для параметра -Filter](https://technet.microsoft.com/ru-ru/library/bb738155\(v=exchg.150\)).
 
 В начало

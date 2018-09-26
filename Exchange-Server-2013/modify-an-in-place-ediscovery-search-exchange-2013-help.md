@@ -72,7 +72,9 @@ _**Последнее изменение раздела:** 2014-08-27_
 
 В этом примере изменяется поиск обнаружения электронных данных на месте с именем Search-Project Contoso для поиска почтовых ящиков, которые принадлежат участникам группы рассылки DG-ProjectManagers.
 
-    Set-MailboxSearch -Identity "Search-Project Contoso" -SourceMailboxes "DG-ProjectManagers"
+```powershell
+Set-MailboxSearch -Identity "Search-Project Contoso" -SourceMailboxes "DG-ProjectManagers"
+```
 
 ## Как проверить, что все получилось?
 

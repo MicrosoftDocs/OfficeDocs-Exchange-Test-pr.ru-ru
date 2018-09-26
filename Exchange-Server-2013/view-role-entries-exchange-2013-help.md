@@ -56,48 +56,52 @@ _**Последнее изменение раздела:** 2012-10-03_
 ## Просмотр списка всех записей ролей в определенной роли
 
 Чтобы просмотреть список записей ролей для определенной роли, используйте следующий синтаксис.
-
+```powershell
     Get-ManagementRoleEntry <role name>\*
-
+```
 В этом примере отображаются все записи роли для роли `Recipient Administrators`.
-
+```powershell
     Get-ManagementRole "Recipient Administrators\*"
-
+```
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Get-ManagementRoleEntry](https://technet.microsoft.com/ru-ru/library/dd335210\(v=exchg.150\)).
 
 ## Просмотр списка ролей, в которых содержится определенная запись роли
 
 Чтобы просмотреть список всех ролей, в которых содержится определенная запись роли, используйте следующий синтаксис.
-
+```powershell
     Get-ManagementRoleEntry *\<cmdlet name>
-
+```
 В этом примере отображаются все роли, содержащие запись роли **Set-Mailbox**.
-
+```powershell
     Get-ManagementRoleEntry *\Set-Mailbox
-
+```
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Get-ManagementRoleEntry](https://technet.microsoft.com/ru-ru/library/dd335210\(v=exchg.150\)).
 
 ## Просмотр целевого списка ролей, содержащих похожие записи ролей
 
 Чтобы просмотреть список целевых ролей, содержащих командлеты с похожими именами, используйте следующий синтаксис.
-
+```powershell
     Get-ManagementRoleEntry *<partial role name>*\*<partial cmdlet name>*
-
+```
 В этом примере возвращается список записей ролей, содержащих строку `Mailbox`, которые входят в роли, содержащие в именах строку `Tier 1`.
-
+```powershell
     Get-ManagementRoleEntry "*Tier 1*\*Mailbox*"
-
+```
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Get-ManagementRoleEntry](https://technet.microsoft.com/ru-ru/library/dd335210\(v=exchg.150\)).
 
 ## Просмотр отдельной записи роли
 
 Чтобы просмотреть сведения об отдельной записи роли, используйте следующий синтаксис.
 
-    Get-ManagementRoleEntry <role name>\<cmdlet name> | Format-List
+```powershell
+Get-ManagementRoleEntry <role name>\<cmdlet name> | Format-List
+```
 
 В этом примере отображаются сведения о записи роли **Set-Mailbox** для роли `Recipient Administrators`.
 
-    Get-ManagementRoleEntry "Recipient Administrators\Set-Mailbox" | Format-List
+```powershell
+Get-ManagementRoleEntry "Recipient Administrators\Set-Mailbox" | Format-List
+```
 
 Если просматриваемая запись роли содержит слишком много параметров для отображения с помощью командлета **Format-List**, см. подраздел «Просмотр параметров отдельной записи роли» ниже в этом разделе.
 
@@ -108,12 +112,12 @@ _**Последнее изменение раздела:** 2012-10-03_
 Некоторые записи ролей содержат больше параметров, чем можно просмотреть при передаче результатов из командлета **Get-ManagementRoleEntry** в командлет **Format-List**. Если необходимо просмотреть все параметры записи роли, следует напрямую обратиться к свойству **Parameters** объекта записи роли.
 
 Чтобы просмотреть параметры, хранящиеся в свойстве **Parameters** объекта записи роли, используйте следующий синтаксис.
-
+```powershell
     (Get-ManagementRoleEntry <role name>\<cmdlet name>).Parameters
-
+```
 В этом примере отображаются параметры записи роли **Set-Mailbox** для роли Mail Recipients.
-
+```powershell
     (Get-ManagementRoleEntry "Mail Recipients\Set-Mailbox").Parameters
-
+```
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Get-ManagementRoleEntry](https://technet.microsoft.com/ru-ru/library/dd335210\(v=exchg.150\)).
 

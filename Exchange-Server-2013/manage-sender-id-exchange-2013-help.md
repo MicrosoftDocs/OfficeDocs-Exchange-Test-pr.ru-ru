@@ -41,11 +41,15 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 Чтобы отключить идентификацию отправителей, выполните следующую команду:
 
-    Set-SenderIDConfig -Enabled $false
+```powershell
+Set-SenderIDConfig -Enabled $false
+```
 
 Чтобы включить идентификацию отправителей, выполните следующую команду:
 
-    Set-SenderIDConfig -Enabled $true
+```powershell
+Set-SenderIDConfig -Enabled $true
+```
 
 > [!NOTE]  
 > При отключении идентификации отправителей, соответствующий агент идентификации все еще включен. Чтобы отключить агент идентификации отправителей, выполните следующий командлет: <code>Disable-TransportAgent &quot;Sender ID Agent&quot;</code>.
@@ -57,7 +61,9 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 1.  Выполните следующую команду:
     
-        Get-SenderIDConfig | Format-List Enabled
+    ```powershell
+	Get-SenderIDConfig | Format-List Enabled
+	```
 
 2.  Убедитесь, что отображается значение, которое вы настроили.
 
@@ -65,11 +71,15 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 Чтобы настроить идентификацию отправителей для поддельных сообщений, выполните следующую команду:
 
-    Set-SenderIDConfig -SpoofedDomainAction <StampStatus | Reject | Delete>
+```powershell
+Set-SenderIDConfig -SpoofedDomainAction <StampStatus | Reject | Delete>
+```
 
 Этот пример настраивает агент идентификации отправителей для отклонения всех сообщений, IP-адреса которых не содержатся в списке авторизованных SMTP-серверов отправки в DNS-записи инфраструктуры политики отправителей (SPF) для домена отправителя.
 
-    Set-SenderIDConfig -SpoofedDomainAction Reject
+```powershell
+Set-SenderIDConfig -SpoofedDomainAction Reject
+```
 
 ## Как проверить, что все получилось?
 
@@ -77,7 +87,9 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 1.  Выполните следующую команду:
     
-        Get-SenderIDConfig | Format-List SpoofedDomainAction
+    ```powershell
+	Get-SenderIDConfig | Format-List SpoofedDomainAction
+	```
 
 2.  Убедитесь, что отображается значение, которое вы настроили.
 
@@ -85,11 +97,15 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 Чтобы настроить идентификацию отправителей для временных ошибок, выполните следующую команду:
 
-    Set-SenderIDConfig -TempErrorAction <StampStatus | Reject | Delete>
+```powershell
+Set-SenderIDConfig -TempErrorAction <StampStatus | Reject | Delete>
+```
 
 В этом примере агент идентификации отправителя настраивается для пометки сообщений, состояние кода отправителя которых невозможно определить вследствие временной ошибки сервера DNS. Сообщение будет обработано другими агентами защиты от нежелательной почты, после чего агент фильтрации содержимого использует пометку для определения значения вероятности нежелательной почты для этого сообщения.
 
-    Set-SenderIDConfig -TempErrorAction StampStatus
+```powershell
+Set-SenderIDConfig -TempErrorAction StampStatus
+```
 
 Учтите, что значением по умолчанию для параметра *TempErrorAction* является `StampStatus`.
 
@@ -99,24 +115,26 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 1.  Выполните следующую команду:
     
-        Get-SenderIDConfig | Format-List TempErrorAction
+    ```powershell
+	Get-SenderIDConfig | Format-List TempErrorAction
+	```
 
 2.  Убедитесь, что отображается значение, которое вы настроили.
 
 ## Использование командной консоли для настройки исключений в доменах отправителя и получателя
 
 Чтобы заменить существующие значения, выполните следующую команду:
-
+```powershell
     Set-SenderIDConfig -BypassedRecipients <recipient1,recipient2...> -BypassedSenderDomains <domain1,domain2...>
-
+```
 Этот пример настраивает идентификацию отправителей на обход проверки кода отправителя для сообщений, отправленных на адресу kim@contoso.com и john@contoso.com, а также на обход проверки кода отправителя для сообщений, отправленных из домена fabrikam.com.
-
+```powershell
     Set-SenderIDConfig -BypassedRecipients kim@contoso.com,john@contoso.com -BypassedSenderDomains fabrikam.com
-
+````
 Чтобы добавить или удалить записи, не изменив существующие значения, выполните следующую команду:
-
+```powershell
     Set-SenderIDConfig -BypassedRecipients @{Add="<recipient1>","<recipient2>"...; Remove="<recipient1>","<recipient2>"...} -BypassedSenderDomains @{Add="<domain1>","<domain2>"...; Remove="<domain1>","<domain2>"...}
-
+``
 Этот пример настраивает агент идентификации отправителя с использованием следующей информации:
 
   - Добавить chris@contoso.com и michelle@contoso.com в список текущих получателей, обходящих проверку кода отправителя.
@@ -124,16 +142,18 @@ _**Последнее изменение раздела:** 2015-04-08_
   - Удалить tailspintoys.com из списка существующих доменов, обходящих проверку кода отправителя.
 
 <!-- end list -->
-
+```powershell
     Set-SenderIDConfig -BypassedRecipients @{Add="chris@contoso.com","michelle@contoso.com"} -BypassedSenderDomains @{Remove="tailspintoys.com"}
-
+```
 ## Как проверить, что все получилось?
 
 Чтобы проверить успешность настройки исключения доменов получателей и отправителей, выполните следующие действия.
 
 1.  Выполните следующую команду:
     
-        Get-SenderIDConfig | Format-List BypassedRecipients,BypassedSenderDomains
+    ```powershell
+	Get-SenderIDConfig | Format-List BypassedRecipients,BypassedSenderDomains
+	```
 
 2.  Убедитесь, что отображаются значения, которые вы настроили.
 

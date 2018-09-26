@@ -47,11 +47,15 @@ _**Последнее изменение раздела:** 2015-09-30_
 
 В этом примере включается ведение журнала аудита почтового ящика пользователя Ben Smith.
 
-    Set-Mailbox -Identity "Ben Smith" -AuditEnabled $true
+```powershell
+Set-Mailbox -Identity "Ben Smith" -AuditEnabled $true
+```
 
 В этом примере отключается ведение журнала аудита почтового ящика пользователя Ben Smith.
 
-    Set-Mailbox -Identity "Ben Smith" -AuditEnabled $false
+```powershell
+Set-Mailbox -Identity "Ben Smith" -AuditEnabled $false
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Set-Mailbox](https://technet.microsoft.com/ru-ru/library/bb123981\(v=exchg.150\)).
 
@@ -61,15 +65,21 @@ _**Последнее изменение раздела:** 2015-09-30_
 
 В этом примере указывается, что действия `SendAs` и `SendOnBehalf`, выполняемые делегированными пользователями для почтового ящика пользователя Ben Smith, будут записываться в журнал.
 
-    Set-Mailbox -Identity "Ben Smith" -AuditDelegate SendAs,SendOnBehalf -AuditEnabled $true
+```powershell
+Set-Mailbox -Identity "Ben Smith" -AuditDelegate SendAs,SendOnBehalf -AuditEnabled $true
+```
 
 В этом примере указывается, что действия `MessageBind` и `FolderBind`, выполняемые администраторами для почтового ящика пользователя Ben Smith, будут записываться в журнал.
 
-    Set-Mailbox -Identity "Ben Smith" -AuditAdmin MessageBind,FolderBind -AuditEnabled $true
+```powershell
+Set-Mailbox -Identity "Ben Smith" -AuditAdmin MessageBind,FolderBind -AuditEnabled $true
+```
 
 В этом примере указывается, что действия `HardDelete`, выполняемые владельцем почтового ящика пользователя Ben Smith, будут записываться в журнал.
 
-    Set-Mailbox -Identity "Ben Smith" -AuditOwner HardDelete -AuditEnabled $true
+```powershell
+Set-Mailbox -Identity "Ben Smith" -AuditOwner HardDelete -AuditEnabled $true
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Set-Mailbox](https://technet.microsoft.com/ru-ru/library/bb123981\(v=exchg.150\)).
 
@@ -78,6 +88,6 @@ _**Последнее изменение раздела:** 2015-09-30_
 Чтобы убедиться, что ведение журнала аудита почтовых ящиков включено и указаны правильные настройки ведения журнала для доступа администратора, делегата и владельца, используйте командлет [Get-Mailbox](https://technet.microsoft.com/ru-ru/library/bb123685\(v=exchg.150\)) для извлечения параметров ведения журнала аудита для этого почтового ящика.
 
 В этом примере извлекаются параметры почтового ящика Бена Смита (Ben Smith) и передаются параметры аудита, в том числе срок хранения записей журнала, в командлет **Format-List**.
-
+```powershell
     Get-Mailbox "Ben Smith" | Format-List *audit*
-
+```

@@ -47,11 +47,14 @@ _**Последнее изменение раздела:** 2014-05-07_
 
 1.  Обратите внимание на любые параметры запаздывания преобразования и усечения для всех копий перемещаемой базы данных почтовых ящиков. Эти сведения можно получить с помощью командлета [Get-MailboxDatabase](https://technet.microsoft.com/ru-ru/library/bb124924\(v=exchg.150\)), как показано в этом примере.
     
-        Get-MailboxDatabase DB1 | Format-List *lag*
-
+    ```powershell
+    Get-MailboxDatabase DB1 | Format-List *lag*
+    ```
 2.  Если для базы данных включено циклическое ведение журнала, его необходимо отключить перед продолжением работы. Циклическое ведение журнала можно отключить для базы данных почтовых ящиков с помощью командлета [Set-MailboxDatabase](https://technet.microsoft.com/ru-ru/library/bb123971\(v=exchg.150\)), как показано в этом примере.
     
-        Set-MailboxDatabase DB1 -CircularLoggingEnabled $false
+    ```powershell
+    Set-MailboxDatabase DB1 -CircularLoggingEnabled $false
+    ```
 
 3.  Удалите все копии базы данных почтовых ящиков для перемещаемой базы данных Дополнительные сведения см. в разделе [Удаление копии базы данных почтовых ящиков](remove-a-mailbox-database-copy-exchange-2013-help.md). После удаления всех копий сохраните базу данных и файлы журналов транзакций с каждого сервера, с которого удаляется копия базы данных, путем их перемещения в другое местоположение. Эти файлы сохраняются, поэтому для копий базы данных не требуется повторное заполнение после повторного добавления.
 
@@ -69,16 +72,22 @@ _**Последнее изменение раздела:** 2014-05-07_
 
 8.  На каждом сервере, на котором расположена копия перемещаемой базы данных почтовых ящиков, запустите следующие команды для остановки и повторного запуска служб индексирования содержимого.
     
-        Net stop MSExchangeFastSearch
-        Net start MSExchangeFastSearch
+    ```powershell
+    Net stop MSExchangeFastSearch
+    Net start MSExchangeFastSearch
+    ```
 
 9.  При необходимости включите циклическое ведение журналов с помощью командлета [Set-MailboxDatabase](https://technet.microsoft.com/ru-ru/library/bb123971\(v=exchg.150\)), как показано в этом примере.
     
-        Set-MailboxDatabase DB1 -CircularLoggingEnabled $true
+    ```powershell
+    Set-MailboxDatabase DB1 -CircularLoggingEnabled $true
+    ```
 
 10. Повторно настройте любые ранее заданные значения времени запаздывания преобразования и времени запаздывания усечения с помощью командлета [Set-MailboxDatabaseCopy](https://technet.microsoft.com/ru-ru/library/dd298104\(v=exchg.150\)), как показано в этом примере.
     
-        Set-MailboxDatabaseCopy DB1\MBX2 -ReplayLagTime 00:15:00
+    ```powershell
+    Set-MailboxDatabaseCopy DB1\MBX2 -ReplayLagTime 00:15:00
+    ```
 
 11. При добавлении каждой копии рекомендуется проверять ее работоспособность и состояние перед добавлением следующей копии. Работоспособность и состояние можно проверить следующими способами:
     
@@ -108,7 +117,9 @@ _**Последнее изменение раздела:** 2014-05-07_
 
   - В командной консоли выполните приведенную ниже команду, чтобы убедиться, что копия базы данных почтовых ящиков создана и работоспособна.
     
-        Get-MailboxDatabaseCopyStatus <DatabaseCopyName>
+    ```powershell
+    Get-MailboxDatabaseCopyStatus <DatabaseCopyName>
+    ```
     
     Состояние самой копии и индекса содержимого должно быть указано как работоспособное.
 

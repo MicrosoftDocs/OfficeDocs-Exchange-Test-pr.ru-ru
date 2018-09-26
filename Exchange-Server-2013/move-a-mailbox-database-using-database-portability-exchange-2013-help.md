@@ -40,7 +40,9 @@ _**Последнее изменение раздела:** 2014-06-16_
     
     Чтобы зафиксировать все незафиксированные файлы журналов в базе данных, в командной строке запустите следующую команду.
     
+    ```powershell
         ESEUTIL /R <Enn>
+    ```
     
     > [!NOTE]  
     > Параметр &lt;E<em>nn</em>&gt; указывает префикс файлов журналов для базы данных, в которой необходимо воспроизвести файлы журнала. Префикс файлов журналов, указанный с помощью параметра &lt;E<em>nn</em>&gt;, является обязательным параметром команды Eseutil /r.
@@ -48,25 +50,35 @@ _**Последнее изменение раздела:** 2014-06-16_
 
 2.  Создайте базу данных на сервере, используя следующий синтаксис:
     
+    ```powershell
         New-MailboxDatabase -Name <DatabaseName> -Server <ServerName> -EdbFilePath <DatabaseFileNameandPath> -LogFolderPath <LogFilesPath>
-
+    ```
+    
 3.  Укажите атрибут *This database can be over written by restore* с помощью следующей синтаксической конструкции.
     
+    ```powershell
         Set-MailboxDatabase <DatabaseName> -AllowFileRestore $true
+    ```
 
 4.  Переместите файлы базы данных (EDB-файл, файлы журналов и каталог поиска Exchange ) в папку базы данных, указанную при создании новой базы данных.
 
 5.  Подключите базу данных с помощью следующей синтаксической конструкции:
     
+    ```powershell
         Mount-Database <DatabaseName>
+    ```
 
 6.  После подключения базы данных измените параметры учетной записи пользователя с помощью командлета [Set-Mailbox](https://technet.microsoft.com/ru-ru/library/bb123981\(v=exchg.150\)), чтобы учетная запись указывала на почтовый ящик на новом сервере почтовых ящиков. Чтобы переместить всех пользователей из старой базы данных в новую, введите команду в следующем формате.
     
+    ```powershell
         Get-Mailbox -Database <SourceDatabase> |where {$_.ObjectClass -NotMatch '(SystemAttendantMailbox|ExOleDbSystemMailbox)'}| Set-Mailbox -Database <TargetDatabase>
+    ```
 
 7.  Инициировать доставку любых сообщений, оставшихся в очередях, можно с помощью следующей команды.
     
+    ```powershell
         Get-Queue <QueueName> | Retry-Queue -Resubmit $true
+    ```
 
 После выполнения репликации Active Directory все пользователи получают доступ к своим почтовым ящикам на новом сервере Exchange. Большинство клиентов перенаправляются через службу автообнаружения. Пользователи Microsoft Office Outlook Web App также перенаправляются автоматически.
 

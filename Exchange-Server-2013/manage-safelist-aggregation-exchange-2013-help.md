@@ -44,21 +44,23 @@ _**Последнее изменение раздела:** 2015-04-08_
 Можно настроить максимальное число надежных отправителей и список заблокированных отправителей, задаваемых пользователем. По умолчанию пользователи могут настроить до 5000 надежных отправителей и 500 заблокированных отправителей.
 
 Чтобы настроить максимальное количество надежных отправителей и заблокированных отправителей, выполните следующую команду:
-
+```powershell
     Set-Mailbox <MailboxIdentity> -MaxSafeSenders <Integer> -MaxBlockedSenders <Integer>
-
+```
 В этом примере показано, как настроить для почтового ящика yuri@contoso.com максимальное количество отправителей, равное 2000 надежным отправителям и 200 заблокированным отправителям.
 
-    Set-Mailbox john@contoso.com -MaxSafeSenders 2000 -MaxBlockedSenders 200
+```powershell
+Set-Mailbox john@contoso.com -MaxSafeSenders 2000 -MaxBlockedSenders 200
+```
 
 ## Как проверить, что все получилось?
 
 Чтобы убедиться, что ограничения успешно настроены, выполните следующие действия:
 
 1.  Выполните следующую команду:
-    
+    ```powershell
         Get-Mailbox <Identity> | Format-List Name,Max*Senders
-
+	```
 2.  Убедитесь, что отображаемые значения совпадают с настроенными значениями.
 
 ## Использование командной консоли Exchange для выполнения команды Update-Safelist
@@ -67,7 +69,9 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 В этом примере записывается список надежных отправителей для почтового ящика john@contoso.com в Active Directory.
 
-    Update-Safelist john@contoso.com -Type SafeSenders
+```powershell
+Update-Safelist john@contoso.com -Type SafeSenders
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Update-SafeList](https://technet.microsoft.com/ru-ru/library/bb125034\(v=exchg.150\)).
 
@@ -79,11 +83,15 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 1.  Выполните следующую команду:
     
-        Get-ContentFilterConfig | Format-List Enabled
+    ```powershell
+	Get-ContentFilterConfig | Format-List Enabled
+	```
 
 2.  Если в выходных данных параметр *Enabled* имеет значение `True`, фильтрация содержимого включена. Если это не так, выполните следующую команду для включения фильтрации содержимого и агента фильтра содержимого на сервере Exchange Server:
     
-        Set-ContentFilterConfig -Enabled $true
+    ```powershell
+	Set-ContentFilterConfig -Enabled $true
+	```
 
 ## Действие 2. (Необязательно) Используйте редактор ADSI, чтобы проверить репликацию данных объединения списка надежных отправителей на пограничные транспортные серверы
 

@@ -93,24 +93,26 @@ _**Последнее изменение раздела:** 2015-03-09_
 
 2.  В окне командной строки откройте файл EdgeTransport.exe.config в Блокноте, выполнив следующую команду:
     
-        Notepad %ExchangeInstallPath%Bin\EdgeTransport.exe.config
+    ```powershell
+    Notepad %ExchangeInstallPath%Bin\EdgeTransport.exe.config
+    ```
 
 3.  В разделе `<appSettings>` измените следующие ключи:
-    
+    ```powershell
         <add key="QueueDatabasePath" value="<LocalPath>" />
         <add key="QueueDatabaseLoggingPath" value="<LocalPath>" />
-    
+    ```
     Например, чтобы создать новую базу данных очереди в папке D:\\Queue\\QueueDB и новые журналы транзакций в папке D:\\Queue\\QueueLogs, используйте следующие значения:
-    
+    ```powershell
         <add key="QueueDatabasePath" value="D:\Queue\QueueDB" />
         <add key="QueueDatabaseLoggingPath" value="D:\Queue\QueueLogs" />
-
+    ```
 4.  Закончив, сохраните и закройте файл EdgeTransport.exe.config.
 
 5.  Перезапустите службу транспорта Microsoft Exchange, выполнив следующую команду:
-    
+    ```powershell
         net stop MSExchangeTransport && net start MSExchangeTransport
-
+    ```
 ## Как проверить, что все получилось?
 
 Чтобы проверить, успешно ли созданы журналы транзакций и база данных очереди в новом расположении:
@@ -137,23 +139,27 @@ _**Последнее изменение раздела:** 2015-03-09_
 
 2.  В окне командной строки откройте файл EdgeTransport.exe.config в Блокноте, выполнив следующую команду:
     
-        Notepad %ExchangeInstallPath%Bin\EdgeTransport.exe.config
+    ```powershell
+    Notepad %ExchangeInstallPath%Bin\EdgeTransport.exe.config
+    ```
 
 3.  В разделе `<appSettings>` измените следующие ключи:
-    
+    ```powershell
         <add key="QueueDatabasePath" value="<LocalPath>" />
         <add key="QueueDatabaseLoggingPath" value="<LocalPath>" />
-    
+    ```
     Например, чтобы изменить расположение базы данных очереди на папку D:\\Queue\\QueueDB, а расположение журналов транзакций — на папку D:\\Queue\\QueueLogs, используйте следующие значения:
-    
+    ```powershell
         <add key="QueueDatabasePath" value="D:\Queue\QueueDB" />
         <add key="QueueDatabaseLoggingPath" value="D:\Queue\QueueLogs" />
-
+    ```
 4.  Закончив, сохраните и закройте файл EdgeTransport.exe.config.
 
 5.  Остановите службу транспорта Microsoft Exchange, выполнив следующую команду:
     
-        net stop MSExchangeTransport
+    ```powershell
+    net stop MSExchangeTransport
+    ```
 
 6.  Переместите существующие файлы базы данных Mail.que и Trn.chk из исходного расположения в новое.
 
@@ -161,7 +167,9 @@ _**Последнее изменение раздела:** 2015-03-09_
 
 8.  Запустите службу транспорта Microsoft Exchange, выполнив следующую команду:
     
-        net start MSExchangeTransport
+    ```powershell
+    net start MSExchangeTransport
+    ```
 
 ## Как проверить, что все получилось?
 

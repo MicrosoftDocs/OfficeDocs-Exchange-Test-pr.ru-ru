@@ -39,7 +39,9 @@ _**Последнее изменение раздела:** 2012-10-14_
 
 В данном примере для перемещения списка адресов в контейнер «Building 4», расположенный в контейнере «All Users\\Sales», используется идентификатор GUID списка адресов.
 
-    Move-AddressList -Identity c3fffd8e-026b-41b9-88c4-8c21697ac8ac -Target "\All Users\Sales\Building4"
+```powershell
+Move-AddressList -Identity c3fffd8e-026b-41b9-88c4-8c21697ac8ac -Target "\All Users\Sales\Building4"
+```
 
 Введите **Y**, чтобы подтвердить перемещение этого списка адресов, и нажмите клавишу ВВОД.
 

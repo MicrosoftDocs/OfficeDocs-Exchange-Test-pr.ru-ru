@@ -41,7 +41,9 @@ _**Последнее изменение раздела:** 2015-04-07_
 
   - В Exchange 2013 запустите следующую команду, чтобы получить идентификатор и версию серверов Exchange и баз данных почтовых ящиков, которые содержат системные почтовые ящики в вашей организации.
     
-        Get-Mailbox -Arbitration | FL Name,DisplayName,ServerName,Database,AdminDisplayVersion
+    ```powershell
+	Get-Mailbox -Arbitration | FL Name,DisplayName,ServerName,Database,AdminDisplayVersion
+	```
     
     Свойство **AdminDisplayVersion** указывает версию Exchange, которая запущена на сервере. Значение `Version 14.x` указывает Exchange 2010; значение `Version 15.x` указывает Exchange 2013.
 
@@ -81,18 +83,20 @@ _**Последнее изменение раздела:** 2015-04-07_
 
 Сначала выполните следующую команду в Exchange 2013, чтобы получить имена и версии всех баз данных почтовых ящиков в своей организации.
 
-    Get-MailboxDatabase -IncludePreExchange2013 | FL Name,Server,AdminDisplayVersion
+```powershell
+Get-MailboxDatabase -IncludePreExchange2013 | FL Name,Server,AdminDisplayVersion
+```
 
 После того как вы определите имена баз данных почтовых ящиков в своей организации, в Exchange 2013 запустите следующую команду, чтобы переместить системный почтовый ящик Microsoft Exchange в базу данных почтовых ящиков, расположенную на сервере Exchange 2013.
-
+```powershell
     Get-Mailbox -Arbitration -Identity "SystemMailbox{e0dc1c29-89c3-4034-b678-e6c29d823ed9}" | New-MoveRequest -TargetDatabase <name of Exchange 2013 database>
-
+```
 ## Как проверить, что все получилось?
 
 Чтобы проверить успешность перемещения системного почтового ящика Microsoft Exchange в базу данных почтовых ящиков, размещенную на сервере Exchange 2013, выполните в командной консоли следующую команду.
-
+```powershell
     Get-Mailbox -Arbitration -Identity "SystemMailbox{e0dc1c29-89c3-4034-b678-e6c29d823ed9}" | FL Database,ServerName,AdminDisplayVersion
-
+```
 Если свойство **AdminDisplayVersion** имеет значение **Version 15.x (Build xxx.x)**, это означает, что системный почтовый ящик располагается в базе данных почтовых ящиков, размещенной на сервере Exchange 2013.
 
 После перемещения системного почтового ящика Microsoft Exchange в Exchange 2013 можно также будет успешно выполнять следующие административные задачи.

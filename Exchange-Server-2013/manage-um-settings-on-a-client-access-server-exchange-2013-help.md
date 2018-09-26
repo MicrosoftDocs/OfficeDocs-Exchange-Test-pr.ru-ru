@@ -45,23 +45,31 @@ _**Последнее изменение раздела:** 2013-04-09_
 
 В этом примере показано, как удалить сервер клиентского доступа с именем `MyClientAccessServer` из всех абонентских групп на основе протокола SIP.
 
-    Set-UMCallRouterSettings -DialPlans $null - Server MyClientAccessServer
+```powershell
+Set-UMCallRouterSettings -DialPlans $null - Server MyClientAccessServer
+```
 
 В этом примере показано, как добавить сервер клиентского доступа с именем `MyClientAccessServer` в абонентскую группу на основе протокола SIP с именем `MySIPDialPlan`, а также установить максимальное число входящих голосовых вызовов.
 
-    Set-UMCallRouterSettings -DialPlans MySIPDialPlan -MaxCalls 150 -Server MyClientAccessServer
+```powershell
+Set-UMCallRouterSettings -DialPlans MySIPDialPlan -MaxCalls 150 -Server MyClientAccessServer
+```
 
 В этом примере показано, как установить значение 5077 для прослушивающего порта SIP TCP, а также задать двойной режим запуска на сервере клиентского доступа с именем `MyClientAccessServer`.
-
+```powershell
     Set-UMCallRouterSettings  -Server MyClientAccessServer-SipTCPListeningPort 5077 -UMStartUpMode -Dual 
-
+```
 ## Использовать командную консоль для просмотра свойств сервера клиентского доступа
 
 В этом примере отображается список всех серверов клиентского доступа.
 
-    Get-UMCallRouterSettings
+```powershell
+Get-UMCallRouterSettings
+```
 
 В этом примере отображается форматированный список свойств для сервера клиентского доступа.
 
-    Get-UMCallRouterSettings | Format-List
+```powershell
+Get-UMCallRouterSettings | Format-List
+```
 

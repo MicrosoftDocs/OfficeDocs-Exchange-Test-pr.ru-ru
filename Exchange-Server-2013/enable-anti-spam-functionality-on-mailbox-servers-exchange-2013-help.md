@@ -53,7 +53,9 @@ _**Последнее изменение раздела:** 2014-01-23_
 
 Выполните следующую команду:
 
-    & $env:ExchangeInstallPath\Scripts\Install-AntiSpamAgents.ps1
+```powershell
+& $env:ExchangeInstallPath\Scripts\Install-AntiSpamAgents.ps1
+```
 
 ## Как проверить, что шаг выполнен?
 
@@ -63,7 +65,9 @@ _**Последнее изменение раздела:** 2014-01-23_
 
 Выполните следующую команду:
 
-    Restart-Service MSExchangeTransport
+```powershell
+Restart-Service MSExchangeTransport
+```
 
 ## Как проверить, что шаг выполнен?
 
@@ -75,11 +79,15 @@ _**Последнее изменение раздела:** 2014-01-23_
 
 Для добавления IP-адресов внутренних SMTP-серверов без нарушения существующие значения, выполните следующую команду:
 
-    Set-TransportConfig -InternalSMTPServers @{Add="<ip address1>","<ip address2>"...}
+```powershell
+Set-TransportConfig -InternalSMTPServers @{Add="<ip address1>","<ip address2>"...}
+```
 
 В этом примере показано, как добавить адреса внутренних SMTP-серверов 10.0.1.10 и 10.0.1.11 в конфигурацию транспорта организации.
 
-    Set-TransportConfig -InternalSMTPServers @{Add="10.0.1.10","10.0.1.11"}
+```powershell
+Set-TransportConfig -InternalSMTPServers @{Add="10.0.1.10","10.0.1.11"}
+```
 
 ## Как проверить, что шаг выполнен?
 
@@ -87,7 +95,9 @@ _**Последнее изменение раздела:** 2014-01-23_
 
 1.  Выполните следующую команду:
     
-        Get-TransportConfig | Format-List InternalSMTPServers
+    ```powershell
+    Get-TransportConfig | Format-List InternalSMTPServers
+    ```
 
 2.  Проверить IP-адрес хотя бы одного допустимого внутренние SMTP-сервера.
 

@@ -69,7 +69,9 @@ _**Последнее изменение раздела:** 2015-03-09_
 
 В этом примере устанавливается формат извлечения сообщений "Только текст" для всех пользователей POP3 на сервере CAS01.
 
-    Set-PopSettings -Identity CAS01 -MessageRetrievalMimeFormat TextOnly
+```powershell
+Set-PopSettings -Identity CAS01 -MessageRetrievalMimeFormat TextOnly
+```
 
 Можно выбрать следующие параметры. В качестве значения параметра *MessageRetrievalMimeFormat* можно указать число или текстовую строку.
 
@@ -126,7 +128,9 @@ _**Последнее изменение раздела:** 2015-03-09_
 
 1.  Выполните в командной консоли следующую команду.
     
-        Get-PopSettings | format-list
+    ```powershell
+	Get-PopSettings | format-list
+	```
 
 2.  Проверьте правильность параметра *MessageRetrievalMimeFormat*.
 
@@ -164,7 +168,9 @@ _**Последнее изменение раздела:** 2015-03-09_
 
 В этом примере устанавливается формат извлечения сообщений "Только текст" для всех пользователей IMAP4 на сервере CAS01.
 
-    Set-ImapSettings -Identity CAS01 -MessageRetrievalMimeFormat TextOnly
+```powershell
+Set-ImapSettings -Identity CAS01 -MessageRetrievalMimeFormat TextOnly
+```
 
 Можно выбрать следующие параметры. В качестве значения параметра *MessageRetrievalMimeFormat* можно указать число или текстовую строку.
 
@@ -221,7 +227,9 @@ _**Последнее изменение раздела:** 2015-03-09_
 
 1.  Выполните в командной консоли следующую команду.
     
-        Get-ImapSettings | format-list
+    ```powershell
+	Get-ImapSettings | format-list
+	```
 
 2.  Проверьте правильность параметра *MessageRetrievalMimeFormat*.
 
@@ -231,7 +239,9 @@ _**Последнее изменение раздела:** 2015-03-09_
 
 В этом примере устанавливается формат извлечения сообщений "Только текст" для доступа по протоколу POP3 для пользователя `USER01`.
 
-    Set-CASMailbox -Identity USER01 -PopMessagesRetrievalMimeFormat TextOnly
+```powershell
+Set-CASMailbox -Identity USER01 -PopMessagesRetrievalMimeFormat TextOnly
+```
 
 Можно выбрать следующие параметры. В качестве значения параметра *PopMessagesRetrievalMimeFormat* можно указать число или текстовую строку.
 
@@ -288,7 +298,9 @@ _**Последнее изменение раздела:** 2015-03-09_
 
 1.  Выполните в командной консоли следующую команду.
     
-        Get-CAS Mailbox <identity> | format-list
+    ```powershell
+	Get-CAS Mailbox <identity> | format-list
+	```
 
 2.  Проверьте правильность значения параметра *PopMessagesRetrievalMimeFormat*.
 
@@ -298,7 +310,9 @@ _**Последнее изменение раздела:** 2015-03-09_
 
 В этом примере устанавливается формат извлечения сообщений "Только текст" для доступа по протоколу IMAP4 для пользователя `USER01`.
 
-    Set-CASMailbox -Identity USER01 -ImapMessagesRetrievalMimeFormat TextOnly
+```powershell
+Set-CASMailbox -Identity USER01 -ImapMessagesRetrievalMimeFormat TextOnly
+```
 
 В качестве значения параметра *ImapMessagesRetrievalMimeFormat* можно указать число или текстовую строку.
 
@@ -355,7 +369,9 @@ _**Последнее изменение раздела:** 2015-03-09_
 
 1.  Выполните в командной консоли следующую команду.
     
-        Get-CAS Mailbox <identity> | format-list
+    ```powershell
+	Get-CAS Mailbox <identity> | format-list
+	```
 
 2.  Проверьте правильность значения параметра *ImapMessagesRetrievalMimeFormat*.
 

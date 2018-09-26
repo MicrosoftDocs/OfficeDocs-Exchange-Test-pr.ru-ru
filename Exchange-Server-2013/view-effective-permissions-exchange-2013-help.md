@@ -49,11 +49,15 @@ _**Последнее изменение раздела:** 2012-10-09_
 
 Чтобы отобразить список всех пользователей, которым ролью управления предоставлены разрешения, используйте следующий синтаксис.
 
-    Get-ManagementRoleAssignment -Role <role name> -GetEffectiveUsers
+```powershell
+Get-ManagementRoleAssignment -Role <role name> -GetEffectiveUsers
+```
 
 В этом примере отображается список пользователей, которые имеют разрешения, предоставленные ролью «Mail Recipients».
 
-    Get-ManagementRoleAssignment -Role "Mail Recipients" -GetEffectiveUsers
+```powershell
+Get-ManagementRoleAssignment -Role "Mail Recipients" -GetEffectiveUsers
+```
 
 Если нужно изменить свойства, которые возвращаются в списке, или экспортировать список в файл данных с разделителями-запятыми (CSV), см. подраздел Use the Shell to customize output and display it далее в этом разделе.
 
@@ -62,13 +66,13 @@ _**Последнее изменение раздела:** 2012-10-09_
 ## Использование командой консоли для поиска определенного пользователя в определенной роли
 
 Чтобы найти определенного пользователя, которому были предоставлены разрешения определенной роли управления, необходимо использовать командлет **Get-ManagementRoleAssignment**, который позволяет получить список всех эффективных пользователей, а затем передать выходные данные этого командлета в командлет **Where**. Командлет **Where** отфильтровывает выходные данные и возвращает только указанного пользователя. Используйте следующий синтаксис.
-
+```powershell
     Get-ManagementRoleAssignment -Role <role name> -GetEffectiveUsers | Where { $_.EffectiveUserName -Eq "<name of user>" }
-
+```
 В этом примере выполняется поиск пользователя David Strome в роли Journaling.
-
+```powershell
     Get-ManagementRoleAssignment -Role Journaling -GetEffectiveUsers | Where { $_.EffectiveUserName -Eq "David Strome" }
-
+```
 Сведения об изменении возвращаемых свойств в списке или экспорте списка в файл в формате CSV см. в подразделе Use the Shell to customize output and display it далее в этом разделе.
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Get-ManagementRoleAssignment](https://technet.microsoft.com/ru-ru/library/dd351024\(v=exchg.150\)).
@@ -76,12 +80,14 @@ _**Последнее изменение раздела:** 2012-10-09_
 ## Использование командой консоли для нахождения определенного пользователя во всех ролях
 
 Чтобы узнать о всех ролях, разрешения которых были предоставлены пользователю, следует использовать командлет **Get-ManagementRoleAssignment**, позволяющий получить всех действующих пользователей во всех ролях, а затем передать выходные данные в командлет **Where**. Командлет **Where** фильтрует выходные данные и возвращает только те назначения ролей, в соответствии с которыми этому пользователю были предоставлены разрешения.
-
+```powershell
     Get-ManagementRoleAssignment -GetEffectiveUsers | Where { $_.EffectiveUserName -Eq "<name of user>" }
-
+```
 В этом примере выполняется поиск всех назначений ролей, в соответствии с которыми были предоставлены разрешения пользователю Kim Akers.
 
-    Get-ManagementRoleAssignment -GetEffectiveUsers | Where { $_.EffectiveUserName -Eq "Kim Akers" }
+```powershell
+Get-ManagementRoleAssignment -GetEffectiveUsers | Where {     Get-ManagementRoleAssignment -GetEffectiveUsers | Where { $_.EffectiveUserName -Eq "Kim Akers" }.EffectiveUserName -Eq "Kim Akers" }
+```
 
 Сведения об изменении списка возвращаемых свойств или экспорте списка в файл в формате CSV см. в подразделе Use the Shell to customize output and display it далее в этом разделе.
 
@@ -132,13 +138,13 @@ _**Последнее изменение раздела:** 2012-10-09_
 2.  Выберите свойства, которые необходимо включить в список.
 
 3.  Используйте следующий синтаксис для просмотра списка.
-    
+    ```command line
         <command to retrieve list > | Format-Table <property 1>, <property 2>, <property ...>
-
+    ```
 \+В этом примере показано, как найти Сергея Озерова для всех ролей и отобразить свойства `EffectiveUserName`, `Role`, `CustomRecipientWriteScope` и `CustomConfigWriteScope`.
-
+```powershell
     Get-ManagementRoleAssignment -GetEffectiveUsers | Where { $_.EffectiveUserName -Eq "David Strome" } | Format-Table EffectiveUserName, Role, CustomRecipientWriteScope, CustomConfigWriteScope
-
+```
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Get-ManagementRoleAssignment](https://technet.microsoft.com/ru-ru/library/dd351024\(v=exchg.150\)).
 
 ## Вывод пользовательского списка в CSV-файл
@@ -156,13 +162,13 @@ _**Последнее изменение раздела:** 2012-10-09_
 2.  Выберите свойства, которые необходимо включить в список.
 
 3.  Используйте следующий синтаксис для экспорта списка в CSV-файл.
-    
+    ```command line
         <command to retrieve list > | Select-Object <property 1>, <property 2>, <property ...> | Export-CSV <filename>
-
+    ```
 \+В этом примере показано, как найти Сергея Озерова для всех ролей и отобразить свойства `EffectiveUserName`, `Role`, `CustomRecipientWriteScope` и `CustomConfigWriteScope`.
-
+```powershell
     Get-ManagementRoleAssignment -GetEffectiveUsers | Where { $_.EffectiveUserName -Eq "David Strome" } | Select-Object EffectiveUserName, Role, CustomRecipientWriteScope, CustomConfigWriteScope | Export-CSV c:\output.csv
-
+```
 Теперь можно просмотреть CSV-файл в соответствующем приложении.
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Get-ManagementRoleAssignment](https://technet.microsoft.com/ru-ru/library/dd351024\(v=exchg.150\)).

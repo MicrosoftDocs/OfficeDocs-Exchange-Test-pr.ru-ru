@@ -49,25 +49,29 @@ _**Последнее изменение раздела:** 2016-12-09_
     
     Импортируйте модуль Active Directory с помощью командлета **Import-Module**.
     
-        Import-Module ActiveDirectory
+    ```powershell
+	Import-Module ActiveDirectory
+	```
 
 2.  Выполните командлет **New-ADComputer**, чтобы создать учетную запись компьютера Active Directory, используя следующий синтаксис:
-    
+    ```powershell
         New-ADComputer [-Name] <string> [-AccountPassword <SecureString>] [-AllowReversiblePasswordEncryption <System.Nullable[boolean]>] [-Description <string>] [-Enabled <System.Nullable[bool]>]
-    
+    ```
     **Пример:** 
-    
+    ```powershell
         New-ADComputer -Name EXCH2013ASA -AccountPassword (Read-Host 'Enter password' -AsSecureString) -Description 'Alternate Service Account credentials for Exchange' -Enabled:$True -SamAccountName EXCH2013ASA
-    
+    ```
     Где *EXCH2013ASA* — имя учетной записи, строка *Учетные данные общей альтернативной учетной записи для Exchange* — любое описание по вашему выбору, а значение параметра *SamAccountName* (в этом случае — *EXCH2013ASA*) должно быть уникальным в вашем каталоге.
 
 3.  С помощью командлета **Set-ADComputer** можно включить поддержку шифра AES 256, используемого в Kerberos, используя следующий синтаксис:
-    
+    ```powershell
         Set-ADComputer [-Name] <string> [-add @{<attributename>="<value>"]
-    
+    ```
     **Пример:** 
     
-        Set-ADComputer EXCH2013ASA -add @{"msDS-SupportedEncryptionTypes"="28"}
+    ```powershell
+	Set-ADComputer EXCH2013ASA -add @{"msDS-SupportedEncryptionTypes"="28"}
+	```
     
     Где *EXCH2013ASA* — имя учетной записи, а изменяемый атрибут — *msDS-SupportedEncryptionTypes* с десятичным значением 28, что позволяет использовать следующие шифры: RC4-HMAC, AES128-CTS-HMAC-SHA1-96, AES256-CTS-HMAC-SHA1-96.
 
@@ -140,13 +144,13 @@ _**Последнее изменение раздела:** 2016-12-09_
 2.  Измените каталоги на *\<каталог установки Exchange 2013\>*\\V15\\Scripts.
 
 3.  Выполните следующую команду, чтобы развернуть учетные данные ASA на первом сервере клиентского доступа Exchange 2013:
-    
+    ```powershell
         .\RollAlternateServiceAccountPassword.ps1 -ToSpecificServer cas-1.corp.tailspintoys.com -GenerateNewPasswordFor tailspin\EXCH2013ASA$
-
+	```
 4.  На вопрос, изменять ли пароль для учетной записи альтернативной службы, выберите **Да**.
 
 Ниже представлен пример выходных данных после запуска сценария RollAlternateServiceAccountPassword.ps1.
-
+```powershell
     ========== Starting at 01/12/2015 10:17:47 ==========
     Creating a new session for implicit remoting of "Get-ExchangeServer" command...
     Destination servers that will be updated:
@@ -196,7 +200,7 @@ _**Последнее изменение раздела:** 2016-12-09_
     ========== Finished at 01/12/2015 10:20:00 ==========
     
             THE SCRIPT HAS SUCCEEDED
-
+```
 ## Развертывание учетных данных ASA на другом сервере клиентского доступа Exchange 2013
 
 1.  Откройте консоль управления Exchange на сервере Exchange 2013.
@@ -204,13 +208,13 @@ _**Последнее изменение раздела:** 2016-12-09_
 2.  Измените каталоги на *\<каталог установки Exchange 2013\>*\\V15\\Scripts.
 
 3.  Выполните следующую команду, чтобы развернуть учетные данные ASA на другом сервере клиентского доступа Exchange 2013:
-    
+    ```powershell
         .\RollAlternateServiceAccountPassword.ps1 -ToSpecificServer cas-2.corp.tailspintoys.com -CopyFrom cas-1.corp.tailspintoys.com
-
+	```
 4.  Повторите шаг 3 для каждого сервера клиентского доступа, на котором нужно развернуть учетные данные ASA.
 
 Ниже представлен пример выходных данных после запуска сценария RollAlternateServiceAccountPassword.ps1.
-
+```powershell
     ========== Starting at 01/12/2015 10:34:35 ==========
     Destination servers that will be updated:
     
@@ -251,31 +255,31 @@ _**Последнее изменение раздела:** 2016-12-09_
     ========== Finished at 01/12/2015 10:38:13 ==========
     
             THE SCRIPT HAS SUCCEEDED
-
+```
 ## Проверка развертывания учетных данных ASA
 
   - Откройте консоль управления Exchange на сервере Exchange 2013.
 
   - Выполните следующую команду, чтобы проверить параметры на сервере клиентского доступа:
-    
+    ```powershell
         Get-ClientAccessServer CAS-3 -IncludeAlternateServiceAccountCredentialStatus | Format-List Name, AlternateServiceAccountConfiguration
-
+	```
   - Повторите шаг 2 на каждом сервере клиентского доступа, где нужно проверить развертывание учетных данных ASA.
 
 Ниже приводится пример выходных данных после запуска команды Get-ClientAccessServer, если учетные данные ASA еще не были заданы.
-
+```powershell
     Name                                 : CAS-1
     AlternateServiceAccountConfiguration : Latest: 1/12/2015 10:19:22 AM, tailspin\EXCH2013ASA$
                                            Previous: <Not set>
                                                ...
-
+```
 Ниже приводится пример выходных данных после запуска команды Get-ClientAccessServer, если учетные данные ASA уже были заданы. Возвращаются учетные данные ASA, а также дата и время их установки.
-
+```powershell
     Name                                 : CAS-3
     AlternateServiceAccountConfiguration : Latest: 1/12/2015 10:19:22 AM, tailspin\EXCH2013ASA$
                                            Previous: 7/15/2014 12:58:35 PM, tailspin\oldSharedServiceAccountName$
                                                ...
-
+```
 ## Связывание имен участников-служб (SPN) с учетными данными ASA
 
 > [!IMPORTANT]  
@@ -290,11 +294,15 @@ _**Последнее изменение раздела:** 2016-12-09_
 
 2.  Введите следующую команду:
     
-        setspn -F -Q <SPN>
+    ```powershell
+	setspn -F -Q <SPN>
+	```
     
     Где \<SPN\> — это имя участника-службы, которое требуется связать с учетными данными ASA. Например:
     
-        setspn -F -Q http/mail.corp.tailspintoys.com
+    ```powershell
+	setspn -F -Q http/mail.corp.tailspintoys.com
+	```
     
     Команда должна не возвратить никаких данных. Если она возвратит данные, значит, это имя участника службы уже сопоставлено с другой учетной записью. Повторите это действие один раз для каждого имени участника-службы, которое требуется связать с учетными данными ASA.
 
@@ -304,11 +312,15 @@ _**Последнее изменение раздела:** 2016-12-09_
 
 2.  Введите следующую команду:
     
-        setspn -S <SPN> <Account>$
+    ```powershell
+	setspn -S <SPN> <Account>$
+	```
     
     Где \<SPN\> — это имя участника-службы, которое требуется связать с учетными данными ASA, а \<Account\> — это учетная запись, связанная с учетными данными ASA. Например:
     
-        setspn -S http/mail.corp.tailspintoys.com tailspin\EXCH2013ASA$
+    ```powershell
+	setspn -S http/mail.corp.tailspintoys.com tailspin\EXCH2013ASA$
+	```
     
     Выполните эту команду один раз для каждого имени участника-службы, которое требуется связать с учетными данными ASA.
 
@@ -318,11 +330,15 @@ _**Последнее изменение раздела:** 2016-12-09_
 
 2.  Введите следующую команду:
     
-        setspn -L <Account>$
+    ```powershell
+	setspn -L <Account>$
+	```
     
     Где \<Account\> — это учетная запись, связанная с учетными данными ASA. Например:
     
-        setspn -L tailspin\EXCH2013ASA$
+    ```powershell
+	setspn -L tailspin\EXCH2013ASA$
+	```
     
     Эту команду необходимо выполнить только один раз.
 
@@ -331,13 +347,13 @@ _**Последнее изменение раздела:** 2016-12-09_
 1.  Откройте консоль управления Exchange на сервере Exchange 2013.
 
 2.  Чтобы включить проверку подлинности Kerberos для мобильных клиентов Outlook, выполните следующую команду на своем сервере клиентского доступа:
-    
+    ```powershell
         Get-OutlookAnywhere -server CAS-1 | Set-OutlookAnywhere -InternalClientAuthenticationMethod  Negotiate
-
+	```
 3.  Чтобы включить проверку подлинности Kerberos для клиентов протокола MAPI через HTTP, выполните следующие команды на сервере клиентского доступа Exchange 2013:
-    
+    ```powershell
         Get-MapiVirtualDirectory -Server CAS-1 | Set-MapiVirtualDirectory -IISAuthenticationMethods Ntlm, Negotiate
-
+	```
 4.  Повторите шаги 2 и 3 для каждого сервера клиентского доступа Exchange 2013, на котором нужно включить проверку подлинности Kerberos.
 
 ## Проверка работы проверки подлинности Kerberos для клиентов Exchange
@@ -363,13 +379,13 @@ _**Последнее изменение раздела:** 2016-12-09_
 Проверка правильной работы Kerberos с помощью файла журнала HttpProxy
 
 1.  В текстовом редакторе перейдите к папке, где хранится журнал HttpProxy. По умолчанию этот файл находится в следующей папке:
-    
+    ```powershell
     %ExchangeInstallPath%\\Logging\\HttpProxy\\RpcHttp
-
+	```
 2.  Откройте последний файл журнала и найдите слово **Negotiate**. Строка в файле журнала должна выглядеть примерно следующим образом:
-    
+    ```powershell
         2014-02-19T13:30:49.219Z,e19d08f4-e04c-42da-a6be-b7484b396db0,15,0,775,22,,RpcHttp,mail.corp.tailspintoys.com,/rpc/rpcproxy.dll,,Negotiate,True,tailspin\Wendy,tailspintoys.com,MailboxGuid~ad44b1e0-e44f-4a16-9396-3a437f594f88,MSRPC,192.168.1.77,EXCH1,200,200,,RPC_OUT_DATA,Proxy,exch2.tailspintoys.com,15.00.0775.000,IntraForest,MailboxGuidWithDomain,,,,76,462,1,,1,1,,0,,0,,0,0,16272.3359,0,0,3,0,23,0,25,0,16280,1,16274,16230,16233,16234,16282,?ad44b1e0-e44f-4a16-9396-3a437f594f88@tailspintoys.com:6001,,BeginRequest=2014-02-19T13:30:32.946Z;BeginGetRequestStream=2014-02-19T13:30:32.946Z;OnRequestStreamReady=2014-02-19T13:30:32.946Z;BeginGetResponse=2014-02-19T13:30:32.946Z;OnResponseReady=2014-02-19T13:30:32.977Z;EndGetResponse=2014-02-19T13:30:32.977Z;,PossibleException=IOException;
-    
+    ```
     Если значение параметра **AuthenticationType** равно **Negotiate**, сервер успешно создает подключения с проверкой подлинности Kerberos.
 
 ## Обслуживание учетных данных ASA
@@ -384,7 +400,9 @@ _**Последнее изменение раздела:** 2016-12-09_
 
 1.  Откройте консоль управления Exchange на сервере Exchange 2013 и выполните следующую команду:
     
-        Set-ClientAccessServer CAS-1 -RemoveAlternateServiceAccountCredentials
+    ```powershell
+	Set-ClientAccessServer CAS-1 -RemoveAlternateServiceAccountCredentials
+	```
 
 2.  Хотя и не сразу, но вам потребуется перезапустить все клиентские компьютеры, чтобы удалить кэш билетов Kerberos с компьютера.
 

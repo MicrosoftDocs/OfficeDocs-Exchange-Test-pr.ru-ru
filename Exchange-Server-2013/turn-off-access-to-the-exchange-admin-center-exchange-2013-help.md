@@ -46,7 +46,9 @@ _**Последнее изменение раздела:** 2013-05-20_
 
 В этом примере показано, как выключить доступ к Центру администрирования Exchange на сервере CAS01.
 
+```powershell
     Set-ECPVirtualDirectory -Identity "CAS01\ecp (default web site)" -AdminEnabled $false
+```
 
 Подробные сведения о синтаксисе и параметрах см. в разделе [Set-EcpVirtualDirectory](https://technet.microsoft.com/ru-ru/library/dd297991\(v=exchg.150\)).
 

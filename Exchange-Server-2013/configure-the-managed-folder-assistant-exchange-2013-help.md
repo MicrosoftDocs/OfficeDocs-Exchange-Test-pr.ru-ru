@@ -43,7 +43,9 @@ _**Последнее изменение раздела:** 2014-10-01_
 
 В этом примере выполняется настройка помощника для управляемых папок на обработку всех почтовых ящиков за один день.
 
-    Set-MailboxServer MyMailboxServer -ManagedFolderWorkCycle 1
+```powershell
+Set-MailboxServer MyMailboxServer -ManagedFolderWorkCycle 1
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в статье [Set-MailboxServer](https://technet.microsoft.com/ru-ru/library/aa998651\(v=exchg.150\)).
 
@@ -53,13 +55,17 @@ _**Последнее изменение раздела:** 2014-10-01_
 
 Эта команда извлекает все серверы почтовых ящиков в организации и выводит свойства рабочего цикла помощника по работе с управляемыми папками с каждого сервера в формате таблицы. Параметр *Auto* используется для автоматического определения ширины столбцов.
 
-    Get-MailboxServer | Format-Table Name,ManagedFolderWorkCycle* -Auto
+```powershell
+Get-MailboxServer | Format-Table Name,ManagedFolderWorkCycle* -Auto
+```
 
 ## Использование командной консоли для запуска помощника по работе с управляемыми папками
 
 В этом примере помощник для управляемых папок активируется для немедленной обработки почтового ящика пользователя Morris Cornejo.
 
-    Start-ManagedFolderAssistant -Identity morris.cornejo@contoso.com
+```powershell
+Start-ManagedFolderAssistant -Identity morris.cornejo@contoso.com
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в статье [Start-ManagedFolderAssistant](https://technet.microsoft.com/ru-ru/library/aa998864\(v=exchg.150\)).
 

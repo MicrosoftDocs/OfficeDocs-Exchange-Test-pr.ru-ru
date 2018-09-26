@@ -61,7 +61,9 @@ _**Последнее изменение раздела:** 2014-07-14_
 
 Режим DAC можно включить только в командной консоли Exchange. В частности, для включения режима DAC можно использовать командлет [Set-DatabaseAvailabilityGroup](https://technet.microsoft.com/ru-ru/library/dd297934\(v=exchg.150\)), как это проиллюстрировано в следующем примере.
 
-    Set-DatabaseAvailabilityGroup -Identity DAG2 -DatacenterActivationMode DagOnly
+```powershell
+Set-DatabaseAvailabilityGroup -Identity DAG2 -DatacenterActivationMode DagOnly
+```
 
 В предыдущем примере режим DAC включается для группы обеспечения доступности баз данных DAG2.
 
