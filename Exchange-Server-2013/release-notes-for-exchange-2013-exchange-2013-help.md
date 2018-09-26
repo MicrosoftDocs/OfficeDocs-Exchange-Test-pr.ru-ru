@@ -129,7 +129,7 @@ _**Последнее изменение раздела:** 2018-04-16_
     2.  Выполните следующую команду.
         
         ```powershell
-        Add-PSSnapin Microsoft.Exchange.Management.PowerShell.SnapIn
+            Add-PSSnapin Microsoft.Exchange.Management.PowerShell.SnapIn
         ```
     
     3.  Выполните задачи по управлению агентом транспорта обычным способом.
@@ -162,7 +162,8 @@ _**Последнее изменение раздела:** 2018-04-16_
     
     ```powershell
     Set-ReceiveConnector "<server name>\Client Frontend <server name>" -AuthMechanism Tls, BasicAuth, BasicAuthRequireTLS
-	  ```
+    ```
+    
   - **Протокол MAPI через HTTP может не работать должным образом после обновления до Exchange 2013 с пакетом обновления 1 (SP1)**. Если вы выполните обновление с накопительного пакета обновления Exchange 2013 до Exchange 2013 с пакетом обновления 1 (SP1) и включите протокол MAPI через HTTP, клиенты, подключающиеся к серверу Exchange 2013 с пакетом обновления 1 (SP1) с помощью данного протокола, могут не работать должным образом. Это связано с тем, что при обновлении с накопительного пакета обновления до Exchange 2013 с пакетом обновления 1 (SP1) необходимые параметры не настраиваются. Эта проблема не возникает, если вы обновляете Exchange 2013 RTM до Exchange 2013 с пакетом обновления 1 (SP1) или более поздних версий или устанавливаете новый сервер Exchange 2013 с пакетом обновления 1 (SP1).
     
     > [!NOTE]  
@@ -178,7 +179,7 @@ _**Последнее изменение раздела:** 2018-04-16_
 		
 		    %AppCmdLocation%\appcmd.exe SET AppPool "MSExchangeMapiFrontEndAppPool" /CLRConfigFile:"%ExchangeLocation%\bin\MSExchangeMapiFrontEndAppPool_CLRConfig.config"
             %AppCmdLocation%\appcmd.exe RECYCLE AppPool "MSExchangeMapiFrontEndAppPool"
-		    ```
+        ```
         
     2.  На серверах с ролью сервера почтовых ящиков выполните указанные ниже команды в командной строке Windows.
         
@@ -191,7 +192,7 @@ _**Последнее изменение раздела:** 2018-04-16_
             
             %AppCmdLocation%\appcmd.exe SET AppPool "MSExchangeMapiAddressBookAppPool" /CLRConfigFile:"%ExchangeLocation%\bin\MSExchangeMapiAddressBookAppPool_CLRConfig.config"
             %AppCmdLocation%\appcmd.exe RECYCLE AppPool "MSExchangeMapiAddressBookAppPool"
-		    ```
+        ```
 
 ## Совместная работа Exchange 2010
 
