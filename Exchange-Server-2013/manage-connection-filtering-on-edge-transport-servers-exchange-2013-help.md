@@ -85,7 +85,9 @@ Get-TransportAgent "Connection Filtering Agent" | Format-List Enabled
 
 Для просмотра конфигурации черного списка IP-адресов выполните следующую команду:
 
+```powershell
     Get-IPBlockListConfig | Format-List *Enabled,*Response
+```
 
 ## Использование командной консоли для включения или отключения черного списка IP-адресов
 
@@ -113,7 +115,9 @@ Get-IPBlockListConfig | Format-List Enabled
 
 Для настройки черного списка IP-адресов используется указанный ниже синтаксис.
 
+```powershell
     Set-IPBlockListConfig [-ExternalMailEnabled <$true | $false>] [-InternalMailEnabled <$true | $false> -MachineEntryRejectionResponse "<Custom response text>"] [-StaticEntryRejectionResponse "<Custom response text>"]
+```
 
 В этом примере список блокировок IP-адресов настраивается со следующими параметрами:
 
@@ -125,13 +129,17 @@ Get-IPBlockListConfig | Format-List Enabled
 
 <!-- end list -->
 
+```powershell
     Set-IPBlockListConfig -InternalMailEnabled $true -MachineEntryRejectionResponse "Connection from IP address {0} was rejected by sender reputation." -StaticEntryRejectionResponse "Connection from IP address {0} was rejected by connection filtering."
+```
 
 ## Как проверить, что все получилось?
 
 Чтобы подтвердить, что список блокировок IP-адресов успешно настроен, выполните следующую команду и убедитесь, что отображаются заданные вами значения.
 
+```powershell
     Get-IPBlockListConfig | Format-List *MailEnabled,*Response
+```
 
 ## Просмотр записей черного списка IP-адресов с помощью командной консоли
 
@@ -163,7 +171,9 @@ Get-IPBlockListEntry -IPAddress 192.168.1.13
 
 Для добавления записей черного списка IP-адресов используется указанный ниже синтаксис.
 
+```powershell
     Add-IPBlockListEntry <-IPAddress IPAddress | -IPRange IP range or CIDR IP> [-ExpirationTime <DateTime>] [-comment "<Descriptive Comment>"]
+```
 
 Следующий пример добавляет запись черного списка IP-адресов для диапазона 192.168.1.10–192.168.1.15 и настраивает срок действия этой записи (4 июля 2014 г., 15:00).
 
@@ -217,7 +227,9 @@ Get-IPBlockListEntry
 
 Чтобы просмотреть, как фильтрация подключений использует всех поставщиков черного списка IP-адресов, выполните следующую команду:
 
+```powershell
     Get-IPBlockListProvidersConfig | Format-List *Enabled,Bypassed*
+```
 
 ## Использование командной консоли для включения или отключения всех поставщиков черного списка IP-адресов
 
@@ -245,7 +257,9 @@ Get-IPBlockListProvidersConfig | Format-List Enabled
 
 Чтобы настроить способ использования всех поставщиков черного списка IP-адресов при фильтрации подключений, используйте следующий синтаксис:
 
+```powershell
     Set-IPBlockListProvidersConfig [-BypassedRecipients <recipient1,recipient2...>] [-ExternalMailEnabled <$true | $false>] [-InternalMailEnabled <$true | $false>]
+```
 
 В следующем примере все поставщики черного списка IP-адресов настраиваются со следующими параметрами:
 
@@ -255,7 +269,9 @@ Get-IPBlockListProvidersConfig | Format-List Enabled
 
 <!-- end list -->
 
+```powershell
     Set-IPBlockListProvidersConfig -BypassedRecipients chris@fabrikam.com,michelle@fabrikam.com -InternalMailEnabled $true
+```
 
 Дополнительные сведения см. в разделе [Set-IPBlockListProvidersConfig](https://technet.microsoft.com/ru-ru/library/aa998543\(v=exchg.150\)).
 
@@ -263,7 +279,9 @@ Get-IPBlockListProvidersConfig | Format-List Enabled
 
 Чтобы подтвердить, что все поставщики черного списка IP-адресов успешно настроены, выполните следующую команду и убедитесь, что отображаются заданные вами значения.
 
+```powershell
     Get-IPBlockListProvidersConfig | Format-List *MailEnabled,Bypassed*
+```
 
 ## Просмотр поставщиков черного списка IP-адресов с помощью командной консоли
 
@@ -281,13 +299,17 @@ Get-IPBlockListProvider <IPBlockListProviderIdentity>
 
 Следующий пример отображает сведения о поставщике с именем "Contoso IP Block List Provider".
 
+```powershell
     Get-IPBlockListProvider "Contoso IP Block List Provider" | Format-List Name,Enabled,Priority,LookupDomain,*Match,*Response
+```
 
 ## Добавление поставщика черного списка IP-адресов с помощью командной консоли
 
 Для добавления поставщика черного списка IP-адресов используется указанный ниже синтаксис.
 
+```powershell
     Add-IPBlockListProvider -Name "<Descriptive Name>" -LookupDomain <FQDN> [-Priority <Integer>] [-Enabled <$true | $false>] [-AnyMatch <$true | $false>] [-BitmaskMatch <IPAddress>] [-IPAddressesMatch <IPAddressStatusCode1,IPAddressStatusCode2...>] [-RejectionResponse "<Custom Text>"]
+```
 
 Этот пример создает поставщика черного списка IP-адресов с именем "Contoso IP Block List Provider" с использованием следующих параметров:
 
@@ -297,7 +319,9 @@ Get-IPBlockListProvider <IPBlockListProviderIdentity>
 
 <!-- end list -->
 
+```powershell
     Add-IPBlockListProvider -Name "Contoso IP Block List Provider" -LookupDomain rbl.contoso.com -BitmaskMatch 127.0.0.1
+```
 
 > [!NOTE]  
 > При добавлении нового поставщика черного списка IP-адресов он по умолчанию включен (значение <em>Enabled</em> равно <code>$true</code>), а значение приоритета увеличивается на 1 (значение <em>Priority</em> для первой записи равно 1).
@@ -347,7 +371,9 @@ Get-IPBlockListProvider <IPBlockListProviderIdentity> | Format-List Enabled
 
 Для настройки существующего поставщика черного списка IP-адресов используется указанный ниже синтаксис.
 
+```powershell
     Set-IPBlockListProvider <IPBlockListProviderIdentity> -Name "<Descriptive Name>" -LookupDomain <FQDN> [-Priority <Integer>] [-AnyMatch <$true | $false>] [-BitmaskMatch <IPAddress>] [-IPAddressesMatch <IPAddressStatusCode1,IPAddressStatusCode2...>] [-RejectionResponse "<Custom Text>"]
+```
 
 Например, чтобы добавить код состояния IP-адреса 127.0.0.1 в список существующих кодов состояния для поставщика с именем "Contoso IP Block List Provider", выполните следующую команду:
 
@@ -411,7 +437,9 @@ Get-IPBlockListProvider
 
 Для просмотра конфигурации белого списка IP-адресов выполните следующую команду:
 
+```powershell
     Get-IPAllowListConfig | Format-List *Enabled
+```
 
 ## Использование командной консоли для включения или отключения белого списка IP-адресов
 
@@ -439,7 +467,9 @@ Get-IPAllowListConfig | Format-List *Enabled
 
 Для настройки белого списка IP-адресов используется указанный ниже синтаксис.
 
+```powershell
     Set-IPAllowListConfig [-ExternalMailEnabled <$true | $false>] [-InternalMailEnabled <$true | $false>
+```
 
 Этот пример настраивает список разрешений IP-адресов для фильтрации входящих подключений от внутренних и внешних почтовых серверов. По умолчанию фильтруются только подключения от внешних почтовых серверов (для параметра *ExternalMailEnabled* задано значение `$true`, а для параметра *InternalMailEnabled* — значение `$false`). Подключения от внешних партнеров с проверкой подлинности и без нее считаются внешними.
 
@@ -451,7 +481,9 @@ Set-IPAllowListConfig -InternalMailEnabled $true
 
 Чтобы подтвердить, что список разрешений IP-адресов успешно настроен, выполните следующую команду и убедитесь, что отображаются заданные вами значения.
 
+```powershell
     Get-IPAllowListConfig | Format-List *MailEnabled
+```
 
 ## Просмотр записей белого списка IP-адресов с помощью командной консоли
 
@@ -483,7 +515,9 @@ Get-IPAllowListEntry -IPAddress 192.168.1.13
 
 Для добавления записей белого списка IP-адресов используется указанный ниже синтаксис.
 
+```powershell
     Add-IPAllowListEntry <-IPAddress IPAddress | -IPRange IP range or CIDR IP> [-ExpirationTime <DateTime>] [-Comment "<Descriptive Comment>"]
+```
 
 Этот пример добавляет запись белого списка IP-адресов для диапазона 192.168.1.10–192.168.1.15 и настраивает срок действия этой записи (4 июля 2014 г., 15:00).
 
@@ -537,7 +571,9 @@ Get-IPAllowListEntry
 
 Чтобы просмотреть, как фильтрация подключений использует всех поставщиков белого списка IP-адресов, выполните следующую команду:
 
+```powershell
     Get-IPAllowListProvidersConfig | Format-List *Enabled
+```
 
 ## Использование командной консоли для включения или отключения всех поставщиков белого списка IP-адресов
 
@@ -565,7 +601,9 @@ Get-IPAllowListProvidersConfig | Format-List Enabled
 
 Чтобы настроить способ использования всех поставщиков белого списка IP-адресов при фильтрации подключений, используйте следующий синтаксис:
 
+```powershell
     Set-IPAllowListProvidersConfig [-ExternalMailEnabled <$true | $false>] [-InternalMailEnabled <$true | $false>]
+```
 
 Этот пример настраивает всех поставщиков белого списка IP-адресов для фильтрации входящих подключений от внутренних и внешних почтовых серверов. По умолчанию фильтруются только подключения от внешних почтовых серверов (для параметра *ExternalMailEnabled* задано значение `$true`, а для параметра *InternalMailEnabled* — значение `$false`). Подключения от внешних партнеров с проверкой подлинности и без нее считаются внешними.
 
@@ -579,7 +617,9 @@ Set-IPAllowListProvidersConfig -InternalMailEnabled $true
 
 Чтобы подтвердить, что все поставщики белого списка IP-адресов успешно настроены, выполните следующую команду и убедитесь, что отображаются заданные вами значения.
 
+```powershell
     Get-IPAllowListProvidersConfig | Format-List *MailEnabled
+```
 
 ## Просмотр поставщиков белого списка IP-адресов с помощью командной консоли
 
@@ -597,13 +637,17 @@ Get-IPAllowListProvider <IPAllowListProviderIdentity>
 
 Этот пример отображает сведения о поставщике с именем "Contoso IP Allow List Provider".
 
+```powershell
     Get-IPAllowListProvider "Contoso IP Allow List Provider" | Format-List Name,Enabled,Priority,LookupDomain,*Match
+```
 
 ## Добавление поставщика белого списка IP-адресов с помощью командной консоли
 
 Для добавления поставщика белого списка IP-адресов используется указанный ниже синтаксис.
 
+```powershell
     Add-IPAllowListProvider -Name "<Descriptive Name>" -LookupDomain <FQDN> [-Priority <Integer>] [-Enabled <$true | $false>] [-AnyMatch <$true | $false>] [-BitmaskMatch <IPAddress>] [-IPAddressesMatch <IPAddressStatusCode1,IPAddressStatusCode2...>]
+```
 
 Этот пример создает поставщика белого списка IP-адресов с именем "Contoso IP Allow List Provider" с использованием следующих параметров:
 
@@ -613,7 +657,9 @@ Get-IPAllowListProvider <IPAllowListProviderIdentity>
 
 <!-- end list -->
 
+```powershell
     Add-IPAllowListProvider -Name "Contoso IP Allow List Provider" -LookupDomain allow.contoso.com -BitmaskMatch 127.0.0.1
+```
 
 > [!NOTE]  
 > При добавлении нового поставщика белого списка IP-адресов он по умолчанию включен (значение <em>Enabled</em> равно <code>$true</code>), а значение приоритета увеличивается на 1 (значение <em>Priority</em> для первой записи равно 1).
@@ -663,7 +709,9 @@ Get-IPAllowListProvider <IPAllowListProviderIdentity> | Format-List Enabled
 
 Для настройки существующего поставщика белого списка IP-адресов используется указанный ниже синтаксис.
 
+```powershell
     Set-IPAllowListProvider <IPAllowListProviderIdentity> -Name "<Descriptive Name>" -LookupDomain <FQDN> [-Priority <Integer>] [-AnyMatch <$true | $false>] [-BitmaskMatch <IPAddress>] [-IPAddressesMatch <IPAddressStatusCode1,IPAddressStatusCode2...>]
+```
 
 Например, чтобы добавить код состояния IP-адреса 127.0.0.1 в список существующих кодов состояния для поставщика с именем "Contoso IP Allow List Provider", выполните следующую команду:
 

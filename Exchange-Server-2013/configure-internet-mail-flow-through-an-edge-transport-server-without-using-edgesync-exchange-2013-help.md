@@ -71,7 +71,9 @@ _**Последнее изменение раздела:** 2017-01-23_
 
 Чтобы создать соединитель отправки, настроенный на отправку сообщений в Интернет, выполните следующую команду.
 
+```powershell
     New-SendConnector -Name "To Internet" -AddressSpaces * -Usage Internet -DNSRoutingEnabled $true
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [New-SendConnector](https://technet.microsoft.com/ru-ru/library/aa998936\(v=exchg.150\)).
 
@@ -100,6 +102,7 @@ _**Последнее изменение раздела:** 2017-01-23_
   - **Учетные данные для проверки подлинности на промежуточном узле**: учетные данные для учетной записи пользователя во внутреннем домене. Сначала необходимо сохранить имя пользователя и пароль во временной переменной, поскольку командлет **New-SendConnector** не принимает учетные данные пользователей в формате обычного текста.
 
 Чтобы создать соединитель отправки, настроенный на отправку сообщений в организацию Exchange, выполните следующие команды.
+
 ```powershell
     $MailboxCredentials = Get-Credential
     New-SendConnector -Name "To Internal Org" -Usage Internal -AddressSpaces *.contoso.com -DNSRoutingEnabled $false -SmartHosts mbxserver01.contoso.com,mbxserver02.contoso.com -SmartHostAuthMechanism BasicAuthRequireTLS -AuthenticationCredential $MailboxCredentials

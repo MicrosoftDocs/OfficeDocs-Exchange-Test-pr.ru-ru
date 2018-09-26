@@ -48,9 +48,11 @@ _**Последнее изменение раздела:** 2017-02-28_
 ## Шаг 1. Создание сертификата федерации
 
 Выполните следующую команду в командной консоли Exchange, чтобы создать сертификат федерации:
+
 ```powershell
     $SKI = [System.Guid]::NewGuid().ToString("N"); New-ExchangeCertificate -DomainName 'Federation' -FriendlyName "Exchange Delegation Federation" -Services Federation -SubjectKeyIdentifier $SKI -PrivateKeyExportable $true
 ```
+
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [New-ExchangeCertificate](https://technet.microsoft.com/ru-ru/library/aa998327\(v=exchg.150\)).
 
 В результате вы получите значение отпечатка нового сертификата. Скопируйте его из окна командной консоли Exchange. Оно понадобится вам позже.
@@ -68,9 +70,11 @@ _**Последнее изменение раздела:** 2017-02-28_
     Set-FederationTrust -Identity "Microsoft Federation Gateway" -Thumbprint <Thumbprint> -RefreshMetaData
 ```
 В этом примере используется значение отпечатка сертификата `6A99CED2E4F2B5BE96C5D17D662D217EF58B8F73` из шага 1.
-```powershell`
+
+```powershell
     Set-FederationTrust -Identity "Microsoft Federation Gateway" -Thumbprint 6A99CED2E4F2B5BE96C5D17D662D217EF58B8F73 -RefreshMetaData
 ```
+
 Дополнительные сведения о синтаксисе и параметрах см. в статье [Set-FederationTrust](https://technet.microsoft.com/ru-ru/library/dd298034\(v=exchg.150\)).
 
 **Примечание.** Команда возвращает предупреждение о том, что необходимо обновить TXT-запись о принадлежности домена в DNS. Как это сделать, описано ниже.
@@ -133,7 +137,9 @@ Set-FederationTrust -Identity "Microsoft Federation Gateway" -PublishFederationC
 
   - В Командная консоль Exchange выполните указанную ниже команду, чтобы убедиться, что используется новый сертификат.
     
+    ```powershell
         Get-FederationTrust | Format-List *priv*
+    ```
     
       - Свойство **OrgPrivCertificate** должно содержать отпечаток нового сертификата федерации.
     

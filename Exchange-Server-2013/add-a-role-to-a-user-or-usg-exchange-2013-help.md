@@ -67,11 +67,15 @@ _**Последнее изменение раздела:** 2012-10-03_
 
 Используйте следующий синтаксис для назначения роли универсальной группе безопасности без области.
 
+```powershell
     New-ManagementRoleAssignment -Name <assignment name> -SecurityGroup <USG> -Role <role name>
+```
 
 В этом примере роль Exchange Servers назначается универсальной группе безопасности SeattleAdmins.
 
+```powershell
     New-ManagementRoleAssignment -Name "Exchange Servers_SeattleAdmins" -SecurityGroup SeattleAdmins -Role "Exchange Servers"
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [New-ManagementRoleAssignment](https://technet.microsoft.com/ru-ru/library/dd335193\(v=exchg.150\)).
 
@@ -81,11 +85,15 @@ _**Последнее изменение раздела:** 2012-10-03_
 
 Используйте следующий синтаксис для назначения роли универсальной группе безопасности с предварительно определенной областью.
 
+```powershell
     New-ManagementRoleAssignment -Name <assignment name> -SecurityGroup < USG> -Role <role name> -RecipientRelativeWriteScope < MyDistributionGroups | Organization | Self >
+```
 
 В этом примере роль Exchange Servers назначается универсальной группе безопасности SeattleAdmins, а затем применяется предварительно определенная область Organization.
 
+```powershell
     New-ManagementRoleAssignment -Name "Exchange Servers_SeattleAdmins" -SecurityGroup SeattleAdmins -Role "Exchange Servers" -RecipientRelativeWriteScope Organization
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [New-ManagementRoleAssignment](https://technet.microsoft.com/ru-ru/library/dd335193\(v=exchg.150\)).
 
@@ -97,11 +105,15 @@ _**Последнее изменение раздела:** 2012-10-03_
 
 Используйте следующий синтаксис для назначения роли универсальной группе безопасности с областью, основанной на фильтре получателей.
 
+```powershell
     New-ManagementRoleAssignment -Name <assignment name> -SecurityGroup < USG> -Role <role name> -CustomRecipientWriteScope <role scope name>
+```
 
 В этом примере роль Mail Recipients назначается универсальной группе безопасности Seattle Recipient Admins, а затем применяется область Seattle Recipients.
 
+```powershell
     New-ManagementRoleAssignment -Name "Mail Recipients_Seattle Recipient Admins" -SecurityGroup "Seattle Recipient Admins" -Role "Mail Recipients" -CustomRecipientWriteScope "Seattle Recipients"
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [New-ManagementRoleAssignment](https://technet.microsoft.com/ru-ru/library/dd335193\(v=exchg.150\)).
 
@@ -113,11 +125,15 @@ _**Последнее изменение раздела:** 2012-10-03_
 
 Используйте следующий синтаксис для назначения роли универсальной группе безопасности с областью настройки.
 
+```powershell
     New-ManagementRoleAssignment -Name <assignment name> -SecurityGroup <USG> -Role <role name> -CustomConfigWriteScope <role scope name>
+```
 
 В этом примере роль Exchange Servers назначается универсальной группе безопасности MailboxAdmins, а затем применяется область Mailbox Servers.
 
+```powershell
     New-ManagementRoleAssignment -Name "Exchange Servers_MailboxAdmins" -SecurityGroup MailboxAdmins -Role "Exchange Servers" -CustomConfigWriteScope "Mailbox Servers"
+```
 
 В предыдущем примере представлен процесс назначения роли с областью настройки сервера. Синтаксис для добавления области настройки базы данных одинаков. Вместо имени области сервера указывается имя области базы данных.
 
@@ -128,12 +144,14 @@ _**Последнее изменение раздела:** 2012-10-03_
 Если необходимо назначить подразделению область записи роли, можно указать это подразделение напрямую в параметре *RecipientOrganizationalUnitScope*. При использовании параметра *RecipientOrganizationalUnitScope* невозможно использовать параметр *CustomRecipientWriteScope*.
 
 Используйте приведенный ниже синтаксис для назначения ролей универсальной группе безопасности и ограничения области записи роли для определенного подразделения.
-
+```powershell
     New-ManagementRoleAssignment -Name <assignment name> -SecurityGroup <USG> -Role <role name> -RecipientOrganizationalUnitScope <OU>
+```
 
 В этом примере роль Mail Recipients назначается группе ролей SalesRecipientAdmins, затем область действия этого назначения сужается до подразделения sales/users в домене contoso.com.
-
+```powershell
     New-ManagementRoleAssignment -Name "Mail Recipients_SalesRecipientAdmins" -SecurityGroup SalesRecipientAdmins -Role "Mail Recipients" -RecipientOrganizationalUnitScope contoso.com/sales/users
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [New-ManagementRoleAssignment](https://technet.microsoft.com/ru-ru/library/dd335193\(v=exchg.150\)).
 
@@ -151,7 +169,9 @@ _**Последнее изменение раздела:** 2012-10-03_
 
 В этом примере роль Mail Recipients назначается универсальной группе безопасности Protected User Admins, а затем применяется область Protected Users.
 
+```powershell
     New-ManagementRoleAssignment -Name "Mail Recipients_Protected User Admins" -SecurityGroup "Protected User Admins" -Role "Mail Recipients" -ExclusiveRecipientWriteScope "Protected Users"
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [New-ManagementRoleAssignment](https://technet.microsoft.com/ru-ru/library/dd335193\(v=exchg.150\)).
 
