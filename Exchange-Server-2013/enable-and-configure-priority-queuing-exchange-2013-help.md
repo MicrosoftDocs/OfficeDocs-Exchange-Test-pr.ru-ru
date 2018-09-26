@@ -41,25 +41,25 @@ _**Последнее изменение раздела:** 2014-12-16_
 
 1.  В командной строке откройте файл конфигурации приложения EdgeTransport.exe.config в Блокноте, выполнив следующую команду:
     
-```powershell
-Notepad %ExchangeInstallPath%Bin\EdgeTransport.exe.config
-```
+    ```powershell
+        Notepad %ExchangeInstallPath%Bin\EdgeTransport.exe.config
+    ```
 
 2.  Найдите следующие ключи в разделе `<appSettings>`.
     
-```powershell
-<add key="PriorityQueuingEnabled" value="false" />
-<add key="MaxPerDomainHighPriorityConnections" value="3" />
-<add key="MaxPerDomainNormalPriorityConnections" value="15" />
-<add key="MaxPerDomainLowPriorityConnections" value="2" />
-<add key="HighPriorityMessageExpirationTimeout" value="8:00:00" />
-<add key="NormalPriorityMessageExpirationTimeout" value="2.00:00:00" />
-<add key="LowPriorityMessageExpirationTimeout" value="2.00:00:00" />
-<add key="HighPriorityDelayNotificationTimeout" value="00:30:00" />
-<add key="NormalPriorityDelayNotificationTimeout" value="4:00:00" />
-<add key="LowPriorityDelayNotificationTimeout" value="8:00:00" />
-<add key="MaxHighPriorityMessageSize" value="250KB" />
-```
+    ```powershell
+        <add key="PriorityQueuingEnabled" value="false" />
+        <add key="MaxPerDomainHighPriorityConnections" value="3" />
+        <add key="MaxPerDomainNormalPriorityConnections" value="15" />
+        <add key="MaxPerDomainLowPriorityConnections" value="2" />
+        <add key="HighPriorityMessageExpirationTimeout" value="8:00:00" />
+        <add key="NormalPriorityMessageExpirationTimeout" value="2.00:00:00" />
+        <add key="LowPriorityMessageExpirationTimeout" value="2.00:00:00" />
+        <add key="HighPriorityDelayNotificationTimeout" value="00:30:00" />
+        <add key="NormalPriorityDelayNotificationTimeout" value="4:00:00" />
+        <add key="LowPriorityDelayNotificationTimeout" value="8:00:00" />
+        <add key="MaxHighPriorityMessageSize" value="250KB" />
+    ```
 
 Чтобы включить приоритетную организацию очереди в службе транспорта на сервере почтовых ящиков, используйте следующее значение.
 
@@ -73,9 +73,9 @@ Notepad %ExchangeInstallPath%Bin\EdgeTransport.exe.config
 
 4.  Перезапустите службу транспорта Microsoft Exchange, выполнив следующую команду:
     
-```powershell
-net stop MSExchangeTransport && net start MSExchangeTransport
-```
+    ```powershell
+        net stop MSExchangeTransport && net start MSExchangeTransport
+    ```
 
 ## Как проверить, что все получилось?
 
