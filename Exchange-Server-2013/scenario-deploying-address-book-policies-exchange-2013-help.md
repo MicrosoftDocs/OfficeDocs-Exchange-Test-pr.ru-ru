@@ -231,7 +231,9 @@ _**Последнее изменение раздела:** 2016-12-09_
 
   - Развертывание политик адресных книг не препятствует пользователям в одной виртуальной организации отправлять электронную почту пользователям в другой виртуальной организации. Если необходимо запретить пользователям отправлять сообщения электронной почты между организациями, рекомендуется создать правило транспорта. Например, чтобы создать правило транспорта, препятствующее получению пользователями домена Contoso сообщений от пользователей домена Fabrikam, но разрешающее руководству домена Fabrikam отправлять сообщения пользователям Contoso, выполните следующую команду в командной консоли:
     
-        New-TransportRule -Name "StopFabrikamtoContosoMail" -FromMemberOf "AllFabrikamEmployees" -SentToMemberOf "AllContosoEmployees" -DeleteMessage -ExceptIfFrom seniorleadership@fabrikam.com
+    ```powershell
+    New-TransportRule -Name "StopFabrikamtoContosoMail" -FromMemberOf "AllFabrikamEmployees" -SentToMemberOf "AllContosoEmployees" -DeleteMessage -ExceptIfFrom seniorleadership@fabrikam.com
+    ```
 
   - Если необходимо использовать функцию, подобную политике адресной книги, в клиенте Lync, следует задать атрибут `msRTCSIP-GroupingID` для нужных объектов пользователей. Подробные сведения см. в разделе [Замена PartitionByOU на msRTCSIP-GroupingID](https://go.microsoft.com/fwlink/p/?linkid=232306).
 
@@ -286,23 +288,31 @@ _**Последнее изменение раздела:** 2016-12-09_
   - AL\_TAIL\_Contacts
 
 В этом примере создается список адресов AL\_TAIL\_Users\_DGs. Список адресов будет содержать всех пользователей и группы рассылки, где CustomAttribute15 равняется TAIL.
+
 ```powershell
-    New-AddressList -Name "AL_TAIL_Users_DGs" -RecipientFilter {((RecipientType -eq 'UserMailbox') -or (RecipientType -eq "MailUniversalDistributionGroup") -or (RecipientType -eq "DynamicDistributionGroup")) -and (CustomAttribute15 -eq "TAIL")}
+New-AddressList -Name "AL_TAIL_Users_DGs" -RecipientFilter {((RecipientType -eq 'UserMailbox') -or (RecipientType -eq "MailUniversalDistributionGroup") -or (RecipientType -eq "DynamicDistributionGroup")) -and (CustomAttribute15 -eq "TAIL")}
 ```
+
 Дополнительные сведения о создании списков адресов с помощью фильтров получателей см. в разделе [Создание списка адресов с помощью фильтров получателей](https://docs.microsoft.com/ru-ru/exchange/address-books/address-lists/use-recipient-filters-to-create-an-address-list).
 
 Для создания ABP необходимо предоставить список адресов помещений. Если в организации нет почтовых ящиков ресурсов для оборудования и помещений, стоит создать пустой список адресов помещений. В следующем примере создается пустой список адресов помещений, так как в организации отсутствуют почтовые ящики помещений.
+
 ```powershell
-    New-AddressList -Name AL_BlankRoom -RecipientFilter {(Alias -ne $null) -and ((RecipientDisplayType -eq 'ConferenceRoomMailbox') -or (RecipientDisplayType -eq 'SyncedConferenceRoomMailbox'))}
+New-AddressList -Name AL_BlankRoom -RecipientFilter {(Alias -ne $null) -and ((RecipientDisplayType -eq 'ConferenceRoomMailbox') -or (RecipientDisplayType -eq 'SyncedConferenceRoomMailbox'))}
 ```
+
 В этом случае компании Fabrikam и Contoso имеют почтовые ящики помещений. В этом примере создается список помещений для Fabrikam с помощью фильтра получателей, где CustomAttribute15 равняется FAB.
+
 ```powershell
-    New-AddressList -Name AL_FAB_Room -RecipientFilter {(Alias -ne $null) -and (CustomAttribute15 -eq "FAB")-and (RecipientDisplayType -eq 'ConferenceRoomMailbox') -or (RecipientDisplayType -eq 'SyncedConferenceRoomMailbox')}
+New-AddressList -Name AL_FAB_Room -RecipientFilter {(Alias -ne $null) -and (CustomAttribute15 -eq "FAB")-and (RecipientDisplayType -eq 'ConferenceRoomMailbox') -or (RecipientDisplayType -eq 'SyncedConferenceRoomMailbox')}
 ```
+
 Глобальный список адресов, который используется в ABP, должен быть надмножеством списков адресов. Не создавайте глобальный список адресов, в котором число объектов меньше, чем в списках адресов в политике адресной книги. В этом примере для Tailspin Toys создается глобальный список адресов, включающий всех получателей, которые есть в списках адресов и списке адресов помещений.
+
 ```powershell
-    New-GlobalAddressList -Name "GAL_TAIL" -RecipientFilter {(CustomAttribute15 -eq "TAIL")}
+New-GlobalAddressList -Name "GAL_TAIL" -RecipientFilter {(CustomAttribute15 -eq "TAIL")}
 ```
+
 Подробнее см. в разделе [Создание глобального списка адресов](https://docs.microsoft.com/ru-ru/exchange/address-books/address-lists/create-global-address-list).
 
 При создании автономной адресной книги необходимо включить соответствующий глобальный список адресов при указании параметра *AddressLists* в командлете New- или Set-OfflineAddressBook, чтобы не пропустить записи. В целом можно настроить набор записей, которые пользователь будет видеть, или уменьшить размер автономной адресной книги, указав список AddressLists в AddressLists для New/Set-OfflineAddressBook Если же пользователь должен видеть полный набор записей глобального списка адресов в автономной адресной книге, включите глобальный список адресов в AddressLists.
@@ -318,9 +328,11 @@ New-OfflineAddressBook -Name "OAB_FAB" -AddressLists "GAL_FAB"
 ## Действие 4. Создание политик адресных книг
 
 После создания всех требуемых объектов можно создать АВР. В этом примере создается ABP с именем ABP\_TAIL.
+
 ```powershell
-    New-AddressBookPolicy -Name "ABP_TAIL" -AddressLists "AL_TAIL_Users_DGs"," AL_TAIL_Contacts" -OfflineAddressBook "\OAB_TAIL" -GlobalAddressList "\GAL_TAIL" -RoomList "\AL_TAIL_Rooms"
+New-AddressBookPolicy -Name "ABP_TAIL" -AddressLists "AL_TAIL_Users_DGs"," AL_TAIL_Contacts" -OfflineAddressBook "\OAB_TAIL" -GlobalAddressList "\GAL_TAIL" -RoomList "\AL_TAIL_Rooms"
 ```
+
 Подробнее см. в разделе [Создание политики адресных книг](https://docs.microsoft.com/ru-ru/exchange/address-books/address-book-policies/create-an-address-book-policy).
 
 ## Действие 5. Назначение политик адресной книги почтовым ящикам
@@ -328,8 +340,10 @@ New-OfflineAddressBook -Name "OAB_FAB" -AddressLists "GAL_FAB"
 Последний этап процесса — назначение политики адресной книги пользователю. Политики адресных книг вступают в силу, когда приложение пользователя подключается к службе адресных книг Microsoft Exchange на сервере клиентского доступа. Если пользователь уже подключен к Outlook или Outlook Web App, когда к его учетной записи применяется политика адресной книги, ему потребуется закрыть и перезапустить клиентское приложение, чтобы видеть новые списки адресов и глобальный список адресов.
 
 В этом примере значение ABP\_FAB назначается для всех почтовых ящиков, где CustomAttribute15 равняется "FAB".
+
 ```powershell
-    Get-Mailbox -resultsize unlimited | where {$_.CustomAttribute15 -eq "TAIL"} | Set-Mailbox -AddressBookPolicy "ABP_TAIL"
+Get-Mailbox -resultsize unlimited | where {$_.CustomAttribute15 -eq "TAIL"} | Set-Mailbox -AddressBookPolicy "ABP_TAIL"
 ```
+
 Подробнее см. в разделе [Назначение политики адресной книги пользователям почты](https://docs.microsoft.com/ru-ru/exchange/address-books/address-book-policies/assign-an-address-book-policy-to-mail-users).
 

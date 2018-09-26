@@ -63,7 +63,9 @@ _**Последнее изменение раздела:** 2016-12-09_
     
     В этом примере в группу рассылки ADRMSSuperUsers добавляется федеративный почтовый ящик.
     
-        Add-DistributionGroupMember ADRMSSuperUsers -Member FederatedEmail.4c1f4d8b-8179-4148-93bf-00a95fa1e042
+    ```powershell
+    Add-DistributionGroupMember ADRMSSuperUsers -Member FederatedEmail.4c1f4d8b-8179-4148-93bf-00a95fa1e042
+    ```
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Add-DistributionGroupMember](https://technet.microsoft.com/ru-ru/library/bb124340\(v=exchg.150\)).
 
@@ -96,7 +98,8 @@ _**Последнее изменение раздела:** 2016-12-09_
     > [!IMPORTANT]  
     > Модуль PowerShell ADRMSAdmin доступен в Windows Server 2008 R2 и более поздних версий.
     
-        Import-Module ADRMSAdmin
-        New-PSDrive -Name MyRmsAdmin -PsProvider AdRmsAdmin -Root https://localhost 
-        Get-ItemProperty -Path MyRmsAdmin:\SecurityPolicy\SuperUser
-
+    ```powershell
+    Import-Module ADRMSAdmin
+    New-PSDrive -Name MyRmsAdmin -PsProvider AdRmsAdmin -Root https://localhost 
+    Get-ItemProperty -Path MyRmsAdmin:\SecurityPolicy\SuperUser
+    ```

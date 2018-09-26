@@ -58,8 +58,8 @@ Remove-OrganizationRelationship -Identity "Contoso"
   - Выполните следующую команду операционной системы, чтобы убедиться в удалении информации организационного отношения.
     
     ```powershell
-Get-OrganizationRelationship | Format-List
-```
+    Get-OrganizationRelationship | Format-List
+    ```
 
 > [!TIP]  
 > Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.

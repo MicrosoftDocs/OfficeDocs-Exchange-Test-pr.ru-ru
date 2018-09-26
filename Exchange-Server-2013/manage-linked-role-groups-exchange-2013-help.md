@@ -118,9 +118,9 @@ $ForeignCredential = Get-Credential
 <!-- end list -->
 
 ```powershell
-$ForeignCredential = Get-Credential
-```
+    $ForeignCredential = Get-Credential
     New-RoleGroup "Seattle Compliance Role Group" -LinkedForeignGroup "Seattle Compliance Administrators" -LinkedDomainController DC01.users.contoso.com -LinkedCredential $ForeignCredential -CustomRecipientWriteScope "Seattle Recipients" -Roles "Transport Rules", "Journaling"
+```
 
 Дополнительные сведения об областях управления см. в разделе [Общие сведения об областях ролей управления](understanding-management-role-scopes-exchange-2013-help.md).
 

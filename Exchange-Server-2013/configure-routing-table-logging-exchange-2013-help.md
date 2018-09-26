@@ -42,9 +42,11 @@ _**Последнее изменение раздела:** 2015-04-08_
 ## Использование командной консоли Exchange для настройки ведения журнала таблицы маршрутизации
 
 Выполните следующую команду:
+
 ```powershell
-    Set-TransportService <ServerIdentity> -RoutingTableLogMaxAge <dd.hh:mm:ss> -RoutingTableLogMaxDirectorySize <Size>  -RoutingTableLogPath <LocalFilePath>
+Set-TransportService <ServerIdentity> -RoutingTableLogMaxAge <dd.hh:mm:ss> -RoutingTableLogMaxDirectorySize <Size>  -RoutingTableLogPath <LocalFilePath>
 ```
+
 В этом примере задаются следующие параметры журнала таблицы маршрутизации на сервере почтовых ящиков Mailbox01:
 
   - Устанавливает местоположение файлов журнала таблицы маршрутизации в D:\\Routing Table Log. Обратите внимание, что если папка не существует, она будет создана.
@@ -54,9 +56,11 @@ _**Последнее изменение раздела:** 2015-04-08_
   - Задает максимальный срок хранения файла журнала таблицы маршрутизации равным 45 дней.
 
 <!-- end list -->
+
 ```powershell
-    Set-TransportService Mailbox01 -RoutingTableLogPath "D:\Routing Table Log" -RoutingTableLogMaxDirectorySize 70MB -RoutingTableLogMaxAge 45.00:00:00
+Set-TransportService Mailbox01 -RoutingTableLogPath "D:\Routing Table Log" -RoutingTableLogMaxDirectorySize 70MB -RoutingTableLogMaxAge 45.00:00:00
 ```
+
 > [!NOTE]  
 > Выбрав для параметра <em>RoutingTableLogMaxAge</em> значение <code>00:00:00</code>, можно выключить автоматическое удаление файлов журналов таблицы маршрутизации по истечении срока их хранения.
 
@@ -67,7 +71,9 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 1.  В командной консоли выполните следующую команду:
     
-        Get-TransportService <ServerIdentity> | Format-List RoutingTableLog*
+```powershell
+Get-TransportService <ServerIdentity> | Format-List RoutingTableLog*
+```
 
 2.  Убедитесь, что отображаются значения, которые вы настроили.
 
@@ -75,28 +81,30 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 1.  В командной строке откройте файл конфигурации приложения EdgeTransport.exe.config в Блокноте, выполнив следующую команду:
     
-    ```powershell
-    Notepad %ExchangeInstallPath%Bin\EdgeTransport.exe.config
-    ```
+```powershell
+Notepad %ExchangeInstallPath%Bin\EdgeTransport.exe.config
+```
 
 2.  Измените в разделе `<appSettings>` следующую строку.
     
-    ```command line
-    <add key="RoutingConfigReloadInterval" value="<hh:mm:ss>" />
-    ```
+```powershell
+<add key="RoutingConfigReloadInterval" value="<hh:mm:ss>" />
+```
     
-    Например, чтобы изменить интервал автоматического пересчета таблицы маршрутизации на 10 часов, нужно использовать следующее значение:
+Например, чтобы изменить интервал автоматического пересчета таблицы маршрутизации на 10 часов, нужно использовать следующее значение:
     
-    ```command line
-    <add key="RoutingConfigReloadInterval" value="10:00:00" />
-    ```
+```powershell
+<add key="RoutingConfigReloadInterval" value="10:00:00" />
+```
 
 3.  Закончив, сохраните и закройте файл EdgeTransport.exe.config.
 
 4.  Перезапустите службу транспорта Microsoft Exchange, выполнив следующую команду:
-    ```powershell
-        net stop MSExchangeTransport && net start MSExchangeTransport
-    ```
+    
+```powershell
+net stop MSExchangeTransport && net start MSExchangeTransport
+```
+
 ## Как проверить, что все получилось?
 
 Чтобы убедиться, что интервал автоматического пересчета таблицы маршрутизации успешно настроен, проверьте обновление журнала таблицы маршрутизации в течение указанного интервала.

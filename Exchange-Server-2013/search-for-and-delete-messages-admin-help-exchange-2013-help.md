@@ -49,11 +49,15 @@ _**Последнее изменение раздела:** 2017-12-20_
 
 В этом примере в почтовом ящике пользователя April Stewart выполняется поиск сообщений, содержащих фразу "Your bank statement" в теме; результаты поиска записываются в журнал в папке SearchAndDeleteLog почтового ящика администратора. Сообщения не копируются в целевой почтовый ящик и не удаляются из него.
 
-    Search-Mailbox -Identity "April Stewart" -SearchQuery 'Subject:"Your bank statement"' -TargetMailbox administrator -TargetFolder "SearchAndDeleteLog" -LogOnly -LogLevel Full
+```powershell
+Search-Mailbox -Identity "April Stewart" -SearchQuery 'Subject:"Your bank statement"' -TargetMailbox administrator -TargetFolder "SearchAndDeleteLog" -LogOnly -LogLevel Full
+```
 
 В этом примере во всех почтовых ящиках организации выполняется поиск сообщений с любыми типами вложенных файлов, содержащих слово Trojan в имени. При этом сообщение журнала отправляется в почтовый ящик администратора.
 
-    Get-Mailbox -ResultSize unlimited | Search-Mailbox -SearchQuery attachment:trojan* -TargetMailbox administrator -TargetFolder "SearchAndDeleteLog" -LogOnly -LogLevel Full
+```powershell
+Get-Mailbox -ResultSize unlimited | Search-Mailbox -SearchQuery attachment:trojan* -TargetMailbox administrator -TargetFolder "SearchAndDeleteLog" -LogOnly -LogLevel Full
+```
 
 Подробные сведения о синтаксисе и параметрах см. в разделе [Search-Mailbox](https://technet.microsoft.com/ru-ru/library/dd298173\(v=exchg.150\)).
 
@@ -73,11 +77,15 @@ Search-Mailbox -Identity "April Stewart" -SearchQuery 'Subject:"Your bank statem
 
 В этом примере в почтовом ящике пользователя April Stewart выполняется поиск сообщений, содержащих фразу "Your bank statement" в теме; результаты поиска копируются в папку AprilStewart-DeletedMessages почтового ящика BackupMailbox, а сообщения удаляются из почтового ящика April.
 
-    Search-Mailbox -Identity "April Stewart" -SearchQuery 'Subject:"Your bank statement"' -TargetMailbox "BackupMailbox" -TargetFolder "AprilStewart-DeletedMessages" -LogLevel Full -DeleteContent
+```powershell
+Search-Mailbox -Identity "April Stewart" -SearchQuery 'Subject:"Your bank statement"' -TargetMailbox "BackupMailbox" -TargetFolder "AprilStewart-DeletedMessages" -LogLevel Full -DeleteContent
+```
 
 В этом примере во всех почтовых ящиках организации выполняется поиск сообщений, содержащих строчку "Download this file" в теме, после чего эти сообщения безвозвратно удаляются.
 
-    Get-Mailbox -ResultSize unlimited | Search-Mailbox -SearchQuery 'Subject:"Download this file"' -DeleteContent
+```powershell
+Get-Mailbox -ResultSize unlimited | Search-Mailbox -SearchQuery 'Subject:"Download this file"' -DeleteContent
+```
 
 Подробные сведения о синтаксисе и параметрах см. в разделе [Search-Mailbox](https://technet.microsoft.com/ru-ru/library/dd298173\(v=exchg.150\)).
 

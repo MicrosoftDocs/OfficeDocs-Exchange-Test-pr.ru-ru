@@ -42,28 +42,34 @@ _**Последнее изменение раздела:** 2014-12-16_
 1.  В командной строке на сервере почтовых ящиков или пограничном транспортном сервере откройте файл EdgeTransport.exe.config в Блокноте, выполнив следующую команду:
     
     ```powershell
-Notepad %ExchangeInstallPath%Bin\EdgeTransport.exe.config
-```
+    Notepad %ExchangeInstallPath%Bin\EdgeTransport.exe.config
+    ```
 
 2.  В разделе `<appSettings>` найдите следующие ключи.
     
-        <add key="QueueGlitchRetryCount" value="<Integer>" />
-        <add key="QueueGlitchRetryInterval" value="<hh:mm:ss>" />
-        <add key="MailboxDeliveryQueueRetryInterval" value="<hh:mm:ss>" />
-        <add key="MaxIdleTimeBeforeResubmit" value="<hh:mm:ss>" />
-    
+    ```powershell
+    <add key="QueueGlitchRetryCount" value="<Integer>" />
+    <add key="QueueGlitchRetryInterval" value="<hh:mm:ss>" />
+    <add key="MailboxDeliveryQueueRetryInterval" value="<hh:mm:ss>" />
+    <add key="MaxIdleTimeBeforeResubmit" value="<hh:mm:ss>" />
+    ```
+
     В этом примере изменяется значение количества повторных попыток очереди при сбое на 6, интервал повторных попыток очереди при сбое на 30 секунд, интервал между повторными попытками для очереди доставки в почтовые ящики на 3 минуты, а максимальное время простоя перед интервалами повторной передачи — на 6 часов.
     
-        <add key="QueueGlitchRetryCount" value="6" />
-        <add key="QueueGlitchRetryInterval" value="00:00:30" />
-        <add key="MailboxDeliveryQueueRetryInterval" value="00:03:00" />
-        <add key="MaxIdleTimeBeforeResubmit" value="6:00:00" />
+    ```powershell
+    <add key="QueueGlitchRetryCount" value="6" />
+    <add key="QueueGlitchRetryInterval" value="00:00:30" />
+    <add key="MailboxDeliveryQueueRetryInterval" value="00:03:00" />
+    <add key="MaxIdleTimeBeforeResubmit" value="6:00:00" />
+    ```
 
 3.  Закончив, сохраните и закройте файл EdgeTransport.exe.config.
 
 4.  Перезапустите службу транспорта Microsoft Exchange, выполнив следующую команду:
     
-        net stop MSExchangeTransport && net start MSExchangeTransport
+    ```powershell
+    net stop MSExchangeTransport && net start MSExchangeTransport
+    ```
 
 ## Настроить количество повторных попыток при временной ошибке, интервал повторной попытки при временной ошибке и интервал повторной попытки при ошибке исходящего подключения
 
@@ -85,7 +91,9 @@ Notepad %ExchangeInstallPath%Bin\EdgeTransport.exe.config
 
 Для настройки количества повторных попыток при временной ошибке, интервала повторной попытки при временной ошибке и интервала повторной попытки при ошибке исходящего подключения в транспортной службе на сервере почтовых ящиков или пограничном транспортном сервере введите команду в следующем формате.
 
-    Set-TransportService <ServerIdentity> -TransientFailureRetryCount <Integer> -TransientFailureRetryInterval <hh:mm:ss> -OutboundConnectionFailureRetryInterval <dd.hh:mm:ss>
+```powershell
+Set-TransportService <ServerIdentity> -TransientFailureRetryCount <Integer> -TransientFailureRetryInterval <hh:mm:ss> -OutboundConnectionFailureRetryInterval <dd.hh:mm:ss>
+```
 
 В этом примере изменяются следующие значения на сервере почтовых ящиков с именем Mailbox01: на пограничном транспортном сервере Exchange01.
 
@@ -97,7 +105,9 @@ Notepad %ExchangeInstallPath%Bin\EdgeTransport.exe.config
 
 <!-- end list -->
 
-    Set-TransportService Mailbox01 -TransientFailureRetryCount 8 -TransientFailureRetryInterval 00:01:00 -OutboundConnectionFailureRetryInterval 00:45:00
+```powershell
+Set-TransportService Mailbox01 -TransientFailureRetryCount 8 -TransientFailureRetryInterval 00:01:00 -OutboundConnectionFailureRetryInterval 00:45:00
+```
 
 > [!NOTE]  
 > Параметры <em>TransientFailureRetryCount</em> и <em>TransientFailureRetryInterval</em> также доступны в командлете <strong>Set-FrontEndTransportService</strong> для внешней службы транспорта на серверах клиентского доступа.
@@ -117,7 +127,9 @@ Notepad %ExchangeInstallPath%Bin\EdgeTransport.exe.config
 
 Для настройки количества повторных попыток при временной ошибке, интервала повторной попытки при временной ошибке и интервала повторной попытки при ошибке исходящего подключения в транспортной службе на сервере почтовых ящиков или пограничном транспортном сервере введите команду в следующем формате.
 
-    Set-TransportService <ServerIdentity> -TransientFailureRetryCount <Integer> -TransientFailureRetryInterval <hh:mm:ss> -OutboundConnectionFailureRetryInterval <dd.hh:mm:ss>
+```powershell
+Set-TransportService <ServerIdentity> -TransientFailureRetryCount <Integer> -TransientFailureRetryInterval <hh:mm:ss> -OutboundConnectionFailureRetryInterval <dd.hh:mm:ss>
+```
 
 В этом примере изменяются следующие значения на сервере почтовых ящиков с именем Mailbox01: на пограничном транспортном сервере Exchange01.
 
@@ -129,7 +141,9 @@ Notepad %ExchangeInstallPath%Bin\EdgeTransport.exe.config
 
 <!-- end list -->
 
-    Set-TransportService Mailbox01 -TransientFailureRetryCount 8 -TransientFailureRetryInterval 00:01:00 -OutboundConnectionFailureRetryInterval 00:45:00
+```powershell
+Set-TransportService Mailbox01 -TransientFailureRetryCount 8 -TransientFailureRetryInterval 00:01:00 -OutboundConnectionFailureRetryInterval 00:45:00
+```
 
 > [!NOTE]  
 > Параметры <em>TransientFailureRetryCount</em> и <em>TransientFailureRetryInterval</em> также доступны в командлете <strong>Set-FrontEndTransportService</strong> для внешней службы транспорта на серверах клиентского доступа.
@@ -185,7 +199,9 @@ Set-TransportService Mailbox01 -DelayNotificationTimeout 06:00:00
 
 Для настройки уведомлений о состоянии задержанной доставки введите команду в следующем формате.
 
-    Set-TransportConfig -ExternalDelayDSNEnabled <$true | $false> -InternalDelayDSNEnabled <$true |$false>
+```powershell
+Set-TransportConfig -ExternalDelayDSNEnabled <$true | $false> -InternalDelayDSNEnabled <$true |$false>
+```
 
 В этом примере запрещается отправка уведомлений о состоянии задержанной доставки внешним отправителям.
 

@@ -51,9 +51,13 @@ _**Последнее изменение раздела:** 2012-11-18_
 
 В данном примере на сервере клиентского доступа `UMCallRouter-05x.contoso.com` включается ответ на входящие вызовы голосовой и факсимильной связи, автосекретаря и голосового доступа к Outlook со шлюзов VoIP, IP УАТС, SIP УАТС и SBC, а изменения записываются в реестр на сервере UMCallRouter-05x.
 
-    Set-ServerComponentState -Component UnifiedMessaging -Identity UMCallRouter-05x.contoso.com -Requester Maintenance -State Active -LocalOnly
+```powershell
+Set-ServerComponentState -Component UnifiedMessaging -Identity UMCallRouter-05x.contoso.com -Requester Maintenance -State Active -LocalOnly
+```
 
 В данном примере на сервере клиентского доступа `UMCallRouter-05x.contoso.com` запрещается ответ на входящие вызовы голосовой и факсимильной связи, автосекретаря и голосового доступа к Outlook со шлюзов VoIP, IP УАТС, SIP УАТС и SBC, а изменения записываются только в Active Directory.
 
-    Set-ServerComponentState -Component UnifiedMessaging -Identity UMCallRouter-05x.contoso.com -Requester Maintenance -State Inactive -RemoteOnly
+```powershell
+Set-ServerComponentState -Component UnifiedMessaging -Identity UMCallRouter-05x.contoso.com -Requester Maintenance -State Inactive -RemoteOnly
+```
 

@@ -377,7 +377,9 @@ CSV-файл для пакета миграции IMAP должен содерж
 
 Предположим, что вы создаете в командной консоли Exchange пакет для перемещения основных и архивных почтовых ящиков пользователя между лесами предприятия с помощью указанной ниже команды Командная консоль Exchange.
 
-    New-MigrationBatch -Name CrossForestBatch1 -SourceEndpoint ForestEndpoint1 -TargetDeliveryDomain forest2.contoso.com -TargetDatabases @(EXCH-MBX-02,EXCH-MBX-03) -TargetArchiveDatabases @(EXCH-MBX-A02,EXCH-MBX-A03) -CSVData ([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\CrossForestBatch1.csv")) -AutoStart
+```powershell
+New-MigrationBatch -Name CrossForestBatch1 -SourceEndpoint ForestEndpoint1 -TargetDeliveryDomain forest2.contoso.com -TargetDatabases @(EXCH-MBX-02,EXCH-MBX-03) -TargetArchiveDatabases @(EXCH-MBX-A02,EXCH-MBX-A03) -CSVData ([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\CrossForestBatch1.csv")) -AutoStart
+```
 
 > [!NOTE]  
 > Так как основные и архивные почтовые ящики перемещаются по умолчанию, это не требуется явно указывать в командной консоли Exchange.
@@ -385,26 +387,32 @@ CSV-файл для пакета миграции IMAP должен содерж
 
 Часть файла CrossForestBatch1.csv для данного пакета миграции выглядит следующим образом.
 
-    EmailAddress,TargetDatabase,TargetArchiveDatabase
-    user1@contoso.com,EXCH-MBX-01,EXCH-MBX-A01
-    user2@contoso.com,,
-    user3@contoso.com,EXCH-MBX-01,
-    ...
+```powershell
+EmailAddress,TargetDatabase,TargetArchiveDatabase
+user1@contoso.com,EXCH-MBX-01,EXCH-MBX-A01
+user2@contoso.com,,
+user3@contoso.com,EXCH-MBX-01,
+...
+```
 
 Поскольку значения в CSV-файле переопределяют значения для пакета миграции, основные и архивные почтовые ящики пользователя user1 перемещаются в расположения EXCH-MBX-01 и EXCH-MBX-A01 соответственно в конечном лесу. Основные и архивные почтовые ящики пользователя user2 перемещаются в расположение EXCH-MBX-02 или EXCH-MBX-03. Основной почтовый ящик пользователя user3 перемещается в расположение EXCH-MBX-01, а архивный почтовый ящик — в расположение EXCH-MBX-A02 или EXCH-MBX-A03.
 
 Рассмотрим другой пример. Допустим, вы создаете пакет для входящей удаленной миграции при гибридном развертывании, чтобы перенести архивные почтовые ящики в Exchange Online с помощью приведенной ниже команды.
 
-    New-MigrationBatch -Name OnBoarding1 -SourceEndpoint RemoteEndpoint1 -TargetDeliveryDomain cloud.contoso.com -CSVData ([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\OnBoarding1.csv")) -MailboxType ArchiveOnly -AutoStart
+```powershell
+New-MigrationBatch -Name OnBoarding1 -SourceEndpoint RemoteEndpoint1 -TargetDeliveryDomain cloud.contoso.com -CSVData ([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\OnBoarding1.csv")) -MailboxType ArchiveOnly -AutoStart
+```
 
 Однако вы также хотите переместить основные почтовые ящики для выбранных пользователей, поэтому часть файла OnBoarding1.csv для данного пакета миграции будет выглядеть следующим образом.
 
-    EmailAddress,MailboxType
-    user1@contoso.com,
-    user2@contoso.com,
-    user3@cloud.contoso.com,PrimaryAndArchive
-    user4@cloud.contoso.com,PrimaryAndArchive
-    ...
+```powershell
+EmailAddress,MailboxType
+user1@contoso.com,
+user2@contoso.com,
+user3@cloud.contoso.com,PrimaryAndArchive
+user4@cloud.contoso.com,PrimaryAndArchive
+...
+```
 
 Поскольку значение типа почтового ящика в CSV-файле переопределяет значения параметра *MailboxType* в команде по созданию пакета, в Exchange Online переносится только архивный почтовый ящик для пользователей user1 и user2. Однако основные и архивные почтовые ящики пользователей user3 и user4 перемещаются в Exchange Online.
 
