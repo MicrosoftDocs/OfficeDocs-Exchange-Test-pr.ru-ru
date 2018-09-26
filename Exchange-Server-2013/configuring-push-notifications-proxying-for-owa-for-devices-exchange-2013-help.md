@@ -179,9 +179,11 @@ Else
     
 Пример ожидаемого результата приведен ниже.
     
+```powershell
     Please enter the administrator user name and password of the Office 365 tenant domain...
     Adding a key to Service Principal...
     Complete.
+```
 
 ## Включение передачи push-уведомлений
 

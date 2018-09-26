@@ -77,11 +77,23 @@ BlockedRecipients : {chris@contoso.com}
 <tbody>
 <tr class="odd">
 <td><p>Добавление одного или нескольких значений ко многозначному свойству</p></td>
-<td><pre><code>@{Add=&quot;&lt;value1&gt;&quot;, &quot;&lt;value2&gt;&quot;, &quot;&lt;value3&gt;&quot;}</code></pre></td>
+<td>
+
+```powershell
+@{Add="<value1>", "<value2>", "<value3>"}
+```
+
+</td>
 </tr>
 <tr class="even">
 <td><p>Удаление одного или нескольких значений из многозначного свойства</p></td>
-<td><pre><code>@{Remove=&quot;&lt;value1&gt;&quot;, &quot;&lt;value2&gt;&quot;, &quot;&lt;value3&gt;&quot;}</code></pre></td>
+<td>
+
+```powershell
+@{Remove="<value1>", "<value2>", "<value3>"}
+```
+
+</td>
 </tr>
 </tbody>
 </table>

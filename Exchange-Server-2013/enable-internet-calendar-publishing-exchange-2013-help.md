@@ -140,7 +140,9 @@ Get-OwaVirtualDirectory | format-list
 
 В данном примере показано создание политики общего доступа для публикации интернет-календарей и настройка этой политики для обеспечения общего доступа только к данным о доступности. Политика включена.
 
+```powershell
     New-SharingPolicy -Name "Internet" -Domains 'Anonymous: CalendarSharingFreeBusySimple' -Enabled $true
+```
 
 В данном примере показано добавление политики общего доступа для почтового ящика пользователя.
 
@@ -194,7 +196,9 @@ Get-SharingPolicy <policy name> | format-list
 
 В этом примере изменяется политика общего доступа по умолчанию, а также проводится настройка политики для общего доступа только к сведениям о доступности. Политика включена.
 
+```powershell
     Set-SharingPolicy -Name "Default Sharing Policy" -Domains 'Anonymous: CalendarSharingFreeBusySimple' -Enabled $true
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Set-Mailbox](https://technet.microsoft.com/ru-ru/library/bb123981\(v=exchg.150\)).
 

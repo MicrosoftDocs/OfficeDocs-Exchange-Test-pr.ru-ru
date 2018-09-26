@@ -41,10 +41,12 @@ _**Последнее изменение раздела:** 2012-10-03_
 
 3.  В диалоговом окне **Свойства** в разделе **Заголовки Интернета** воспользуйтесь полосой прокрутки, чтобы просмотреть пометки нежелательной почты, как показано в следующем примере.
     
+    ```powershell
         X-MS-Exchange-Organization-PCL:7
         X-MS-Exchange-Organization-SCL:6
         X-MS-Exchange-Organization-Antispam-Report: DV:3.1.3924.1409;SID:SenderIDStatus Fail;PCL:PhishingLevel SUSPICIOUS;CW:CustomList;PP:Presolved;TIME:TimeBasedFeatures
-
+    ```
+    
 ## Просмотр пометок нежелательной почты с помощью Outlook 2007
 
 1.  В Outlook 2007 на клиентском компьютере в окне **Почта** дважды щелкните сообщение, чтобы открыть его.
@@ -52,8 +54,10 @@ _**Последнее изменение раздела:** 2012-10-03_
 2.  На вкладке **Сообщение** в группе **Параметры** выберите **Параметры сообщения**.
 
 3.  В диалоговом окне **Параметры сообщения** в разделе **Заголовки Интернета** воспользуйтесь полосой прокрути, чтобы просмотреть метки защиты от нежелательной почты, как показано в следующем примере.
-    
+
+    ```powershell
         X-MS-Exchange-Organization-PCL:7
         X-MS-Exchange-Organization-SCL:6
         X-MS-Exchange-Organization-Antispam-Report: DV:3.1.3924.1409;SID:SenderIDStatus Fail;PCL:PhishingLevel SUSPICIOUS;CW:CustomList;PP:Presolved;TIME:TimeBasedFeatures
-
+    ```
+    

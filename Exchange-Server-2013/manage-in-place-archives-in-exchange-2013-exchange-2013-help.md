@@ -77,8 +77,10 @@ _**Последнее изменение раздела:** 2016-02-01_
 
 В этом примере показано, как в Active Directory создать пользователя с именем Григорий Верный, а также создать почтовый ящик в базе данных почтовых ящиков DB01 и включить архив. При следующем входе необходимо сбросить пароль. Чтобы задать значение исходного пароля в этом примере создается переменная ($password), появляется запрос на ввод пароля, а затем этот пароль назначается переменной как объект SecureString.
 
+```powershell
     $password = Read-Host "Enter password" -AsSecureString
     New-Mailbox -UserPrincipalName chris@contoso.com -Alias chris -Archive -Database "DB01" -Name ChrisAshton -OrganizationalUnit Users -Password $password -FirstName Chris -LastName Ashton -DisplayName "Chris Ashton" 
+```
 
 Подробные сведения о синтаксисе и параметрах см. в статье [New-Mailbox](https://technet.microsoft.com/ru-ru/library/aa997663\(v=exchg.150\)).
 
@@ -122,7 +124,9 @@ Enable-Mailbox "Tony Smith" -Archive
 
 В этом примере показано, как извлечь из базы данных DB01 почтовые ящики, для которых не включен локальный или облачный архив и имя которых не начинается со строки DiscoverySearchMailbox. Результат передается в командлет **Enable-Mailbox**, который включает архив для всех почтовых ящиков в базе данных почтовых ящиков DB01.
 
+```powershell
     Get-Mailbox -Database DB01 -Filter {ArchiveGuid -Eq $null -AND ArchiveDomain -eq $null -AND Name -NotLike "DiscoverySearchMailbox*"} | Enable-Mailbox -Archive
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделах [Enable-Mailbox](https://technet.microsoft.com/ru-ru/library/aa998251\(v=exchg.150\)) и [Get-Mailbox](https://technet.microsoft.com/ru-ru/library/bb123685\(v=exchg.150\)).
 
@@ -133,6 +137,7 @@ Enable-Mailbox "Tony Smith" -Archive
   - В Центре администрирования Exchange перейдите к разделу **Получатели** \> **Почтовые ящики** и выберите почтовый ящик из списка. В области сведений в разделе **Встроенный архив** убедитесь, что установлено значение **Включено**. Нажмите **Просмотреть сведения**, чтобы просмотреть свойства архива, включая состояние архива и базу данных почтовых ящиков, в которой он создан.
 
   - Чтобы просмотреть сведения о новом архиве, выполните в командной консоли следующую команду.
+
     ```powershell
         Get-Mailbox <Name> | FL Name,*Archive*
     ```
@@ -177,6 +182,7 @@ Disable-Mailbox -Identity "Chris Ashton" -Archive
   - Выберите почтовый ящик в Центре администрирования Exchange. Затем в области сведений проверьте его архивное состояние в разделе **Встроенный архив**.
 
   - Чтобы проверить свойства архива для пользователя почтового ящика, введите в командной консоли следующую команду.
+  
     ```powershell
         Get-Mailbox -Identity "Chris Ashton" | Format-List *Archive*
     ```

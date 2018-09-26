@@ -55,7 +55,9 @@ _**Последнее изменение раздела:** 2013-02-18_
 
 Чтобы настроить ведение журнала подключения, выполните следующую команду.
 
+```powershell
     <Set-TransportService | Set-MailboxTransportService | Set-FrontEndTransportService> <ServerIdentity> -ConnectivityLogEnabled <$true | $false> -ConnectivityLogMaxAge <dd.hh:mm:ss> -ConnectivityLogMaxDirectorySize <Size> -ConnectivityLogMaxFileSize <Size> -ConnectivityLogPath <LocalFilePath>
+```
 
 В этом примере показана установка следующих параметров журнала подключения в службе транспорта на сервере почтовых ящиков с именем Mailbox01.
 
@@ -69,7 +71,9 @@ _**Последнее изменение раздела:** 2013-02-18_
 
 <!-- end list -->
 
+```powershell
     Set-TransportService Mailbox01 -ConnectivityLogPath "D:\Hub Connectivity Log" -ConnectivityLogMaxFileSize 20MB -ConnectivityLogMaxDirectorySize 1.5GB -ConnectivityLogMaxAge 45.00:00:00
+```
 
 > [!NOTE]  
 > <ul><li><p>Чтобы настроить параметры журнала подключения в службе транспорта почтовых ящиков на сервере почтовых ящиков, воспользуйтесь командлетом <strong>Set-MailboxTransportService</strong>. Чтобы настроить параметры журнала подключения во внешней службе транспорта на сервере клиентского доступа, воспользуйтесь командлетом <strong>Set-FrontEndTransportService</strong>.</p></li>
@@ -84,7 +88,9 @@ _**Последнее изменение раздела:** 2013-02-18_
 
 1.  В командной консоли выполните следующую команду:
     
+    ```powershell
         <Get-TransportService | Get-FrontEndTransportService | Get-MailboxTransportService> <ServerIdentity> | Format-List ConnectivityLog*
-
+    ```
+    
 2.  Убедитесь, что отображаются значения, которые вы настроили.
 

@@ -229,15 +229,17 @@ _**Последнее изменение раздела:** 2015-03-09_
 
 Это часть шаблона политики содержит список команд командной консоли Exchange, которые используются для создания экземпляра определения политики. Процесс импорта будет выполнять все команды в рамках процесса создания экземпляра. Ниже приведены примеры команд политики.
 
-  ```powershell<PolicyCommands>
+```powershell
+  <PolicyCommands>
   <!-- The contents below are applied/executed as rules directly in PS - -->
         <CommandBlock> <![CDATA[ new-transportRule "PCI-DSS: Monitor Payment Card Information Sent To Outside" -DlpPolicy "PCI-DSS" -SentToScope NotInOrganization -SetAuditSeverity High -MessageContainsDataClassifications @{Name="Credit Card Number"; MinCount="1" } -Comments "Monitors payment card information sent to outside the organization as part of the PCI-DSS DLP policy."]]></CommandBlock>
         <CommandBlock><![CDATA[ new-transportRule "PCI-DSS: Monitor Payment Card Information Sent To Within" -DlpPolicy "PCI-DSS" -Comments "Monitors payment card information sent inside the organization as part of the PCI-DSS DLP policy." -SentToScope InOrganization -SetAuditSeverity Low -MessageContainsDataClassifications @{Name="Credit Card Number"; MinCount="1" } ]]> </CommandBlock>
     </PolicyCommands> 
+```
 
 Формат командлетов — стандартный синтаксис командлетов командной консоли Exchange. Команды выполняются по порядку. Каждый из узлов команд может содержать блок сценария, в который войдут несколько команд. Ниже приведен пример, в котором показано, как включить пакет правил классификации внутри шаблона политики DLP и установить пакет правил при создании политики. Пакет правил классификации встраивается в шаблон политики, а затем передается командлету в шаблоне в качестве параметра:
 
-``` 
+```powershell
 <CommandBlock>
   <![CDATA[
 $rulePack = [system.Text.Encoding]::Unicode.GetBytes('<?xml version="1.0" encoding="utf-16"?>
