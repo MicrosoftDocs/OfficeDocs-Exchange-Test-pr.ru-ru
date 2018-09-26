@@ -88,36 +88,40 @@ _**Последнее изменение раздела:** 2015-03-09_
 
 Шаблоны политики DLP выражаются в XML-документах, которые соответствуют следующей схеме. Обратите внимание на то, что в XML-документе учитывается регистр. Например, `dlpPolicyTemplates` сработает, а `DlpPolicyTemplates` не сработает.
 
-    <?xml version="1.0" encoding="UTF-8"?>
-    <dlpPolicyTemplates>
-      <dlpPolicyTemplate id="F7C29AEC-A52D-4502-9670-141424A83FAB" mode="Audit" state="Enabled" version="15.0.2.0">
-        <contentVersion>4</contentVersion>
-        <publisherName>Microsoft</publisherName>
-        <name>
-          <localizedString lang="en">PCI-DSS</localizedString>
-        </name>
-        <description>
-          <localizedString lang="en">Detects the presence of information subject to Payment Card Industry Data Security Standard (PCI-DSS) compliance requirements.</localizedString>
-        </description>
-        <keywords></keywords>
-        <ruleParameters></ruleParameters>
-        <ruleParameters/>
-        <policyCommands>
-          <!-- The contents below are applied/executed as rules directly in PS - -->
-          <commandBlock>
-            <![CDATA[ new-transportRule "PCI-DSS: Monitor Payment Card Information Sent To Outside" -DlpPolicy "%%DlpPolicyName%%" -SentToScope NotInOrganization -SetAuditSeverity High -MessageContainsDataClassifications @{Name="Credit Card Number"; MinCount="1" } -Comments "Monitors payment card information sent to outside the organization as part of the PCI-DSS DLP Policy."]]>
-          </commandBlock>
-          <commandBlock>
-            <![CDATA[ new-transportRule "PCI-DSS: Monitor Payment Card Information Sent To Within" -DlpPolicy "%%DlpPolicyName%%" -Comments "Monitors payment card information sent inside the organization as part of the PCI-DSS DLP Policy." -SentToScope InOrganization -SetAuditSeverity Low -MessageContainsDataClassifications @{Name="Credit Card Number"; MinCount="1" } ]]>
-          </commandBlock>
-        </policyCommands>
-        <policyCommandsResources></policyCommandsResources>
-      </dlpPolicyTemplate>
-    </dlpPolicyTemplates>
+  ```xml
+  <?xml version="1.0" encoding="UTF-8"?>
+  <dlpPolicyTemplates>
+    <dlpPolicyTemplate id="F7C29AEC-A52D-4502-9670-141424A83FAB" mode="Audit" state="Enabled" version="15.0.2.0">
+      <contentVersion>4</contentVersion>
+      <publisherName>Microsoft</publisherName>
+      <name>
+        <localizedString lang="en">PCI-DSS</localizedString>
+      </name>
+      <description>
+        <localizedString lang="en">Detects the presence of information subject to Payment Card Industry Data Security Standard (PCI-DSS) compliance requirements.</localizedString>
+      </description>
+      <keywords></keywords>
+      <ruleParameters></ruleParameters>
+      <ruleParameters/>
+      <policyCommands>
+        <!-- The contents below are applied/executed as rules directly in PS - -->
+        <commandBlock>
+          <![CDATA[ new-transportRule "PCI-DSS: Monitor Payment Card Information Sent To Outside" -DlpPolicy "%%DlpPolicyName%%" -SentToScope NotInOrganization -SetAuditSeverity High -MessageContainsDataClassifications @{Name="Credit Card Number"; MinCount="1" } -Comments "Monitors payment card information sent to outside the organization as part of the PCI-DSS DLP Policy."]]>
+        </commandBlock>
+        <commandBlock>
+          <![CDATA[ new-transportRule "PCI-DSS: Monitor Payment Card Information Sent To Within" -DlpPolicy "%%DlpPolicyName%%" -Comments "Monitors payment card information sent inside the organization as part of the PCI-DSS DLP Policy." -SentToScope InOrganization -SetAuditSeverity Low -MessageContainsDataClassifications @{Name="Credit Card Number"; MinCount="1" } ]]>
+        </commandBlock>
+      </policyCommands>
+      <policyCommandsResources></policyCommandsResources>
+    </dlpPolicyTemplate>
+  </dlpPolicyTemplates>
+  ```
 
 Если параметр, который вы включаете в XML-файл для любого элемента, содержит пробел, параметр необходимо заключить в двойные кавычки, иначе он не будет работать надлежащим образом. В приведенном ниже примере параметр, который следует за `-SentToScope`, является допустимым и не включает двойные кавычки, поскольку представляет собой одну непрерывную строку символов без пробела. Однако параметр, предоставленный для –`Comments`, не отобразится в Центре администрирования Exchange, поскольку не заключен в двойные кавычки и содержит пробелы.
 
-    <CommandBlock><![CDATA[ new-transportRule "PCI-DSS: Monitor Payment Card Information Sent To Within" -DlpPolicy "PCI-DSS" -Comments Monitors payment card information sent inside the organization -SentToScope InOrganization -SetAuditSeverity Low -MessageContainsDataClassifications @{Name="Credit Card Number"; MinCount="1" } ]]> </CommandBlock>
+  ```xml
+  <CommandBlock><![CDATA[ new-transportRule "PCI-DSS: Monitor Payment Card Information Sent To Within" -DlpPolicy "PCI-DSS" -Comments Monitors payment card information sent inside the organization -SentToScope InOrganization -SetAuditSeverity Low -MessageContainsDataClassifications @{Name="Credit Card Number"; MinCount="1" } ]]> </CommandBlock>
+  ```
 
 ## Элемент localizedString
 
@@ -225,11 +229,11 @@ _**Последнее изменение раздела:** 2015-03-09_
 
 Это часть шаблона политики содержит список команд командной консоли Exchange, которые используются для создания экземпляра определения политики. Процесс импорта будет выполнять все команды в рамках процесса создания экземпляра. Ниже приведены примеры команд политики.
 
-    <PolicyCommands>
-        <!-- The contents below are applied/executed as rules directly in PS - -->
-          <CommandBlock> <![CDATA[ new-transportRule "PCI-DSS: Monitor Payment Card Information Sent To Outside" -DlpPolicy "PCI-DSS" -SentToScope NotInOrganization -SetAuditSeverity High -MessageContainsDataClassifications @{Name="Credit Card Number"; MinCount="1" } -Comments "Monitors payment card information sent to outside the organization as part of the PCI-DSS DLP policy."]]></CommandBlock>
-          <CommandBlock><![CDATA[ new-transportRule "PCI-DSS: Monitor Payment Card Information Sent To Within" -DlpPolicy "PCI-DSS" -Comments "Monitors payment card information sent inside the organization as part of the PCI-DSS DLP policy." -SentToScope InOrganization -SetAuditSeverity Low -MessageContainsDataClassifications @{Name="Credit Card Number"; MinCount="1" } ]]> </CommandBlock>
-      </PolicyCommands> 
+  ```powershell<PolicyCommands>
+  <!-- The contents below are applied/executed as rules directly in PS - -->
+        <CommandBlock> <![CDATA[ new-transportRule "PCI-DSS: Monitor Payment Card Information Sent To Outside" -DlpPolicy "PCI-DSS" -SentToScope NotInOrganization -SetAuditSeverity High -MessageContainsDataClassifications @{Name="Credit Card Number"; MinCount="1" } -Comments "Monitors payment card information sent to outside the organization as part of the PCI-DSS DLP policy."]]></CommandBlock>
+        <CommandBlock><![CDATA[ new-transportRule "PCI-DSS: Monitor Payment Card Information Sent To Within" -DlpPolicy "PCI-DSS" -Comments "Monitors payment card information sent inside the organization as part of the PCI-DSS DLP policy." -SentToScope InOrganization -SetAuditSeverity Low -MessageContainsDataClassifications @{Name="Credit Card Number"; MinCount="1" } ]]> </CommandBlock>
+    </PolicyCommands> 
 
 Формат командлетов — стандартный синтаксис командлетов командной консоли Exchange. Команды выполняются по порядку. Каждый из узлов команд может содержать блок сценария, в который войдут несколько команд. Ниже приведен пример, в котором показано, как включить пакет правил классификации внутри шаблона политики DLP и установить пакет правил при создании политики. Пакет правил классификации встраивается в шаблон политики, а затем передается командлету в шаблоне в качестве параметра:
 

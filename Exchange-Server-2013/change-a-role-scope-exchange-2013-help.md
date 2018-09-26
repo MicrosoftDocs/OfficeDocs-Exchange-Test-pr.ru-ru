@@ -105,7 +105,9 @@ Set-ManagementScope <scope name> -ServerRestrictionFilter { <new server filter> 
 
 В этом примере фильтр сервера изменяется для поиска всех объектов серверов, на которых свойство **ServerSite** равно "CN=Redmond,CN=Sites,CN=Configuration,DC=contoso,DC=com".
 
-    Set-ManagementScope "Company Scope" -ServerRestrictionFilter { ServerSite -eq 'CN=Redmond,CN=Sites,CN=Configuration,DC=contoso,DC=com' }
+```powershell
+Set-ManagementScope "Company Scope" -ServerRestrictionFilter { ServerSite -eq 'CN=Redmond,CN=Sites,CN=Configuration,DC=contoso,DC=com' }
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Set-ManagementScope](https://technet.microsoft.com/ru-ru/library/dd297996\(v=exchg.150\)).
 
@@ -133,7 +135,9 @@ Set-ManagementScope <scope name> -DatabaseRestrictionFilter { <new database filt
 
 В этом примере показано изменение фильтра баз данных для соответствия всем объектам баз данных, в которых свойство **Name** содержит строку Executive.
 
-    Set-ManagementScope "Database Executive Scope" -DatabaseRestrictionFilter { Name -Like "*Executive*" }
+```powershell
+Set-ManagementScope "Database Executive Scope" -DatabaseRestrictionFilter { Name -Like "*Executive*" }
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Set-ManagementScope](https://technet.microsoft.com/ru-ru/library/dd297996\(v=exchg.150\)).
 

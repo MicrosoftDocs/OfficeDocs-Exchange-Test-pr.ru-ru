@@ -41,13 +41,17 @@ _**Последнее изменение раздела:** 2012-11-29_
 
   - Выполните следующую команду, чтобы убедиться, что обратимо удаленный почтовый ящик, который необходимо подключить к учетной записи пользователя, все еще находится в базе данных почтовых ящиков и не отключен.
     
-        Get-MailboxDatabase | Get-MailboxStatistics | Where { $_.DisplayName -eq "<display name>" } | fl DisplayName,DisconnectReason,DisconnectDate
+    ```powershell
+    Get-MailboxDatabase | Get-MailboxStatistics | Where { $_.DisplayName -eq "<display name>" } | fl DisplayName,DisconnectReason,DisconnectDate
+    ```
     
     Обратимо удаленный почтовый ящик должен находиться в базе данных почтовых ящиков, а для свойства *DisconnectReason* необходимо установить значение `SoftDeleted`. Если почтовый ящик очищен из базы данных, команда будет выполнена безрезультатно.
     
     Также можно выполнить следующую команду, чтобы отобразить все обратимо удаленные почтовые ящики в организации.
     
-        Get-MailboxDatabase | Get-MailboxStatistics | Where { $_.DisconnectReason -eq "SoftDeleted" } | fl DisplayName,DisconnectReason,DisconnectDate
+    ```powershell
+    Get-MailboxDatabase | Get-MailboxStatistics | Where { $_.DisconnectReason -eq "SoftDeleted" } | fl DisplayName,DisconnectReason,DisconnectDate
+    ```
 
   - Сочетания клавиш для процедур, описанных в этой статье, приведены в статье [Сочетания клавиш в Центре администрирования Exchange](keyboard-shortcuts-in-the-exchange-admin-center-exchange-online-protection-help.md).
 
@@ -61,15 +65,21 @@ _**Последнее изменение раздела:** 2012-11-29_
 
 Чтобы создать запрос на восстановление почтового ящика, необходимо использовать отображаемое имя, GUID почтового ящика или прежнее различающееся имя обратимо удаленного почтового ящика. Используйте командлет **Get-MailboxStatistics**, чтобы отобразить значения свойств **DisplayName**, **MailboxGuid** и **LegacyDN** обратимо удаленного почтового ящика, который необходимо восстановить. Например, выполните следующую команду, чтобы вернуть эти сведения для всех отключенных и обратимо удаленных почтовых ящиков в организации.
 
-    Get-MailboxDatabase | Get-MailboxStatistics | Where {$_.DisconnectReason -eq "SoftDeleted"} | fl DisplayName,MailboxGuid,LegacyDN,Database
+```powershell
+Get-MailboxDatabase | Get-MailboxStatistics | Where {$_.DisconnectReason -eq "SoftDeleted"} | fl DisplayName,MailboxGuid,LegacyDN,Database
+```
 
 В этом примере выполняется восстановление обратимо удаленного почтового ящика, который идентифицируется с помощью отображаемого имени в параметре *SourceStoreMailbox* и находится в базе данных почтовых ящиков MBXDB01, в целевом почтовом ящике Debra Garcia. Параметр *AllowLegacyDNMismatch* используется, чтобы обеспечить возможность восстановления исходного почтового ящика в почтовом ящике со значением прежнего различающегося имени, отличным от обратимо удаленного почтового ящика.
 
-    New-MailboxRestoreRequest -SourceStoreMailbox "Debra Garcia" -SourceDatabase MBXDB01 -TargetMailbox "Debra Garcia" -AllowLegacyDNMismatch
+```powershell
+New-MailboxRestoreRequest -SourceStoreMailbox "Debra Garcia" -SourceDatabase MBXDB01 -TargetMailbox "Debra Garcia" -AllowLegacyDNMismatch
+```
 
 В этом примере выполняется восстановление обратимо удаленного архивного почтового ящика пользователя Pilar Pinilla, который идентифицируется с помощью GUID почтового ящика, в текущем архивном почтовом ящике данного пользователя. Параметр *AllowLegacyDNMismatch* указывать необязательно, поскольку первичный почтовый ящик и его соответствующий архивный почтовый ящик имеют одинаковое прежнее различающееся имя.
 
-    New-MailboxRestoreRequest -SourceStoreMailbox dc35895a-a628-4bba-9aa9-650f5cdb9ae7 -SourceDatabase MBXDB02 -TargetMailbox pilarp@contoso.com -TargetIsArchive
+```powershell
+New-MailboxRestoreRequest -SourceStoreMailbox dc35895a-a628-4bba-9aa9-650f5cdb9ae7 -SourceDatabase MBXDB02 -TargetMailbox pilarp@contoso.com -TargetIsArchive
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [New-MailboxRestoreRequest](https://technet.microsoft.com/ru-ru/library/ff829875\(v=exchg.150\)).
 

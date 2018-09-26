@@ -55,7 +55,9 @@ Set-MailboxServer MyMailboxServer -ManagedFolderWorkCycle 1
 
 Эта команда извлекает все серверы почтовых ящиков в организации и выводит свойства рабочего цикла помощника по работе с управляемыми папками с каждого сервера в формате таблицы. Параметр *Auto* используется для автоматического определения ширины столбцов.
 
-    Get-MailboxServer | Format-Table Name,ManagedFolderWorkCycle* -Auto
+```powershell
+Get-MailboxServer | Format-Table Name,ManagedFolderWorkCycle* -Auto
+```
 
 ## Использование командной консоли для запуска помощника по работе с управляемыми папками
 

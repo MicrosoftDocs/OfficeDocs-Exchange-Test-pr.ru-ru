@@ -43,7 +43,9 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 Для настраивания каталога раскладки используется указанный ниже синтаксис.
 
-    Set-TransportService <ServerIdentity> -PickupDirectoryPath <LocalFilePath> -PickupDirectoryMaxHeaderSize <Size> -PickupDirectoryMaxRecipientsPerMessage <Integer> -PickupDirectoryMaxMessagesPerMinute <Integer>
+```powershell
+Set-TransportService <ServerIdentity> -PickupDirectoryPath <LocalFilePath> -PickupDirectoryMaxHeaderSize <Size> -PickupDirectoryMaxRecipientsPerMessage <Integer> -PickupDirectoryMaxMessagesPerMinute <Integer>
+```
 
 В этом примере в каталог раскладки на сервере почтовых ящиков с именем Exchange01 вносятся следующие изменения.
 
@@ -57,7 +59,9 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 <!-- end list -->
 
-    Set-TransportService Exchange01 -PickupDirectoryPath "D:\Pickup Directory" -PickupDirectoryMaxHeaderSize 96KB -PickupDirectoryMaxRecipientsPerMessage 250 -PickupDirectoryMaxMessagesPerMinute 200
+```powershell
+Set-TransportService Exchange01 -PickupDirectoryPath "D:\Pickup Directory" -PickupDirectoryMaxHeaderSize 96KB -PickupDirectoryMaxRecipientsPerMessage 250 -PickupDirectoryMaxMessagesPerMinute 200
+```
 
 > [!NOTE]  
 > <ul><li><p>Установка для параметра <em>PickupDirectoryPath</em> значения<code>$null</code> отключает использование каталога раскладки.</p></li>
@@ -68,7 +72,9 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 Для настройки каталога преобразования используется указанный ниже синтаксис.
 
-    Set-TransportService <ServerIdentity> -ReplayDirectoryPath "C:\Replay Directory" <LocalFilePath> -PickupDirectoryMaxMessagesPerMinute <Integer>
+```powershell
+Set-TransportService <ServerIdentity> -ReplayDirectoryPath "C:\Replay Directory" <LocalFilePath> -PickupDirectoryMaxMessagesPerMinute <Integer>
+```
 
 В этом примере в каталог преобразования на сервере почтовых ящиков с именем Exchange01 вносятся следующие изменения.
 
@@ -78,7 +84,9 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 <!-- end list -->
 
-    Set-TransportService Exchange01 -ReplayDirectoryPath "D:\Replay Directory" -PickupDirectoryMaxMessagesPerMinute 200
+```powershell
+Set-TransportService Exchange01 -ReplayDirectoryPath "D:\Replay Directory" -PickupDirectoryMaxMessagesPerMinute 200
+```
 
 > [!NOTE]  
 > <ul>
@@ -93,7 +101,9 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 1.  Выполните следующую команду:
     
-        Get-TransportService <ServerIdentity> | Format-List Pickup*,Replay*
-
+    ```powershell
+    Get-TransportService <ServerIdentity> | Format-List Pickup*,Replay*
+    ```
+    
 2.  Убедитесь, что отображаются значения, которые вы настроили.
 

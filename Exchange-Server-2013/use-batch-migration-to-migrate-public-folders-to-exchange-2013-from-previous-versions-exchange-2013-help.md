@@ -119,19 +119,21 @@ Exchange поддерживает перемещение общедоступн�
     
       - Выполните следующую команду, чтобы сделать моментальный снимок разрешений:
         ```powershell
-            Get-PublicFolder -Recurse | Get-PublicFolderClientPermission | Select-Object Identity,User -ExpandProperty AccessRights | Export-CliXML C:\PFMigration\Legacy_PFPerms.xml
+        Get-PublicFolder -Recurse | Get-PublicFolderClientPermission | Select-Object Identity,User -ExpandProperty AccessRights | Export-CliXML C:\PFMigration\Legacy_PFPerms.xml
 		```
     Сохраните сведения из предыдущих команд для сравнения после завершения переноса.
 
 2.  Если имя общедоступной папки содержит обратную косую черту (**\\**), то после переноса общедоступные папки будут созданы внутри родительской общедоступной папки. Перед переносом мы советуем переименовать общедоступные папки с обратной косой чертой в имени.
     
     1.  Чтобы найти общедоступные папки с обратной косой чертой в имени, на сервере Exchange 2010 выполните следующую команду:
+        
         ```powershell
-            Get-PublicFolderStatistics -ResultSize Unlimited | Where {($_.Name -like "*\*") -or ($_.Name -like "*/*") } | Format-List Name, Identity
+        Get-PublicFolderStatistics -ResultSize Unlimited | Where {($_.Name -like "*\*") -or ($_.Name -like "*/*") } | Format-List Name, Identity
 		```
     2.  Чтобы найти общедоступные папки с обратной косой чертой в имени, на сервере Exchange 2007 выполните следующую команду:
+        
         ```powershell
-            Get-PublicFolderDatabase | ForEach {Get-PublicFolderStatistics -Server $_.Server | Where {$_.Name -like "*\*"}}
+        Get-PublicFolderDatabase | ForEach {Get-PublicFolderStatistics -Server $_.Server | Where {$_.Name -like "*\*"}}
 		```
     3.  Если эта команда возвращает сведения об общедоступных папках, переименуйте их с помощью следующей команды:
         
@@ -185,8 +187,9 @@ Exchange поддерживает перемещение общедоступн�
     > Перед удалением запроса на миграцию важно понять, почему он существовал. Выполните следующие команды, чтобы определить, когда сделан предыдущий запрос, и обнаружить любые возможные проблемы. Чтобы определить, почему сделано это изменение, может потребоваться консультация с другими администраторами в организации.
     
     В примере ниже показано обнаружение существующих запросов на последовательную миграцию.
+    
     ```powershell
-        Get-PublicFolderMigrationRequest | Get-PublicFolderMigrationRequestStatistics -IncludeReport | Format-List
+    Get-PublicFolderMigrationRequest | Get-PublicFolderMigrationRequestStatistics -IncludeReport | Format-List
     ```
     В примере ниже показано удаление существующих запросов на последовательную миграцию общедоступных папок.
     
@@ -195,8 +198,9 @@ Exchange поддерживает перемещение общедоступн�
 	```
     
     В примере ниже показано обнаружение существующих запросов на пакетную миграцию.
+    
     ```powershell
-        $batch = Get-MigrationBatch | ?{$_.MigrationType.ToString() -eq "PublicFolder"}
+    $batch = Get-MigrationBatch | ?{$_.MigrationType.ToString() -eq "PublicFolder"}
     ```
     В примере ниже показано удаление существующих запросов на пакетную миграцию общедоступных папок.
     
@@ -207,8 +211,9 @@ Exchange поддерживает перемещение общедоступн�
 2.  Убедитесь, что на серверах Exchange 2013 нет общедоступных папок или почтовых ящиков общедоступных папок.
     
     1.  Выполните следующую команду, чтобы проверить наличие почтовых ящиков общедоступных папок.
+        
         ```powershell
-            Get-Mailbox -PublicFolder 
+        Get-Mailbox -PublicFolder 
 		```
     2.  Если команда не вернула никаких почтовых ящиков общедоступных папок, перейдите к Step 3: Generate the CSV files. Если команда вернула какие-либо общедоступные папки, запустите следующую команду, чтобы проверить наличие каких-либо общедоступных папок:
         
@@ -222,7 +227,7 @@ Exchange поддерживает перемещение общедоступн�
         > При удалении общедоступных папок вся информация в них удаляется безвозвратно.
         
         ```powershell
-            Get-Mailbox -PublicFolder | Where{$_.IsRootPublicFolderMailbox -eq $false} | Remove-Mailbox -PublicFolder -Force -Confirm:$false
+        Get-Mailbox -PublicFolder | Where{$_.IsRootPublicFolderMailbox -eq $false} | Remove-Mailbox -PublicFolder -Force -Confirm:$false
         ```
                
         ```powershell
@@ -254,8 +259,10 @@ Exchange поддерживает перемещение общедоступн�
 
 1.  На сервере Exchange Server прежних версий запустите сценарий `Export-PublicFolderStatistics.ps1`, чтобы создать файл сопоставления имени и размера папки. Этот сценарий должен запускать локальный администратор. Этот файл будет содержать два столбца: **FolderName** и **FolderSize**. Значения для столбца **FolderSize** будут отображены в байтах (например, **\\PublicFolder01,10000**).
     
-        .\Export-PublicFolderStatistics.ps1  <Folder to size map path> <FQDN of source server>
-    
+    ```powershell
+    .\Export-PublicFolderStatistics.ps1  <Folder to size map path> <FQDN of source server>
+    ```
+
       - *FQDN of source server* указывает полное доменное имя сервера почтовых ящиков, на котором размещена иерархия общедоступных папок.
     
       - *Folder to size map path* указывает имя файла и путь к этому файлу в сетевой общедоступной папке, в которой необходимо сохранить CSV-файл. Для дальнейших действий в этом разделе вам потребуется доступ к этому файлу с сервера Exchange 2013. Если указать только имя файла, он будет создан в текущем каталоге оболочки PowerShell на локальном компьютере.
@@ -265,8 +272,9 @@ Exchange поддерживает перемещение общедоступн�
     > [!NOTE]  
     > Если имя общедоступной папки содержит обратную косую черту (<strong>\\</strong>), то общедоступные папки будут созданы внутри родительской общедоступной папки. Мы советуем вам просмотреть CSV-файл и изменить имена папок с обратной косой чертой.
     
-        .\PublicFolderToMailboxMapGenerator.ps1 <Maximum mailbox size in bytes> <Folder to size map path> <Folder to mailbox map path>
-    
+    ```powershell
+    .\PublicFolderToMailboxMapGenerator.ps1 <Maximum mailbox size in bytes> <Folder to size map path> <Folder to mailbox map path>
+    ```
       - *Maximum mailbox size in bytes* указывает максимальный размер новых почтовых ящиков общедоступных папок. Указывая значение данного параметра, обязательно оставьте свободное место на случай увеличения размера почтового ящика общедоступных папок.
     
       - *Folder to size map path* указывает путь к CSV-файлу, созданному при запуске сценария `Export-PublicFolderStatistics.ps1`.
@@ -276,8 +284,9 @@ Exchange поддерживает перемещение общедоступн�
 ## Шаг 4. Создание почтовых ящиков общедоступных папок в Exchange 2013
 
 1.  Выполните следующую команду, чтобы создать целевые почтовые ящики общедоступной папки. Сценарий создаст целевой почтовый ящик для каждого ящика в файле .csv, созданного на шаге 3, запустив сценарий PublicFoldertoMailboxMapGenerator.ps1.
+    
     ```powershell
-        .\Create-PublicFolderMailboxesForMigration.ps1 -FolderMappingCsv Mapping.csv -EstimatedNumberOfConcurrentUsers:<estimate>
+    .\Create-PublicFolderMailboxesForMigration.ps1 -FolderMappingCsv Mapping.csv -EstimatedNumberOfConcurrentUsers:<estimate>
     ```
     *Mapping.csv* — файл, созданный сценарием PublicFoldertoMailboxMapGenerator.ps1 на шаге 3. Предполагаемое количество одновременных подключений пользователей, просматривающих иерархию общедоступной папки, обычно меньше, чем общее количество пользователей в организации.
 
@@ -296,13 +305,14 @@ Exchange поддерживает перемещение общедоступн�
     ```powershell
     $PublicFolderDatabasesInOrg = @(Get-PublicFolderDatabase)
     ```
+    
     ```powershell 
     $BadItemLimitCount = 5 + ($PublicFolderDatabasesInOrg.Count -1)
     ```
 
 2.  Выполните следующую команду на сервере Exchange 2013:
     ```powershell
-        New-MigrationBatch -Name PFMigration -SourcePublicFolderDatabase (Get-PublicFolderDatabase -Server <Source server name>) -CSVData (Get-Content <Folder to mailbox map path> -Encoding Byte) -NotificationEmails <email addresses for migration notifications> -BadItemLimit $BadItemLimitCount 
+    New-MigrationBatch -Name PFMigration -SourcePublicFolderDatabase (Get-PublicFolderDatabase -Server <Source server name>) -CSVData (Get-Content <Folder to mailbox map path> -Encoding Byte) -NotificationEmails <email addresses for migration notifications> -BadItemLimit $BadItemLimitCount 
 	```
 3.  Запустите миграцию, выполнив следующую команду.
     
@@ -313,9 +323,11 @@ Exchange поддерживает перемещение общедоступн�
 **Перенос общедоступных папок из Exchange 2010**
 
 1.  Выполните следующую команду на сервере Exchange 2013.
+    
     ```powershell
-        New-MigrationBatch -Name PFMigration -SourcePublicFolderDatabase (Get-PublicFolderDatabase -Server <Source server name>) -CSVData (Get-Content <Folder to mailbox map path> -Encoding Byte) -NotificationEmails <email addresses for migration notifications> 
+    New-MigrationBatch -Name PFMigration -SourcePublicFolderDatabase (Get-PublicFolderDatabase -Server <Source server name>) -CSVData (Get-Content <Folder to mailbox map path> -Encoding Byte) -NotificationEmails <email addresses for migration notifications> 
     ```
+
     Параметр `NotificationEmails` не обязателен.
 
 2.  Запустите перенос, выполнив следующую команду:
@@ -397,8 +409,9 @@ Complete-MigrationBatch PublicFolderMigration
 После завершения переноса общедоступных папок необходимо выполнить указанную ниже проверку и убедиться, что перенос прошел успешно. Это позволит вам проверить иерархию перенесенных общедоступных папок перед тем как перейти к их использованию на сервере Exchange 2013.
 
 1.  Выполните следующую команду в PowerShell, чтобы настроить для тестовых почтовых ящиков использование любого почтового ящика с общедоступными папками после переноса как ящика с общедоступными папками по умолчанию.
+    
     ```powershell
-        Set-Mailbox -Identity <Test User> -DefaultPublicFolderMailbox <Public Folder Mailbox Identity>
+    Set-Mailbox -Identity <Test User> -DefaultPublicFolderMailbox <Public Folder Mailbox Identity>
 	```
 2.  Войдите в Outlook 2007 или более поздней версии с помощью тестового пользователя, определенного во время предыдущего действия, и выполните следующие тесты общедоступной папки:
     
@@ -447,12 +460,14 @@ Complete-MigrationBatch PublicFolderMigration
 	```
 
 2.  Выполните следующую команду, чтобы сделать моментальный снимок статистики общедоступных папок, такой как число элементов, размер и владелец.
+    
     ```powershell
-        Get-PublicFolderStatistics -ResultSize Unlimited | Export-CliXML C:\PFMigration\Cloud_PFStatistics.xml
+    Get-PublicFolderStatistics -ResultSize Unlimited | Export-CliXML C:\PFMigration\Cloud_PFStatistics.xml
 	```
 3.  Выполните следующую команду, чтобы сделать моментальный снимок разрешений.
+    
     ```powershell
-        Get-PublicFolder -Recurse | Get-PublicFolderClientPermission | Select-Object Identity,User -ExpandProperty AccessRights | Export-CliXML  C:\PFMigration\Cloud_PFPerms.xml
+    Get-PublicFolder -Recurse | Get-PublicFolderClientPermission | Select-Object Identity,User -ExpandProperty AccessRights | Export-CliXML  C:\PFMigration\Cloud_PFPerms.xml
 	```
 ## Удаление баз данных общедоступных папок с серверов Exchange прежних версий
 
@@ -479,8 +494,9 @@ Complete-MigrationBatch PublicFolderMigration
 2.  На сервере Exchange 2013 выполните следующие команды для удаления почтовых ящиков с общедоступными папками.
     
     ```powershell
-      Get-Mailbox -PublicFolder | Where{$_.IsRootPublicFolderMailbox -eq $false} | Remove-Mailbox -PublicFolder -Force -Confirm:$false
+    Get-Mailbox -PublicFolder | Where{$_.IsRootPublicFolderMailbox -eq $false}|Remove-Mailbox -PublicFolder -Force -Confirm:$false
 	```
+
 	```powershell
 	Get-Mailbox -PublicFolder | Remove-Mailbox -PublicFolder -Force -Confirm:$false
 	```

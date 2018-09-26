@@ -109,12 +109,16 @@ _**Последнее изменение раздела:** 2015-04-07_
 
 1.  Удалите назначения обычной роли и роли делегирования, которые назначают роль "Создание получателей почты" группе ролей или универсальной группе безопасности, членами которой являются администраторы Active Directory, с помощью следующей команды. В этой команде группа ролей "Администраторы Active Directory" используется в качестве примера. Параметр *WhatIf* позволяет просмотреть назначения ролей, которые будут удалены. Удалите параметр *WhatIf* и выполните эту команду повторно, чтобы удалить назначения ролей.
     
-        Get-ManagementRoleAssignment -Role "Mail Recipient Creation" | Where { $_.RoleAssigneeName -EQ "Active Directory Administrators" } | Remove-ManagementRoleAssignment -WhatIf
+    ```powershell
+    Get-ManagementRoleAssignment -Role "Mail Recipient Creation" | Where { $_.RoleAssigneeName -EQ "Active Directory Administrators" } | Remove-ManagementRoleAssignment -WhatIf
+    ```
 
 2.  Удалите назначения обычных ролей и ролей делегирования, которые назначают роль создания и членства в группе безопасности группе ролей или универсальной группе безопасности, содержащей в качестве участников администраторов Active Directory, с помощью следующей команды. В этой команде группа ролей "Администраторы Active Directory" используется в качестве примера. Параметр *WhatIf* позволяет просмотреть назначения ролей, которые будут удалены. Удалите параметр *WhatIf* и выполните эту команду повторно, чтобы удалить назначения ролей.
+
     ```powershell
         Get-ManagementRoleAssignment -Role "Security Group Creation and Membership" | Where { $_.RoleAssigneeName -EQ "Active Directory Administrators" } | Remove-ManagementRoleAssignment -WhatIf
     ```
+    
 3.  Необязательно. При необходимости удалить все разрешения Exchange, предоставленные администраторам Active Directory, можно удалить группу ролей или универсальную группу безопасности, участниками которой они являются. Дополнительные сведения об удалении группы ролей см. в разделе [Управление группами ролей](manage-role-groups-exchange-2013-help.md).
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделах [Get-ManagementRoleAssignment](https://technet.microsoft.com/ru-ru/library/dd351024\(v=exchg.150\)) или [Remove-ManagementRoleAssignment](https://technet.microsoft.com/ru-ru/library/dd351205\(v=exchg.150\)).

@@ -129,8 +129,8 @@ _**Последнее изменение раздела:** 2018-04-16_
     2.  Выполните следующую команду.
         
         ```powershell
-	Add-PSSnapin Microsoft.Exchange.Management.PowerShell.SnapIn
-	```
+        Add-PSSnapin Microsoft.Exchange.Management.PowerShell.SnapIn
+        ```
     
     3.  Выполните задачи по управлению агентом транспорта обычным способом.
     
@@ -159,9 +159,10 @@ _**Последнее изменение раздела:** 2018-04-16_
       - **Описание**. Сбой входящей проверки подлинности для соединителя приема \<*server name*\>. Ошибка: `IllegalMessage`. Механизм проверки подлинности: Gssapi. Исходный IP-адрес клиента, который предпринял попытку проверки подлинности для Exchange: \[\<*client IP address*\>\].
     
     Чтобы устранить эту проблему, удалите метод проверки подлинности `Integrated` из клиентского соединителя приема на серверах клиентского доступа Exchange 2013. Чтобы удалить метод проверки подлинности `Integrated`, выполните следующую команду на каждом сервере клиентского доступа Exchange 2013, который может принимать соединения от компьютеров, выполнив командлет **Send-MailMessage**:
+    
     ```powershell
-        Set-ReceiveConnector "<server name>\Client Frontend <server name>" -AuthMechanism Tls, BasicAuth, BasicAuthRequireTLS
-	```
+    Set-ReceiveConnector "<server name>\Client Frontend <server name>" -AuthMechanism Tls, BasicAuth, BasicAuthRequireTLS
+	  ```
   - **Протокол MAPI через HTTP может не работать должным образом после обновления до Exchange 2013 с пакетом обновления 1 (SP1)**. Если вы выполните обновление с накопительного пакета обновления Exchange 2013 до Exchange 2013 с пакетом обновления 1 (SP1) и включите протокол MAPI через HTTP, клиенты, подключающиеся к серверу Exchange 2013 с пакетом обновления 1 (SP1) с помощью данного протокола, могут не работать должным образом. Это связано с тем, что при обновлении с накопительного пакета обновления до Exchange 2013 с пакетом обновления 1 (SP1) необходимые параметры не настраиваются. Эта проблема не возникает, если вы обновляете Exchange 2013 RTM до Exchange 2013 с пакетом обновления 1 (SP1) или более поздних версий или устанавливаете новый сервер Exchange 2013 с пакетом обновления 1 (SP1).
     
     > [!NOTE]  
@@ -170,14 +171,17 @@ _**Последнее изменение раздела:** 2018-04-16_
     Чтобы решить эту проблему, выполните приведенные ниже действия.
     
     1.  На серверах с ролью сервера клиентского доступа выполните указанные ниже команды в командной строке Windows.
+        
         ```powershell
             set AppCmdLocation=%windir%\System32\inetsrv
             set ExchangeLocation=%ProgramFiles%\Microsoft\Exchange Server\V15
 		
 		    %AppCmdLocation%\appcmd.exe SET AppPool "MSExchangeMapiFrontEndAppPool" /CLRConfigFile:"%ExchangeLocation%\bin\MSExchangeMapiFrontEndAppPool_CLRConfig.config"
             %AppCmdLocation%\appcmd.exe RECYCLE AppPool "MSExchangeMapiFrontEndAppPool"
-		```
+		    ```
+        
     2.  На серверах с ролью сервера почтовых ящиков выполните указанные ниже команды в командной строке Windows.
+        
         ```powershell
             set AppCmdLocation=%windir%\System32\inetsrv
             set ExchangeLocation=%ProgramFiles%\Microsoft\Exchange Server\V15
@@ -187,7 +191,8 @@ _**Последнее изменение раздела:** 2018-04-16_
             
             %AppCmdLocation%\appcmd.exe SET AppPool "MSExchangeMapiAddressBookAppPool" /CLRConfigFile:"%ExchangeLocation%\bin\MSExchangeMapiAddressBookAppPool_CLRConfig.config"
             %AppCmdLocation%\appcmd.exe RECYCLE AppPool "MSExchangeMapiAddressBookAppPool"
-		```
+		    ```
+
 ## Совместная работа Exchange 2010
 
   - **Запросы на доступ к почтовым ящикам Exchange 2010 могут не работать при использовании прокси-серверов клиентского доступа Exchange 2013**. В некоторых ситуациях запрос прокси-сервера между Exchange 2013 и серверами клиентского доступа Exchange 2010 с пакетом обновления 3 (SP3) без накопительных пакетов обновления может работать неправильно и появится сообщение об ошибке. Это может произойти, если выполняются все следующие условия.

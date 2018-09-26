@@ -58,28 +58,28 @@ _**Последнее изменение раздела:** 2012-10-05_
 1.  На компьютере с ролью сервера клиентского доступа в командной консоли выполните следующую команду для запуска службы Microsoft Exchange IMAP4.
     
     ```powershell
-Start-service msExchangeIMAP4
-```
+    Start-service msExchangeIMAP4
+    ```
 
 2.  На компьютере с ролью сервера почтовых ящиков в командной консоли выполните следующую команду для запуска фоновой службы Microsoft Exchange IMAP4.
     
     ```powershell
-Start-service msExchangeIMAP4BE
-```
+    Start-service msExchangeIMAP4BE
+    ```
 
 Для остановки служб IMAP4:
 
 1.  На компьютере с ролью сервера клиентского доступа в командной консоли выполните следующую команду для остановки службы Microsoft Exchange IMAP4.
     
     ```powershell
-Stop-service msExchangeIMAP4
-```
+    Stop-service msExchangeIMAP4
+    ```
 
 2.  На компьютере с ролью сервера почтовых ящиков в командной консоли выполните следующую команду для остановки фоновой службы Microsoft Exchange IMAP4.
     
     ```powershell
-Stop-service msExchangeIMAP4BE
-```
+    Stop-service msExchangeIMAP4BE
+    ```
 
 ## Запуск или остановка служб IMAP4 с помощью команды net start
 
@@ -88,28 +88,28 @@ Stop-service msExchangeIMAP4BE
 1.  На компьютере с ролью сервера клиентского доступа в командной строке выполните следующую команду для запуска службы Microsoft Exchange IMAP4.
     
     ```powershell
-net start msExchangeIMAP4
-```
+    net start msExchangeIMAP4
+    ```
 
 2.  На компьютере с ролью сервера почтовых ящиков в командной строке выполните следующую команду для запуска фоновой службы Microsoft Exchange IMAP4.
     
     ```powershell
-net start msExchangeIMAP4BE
-```
+    net start msExchangeIMAP4BE
+    ```
 
 Для остановки служб IMAP4:
 
 1.  На компьютере с ролью сервера клиентского доступа в командной строке выполните следующую команду для остановки службы Microsoft Exchange IMAP4.
     
     ```powershell
-Net Stop MSExchangeIMAP4
-```
+    Net Stop MSExchangeIMAP4
+    ```
 
 2.  На компьютере с ролью сервера почтовых ящиков в командной строке выполните следующую команду для остановки фоновой службы Microsoft Exchange IMAP4.
     
     ```powershell
-Net Stop MSExchangeIMAP4BE
-```
+    Net Stop MSExchangeIMAP4BE
+    ```
 
 ## Как проверить, что все получилось?
 

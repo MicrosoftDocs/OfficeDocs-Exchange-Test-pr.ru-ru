@@ -110,27 +110,51 @@ katerina@contoso.com<br />
 </thead>
 <tbody>
 <tr class="odd">
-<td><p>Исходящее за пределы организации, если в исходном сообщении нет текста заявления об отказе, например &quot;ЮРИДИЧЕСКИЕ СВЕДЕНИЯ CONTOSO&quot;</p></td>
+<td><p>Исходящее за пределы организации, если в исходном сообщении нет текста заявления об отказе, например "ЮРИДИЧЕСКИЕ СВЕДЕНИЯ CONTOSO"</p></td>
 <td><p>Условие: <strong>Расположение получателя</strong> &gt; <strong>Вне организации</strong></p>
 <p>Исключение: <strong>Тема или текст</strong> &gt; <strong>Тема или текст сообщения соответствует этим шаблонам текста</strong> &gt; <strong>CONTOSO LEGAL NOTICE</strong></p></td>
-<td><pre><code>-FromScope NotInOrganization -ExceptIf -SubjectOrBodyMatches &quot;CONTOSO LEGAL NOTICE&quot;</code></pre></td>
+<td>
+
+```powershell
+-FromScope NotInOrganization -ExceptIf -SubjectOrBodyMatches "CONTOSO LEGAL NOTICE"
+```
+
+</td>
 </tr>
 <tr class="even">
 <td><p>Входящие сообщения с исполняемыми файлами во вложениях</p></td>
 <td><p>Условие 1: <strong>Расположение отправителя</strong> &gt; <strong>Вне организации</strong></p>
 <p>Условие 2: <strong>Любое вложение</strong> &gt; <strong>с исполняемым содержимым</strong></p></td>
-<td><pre><code>-FromScope NotInOrganization -AttachmentHasExecutableContent</code></pre></td>
+<td>
+
+```powershell
+-FromScope NotInOrganization -AttachmentHasExecutableContent
+```
+
+</td>
 </tr>
 <tr class="odd">
 <td><p>Отправитель находится в отделе маркетинга</p></td>
 <td><p>Условие: <strong>Отправитель</strong> &gt; <strong>является членом этой группы</strong> &gt; <strong>group name</strong></p></td>
-<td><pre><code>-FromMemberOf &quot;Marketing Team&quot;</code></pre></td>
+<td>
+
+```powershell
+-FromMemberOf "Marketing Team"
+```
+
+</td>
 </tr>
 <tr class="even">
 <td><p>Сообщения от внешнего отправителя группе обсуждений по продажам</p></td>
 <td><p>Условие 1: <strong>Расположение отправителя</strong> &gt; <strong>Вне организации</strong></p>
-<p>Условие 2: <strong>Сообщение</strong> &gt; <strong>содержит этого пользователя в поле &quot;Кому&quot; или &quot;Копия&quot;</strong> &gt; <strong>group name</strong></p></td>
-<td><pre><code>-FromScope NotInOrganization -SentTo &quot;Sales Discussion Group&quot; -PrependSubject &quot;Sent to Sales Discussion Group: &quot;</code></pre></td>
+<p>Условие 2: <strong>Сообщение</strong> &gt; <strong>содержит этого пользователя в поле "Кому" или "Копия"</strong> &gt; <strong>group name</strong></p></td>
+<td>
+
+```powershell
+-FromScope NotInOrganization -SentTo "Sales Discussion Group" -PrependSubject "Sent to Sales Discussion Group: "
+```
+
+</td>
 </tr>
 <tr class="odd">
 <td><p>Добавление рекламы в исходящие сообщения на один месяц</p></td>
@@ -178,7 +202,7 @@ katerina@contoso.com<br />
 </tr>
 <tr class="odd">
 <td><p>Добавление изображений</p></td>
-<td><p>С помощью тега <code>&lt;IMG&gt;</code> можно указать на изображение в Интернете. Например, <code>&lt;IMG src=&quot;http://contoso.com/images/companylogo.gif&quot; alt=&quot;Contoso logo&quot;&gt;</code></p>
+<td><p>С помощью тега <code>&lt;IMG&gt;</code> можно указать на изображение в Интернете. Например, <code>&lt;IMG src="http://contoso.com/images/companylogo.gif" alt="Contoso logo"&gt;</code></p>
 <p>Обратите внимание, что по умолчанию Outlook Web App и Outlook блокируют внешнее веб-содержимое, в том числе изображения. Если пользователи захотят просмотреть заблокированное внешнее содержимое, им потребуется выполнить дополнительные действия. Это означает, что изображения, добавленные с помощью тега <code>IMG</code>, могут не отображаться по умолчанию. Чтобы проверить правильность отображения, рекомендуем проверить заявление об отказе с тегом <code>IMG</code> на клиентах электронной почты получателей.</p></td>
 </tr>
 <tr class="even">
@@ -192,21 +216,23 @@ katerina@contoso.com<br />
 
 
 Например, в этом заявлении об отказе в формате HTML используется подпись, тег `IMG` и встроенные CSS.
-```csss
-    <div style="font-size:9pt;  font-family: 'Calibri',sans-serif;">
-    %%displayname%%</br>
-    %%title%%</br>
-    %%company%%</br>
-    %%street%%</br>
-    %%city%%, %%state%% %%zipcode%%</div>
-    &nbsp;</br>
-    <div style="background-color:#D5EAFF; border:1px dotted #003333; padding:.8em; ">
-    <div><img alt="Fabrikam"  src="http://fabrikam.com/images/fabrikamlogo.png"></div>
-    <span style="font-size:12pt;  font-family: 'Cambria','times new roman','garamond',serif; color:#ff0000;">HTML Disclaimer Title</span></br>
-    <p style="font-size:8pt; line-height:10pt; font-family: 'Cambria','times roman',serif;">This message contains confidential information and is intended only for the individual(s) addressed in the message. If you are not the named addressee, you should not disseminate, distribute, or copy this e-mail. If you are not the intended recipient, you are notified that disclosing, distributing, or copying this e-mail is strictly prohibited.  </p>
-    <span style="padding-top:10px; font-weight:bold; color:#CC0000; font-size:10pt; font-family: 'Calibri',Arial,sans-serif; "><a href="http://www.fabrikam.com">Fabrikam, Inc. </a></span></br></br>
-    </div>
-```
+
+  ```html
+  <div style="font-size:9pt;  font-family: 'Calibri',sans-serif;">
+  %%displayname%%</br>
+  %%title%%</br>
+  %%company%%</br>
+  %%street%%</br>
+  %%city%%, %%state%% %%zipcode%%</div>
+  &nbsp;</br>
+  <div style="background-color:#D5EAFF; border:1px dotted #003333; padding:.8em; ">
+  <div><img alt="Fabrikam"  src="http://fabrikam.com/images/fabrikamlogo.png"></div>
+  <span style="font-size:12pt;  font-family: 'Cambria','times new roman','garamond',serif; color:#ff0000;">HTML Disclaimer Title</span></br>
+  <p style="font-size:8pt; line-height:10pt; font-family: 'Cambria','times roman',serif;">This message contains confidential information and is intended only for the individual(s) addressed in the message. If you are not the named addressee, you should not disseminate, distribute, or copy this e-mail. If you are not the intended recipient, you are notified that disclosing, distributing, or copying this e-mail is strictly prohibited.  </p>
+  <span style="padding-top:10px; font-weight:bold; color:#CC0000; font-size:10pt; font-family: 'Calibri',Arial,sans-serif; "><a href="http://www.fabrikam.com">Fabrikam, Inc. </a></span></br></br>
+  </div>
+  ```
+
 ## Резервные варианты, если не удается добавить заявление об отказе
 
 Некоторые сообщения, например зашифрованные, запрещают Exchange изменять содержимое исходного сообщения. Вы можете управлять способом обработки таких сообщений. Вы можете указать либо "завернуть" сообщение, которое невозможно изменить, в конверт нового сообщения с текстом заявления об отказе, либо отклонить это сообщение, если в него не удается добавить заявление об отказе, или же не прикреплять к нему заявление об отказе.

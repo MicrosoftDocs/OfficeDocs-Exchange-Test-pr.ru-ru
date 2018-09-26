@@ -101,7 +101,7 @@ _**Последнее изменение раздела:** 2015-07-16_
 
 1.  В консоли Shell выполните следующую команду:
     
-    ```
+    ```powershell
     Get-Mailbox | where { $_.CustomAttribute1 -match "Manager"
      } | Set-CASMailbox -activesyncmailboxpolicy(Get-ActiveSyncMailboxPolicy "Contoso").Identity
     ```

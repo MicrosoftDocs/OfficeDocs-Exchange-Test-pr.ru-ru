@@ -65,12 +65,14 @@ _**Последнее изменение раздела:** 2016-12-09_
     > Конечная точка ( <strong>.</strong> ) означает, что используется полное доменное имя. Использование завершающей точки препятствует непреднамеренному добавлению к имени домена каких-либо DNS-суффиксов по умолчанию, настроенных для сети.
     
     Выходные данные команды выглядят следующим образом:
+    
     ```powershell
-        fabrikam.com mx preference=10, mail exchanger = mail1.fabrikam.com
-        fabrikam.com mx preference=20, mail exchanger = mail2.fabrikam.com
-        mail1.fabrikam.com internet address = 192.168.1.10
-        mail2 fabrikam.com internet address = 192.168.1.20
+    fabrikam.com mx preference=10, mail exchanger = mail1.fabrikam.com
+    fabrikam.com mx preference=20, mail exchanger = mail2.fabrikam.com
+    mail1.fabrikam.com internet address = 192.168.1.10
+    mail2 fabrikam.com internet address = 192.168.1.20
     ```
+    
     В качестве SMTP-сервера назначения можно использовать любые имена узлов или IP-адреса, связанные с MX-записями. Меньшее значение приоритета означает более предпочтительный SMTP-сервер. В целях балансировки нагрузки и отказоустойчивости можно использовать несколько MX-записей и различные значения приоритета.
 
 5.  Для завершения сеанса Nslookup введите **exit** и нажмите клавишу ВВОД.
@@ -102,7 +104,7 @@ _**Последнее изменение раздела:** 2016-12-09_
 > ```powershell
 > 500 5.3.3 Unrecognized command
 > ```
-> </LI></UL>
+> </li></ul>
 
 
 1.  В командной строке введите **telnet** и нажмите клавишу ВВОД. Эта команда открывает сеанс Telnet.

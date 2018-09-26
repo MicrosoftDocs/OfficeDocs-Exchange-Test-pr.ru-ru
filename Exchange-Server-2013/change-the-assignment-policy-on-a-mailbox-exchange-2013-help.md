@@ -73,15 +73,21 @@ Set-Mailbox Brian -RoleAssignmentPolicy "Unified Messaging Users"
 
 Для изменения политики назначения для группы почтовых ящиков с определенной политикой назначения используйте следующую синтаксическую конструкцию.
 
-    Get-Mailbox | Where { $_.RoleAssignmentPolicy -Eq "<assignment policy to find>" } | Set-Mailbox -RoleAssignmentPolicy <assignment policy to set>
+```powershell
+Get-Mailbox | Where { $_.RoleAssignmentPolicy -Eq "<assignment policy to find>" } | Set-Mailbox -RoleAssignmentPolicy <assignment policy to set>
+```
 
 В данном примере выполняется поиск всех почтовых ящиков с политикой назначения "Пользователи Редмонда — Без голосовой почты" и изменение политики назначения на "Пользователи Редмонда — Голосовая почта включена".
 
-    Get-Mailbox | Where { $_.RoleAssignmentPolicy -Eq "Redmond Users - No Voicemail" } | Set-Mailbox -RoleAssignmentPolicy "Redmond Users - Voicemail Enabled"
+```powershell
+Get-Mailbox | Where { $_.RoleAssignmentPolicy -Eq "Redmond Users - No Voicemail" } | Set-Mailbox -RoleAssignmentPolicy "Redmond Users - Voicemail Enabled"
+```
 
 В этот пример включен параметр *WhatIf*, поэтому можно видеть все изменяемые почтовые ящики без фиксации каких-либо изменений.
 
-    Get-Mailbox | Where { $_.RoleAssignmentPolicy -Eq "Redmond Users - No Voicemail" } | Set-Mailbox -RoleAssignmentPolicy "Redmond Users - Voicemail Enabled" -WhatIf
+```powershell
+Get-Mailbox | Where { $_.RoleAssignmentPolicy -Eq "Redmond Users - No Voicemail" } | Set-Mailbox -RoleAssignmentPolicy "Redmond Users - Voicemail Enabled" -WhatIf
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделах [Get-Mailbox](https://technet.microsoft.com/ru-ru/library/bb123685\(v=exchg.150\)) или [Set-Mailbox](https://technet.microsoft.com/ru-ru/library/bb123981\(v=exchg.150\)).
 
