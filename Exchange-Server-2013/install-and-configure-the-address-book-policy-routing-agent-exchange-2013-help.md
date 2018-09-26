@@ -44,9 +44,9 @@ _**Последнее изменение раздела:** 2014-01-09_
 Для выполнения этих процедур необходимы соответствующие разрешения. Сведения о необходимых разрешениях см. в статье Запись "Агенты транспорта" в разделе [Разрешения потока обработки почты](mail-flow-permissions-exchange-2013-help.md).
 
 Установите агент маршрутизации политики адресной книги, выполнив следующую команду. Необходимо использовать именно эту команду с именно таким синтаксисом.
-
+```powershell
     Install-TransportAgent -Name "ABP Routing Agent" -TransportAgentFactory "Microsoft.Exchange.Transport.Agent.AddressBookPolicyRoutingAgent.AddressBookPolicyRoutingAgentFactory" -AssemblyPath $env:ExchangeInstallPath\TransportRoles\agents\AddressBookPolicyRoutingAgent\Microsoft.Exchange.Transport.Agent.AddressBookPolicyRoutingAgent.dll
-
+```
 Появится предупреждение о том, что необходимо перезапустить транспортную службу, чтобы изменения вступили в силу. Но мы рекомендуем перед этим выполнить шаг 2, чтобы не пришлось перезапускать транспортную службу несколько раз.
 
 Подробные сведения о синтаксисе и параметрах см. в разделе [Install-TransportAgent](https://technet.microsoft.com/ru-ru/library/aa997998\(v=exchg.150\)).
@@ -70,14 +70,14 @@ Enable-TransportAgent "ABP Routing Agent"
 1.  Перезапустите транспортную службу, выполнив следующую команду.
     
     ```powershell
-Restart-Service MSExchangeTransport
-```
+	Restart-Service MSExchangeTransport
+	```
 
 2.  После того как служба будет перезапущена, убедитесь в том, что агент маршрутизации политики адресной книги установлен и включен. Для этого запустите следующий командлет.
     
     ```powershell
-Get-TransportAgent
-```
+	Get-TransportAgent
+	```
     
     Если агент маршрутизации политики адресной книги имеется в списке, то он установлен правильно.
 

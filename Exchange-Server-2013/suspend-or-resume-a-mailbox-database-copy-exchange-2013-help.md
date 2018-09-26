@@ -96,6 +96,6 @@ Resume-MailboxDatabaseCopy -Identity DB2\MBX2 -ReplicationOnly
   - Для отображения сведений о состоянии копии базы данных запустите в консоли следующую команду:
     
     ```powershell
-Get-MailboxDatabaseCopyStatus <DatabaseCopyName> | Format-List
-```
+	Get-MailboxDatabaseCopyStatus <DatabaseCopyName> | Format-List
+	```
 

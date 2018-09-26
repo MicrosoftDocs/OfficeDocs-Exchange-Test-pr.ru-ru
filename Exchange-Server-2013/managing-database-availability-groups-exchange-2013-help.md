@@ -616,7 +616,9 @@ Set-DatabaseAvailabilityGroupNetwork -Identity DAG1\MapiDagNetwork -ReplicationE
 
 По умолчанию в группах DAG выполняется поиск всех сетей, обнаруженных и настроенных для использования с помощью базового кластера. При этом учитываются любые сети Internet SCSI (iSCSI), которые используются в результате применения хранилища iSCSI для одного или нескольких членов DAG. Рекомендуется использовать для хранилища iSCSI выделенные сети и сетевые адаптеры. Эти сети не должны управляться группами DAG и ее кластерами или использоваться в качестве сетей DAG (MAPI или репликация). Вместо этого для них необходимо вручную отключить использование группой DAG и выделить их для трафика хранилища iSCSI. Для отключения обнаружения и использования сетей iSCSI в качестве сетей DAG, настройте DAG так, чтобы игнорировать любые обнаруженные сети iSCSI, с помощью командлета [Set-DatabaseAvailabilityGroupNetwork](https://technet.microsoft.com/ru-ru/library/dd298008\(v=exchg.150\)), как показано в следующем примере:
 
-    Set-DatabaseAvailabilityGroupNetwork -Identity DAG2\DAGNetwork02 -ReplicationEnabled:$false -IgnoreNetwork:$true
+```powershell
+Set-DatabaseAvailabilityGroupNetwork -Identity DAG2\DAGNetwork02 -ReplicationEnabled:$false -IgnoreNetwork:$true
+```
 
 Эта команда также отключит использование сети кластером. Хотя сети iSCSI по-прежнему будут отображаться как сети DAG, они не будут использоваться для трафика репликации или MAPI после выполнения предыдущей команды.
 

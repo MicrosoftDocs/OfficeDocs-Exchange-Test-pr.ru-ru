@@ -44,8 +44,8 @@ _**Последнее изменение раздела:** 2015-03-09_
   - Чтобы просмотреть значение свойства *Identity* для всех запросов на восстановление почтовых ящиков, выполните следующую команду.
     
     ```powershell
-Get-MailboxRestoreRequest | Format-Table Identity
-```
+	Get-MailboxRestoreRequest | Format-Table Identity
+	```
     
     Можно использовать это значение идентификатора для указания определенного запроса на восстановление почтового ящика при выполнении процедур, приведенных в данном разделе.
 
@@ -167,17 +167,17 @@ Get-MailboxRestoreRequestStatistics -Identity danp\MailboxRestore1
 ```
 
 В этом примере возвращается статистика почтового ящика «Dan Park», а отчет экспортируется в CSV-файл.
-
+```powershell
     Get-MailboxRestoreRequestStatistics -Identity "Dan Park\MailboxRestore" | Export-CSV \\SERVER01\RestoreRequest_Reports\DanPark_Restorestats.csv
-
+```
 В этом примере возвращаются дополнительные сведения о запросе на восстановление для пользователя Pilar Pinilla с помощью параметра *IncludeReport*, а результаты передаются по конвейеру в командлет **Format-List**.
-
+```powershell
     Get-MailboxRestoreRequestStatistics -Identity "Pilar Pinilla\MailboxRestore" -IncludeReport | Format-List 
-
+```
 В этом примере возвращаются дополнительные сведения о всех запросах на восстановление с состоянием `Failed` с помощью параметра *IncludeReport*; затем эти сведения сохраняются в текстовом файле AllRestoreReports.txt в том расположении, в котором запускалась команда.
-
+```powershell
     Get-MailboxRestoreRequest -Status Failed | Get-MailboxRestoreRequestStatistics -IncludeReport | Format-List > AllRestoreReports.txt
-
+```
 Дополнительные сведения о синтаксисе и параметрах см. в разделах [Get-MailboxRestoreRequestStatistics](https://technet.microsoft.com/ru-ru/library/ff829912\(v=exchg.150\)) и [Get-MailboxRestoreRequest](https://technet.microsoft.com/ru-ru/library/ff829907\(v=exchg.150\)).
 
 ## Выходные данные командлета Get-MailboxRestoreRequestStatistics
@@ -420,9 +420,9 @@ Set-MailboxRestoreRequest -Identity "Debra Garcia\MailboxRestore1" -BadItemLimit
 ```
 
 В этом примере кода указывается, что запрос на восстановление MailboxRestore1 для почтового ящика Florence Flipo будет пропускать 100 поврежденных элементов. В связи с тем, что значение параметра *BadItemLimit* больше 50, необходимо указывать значение для параметра *AcceptLargeDataLoss*.
-
+```powershell
     Set-MailboxRestoreRequest -Identity "Florence Flipo\MailboxRestore1" -BadItemLimit 100 -AcceptLargeDataLoss
-
+```
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Set-MailboxRestoreRequest](https://technet.microsoft.com/ru-ru/library/ff829909\(v=exchg.150\)).
 
 ## Как проверить, что все получилось?
@@ -442,9 +442,9 @@ Suspend-MailboxRestoreRequest -Identity "Pilar Pinilla\MailboxRestore1"
 ```
 
 В этом примере все выполняемые запросы на восстановление приостанавливаются путем получения всех запросов с состоянием `InProgress` и последующей конвейерной передачи выходных данных в командлет **Suspend-MailboxRestoreRequest** с примечанием о приостановке «Resume after FY13Q2 Maintenance» (Возобновить после обслуживания в FY13Q2).
-
+```powershell
     Get-MailboxRestoreRequest -Status InProgress | Suspend-MailboxRestoreRequest -SuspendComment "Resume after FY13Q2 Maintenance"
-
+```
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Suspend-MailboxRestoreRequest](https://technet.microsoft.com/ru-ru/library/ff829906\(v=exchg.150\)).
 
 ## Как проверить, что все получилось?

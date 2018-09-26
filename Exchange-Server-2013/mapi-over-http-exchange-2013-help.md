@@ -189,8 +189,8 @@ _**Последнее изменение раздела:** 2017-05-10_
     Выполните приведенную ниже команду.
     
     ```powershell
-Set-OrganizationConfig -MapiHttpEnabled $true
-```
+	Set-OrganizationConfig -MapiHttpEnabled $true
+	```
 
 ## Проверка подключений MAPI через HTTP
 
@@ -203,11 +203,11 @@ Test-OutlookConnectivity -RunFromServerId ContosoMail -ProbeIdentity OutlookMapi
 ```
 
 При успешной проверке возвращаются результаты, похожие на приведенный ниже пример.
-
+```powershell
     MonitorIdentity                                          StartTime              EndTime                Result      Error     Exception
     ---------------                                          ---------              -------                ------      -----     ---------
     OutlookMapiHttp.Protocol\OutlookMapiHttpSelfTestProbe    2/14/2014 7:15:00 AM   2/14/2014 7:15:10 AM   Succeeded
-
+```
 Дополнительные сведения см. в разделе [Test-OutlookConnectivity](https://technet.microsoft.com/ru-ru/library/dd638082\(v=exchg.150\)).
 
 Журналы действий MAPI через HTTP находятся в указанных ниже папках.

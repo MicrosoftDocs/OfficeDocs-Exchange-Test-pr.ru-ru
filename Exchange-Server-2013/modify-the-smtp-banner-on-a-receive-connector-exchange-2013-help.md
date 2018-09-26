@@ -21,7 +21,9 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 Ниже представлен ответ по умолчанию, полученный удаленным SMTP-сервером обмена сообщениями после подключения к соединителю получения.
 
-    220 <Servername> Microsoft ESMTP MAIL service ready at <RegionalDay-Date-24HourTimeFormat> <RegionalTimeZoneOffset>
+```powershell
+220 <Servername> Microsoft ESMTP MAIL service ready at <RegionalDay-Date-24HourTimeFormat> <RegionalTimeZoneOffset>
+```
 
 При указании пользовательского значения для заголовка SMTP на соединителе получения удаленный сервер обмена сообщениями SMTP, подключенный к этому соединителю, получит приведенный ниже ответ.
 
@@ -74,8 +76,8 @@ Set-ReceiveConnector "From the Internet" -Banner $null
 1.  Откройте клиент Telnet на компьютере, который может получить доступ к соединителю получения, и выполните следующую команду:
     
     ```powershell
-open <Connector FQDN or IP address> <Port>
-```
+	open <Connector FQDN or IP address> <Port>
+	```
 
 2.  Убедитесь, что ответ от соединителя получения содержит заданный заголовок SMTP.
 

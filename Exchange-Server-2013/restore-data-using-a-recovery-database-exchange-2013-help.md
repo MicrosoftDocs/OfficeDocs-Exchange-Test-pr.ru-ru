@@ -42,58 +42,58 @@ _**Последнее изменение раздела:** 2014-10-01_
 2.  С помощью программы Eseutil переведите эту базу данных в состояние чистого отключения. В следующем примере EXX — это префикс создания журнала для базы данных (например, E00, E01, E02 и т. д.).
     
     ```powershell
-Eseutil /R EXX /l <RDBLogFilePath> /d <RDBEdbFolder>
-```
+    Eseutil /R EXX /l <RDBLogFilePath> /d <RDBEdbFolder>
+    ```
     
     В следующем примере показан префикс создания журнала E01 и путь базы данных восстановления и файла журнала E:\\Databases\\RDB1:
     
     ```powershell
-Eseutil /R E01 /l E:\Databases\RDB1 /d E:\Databases\RDB1
-```
+    Eseutil /R E01 /l E:\Databases\RDB1 /d E:\Databases\RDB1
+    ```
 
 3.  Создание базы данных восстановления Задайте для базы данных восстановления уникальное имя, но в параметре EdbFilePath введите имя и путь файла базы данных, а расположение восстановленных файлов журнала укажите в параметре LogFolderPath.
-    
+    ```powershell
         New-MailboxDatabase -Recovery -Name <RDBName> -Server <ServerName> -EdbFilePath <RDBPathandFileName> -LogFolderPath <LogFilePath>
-    
+    ```
     В следующем примере показано создание базы данных восстановления, которая будет использоваться для восстановления базы данных DB1.edb и ее файлов журнала, расположенных в папке E:\\Databases\\RDB1.
-    
+    ```powershell
         New-MailboxDatabase -Recovery -Name <RDBName> -Server <ServerName> -EdbFilePath "E:\Databases\RDB1\DB1.EDB" -LogFolderPath "E:\Databases\RDB1"
-
+    ```
 4.  Перезапустите службу банка данных Microsoft Exchange:
     
     ```powershell
-Restart-Service MSExchangeIS
-```
+    Restart-Service MSExchangeIS
+    ```
 
 5.  Подключите базу данных:
     
     ```powershell
-Mount-database <RDBName>
-```
+    Mount-database <RDBName>
+    ```
 
 6.  Убедитесь, что подключенная база данных содержит почтовые ящики, которые вы хотите восстановить:
     
     ```powershell
-Get-MailboxStatistics -Database <RDBName> | ft -auto
-```
+    Get-MailboxStatistics -Database <RDBName> | ft -auto
+    ```
 
 7.  С помощью командлета New-MailboxRestoreRequest восстановите почтовый ящик или элементы из базы данных восстановления в производственный почтовый ящик.
     
     В следующем примере показано восстановление исходного почтового ящика с идентификатором MailboxGUID 1d20855f-fd54-4681-98e6-e249f7326ddd из базы данных DB1 в целевом почтовом ящике с псевдонимом Morris.
-    
+    ```powershell
         New-MailboxRestoreRequest -SourceDatabase DB1 -SourceStoreMailbox 1d20855f-fd54-4681-98e6-e249f7326ddd -TargetMailbox Morris
-    
+    ```
     В следующем примере показано восстановление содержимого исходного ящика с отображаемым именем Morris Cornejo из базы данных DB1 в архивном почтовом ящике для Morris@contoso.com.
-    
+    ```powershell
         New-MaiboxRestoreRequest -SourceDatabase DB1 -SourceStoreMailbox "Morris Cornejo" -TargetMailbox Morris@contoso.com -TargetIsArchive
-
+    ```
 8.  Периодически проверяйте состояние запроса восстановления почтового ящика с помощью командлета [Get-MailboxRestoreRequest](https://technet.microsoft.com/ru-ru/library/ff829907\(v=exchg.150\)).
     
     Когда состояние восстановления изменится на "Завершено", уделите запрос, используя командлет [Remove-MailboxRestoreRequest](https://technet.microsoft.com/ru-ru/library/ff829910\(v=exchg.150\)). Например:
     
     ```powershell
-Get-MailboxRestoreRequest -Status Completed | Remove-MailboxRestoreRequest
-```
+    Get-MailboxRestoreRequest -Status Completed | Remove-MailboxRestoreRequest
+    ```
 
 ## Как проверить, что все получилось?
 

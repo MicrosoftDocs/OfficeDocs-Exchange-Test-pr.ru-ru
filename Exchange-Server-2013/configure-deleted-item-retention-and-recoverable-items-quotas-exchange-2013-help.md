@@ -76,9 +76,9 @@ Set-Mailbox -Identity - "April Stewart" -RetainDeletedItemsFor 30
 
 
 В данном примере описывается настройка квоты предупреждения элементов для восстановления в размере 12 ГБ и квоты элементов для восстановления в размере 15 ГБ для почтового ящика April Stewart.
-
+```powershell
     Set-Mailbox -Identity "April Stewart" -RecoverableItemsWarningQuota 12GB -RecoverableItemsQuota 15GB -UseDatabaseQuotaDefaults $false
-
+```
 > [!NOTE]  
 > Чтобы настроить почтовый ящик на использование квот элементов для восстановления, отличных от установленных для базы данных почтовых ящиков, в которой этот ящик размещается, необходимо задать для параметра <em>UseDatabaseQuotaDefaults</em> значение <code>$false</code>.
 

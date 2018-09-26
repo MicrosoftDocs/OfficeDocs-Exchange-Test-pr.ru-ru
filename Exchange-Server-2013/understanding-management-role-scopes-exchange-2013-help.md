@@ -960,7 +960,9 @@ _**Последнее изменение раздела:** 2015-04-07_
 
 Впервые области баз данных были представлены в Microsoft Exchange 2010 с пакетом обновления 1 (SP1). Их поддержка продолжается в Exchange 2013. Версии Exchange до Exchange 2010 с пакетом обновления 1 (SP1) поддерживают только области получателей и области конфигураций серверов. При создании области баз данных в Exchange 2010 с пакетом обновления 1 (SP1) или в более поздней версии появится следующее предупреждение.
 
-    WARNING: Database management scopes will only be applied when a user connects to a server running Exchange 2010 SP1 or later. Servers running a version of Exchange prior to Exchange 2010 SP1 won't apply any roles from a role assignment linked to a database scope. Database management scopes also won't be visible to the Get-ManagementScope cmdlet when it's run from a pre-Exchange 2010 SP1 server.
+```powershell
+WARNING: Database management scopes will only be applied when a user connects to a server running Exchange 2010 SP1 or later. Servers running a version of Exchange prior to Exchange 2010 SP1 won't apply any roles from a role assignment linked to a database scope. Database management scopes also won't be visible to the Get-ManagementScope cmdlet when it's run from a pre-Exchange 2010 SP1 server.
+```
 
 При создании области баз данных они применяется только к пользователям, подключенным к серверам с Exchange 2010 с пакетом обновления 1 (SP1) или более поздней версией. Пользователи, подключенные к серверам предыдущих версий Exchange 2010, не будут иметь назначения ролей, связанные с примененным к ним областям баз данных. Это значит, что пользователи, подключающиеся к серверам предыдущих версий Exchange 2010 SP1, не получат разрешения, предоставляемые назначениями этих ролей. На серверах предыдущих версий Exchange 2010 SP1 нельзя создавать, удалять, изменять или просматривать области баз данных.
 

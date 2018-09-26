@@ -29,7 +29,9 @@ _**Последнее изменение раздела:** 2016-12-09_
 
 Отчет о нежелательной почте — это итоговый отчет по результатам применения фильтра нежелательной почты к сообщению электронной почты. Агент фильтрации содержимого применяет эту марку к конверту сообщения в виде X-заголовка следующим образом.
 
-    X-MS-Exchange-Organization-Antispam-Report: DV:<DATVersion>;CW:CustomList;PCL:PhishingVerdict <verdict>;P100:PhishingBlock;PP:Presolve;SID:SenderIDStatus <status>;TIME:<SendReceiveDelta>;MIME:MimeCompliance 
+```powershell
+X-MS-Exchange-Organization-Antispam-Report: DV:<DATVersion>;CW:CustomList;PCL:PhishingVerdict <verdict>;P100:PhishingBlock;PP:Presolve;SID:SenderIDStatus <status>;TIME:<SendReceiveDelta>;MIME:MimeCompliance 
+```
 
 В следующей таблице описаны сведения о фильтре, которые могут отображаться в отчете о нежелательной почте.
 
@@ -64,7 +66,11 @@ _**Последнее изменение раздела:** 2016-12-09_
 <li><p><strong>PermError</strong>   Неверная запись DNS, например ошибка в формате записи.</p></li>
 </ul>
 <p>Марка кода отправителя указывается в виде X-заголовка в конверте сообщения следующим образом:</p>
-<pre><code>X-MS-Exchange-Organization-SenderIdResult:&lt;status&gt;</code></pre>
+
+```powershell
+X-MS-Exchange-Organization-SenderIdResult:<status>
+```
+
 <p>Для получения дополнительных сведений о коде отправителя см. раздел <a href="sender-id-exchange-2013-help.md">Код отправителя</a>.</p></td>
 </tr>
 <tr class="even">
@@ -89,13 +95,22 @@ _**Последнее изменение раздела:** 2016-12-09_
 <p>Допустимый диапазон значений марки PCL — от 1 до 8. Уровень PCL от 1 до 3 возвращает состояние <code>Neutral</code>. Это значит, что содержимое сообщение вряд ли связано с фишингом. Уровень PCL от 4 до 8 возвращает состояние <code>Suspicious</code>. Это означает, что сообщение, скорее всего, является результатом фишинга.</p>
 <p>Эти значения используются для определения действия, которое Outlook выполняет для сообщений. Outlook использует марку PCL для блокирования содержимого подозрительных сообщений.</p>
 <p>Отметка вероятности фишинга указывается в виде X-заголовка в конверте сообщения, как описано ниже.</p>
-<pre><code>X-MS-Exchange-Organization-PCL:&lt;status&gt;</code></pre></td>
+
+```powershell
+X-MS-Exchange-Organization-PCL:<status>
+```
+
+</td>
 </tr>
 <tr class="even">
 <td><p>SCL</p></td>
 <td><p>Марка вероятности нежелательной почты (SCL) сообщения отображает оценку сообщения на основании его содержимого. Для оценки содержимого сообщения и назначения каждому сообщению рейтинга уровня вероятности нежелательной почты агент фильтра содержимого использует технологию Microsoft SmartScreen. SCL принимает значение от 0 до 9, где 0 — наименьшая вероятность того, что сообщение нежелательное, а 9 — наибольшая вероятность. Действия Exchange и Outlook зависят от параметров порогов SCL.</p>
 <p>Марка SCL указывается в виде X-заголовка в конверте сообщения следующим образом:</p>
-<pre><code>X-MS-Exchange-Organization-SCL:&lt;status&gt;</code></pre>
+
+```powershell
+X-MS-Exchange-Organization-SCL:<status>
+```
+
 <p>Для получения дополнительных сведений о порогах SCL см. раздел <a href="spam-confidence-level-threshold-exchange-2013-help.md">Пороговое значение вероятности нежелательной почты</a>.</p></td>
 </tr>
 <tr class="odd">

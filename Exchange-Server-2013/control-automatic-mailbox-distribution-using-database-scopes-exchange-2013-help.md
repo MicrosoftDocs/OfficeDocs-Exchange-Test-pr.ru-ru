@@ -64,9 +64,9 @@ New-ManagementScope -Name <scope name> -DatabaseList <database 1>, <database 2..
 ```
 
 В этом примере создается область, которая применяется только к базам данных Database 1, Database 2 и Database 3.
-
+```powershell
     New-ManagementScope -Name "Accounting databases" -DatabaseList "Database 1", "Database 2", "Database 3"
-
+```
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [New-ManagementScope](https://technet.microsoft.com/ru-ru/library/dd335137\(v=exchg.150\)).
 
 ## Использование области фильтра баз данных
@@ -82,9 +82,9 @@ New-ManagementScope -Name <scope name> -DatabaseRestrictionFilter <filter query>
 ```
 
 В этом примере создается область, включающая в себя все базы данных, содержащие строку ACCT в свойстве **Name**.
-
+```powershell
     New-ManagementScope -Name "Accounting Databases" -DatabaseRestrictionFilter { Name -Like '*ACCT*' }
-
+```
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [New-ManagementScope](https://technet.microsoft.com/ru-ru/library/dd335137\(v=exchg.150\)).
 
 ## Действие 2. Добавление области баз данных в назначение роли управления
@@ -100,14 +100,14 @@ New-ManagementScope -Name <scope name> -DatabaseRestrictionFilter <filter query>
 Выполните следующую процедуру, если группа ролей только что создана и в нее необходимо добавить роли.
 
 Чтобы создать назначение ролей между ролью управления и новой группой ролей с новой областью баз данных, используйте следующую синтаксическую конструкцию:
-
+```powershell
     New-ManagementRoleAssignment -SecurityGroup <role group name> -Role <role name> -CustomConfigWriteScope <database scope name>
-
+```
 В этом примере создается назначение ролей между ролями получателей почты и создания получателей почты (Mail Recipients и Mail Recipient Creation) и группой ролей администраторов учетных записей (Accounting Administrators) с областью баз данных учетных записей (Accounting Databases).
-
+```powershell
     New-ManagementRoleAssignment -SecurityGroup "Accounting Administrators" -Role "Mail Recipients" -CustomConfigWriteScope "Accounting Databases"
     New-ManagementRoleAssignment -SecurityGroup "Accounting Administrators" -Role "Mail Recipient Creation" -CustomConfigWriteScope "Accounting Databases"
-
+```
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [New-ManagementRoleAssignment](https://technet.microsoft.com/ru-ru/library/dd335193\(v=exchg.150\)).
 
 ## Изменение существующего назначения ролей
@@ -117,14 +117,14 @@ New-ManagementScope -Name <scope name> -DatabaseRestrictionFilter <filter query>
 В этой процедуре используется конвейеризация. Дополнительные сведения см. в разделе [Конвейеризация](https://technet.microsoft.com/ru-ru/library/aa998260\(v=exchg.150\)).
 
 Чтобы изменить назначение ролей между ролью управления, к которой необходимо применить новую область баз данных, и существующей группой ролей, используйте следующую синтаксическую конструкцию:
-
+```powershell
     Get-ManagementRoleAssignment -RoleAssignee <role group name> -Role <role name> | Set-ManagementRoleAssignment -CustomConfigWriteScope <database scope name>
-
+```
 В этом примере для ролей получателей почты и создания получателей почты (Mail Recipients и Mail Recipient Creation), назначенных группе ролей администраторов учетных записей (Accounting Administrators), добавляется область баз данных учетных записей (Accounting Databases).
-
+```powershell
     Get-ManagementRoleAssignment -RoleAssignee "Accounting Administrators" -Role "Mail Recipients" | Set-ManagementRoleAssignment -CustomConfigWriteScope "Accounting Databases"
     Get-ManagementRoleAssignment -RoleAssignee "Accounting Administrators" -Role "Mail Recipient Creation" | Set-ManagementRoleAssignment -CustomConfigWriteScope "Accounting Databases"
-
+```
 Дополнительные сведения о синтаксисе и параметрах см. в разделах [Get-ManagementRoleAssignment](https://technet.microsoft.com/ru-ru/library/dd351024\(v=exchg.150\)) или [Set-ManagementRoleAssignment](https://technet.microsoft.com/ru-ru/library/dd335173\(v=exchg.150\)).
 
 ## Действие 3. Добавление членов в группу ролей (если применимо)

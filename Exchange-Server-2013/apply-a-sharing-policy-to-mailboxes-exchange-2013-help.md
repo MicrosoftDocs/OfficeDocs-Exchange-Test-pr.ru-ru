@@ -74,8 +74,9 @@ Get-Mailbox -Filter {Department -eq "Marketing"} | Set-Mailbox -SharingPolicy "C
 ```
 
 В этом примере возвращаются все почтовые ящики, к которым применена политика общего доступа Contoso, а также выполняется сортировка пользователей в таблице, в которой выводятся только их псевдонимы и адреса электронной почты.
-
+```powershell
     Get-Mailbox -ResultSize unlimited | Where {$_.SharingPolicy -eq "Contoso" } | format-table Alias, EmailAddresses
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделах [Set-Mailbox](https://technet.microsoft.com/ru-ru/library/bb123981\(v=exchg.150\)) и [Get-Mailbox](https://technet.microsoft.com/ru-ru/library/bb123685\(v=exchg.150\)).
 
@@ -88,8 +89,8 @@ Get-Mailbox -Filter {Department -eq "Marketing"} | Set-Mailbox -SharingPolicy "C
   - Чтобы убедиться, что почтовому ящику пользователя назначена политика общего доступа, выполните следующую команду в командной консоли. Убедитесь, что в параметре *SharingPolicy* отображается правильная политика общего доступа.
     
     ```powershell
-Get-Mailbox <user name> | format-list
-```
+    Get-Mailbox <user name> | format-list
+    ```
 
 > [!TIP]  
 > Возникли проблемы? Обратитесь за помощью к участникам форумов, посвященных Exchange. Посетите форумы по таким продуктам: <a href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</a>, <a href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</a> или <a href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</a>.

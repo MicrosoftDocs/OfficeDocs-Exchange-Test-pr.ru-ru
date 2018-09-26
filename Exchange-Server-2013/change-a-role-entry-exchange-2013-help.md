@@ -56,13 +56,13 @@ _**Последнее изменение раздела:** 2012-10-03_
 Чтобы добавить параметры к записи роли, необходимо указать эти параметры с помощью параметра *Parameters*. Затем требуется указать параметр *AddParameter*, чтобы указать на необходимость процедуры добавления.
 
 Чтобы добавить параметры к записи роли, используйте следующий синтаксис.
-
+```powershell
     Set-ManagementRoleEntry <role name>\<cmdlet> -Parameters <parameter 1>, <parameter 2>, <parameter...> -AddParameter
-
+```
 В этом примере добавляются параметры *EmailAddresses* и *Type* в командлет **Set-Mailbox** в роли администраторов получателя.
-
+```powershell
     Set-ManagementRoleEntry "Recipient Administrators\Set-Mailbox" -Parameters EmailAddresses, Type -AddParameter
-
+```
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Set-ManagementRoleEntry](https://technet.microsoft.com/ru-ru/library/dd351162\(v=exchg.150\)).
 
 ## Использование командной консоли Exchange для удаления одного или нескольких параметров из записи роли
@@ -70,13 +70,13 @@ _**Последнее изменение раздела:** 2012-10-03_
 Чтобы удалить параметры из записи роли, необходимо указать эти параметры с помощью параметра *Parameters*. Затем требуется указать параметр *RemoveParameter*, чтобы указать на необходимость процедуры удаления.
 
 Чтобы удалить параметры из записи роли, используйте следующий синтаксис.
-
+```powershell
     Set-ManagementRoleEntry <role name>\<cmdlet> -Parameters <parameter 1>, <parameter 2>, <parameter...> -RemoveParameter
-
+```
 В этом примере удаляются параметры *Port*, *ProtocolLoggingLevel* и *SmartHostAuthMechanism* из командлета **Set-SendConnector** в роли администраторов сервера 1 уровня.
-
+```powershell
     Set-ManagementRoleEntry "Tier 1 Server Administrators\Set-SendConnector" -Parameters Port, ProtocolLoggingLevel, SmartHostAuthMechanism -RemoveParameter
-
+```
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Set-ManagementRoleEntry](https://technet.microsoft.com/ru-ru/library/dd351162\(v=exchg.150\)).
 
 ## Использование командной консоли Exchange для удаления всех параметров из записи роли
@@ -90,13 +90,13 @@ _**Последнее изменение раздела:** 2012-10-03_
 
 
 Чтобы удалить все параметры из записи роли, используйте следующий синтаксис.
-
+```powershell
     Set-ManagementRoleEntry <role name>\<cmdlet> -Parameters $Null 
-
+````
 В этом примере удаляются все параметры из командлета **Set-CASMailbox** в роли администраторов получателя.
-
+```powershell
     Set-ManagementRoleEntry "Recipient Administrators\Set-CASMailbox" -Parameters $Null 
-
+```
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Set-ManagementRoleEntry](https://technet.microsoft.com/ru-ru/library/dd351162\(v=exchg.150\)).
 
 ## Использование командной консоли Exchange для применения определенного набора параметров
@@ -104,12 +104,12 @@ _**Последнее изменение раздела:** 2012-10-03_
 Чтобы включить в запись роли только определенный набор параметров, укажите только параметр *Parameters*. Не добавляйте параметры *AddParameter* или *RemoveParameter*. При указании только параметра *Parameters* в запись роли включаются только параметры, указанные в команде. Все другие параметры удаляются.
 
 Чтобы указать определенный набор параметров, используйте следующий синтаксис.
-
+```powershell
     Set-ManagementRoleEntry <role name>\<cmdlet> -Parameters <parameter 1>, <parameter 2>, <parameter...>
-
+```
 В этом примере добавляются параметры *Identity*, *DisplayName*, *MissedCallNotificationEnabled* и *PersonalAuthAttendantEnabled* в командлет **Set-UMMailbox** в роли получателей электронной почты в Сиэтле.
-
+```powershell
     Set-ManagementRoleEntry "Seattle Mail Recipients\Set-UMMailbox" -Parameters Identity, DisplayName, MissedCallNotificationEnabled, PersonalAutoAttendantEnabled
-
+```
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Set-ManagementRoleEntry](https://technet.microsoft.com/ru-ru/library/dd351162\(v=exchg.150\)).
 

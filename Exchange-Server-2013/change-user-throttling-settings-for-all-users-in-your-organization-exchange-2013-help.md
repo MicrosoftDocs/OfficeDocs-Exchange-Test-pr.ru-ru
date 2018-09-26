@@ -54,16 +54,16 @@ New-ThrottlingPolicy -Name AllUsersEWSPolicy EwsMaxConcurrency 4 -ThrottlingPoli
 1.  Выполните следующую команду.
     
     ```powershell
-Get-ThrottlingPolicy | Format-List
-```
+	Get-ThrottlingPolicy | Format-List
+	```
 
 2.  Убедитесь, что созданная политика регулирования организации отображается в столбце с объектом GlobalThrottlingPolicy.
 
 3.  Выполните следующую команду.
     
     ```powershell
-Get-ThrottlingPolicy | Format-List
-```
+	Get-ThrottlingPolicy | Format-List
+	```
 
 4.  Убедитесь, что свойства новой политики организации соответствуют ранее настроенным значениям.
 

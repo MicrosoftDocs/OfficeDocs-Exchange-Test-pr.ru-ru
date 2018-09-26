@@ -54,14 +54,14 @@ _**Последнее изменение раздела:** 2014-10-22_
 ## Использование командной консоли для настройки сведений о доступности для каждого пользователя в доверенной топологии "перекрестный лес"
 
 В этом примере служба доступности настраивается на получение сведений о доступности для конкретного пользователя на сервере почтовых ящиков в целевом лесу.
-
+```powershell
     Get-MailboxServer | Add-ADPermission -Accessrights Extendedright -Extendedrights "ms-Exch-
     EPI-Token-Serialization" -User "<Remote Forest Domain>\Exchange servers"
-
+```
 В этом примере определяются методы доступа к сведениям о доступности, которые используются службой доступности на локальном сервере почтовых ящиков в исходном лесу. Локальный сервер почтовых ящиков настроен на получение доступа к сведениям о доступности из леса ContosoForest.com для конкретного пользователя. В этом примере для извлечения сведений о доступности используется учетная запись службы.
-
+```powershell
     Add-AvailabilityAddressSpace -Forestname ContosoForest.com -AccessMethod PerUserFB -UseServiceAccount:$true
-
+```
 > [!NOTE]  
 > Чтобы настроить двустороннюю доступность для обмена данными между лесами, повторите эти действия в конечном лесу.
 
@@ -71,9 +71,9 @@ _**Последнее изменение раздела:** 2014-10-22_
 ## Использование командной консоли для настройки доступности в другом доверенном лесу с учетной записью службы
 
 В этом примере настраивается надежная межлесная доступность с учетной записью службы.
-
+```powershell
     Get-MailboxServer | Add-ADPermission -Accessrights Extendedright -Extendedright "ms-Exch-EPI-Token-Serialization" -User "<Remote Forest Domain>\Exchange servers"
-
+```
 Подробные сведения о синтаксисе и параметрах см. в следующих разделах.
 
   - [Get-MailboxServer](https://technet.microsoft.com/ru-ru/library/bb123539\(v=exchg.150\))
@@ -93,7 +93,7 @@ Set-AvailabilityConfig -OrgWideAccount "Contoso.com\User"
 ```
 
 В этом примере добавляется объект конфигурации адресного пространства доступности для исходного леса.
-
+```powershell
     $a = Get-Credential (Enter the credentials for organization-wide user in Contoso.com domain)
     Add-AvailabilityAddressspace -Forestname Contoso.com -Accessmethod OrgWideFB -Credential:$a
-
+```

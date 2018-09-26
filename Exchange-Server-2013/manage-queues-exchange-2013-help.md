@@ -49,7 +49,9 @@ _**Последнее изменение раздела:** 2014-01-31_
 
 Для просмотра очередей введите команду в следующем формате.
 
-    Get-Queue [-Filter <Filter> -Server <ServerIdentity> -Include <Internal | External | Empty | DeliveryType> -Exclude <Internal | External | Empty | DeliveryType>]
+```powershell
+Get-Queue [-Filter <Filter> -Server <ServerIdentity> -Include <Internal | External | Empty | DeliveryType> -Exclude <Internal | External | Empty | DeliveryType>]
+```
 
 В этом примере показано, как отобразить основные сведения о непустых очередях в сервере почтовых ящиков Exchange 2013 с именем Mailbox01.
 
@@ -73,7 +75,9 @@ Get-Queue -Filter {MessageCount -gt 100} | Format-List
 
 Чтобы просмотреть сводные сведения об очередях на нескольких серверах Exchange, выполните следующую команду.
 
-    Get-QueueDigest <-Server <ServerIdentity1,ServerIdentity2,..> | -Dag <DagIdentity1,DagIdentity2...> | -Site <ADSiteIdentity1,ADSiteIdentity2...> | -Forest> [-Filter <Filter>]
+```powershell
+Get-QueueDigest <-Server <ServerIdentity1,ServerIdentity2,..> | -Dag <DagIdentity1,DagIdentity2...> | -Site <ADSiteIdentity1,ADSiteIdentity2...> | -Forest> [-Filter <Filter>]
+```
 
 В этом примере показано, как отобразить сводные сведения об очередях, для которых количество сообщений превышает 100, на всех серверах почтовых ящиков Exchange 2013 на сайте Active Directory с именем FirstSite.
 
@@ -115,7 +119,9 @@ Get-QueueDigest -Dag DAG01 -Filter {Status -eq "Retry"}
 
 Для возобновления очереди введите команду в следующем формате.
 
-    Resume-Queue <-Identity QueueIdentity | -Filter {QueueFilter} [-Server ServerIdentity]>
+```powershell
+Resume-Queue <-Identity QueueIdentity | -Filter {QueueFilter} [-Server ServerIdentity]>
+```
 
 В этом примере показано, как возобновить все очереди на локальном сервере, находящиеся в состоянии "Приостановлено".
 
@@ -165,7 +171,9 @@ Resume-Queue -Identity Mailbox01\contoso.com
 
 Чтобы повторить очереди, введите команду в следующем формате.
 
-    Retry-Queue <-Identity QueueIdentity | -Filter QueueFilter [-Server ServerIdentity]>
+```powershell
+Retry-Queue <-Identity QueueIdentity | -Filter QueueFilter [-Server ServerIdentity]>
+```
 
 В этом примере показано, как на локальном сервере выполнить повтор всех очередей, находящихся в состоянии "Повтор".
 
@@ -201,7 +209,9 @@ Retry-Queue -Identity Mailbox01\contoso.com
 
 Для повторной отправки сообщений используйте введите команду в следующем формате.
 
-    Retry-Queue <-Identity QueueIdentity | -Filter {Status -eq "Retry"} -Server ServerIdentity> -Resubmit $true
+```powershell
+Retry-Queue <-Identity QueueIdentity | -Filter {Status -eq "Retry"} -Server ServerIdentity> -Resubmit $true
+```
 
 В этом примере показано, как повторно отправить все сообщения, находящиеся в любых очередях доставки с состоянием "Повтор", на сервере Mailbox01.
 
@@ -241,19 +251,19 @@ Retry-Queue -Identity Mailbox01\Unreachable -Resubmit $true
 
 1.  Найдите идентификатор сообщения, выполнив следующую команду.
     
-    ```powershell
+```powershell
 Get-Message -Queue Poison | Format-Table Identity
 ```
 
 2.  Используйте идентификатор сообщения, найденный на предыдущем шаге, в следующей команде.
     
-    ```powershell
+```powershell
 Resume-Message <PoisonMessageIdentity>
 ```
     
-    В этом примере возобновляется сообщение из очереди опасных сообщений со значением идентификатора 222.
+В этом примере возобновляется сообщение из очереди опасных сообщений со значением идентификатора 222.
     
-    ```powershell
+```powershell
 Resume-Message 222
 ```
 
@@ -287,7 +297,9 @@ Resume-Message 222
 
 Чтобы приостановить очередь, введите команду в следующем формате.
 
-    Suspend-Queue <-Identity QueueIdentity | -Filter {QueueFilter} [-Server ServerIdentity]>
+```powershell
+Suspend-Queue <-Identity QueueIdentity | -Filter {QueueFilter} [-Server ServerIdentity]>
+```
 
 В этом примере показано, как приостановить все очереди на локальном сервере, которые находятся в состоянии "Повтор" и в которых не менее 1000 сообщений.
 

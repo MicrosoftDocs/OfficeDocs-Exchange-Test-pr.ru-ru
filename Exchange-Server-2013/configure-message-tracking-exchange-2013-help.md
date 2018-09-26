@@ -55,7 +55,9 @@ _**Последнее изменение раздела:** 2013-02-18_
 
 Чтобы настроить отслеживание сообщений, выполните следующую команду.
 
-    Set-TransportService <ServerIdentity> -MessageTrackingLogEnabled <$true | $false> -MessageTrackingLogMaxAge <dd.hh:mm:ss> -MessageTrackingLogMaxDirectorySize <Size> -MessageTrackingLogMaxFileSize <Size> -MessageTrackingLogPath <LocalFilePath> -MessageTrackingLogSubjectLoggingEnabled <$true|$false>
+```powershell
+Set-TransportService <ServerIdentity> -MessageTrackingLogEnabled <$true | $false> -MessageTrackingLogMaxAge <dd.hh:mm:ss> -MessageTrackingLogMaxDirectorySize <Size> -MessageTrackingLogMaxFileSize <Size> -MessageTrackingLogPath <LocalFilePath> -MessageTrackingLogSubjectLoggingEnabled <$true|$false>
+```
 
 В этом примере показано, как установить следующие параметры журнала отслеживания сообщений на сервере почтовых ящиков с именем Mailbox01.
 
@@ -69,7 +71,9 @@ _**Последнее изменение раздела:** 2013-02-18_
 
 <!-- end list -->
 
-    Set-TransportService Mailbox01 -MessageTrackingLogPath "D:\Hub Message Tracking Log" -MessageTrackingLogMaxFileSize 20MB -MessageTrackingLogMaxDirectorySize 1.5GB -MessageTrackingLogMaxAge 45.00:00:00
+```powershell
+Set-TransportService Mailbox01 -MessageTrackingLogPath "D:\Hub Message Tracking Log" -MessageTrackingLogMaxFileSize 20MB -MessageTrackingLogMaxDirectorySize 1.5GB -MessageTrackingLogMaxAge 45.00:00:00
+```
 
 > [!NOTE]  
 > <ul><li><p>Если для параметра <em>MessageTrackingLogPath</em> задать значение <code>$null</code>, отслеживание сообщений будет выключено. Однако если параметру <em>MessageTrackingLogEnabled</em> задано значение <code>$true</code>, возникают ошибки журнала событий.</p></li>
@@ -95,7 +99,8 @@ Set-TransportService Mailbox01 -MessageTrackingLogEnabled $false
 
 1.  В командной консоли выполните следующую команду:
     
-        Get-TransportService <ServerIdentity> | Format-List MessageTrackingLog*
-
+    ```powershell
+    Get-TransportService <ServerIdentity> | Format-List MessageTrackingLog*
+    ```
 2.  Убедитесь, что отображаются именно те значения, которые вы задали.
 

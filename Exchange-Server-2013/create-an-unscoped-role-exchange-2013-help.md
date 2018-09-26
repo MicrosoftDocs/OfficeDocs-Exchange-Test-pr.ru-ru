@@ -85,11 +85,15 @@ New-ManagementRole "IT Scripts" -UnscopedTopLevel
 
 После того, как сценарий скопирован на соответствующие серверы Exchange 2013 и было решено, какие параметры сценария необходимо использовать, создайте запись роли, используя следующий синтаксис.
 
-    Add-ManagementRoleEntry <unscoped top-level role name>\<script filename> -Parameters <parameter 1, parameter 2, parameter...> -Type Script -UnscopedTopLevel
+```powershell
+Add-ManagementRoleEntry <unscoped top-level role name>\<script filename> -Parameters <parameter 1, parameter 2, parameter...> -Type Script -UnscopedTopLevel
+```
 
 В этом примере добавляется сценарий BulkProvisionUsers.ps1 к роли IT Scripts с параметрами *Name* и *Location*.
 
-    Add-ManagementRoleEntry "IT Scripts\BulkProvisionUsers.ps1" -Parameters Name, Location -Type Script -UnscopedTopLevel
+```powershell
+Add-ManagementRoleEntry "IT Scripts\BulkProvisionUsers.ps1" -Parameters Name, Location -Type Script -UnscopedTopLevel
+```
 
 > [!NOTE]  
 > Командлет <strong>Add-ManagementRoleEntry</strong> выполняет стандартную проверку, чтобы убедиться, что добавлены только те параметры, которые существуют в сценарии. Но после добавления записи роли никакой дальнейшей проверки не следует. При добавлении или удалении параметров позже необходимо вручную обновлять записи роли, которые содержат сценарий.
@@ -105,11 +109,15 @@ New-ManagementRole "IT Scripts" -UnscopedTopLevel
 
 После установки оснастки Windows PowerShell, которая содержит командлеты на соответствующих серверах Exchange 2013, и выбора необходимых параметров командлета создайте запись роли, используя следующий синтаксис.
 
-    Add-ManagementRoleEntry <unscoped top-level role name>\<cmdlet name> -PSSnapinName <snap-in name> -Parameters <parameter 1, parameter 2, parameter...> -Type Cmdlet -UnscopedTopLevel
+```powershell
+Add-ManagementRoleEntry <unscoped top-level role name>\<cmdlet name> -PSSnapinName <snap-in name> -Parameters <parameter 1, parameter 2, parameter...> -Type Cmdlet -UnscopedTopLevel
+```
 
 В этом примере добавляется командлет **Set-WidgetConfiguration** в оснастке Contoso.Admin.Cmdlets для роли Widget Cmdlets с параметрами *Database* и *Size*.
 
-    Add-ManagementRoleEntry "Widget Cmdlets\Set-WidgetConfiguration" -PSSnapinName Contoso.Admin.Cmdlets -Parameters Database, Size -Type Cmdlet -UnscopedTopLevel
+```powershell
+Add-ManagementRoleEntry "Widget Cmdlets\Set-WidgetConfiguration" -PSSnapinName Contoso.Admin.Cmdlets -Parameters Database, Size -Type Cmdlet -UnscopedTopLevel
+```
 
 > [!NOTE]  
 > Командлет <strong>Add-ManagementRoleEntry</strong> выполняет стандартную проверку, чтобы убедиться, что добавлены только те параметры, которые существуют в командлете. Но после добавления записи роли никакой дальнейшей проверки не следует. Если командлет изменен позже и, соответственно, параметры позже добавлены или удалены, необходимо вручную обновить записи роли, которые содержат командлет.
@@ -145,7 +153,9 @@ New-ManagementRole "IT Scripts" -UnscopedTopLevel
 
 Для создания новой роли используйте следующий синтаксис.
 
-    New-ManagementRole -Parent <existing unscoped role to copy> -Name <name of new unscoped role>
+```powershell
+New-ManagementRole -Parent <existing unscoped role to copy> -Name <name of new unscoped role>
+```
 
 В этом примере копируется роль "Глобальные ИТ-сценарии" и ее записи роли управления в роль "Диагностические ИТ-сценарии".
 

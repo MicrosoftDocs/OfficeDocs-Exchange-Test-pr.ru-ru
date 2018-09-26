@@ -50,16 +50,16 @@ _**Последнее изменение раздела:** 2015-04-08_
 1.  На сервере клиентского доступа откройте Windows PowerShell и выполните команду, приведенную ниже:
     
     ```powershell
-Add-PSSnapin Microsoft.Exchange.Management.PowerShell.SnapIn
-```
+	Add-PSSnapin Microsoft.Exchange.Management.PowerShell.SnapIn
+	```
 
 2.  Запустите команду, как описано, но добавьте к ней следующее значение: `-TransportService FrontEnd`.
     
     Например, для просмотра агентов транспорта в службе транспорта переднего плана выполните команду, приведенную ниже:
     
     ```powershell
-Get-TransportAgent -TransportService FrontEnd
-```
+	Get-TransportAgent -TransportService FrontEnd
+	```
 
 ## Установка агента транспорта с помощью командной консоли Exchange
 
@@ -70,13 +70,13 @@ Get-TransportAgent -TransportService FrontEnd
 Чтобы исключить влияние не настроенных агентов транспорта на передачу почтовых сообщений, после установки они находятся в отключенном состоянии. Поэтому после правильной настройки агента транспорта его необходимо включить.
 
 Чтобы установить агент транспорта, используйте следующий синтаксис.
-
+```powershell
     Install-TransportAgent -Name <TransportAgentIdentity> -TransportAgentFactory <"TransportAgentFactory"> -AssemblyPath <"FilePath">
-
+```
 В этом примере фиктивный агент транспорта Contoso Transport Agent устанавливается в службе транспорта на сервере почтовых ящиков.
-
+```powershell
     Install-TransportAgent -Name "Contoso Transport Agent" -TransportAgentFactory "vendor.exchange.ContosoTransportAgentfactory" -AssemblyPath "C:\Program Files\Vendor\TransportAgent\ContosoTransportAgentFactory.dll"
-
+```
 ## Как проверить, что все получилось?
 
 Для проверки успешной установки агента транспорта выполните команду `Get-TransportAgent` и убедитесь, что агент транспорта отображается в списке.

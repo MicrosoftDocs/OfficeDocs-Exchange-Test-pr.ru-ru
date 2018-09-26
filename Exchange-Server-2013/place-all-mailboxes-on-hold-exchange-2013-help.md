@@ -102,9 +102,9 @@ _**Последнее изменение раздела:** 2017-01-18_
 ## Применение ко всем почтовым ящикам хранения для судебного разбирательства
 
 С помощью командной консоли вы можете легко и быстро поместить все почтовые ящики на удержание на неопределенное время или указанный период. Эта команда применит функцию хранения ко всем почтовым ящикам на 2555 дней (примерно 7 лет).
-
+```powershell
     Get-Mailbox -ResultSize Unlimited -Filter {RecipientTypeDetails -eq "UserMailbox"} | Set-Mailbox -LitigationHoldEnabled $true -LitigationHoldDuration 2555
-
+```
 В этом примере с помощью командлета [Get-Mailbox](https://technet.microsoft.com/ru-ru/library/bb123685\(v=exchg.150\)) и фильтра получателей считывается список всех почтовых ящиков пользователей в организации, который затем передается командлету [Set-Mailbox](https://technet.microsoft.com/ru-ru/library/bb123981\(v=exchg.150\)), чтобы включить хранение для судебного разбирательства и указать его продолжительность. Дополнительные сведения см. в статье [Перевод почтового ящика в режим хранения для судебного разбирательства](place-a-mailbox-on-litigation-hold-exchange-2013-help.md).
 
 ## Применение хранения на месте ко всем почтовым ящикам
@@ -125,24 +125,21 @@ _**Последнее изменение раздела:** 2017-01-18_
     
     Вот несколько примеров использования командлетов **Get-Mailbox** и **Get-Recipient** для получения подмножества пользователей на основе общих свойств пользователей или почтовых ящиков. В этих примерах предполагается, что соответствующие свойства почтовых ящиков (например, *CustomAttributeN* или *Department*) заполнены.
     
-```
+	```powershell
         Get-Mailbox -RecipientTypeDetails UserMailbox -ResultSize unlimited -Filter 'CustomAttribute15 -eq "OneYearLitigationHold"'
-```
-```    
+	```
+	```powershell
+		Get-Recipient -RecipientTypeDetails UserMailbox -ResultSize unlimited -Filter 'Department -eq "HR"'
+	```
+	```powershell
+			Get-Recipient -RecipientTypeDetails UserMailbox -ResultSize unlimited -Filter 'PostalCode -eq "98052"'
+	```
+	```powershell  
+			Get-Recipient -RecipientTypeDetails UserMailbox -ResultSize unlimited -Filter 'StateOrProvince -eq "WA"'
+	``` 
     ```powershell
-Get-Recipient -RecipientTypeDetails UserMailbox -ResultSize unlimited -Filter 'Department -eq "HR"'
-```
-```
-```    
-        Get-Recipient -RecipientTypeDetails UserMailbox -ResultSize unlimited -Filter 'PostalCode -eq "98052"'
-```
-```    
-        Get-Recipient -RecipientTypeDetails UserMailbox -ResultSize unlimited -Filter 'StateOrProvince -eq "WA"'
-```
-```    
-    ```powershell
-Get-Mailbox -ResultSize Unlimited -Filter {RecipientTypeDetails -ne "DiscoveryMailbox"}
-```
-```    
+	Get-Mailbox -ResultSize Unlimited -Filter {RecipientTypeDetails -ne "DiscoveryMailbox"}
+	```
+  
 Вы можете использовать в фильтре другие свойства, чтобы включать и исключать почтовые ящики. Подробные сведения см. в статье [Фильтруемые свойства для параметра -Filter](https://technet.microsoft.com/ru-ru/library/bb738155\(v=exchg.150\)).
 

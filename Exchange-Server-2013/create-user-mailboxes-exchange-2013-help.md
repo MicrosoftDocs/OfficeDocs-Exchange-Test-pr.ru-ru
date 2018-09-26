@@ -128,9 +128,9 @@ _**Последнее изменение раздела:** 2013-04-12_
   - Почтовый ящик будет создан в подразделении по умолчанию. Чтобы указать другое подразделение, используйте параметр *OrganizationalUnit*.
 
 <!-- end list -->
-
+```powershell``
     New-Mailbox -Alias pilarp -Name "Pilar Pinilla" -FirstName Pilar -LastName Pinilla -DisplayName "Pilar Pinilla" -UserPrincipalName pilarp@contoso.com -Password (ConvertTo-SecureString -String 'Pa$$word1' -AsPlainText -Force)
-
+`
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [New-Mailbox](https://technet.microsoft.com/ru-ru/library/aa997663\(v=exchg.150\)).
 
 ## Как проверить, что все получилось?
@@ -142,8 +142,8 @@ _**Последнее изменение раздела:** 2013-04-12_
   - В командной консоли Exchange выполните следующую команду для вывода информации о новом почтовом ящике пользователя.
     
     ```powershell
-Get-Mailbox <Name> | FL Name,RecipientTypeDetails,PrimarySmtpAddress
-```
+	Get-Mailbox <Name> | FL Name,RecipientTypeDetails,PrimarySmtpAddress
+	```
 
 ## Создание почтового ящика для существующего пользователя
 
@@ -216,8 +216,8 @@ Get-User -RecipientTypeDetails User -Filter { UserPrincipalName -ne $Null } | En
   - В командной консоли Exchange выполните следующую команду, чтобы отобразить данные о новом почтовом ящике.
     
     ```powershell
-Get-Mailbox <Name> | FL Name,RecipientTypeDetails,PrimarySmtpAddress
-```
+	Get-Mailbox <Name> | FL Name,RecipientTypeDetails,PrimarySmtpAddress
+	```
     
     Обратите внимание, что значение свойства *RecipientTypeDetails* — `UserMailbox`.
 

@@ -93,23 +93,31 @@ Get-Mailbox -Arbitration |fl
 
 В этом примере показано, как выполнить экспорт приветствия для абонентской группы единой системы обмена сообщениями `MyUMDialPlan`, которое сохраняется в виде файла `welcomegreeting.wav`.
 
-    $prompt = Export-UMPrompt -PromptFileName "customgreeting.wav" -UMDialPlan MyUMDialPlan
-    set-content -Path "d:\DialPlanPrompts\welcomegreeting.wav" -Value $prompt.AudioData -Encoding Byte
+```powershell
+$prompt = Export-UMPrompt -PromptFileName "customgreeting.wav" -UMDialPlan MyUMDialPlan
+set-content -Path "d:\DialPlanPrompts\welcomegreeting.wav" -Value $prompt.AudioData -Encoding Byte
+```
 
 В этом примере показано, как выполнить импорт файла приветствия `welcomegreeting.wav` из d:\\UMPrompts в абонентскую группу единой системы обмена сообщениями `MyUMDialPlan`.
 
-    [byte[]]$c = Get-content -Path "d:\UMPrompts\welcomegreeting.wav" -Encoding Byte -ReadCount 0
-    Import-UMPrompt -UMDialPlan MyUMDialPlan -PromptFileName "welcomegreeting.wav" -PromptFileData $c
+```powershell
+[byte[]]$c = Get-content -Path "d:\UMPrompts\welcomegreeting.wav" -Encoding Byte -ReadCount 0
+Import-UMPrompt -UMDialPlan MyUMDialPlan -PromptFileName "welcomegreeting.wav" -PromptFileData $c
+```
 
 В этом примере показано, как выполнить экспорт настраиваемого приветствия для автосекретаря единой системы обмена сообщениями `MyUMAutoAttendant`, которое сохраняется в виде файла `welcomegreetingbackup.wav`.
 
-    Export-UMPrompt -PromptFileName "welcomegreeting.wav" -UMAutoAttendant MyUMAutoAttendant
-    set-content -Path "e:\UMPromptsBackup\welcomegreeting.wav" -Value $prompt.AudioData -Encoding Byte
+```powershell
+Export-UMPrompt -PromptFileName "welcomegreeting.wav" -UMAutoAttendant MyUMAutoAttendant
+set-content -Path "e:\UMPromptsBackup\welcomegreeting.wav" -Value $prompt.AudioData -Encoding Byte
+```
 
 В этом примере показано, как выполнить импорт файла приветствия `welcomegreeting.wav` из d:\\UMPrompts в автосекретарь единой системы обмена сообщениями `MyUMAutoAttendant`.
 
-    [byte[]]$c = Get-content -Path "d:\UMPrompts\welcomegreeting.wav" -Encoding Byte -ReadCount 0
-    Import-UMPrompt -UMAutoAttendant MyUMAutoAttendant -PromptFileName "welcomegreeting.wav" -PromptFileData $c
+```powershell
+[byte[]]$c = Get-content -Path "d:\UMPrompts\welcomegreeting.wav" -Encoding Byte -ReadCount 0
+Import-UMPrompt -UMAutoAttendant MyUMAutoAttendant -PromptFileName "welcomegreeting.wav" -PromptFileData $c
+```
 
 Дополнительные сведения о настраиваемых приветствиях для единой системы обмена сообщениями см. в разделе
 
@@ -156,7 +164,9 @@ Get-Mailbox -Arbitration |fl
     
     Создайте самозаверяющий сертификат Exchange, выполнив в командной консоли следующую команду:
     
-        New-ExchangeCertificate -Services 'UM, UMCallRouter' -DomainName '*.northwindtraders.com' -FriendlyName 'UMSelfSigned' -SubjectName 'C=US,S=WA,L=Redmond,O=Northwindtraders,OU=Servers,CN= Northwindtraders.com' -PrivateKeyExportable $true
+    ```powershell
+    New-ExchangeCertificate -Services 'UM, UMCallRouter' -DomainName '*.northwindtraders.com' -FriendlyName 'UMSelfSigned' -SubjectName 'C=US,S=WA,L=Redmond,O=Northwindtraders,OU=Servers,CN= Northwindtraders.com' -PrivateKeyExportable $true
+    ```
     
     > [!NOTE]  
     > Если службы, которые нужно включить, указаны с помощью параметра <em>Services</em>, отобразится запрос на включение служб для созданного сертификата. В этом примере отображается запрос на включение сертификата для служб единой системы обмена сообщениями и маршрутизации вызовов единой системы обмена сообщениями. Дополнительные сведения о включении сертификата для служб см. в разделе <a href="assign-a-certificate-to-the-um-and-um-call-router-services-exchange-2013-help.md">Назначение сертификата службе единой системы обмена сообщениями и службе маршрутизатора вызовов этой системы</a>.
@@ -174,7 +184,9 @@ Get-Mailbox -Arbitration |fl
     
     Включите самозаверяющий сертификат Exchange, выполнив в командной консоли следующую команду:
     
-        Enable-ExchangeCertificate -Thumbprint 5113ae0233a72fccb75b1d0198628675333d010e -Services 'UM, UMCallRouter'
+    ```powershell
+    Enable-ExchangeCertificate -Thumbprint 5113ae0233a72fccb75b1d0198628675333d010e -Services 'UM, UMCallRouter'
+    ```
 
   - Настройте любую новую или существующую абонентскую группу единой системы обмена сообщениями как "С защитой SIP" или "С защитой".
 
@@ -238,7 +250,9 @@ Set-UMCallRouterSettings -Server MyUMCallRouter.northwindtraders.com -UMStartupM
 
 Настройте режим запуска единой системы обмена сообщениями на сервере почтовых ящиков Exchange 2013, выполнив в командной консоли следующую команду:
 
-    Set-UMService -Identity MyUMServer -ExternalHostFqdn host.external.contoso.com -IPAddressFamily Any -UMStartupMode Dual
+```powershell
+Set-UMService -Identity MyUMServer -ExternalHostFqdn host.external.contoso.com -IPAddressFamily Any -UMStartupMode Dual
+```
 
 ## Действие 7. Создание или настройка существующих абонентских доступов единой системы обмена сообщениями
 
@@ -286,7 +300,9 @@ New-UMDialplan -Name MyUMDialPlan -URIType E164 -NumberOfDigitsInExtension 5 -Vo
 
 При необходимости можно настроить существующую абонентскую группу единой системы обмена сообщениями с помощью командной консоли.
 
-    Set-UMDialplan -Identity MyDialPlan -AccessTelephoneNumbers 4255551234 -AudioCodec Wma -CallAnsweringRulesEnabled $false -OutsideLineAccessCode 9 -VoIPSecurity SIPSecured
+```powershell
+Set-UMDialplan -Identity MyDialPlan -AccessTelephoneNumbers 4255551234 -AudioCodec Wma -CallAnsweringRulesEnabled $false -OutsideLineAccessCode 9 -VoIPSecurity SIPSecured
+```
 
 Когда вы развертывали единую систему обмена сообщениями Exchange 2010, вы добавляли сервер этой системы в абонентскую группу единой системы обмена сообщениями, чтобы она могла принимать вызовы. Этого больше не требуется. В Exchange 2013 серверы клиентского доступа и почтовых ящиков невозможно связать с абонентской группой "Добавочный номер" или группой E.164, но необходимо связать с абонентскими группами URI для SIP. Серверы клиентского доступа и почтовых ящиков отвечают на все входящие звонки для любого типа абонентских групп.
 
@@ -330,7 +346,9 @@ New-UMIPGateway -Identity MyUMIPGateway -Address "MyUMIPGateway.contoso.com"
 
 Чтобы настроить существующий шлюз IP единой системы обмена сообщениями в командной консоли, выполните следующую команду.
 
-    Set-UMIPGateway -Identity MyUMIPGateway -Address fe80::39bd:88f7:6969:d223%11 -IPAddressFamily Any -Status Disabled -OutcallsAllowed $false
+```powershell
+Set-UMIPGateway -Identity MyUMIPGateway -Address fe80::39bd:88f7:6969:d223%11 -IPAddressFamily Any -Status Disabled -OutcallsAllowed $false
+```
 
 ## Действие 9. Создание сервисной группы единой системы обмена сообщениями
 
@@ -356,7 +374,10 @@ New-UMIPGateway -Identity MyUMIPGateway -Address "MyUMIPGateway.contoso.com"
 
 При необходимости вы можете создать сервисную группу единой системы обмена сообщениями, выполнив в командной консоли следующую команду:
 
-    New-UMHuntGroup -Name MyUMHuntGroup -PilotIdentifier 5551234,55555 -UMDialPlan MyUMDialPlan -UMIPGateway MyUMIPGateway
+```powershell
+New-UMHuntGroup -Name MyUMHuntGroup -PilotIdentifier 5551234,55555 -UMDialPlan MyUMDialPlan -UMIPGateway MyUMIPGateway
+```
+
 
 > [!TIP]  
 > Настроить или изменить параметры сервисной группы единой системы обмена сообщениями невозможно. Чтобы изменить параметры конфигурации сервисной группы единой системы обмена сообщениями, необходимо удалить ее и создать новую группу с требуемыми параметрами.
@@ -392,7 +413,9 @@ New-UMIPGateway -Identity MyUMIPGateway -Address "MyUMIPGateway.contoso.com"
 
 При необходимости вы можете создать автосекретаря единой системы обмена сообщениями, выполнив в командной консоли следующую команду:
 
-    New-UMAutoAttendant -Name MyUMAutoAttendant -UMDialPlan MyUMDialPlan -PilotIdentifierList 56000,56100 -SpeechEnabled $true -Status Enabled
+```powershell
+New-UMAutoAttendant -Name MyUMAutoAttendant -UMDialPlan MyUMDialPlan -PilotIdentifierList 56000,56100 -SpeechEnabled $true -Status Enabled
+```
 
 При необходимости можно настроить существующего автосекретаря единой системы обмена сообщениями с помощью Центра администрирования Exchange следующим образом.
 
@@ -402,7 +425,9 @@ New-UMIPGateway -Identity MyUMIPGateway -Address "MyUMIPGateway.contoso.com"
 
 При необходимости вы можете настроить существующего автосекретаря, выполнив в командной консоли следующую команду:
 
-    Set-UMAutoAttendant -Identity MySpeechEnabledAA -DTMFFallbackAutoAttendant MyDTMFAA -OperatorExtension 50100 -AfterHoursTransferToOperatorEnabled $true -StaroutToDialPlanEnabled $true
+```powershell
+Set-UMAutoAttendant -Identity MySpeechEnabledAA -DTMFFallbackAutoAttendant MyDTMFAA -OperatorExtension 50100 -AfterHoursTransferToOperatorEnabled $true -StaroutToDialPlanEnabled $true
+```
 
 ## Действие 11. Создание или настройка политики почтовых ящиков единой системы обмена сообщениями
 
@@ -440,7 +465,9 @@ New-UMMailboxPolicy -Name MyUMMailboxPolicy -UMDialPlan MyUMDialPlan
 
 При необходимости вы можете настроить существующую политику почтовых ящиков единой системы обмена сообщениями, выполнив в командной консоли следующую команду:
 
-    Set-UMMailboxPolicy -Identity MyUMMailboxPolicy -LogonFailuresBeforePINReset 8 -MaxLogonAttempts 12 -MinPINLength 8 -PINHistoryCount 10 -PINLifetime 60 -ResetPINText "The PIN used to allow you access to your mailbox using Outlook Voice Access has been reset."
+```powershell
+Set-UMMailboxPolicy -Identity MyUMMailboxPolicy -LogonFailuresBeforePINReset 8 -MaxLogonAttempts 12 -MinPINLength 8 -PINHistoryCount 10 -PINLifetime 60 -ResetPINText "The PIN used to allow you access to your mailbox using Outlook Voice Access has been reset."
+```
 
 ## Действие 12. Перемещение существующих почтовых ящиков с включенной единой системой обмена сообщениями в Exchange 2013
 
@@ -508,7 +535,9 @@ New-MoveRequest -Identity 'tony@alpineskihouse.com' -TargetDatabase "DB01"
 
 Чтобы включить пользователя в единую систему обмена сообщениями с помощью командной консоли, выполните следующую команду.
 
-    Enable-UMMailbox -Identity tonysmith@contoso.com -UMMailboxPolicy MyUMMailboxPolicy -Extensions 51234 -PIN 5643892 -NotifyEmail administrator@contoso.com -PINExpired $true
+```powershell
+Enable-UMMailbox -Identity tonysmith@contoso.com -UMMailboxPolicy MyUMMailboxPolicy -Extensions 51234 -PIN 5643892 -NotifyEmail administrator@contoso.com -PINExpired $true
+```
 
 При необходимости вы можете настроить пользователя с включенной поддержкой единой системы обмена сообщениями с помощью Центра администрирования Exchange:
 
@@ -538,7 +567,9 @@ New-MoveRequest -Identity 'tony@alpineskihouse.com' -TargetDatabase "DB01"
 
 При необходимости вы можете настроить пользователя с включенной поддержкой единой системы обмена сообщениями с помощью командной консоли, выполнив следующую команду:
 
-    Set-UMMailbox -Identity tony@contoso.com -CallAnsweringAudioCodec Wma -CallAnsweringRulesEnabled $false -FaxEnabled $false -UMSMSNotificationOption VoiceMail
+```powershell
+Set-UMMailbox -Identity tony@contoso.com -CallAnsweringAudioCodec Wma -CallAnsweringRulesEnabled $false -FaxEnabled $false -UMSMSNotificationOption VoiceMail
+```
 
 ## Действие 14. Настройка шлюзов VoIP, IP УАТС и УАТС с поддержкой SIP для направления всех входящих вызовов на серверы клиентского доступа Exchange 2013
 
@@ -604,10 +635,12 @@ Disable-UMServer -Identity MyUMServer -Immediate $true
 
 Чтобы удалить сервер единой системы обмена сообщениями Exchange 2010 из абонентской группы с помощью командной консоли, выполните следующую команду.
 
-    $dp= Get-UMDialPlan "MySIPDialPlan"
-    $s=Get-UMServer -id MyUMServer
-    $s.dialplans-=$dp.identity
-    Set-UMServer -id MyUMServer -dialplans:$s.dialplans
+```powershell
+$dp= Get-UMDialPlan "MySIPDialPlan"
+$s=Get-UMServer -id MyUMServer
+$s.dialplans-=$dp.identity
+Set-UMServer -id MyUMServer -dialplans:$s.dialplans
+```
 
 В этом примере фигурирует три абонентские группы SIP URI: SipDP1, SipDP2 и SipDP3. В этом примере описана процедура удаления сервера единой системы обмена сообщениями `MyUMServer` из абонентской группы SipDP3.
 

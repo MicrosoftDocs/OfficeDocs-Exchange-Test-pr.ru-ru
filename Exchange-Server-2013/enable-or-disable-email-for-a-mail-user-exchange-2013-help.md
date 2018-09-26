@@ -78,16 +78,16 @@ Disable-MailUser -Identity "Yan Li"
 3.  В консоли Shell выполните следующую команду:
     
     ```powershell
-Get-MailUser
-```
+	Get-MailUser
+	```
     
     Почтовый пользователь, для которого отключена электронная почта, будет отсутствовать в результатах, поскольку данный командлет возвращает только пользователей с включенной поддержкой почты.
 
 4.  В консоли Shell выполните следующую команду:
     
     ```powershell
-Get-User
-```
+	Get-User
+	```
     
     Почтовый пользователь, для которого отключена электронная почта, отобразится в результатах, поскольку данный командлет возвращает все объекты-пользователи Active Directory.
 
@@ -108,7 +108,7 @@ Enable-MailUser -Identity "Sanjay Shah" -ExternalEmailAddress renev@tailspintoys
 При включении поддержки почты для нескольких пользователей список пользователей без этой поддержки сначала экспортируется в CSV-файл (файл данных с разделителями-запятыми), после чего в CSV-файл с помощью текстового редактора (например, блокнота) или приложения электронных таблиц (например, Microsoft Excel) добавляются внешние адреса электронной почты. Затем обновленный CSV-файл используется в командной консоли, чтобы включить поддержку почты для пользователей, перечисленных в этом файле.
 
 1.  Выполните следующую команду, чтобы экспортировать список существующих пользователей, для которых не включена поддержка почты или у которых нет почтового ящика в организации, в файл с именем UsersToMailEnable.csv на рабочем столе администратора.
-    
+    ```powershell
         Get-User | Where { $_.RecipientType -eq "User" } | Out-File "C:\Users\Administrator\Desktop\UsersToMailEnable.csv"
     
     Полученный в результате файл будет иметь примерно следующий вид.
@@ -125,7 +125,7 @@ Enable-MailUser -Identity "Sanjay Shah" -ExternalEmailAddress renev@tailspintoys
         Spencer Low     User
         Toni Poe        User
         ...
-
+	```
 2.  Внесите в CSV-файл следующие изменения.
     
       - Удалите из CSV-файла всех пользователей, для которых не включена поддержка почты. Например, в предыдущем примере следует удалить первые три записи, поскольку они являются системными учетными записями по умолчанию.
@@ -135,7 +135,7 @@ Enable-MailUser -Identity "Sanjay Shah" -ExternalEmailAddress renev@tailspintoys
       - Добавьте заголовок столбца **EmailAddress**, а затем адрес электронной почты для каждого пользователя в файле. Имена и внешние адреса электронной почты всех пользователей необходимо разделить запятыми.
     
     Обновленный CSV-файл будет иметь примерно следующий вид.
-    
+    ```powershell
         Name,EmailAddress
         David Pelton,davidp@contoso.com
         Kim Akers,kakers@tailspintoys.com
@@ -144,11 +144,11 @@ Enable-MailUser -Identity "Sanjay Shah" -ExternalEmailAddress renev@tailspintoys
         Spencer Low,spencerl@fouthcoffee.com
         Toni Poe,tonip@contoso.com
         ...
-
+	```
 3.  Выполните следующую команду, чтобы использовать данные в CSV-файле с целью включения поддержки почты для пользователей, перечисленных в файле.
-    
+    ```powershell
         Import-CSV "C:\Users\Administrator\Desktop\UsersToMailEnable.csv" | ForEach-Object {Enable-MailUser -Identity $_.Name -ExternalEmailAddress $_.EmailAddress}
-    
+    ```
     В результате команды отображаются сведения о новых пользователях с включенной поддержкой почты.
 
 ## Как проверить, что все получилось?
@@ -164,6 +164,6 @@ Enable-MailUser -Identity "Sanjay Shah" -ExternalEmailAddress renev@tailspintoys
   - В командной консоли выполните приведенную ниже команду, чтобы отобразить сведения о новых почтовых пользователях.
     
     ```powershell
-Get-MailUser | Format-Table Name,RecipientTypeDetails,ExternalEmailAddress
-```
+	Get-MailUser | Format-Table Name,RecipientTypeDetails,ExternalEmailAddress
+	```
 

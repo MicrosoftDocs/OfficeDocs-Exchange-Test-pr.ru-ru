@@ -58,19 +58,19 @@ _**Последнее изменение раздела:** 2015-06-04_
   - управлять кластером с помощью средства управления отказоустойчивым кластером нельзя. Управлять им нужно с помощью Windows PowerShell, а командлеты Windows PowerShell должны выполняться в отношении отдельных элементов кластера;
 
 В этом примере показано, как использовать командную консоль для создания группы обеспечения доступности баз данных с точкой административного доступа кластера, которая будет иметь три сервера. Два сервера (EX1 и EX2) находятся в одной подсети (10.0.0.0), а третий сервер (EX3) расположен в другой подсети (192.168.0.0).
-
+```powershell
     New-DatabaseAvailabilityGroup -Name DAG1 -WitnessServer EX4 -DatabaseAvailabilityGroupIPAddresses 10.0.0.5,192.168.0.5
     Add-DatabaseAvailabilityGroupServer -Identity DAG1 -MailboxServer EX1
     Add-DatabaseAvailabilityGroupServer -Identity DAG1 -MailboxServer EX2
     Add-DatabaseAvailabilityGroupServer -Identity DAG1 -MailboxServer EX3
-
+```
 Команды для создания группы обеспечения доступности баз данных без точки административного доступа кластера очень похожи.
-
+```powershell
     New-DatabaseAvailabilityGroup -Name DAG1 -WitnessServer EX4 -DatabaseAvailabilityGroupIPAddresses ([System.Net.IPAddress])::None
     Add-DatabaseAvailabilityGroupServer -Identity DAG1 -MailboxServer EX1
     Add-DatabaseAvailabilityGroupServer -Identity DAG1 -MailboxServer EX2
     Add-DatabaseAvailabilityGroupServer -Identity DAG1 -MailboxServer EX3
-
+```
 При добавлении сервера EX1 в группу обеспечения доступности баз данных создается кластер для группы DAG1. В ходе создания кластера командлет **Add-DatabaseAvailabilityGroupServer** получает IP-адреса, настроенные для серверов группы обеспечения доступности баз данных, и игнорирует те из них, которые не соответствуют ни одной подсети, указанной на сервере EX1. В первом примере выше для группы DAG1 создается кластер с IP-адресом 10.0.0.5, а адрес 192.168.0.5 — игнорируется. Во втором примере выше значение параметра *DatabaseAvailabilityGroupIPAddresses* вызывает задачу создания отказоустойчивого кластера для группы обеспечения доступности баз данных, у которой нет административной точки доступа. Таким образом, в группе основных ресурсов кластера создается кластер с ресурсом "IP-адрес" или "Сетевое имя".
 
 Затем добавляется сервер EX2 и командлет **Add-DatabaseAvailabilityGroupServer** снова получает IP-адреса, указанные в конфигурации группы обеспечения доступности баз данных. IP-адреса кластера не изменяются, поскольку серверы EX2 и EX1 находятся в одной подсети.

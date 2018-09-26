@@ -56,12 +56,12 @@ _**Последнее изменение раздела:** 2016-12-09_
 2.  В окне **Средство устранения неполадок единой системы обмена сообщениями Microsoft Exchange 2010** в командной строке введите следующую команду и нажмите клавишу ВВОД.
     
     ```powershell
-$cred=Get-Credential
-```
+	$cred=Get-Credential
+	```
 
 3.  В окне **Запрос учетных данных Windows PowerShell** введите домен\\имя\_пользователя и пароль, а затем нажмите кнопку **ОК**.
 
 4.  В окне **Средство устранения неполадок единой системы обмена сообщениями Microsoft Exchange 2010** укажите обязательные параметры командлета для проверки потока вызовов. Например:
-    
+    ```powershell
         Test-ExchangeUMCallFlow -Mode SIPClient -CallingParty tonysmith@contoso.com - CalledParty jamiestark@contoso.com NextHop ocsfe.contoso.com -Credential $cred
-
+	```

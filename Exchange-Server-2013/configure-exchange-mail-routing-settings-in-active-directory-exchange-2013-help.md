@@ -41,7 +41,7 @@ _**Последнее изменение раздела:** 2015-04-08_
 
 Установить специальную стоимость Exchange для связи сайтов Active Directory можно, выполнив следующую команду:
 
-``` 
+```powershell
  Set-AdSiteLink <ADSiteLinkIdentity> -ExchangeCost <Integer | $null>
 ```
 
@@ -64,8 +64,8 @@ Set-AdSiteLink IPSiteLinkAB -ExchangeCost $null
 1.  Выполните следующую команду:
     
     ```powershell
-Get-AdSiteLink | Format-List Name,ExchangeCost
-```
+    Get-AdSiteLink | Format-List Name,ExchangeCost
+    ```
 
 2.  Убедитесь, что стоимость Exchange настроена для связи сайтов Active Directory.
 
@@ -98,8 +98,8 @@ Set-AdSite "Site B" -HubSiteEnabled $false
 1.  Выполните следующую команду:
     
     ```powershell
-Get-AdSite | Format-List Name,HubSiteEnabled
-```
+    Get-AdSite | Format-List Name,HubSiteEnabled
+    ```
 
 2.  Убедитесь, что значение параметра *HubSiteEnabled* для сайта Active Directory равно `True`.
 

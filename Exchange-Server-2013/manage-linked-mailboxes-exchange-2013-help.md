@@ -106,7 +106,9 @@ _**Последнее изменение раздела:** 2012-11-27_
 
 В этом примере показано, как создать связанный почтовый ящик для пользователя Ayla Kol в Contoso лесе ресурсов Exchange. В данном примере домен «FABRIKAM» находится в лесе учетных записей. Администратор Fabrikam \\ Administrator используется учетная запись для доступа к связанному контроллеру домена.
 
-    New-Mailbox -Name "Ayla Kol" -LinkedDomainController "DC1_FABRIKAM" -LinkedMasterAccount " FABRIKAM\aylak" -OrganizationalUnit Users -UserPrincipalName aylak@contoso.com -LinkedCredential:(Get-Credential FABRIKAM\administrator)
+```powershell
+New-Mailbox -Name "Ayla Kol" -LinkedDomainController "DC1_FABRIKAM" -LinkedMasterAccount " FABRIKAM\aylak" -OrganizationalUnit Users -UserPrincipalName aylak@contoso.com -LinkedCredential:(Get-Credential FABRIKAM\administrator)
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [New-Mailbox](https://technet.microsoft.com/ru-ru/library/aa997663\(v=exchg.150\)).
 
@@ -119,8 +121,8 @@ _**Последнее изменение раздела:** 2012-11-27_
   - В командной консоли Exchange, выполните следующую команду, чтобы отобразить информацию о новый связанный почтовый ящик.
     
     ```powershell
-Get-Mailbox <Name> | FL Name,RecipientTypeDetails,IsLinked,LinkedMasterAccount
-```
+    Get-Mailbox <Name> | FL Name,RecipientTypeDetails,IsLinked,LinkedMasterAccount
+    ```
 
 ## Изменить свойства связанного почтового ящика
 
@@ -354,15 +356,21 @@ Get-Mailbox <Name> | FL Name,RecipientTypeDetails,IsLinked,LinkedMasterAccount
 
 В этом примере с помощью команды **Get-Mailbox** чтобы найти все связанные почтовые ящики в организации.
 
-    Get-Mailbox -ResultSize unlimited -Filter {(RecipientTypeDetails -eq 'LinkedMailbox')}
+```powershell
+Get-Mailbox -ResultSize unlimited -Filter {(RecipientTypeDetails -eq 'LinkedMailbox')}
+```
 
 В этом примере с помощью команды **Set-Mailbox** чтобы ограничить количество получателей в полях Кому :, копия :, и СК: линии сообщения электронной почты до 500. Это ограничение применяется ко всем связанным почтовым ящикам в Организации.
 
-    Get-Mailbox -ResultSize unlimited -Filter {(RecipientTypeDetails -eq 'LinkedMailbox')} | Set-Mailbox -RecipientLimits 500
+```powershell
+Get-Mailbox -ResultSize unlimited -Filter {(RecipientTypeDetails -eq 'LinkedMailbox')} | Set-Mailbox -RecipientLimits 500
+```
 
 В этом примере изменяется fabrikam.com связанную главную учетную запись в лесу, где счет связанный почтовый ящик в связанный с лесом Exchange.
 
-    Set-Mailbox -Identity "Ayla Kol" -LinkedDomainController DC1.fabrikam.com -LinkedMasterAccount "fabrikam\robinw" -LinkedCredential:(Get-Credential fabrikam\administrator)
+```powershell
+Set-Mailbox -Identity "Ayla Kol" -LinkedDomainController DC1.fabrikam.com -LinkedMasterAccount "fabrikam\robinw" -LinkedCredential:(Get-Credential fabrikam\administrator)
+```
 
 ## Как проверить, что все получилось?
 
@@ -372,11 +380,12 @@ Get-Mailbox <Name> | FL Name,RecipientTypeDetails,IsLinked,LinkedMasterAccount
 
   - Используйте командлет **Get-Mailbox** в консоли для проверки изменений. Одно из преимуществ консоли — возможность просмотра нескольких свойств нескольких почтовых ящиков. В примере выше, где изменялся предел для получателей, выполните следующую команду, чтобы проверить, изменилось ли значение.
     
-        Get-Mailbox -ResultSize unlimited -Filter {(RecipientTypeDetails -eq 'LinkedMailbox')} | fl Name,RecipientLimits
-    
+    ```powershell
+    Get-Mailbox -ResultSize unlimited -Filter {(RecipientTypeDetails -eq 'LinkedMailbox')} | fl Name,RecipientLimits
+    ```
     Для вышеприведенного примера где Связанная главная учетная запись была изменена, выполните следующую команду, чтобы проверить новое значение.
     
     ```powershell
-Get-Mailbox "Ayla Kol" | fl LinkedMasterAccount
-```
+    Get-Mailbox "Ayla Kol" | fl LinkedMasterAccount
+    ```
 

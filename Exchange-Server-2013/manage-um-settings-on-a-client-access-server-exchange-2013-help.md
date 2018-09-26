@@ -56,9 +56,9 @@ Set-UMCallRouterSettings -DialPlans MySIPDialPlan -MaxCalls 150 -Server MyClient
 ```
 
 В этом примере показано, как установить значение 5077 для прослушивающего порта SIP TCP, а также задать двойной режим запуска на сервере клиентского доступа с именем `MyClientAccessServer`.
-
+```powershell
     Set-UMCallRouterSettings  -Server MyClientAccessServer-SipTCPListeningPort 5077 -UMStartUpMode -Dual 
-
+```
 ## Использовать командную консоль для просмотра свойств сервера клиентского доступа
 
 В этом примере отображается список всех серверов клиентского доступа.

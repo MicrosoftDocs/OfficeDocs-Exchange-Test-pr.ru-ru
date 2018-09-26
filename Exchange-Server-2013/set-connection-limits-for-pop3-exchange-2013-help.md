@@ -76,9 +76,9 @@ Set-PopSettings -Identity CAS01 -MaxConnectionsFromSingleIP Value
 ```
 
 В этом примере устанавливается ограничение числа подключений для пользователя.
-
+```powershell
     Set-PopSettings -MaxConnectionsPerUser Value 
-
+```
 В этом примере устанавливается максимальный размер команды.
 
 ```powershell
@@ -108,8 +108,8 @@ Set-PopSettings -MaxCommandSize Value
 1.  Выполните в командной консоли следующую команду.
     
     ```powershell
-Get-PopSettings | format-list
-```
+	Get-PopSettings | format-list
+	```
 
 2.  Убедитесь, что параметры указаны правильно.
 

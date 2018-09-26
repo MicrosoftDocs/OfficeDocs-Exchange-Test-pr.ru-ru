@@ -55,21 +55,21 @@ _**Последнее изменение раздела:** 2016-12-09_
 Чтобы выполнить это действие, необходимо указать проверенный домен для организации Exchange Online. Это должен быть домен, используемый как основной домен SMTP для размещенных в облаке учетных записей электронной почты. Имя этого домена для следующей процедуры — *\<ваш проверенный домен\>*.
 
 Выполните следующую команду в командной консоли Exchange (Exchange PowerShell) в своей локальной организации Exchange.
-
+```powershell
     New-AuthServer -Name "WindowsAzureACS" -AuthMetadataUrl https://accounts.accesscontrol.windows.net/<your verified domain>/metadata/json/1
-
+```
 ## Действие 2. Включение партнерского приложения для организации Exchange Online
 
 Выполните следующую команду в командной консоли Exchange в своей локальной организации Exchange.
-
+```powershell
     Get-PartnerApplication |  ?{$_.ApplicationIdentifier -eq "00000002-0000-0ff1-ce00-000000000000" -and $_.Realm -eq ""} | Set-PartnerApplication -Enabled $true
-
+```
 ## Действие 3. Экспорт локального сертификата проверки подлинности
 
 На этом этапе необходимо выполнить сценарий PowerShell, чтобы экспортировать локальный сертификат проверки подлинности, который затем будет импортирован в вашу организацию Exchange Online.
 
 1.  Сохраните следующий текст в файл сценария PowerShell с именем **ExportAuthCert.ps1**.
-    
+    ```powershell
         $thumbprint = (Get-AuthConfig).CurrentCertificateThumbprint
          
         if((test-path $env:SYSTEMDRIVE\OAuthConfig) -eq $false)
@@ -83,12 +83,12 @@ _**Последнее изменение раздела:** 2016-12-09_
         $certBytes = $oAuthCert.Export($certType)
         $CertFile = "$env:SYSTEMDRIVE\OAuthConfig\OAuthCert.cer"
         [System.IO.File]::WriteAllBytes($CertFile, $certBytes)
-
+    ```
 2.  В командной консоли локальной организации Exchange выполните сценарий PowerShell, созданный на предыдущем этапе. Например:
     
     ```powershell
-.\ExportAuthCert.ps1
-```
+    .\ExportAuthCert.ps1
+    ```
 
 ## Действие 4. Передача локального сертификата проверки подлинности в службы управления доступом Azure Active Directory
 
@@ -97,7 +97,7 @@ _**Последнее изменение раздела:** 2016-12-09_
 1.  Щелкните ярлык **Модуль Azure Active Directory для Windows PowerShell**, чтобы открыть рабочее пространство Windows PowerShell с установленными командлетами Azure AD. Все команды на этом этапе выполняются с помощью Windows PowerShell для консоли Azure Active Directory.
 
 2.  Сохраните следующий текст в файл сценария PowerShell с именем **UploadAuthCert.ps1**.
-    
+    ```powershell
         Connect-MsolService;
         Import-Module msonlineextended;
         
@@ -115,12 +115,12 @@ _**Последнее изменение раздела:** 2016-12-09_
         
         $p = Get-MsolServicePrincipal -ServicePrincipalName $ServiceName
         New-MsolServicePrincipalCredential -AppPrincipalId $p.AppPrincipalId -Type asymmetric -Usage Verify -Value $credValue
-
+    ```
 3.  Выполните сценарий PowerShell, созданный на предыдущем этапе. Например:
     
     ```powershell
-.\UploadAuthCert.ps1
-```
+    .\UploadAuthCert.ps1
+    ```
 
 4.  После запуска сценария откроется диалоговое окно учетных данных. Введите данные учетной записи администратора клиента своей организации Microsoft Online Azure AD. После выполнения сценария оставьте сеанс Windows PowerShell для Azure AD открытым. Он понадобится для запуска сценария PowerShell на следующем этапе.
 
@@ -139,7 +139,7 @@ Get-WebServicesVirtualDirectory | FL ExternalUrl
 
 
 1.  Сохраните следующий текст в файл сценария PowerShell с именем **RegisterEndpoints.ps1**. В этом примере используется подстановочный знак для регистрации всех конечных точек для домена contoso.com. Замените **contoso.com** службой имен узлов своей локальной организации Exchange.
-    
+    ```powershell
         $externalAuthority="*.contoso.com"
          
         $ServiceName = "00000002-0000-0ff1-ce00-000000000000";
@@ -150,21 +150,21 @@ Get-WebServicesVirtualDirectory | FL ExternalUrl
         $p.ServicePrincipalNames.Add($spn);
          
         Set-MsolServicePrincipal -ObjectID $p.ObjectId -ServicePrincipalNames $p.ServicePrincipalNames;
-
+    ```
 2.  В Windows PowerShell для Azure Active Directory выполните сценарий PowerShell, созданный на предыдущем этапе. Например:
     
     ```powershell
-.\RegisterEndpoints.ps1
-```
+    .\RegisterEndpoints.ps1
+    ```
 
 ## Действие 6. Создание соединителя IntraOrganizationConnector локальной организации со службой Office 365
 
 Необходимо определить целевой адрес ваших почтовых ящиков, размещенных в Exchange Online. Этот целевой адрес создается автоматически в процессе создания клиента Office 365. Например, если доменом вашей организации, размещенным в клиенте Office 365, является "contoso.com", то ваш целевой адрес службы — "contoso.mail.onmicrosoft.com".
 
 С помощью Exchange PowerShell выполните следующий командлет в своей локальной организации:
-
+```powershell
     New-IntraOrganizationConnector -name ExchangeHybridOnPremisesToOnline -DiscoveryEndpoint https://outlook.office365.com/autodiscover/autodiscover.svc -TargetAddressDomains <your service target address>
-
+```
 ## Действие 7. Создание соединителя IntraOrganizationConnector клиента Office 365 с локальной организацией Exchange
 
 Необходимо определить целевой адрес ваших почтовых ящиков, размещенных в локальной организации. Если основным SMTP-адресом организации является "contoso.com", то ваш целевой адрес — "contoso.com".
@@ -180,7 +180,7 @@ Get-WebServicesVirtualDirectory | FL ExternalUrl
 
 
 С помощью Windows PowerShell выполните следующий командлет:
-
+```powershell
     $UserCredential = Get-Credential
     
     $Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://outlook.office365.com/powershell-liveid/ -Credential $UserCredential -Authentication Basic -AllowRedirection
@@ -188,7 +188,7 @@ Get-WebServicesVirtualDirectory | FL ExternalUrl
     Import-PSSession $Session
     
     New-IntraOrganizationConnector -name ExchangeHybridOnlineToOnPremises -DiscoveryEndpoint <your on-premises Autodiscover endpoint> -TargetAddressDomains <your on-premises SMTP domain>
-
+```
 ## Действие 8. Настройка AvailabilityAddressSpace для любых серверов Exchange до версии Exchange 2013 с пакетом обновления 1 (SP1)
 
 При настройке гибридного развертывания в организации с версией Exchange, предшествующей Exchange 2013, необходимо установить в существующей организации Exchange по крайней мере один сервер Exchange 2013 SP1 или более поздней версии с ролями сервера клиентского доступа и сервера почтовых ящиков. Серверы клиентского доступа и почтовых ящиков Exchange 2013 действуют как интерфейсные серверы и управляют взаимодействием между существующей локальной организацией Exchange и организацией Exchange Online. Это взаимодействие включает в себя функции транспорта сообщений и обмена ими между локальной организацией и организацией Exchange Online. Мы настоятельно рекомендуем устанавливать в локальной организации более одного сервера Exchange 2013, чтобы повысить надежность и доступность компонентов гибридного развертывания.
@@ -220,9 +220,9 @@ Get-WebServicesVirtualDirectory | FL AdminDisplayVersion,ExternalUrl
 
 
 Чтобы настроить *AvailabilityAddressSpace*, с помощью Exchange PowerShell выполните приведенный ниже командлет в своей локальной организации.
-
+```powershell
     Add-AvailabilityAddressSpace -AccessMethod InternalProxy -ProxyUrl <your on-premises External Web Services URL> -ForestName <your Office 365 service target address> -UseServiceAccount $True
-
+```
 ## Как проверить, что все получилось?
 
 Проверить правильность конфигурации OAuth можно с помощью командлета [Test-OAuthConnectivity](https://technet.microsoft.com/ru-ru/library/jj218623\(v=exchg.150\)). Этот командлет проверяет, могут ли конечные точки локальной организации Exchange и Exchange Online обмениваться запросами на проверку подлинности.
@@ -232,13 +232,13 @@ Get-WebServicesVirtualDirectory | FL AdminDisplayVersion,ExternalUrl
 
 
 Чтобы убедиться, что локальная организация Exchange может успешно подключиться к Exchange Online, выполните следующую команду в Exchange PowerShell в своей локальной организации:
-
+```powershell
     Test-OAuthConnectivity -Service EWS -TargetUri https://outlook.office365.com/ews/exchange.asmx -Mailbox <On-Premises Mailbox> -Verbose | fl
-
+```
 Чтобы убедиться, что организация Exchange Online может успешно подключиться к локальной организации Exchange, воспользуйтесь сеансом удаленной среды [Remote PowerShell](https://technet.microsoft.com/ru-ru/library/jj984289\(v=exchg.150\)), чтобы подключиться к своей организации Exchange Online и выполнить следующую команду:
-
+```powershell
     Test-OAuthConnectivity -Service EWS -TargetUri <external hostname authority of your Exchange On-Premises deployment>/metadata/json/1 -Mailbox <Exchange Online Mailbox> -Verbose | fl
-
+```
 Например, Test-OAuthConnectivity -Service EWS -TargetUri https://lync.contoso.com/metadata/json/1 -Mailbox ExchangeOnlineBox1 -Verbose | fl
 
 > [!IMPORTANT]  

@@ -82,8 +82,8 @@ New-MoveRequest -Identity 'tony@alpineskihouse.com' -TargetDatabase DB01 -WhatIf
   - В консоли выполните следующую команду для извлечения информации о перемещении почтовых ящиков.
     
     ```powershell
-Get-MigrationUserStatistics -Identity BatchName -Status | Format-List
-```
+    Get-MigrationUserStatistics -Identity BatchName -Status | Format-List
+    ```
 
 Подробнее см. в разделе [Get-MigrationUserStatistics](https://technet.microsoft.com/ru-ru/library/jj218695\(v=exchg.150\)).
 
@@ -107,11 +107,11 @@ Get-MigrationUserStatistics -Identity BatchName -Status | Format-List
 
 В данном примере создается пакет миграции для локального перемещения, при котором почтовые ящики, указанные в CSV-файле, перемещаются в другую базу данных почтовых ящиков. Этот файл состоит из одного столбца, содержащего адрес электронной почты каждого из перемещаемых почтовых ящиков. Для заголовка этого столбца должно быть назначено имя **EmailAddress**. Пакет миграции в этом примере следует запустить вручную с помощью командлета **Start-MigrationBatch** или Центра администрирования Exchange. Кроме того, запустить пакет миграции автоматически можно с помощью параметра *AutoStart*.
 
-  ```
+  ```powershell
   New-MigrationBatch -Local -Name LocalMove1 -CSVData ([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\LocalMove1.csv")) -TargetDatabases MBXDB2 -TimeZone "Pacific Standard Time"
   ```
 
-  ```
+  ```powershell
   Start-MigrationBatch -Identity LocalMove1
   ```
   
@@ -126,8 +126,8 @@ Get-MigrationUserStatistics -Identity BatchName -Status | Format-List
   - В консоли выполните следующую команду для извлечения информации о перемещении почтовых ящиков.
     
     ```powershell
-Get-MigrationUserStatistics -Identity BatchName -Status | Format-List
-```
+    Get-MigrationUserStatistics -Identity BatchName -Status | Format-List
+    ```
 
 Подробнее см. в разделе [Get-MigrationUserStatistics](https://technet.microsoft.com/ru-ru/library/jj218695\(v=exchg.150\)).
 
@@ -164,8 +164,8 @@ New-MoveRequest -Identity 'tony@alpineskihouse.com' -PrimaryOnly -TargetDatabase
   - В консоли выполните следующую команду для извлечения информации о перемещении почтовых ящиков.
     
     ```powershell
-Get-MigrationUserStatistics -Identity BatchName -Status | Format-List
-```
+    Get-MigrationUserStatistics -Identity BatchName -Status | Format-List
+    ```
 
 Подробнее см. в разделе [Get-MigrationUserStatistics](https://technet.microsoft.com/ru-ru/library/jj218695\(v=exchg.150\)).
 
@@ -173,7 +173,7 @@ Get-MigrationUserStatistics -Identity BatchName -Status | Format-List
 
 В этом примере настраивается конечная точка миграции, а затем создается межлесное перемещение — из исходного в целевой лес — с помощью CSV-файла.
 
-```
+```powershell
 New-MigrationEndpoint -Name Fabrikam -ExchangeRemote -Autodiscover -EmailAddress tonysmith@fabrikam.com -Credentials (Get-Credential fabrikam\tonysmith) 
 
 $csvData=[System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\batch.csv")
@@ -197,8 +197,8 @@ New-MigrationBatch -CSVData $csvData -Timezone "Pacific Standard Time" -Name Fab
   - В консоли выполните следующую команду для извлечения информации о перемещении почтовых ящиков.
     
     ```powershell
-Get-MigrationUserStatistics -Identity BatchName -Status | Format-List
-```
+    Get-MigrationUserStatistics -Identity BatchName -Status | Format-List
+    ```
 
 Подробнее см. в разделе [Get-MigrationUserStatistics](https://technet.microsoft.com/ru-ru/library/jj218695\(v=exchg.150\)).
 
@@ -229,17 +229,17 @@ New-MoveRequest -Identity 'tony@alpineskihouse.com' -ArchiveOnly -ArchiveTargetD
   - В консоли выполните следующую команду для извлечения информации о перемещении почтовых ящиков.
     
     ```powershell
-Get-MigrationUserStatistics -Identity BatchName -Status | Format-List
-```
+    Get-MigrationUserStatistics -Identity BatchName -Status | Format-List
+    ```
 
 Подробнее см. в разделе [Get-MigrationUserStatistics](https://technet.microsoft.com/ru-ru/library/jj218695\(v=exchg.150\)).
 
 ## Перемещение основного почтового ящика пользователя и архивного почтового ящика в разные базы данных
 
 В этом примере основной почтовый ящик и архивный почтовый ящик пользователя Юлии перемещаются в разные базы данных. Основной ящик перемещается в DB01, а архив — в DB03.
-
+```powershell
     New-MoveRequest -Identity 'ayla@humongousinsurance.com' -TargetDatabase DB01 -ArchiveTargetDatabase -DB03
-
+```
 Дополнительные сведения о синтаксисе и параметрах см. в разделах [New-MigrationBatch](https://technet.microsoft.com/ru-ru/library/jj219166\(v=exchg.150\)) и [New-MoveRequest](https://technet.microsoft.com/ru-ru/library/dd351123\(v=exchg.150\)).
 
 ## Как проверить, что все получилось?
@@ -249,8 +249,8 @@ Get-MigrationUserStatistics -Identity BatchName -Status | Format-List
   - В консоли выполните следующую команду для извлечения информации о перемещении почтовых ящиков.
     
     ```powershell
-Get-MigrationUserStatistics -Identity BatchName -Status | Format-List
-```
+    Get-MigrationUserStatistics -Identity BatchName -Status | Format-List
+    ```
 
 Подробнее см. в разделе [Get-MigrationUserStatistics](https://technet.microsoft.com/ru-ru/library/jj218695\(v=exchg.150\)).
 
@@ -269,9 +269,9 @@ Get-MigrationUserStatistics -Identity BatchName -Status | Format-List
 ## Использование командной консоли для перемещения основного почтового ящика пользователя и увеличения предельного количества неправильных элементов
 
 В этом примере основной почтовый ящик пользователя Елизаветы перемещается в базу данных DB01 почтовых ящиков, а для предельного количества неправильных элементов устанавливается значение `100`. Чтобы установить высокий предел неправильных элементов, необходимо использовать параметр *AcceptLargeDataLoss*.
-
+```powershell
     New-MoveRequest -Identity 'Lisa' -PrimaryOnly -TargetDatabase "DB01" -BadItemLimit 100 -AcceptLargeDataLoss
-
+```
 Дополнительные сведения о синтаксисе и параметрах см. в разделах [New-MigrationBatch](https://technet.microsoft.com/ru-ru/library/jj219166\(v=exchg.150\)) и [New-MoveRequest](https://technet.microsoft.com/ru-ru/library/dd351123\(v=exchg.150\)).
 
 ## Как проверить, что все получилось?
@@ -281,8 +281,8 @@ Get-MigrationUserStatistics -Identity BatchName -Status | Format-List
   - В консоли выполните следующую команду для извлечения информации о перемещении почтовых ящиков.
     
     ```powershell
-Get-MigrationUserStatistics -Identity BatchName -Status | Format-List
-```
+    Get-MigrationUserStatistics -Identity BatchName -Status | Format-List
+    ```
 
 Подробнее см. в разделе [Get-MigrationUserStatistics](https://technet.microsoft.com/ru-ru/library/jj218695\(v=exchg.150\)).
 

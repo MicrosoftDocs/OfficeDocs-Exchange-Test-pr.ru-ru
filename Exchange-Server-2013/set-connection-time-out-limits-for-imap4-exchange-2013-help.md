@@ -92,8 +92,8 @@ Set -ImapSettings -Identity CAS01 -PreAuthenticatedConnectionTimeout TimeValue
 1.  Выполните в командной консоли следующую команду.
     
     ```powershell
-Get-ImapSettings | format-list
-```
+    Get-ImapSettings | format-list
+    ```
 
 2.  Убедитесь, что параметры указаны правильно.
 

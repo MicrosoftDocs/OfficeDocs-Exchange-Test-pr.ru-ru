@@ -92,9 +92,9 @@ New-DatabaseAvailabilityGroup -Name DAG2 -DatabaseAvailabilityGroupIPAddresses 1
 ```
 
 В этом примере создается группа обеспечения доступности баз данных DAG3. В группе DAG3 используется следящий сервер MBX2 и локальный каталог C:\\DAG3. Группе DAG3 присвоено несколько статических IP-адресов, так как участники группы обеспечения доступности баз данных используют различные подсети сети MAPI.
-
+```powershell
     New-DatabaseAvailabilityGroup -Name DAG3 -WitnessServer MBX2 -WitnessDirectory C:\DAG3 -DatabaseAvailabilityGroupIPAddresses 10.0.0.8,192.168.0.8
-
+```
 В этом примере создается группа обеспечения доступности баз данных DAG4, настроенная на использование протокола DHCP. Кроме того, будет выполнен автоматический выбор следящего сервера и создание следящего каталога по умолчанию.
 
 ```powershell
@@ -102,9 +102,9 @@ New-DatabaseAvailabilityGroup -Name DAG4
 ```
 
 В этом примере создается группа обеспечения доступности баз данных с именем DAG5 без административной точки доступа (доступно только в группах обеспечения доступности баз данных с Windows Server 2012 R2). Кроме того, для группы обеспечения доступности баз данных в качестве следящего сервера будет использован сервер клиентского доступа MBX4; также будет создан следящий каталог по умолчанию.
-
+```powershell
     New-DatabaseAvailabilityGroup -Name DAG5 -DatabaseAvailabilityGroupIPAddresses ([System.Net.IPAddress]::None) -WitnessServer MBX4
-
+```
 ## Как проверить, что все получилось?
 
 Чтобы убедиться, что группа обеспечения доступности баз данных создана успешно, выполните одно из приведенных ниже действий.
@@ -114,8 +114,8 @@ New-DatabaseAvailabilityGroup -Name DAG4
   - В командной консоли выполните приведенную ниже команду, чтобы убедиться в создании группы обеспечения доступности баз данных и увидеть информацию о ее свойствах.
     
     ```powershell
-Get-DatabaseAvailabilityGroup <DAGName> | Format-List
-```
+	Get-DatabaseAvailabilityGroup <DAGName> | Format-List
+	```
 
 ## Дополнительные сведения
 

@@ -42,8 +42,8 @@ _**Последнее изменение раздела:** 2018-01-17_
     Для повторного создания системного почтового ящика обнаружения, выполните следующую команду:
     
     ```powershell
-.\Setup /preparead /IAcceptExchangeServerLicenseTerms
-```
+	.\Setup /preparead /IAcceptExchangeServerLicenseTerms
+	```
 
 ## Как проверить, что это работает
 

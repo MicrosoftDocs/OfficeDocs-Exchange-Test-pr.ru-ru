@@ -85,9 +85,9 @@ Get-ExchangeServer | format-list
 
 
 В данном примере показано включение виртуального каталога публикации на сервере клиентского доступа CAS01.
-
+```powershell
     Set-OwaVirtualDirectory -Identity "CAS01\owa (Default Web Site)" -ExternalUrl "<URL for CAS01>" -CalendarEnabled $true
-
+```
 Где идентификатор `CAS01\owa (Default Web Site)` — это имя сервера и виртуальный каталог Outlook Web App.
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Set-OwaVirtualDirectory](https://technet.microsoft.com/ru-ru/library/bb123515\(v=exchg.150\)).

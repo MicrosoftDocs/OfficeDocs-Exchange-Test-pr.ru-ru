@@ -55,12 +55,15 @@ Microsoft Exchange 2013 поддерживает перемещение почт
 
 1.  Выполните следующие команды, чтобы получить учетные данные локального и удаленного лесов.
     
-        $LocalCredentials = Get-Credential
-        $RemoteCredentials = Get-Credential
-
+    ```powershell
+    $LocalCredentials = Get-Credential
+    $RemoteCredentials = Get-Credential
+    ```    
 2.  Выполните следующие команды, чтобы передать эти учетные данные в параметры *LocalForestCredential* и *RemoteForestCredential* в скрипте Prepare-MoveRequest.ps1.
     
-        Prepare-MoveRequest.ps1 -Identity JohnSmith@Fabrikan.com -RemoteForestDomainController DC001.Fabrikam.com -RemoteForestCredential $RemoteCredentials -LocalForestDomainController DC001.Contoso.com -LocalForestCredential $LocalCredentials
+    ```powershell
+    Prepare-MoveRequest.ps1 -Identity JohnSmith@Fabrikan.com -RemoteForestDomainController DC001.Fabrikam.com -RemoteForestCredential $RemoteCredentials -LocalForestDomainController DC001.Contoso.com -LocalForestCredential $LocalCredentials
+    ```
 
 ## Набор параметров скрипта
 
@@ -169,12 +172,15 @@ Microsoft Exchange 2013 поддерживает перемещение почт
 
 1.  Выполните следующие команды, чтобы получить учетные данные локального и удаленного лесов.
     
-        $LocalCredentials = Get-Credential
-        $RemoteCredentials = Get-Credential
-
+    ```powershell
+    $LocalCredentials = Get-Credential
+    $RemoteCredentials = Get-Credential
+    ```    
 2.  Выполните следующую команду, чтобы передать эти учетные данные в параметры *LocalForestCredential* и *RemoteForestCredential* в скрипте Prepare-MoveRequest.ps1.
     
-        Prepare-MoveRequest.ps1 -Identity JamesAlvord@Contoso.com -RemoteForestDomainController DC001.Fabrikam.com -RemoteForestCredential $RemoteCredentials -LocalForestDomainController DC001.Contoso.com -LocalForestCredential $LocalCredentials -LinkedMailUser 
+    ```powershell
+    Prepare-MoveRequest.ps1 -Identity JamesAlvord@Contoso.com -RemoteForestDomainController DC001.Fabrikam.com -RemoteForestCredential $RemoteCredentials -LocalForestDomainController DC001.Contoso.com -LocalForestCredential $LocalCredentials -LinkedMailUser 
+    ```
 
 ## Пример. Конвейеризация
 
@@ -183,12 +189,14 @@ Microsoft Exchange 2013 поддерживает перемещение почт
 1.  Выполните следующую команду.
     
     ```powershell
-$UserCredentials = Get-Credential
-```
+    $UserCredentials = Get-Credential
+    ``
 
 2.  Выполните следующую команду, чтобы передать эти учетные данные в параметр *RemoteForestCredential* в сценарии Prepare-MoveRequest.ps1.
     
-        "IanP@Contoso.com", "JoeAn@Contoso.com" | Prepare-MoveRequest.ps1 -RemoteForestDomainController DC001.Fabrikam.com -RemoteForestCredential $UserCredentials
+    ```powershell
+    "IanP@Contoso.com", "JoeAn@Contoso.com" | Prepare-MoveRequest.ps1 -RemoteForestDomainController DC001.Fabrikam.com -RemoteForestCredential $UserCredentials
+    ```
 
 ## Пример. Использование CSV-файла для массового создания пользователей с поддержкой почты
 
@@ -209,13 +217,15 @@ Cindy@contoso.com
 1.  Выполните следующую команду, чтобы получить учетные данные леса.
     
     ```powershell
-$UserCredentials = Get-Credential
-```
+    $UserCredentials = Get-Credential
+    ```
 
 2.  Выполните следующую команду, чтобы передать эти учетные данные в параметр *RemoteForestCredential* в сценарии Prepare-MoveRequest.ps1.
     
-        Import-Csv Test.csv | Prepare-MoveRequest.ps1 -RemoteForestDomainController DC001.Fabrikam.com -RemoteForestCredential $UserCredentials
-
+    ```powershell
+    Import-Csv Test.csv | Prepare-MoveRequest.ps1 -RemoteForestDomainController DC001.Fabrikam.com -RemoteForestCredential $UserCredentials
+    ```
+        
 ## Поведение скрипта в зависимости от конечного объекта
 
 В этом разделе описывается выполнение скрипта по отношению к нескольким сценариям для конечных объектов.

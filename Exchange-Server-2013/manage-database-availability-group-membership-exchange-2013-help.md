@@ -86,8 +86,8 @@ Remove-DatabaseAvailabilityGroupServer -Identity DAG2 -MailboxServer MBX4 -Confi
   - В командной консоли выполните приведенную ниже команду, чтобы отобразить сведения о членстве в группе обеспечения доступности баз данных.
     
     ```powershell
-Get-DatabaseAvailabilityGroup <DAGName> | Format-List Servers
-```
+    Get-DatabaseAvailabilityGroup <DAGName> | Format-List Servers
+    ```
 
 ## Дополнительные сведения
 

@@ -66,8 +66,8 @@ Remove-FederationTrust
   - В командной консоли выполните следующую команду, чтобы убедиться, что сведения доверия федерации не возвращаются для организации Exchange.
     
     ```powershell
-Get-FederationTrust
-```
+	Get-FederationTrust
+	```
     
     Дополнительные сведения о синтаксисе и параметрах см. в разделе [Get-FederationTrust](https://technet.microsoft.com/ru-ru/library/dd351262\(v=exchg.150\)).
 

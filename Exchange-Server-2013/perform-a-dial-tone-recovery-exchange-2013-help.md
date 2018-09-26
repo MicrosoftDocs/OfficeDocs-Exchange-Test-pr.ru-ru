@@ -44,20 +44,20 @@ _**Последнее изменение раздела:** 2014-06-27_
 2.  Используйте командлет [New-MailboxDatabase](https://technet.microsoft.com/ru-ru/library/aa997976\(v=exchg.150\)) для создания аварийной базы данных, как показано в следующем примере.
     
     ```powershell
-New-MailboxDatabase -Name DTDB1 -EdbFilePath D:\DialTone\DTDB1.EDB
-```
+	New-MailboxDatabase -Name DTDB1 -EdbFilePath D:\DialTone\DTDB1.EDB
+	```
 
 3.  Используйте командлет [Set-Mailbox](https://technet.microsoft.com/ru-ru/library/bb123981\(v=exchg.150\)) для перемещения почтовых ящиков пользователей, сохраненных в восстанавливаемой базе данных, как показано в следующем примере.
     
     ```powershell
-Get-Mailbox -Database DB1 | Set-Mailbox -Database DTDB1
-```
+	Get-Mailbox -Database DB1 | Set-Mailbox -Database DTDB1
+	```
 
 4.  Используйте командлет [Mount-Database](https://technet.microsoft.com/ru-ru/library/aa998871\(v=exchg.150\)) для подключения базы данных, чтобы разрешить клиентским компьютерам получать к ней доступ, а также отправлять и получать сообщения, как показано в следующем примере.
     
     ```powershell
-Mount-Database -Identity DTDB1
-```
+	Mount-Database -Identity DTDB1
+	```
 
 5.  Создайте базу данных восстановления и восстановите или скопируйте базу данных и файлы журнала, содержащие данные, которые необходимо восстановить, в базу данных восстановления. Дополнительные сведения см. в разделе [Создание базы данных восстановления](create-a-recovery-database-exchange-2013-help.md).
 
@@ -66,48 +66,49 @@ Mount-Database -Identity DTDB1
 7.  Подключите базу данных восстановления, а затем используйте командлет [Dismount-Database](https://technet.microsoft.com/ru-ru/library/bb124936\(v=exchg.150\)), чтобы отключить ее, как показано в следующем примере.
     
     ```powershell
-Mount-Database -Identity RDB1
-```
+	Mount-Database -Identity RDB1
+	```
+	```powershell
         Dismount-Database -Identity RDB1
-
+	```
 8.  После отключения базы данных восстановления переместите текущую базу данных и файлы журнала из папки базы данных восстановления в безопасное местоположение. Это необходимо для подготовки к переключению с базы данных восстановления на аварийную базу данных.
 
 9.  Отключите аварийную базу данных, как показано в следующем примере. Обратите внимание, что во время отключения базы данных прерывается обслуживание конечных пользователей.
     
     ```powershell
-Dismount-Database -Identity DTDB1
-```
+	Dismount-Database -Identity DTDB1
+	```
 
 10. Переместите базу данных и файлы журнала из папки аварийной базы данных в папку базы данных восстановления.
 
 11. Переместите базу данных и файлы журнала из безопасного местоположения, содержащего восстановленную базу данных, в папку аварийной базы данных, а затем подключите базу данных, как показано в следующем примере.
     
     ```powershell
-Mount-Database -Identity DTDB1
-```
+	Mount-Database -Identity DTDB1
+	```
     
     Это возобновит обслуживание конечных пользователей. Пользователи смогут получить доступ к исходной рабочей базе данных, а также отправлять и получать сообщения.
 
 12. Подключите базу данных восстановления, как показано в следующем примере.
     
     ```powershell
-Mount-Database -Identity RDB1
-```
+	Mount-Database -Identity RDB1
+	```
 
 13. Используйте командлеты [Get-Mailbox](https://technet.microsoft.com/ru-ru/library/bb123685\(v=exchg.150\)) и [New-MailboxRestoreRequest](https://technet.microsoft.com/ru-ru/library/ff829875\(v=exchg.150\)) для экспорта данных из базы данных восстановления и их импорта в восстановленную базу, как показано в следующем примере. Все сообщения, отправленные и полученные с помощью аварийной базы данных, будут импортированы в рабочую базу данных.
     
-    ```
-```powershell
-$mailboxes = Get-Mailbox -Database DTDB1
-```
-    ```
-    ```    
+    
+	```powershell
+	$mailboxes = Get-Mailbox -Database DTDB1
+	```
+    
+    ``` powershell   
     $mailboxes | %{ New-MailboxRestoreRequest -SourceStoreMailbox $_.ExchangeGuid -SourceDatabase RDB1 -TargetMailbox $_ }
     ```
 
 14. После завершения операции восстановления можно отключить и удалить базу данных восстановления, как показано в следующем примере.
     
-    ```
+    ```powershell
     Dismount-Database -Identity RDB1
     Remove-MailboxDatabase -Identity RDB1
     ```

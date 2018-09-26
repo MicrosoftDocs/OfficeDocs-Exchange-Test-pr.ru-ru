@@ -76,17 +76,17 @@ Get-Mailbox -OrganizationalUnit Sales | Set-Mailbox CustomAttribute1 "SalesOU"
 ```
 
 Теперь можно создать политику адресов электронной почты для всех получателей, имеющих свойство *CustomAttribute1*, равное SalesOU, как показано в следующем примере.
-
+```powershell
     New-EmailAddressPolicy -Name "Sales" -RecipientFilter { CustomAttribute1 -eq "SalesOU"} -EnabledEmailAddressTemplates "SMTP:%s%2g@sales.contoso.com"
-
+```
 ## Пример настраиваемого атрибута с параметром ConditionalCustomAttributes
 
 При создании динамических групп рассылки, политик адресов электронной почты или списков адресов не требуется использовать параметр *RecipeintFilter* для указания настраиваемых атрибутов. Для этого можно использовать параметры *ConditionalCustomAttribute1*–*ConditionalCustomAttribute15*.
 
 Этот пример создает динамическую группу рассылки на основе получателей, значение *CustomAttribute1* которых равно SalesOU.
-
+```powershell
     New-DynamicDistributionGroup -Name "Sales Users and Contacts" -IncludedRecipients "MailboxUsers,MailContacts" -ConditionalCustomAttribute1 "SalesOU"
-
+```
 > [!NOTE]  
 > Параметр <em>IncludedRecipients</em> необходимо использовать при применении параметра <em>Conditional</em>. Кроме того, невозможно использовать параметры <em>Conditional</em>, если используется параметр <em>RecipientFilter</em>. Чтобы включить дополнительные фильтры для создания динамической группы рассылки, политик адресов электронной почты или списков адресов, необходимо использовать параметр <em>RecipientFilter</em>.
 
@@ -100,9 +100,9 @@ Set-Mailbox -Identity Kweku -ExtensionCustomAttribute1 MATH307,ECON202,ENGL300
 ```
 
 Затем создается динамическая группа рассылки для всех студентов из группы MATH307 с помощью параметра *RecipientFilter*, где значение *ExtensionCustomAttribute1* равно MATH307. При использовании параметров *ExtentionCustomAttributes* можно использовать оператор `-eq` вместо оператора `-like`.
-
+```powershell
     New-DynamicDistributionGroup -Name Students_MATH307 -RecipientFilter {ExtensionCustomAttribute1 -eq "MATH307"}
-
+```
 В этом примере значения *ExtensionCustomAttribute1* пользователя Kweku обновляются, чтобы указать, что он добавил группу ENGL210 и удалил ECON202.
 
 ```powershell

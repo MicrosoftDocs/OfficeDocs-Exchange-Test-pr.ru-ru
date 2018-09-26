@@ -71,12 +71,15 @@ _**Последнее изменение раздела:** 2015-07-07_
 > [!NOTE]  
 > Чтобы использовать настраиваемые параметры для почтового ящика вместо значений по умолчанию для базы данных почтовых ящиков, необходимо присвоить параметру <em>UseDatabaseQuotaDefaults</em> значение <code>$false</code>.
 
-
-    Set-Mailbox -Identity "Joe Healy" -IssueWarningQuota 24.5gb -ProhibitSendQuota 24.75gb -ProhibitSendReceiveQuota 25gb -UseDatabaseQuotaDefaults $false
+```powershell
+Set-Mailbox -Identity "Joe Healy" -IssueWarningQuota 24.5gb -ProhibitSendQuota 24.75gb -ProhibitSendReceiveQuota 25gb -UseDatabaseQuotaDefaults $false
+```
 
 В этом примере показано, как задать квоты для предупреждения, запрета на отправку, запрета на отправку и получение для почтового ящика пользователя Ayla Kol, равные 900 МБ, 950 МБ и 1 ГБ соответственно, а также настроить почтовый ящик на использование настраиваемых параметров.
 
-    Set-Mailbox -Identity "Ayla Kol" -IssueWarningQuota 900mb -ProhibitSendQuota 950mb -ProhibitSendReceiveQuota 1gb -UseDatabaseQuotaDefaults $false
+```powershell
+Set-Mailbox -Identity "Ayla Kol" -IssueWarningQuota 900mb -ProhibitSendQuota 950mb -ProhibitSendReceiveQuota 1gb -UseDatabaseQuotaDefaults $false
+```
 
 Дополнительные сведения о синтаксисе и параметрах см. в разделе [Set-Mailbox](https://technet.microsoft.com/ru-ru/library/bb123981\(v=exchg.150\)).
 
@@ -98,5 +101,6 @@ _**Последнее изменение раздела:** 2015-07-07_
 
 Выполните в командной консоли следующую команду.
 
-    Get-Mailbox <identity> | fl IssueWarningQuota,ProhibitSendQuota,ProhibitSendReceiveQuota,UseDatabaseQuotaDefaults
-
+```powershell
+Get-Mailbox <identity> | fl IssueWarningQuota,ProhibitSendQuota,ProhibitSendReceiveQuota,UseDatabaseQuotaDefaults
+```

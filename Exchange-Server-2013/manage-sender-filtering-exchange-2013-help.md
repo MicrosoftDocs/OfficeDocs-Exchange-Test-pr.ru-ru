@@ -64,25 +64,25 @@ Set-SenderFilterConfig -Enabled $true
 1.  Выполните следующую команду:
     
     ```powershell
-Get-SenderFilterConfig | Format-List Enabled
-```
+	Get-SenderFilterConfig | Format-List Enabled
+	```
 
 2.  Убедитесь, что отображается значение, которое вы настроили.
 
 ## Использование командной консоли для настройки заблокированных отправителей и доменов
 
 Чтобы заменить существующие значения, выполните следующую команду:
-
+```powershell
     Set-SenderFilterConfig -BlockedSenders <sender1,sender2...> -BlockedDomains <domain1,domain2...> -BlockedDomainsAndSubdomains <domain1,domain2...>
-
+```
 В данном примере представлена настройка агента фильтрации отправителей для блокировки сообщений с адресов inna@contoso.com и sergey@contoso.com, сообщений с домена fabrikam.com, а также сообщений с домена northwindtraders.com и всех его поддоменов.
-
+```powershell
     Set-SenderFilterConfig -BlockedSenders kim@contoso.com,john@contoso.com -BlockedDomains fabrikam.com -BlockedDomainsAndSubdomains northwindtraders.com
-
+```
 Чтобы добавить или удалить записи, не изменив существующие значения, выполните следующую команду:
-
+```powershell
     Set-SenderFilterConfig -BlockedSenders @{Add="<sender1>","<sender2>"...; Remove="<sender1>","<sender2>"...} -BlockedDomains @{Add="<domain1>","<domain2>"...; Remove="<domain1>","<domain2>"...} -BlockedDomainsAndSubdomains @{Add="<domain1>","<domain2>"...; Remove="<domain1>","<domain2>"...}
-
+```
 В данном примере представлена настройка агента фильтрации отправителей, при которой указываются следующие сведения.
 
   - Добавьте alexey@contoso.com и darya@contoso.com в список существующих заблокированных отправителей.
@@ -92,9 +92,9 @@ Get-SenderFilterConfig | Format-List Enabled
   - Добавьте blueyonderairlines.com в список существующих заблокированных доменов и поддоменов отправителей.
 
 <!-- end list -->
-
+```powershell
     Set-SenderFilterConfig -BlockedSenders @{Add="chris@contoso.com","michelle@contoso.com"} -BlockedDomains @{Remove="tailspintoys.com"} -BlockedDomainsAndSubdomains @{Add="blueyonderairlines.com"}
-
+```
 ## Как проверить, что все получилось?
 
 Чтобы убедиться в успешной настройке блокировки отправителей, выполните следующие действия.
@@ -102,8 +102,8 @@ Get-SenderFilterConfig | Format-List Enabled
 1.  Выполните следующую команду:
     
     ```powershell
-Get-SenderFilterConfig | Format-List BlockedSenders,BlockedDomains,BlockedDomainsAndSubdomains
-```
+	Get-SenderFilterConfig | Format-List BlockedSenders,BlockedDomains,BlockedDomainsAndSubdomains
+	```
 
 2.  Убедитесь, что отображаются значения, которые вы настроили.
 
@@ -128,8 +128,8 @@ Set-SenderFilterConfig -BlankSenderBlockingEnabled $true
 1.  Выполните следующую команду:
     
     ```powershell
-Get-SenderFilterConfig | Format-List BlankSenderBlockingEnabled
-```
+	Get-SenderFilterConfig | Format-List BlankSenderBlockingEnabled
+	```
 
 2.  Убедитесь, что отображается значение, которое вы настроили.
 

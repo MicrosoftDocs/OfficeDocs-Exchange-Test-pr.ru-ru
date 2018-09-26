@@ -76,9 +76,9 @@ _**Последнее изменение раздела:** 2013-04-29_
 ## Использование командной консоли для создания запроса на сертификат для единой системы обмена сообщениями
 
 В этом примере показано, как создать запрос на сертификат Exchange для сервера почтовых ящиков с именем `MyMailboxServer` и понятным именем `CertUM`.
-
+```powershell
     New-ExchangeCertificate -FriendlyName 'CertUM' -GenerateRequest -PrivateKeyExportable $true -KeySize '2048' -DomainName '*.northwindtraders.com' -SubjectName 'C=US,S=wa,L=redmond,O=northwindtraders,OU=servers,CN= northwindtraders.com' -Server 'MyMailboxServer'
-
+```
 ## Использование Центра администрирования Exchange для создания самозаверяющего сертификата для единой системы обмена сообщениями
 
 1.  В Центре администрирования Exchange откройте раздел **Серверы** \> **Сертификаты** и нажмите кнопку **Добавить**![Значок добавления](images/JJ218640.c1e75329-d6d7-4073-a27d-498590bbb558(EXCHG.150).gif "Значок добавления").
@@ -100,9 +100,9 @@ _**Последнее изменение раздела:** 2013-04-29_
 ## Использование командной консоли для создания самозаверяющего сертификата для единой системы обмена сообщениями
 
 В этом примере показано, как создать замозаверяющий сертификат Exchange для сервера почтовых ящиков с именем `MyMailboxServer` и понятным именем `UMCert`.
-
+```powershell
     New-ExchangeCertificate -Services 'UM, UMCallRouter' -DomainName '*.northwindtraders.com' -FriendlyName 'UMSelfSigned' -SubjectName 'C=US,S=WA,L=Redmond,O=Northwindtraders,OU=Servers,CN= Northwindtraders.com' -PrivateKeyExportable $true
-
+```
 > [!TIP]  
 > Если вы указали службы, которые нужно включить, с помощью параметра <em>Services</em>, вам будет предложено назначить их. В этом примере вам будет предложено включить сертификат для служб единой системы обмена сообщениями и маршрутизации вызовов единой системы обмена сообщениями. Дополнительные сведения о включении сертификата для служб см. в разделе <a href="assign-a-certificate-to-the-um-and-um-call-router-services-exchange-2013-help.md">Назначение сертификата службе единой системы обмена сообщениями и службе маршрутизатора вызовов этой системы</a>.
 

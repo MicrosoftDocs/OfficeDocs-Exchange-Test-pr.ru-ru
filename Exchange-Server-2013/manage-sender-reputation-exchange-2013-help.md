@@ -60,12 +60,14 @@ Set-SenderReputationConfig -Enabled $true
 1.  Убедитесь, что агент анализа протокола установлен и включен, выполнив следующую команду:
     
     ```powershell
-Get-TransportAgent
-```
+    Get-TransportAgent
+    ```
 
 2.  Проверьте настроенные значения репутации отправителя, выполнив следующую команду:
     
-        Get-SenderReputationConfig | Format-List Enabled,*MailEnabled
+    ```powershell
+    Get-SenderReputationConfig | Format-List Enabled,*MailEnabled
+    ```
 
 ## Включение или отключение функции репутации отправителя для внутренних или внешних сообщений с помощью командной консоли Exchange
 
@@ -101,8 +103,9 @@ Set-SenderReputationConfig -InternalMailEnabled $true
 
 1.  Выполните следующую команду:
     
-        Get-SenderReputationConfig | Format-List Enabled,*MailEnabled
-
+    ```powershell
+    Get-SenderReputationConfig | Format-List Enabled,*MailEnabled
+    ```
 2.  Убедитесь, что отображаемые значения совпадают с настроенными значениями.
 
 ## Настройка свойств репутации отправителя с помощью командной консоли Exchange
@@ -126,8 +129,8 @@ Set-SenderReputationConfig -SrlBlockThreshold 6 -SenderBlockingPeriod 36
 1.  Выполните следующую команду:
     
     ```powershell
-Get-SenderReputationConfig
-```
+    Get-SenderReputationConfig
+    ```
 
 2.  Убедитесь, что отображаемые значения совпадают с настроенными значениями.
 
@@ -166,11 +169,15 @@ Get-SenderReputationConfig
 
 Чтобы настроить исходящий доступ для обнаружения открытых прокси-серверов, выполните следующую команду:
 
-    Set-SenderReputationConfig -ProxyServerName <String> -ProxyServerPort <Port> -ProxyServerType <String>
+```powershell
+Set-SenderReputationConfig -ProxyServerName <String> -ProxyServerPort <Port> -ProxyServerType <String>
+```
 
 В этом примере настраивается репутация отправителя для использования открытого прокси-сервера SERVER01, который использует протокол HTTP CONNECT через порт 80.
 
-    Set-SenderReputationConfig - ProxyServerName SERVER01 -ProxyServerPort 80 -ProxyServerType HttpConnect
+```powershell
+Set-SenderReputationConfig - ProxyServerName SERVER01 -ProxyServerPort 80 -ProxyServerType HttpConnect
+```
 
 ## Как проверить, что все получилось?
 
@@ -178,7 +185,9 @@ Get-SenderReputationConfig
 
 1.  Выполните следующую команду:
     
-        Get-SenderReputationConfig | Format-List ProxyServer*
-
+    ```powershell
+    Get-SenderReputationConfig | Format-List ProxyServer*
+    ```
+    
 2.  Убедитесь, что отображаются значения, которые вы настроили.
 

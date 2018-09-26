@@ -94,8 +94,8 @@ Microsoft Exchange Server 2013 предлагает следующие типы 
     1.  Отключите разделенные разрешения Active Directory, выполнив следующую команду с установочного носителя Exchange 2013.
         
         ```powershell
-setup.exe /PrepareAD /ActiveDirectorySplitPermissions:false
-```
+            setup.exe /PrepareAD /ActiveDirectorySplitPermissions:false
+        ```
     
     2.  Перезапустите серверы Exchange 2013 в организации или подождите, пока маркер доступа к службе каталогов Active Directory не будет реплицирован на все серверы Exchange 2013.
         
@@ -107,58 +107,72 @@ setup.exe /PrepareAD /ActiveDirectorySplitPermissions:false
     
     1.  Создайте группу ролей для администраторов Active Directory. Кроме создания группы ролей, команда создает стандартные назначения ролей между новой группой ролей и ролью создания получателей почты, а также ролью создания и участия в группе безопасности.
         
+        ```powershell
             New-RoleGroup "Active Directory Administrators" -Roles "Mail Recipient Creation", "Security Group Creation and Membership"
-        
+        ```
+
         > [!NOTE]  
         > Если требуется, чтобы члены этой группы ролей могли создавать назначения ролей, включите роль управления ролями. Нет необходимости добавлять эту роль сейчас. Тем не менее, если в какой-либо момент потребуется назначить роль создания получателей почты (Mail Recipient Creation) или роль создания и участия в группе безопасности (Security Group Creation and Membership) другим уполномоченным ролей, то роль управления ролями должна быть назначена этой новой группе ролей. Ниже приводится процедура настройки группы ролей администраторов Active Directory в качестве единственной группы ролей, которая может делегировать эти роли.
     
     2.  Создайте назначения ролей делегирования между новой группой ролей, с одной стороны, и ролью создания получателей почты (Mail Recipient Creation) и ролью создания и участия в группе безопасности (Security Group Creation and Membership), с другой стороны, с помощью следующих команд.
         
+        ```powershell
             New-ManagementRoleAssignment -Role "Mail Recipient Creation" -SecurityGroup "Active Directory Administrators" -Delegating
             New-ManagementRoleAssignment -Role "Security Group Creation and Membership" -SecurityGroup "Active Directory Administrators" -Delegating
-    
+        ```
+
     3.  Добавьте участников в новую группу ролей с помощью следующей команды.
         
         ```powershell
-Add-RoleGroupMember "Active Directory Administrators" -Member <user to add>
-```
+        Add-RoleGroupMember "Active Directory Administrators" -Member <user to add>
+        ``` 
     
     4.  Замените список делегатов на новую группу ролей, чтобы только участники группы ролей могли добавлять или удалять участников.
         
         ```powershell
-Set-RoleGroup "Active Directory Administrators" -ManagedBy "Active Directory Administrators"
-```
+        Set-RoleGroup "Active Directory Administrators" -ManagedBy "Active Directory Administrators"
+        ```
         
         > [!IMPORTANT]  
         > Члены группы ролей Управление организацией, а также те, которым назначена роль управления ролями напрямую или через другую группу ролей либо универсальную группу безопасности, могут пропускать проверку безопасности делегатов. Чтобы запретить администратору Exchange добавлять себя в новую группу ролей, необходимо удалить назначение роли между ролью управления ролями и любым администратором Exchange, а затем назначить ее другой группе.
     
     5.  Найдите все назначения стандартных ролей и назначения ролей делегирования для роли создания получателей почты с помощью следующей команды. Данная команда отображает только свойства **Name**, **Role** и **RoleAssigneeName**.
         
+        ```powershell
             Get-ManagementRoleAssignment -Role "Mail Recipient Creation" | Format-Table Name, Role, RoleAssigneeName -Auto
-    
+        ```
+
     6.  Удалите все назначения стандартных ролей и ролей делегирования для роли создания получателей почты, не связанные с новой группой ролей или с любыми другими группами, универсальными группами безопасности или прямыми назначениями, которые необходимо сохранить, с помощью следующей команды.
         
         ```powershell
-Remove-ManagementRoleAssignment <Mail Recipient Creation role assignment to remove>
-```
+        Remove-ManagementRoleAssignment <Mail Recipient Creation role assignment to remove>
+        ```
         
         > [!NOTE]  
         > Если требуется удалить все назначения обычной роли и роли делегирования для роли создания получателей почты (Mail Recipient Creation) по отношению к уполномоченному роли, не связанному с группой ролей администраторов Active Directory, используйте следующую команду. Параметр <em>WhatIf</em> позволяет увидеть, какие назначения ролей будут удалены. Удалите параметр <em>WhatIf</em> и снова запустите команду, чтобы удалить назначения ролей.
         
+        ```powershell
             Get-ManagementRoleAssignment -Role "Mail Recipient Creation" | Where { $_.RoleAssigneeName -NE "Active Directory Administrators" } | Remove-ManagementRoleAssignment -WhatIf
-    
+        ```
+
     7.  Найдите все назначения стандартных ролей и назначения ролей делегирования для роли создания и участия в группе безопасности (Security Group Creation and Membership) с помощью следующей команды. Данная команда отображает только свойства **Name**, **Role** и **RoleAssigneeName**.
         
+        ```powershell
             Get-ManagementRoleAssignment -Role "Security Group Creation and Membership" | Format-Table Name, Role, RoleAssigneeName -Auto
-    
+        ```
+
     8.  Удалите все назначения стандартных ролей и ролей делегирования для роли создания и участия в группе безопасности (Security Group Creation and Membership), не связанные с новой группой ролей или с любыми другими группами, универсальными группами безопасности или прямыми назначениями, которые необходимо сохранить, с помощью следующей команды:
         
+        ```powershell
             Remove-ManagementRoleAssignment <Security Group Creation and Membership role assignment to remove>
-        
+        ```
+
         > [!NOTE]  
         > Такую же команду из предыдущего замечания можно использовать с целью удаления всех назначений стандартных ролей и ролей делегирования для роли создания и участия в группе безопасности по отношению к любому уполномоченному роли, не связанному с группой ролей администраторов Active Directory, как показано в этом примере.
         
+        ```powershell
             Get-ManagementRoleAssignment -Role "Security Group Creation and Membership" | Where { $_.RoleAssigneeName -NE "Active Directory Administrators" } | Remove-ManagementRoleAssignment -WhatIf
+        ```
 
 Подробные сведения о синтаксисе и параметрах см. в следующих разделах:
 
@@ -216,8 +230,8 @@ Remove-ManagementRoleAssignment <Mail Recipient Creation role assignment to remo
 1.  Чтобы включить разделенные разрешения Active Directory, в командной консоли Windows выполните следующую команду с установочного носителя Exchange 2013.
     
     ```powershell
-setup.exe /PrepareAD /ActiveDirectorySplitPermissions:true
-```
+        setup.exe /PrepareAD /ActiveDirectorySplitPermissions:true
+    ```
 
 2.  Если в организации имеется несколько доменов Active Directory, необходимо либо запустить `setup.exe /PrepareDomain` в каждом дочернем домене, содержащем серверы или объекты Exchange, либо запустить `setup.exe /PrepareAllDomains` с сайта, где находится сервер Active Directory из каждого домена.
 

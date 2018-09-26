@@ -42,9 +42,9 @@ Set-ImapSettings -Identity CAS01 -CalendarItemRetrievalOption iCalendar
 ```
 
 В этом примере показано, как включить для пользователей IMAP4 доступ к внутренним данным календаря на внутреннем сервере.
-
+```powershell
     Set-ImapSettings -Identity CAS01 -CalendarItemRetrievalOption IntranetUrl 
-
+```
 В этом примере показано, как включить для пользователей IMAP4 доступ к данным календаря на внешнем сервере через Интернет.
 
 ```powershell

@@ -38,14 +38,14 @@ _**Последнее изменение раздела:** 2017-03-27_
 2.  Создайте пустую базу данных почтовых ящиков на каждом сервере общедоступных папок.
     
     Для Exchange 2010 выполните приведенную ниже команду. Эта команда исключает базу данных почтовых ящиков из подсистемы балансировки нагрузки подготовки почтовых ящиков. Это предотвратит автоматическое добавление новых почтовых ящиков в эту базу данных.
-    
+    ```powershell
         New-MailboxDatabase -Server <PFServerName_with_CASRole> -Name <NewMDBforPFs> -IsExcludedFromProvisioning $true 
-    
+    ```
     Для Exchange 2007 выполните приведенную ниже команду.
     
     ```powershell
-New-MailboxDatabase -StorageGroup "<PFServerName>\StorageGroup>" -Name <NewMDBforPFs>
-```
+    New-MailboxDatabase -StorageGroup "<PFServerName>\StorageGroup>" -Name <NewMDBforPFs>
+    ```
     
     > [!NOTE]  
     > Мы рекомендуем добавлять в эту базу данных единственный почтовый ящик — промежуточный почтовый ящик, который будет создан в действии 3. В этой базе данных почтовых ящиков не нужно добавлять никакие другие почтовые ящики.
@@ -53,20 +53,20 @@ New-MailboxDatabase -StorageGroup "<PFServerName>\StorageGroup>" -Name <NewMDBfo
 
 3.  Создайте промежуточный почтовый ящик в новой базе данных почтовых ящиков и скройте его из адресной книги. Автообнаружение вернет SMTP этого почтового ящика как SMTP *DefaultPublicFolderMailbox*, чтобы путем разрешения этого SMTP клиент имел возможность получать доступ к серверу Exchange прежних версий для доступа к общедоступным папкам.
     
-```
-        New-Mailbox -Name <PFMailbox1> -Database <NewMDBforPFs> 
-```
-```    
     ```powershell
-Set-Mailbox -Identity <PFMailbox1> -HiddenFromAddressListsEnabled $true
-```
-```
+        New-Mailbox -Name <PFMailbox1> -Database <NewMDBforPFs> 
+    ```
+   
+    ```powershell
+    Set-Mailbox -Identity <PFMailbox1> -HiddenFromAddressListsEnabled $true
+    ```
+
 
 4.  Для Exchange 2010 включите функцию автообнаружения, чтобы вернуть промежуточные почтовые ящики общедоступных папок. Этот шаг можно пропустить в Exchange 2007.
     
     ```powershell
-Set-MailboxDatabase <NewMDBforPFs> -RPCClientAccessServer <PFServerName_with_CASRole>
-```
+    Set-MailboxDatabase <NewMDBforPFs> -RPCClientAccessServer <PFServerName_with_CASRole>
+    ```
 
 5.  Повторите предыдущие действия для каждого сервера общедоступных папок в своей организации.
 
@@ -75,9 +75,9 @@ Set-MailboxDatabase <NewMDBforPFs> -RPCClientAccessServer <PFServerName_with_CAS
 Конечным действием этой процедуры является настройка почтовых ящиков пользователей для предоставления доступа к локальным общедоступным папкам прежних версий.
 
 Разрешите локальным пользователям Exchange Server 2013 для доступа к устаревшим общедоступным папкам. Укажите все промежуточные почтовые ящики общедоступных папок, которые вы создали в [Step 2: Make remote public folders discoverable](https://docs.microsoft.com/ru-ru/exchange/collaboration-exo/public-folders/set-up-legacy-hybrid-public-folders). Выполните следующую команду на сервере Exchange 2013 с накопительным пакетом обновления 5 (CU5) или более поздней версии.
-
+```powershell
     Set-OrganizationConfig -PublicFoldersEnabled Remote -RemotePublicFolderMailboxes ProxyMailbox1,ProxyMailbox2,ProxyMailbox3
-
+```
 > [!NOTE]  
 > Вы сможете увидеть изменения, когда завершится синхронизация ActiveDirectory. Этот процесс может занять несколько часов.
 

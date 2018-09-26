@@ -1,4 +1,4 @@
-﻿---
+---
 title: 'Фильтруемые свойства для параметра -ContentFilter: Exchange 2013 Help'
 TOCTitle: Фильтруемые свойства для параметра -ContentFilter
 ms:assetid: cf504a59-1938-489c-bb48-b27b2ac3234e
@@ -47,14 +47,14 @@ _**Последнее изменение раздела:** 2015-09-10_
 <td><p>Это свойство возвращает все сообщения, у которых в любом из индексированных свойств содержится определенная строка. Например, это свойство можно использовать, когда требуется экспортировать все сообщения, для которых имя Ayla задано в качестве получателя, отправителя или упомянуто в тексте сообщения.</p></td>
 <td><p>Строка</p>
 <p>Подстановочный знак</p></td>
-<td><pre><code>-ContentFilter {All -like &#39;*Ayla*&#39;}</code></pre></td>
+<td>```powershell-ContentFilter {All -like '*Ayla*'}```</td>
 </tr>
 <tr class="even">
 <td><p>Attachment</p></td>
 <td><p>Данное свойство возвращает сообщения, для которых заданная строка входит в состав содержимого вложения или имени файла вложения.</p></td>
 <td><p>Строка</p>
 <p>Подстановочный знак</p></td>
-<td><pre><code>-ContentFilter {Attachment -like &#39;*.jpg&#39;}</code></pre></td>
+<td>```powershell-ContentFilter {Attachment -like '*.jpg'}```</td>
 </tr>
 <tr class="odd">
 <td><p>BCC</p></td>
@@ -64,21 +64,33 @@ _**Последнее изменение раздела:** 2015-09-10_
 <p>SMTP-адрес</p>
 <p>LegacyDN</p>
 <p>Подстановочный знак</p></td>
-<td><pre><code>-ContentFilter {(BCC -eq &#39;ayla@contoso.com&#39;) -or (BCC -eq &#39;tony@contoso.com&#39;)}</code></pre></td>
+<td>```powershell-ContentFilter {(BCC -eq 'ayla@contoso.com') -or (BCC -eq 'tony@contoso.com')}```</td>
 </tr>
 <tr class="even">
 <td><p>Body</p></td>
 <td><p>Данное свойство возвращает сообщения, в тексте которых указана заданная строка.</p></td>
 <td><p>Строка</p>
 <p>Подстановочный знак</p></td>
-<td><pre><code>-ContentFilter {Body -like &#39;*prospectus*&#39;}</code></pre></td>
+<td>
+
+```powershell
+-ContentFilter {Body -like '*prospectus*'}
+```
+
+</td>
 </tr>
 <tr class="odd">
 <td><p>Category</p></td>
 <td><p>Данное свойство возвращает сообщения, имеющие соответствующую категорию. Категории задаются пользователями или правилами для папки «Входящие».</p></td>
 <td><p>Строка</p>
 <p>Подстановочный знак</p></td>
-<td><pre><code>-ContentFilter {Category -like &#39;*Blue*&#39;}</code></pre></td>
+<td>
+
+```powershell
+-ContentFilter {Category -like '*Blue*'}
+```
+
+</td>
 </tr>
 <tr class="even">
 <td><p>CC</p></td>
@@ -88,20 +100,38 @@ _**Последнее изменение раздела:** 2015-09-10_
 <p>SMTP-адрес</p>
 <p>LegacyDN</p>
 <p>Подстановочный знак</p></td>
-<td><pre><code>-ContentFilter {(CC -eq &#39;ayla@contoso.com&#39;) -or (CC -eq &#39;tony@contoso.com&#39;)}</code></pre></td>
+<td>
+
+```powershell
+-ContentFilter {(CC -eq 'ayla@contoso.com') -or (CC -eq 'tony@contoso.com')}
+```
+
+</td>
 </tr>
 <tr class="odd">
 <td><p>Expires</p></td>
 <td><p>Данное свойство возвращает сообщения с заданной отметкой времени истечения срока.</p></td>
 <td><p>Отметка даты и времени</p></td>
-<td><pre><code>-ContentFilter {Expires -lt &#39;01/01/2013&#39;}</code></pre></td>
+<td>
+
+```powershell
+-ContentFilter {Expires -lt '01/01/2013'}
+```
+
+</td>
 </tr>
 <tr class="even">
 <td><p>HasAttachment</p></td>
 <td><p>Данное свойство возвращает сообщения, имеющие или не имеющие вложения.</p></td>
 <td><p>Логическое</p>
 <p><code>$true</code> или <code>$false</code></p></td>
-<td><pre><code>-ContentFilter {HasAttachment -eq $true}</code></pre></td>
+<td>
+
+```powershell
+-ContentFilter {HasAttachment -eq $true}
+```
+
+</td>
 </tr>
 <tr class="odd">
 <td><p>Importance</p></td>
@@ -109,22 +139,43 @@ _**Последнее изменение раздела:** 2015-09-10_
 <td><p>0 или Low</p>
 <p>1 или Normal</p>
 <p>2 или High</p></td>
-<td><pre><code>-ContentFilter {Importance -eq &#39;high&#39;}</code></pre>
-<pre><code>-ContentFilter {Importance -eq 2}</code></pre></td>
+<td>
+
+```powershell
+-ContentFilter {Importance -eq 'high'}
+```
+
+```powershell
+-ContentFilter {Importance -eq 2}
+```
+
+</td>
 </tr>
 <tr class="even">
 <td><p>IsFlagged</p></td>
 <td><p>Данное свойство возвращает сообщения, помеченные пользователем или правилом для папки «Входящие».</p></td>
 <td><p>Логическое</p>
 <p><code>$true</code> или <code>$false</code></p></td>
-<td><pre><code>-ContentFilter {IsFlagged -eq $true}</code></pre></td>
+<td>
+
+```powershell
+-ContentFilter {IsFlagged -eq $true}
+```
+
+</td>
 </tr>
 <tr class="odd">
 <td><p>IsRead</p></td>
 <td><p>Данное свойство возвращает сообщения, прочитанные или не прочитанные пользователем.</p></td>
 <td><p>Логическое</p>
 <p><code>$true</code> или <code>$false</code></p></td>
-<td><pre><code>-ContentFilter {IsRead -eq $true}</code></pre></td>
+<td>
+
+```powershell
+-ContentFilter {IsRead -eq $true}
+```
+
+</td>
 </tr>
 <tr class="even">
 <td><p>MessageKind</p></td>
@@ -141,15 +192,33 @@ _**Последнее изменение раздела:** 2015-09-10_
 <p>RSSFeed</p>
 <p>Task</p>
 <p>Голосовая почта</p></td>
-<td><pre><code>-ContentFilter {MessageKind -eq &#39;Calendar&#39;}</code></pre>
-<pre><code>-ContentFilter {MessageKind -ne &#39;Email&#39;}</code></pre></td>
+<td>
+
+```powershell
+-ContentFilter {MessageKind -eq 'Calendar'}
+```
+
+```powershell
+-ContentFilter {MessageKind -ne 'Email'}
+```
+
+</td>
 </tr>
 <tr class="odd">
 <td><p>MessageLocalee</p></td>
 <td><p>Данное свойство возвращает сообщения, имеющие заданный языковой стандарт.</p></td>
 <td><p>CultureInfo</p></td>
-<td><pre><code>-ContentFilter {MessageLocale -ne &#39;en-US&#39;}</code></pre>
-<pre><code>-ContentFilter {MessageLocale -eq &#39;tr-TR&#39;}</code></pre></td>
+<td>
+
+```powershell
+-ContentFilter {MessageLocale -ne 'en-US'}
+```
+
+```powershell
+-ContentFilter {MessageLocale -eq 'tr-TR'}
+```
+
+</td>
 </tr>
 <tr class="even">
 <td><p>Participants</p></td>
@@ -159,7 +228,13 @@ _**Последнее изменение раздела:** 2015-09-10_
 <p>SMTP-адрес</p>
 <p>LegacyDN</p>
 <p>Подстановочный знак</p></td>
-<td><pre><code>-ContentFilter {(Participants -eq &#39;ayla@contoso.com&#39;) -or (Participants -eq &#39;tony@contoso.com&#39;)}</code></pre></td>
+<td>
+
+```powershell
+-ContentFilter {(Participants -eq 'ayla@contoso.com') -or (Participants -eq 'tony@contoso.com')}
+```
+
+</td>
 </tr>
 <tr class="odd">
 <td><p>PolicyTag</p></td>
@@ -167,14 +242,29 @@ _**Последнее изменение раздела:** 2015-09-10_
 <p>Если указанное значение не является идентификатором GUID, команда использует сведения Active Directory для разрешения имен в идентификаторы GUID.</p></td>
 <td><p>Строка</p>
 <p>Подстановочный знак</p></td>
-<td><pre><code>-ContentFilter {PolicyTag -ne &#39;00000000-0000-0000-0000-000000000000&#39;}</code></pre></td>
+<td>
+
+```powershell
+-ContentFilter {PolicyTag -ne '00000000-0000-0000-0000-000000000000'}
+```
+
+</td>
 </tr>
 <tr class="even">
 <td><p>Received</p></td>
 <td><p>Данное свойство возвращает сообщения, принятые с заданной отметкой времени получения.</p></td>
 <td><p>Отметка даты и времени</p></td>
-<td><pre><code>-ContentFilter {Received -lt &#39;01/01/2013 9:00&#39;}</code></pre>
-<pre><code>-ContentFilter {(Received -lt &#39;01/01/2013&#39;) -and (Received -gt &#39;01/01/2012&#39;)}</code></pre></td>
+<td>
+
+```powershell
+-ContentFilter {Received -lt '01/01/2013 9:00'}
+```
+
+```powershell
+-ContentFilter {(Received -lt '01/01/2013') -and (Received -gt '01/01/2012')}
+```
+
+</td>
 </tr>
 <tr class="odd">
 <td><p>Sender</p></td>
@@ -184,14 +274,29 @@ _**Последнее изменение раздела:** 2015-09-10_
 <p>SMTP-адрес</p>
 <p>LegacyDN</p>
 <p>Подстановочный знак</p></td>
-<td><pre><code>ContentFilter {Sender -eq &#39;tony&#39;}</code></pre></td>
+<td>
+
+```powershell
+ContentFilter {Sender -eq 'tony'}
+```
+
+</td>
 </tr>
 <tr class="even">
 <td><p>Sent</p></td>
 <td><p>Данное свойство возвращает сообщения, отправленные с заданной отметкой времени отправки.</p></td>
 <td><p>Отметка даты и времени</p></td>
-<td><pre><code>-ContentFilter {Sent -lt &#39;01/01/2013 9:00&#39;}</code></pre>
-<pre><code>-ContentFilter {(Sent -lt &#39;01/01/2013&#39;) -and (Sent -gt &#39;01/01/2012&#39;)}</code></pre></td>
+<td>
+
+```powershell
+-ContentFilter {Sent -lt '01/01/2013 9:00'}
+```
+
+```powershell
+-ContentFilter {(Sent -lt '01/01/2013') -and (Sent -gt '01/01/2012')}
+```
+
+</td>
 </tr>
 <tr class="odd">
 <td><p>Size</p></td>
@@ -199,14 +304,26 @@ _**Последнее изменение раздела:** 2015-09-10_
 <td><p>Б (байт)</p>
 <p>КБ (килобайт)</p>
 <p>МБ (мегабайт)</p></td>
-<td><pre><code>-ContentFilter {Size -gt &#39;10KB&#39;}</code></pre></td>
+<td>
+
+```powershell
+-ContentFilter {Size -gt '10KB'}
+```
+
+</td>
 </tr>
 <tr class="even">
 <td><p>Subject</p></td>
 <td><p>Данное свойство возвращает сообщения, в теме которых указана заданная строка.</p></td>
 <td><p>Строка</p>
 <p>Подстановочный знак</p></td>
-<td><pre><code>-ContentFilter {Subject -like &#39;*meeting*&#39;}</code></pre></td>
+<td>
+
+```powershell
+-ContentFilter {Subject -like '*meeting*'}
+```
+
+</td>
 </tr>
 <tr class="odd">
 <td><p>To</p></td>
@@ -216,7 +333,13 @@ _**Последнее изменение раздела:** 2015-09-10_
 <p>SMTP-адрес</p>
 <p>LegacyDN</p>
 <p>Подстановочный знак</p></td>
-<td><pre><code>-ContentFilter {To -eq &#39;aylakol&#39;}</code></pre></td>
+<td>
+
+```powershell
+-ContentFilter {To -eq 'aylakol'}
+```
+
+</td>
 </tr>
 </tbody>
 </table>
