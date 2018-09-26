@@ -170,7 +170,9 @@ Microsoft Exchange Server 2013 предлагает следующие типы 
         > [!NOTE]  
         > Такую же команду из предыдущего замечания можно использовать с целью удаления всех назначений стандартных ролей и ролей делегирования для роли создания и участия в группе безопасности по отношению к любому уполномоченному роли, не связанному с группой ролей администраторов Active Directory, как показано в этом примере.
         
+        ```powershell
             Get-ManagementRoleAssignment -Role "Security Group Creation and Membership" | Where { $_.RoleAssigneeName -NE "Active Directory Administrators" } | Remove-ManagementRoleAssignment -WhatIf
+        ```
 
 Подробные сведения о синтаксисе и параметрах см. в следующих разделах:
 
