@@ -23,17 +23,6 @@
       "template_folder": "_themes"
     },
     {
-      "docset_name": "OfficeITPro-Exchange-Deployment-2013",
-      "build_source_folder": "Exchange-Deployments-2013",
-      "build_output_subfolder": "Exchange-Deployments-2013",
-      "locale": "ru-ru",
-      "monikers": [],
-      "moniker_ranges": [],
-      "open_to_public_contributors": false,
-      "build_entry_point": "docs",
-      "template_folder": "_themes"
-    },
-    {
       "docset_name": "OfficeITPro-Exchange-Server-2013",
       "build_source_folder": "Exchange-Server-2013",
       "build_output_subfolder": "OfficeITPro-Exchange-Server-2013",
