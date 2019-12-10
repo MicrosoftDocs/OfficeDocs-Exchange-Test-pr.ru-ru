@@ -12,17 +12,6 @@
       "template_folder": "_themes"
     },
     {
-      "docset_name": "OfficeDocs-Exchange-MP-Health",
-      "build_source_folder": "exchange-2013-health-management-pack",
-      "build_output_subfolder": "exchange-2013-health-management-pack",
-      "locale": "ru-ru",
-      "monikers": [],
-      "moniker_ranges": [],
-      "open_to_public_contributors": false,
-      "build_entry_point": "docs",
-      "template_folder": "_themes"
-    },
-    {
       "docset_name": "OfficeITPro-Exchange-Articles-2013",
       "build_source_folder": "Exchange-Articles-2013",
       "build_output_subfolder": "Exchange-Articles-2013",
